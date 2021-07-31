@@ -28,7 +28,7 @@ twitter_username: Guo_PC
 github_username:  GuoPCinGitHub
 
 # Build settings
-remote_theme: moonwalk
+remote_theme: abhinavs/moonwalk
 plugins:
   - jekyll-feed
 
