@@ -1,53 +1,46 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you: 
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+title: GuoPC的博客 #博客标题
+description: Just be yourself. #博客描述
+keywords: blog #博客关键字
 
-title: GuoPC Blog
-email: gpc2843661009@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  欢迎来到GuoPC Blog！
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://GuoPCinGitHub.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: Guo_PC
-github_username:  GuoPCinGitHub
+#title hide and show
+hide: 藏起来了
+show: 出来啦
 
-# Build settings
-theme: minima
+baseurl: "" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
+url: "guopc.me" # change this to the base hostname & protocol for your site
+bulidtime: "1627707600" #博客建立时的时间戳 可进入https://tool.lu/timestamp/将博客建立时的日期转换成时间戳
+           #The timestamp at the time of blog establishment can be entered at https://tool.lu/timestamp/to convert the date at the time of blog establishment into a timestamp.
+
+paginate: 10 #同时显示的最大文章数，超过自动分页
+paginate_path: "page:num"
+
+background: https://api.dujin.org/bing/1920.php
+theme_color: 546E7A
+
+google_analytics:
+# hydrogen-blog date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+hydrogen-blog:
+  date_format: "%Y.%m.%d"
+
+theme: # leave it empty
+
+#MathJax switch
+MathJax: f
+
+#install emoji
 plugins:
-  - jekyll-feed
+  - jemoji
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# social
+author: "Link"
+image:
+twitter:
+  username:
+#  site:
+facebook:
+  #publisher: null
+  #profile_id: null
+  app_id: null
+  #authors: null
+#  admins:
