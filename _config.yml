@@ -4,11 +4,11 @@ keywords: blog #博客关键字
 
 #title hide and show
 hide: 在这在这
-show: (·ω·)
+show: 诶嘿(·ω·)
 
-baseurl: "" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
+baseurl: "/" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
 url: "guopcingithub.github.io" # change this to the base hostname & protocol for your site
-bulidtime: "1627705800" #博客建立时的时间戳 可进入https://tool.lu/timestamp/将博客建立时的日期转换成时间戳
+bulidtime: "1627705800" #博客建立时的时间戳 可进入https://tool.lu/timestamp/ 将博客建立时的日期转换成时间戳
            #The timestamp at the time of blog establishment can be entered at https://tool.lu/timestamp/to convert the date at the time of blog establishment into a timestamp.
 
 paginate: 10 #同时显示的最大文章数，超过自动分页
@@ -26,7 +26,7 @@ hydrogen-blog:
 theme: # leave it empty
 
 #MathJax switch
-MathJax: f
+MathJax: true
 
 #install emoji
 plugins:
