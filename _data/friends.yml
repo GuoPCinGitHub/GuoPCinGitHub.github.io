@@ -5,7 +5,7 @@
 
 - name: Daily
   image: https://atlinker.cn/avatar/default.png
-  url: https：//linker.ml/daily/
+  url: https://linker.ml/daily/
   describe: Daily
 
 # - name: Links Name
