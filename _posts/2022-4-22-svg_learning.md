@@ -171,9 +171,9 @@ stroke-dasharray="3,5,8,13">
 
 #### `M` & `L`
 
-- `M x y`: Move pen to $(x, y)$
-- `M x1,y1[ x2,y2[…]]`: Move pen to $(x_1, y_1)$, then $(x_2, y_2)$, …
-- `M x1 y1 L x2 y2[ x3 y3[…]]`, `M x1 y1 L x2,y2[ x3,y3[…]]`: Draw linearly from $(x_1, y_1)$ to $(x_2, y_2)$, then $(x_3, y_3)$, …
+- `M x y`: Move pen to (`x`, `y`)
+- `M x1,y1[ x2,y2[…]]`: Move pen to (`x1`, `y1`), then (`x2`, `y2`), …
+- `M x1 y1 L x2 y2[ x3 y3[…]]`, `M x1 y1 L x2,y2[ x3,y3[…]]`: Draw linearly from (`x1`, `y1`) to (`x2`, `y2`), then (`x3`, `y3`), …
 
 **SVG Code**
 
@@ -244,7 +244,7 @@ stroke-dasharray="3,5,8,13">
 
 #### `Q`: Quadratic Bézier curves
 
-- `M x1 y1 Q x2,y2 x3,y3`: Draw quadratically from $(x_1, y_1)$, then $(x_2, y_2)$, towards $(x_3, y_3)$
+- `M x1 y1 Q x2,y2 x3,y3`: Draw quadratically from (`x1`, `y1`), then (`x2`, `y2`), towards (`x3`, `y3`)
 
 **SVG Code**
 
@@ -274,7 +274,7 @@ stroke-dasharray="3,5,8,13">
 
 ### `C`: Cubic Bézier curves
 
-- `M x1 y1 C xt1,yt1[ xt2,yt2[…]] x3,y3`: Draw cubically from $(x_1, y_1)$ to $(x_3, y_3)$, with control points $(x_{t_1}, y_{t_1})$, $(x_{t_2}, y_{t_2})$, …
+- `M x1 y1 C xt1,yt1[ xt2,yt2[…]] x2,y2`: Draw cubically from (`x1`, `y1`) to (`x2`, `y2`), with control points (`xt1`, `yt1`), (`xt2`, `yt2`), …
 
 ![A family of cubic curves sharing endpoints and tangents](http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m499a2128.png "A family of cubic curves sharing endpoints and tangents")
 
