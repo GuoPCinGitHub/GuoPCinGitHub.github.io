@@ -47,9 +47,9 @@ tags: 学习
 
 ### `<line>`
 
-- $(x_1, y_1) \xrightarrow[]{\mathtt{stroke}} (x_2, y_2)$
-  - $(x_1, y_1)$: Start position
-  - $(x_2, y_2)$: End position
+- `x1`, `y1` → `x2`, `y2`
+  - `x1`, `y1`: Start position
+  - `x2`, `y2`: End position
 
 #### `stroke` & `stroke-width`
 
@@ -89,8 +89,8 @@ tags: 学习
 
 ### `<rect>`
 
-- $(x, y) \xrightarrow[\mathtt{width}]{\mathtt{height}} \xrightarrow[\mathtt{fill}]{\mathtt{stroke}}$
-  - $(x, y)$: Top-left corner position
+- `x`, `y`: Top-left corner position
+- `height`, `width`
 
 **SVG Code**
 
@@ -116,9 +116,8 @@ tags: 学习
 
 ### `<circle>`
 
-- $(c_x, c_y) \xrightarrow[]{r} \xrightarrow[\mathtt{fill}]{\mathtt{stroke}}$
-  - $(c_x, c_y)$: Centre position
-  - $r$: Radius
+- `cx`, `cy`: Centre position
+- `r`: Radius
 
 **SVG Code**
 
@@ -142,10 +141,9 @@ stroke-dasharray="3,5,8,13">
 
 ### `<ellipse>`
 
-- $(c_x, c_y, r_x, r_y) \xrightarrow[\mathtt{fill}]{\mathtt{stroke}}$
-  - $(c_x, c_y)$: Centre position
-  - $r_x$: Half of the distance from the leftmost side to centre
-  - $r_y$: Half of the distance from top to centre
+- `cx`, `cy`: Centre position
+- `rx`: Half of the distance from the leftmost side to centre
+- `ry`: Half of the distance from top to centre
 
 **SVG Code**
 
