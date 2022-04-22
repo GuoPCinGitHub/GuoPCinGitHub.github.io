@@ -4,9 +4,7 @@ title: SVG Learning - 1
 tags: 学习
 ---
 
-SVG 学习第一部分，包括基本结构、`<line>`、`<rect>`、`<circle>`、`<ellipse>`、`<path>`图形元素。
-
-简单罗列，英文为主。
+SVG 学习第一部分，包括基本结构、`<line>`、`<rect>`、`<circle>`、`<ellipse>`、`<path>`图形元素。简单罗列，英文为主。
 
 > References
 >
@@ -242,7 +240,7 @@ stroke-dasharray="3,5,8,13">
     stroke="purple" stroke-width="3"/>
 ```
 
-![A <path> with fill="green" et cetera... is also included in the drawing.](http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m36f8c292.png "A <path> with fill=\"green\" et cetera... is also included in the drawing.")
+![A \<path\> with fill="green" et cetera... is also included in the drawing.](http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m36f8c292.png "A \<path\> with fill=\"green\" et cetera... is also included in the drawing.")
 
 #### `Q`: Quadratic Bézier curves
 
