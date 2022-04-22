@@ -4,6 +4,10 @@ title: SVG Learning - 1
 tags: 学习
 ---
 
+SVG 学习第一部分，包括基本结构、`<line>`、`<rect>`、`<circle>`、`<ellipse>`、`<path>`图形元素。
+
+简单罗列，英文为主。
+
 > References
 >
 > - [An SVG Primer for Today's Browsers](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html)
