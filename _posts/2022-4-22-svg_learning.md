@@ -4,8 +4,6 @@ title: SVG Learning - 1
 tags: 学习
 ---
 
-<div lang="en">
-
 > References
 >
 > - [An SVG Primer for Today's Browsers](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html)
@@ -305,5 +303,3 @@ C 75 243 53 231 99 192" />
 ### `A`: Elliptical arc
 
 ![Four elliptical arcs sharing endpoints](http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m38b4a957.png "Four elliptical arcs sharing endpoints")
-
-</div>
