@@ -12,7 +12,7 @@ permalink: /links.html
 </div>
 {% endfor %}
 
-[返回主页]({{ site.url }})
+[返回主页]({{ site.baseurl }})
 
 <hr/>
 

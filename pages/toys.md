@@ -5,7 +5,7 @@ tagline: Biu~
 permalink: /toys
 ---
 
-[Just a textbox]({{ site.url }}/toys/Just_a_textbox.html)
+[Just a textbox]({{ site.baseurl }}/toys/Just_a_textbox.html)
 
 来听两首歌吧。
 
@@ -13,4 +13,4 @@ permalink: /toys
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=420125680&auto=0&height=66"></iframe>
 
-[返回主页]({{ site.url }})
+[返回主页]({{ site.baseurl }})
