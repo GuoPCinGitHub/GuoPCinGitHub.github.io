@@ -157,7 +157,7 @@ a:hover, a:hover span {
 }
 
 a.direct:hover {
-    cursor: pointer;
+    background: none;
 }
 
 a.gitHub:hover, a.gitHub:hover span {
