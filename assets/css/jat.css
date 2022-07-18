@@ -41,16 +41,19 @@ nav {
     padding: 5px 10px;
 }
 
-header {
-    margin-bottom: 80px;
-}
-
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex: 1;
+    width: 100vw;
 }
+
+header {
+    margin-bottom: 80px;
+}
+
 
 input {
     width: 80%;
