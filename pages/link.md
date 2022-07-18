@@ -12,8 +12,6 @@ permalink: /links.html
 </div>
 {% endfor %}
 
-[返回主页]({{ site.baseurl }})
-
 <hr/>
 
   {% if site.data.social.valine_comment.enable  == true %}
