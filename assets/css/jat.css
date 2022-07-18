@@ -109,8 +109,6 @@ button:hover {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
     color: gray;
     font-family: Roboto, Arial, sans-serif;
     text-align: right;
