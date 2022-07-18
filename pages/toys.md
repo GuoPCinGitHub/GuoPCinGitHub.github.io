@@ -1,8 +1,11 @@
 ---
 layout: page
-title: Billboard
+title: Toys
 tagline: Biu~
+permalink: /toys
 ---
+
+[Just a textbox]({{ site.baseurl }}/toys/Just_a_textbox.html)
 
 来听两首歌吧。
 

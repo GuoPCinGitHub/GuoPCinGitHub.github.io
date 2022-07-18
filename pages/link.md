@@ -5,7 +5,6 @@ tagline: My friends.
 permalink: /links.html
 ---
 
-
 {% for f in site.data.friends %}
 <div class="link-chip">
  <img alt="{{f.describe}}" src="{{f.image}}" class="link-chip-icon">

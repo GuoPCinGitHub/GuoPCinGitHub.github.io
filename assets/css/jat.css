@@ -1,0 +1,146 @@
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+:root {
+    --base-color: royalblue;
+    --base-color-light: #6a8ce8;
+    --classic-color-light: white;
+    --personal-color: #ddb463;
+}
+
+::selection {
+    background: var(--base-color-light);
+    color: var(--classic-color-light);
+}
+
+header {
+    margin-bottom: 80px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #0001;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+input {
+    width: 80%;
+    max-width: 800px;
+    border: var(--base-color) 3px solid;
+    border-radius: 2px;
+    font-size: 1.1rem;
+    font-family: Bahnschrift, sans-serif;
+    margin: 10px 0;
+    padding: 5px 10px;
+}
+
+label#TH {
+    display: none;
+}
+
+label#RS {
+    color: var(--base-color);
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    height: 1rem;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+label.clickedRS {
+    animation: fadeOut 400ms ease-out 800ms;
+}
+
+button {
+    background: var(--base-color);
+    border: var(--base-color) 3px solid;
+    border-radius: 2px;
+    color: white;
+    font-size: 1.1rem;
+    font-family: Bahnschrift, sans-serif;
+    margin: 10px 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background 200ms ease-out;
+}
+
+button:hover {
+    background: var(--base-color-light);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    color: gray;
+    font-family: Roboto, Arial, sans-serif;
+    text-align: right;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    cursor: default;
+}
+
+footer>div {
+    margin: 5px 0;
+}
+
+a {
+    display: inline-block;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: all 200ms ease-out;
+}
+
+a.gitHub {
+    color: var(--personal-color);
+}
+
+a:not(.gitHub) {
+    color: var(--base-color);
+}
+
+a.gitHub::after {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M16.004 9.414l-8.607 8.607-1.414-1.414L14.589 8H7.004V6h11v11h-2V9.414z' fill='rgba(221,180,99,1)'/%3E%3C/svg%3E");
+}
+
+a:not(.gitHub)::after {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M16.004 9.414l-8.607 8.607-1.414-1.414L14.589 8H7.004V6h11v11h-2V9.414z' fill='rgba(65,105,225,1)'/%3E%3C/svg%3E");
+}
+
+a:hover, a:hover span {
+    color: white !important;
+    transition: all 200ms ease-out;
+}
+
+a.gitHub:hover, a.gitHub:hover span {
+    background: var(--personal-color);
+}
+
+a:not(.gitHub):hover {
+    background: var(--base-color);
+}
+
+a:hover::after {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M16.004 9.414l-8.607 8.607-1.414-1.414L14.589 8H7.004V6h11v11h-2V9.414z' fill='rgba(255,255,255,1)'/%3E%3C/svg%3E");
+}
