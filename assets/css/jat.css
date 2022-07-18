@@ -156,11 +156,15 @@ a:hover, a:hover span {
     transition: all 200ms ease-out;
 }
 
+a.direct:hover {
+    cursor: pointer;
+}
+
 a.gitHub:hover, a.gitHub:hover span {
     background: var(--personal-color);
 }
 
-a:not(.gitHub):hover {
+a.remixIcon:hover {
     background: var(--base-color);
 }
 
