@@ -12,3 +12,5 @@ permalink: /about.html
 
 - Email: <a href="mailto:gpc2843661009@gmail.com">gpc2843661009@gmail.com</a>
 - Github: [GuoPCinGitHub](https://github.com/GuoPCinGitHub)
+
+[返回主页]({{ site.url }})
