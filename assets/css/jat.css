@@ -20,6 +20,13 @@
     color: var(--classic-color-light);
 }
 
+nav {
+    background: var(--personal-color);
+    border-radius: 2px;
+    margin: 10px;
+    padding: 10px;
+}
+
 header {
     margin-bottom: 80px;
 }
@@ -112,11 +119,15 @@ a {
     transition: all 200ms ease-out;
 }
 
+a.direct {
+    color: var(--classic-color-light);
+}
+
 a.gitHub {
     color: var(--personal-color);
 }
 
-a:not(.gitHub) {
+a.remixIcon {
     color: var(--base-color);
 }
 
@@ -124,7 +135,7 @@ a.gitHub::after {
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M16.004 9.414l-8.607 8.607-1.414-1.414L14.589 8H7.004V6h11v11h-2V9.414z' fill='rgba(221,180,99,1)'/%3E%3C/svg%3E");
 }
 
-a:not(.gitHub)::after {
+a.remixIcon::after {
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M16.004 9.414l-8.607 8.607-1.414-1.414L14.589 8H7.004V6h11v11h-2V9.414z' fill='rgba(65,105,225,1)'/%3E%3C/svg%3E");
 }
 
@@ -141,6 +152,6 @@ a:not(.gitHub):hover {
     background: var(--base-color);
 }
 
-a:hover::after {
+a:not(.direct):hover::after {
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M16.004 9.414l-8.607 8.607-1.414-1.414L14.589 8H7.004V6h11v11h-2V9.414z' fill='rgba(255,255,255,1)'/%3E%3C/svg%3E");
 }
