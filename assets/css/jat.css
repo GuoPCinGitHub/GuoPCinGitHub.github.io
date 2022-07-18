@@ -20,26 +20,36 @@
     color: var(--classic-color-light);
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: #0001;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
 nav {
+    align-self: flex-start;
     background: var(--personal-color);
     border-radius: 2px;
-    margin: 10px;
-    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 30vh;
+    padding: 5px 10px;
 }
 
 header {
     margin-bottom: 80px;
 }
 
-body {
+main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    background: #0001;
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
+    justify-content: center;
 }
 
 input {
