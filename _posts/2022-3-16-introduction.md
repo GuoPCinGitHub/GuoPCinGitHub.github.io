@@ -6,7 +6,9 @@ tags: 随记
 
 2022年了，~~这个网站已经上线了200多天了~~ 姑且写一篇自我介绍吧。
 
-嗨，这里是GuoPC，你可以叫我**散令**（日语：**<span lang="ja" xml:lang="ja"><ruby><rb>散令</rb><rt>ちるれい</rt></ruby></span>**，罗马字：**<span lang="ja-Latn" xml:lang="ja-Latn">Chirurei</span>**）~~这个名字还算有点来历，之后有时间另写一篇文章来聊聊吧~~。
+嗨，这里是GuoPC，你可以叫我**散令**（日语：**<span lang="ja" xml:lang="ja"><ruby><rb>散令</rb><rt>ちるれい</rt></ruby></span>**，罗马字：**<span lang="ja-Latn" xml:lang="ja-Latn">Chirurei</span>**）。
+
+> 2022.7.26增：起了个日文名叫**<span lang="ja" xml:lang="ja"><ruby><rb>糸見</rb><rt>いとみ</rt></ruby>さき</span>**，罗马字：**<span lang="ja-Latn" xml:lang="ja-Latn">Itomi Saki</span>**。
 
 几乎我所有地方的自我介绍都放了下面这句话，我非常喜欢：
 
@@ -33,7 +35,6 @@ tags: 随记
 | Muse Dash | 这个年轻人接触的第一款音游<br>9级歌可以乱糊过去<br>现在偶尔玩一次 |
 | osu! | <span lang="en" xml:lang="en">~~Rhythm is just a click away!~~</span><br>现在std只能保证3.7以下打过，也会玩玩其他模式<br>~~玩mania的都是佬~~ |
 | Cytus II | 今年才开始玩的音游，很喜欢看故事 |
-| LoveLive! 学园偶像祭 | 先看的动漫，之后玩的音游<br>在玩国服。现在9级歌注意一下应该就能FC<br>Yosoro~ |
 | BanG Dream! 少女乐团派对! | 也是先看的动漫，之后玩的音游<br>在玩国服。基本上天天都会上线，现在能糊到27级 |
 
 ### 以前玩过的音游
@@ -41,6 +42,7 @@ tags: 随记
 | 名称 | 说明 |
 | ---- | ---- |
 | Phigros | 判定线到处飘我还是挺喜欢的<br>我记得最后得分好像到了12左右 |
+| LoveLive! 学园偶像祭 | 先看的动漫，之后玩的音游<br>Yosoro~ |
 
 ## 关于语言
 
