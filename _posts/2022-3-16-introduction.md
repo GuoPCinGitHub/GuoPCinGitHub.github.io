@@ -33,16 +33,17 @@ tags: 随记
 | 名称 | 说明 |
 | ---- | ---- |
 | Muse Dash | 这个年轻人接触的第一款音游<br>9级歌可以乱糊过去<br>现在偶尔玩一次 |
-| osu! | <span lang="en" xml:lang="en">~~Rhythm is just a click away!~~</span><br>现在std只能保证3.7以下打过，也会玩玩其他模式<br>~~玩mania的都是佬~~ |
 | Cytus II | 今年才开始玩的音游，很喜欢看故事 |
+| Deemo | 听说要出动漫，期待 |
 | BanG Dream! 少女乐团派对! | 也是先看的动漫，之后玩的音游<br>在玩国服。基本上天天都会上线，现在能糊到27级 |
 
 ### 以前玩过的音游
 
 | 名称 | 说明 |
 | ---- | ---- |
-| Phigros | 判定线到处飘我还是挺喜欢的<br>我记得最后得分好像到了12左右 |
 | LoveLive! 学园偶像祭 | 先看的动漫，之后玩的音游<br>Yosoro~ |
+| osu! | <span lang="en" xml:lang="en">~~Rhythm is just a click away!~~</span><br>现在std只能保证3.7以下打过，也会玩玩其他模式<br>~~玩mania的都是佬~~ |
+| Phigros | 判定线到处飘我还是挺喜欢的<br>我记得最后得分好像到了12左右 |
 
 ## 关于语言
 
