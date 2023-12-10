@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>GuoPC的博客</title>
+  
+  <subtitle>Just be yourself.</subtitle>
+  <link href="https://guopcingithub.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://guopcingithub.github.io/"/>
+  <updated>2023-10-08T09:52:41.046Z</updated>
+  <id>https://guopcingithub.github.io/</id>
+  
+  <author>
+    <name>GuoPC</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>QQNT超级调色盘传统色列表</title>
+    <link href="https://guopcingithub.github.io/2023/10/08/qqnt_palette/"/>
+    <id>https://guopcingithub.github.io/2023/10/08/qqnt_palette/</id>
+    <published>2023-10-07T16:00:00.000Z</published>
+    <updated>2023-10-08T09:52:41.046Z</updated>
+    
+    <content type="html"><![CDATA[<p>记录QQNT目前版本（9.9.3-17153）下超级调色盘中“故宫美学”和“敦煌美学”配色列表。</p><h2 id="故宫美学"><a href="#故宫美学" class="headerlink" title="故宫美学"></a>故宫美学</h2><h3 id="缥碧沧浪"><a href="#缥碧沧浪" class="headerlink" title="缥碧沧浪"></a>缥碧沧浪</h3><blockquote><p>#439696 #B1D5C8 #D5EBE1</p><p>#99BCAC #80A492 #E9F3F4 #86C6B1 #E8EAD0</p></blockquote><div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;"><span style="display:inline-block;width:4em;height:1em;background:#439696;"></span><span style="display:inline-block;width:2em;height:1em;background:#B1D5C8;"></span><span style="display:inline-block;width:1em;height:1em;background:#D5EBE1;"></span><br/><span style="display:inline-block;width:2em;height:1em;background:#99BCAC;"></span><span style="display:inline-block;width:2em;height:1em;background:#80A492;"></span><span style="display:inline-block;width:1em;height:1em;background:#E9F3F4;"></span><span style="display:inline-block;width:1em;height:1em;background:#86C6B1;"></span><span style="display:inline-block;width:1em;height:1em;background:#E8EAD0;"></span></div><h3 id="生如夏花"><a href="#生如夏花" class="headerlink" title="生如夏花"></a>生如夏花</h3><blockquote><p>#4B394E #9B8EA9 #D3CCD6</p><p>#8A618B #A77DAB #FBCA43 #464599 #B2D9C8</p></blockquote><div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;"><span style="display:inline-block;width:4em;height:1em;background:#4B394E;"></span><span style="display:inline-block;width:2em;height:1em;background:#9B8EA9;"></span><span style="display:inline-block;width:1em;height:1em;background:#D3CCD6;"></span><br/><span style="display:inline-block;width:2em;height:1em;background:#8A618B;"></span><span style="display:inline-block;width:2em;height:1em;background:#A77DAB;"></span><span style="display:inline-block;width:1em;height:1em;background:#FBCA43;"></span><span style="display:inline-block;width:1em;height:1em;background:#464599;"></span><span style="display:inline-block;width:1em;height:1em;background:#B2D9C8;"></span></div><h3 id="象物新生"><a href="#象物新生" class="headerlink" title="象物新生"></a>象物新生</h3><blockquote><p>#565535 #BFC096 #D5D1AE</p><p>#A9A886 #9F9D6A #84A8A6 #C7B9AF #79716E</p></blockquote><div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;"><span style="display:inline-block;width:4em;height:1em;background:#565535;"></span><span style="display:inline-block;width:2em;height:1em;background:#BFC096;"></span><span style="display:inline-block;width:1em;height:1em;background:#D5D1AE;"></span><br/><span style="display:inline-block;width:2em;height:1em;background:#A9A886;"></span><span style="display:inline-block;width:2em;height:1em;background:#9F9D6A;"></span><span style="display:inline-block;width:1em;height:1em;background:#84A8A6;"></span><span style="display:inline-block;width:1em;height:1em;background:#C7B9AF;"></span><span style="display:inline-block;width:1em;height:1em;background:#79716E;"></span></div><h3 id="流光溢彩"><a href="#流光溢彩" class="headerlink" title="流光溢彩"></a>流光溢彩</h3><blockquote><p>#894E57 #CF929E #E3ADB9</p><p>#B27777 #D0828A #D4C64C #B0D1E4 #B1362E</p></blockquote><div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;"><span style="display:inline-block;width:4em;height:1em;background:#894E57;"></span><span style="display:inline-block;width:2em;height:1em;background:#CF929E;"></span><span style="display:inline-block;width:1em;height:1em;background:#E3ADB9;"></span><br/><span style="display:inline-block;width:2em;height:1em;background:#B27777;"></span><span style="display:inline-block;width:2em;height:1em;background:#D0828A;"></span><span style="display:inline-block;width:1em;height:1em;background:#D4C64C;"></span><span style="display:inline-block;width:1em;height:1em;background:#B0D1E4;"></span><span style="display:inline-block;width:1em;height:1em;background:#B1362E;"></span></div><h3 id="尘心不皂"><a href="#尘心不皂" class="headerlink" title="尘心不皂"></a>尘心不皂</h3><blockquote><p>#787267 #DAD8D7 #C3C3C3</p><p>#DFE0D9 #97968A #E3E5E1 #F6F5F4 #5B5858</p></blockquote><div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;"><span style="display:inline-block;width:4em;height:1em;background:#787267;"></span><span style="display:inline-block;width:2em;height:1em;background:#DAD8D7;"></span><span style="display:inline-block;width:1em;height:1em;background:#C3C3C3;"></span><br/><span style="display:inline-block;width:2em;height:1em;background:#DFE0D9;"></span><span style="display:inline-block;width:2em;height:1em;background:#97968A;"></span><span style="display:inline-block;width:1em;height:1em;background:#E3E5E1;"></span><span style="display:inline-block;width:1em;height:1em;background:#F6F5F4;"></span><span style="display:inline-block;width:1em;height:1em;background:#5B5858;"></span></div><h2 id="敦煌美学"><a href="#敦煌美学" class="headerlink" title="敦煌美学"></a>敦煌美学</h2><h3 id="红消绿冷"><a href="#红消绿冷" class="headerlink" title="红消绿冷"></a>红消绿冷</h3><blockquote><p>#4C4E16 #A4865B #A07B55</p><p>#D8DFBD #A89D8A #8E6F54 #78726A #33211B</p></blockquote><div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;"><span style="display:inline-block;width:4em;height:1em;background:#4C4E16;"></span><span style="display:inline-block;width:2em;height:1em;background:#A4865B;"></span><span style="display:inline-block;width:1em;height:1em;background:#A07B55;"></span><br/><span style="display:inline-block;width:2em;height:1em;background:#D8DFBD;"></span><span style="display:inline-block;width:2em;height:1em;background:#A89D8A;"></span><span style="display:inline-block;width:1em;height:1em;background:#8E6F54;"></span><span style="display:inline-block;width:1em;height:1em;background:#78726A;"></span><span style="display:inline-block;width:1em;height:1em;background:#33211B;"></span></div><h3 id="碧落空歌"><a href="#碧落空歌" class="headerlink" title="碧落空歌"></a>碧落空歌</h3><blockquote><p>#51476C #73687D #706F91</p><p>#E0C2B3 #889286 #B5B6B2 #5F5C54 #3B3839</p></blockquote><div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;"><span style="display:inline-block;width:4em;height:1em;background:#51476C;"></span><span style="display:inline-block;width:2em;height:1em;background:#73687D;"></span><span style="display:inline-block;width:1em;height:1em;background:#706F91;"></span><br/><span style="display:inline-block;width:2em;height:1em;background:#E0C2B3;"></span><span style="display:inline-block;width:2em;height:1em;background:#889286;"></span><span style="display:inline-block;width:1em;height:1em;background:#B5B6B2;"></span><span style="display:inline-block;width:1em;height:1em;background:#5F5C54;"></span><span style="display:inline-block;width:1em;height:1em;background:#3B3839;"></span></div><h3 id="白贲无咎"><a href="#白贲无咎" class="headerlink" title="白贲无咎"></a>白贲无咎</h3><blockquote><p>#531C0B #B25F47 #B16F4A</p><p>#D9BC9D #B69584 #A69A88 #915030 #463838</p></blockquote><div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;"><span style="display:inline-block;width:4em;height:1em;background:#531C0B;"></span><span style="display:inline-block;width:2em;height:1em;background:#B25F47;"></span><span style="display:inline-block;width:1em;height:1em;background:#B16F4A;"></span><br/><span style="display:inline-block;width:2em;height:1em;background:#D9BC9D;"></span><span style="display:inline-block;width:2em;height:1em;background:#B69584;"></span><span style="display:inline-block;width:1em;height:1em;background:#A69A88;"></span><span style="display:inline-block;width:1em;height:1em;background:#915030;"></span><span style="display:inline-block;width:1em;height:1em;background:#463838;"></span></div><h3 id="绿碧乌龙"><a href="#绿碧乌龙" class="headerlink" title="绿碧乌龙"></a>绿碧乌龙</h3><blockquote><p>#537050 #B3B4A2 #828E74</p><p>#C6A69B #768166 #A69A88 #DCC3A4 #3E4344</p></blockquote><div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;"><span style="display:inline-block;width:4em;height:1em;background:#537050;"></span><span style="display:inline-block;width:2em;height:1em;background:#B3B4A2;"></span><span style="display:inline-block;width:1em;height:1em;background:#828E74;"></span><br/><span style="display:inline-block;width:2em;height:1em;background:#C6A69B;"></span><span style="display:inline-block;width:2em;height:1em;background:#768166;"></span><span style="display:inline-block;width:1em;height:1em;background:#A69A88;"></span><span style="display:inline-block;width:1em;height:1em;background:#DCC3A4;"></span><span style="display:inline-block;width:1em;height:1em;background:#3E4344;"></span></div><h3 id="空即是色"><a href="#空即是色" class="headerlink" title="空即是色"></a>空即是色</h3><blockquote><p>#32456E #52678A #5F76A2</p><p>#D8C6A0 #896347 #E8D263 #829C95 #323C3C</p></blockquote><div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;"><span style="display:inline-block;width:4em;height:1em;background:#32456E;"></span><span style="display:inline-block;width:2em;height:1em;background:#52678A;"></span><span style="display:inline-block;width:1em;height:1em;background:#5F76A2;"></span><br/><span style="display:inline-block;width:2em;height:1em;background:#D8C6A0;"></span><span style="display:inline-block;width:2em;height:1em;background:#896347;"></span><span style="display:inline-block;width:1em;height:1em;background:#E8D263;"></span><span style="display:inline-block;width:1em;height:1em;background:#829C95;"></span><span style="display:inline-block;width:1em;height:1em;background:#323C3C;"></span></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;记录QQNT目前版本（9.9.3-17153）下超级调色盘中“故宫美学”和“敦煌美学”配色列表。&lt;/p&gt;
+&lt;h2 id=&quot;故宫美学&quot;&gt;&lt;a href=&quot;#故宫美学&quot; class=&quot;headerlink&quot; title=&quot;故宫美学&quot;&gt;&lt;/a&gt;故宫美学&lt;/h2&gt;&lt;h3 id=&quot;缥</summary>
+      
+    
+    
+    
+    
+    <category term="学习" scheme="https://guopcingithub.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《NOiSY MONSTER》歌词翻译</title>
+    <link href="https://guopcingithub.github.io/2023/08/16/noisy_monster/"/>
+    <id>https://guopcingithub.github.io/2023/08/16/noisy_monster/</id>
+    <published>2023-08-15T16:00:00.000Z</published>
+    <updated>2023-08-16T14:47:51.630Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>NOiSY MONSTER</strong> - TV动画《SELECTION PROJECT》插曲</p><p>作词：<span lang="ja">牡丹</span>；作曲：<span lang="ja">藤井健太郎</span></p><p>本歌曲歌词翻译最初于2023年8月16日发布于萌娘百科。</p><p>条目链接：<a class="link"   href="https://zh.moegirl.org.cn/NOiSY_MONSTER" >https://zh.moegirl.org.cn/NOiSY_MONSTER <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><hr><p><strong>歌词</strong></p><p><em>注：歌词著作权归原作者所有。</em></p><div lang="ja" style="white-space: pre;"><p>衝動のままに掻き鳴らせ<br>あれもこれも欲しくてしょうがない<br>教科書通りの綺麗事じゃ<br>満足できないわ　まだ食べ足りない<br>＜EAT MORE PLEASE＞</p><p>誰にでも言うでしょう<br>“期待してる”＜IS THAT TRUE？＞<br>前へ倣えで　量産型良いこちゃん<br>はみ出した私　見えてるかな？<br>不協和音＜ALL CLASH！＞<br>何もかも　非常事態</p><p>Rising noise, I want to prove<br>押し潰されそうな<br>理想がせめぎ合う攻防戦<br>吠えてみたくて　騒めき始める<br>はね返る心臓　響く合図(チャイム)<br>Rising noise, I want to prove<br>模範回答は捨てて<br>本能のまま求めてよ<br>邪魔するものは一片残さず<br>喰らい尽くしてやるから</p><p>小さな机　狭い世界<br>ここにいるだけじゃ満たされない<br>オール５の数字があれば<br>どこにでもいける　ひどい冗談ね<br>＜NEED MORE PLEASE＞</p><p>大事な時はいつだって<br>“目隠し”＜IT’S SO FOOL＞<br>同じ色の制服だって囲えない<br>背負ってるのは私の人生<br>右脳左脳＜ALL DOWN！＞<br>要求は　自由だけ</p><p>Changing noise, and Make a way<br>白黒つけてよ<br>噛み付かれる前に噛み切ってやれ<br>所詮はコップの中の嵐なら<br>嘘も罠も笑い飛ばせばいい<br>Changing noise, and Make a way<br>歪めば歪んだ分だけ<br>耳が痛い……ハウリング<br>強がるフリが隠せないのなら<br>心ごと曝け出して<br>弱さも飼い慣らせば　REVITALIZE</p><p>生まれ落ちたこの場所さえ<br>逃げられない日常さえ<br>抱き締めたら　向き合って今<br>爆発的にさ＜INCITE＞<br>弱肉強食＜KNOCK OUT＞<br>生き残るため</p><p>Rising noise, I want to prove<br>押し潰されそうな<br>理想がせめぎ合う攻防戦<br>吠えてみたくて　騒めき始める<br>はね返る心臓　響く合図(チャイム)<br>Rising noise, I want to prove<br>模範回答は捨てて<br>本能のまま求めてよ<br>邪魔するものは一片残さず<br>喰らい尽くしてやるから</p><p>IT’S OVER－－<br>全て　飲み込んでみせるよ<br>BREAKING THE HABIT</p><p>お腹いっぱい　嗚呼、ご馳走様</p></div><hr><p><strong>翻译</strong></p><div style="white-space: pre;"><p>随着这份冲动恣意弹响<br>那个和这个都想得到真是没办法<br>教科书式的漂亮事<br>根本没法满足　还远远没有吃够<br>＜再多吃些吧＞</p><p>对谁都会这么说吧<br>“我很期待喔”＜是真的吗？＞<br>向前看齐　量产而出的好孩子<br>又是否看到了　特立独行的我呢？<br>不协和音＜尽数冲突！＞<br>完全就是　紧急状态</p><p>渐强的噪声，我只欲证明<br>快要被压成齑粉<br>理想间互相竞争的攻防战<br>渴望呐喊咆哮　喧嚣随之而起<br>跳动的心脏　把信号鸣响<br>渐强的噪声，我只欲证明<br>标准答案扔在一边<br>仅凭着本能不停求索<br>一切妨碍之物皆片甲不留<br>你们只会被吞噬殆尽</p><p>一张小方桌　一片小世界<br>只是待在此处是没法满足的<br>如果得到的数字全是５点<br>便能去往任何地方　这玩笑真过分<br>＜还要再来点＞</p><p>重要的时刻总是在<br>“捉迷藏”＜真是愚蠢＞<br>穿着同样的制服也找不到<br>背上担着的是我的人生<br>右脑左脑＜全部停转！＞<br>诉求　只有自由</p><p>变换着噪声，找到条出路<br>分清是非黑白<br>在被咬住之前把对手咬断<br>若终究只是一场小风波<br>谎言抑或陷阱都一笑而过<br>变换着噪声，找到条出路<br>歪斜的只是扭曲的部分<br>耳朵刺痛……正因这鸣噪<br>若无法掩饰这份虚伪的强大<br>那就敞开这心扉吧<br>将这份软弱驯服便能　重获新生</p><p>把这诞生于此的地方<br>把这无法逃离的日常<br>紧紧拥入怀中　便能直面当下<br>喷薄而出＜鼓动＞<br>弱肉强食＜淘汰＞<br>只为保全性命</p><p>渐强的噪声，我只欲证明<br>快要被压成齑粉<br>理想间互相竞争的攻防战<br>渴望呐喊咆哮　喧嚣随之而起<br>跳动的心脏　把信号鸣响<br>渐强的噪声，我只欲证明<br>标准答案扔在一边<br>仅凭着本能不停求索<br>一切妨碍之物皆片甲不留<br>你们只会被吞噬殆尽</p><p>都结束了－－<br>全部都　就此吞食干净<br>打破这习惯</p><p>吃饱喝足　啊，多谢款待</p></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;NOiSY MONSTER&lt;/strong&gt; - TV动画《SELECTION PROJECT》插曲&lt;/p&gt;
+&lt;p&gt;作词：&lt;span lang=&quot;ja&quot;&gt;牡丹&lt;/span&gt;；作曲：&lt;span lang=&quot;ja&quot;&gt;藤井健太郎&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;本歌曲</summary>
+      
+    
+    
+    
+    
+    <category term="歌词翻译" scheme="https://guopcingithub.github.io/tags/%E6%AD%8C%E8%AF%8D%E7%BF%BB%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《Blue Canvas》歌词翻译</title>
+    <link href="https://guopcingithub.github.io/2023/08/04/blue_canvas/"/>
+    <id>https://guopcingithub.github.io/2023/08/04/blue_canvas/</id>
+    <published>2023-08-03T16:00:00.000Z</published>
+    <updated>2023-08-04T04:22:41.161Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>Blue Canvas</strong> - <span lang="ja">いるかアイス</span>投稿的VOCALOID日文原创歌曲</p><p>作词：<span lang="ja">いるかアイス</span>；作曲：<span lang="ja">いるかアイス</span></p><p>本歌曲歌词翻译最初于2023年8月4日发布于萌娘百科。</p><p>条目链接：<a class="link"   href="https://zh.moegirl.org.cn/Blue_Canvas(VOCALOID)" >https://zh.moegirl.org.cn/Blue_Canvas(VOCALOID) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><hr><p><strong>歌词</strong></p><p><em>注：歌词著作权归原作者所有。</em></p><div lang="ja" style="white-space: pre;"><p>君と見てたいつかの映画で　未だ見たこと無い空と海が<br>どうしようもない青さに満ちて　こんな世界で歌いたいねと<br>笑う君はどこか似ていたね　その物語のヒロインと<br>何千年前のお話も　染まる時を待っている</p><p>願うから魔法がかかるよ　僕らの絵筆が彩る<br>感じた未来　今を塗り替え　零れ落ちてく</p><p>もっと君らしく空を描けるから　君らしく海も渡れるから<br>注ぐ太陽の眩しささえ　光る飛沫を跳ね返す<br>夢に訪れたあの景色を　遍く予感を超える色で<br>誰も塗り直すことはできない　君だけの青いキャンバス</p><p>暮れる時の夕焼けの色も　眠る星空の夜の色も<br>何もなかった白いキャンバスに　描いてみれば美しいのでしょう<br>でも君は「あの青じゃないと」と　飛び込んだ淡い夏空間<br>御伽の世界に迷い込めば　そのまま時を忘れて</p><p>「ねえ見えたよ」　隣で君が言う　眩しくてキラキラ光る<br>虹を渡れば　始まっていた　僕らの世界</p><p>透き通る色の中　手をとって落ちていく<br>溶けそうな感覚も　想像を越えていた<br>君は歌い　水面は弧を描き作られる<br>表せない感情がただ涙となった</p><p>もっと君らしく空を描けるから　君らしく海も渡れるから<br>注ぐ太陽の眩しささえ　光る飛沫を跳ね返す<br>夢に訪れたあの景色を　遍く予感を超える色で<br>誰も塗り直すことはできない　君だけの青いキャンバス</p></div><hr><p><strong>翻译</strong></p><div style="white-space: pre;"><p>与你一同看过的电影里　未曾见过的天空与大海<br>想要在一片蓝色的世界中　就这样无可救药地歌唱<br>笑着的你看上去有些像　那篇故事里的女主人公<br>数千年前的传说也在　等待着洇染之时的到来</p><p>许下心愿魔法施展而出　予我们的画笔以色彩<br>感受到的未来　把当下重新涂抹　而飘然散落</p><p>我会更加如你一般描绘天空　如你一般渡过大海<br>就连太阳洒下的光辉　也会弹出闪耀的飞沫<br>将梦中见到的那景色　用超出预感的颜色画出<br>任何人都无法再次着色　只属于你的蓝色画布</p><p>那日暮时分晚霞的颜色　那星空安眠夜晚的颜色<br>在空无一物的纯白画布上　描画出来一定会很美丽吧<br>但你说着「若不是那个蓝色」　跳进了淡淡的夏之空间<br>若是迷失在幻想的世界　就会忘记时间的流逝</p><p>「喂看见了哦」　你在一旁说道　耀眼无比闪闪发光<br>越过彩虹　我们的世界　便会由此开始</p><p>在透明的颜色中　手牵着手向下坠落<br>像要融化的感觉　超越了我们的想象<br>你放声歌唱　水面勾勒出一道弧线<br>无以言表的感情最终化作泪珠</p><p>我会更加如你一般描绘天空　如你一般渡过大海<br>就连太阳洒下的光辉　也会弹出闪耀的飞沫<br>将梦中见到的那景色　用超出预感的颜色画出<br>任何人都无法再次着色　只属于你的蓝色画布</p></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Blue Canvas&lt;/strong&gt; - &lt;span lang=&quot;ja&quot;&gt;いるかアイス&lt;/span&gt;投稿的VOCALOID日文原创歌曲&lt;/p&gt;
+&lt;p&gt;作词：&lt;span lang=&quot;ja&quot;&gt;いるかアイス&lt;/span&gt;；作曲：&lt;span lang=&quot;ja&quot;&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="歌词翻译" scheme="https://guopcingithub.github.io/tags/%E6%AD%8C%E8%AF%8D%E7%BF%BB%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《はなさくいろは（花开伊吕波）》歌词翻译</title>
+    <link href="https://guopcingithub.github.io/2023/08/02/hana_saku_iroha/"/>
+    <id>https://guopcingithub.github.io/2023/08/02/hana_saku_iroha/</id>
+    <published>2023-08-01T16:00:00.000Z</published>
+    <updated>2023-08-02T13:09:23.905Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong><span lang="ja">はなさくいろは</span>（花开伊吕波）</strong> - TV动画《花开伊吕波》片尾曲</p><p>作词：<span lang="ja">原田郁子</span>；作曲：<span lang="ja">ミト</span></p><p>本歌曲歌词翻译最初于2023年8月2日发布于萌娘百科。</p><p>条目链接：<a class="link"   href="https://zh.moegirl.org.cn/%E8%8A%B1%E5%BC%80%E4%BC%8A%E5%90%95%E6%B3%A2(%E6%AD%8C%E6%9B%B2)" >https://zh.moegirl.org.cn/花开伊吕波(歌曲) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><hr><p><strong>歌词</strong></p><p><em>注：歌词著作权归原作者所有。</em></p><div lang="ja" style="white-space: pre;"><p>ブルー　イエロー　パープル　レッド　溜め息のいろいろは<br>あの日の後ろ姿　まぶたの裏で揺れる<br>ひい　ふう　み　よ　いっつ　むう　なな　や　喜びのいろいろは<br>あなたが教えてくれた　言葉にならない想い<br>何度も　何度も　思い出す</p><p>風のまにまにふっと　輝くプリズム<br>うつろいながらもきっと<br>夢にみた場所へと　近づいてゆける<br>とまどいながらもそっと　手をのばしてみる<br>まだ見ぬ空　いつか　花咲く頃</p><p>帰り道　忘れても<br>それぞれの　旅はつづいてく<br>胸の奥　ともる火よ<br>あぁ　どうか　消えないでいて</p><p>ブルー　イエロー　パープル　レッド　溜め息のいろいろは<br>確かめてみたいこと　ひとつだけ　あるの<br>ひい　ふう　み　よ　いっつ　むう　なな　や　喜びのいろいろは<br>渇いた喉からこぼれる　なつかしいメロディ<br>何度も　何度も　口ずさむ</p><p>風のまにまにふっと　輝くプリズム<br>うつろいながらもきっと<br>夢にみた場所へと　近づいてゆける<br>とまどいながらもそっと　手をのばしてみる</p><p>まだ見ぬ空　その先へと　いつか　花咲く頃</p></div><hr><p><strong>翻译</strong></p><div style="white-space: pre;"><p>蓝色　黄色　紫色　红色　叹息的声音悄悄传出<br>那一天你的背影　在我的眼中摇曳<br>一　二　三　四　五　六　七　八　喜悦的心情渐渐显露<br>是你所告诉我的　无法言说的思念<br>无数次　无数次　回荡在脑海</p><p>随风飘舞着的　闪闪发光的棱镜<br>就这样不停变换一定能<br>朝梦中所见之处　一步一步靠近<br>尽管心生迷惘也要试着　缓缓将手伸出<br>未曾见过的天空　也定有　花开之时</p><p>即便忘记了　回家的路<br>人们各自的　旅程仍在继续<br>照亮心底的　点点灯火<br>啊　请一定　不要就此熄灭</p><p>蓝色　黄色　紫色　红色　叹息的声音悄悄传出<br>心里有一件　想要确认的　事情<br>一　二　三　四　五　六　七　八　喜悦的心情渐渐显露<br>干涸的喉咙流淌出　令人怀念的旋律<br>一次次　一次次　轻轻地哼唱</p><p>随风飘舞着的　闪闪发光的棱镜<br>就这样不停变换一定能<br>朝梦中所见之处　一步一步靠近<br>尽管心生迷惘也要试着　缓缓将手伸出</p><p>未曾见过的天空　在那之后　也定有　花开之时</p></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;&lt;span lang=&quot;ja&quot;&gt;はなさくいろは&lt;/span&gt;（花开伊吕波）&lt;/strong&gt; - TV动画《花开伊吕波》片尾曲&lt;/p&gt;
+&lt;p&gt;作词：&lt;span lang=&quot;ja&quot;&gt;原田郁子&lt;/span&gt;；作曲：&lt;span lang=&quot;ja&quot;&gt;ミト&lt;/span</summary>
+      
+    
+    
+    
+    
+    <category term="歌词翻译" scheme="https://guopcingithub.github.io/tags/%E6%AD%8C%E8%AF%8D%E7%BF%BB%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《true drop》歌词翻译</title>
+    <link href="https://guopcingithub.github.io/2023/07/22/true_drop/"/>
+    <id>https://guopcingithub.github.io/2023/07/22/true_drop/</id>
+    <published>2023-07-21T16:00:00.000Z</published>
+    <updated>2023-07-22T12:52:39.164Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>true drop</strong> - 游戏《E×E》片尾曲</p><p>作词：<span lang="ja">霜月はるか</span>；作曲：Famishin</p><p>本歌曲歌词翻译最初于2023年7月22日发布于萌娘百科。</p><p>条目链接：<a class="link"   href="https://zh.moegirl.org.cn/True_drop" >https://zh.moegirl.org.cn/True_drop <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><hr><p><strong>歌词</strong></p><p><em>注：歌词著作权归原作者所有。</em></p><div lang="ja" style="white-space: pre;"><p>吹き抜ける風　街を洗い流して<br>新しい日を　優しく包む<br>遠すぎる夢　諦めて背を向けた<br>過ぎた日の私まで　届けたい<br>固く閉ざした<br>心に、沁みてく</p><p>ほら少し　軽くなる　歩き出す一歩は<br>いつだって　貴方の側にある<br>瞳から　零れ落つ　<ruby>真実<rt>ほんとう</rt></ruby>のカケラを<br>見つけたら　拾って抱きとめてね</p><p>掬った雫　大事に守るその手<br>いずれ儚く消えてしまうのに？<br>じわり広かり<br>世界に、沁みてく</p><p>差し込んだ　ヒカリたち　はじいてきらめいた<br>輝きは　貴方と共にある<br>まっすぐな　言葉から　伝わるその想い<br>気付いたの　信じてみるよ　きっと</p><p>迷わない　この場所で　私生きてゆく<br><ruby>真実<rt>ほんとう</rt></ruby>は　貴方がくれたから<br>ほら少し　軽くなる　歩き出す一歩は<br>いつだって　貴方の側にある<br>瞳から　零れ落つ　<ruby>真実<rt>ほんとう</rt></ruby>のカケラを<br>見つけたら　拾って抱きとめてね</p></div><hr><p><strong>翻译</strong></p><div style="white-space: pre;"><p>街上疾风吹过　仿佛被冲洗一新<br>温柔地怀抱着　全新的一天<br>将久远的梦想　尽数抛在身后<br>只想把它们留给　过去的自己<br>在紧紧封闭的<br>心中，深深铭刻</p><p>你看只要　这样轻快地　迈出一步<br>我就能一直　待在你的身边<br>从眼中　潸然落下的　真实的碎片<br>若是找到了　就捡拾收藏起来吧</p><p>将水滴捧起　悉心呵护的那双手<br>终究也会如虚幻一般消失不见吗？<br>在缓缓延伸的<br>世界，默默洇染</p><p>射入我心灵的光芒　闪亮无比灿烂夺目<br>这份光辉　就与你同在<br>从直率的　话语中　传达出的这份感情<br>已经收到了　并且一定会　深信不疑</p><p>毫不迷惘　我会在这里　生活下去<br>因为真实　是你所给予我的<br>你看只要　这样轻快地　迈出一步<br>我就能一直　待在你的身边<br>从眼中　潸然落下的　真实的碎片<br>若是找到了　就捡拾收藏起来吧</p></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;true drop&lt;/strong&gt; - 游戏《E×E》片尾曲&lt;/p&gt;
+&lt;p&gt;作词：&lt;span lang=&quot;ja&quot;&gt;霜月はるか&lt;/span&gt;；作曲：Famishin&lt;/p&gt;
+&lt;p&gt;本歌曲歌词翻译最初于2023年7月22日发布于萌娘百科。&lt;/p&gt;
+&lt;p&gt;条目链</summary>
+      
+    
+    
+    
+    
+    <category term="歌词翻译" scheme="https://guopcingithub.github.io/tags/%E6%AD%8C%E8%AF%8D%E7%BF%BB%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《My Dear》歌词翻译</title>
+    <link href="https://guopcingithub.github.io/2023/06/30/my_dear/"/>
+    <id>https://guopcingithub.github.io/2023/06/30/my_dear/</id>
+    <published>2023-06-29T16:00:00.000Z</published>
+    <updated>2023-06-30T14:16:12.707Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>My Dear</strong> - 游戏《管乐恋曲》片尾曲</p><p>作词：<span lang="ja">中山♥マミ</span>；作曲：Famishin</p><p>本歌曲歌词翻译最初于2023年6月30日发布于萌娘百科。</p><p>条目链接：<a class="link"   href="https://zh.moegirl.org.cn/My_Dear(%E7%AE%A1%E4%B9%90%E6%81%8B%E6%9B%B2)" >https://zh.moegirl.org.cn/My_Dear(管乐恋曲) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><hr><p><strong>歌词</strong></p><p><em>注：歌词著作权归原作者所有。</em></p><div lang="ja" style="white-space: pre;"><p>淡い桃色の花びらが　舞い散る頃<br>陽だまりと共に微笑む　あなたと巡り逢った<br>過ごす日々たちと　移りゆく季節の中<br>刻んできた時は全てが　宝物</p><p>悩みもがいた涙も　喜び溢れた涙<br>いつも隣で見守られてた<br>同じことを感じてた　一緒に歩いてきたことも<br>かけがえのない想い出</p><p>二人で描いた　美しいこのメロディ<br>この先もずっと続きを　奏でていけたらいいな</p><p>あなたがいたから　毎日が輝いてた<br>誰かを愛する気持ちにも　会えたから<br>叶えたい夢と希望　胸に強く抱けたのも<br>いつも一人ではなかったから</p><p>移り変わった季節の　それぞれに詰まった軌跡は<br>かけがえのない想い出</p><p>そうして生まれた　美しいこのメロディ<br>この先も永遠に続きを　奏でていこうね　my dear</p><p>二人で描いた　美しいこのメロディ<br>この先もずっと続きを　奏でていきたいの<br>照れくさいけれど　伝えたいことがあるの<br>私に出逢ってくれたこと　心からありがとう</p></div><hr><p><strong>翻译</strong></p><div style="white-space: pre;"><p>当片片粉红的花瓣　轻轻飘落之时<br>我同微笑着的你相遇　如同暖阳照进心房<br>一起度过的每天　与不断更迭的季节<br>刻画出的时光全都是　珍贵之物</p><p>是因苦闷焦急落泪　又或因欢喜而泣<br>你总是在一旁守护着我<br>一同感受到的事物　一齐迈步走过的路途<br>都是无可替代的回忆</p><p>两个人共同描绘　这美丽动听的旋律<br>只希望从今往后得以　时时奏响余音缭绕</p><p>有你陪在我的身边　每天都闪闪发光<br>托付出名为爱的感情　只为与你邂逅<br>心里得以怀揣着　要实现的梦想与希望<br>正因为我并不是孤身一人</p><p>不断变换的季节里　两个人留下的足迹<br>就是彼此独特的回忆</p><p>如此诞生而出的　这美妙迷人的旋律<br>就让我们一起永远　演奏下去吧　亲爱之人</p><p>两个人共同描绘　这美丽动听的旋律<br>只希望从今往后得以　时时奏响余音缭绕<br>虽然有些感到羞涩　也有想传达出的话语<br>发自内心真诚感谢你　最终能够与我相遇</p></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;My Dear&lt;/strong&gt; - 游戏《管乐恋曲》片尾曲&lt;/p&gt;
+&lt;p&gt;作词：&lt;span lang=&quot;ja&quot;&gt;中山♥マミ&lt;/span&gt;；作曲：Famishin&lt;/p&gt;
+&lt;p&gt;本歌曲歌词翻译最初于2023年6月30日发布于萌娘百科。&lt;/p&gt;
+&lt;p&gt;条目链接</summary>
+      
+    
+    
+    
+    
+    <category term="歌词翻译" scheme="https://guopcingithub.github.io/tags/%E6%AD%8C%E8%AF%8D%E7%BF%BB%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>内裁圆角+双线边框的gradient实现</title>
+    <link href="https://guopcingithub.github.io/2023/06/16/gradient_based_inner_crop_radius_and_double_border/"/>
+    <id>https://guopcingithub.github.io/2023/06/16/gradient_based_inner_crop_radius_and_double_border/</id>
+    <published>2023-06-15T16:00:00.000Z</published>
+    <updated>2023-06-16T04:20:51.841Z</updated>
+    
+    <content type="html"><![CDATA[<p>使用CSS <code>background</code>里的gradient系列函数实现内裁圆角+双线边框。</p><div style="background: radial-gradient(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) 4px 4px/26px 26px no-repeat, skyblue; width: 120px; height: 80px; margin: 5px;"></div>①<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) <i>4px 4px/26px 26px no-repeat</i></code><p>⓪<code style="color: #445B70;"><span style="font-weight: bold;">skyblue</span></code></p><div style="background: conic-gradient(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) 4px 4px/26px 26px no-repeat, radial-gradient(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) 4px 4px/26px 26px no-repeat, skyblue; width: 120px; height: 80px; margin: 5px;"></div>②<code style="color: #445B70;"><span style="color: #F8961E; font-weight: bold;">conic-gradient</span>(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) <i>4px 4px/26px 26px no-repeat</i></code><p>①<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) <i>4px 4px/26px 26px no-repeat</i></code></p><p>⓪<code style="color: #445B70;"><span style="font-weight: bold;">skyblue</span></code></p><div style="background: linear-gradient(white 0 4px, transparent 4px) 5px 5px/115px 26px no-repeat, linear-gradient(to right, white 0 4px, transparent 4px) 5px 5px/26px 75px no-repeat, conic-gradient(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) 4px 4px/26px 26px no-repeat, radial-gradient(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) 4px 4px/26px 26px no-repeat, skyblue; width: 120px; height: 80px; margin: 5px;"></div>③<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(white 0 4px, transparent 4px) <i>5px 5px/115px 26px no-repeat</i>, <span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(to right, white 0 4px, transparent 4px) <i>5px 5px/26px 75px no-repeat</i></code><p>②<code style="color: #445B70;"><span style="color: #F8961E; font-weight: bold;">conic-gradient</span>(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) <i>4px 4px/26px 26px no-repeat</i></code></p><p>①<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) <i>4px 4px/26px 26px no-repeat</i></code></p><p>⓪<code style="color: #445B70;"><span style="font-weight: bold;">skyblue</span></code></p><div style="background: radial-gradient(circle at top left, skyblue 14px, white 14px 19px, transparent 19px) 5px 5px/26px 26px no-repeat, linear-gradient(white 0 4px, transparent 4px) 5px 5px/115px 26px no-repeat, linear-gradient(to right, white 0 4px, transparent 4px) 5px 5px/26px 75px no-repeat, conic-gradient(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) 4px 4px/26px 26px no-repeat, radial-gradient(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) 4px 4px/26px 26px no-repeat, skyblue; width: 120px; height: 80px; margin: 5px;"></div>④<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 14px, white 14px 19px, transparent 19px) <i>5px 5px/26px 26px no-repeat</i></code><p>③<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(white 0 4px, transparent 4px) <i>5px 5px/115px 26px no-repeat</i>, <span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(to right, white 0 4px, transparent 4px) <i>5px 5px/26px 75px no-repeat</i></code></p><p>②<code style="color: #445B70;"><span style="color: #F8961E; font-weight: bold;">conic-gradient</span>(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) <i>4px 4px/26px 26px no-repeat</i></code></p><p>①<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) <i>4px 4px/26px 26px no-repeat</i></code></p><p>⓪<code style="color: #445B70;"><span style="font-weight: bold;">skyblue</span></code></p><div style="background: linear-gradient(white 0 2px, transparent 2px) 27px 12px/93px 5px no-repeat, linear-gradient(to right, white 0 2px, transparent 2px) 12px 27px/5px 53px no-repeat, radial-gradient(circle at top left, skyblue 14px, white 14px 19px, transparent 19px) 5px 5px/26px 26px no-repeat, linear-gradient(white 0 4px, transparent 4px) 5px 5px/115px 26px no-repeat, linear-gradient(to right, white 0 4px, transparent 4px) 5px 5px/26px 75px no-repeat, conic-gradient(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) 4px 4px/26px 26px no-repeat, radial-gradient(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) 4px 4px/26px 26px no-repeat, skyblue; width: 120px; height: 80px; margin: 5px;"></div>⑤<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(white 0 2px, transparent 2px) <i>27px 12px/93px 5px no-repeat</i>, <span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(to right, white 0 2px, transparent 2px) <i>12px 27px/5px 53px no-repeat</i></code><p>④<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 14px, white 14px 19px, transparent 19px) <i>5px 5px/26px 26px no-repeat</i></code></p><p>③<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(white 0 4px, transparent 4px) <i>5px 5px/115px 26px no-repeat</i>, <span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(to right, white 0 4px, transparent 4px) <i>5px 5px/26px 75px no-repeat</i></code></p><p>②<code style="color: #445B70;"><span style="color: #F8961E; font-weight: bold;">conic-gradient</span>(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) <i>4px 4px/26px 26px no-repeat</i></code></p><p>①<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) <i>4px 4px/26px 26px no-repeat</i></code></p><p>⓪<code style="color: #445B70;"><span style="font-weight: bold;">skyblue</span></code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;使用CSS &lt;code&gt;background&lt;/code&gt;里的gradient系列函数实现内裁圆角+双线边框。&lt;/p&gt;
+&lt;div style=&quot;background: 
+radial-gradient(circle at top left, skyblue 24px, wh</summary>
+      
+    
+    
+    
+    
+    <category term="学习" scheme="https://guopcingithub.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《Midday Star》歌词翻译</title>
+    <link href="https://guopcingithub.github.io/2023/05/17/midday_star/"/>
+    <id>https://guopcingithub.github.io/2023/05/17/midday_star/</id>
+    <published>2023-05-16T16:00:00.000Z</published>
+    <updated>2023-05-18T01:43:52.561Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>Midday Star</strong> - 游戏《魔女的夜宴》户隐憧子角色歌</p><p>作词：kala (Angel Notes)；作曲：<span lang="ja">井ノ原智</span> (Angel Notes)</p><p>本歌曲歌词翻译最初于2023年5月17日发布于萌娘百科。</p><p>条目链接：<a class="link"   href="https://zh.moegirl.org.cn/Midday_Star" >https://zh.moegirl.org.cn/Midday_Star <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><hr><p><strong>歌词</strong></p><p><em>注：歌词著作权归原作者所有。</em></p><div lang="ja" style="white-space: pre;"><p>真昼の空に　隠れてる星<br>まるで私の　姿みたい<br>キラキラひかる　星の欠片ね<br>見えない姿　感じて欲しいの</p><p>甘い言葉を　囁いて<br>照れてるあなたを　もう少し見たいの</p><p>水面の星は煌めいて　炎のように揺らめいて<br>戸惑う二人映す鏡　優しく導いて</p><p>想いはいつも謎めいて　秘密はいつも艶めいて<br>誰も知らない真実を　そっと教えてあげる<br>あなただけに</p><p>真夜中の月　隠れた心<br>ホントの私　探している<br>キラキラひかる　心の欠片<br>拾い集めて　見つけて欲しいの</p><p>愛の言葉を　囁いて<br>驚くあなたを　あと少し見たいの</p><p>水面の月は煌めいて　青い炎を揺らめかせ<br>踊る二人を繋ぐように　優しく微笑むの</p><p>想いはいつも謎めいて　瞳の奥は艶めいて<br>誰も知らない未来へと　きっと歩いて行ける<br>あなたとなら</p><p>真昼の星は煌めいて　炎のように揺らめいて<br>戸惑う二人映す光　優しく導いて</p><p>想いはいつも謎めいて　秘密はいつも艶めいて<br>誰も知らない真実を　そっと教えてあげる<br>あなただけに</p></div><hr><p><strong>翻译</strong></p><div style="white-space: pre;"><p>在正午天空中　隐没的星星<br>宛如就是我的　身形一般<br>那闪闪发光的　星星的碎片<br>想让你感受到　不可见的姿容</p><p>向你轻声诉说　甜言蜜语<br>还想再多看看　害羞着的你</p><p>水面上闪耀着的群星　就像飘舞着的火焰<br>映出犹疑二人的镜子　温和地引导</p><p>心意总是虚实难辨　秘密也是妖娆魅人<br>就让我悄悄告诉你　无人知晓的真相<br>只与你言说</p><p>深夜中的明月　隐藏起的真心<br>真正的自己　正在找寻着<br>那闪闪发光的　心灵的碎片<br>想让你捡拾起　看出端倪</p><p>向你轻声诉说　浓情蜜意<br>还想再多看看　惊讶着的你</p><p>水面上闪耀着的月亮　飘摇着青蓝的火焰<br>将起舞的二人连系起　温柔地微笑</p><p>心意总是若隐若现　眼瞳也是美丽迷人<br>最终一定能够到达　无人知晓的未来<br>若与你同行</p><p>正午时闪耀着的群星　就像飘舞着的火焰<br>映出犹疑二人的光芒　温和地引导</p><p>心意总是虚实难辨　秘密也是妖娆魅人<br>就让我悄悄告诉你　无人知晓的真相<br>只与你言说</p></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Midday Star&lt;/strong&gt; - 游戏《魔女的夜宴》户隐憧子角色歌&lt;/p&gt;
+&lt;p&gt;作词：kala (Angel Notes)；作曲：&lt;span lang=&quot;ja&quot;&gt;井ノ原智&lt;/span&gt; (Angel Notes)&lt;/p&gt;
+&lt;p&gt;本歌曲歌词翻译最</summary>
+      
+    
+    
+    
+    
+    <category term="歌词翻译" scheme="https://guopcingithub.github.io/tags/%E6%AD%8C%E8%AF%8D%E7%BF%BB%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《リアルフレンド（Real Friend）》歌词翻译</title>
+    <link href="https://guopcingithub.github.io/2023/05/11/real_friend/"/>
+    <id>https://guopcingithub.github.io/2023/05/11/real_friend/</id>
+    <published>2023-05-10T16:00:00.000Z</published>
+    <updated>2023-09-14T03:15:59.340Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong><span lang="ja">リアルフレンド</span>（Real Friend）</strong> - 游戏《魔女的夜宴》因幡巡角色歌</p><p>作词：Tohko；作曲：<span lang="ja">伊福部武史</span> (Angel Notes)</p><p>本歌曲歌词翻译最初于2023年5月11日发布于萌娘百科。</p><p>条目链接：<a class="link"   href="https://zh.moegirl.org.cn/Real_Friend" >https://zh.moegirl.org.cn/Real_Friend <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><hr><p><strong>歌词</strong></p><p><em>注：歌词著作权归原作者所有。</em></p><div lang="ja" style="white-space: pre;"><p>今日もひとりぼっちで　屋上に上がる<br>時間つぶしの午後は　慣れてきたけど<br>見た目だけは明るく　派手にしてても<br>どこか追いつかないよ　こころ置き去り</p><p>うわべだけなら　笑えるけど<br>どこかギクシャク　上手く馴染めない</p><p>女の子はいつでも　駆け引きして<br>飾られたフレーズを　並べて<br>本音で付き合いたい　胸の奥は<br>そんなリアルフレンド　どこかに探してる</p><p>いつも輪の中にいる　クラスメイトが<br>すごく羨ましくて　眩しく見えた<br>どんな話をしたら　仲良くなれる？<br>授業中そんなこと　グルグル回る</p><p>鏡の中の　自分を見て<br>笑顔作って　練習してみるの</p><p>時間忘れるほどに　おしゃべりして<br>買い物に出かけたり　はしゃいで<br>好きな人ができたら　報告して<br>そんな日を過ごしたい　いつかは叶うかな？</p><p>勇気を出して　ほんの少し<br>声かけたいな　上手くできるかな？</p><p>本当は寂しがり屋　誰かの手を<br>繋いでいたいなんて　言えない<br>強がる私の癖　もうやめたい<br>素直な言葉　聞いてほしいよ</p><p>女の子はいつでも　駆け引きして<br>飾られたフレーズを　並べて<br>本音で付き合いたい　胸の奥は<br>そんなリアルフレンド　どこかに探してる</p></div><hr><p><strong>翻译</strong></p><div style="white-space: pre;"><p>今天也是孤单一人　走上屋顶<br>这样消磨时间的午后　早已习惯了<br>尽管外表活泼开朗　穿着光鲜<br>却没法追到心中　想到达的地方</p><p>光从表面上看来　是在吟吟笑着<br>却总是有些生硬　难以顺利融入环境</p><p>女孩子总是能　做到临机应变<br>将粉饰过的语言　句句送出<br>心灵深处只想　真诚地互相交往<br>那样真实的朋友　要去哪里才能找到呢</p><p>一直聚在一起的　同班同学们<br>我真的十分羡慕　看上去那么炫目<br>究竟要说些什么　关系才能变好呢？<br>上课的时候也在　反复思考着</p><p>我看着　镜子里的自己<br>尝试练习　摆出一张笑脸</p><p>忘记时间的流逝　与你尽情交谈<br>出门买东西的时候　也面带喜悦<br>如果有喜欢的人了　要记得报告<br>过着那种生活的愿望　何时才能实现呢？</p><p>打起勇气来　就算只有一点<br>想和你搭话　能顺利地说出来吗？</p><p>其实我容易寂寞　想要牵起<br>某人的手什么的　说不出口<br>逞强是我的癖性　已经想去放弃<br>好想亲耳听到　率真的话语啊</p><p>女孩子总是能　做到临机应变<br>将粉饰过的语言　句句送出<br>心灵深处只想　真诚地互相交往<br>依然在不停寻找着　那样真正的朋友</p></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;&lt;span lang=&quot;ja&quot;&gt;リアルフレンド&lt;/span&gt;（Real Friend）&lt;/strong&gt; - 游戏《魔女的夜宴》因幡巡角色歌&lt;/p&gt;
+&lt;p&gt;作词：Tohko；作曲：&lt;span lang=&quot;ja&quot;&gt;伊福部武史&lt;/span&gt; (Angel Not</summary>
+      
+    
+    
+    
+    
+    <category term="歌词翻译" scheme="https://guopcingithub.github.io/tags/%E6%AD%8C%E8%AF%8D%E7%BF%BB%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《Without You》歌词翻译</title>
+    <link href="https://guopcingithub.github.io/2023/05/07/without_you/"/>
+    <id>https://guopcingithub.github.io/2023/05/07/without_you/</id>
+    <published>2023-05-06T16:00:00.000Z</published>
+    <updated>2023-05-18T01:38:53.859Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>Without You</strong> - 游戏《魔女的夜宴》插曲</p><p>作词：<span lang="ja">神代あみ</span>；作曲：Famishin</p><p>本歌曲歌词翻译最初于2023年5月7日发布于萌娘百科。</p><p>条目链接：<a class="link"   href="https://zh.moegirl.org.cn/Without_You" >https://zh.moegirl.org.cn/Without_You <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><hr><p><strong>歌词</strong></p><p><em>注：歌词著作权归原作者所有。</em></p><div lang="ja" style="white-space: pre;"><p>あなたのいないこの部屋で<br>ああ、思い出が溢れてる<br>忘れたりできないよ<br>ふたりで過ごしたあの日々を</p><p>あんなに強く抱き合えたのに<br>何が欠けていたのか？<br>今更悔やんだって<br>もう間に合わないのに…</p><p>あなただから<br>自分のこと全てさらけ出せた<br>けど、終わってく恋の季節<br>止めることはできなかったね</p><p>泣きそうなキモチ抱えて<br>どこへ駆け出せばいいの？<br>あなたしか、まだ見えない<br>滲む明日はLonely</p><p>あなたといないこれからを<br>ああ、思えば胸が痛む<br>喧嘩だってしたのに<br>いいことばかり思い出すの</p><p>そろそろ前を向かなくちゃ<br>そう言い聞かせているけど<br>微かに残る香り<br>今は抱かれていたい</p><p>次の扉開けないよ<br>過去が眩しすぎて<br>あなたは今どうしてるの？<br>新しい道を歩んでる？</p><p>もしも恋なんかしなきゃ<br>こんな辛さもなかった<br>だけど、あなたに出逢えて<br>本当によかったよ</p><p>泣きそうなキモチ抱えて<br>どこへ駆け出せばいいの？<br>あなたしか、まだ見えない<br>滲む明日はLonely</p><p>アドレスも消せないまま<br>あなたの影追いかけて…<br>涙ふき、顔をあげて<br>私も前を向かなきや<br>I’m still love with you</p><p>胸の痛み抱いたままで<br>あなたのいない未来へ</p></div><hr><p><strong>翻译</strong></p><div style="white-space: pre;"><p>在没有你的这个房间里<br>啊，回忆充盈着心灵<br>根本无法忘记那些<br>二人一起度过的日子</p><p>明明那样热烈地拥抱过<br>到底还缺少着什么呢？<br>如今再来后悔的话<br>也已经来不及了…</p><p>正因为是你<br>我才会展露出自己的全部<br>虽然，恋爱的时节已经过去<br>也没有停止对你的倾慕</p><p>怀揣着泫然欲泣的心情<br>我向着何处奔跑才好？<br>除你以外，我熟视无睹<br>洇染明天的是孤寂</p><p>没有你的从今以后<br>啊，一想起胸口便阵阵作痛<br>曾经也互相有过争执<br>但记起的都是美好</p><p>差不多该向前走了<br>虽然都如此劝说<br>那微微残存的气息<br>让我现在也想要拥抱</p><p>下一扇门还没法打开<br>过往还是太过耀眼<br>你现在在做什么呢？<br>走上了新的道路了吗？</p><p>若是不与你相恋<br>也不会如此辛苦<br>但是，能够和你邂逅<br>真的是太好了</p><p>怀揣着泫然欲泣的心情<br>我向着何处奔跑才好？<br>除你以外，我熟视无睹<br>洇染明天的是孤寂</p><p>对你的记忆还未消失<br>我会追逐着你的影子<br>擦干眼泪，抬起头来<br>我也要向前迈步<br>我仍然爱着你</p><p>就这样怀抱着心中的伤痛<br>走向没有你的未来</p></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Without You&lt;/strong&gt; - 游戏《魔女的夜宴》插曲&lt;/p&gt;
+&lt;p&gt;作词：&lt;span lang=&quot;ja&quot;&gt;神代あみ&lt;/span&gt;；作曲：Famishin&lt;/p&gt;
+&lt;p&gt;本歌曲歌词翻译最初于2023年5月7日发布于萌娘百科。&lt;/p&gt;
+&lt;p&gt;条目</summary>
+      
+    
+    
+    
+    
+    <category term="歌词翻译" scheme="https://guopcingithub.github.io/tags/%E6%AD%8C%E8%AF%8D%E7%BF%BB%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《大好き（超喜欢）》歌词翻译</title>
+    <link href="https://guopcingithub.github.io/2023/05/06/daisuki/"/>
+    <id>https://guopcingithub.github.io/2023/05/06/daisuki/</id>
+    <published>2023-05-05T16:00:00.000Z</published>
+    <updated>2023-08-02T13:09:42.621Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong><span lang="ja">大好き</span>（超喜欢）</strong> - 游戏《魔女的夜宴》假屋和奏线片尾曲</p><p>作词：<span lang="ja">中山♡マミ</span>；作曲：Famishin</p><p>本歌曲歌词翻译最初于2023年5月6日发布于萌娘百科。</p><p>条目链接：<a class="link"   href="https://zh.moegirl.org.cn/%E8%B6%85%E5%96%9C%E6%AC%A2" >https://zh.moegirl.org.cn/超喜欢 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><hr><p><strong>歌词</strong></p><p><em>注：歌词著作权归原作者所有。</em></p><div lang="ja" style="white-space: pre;"><p>こんなにあたたかな幸せに<br>身体ごと包まれて…<br>自分のほっぺぎゅっと<br>つねってみたらちゃんと痛い</p><p>何も出来なかったあの頃を<br>ずっと悔やんでたから<br>歩き出せたって事<br>心からほっとしてる</p><p>こうして又出会えたのは<br>お導きなのかな？<br>意外に強情人のいいこと<br>どんなキミも受け止めたい</p><p>キミが大好きだよって<br>アタシから伝えたくて<br>遠回りもしたけれど<br>心は繫がった</p><p>思わず訪れたハプニングで<br>ドギマギ過ごした日々<br>胸の奥の鼓動を<br>抑えることに必死だった</p><p>友達の枠を飛び越えたら<br>どうなっちゃうんだろう<br>密かにそんな不安<br>抱えたりしちゃってた</p><p>思い切って話しかけて<br>本当によかった<br>もう逃げない！決めてたんだ<br>そしてキミが隣に居る</p><p>キミが大好きだよねぇ<br>二人のペースで行こう<br>一緒に奏でる音は<br>未来へと響くよ</p><p>キミが大好きだよって<br>もっともっと言いたくて<br>時をかけ辿り着いた<br>想いを嚙み締めている</p></div><hr><p><strong>翻译</strong></p><div style="white-space: pre;"><p>如此温热暖心的幸福<br>把全身都包覆其中…<br>拧一下自己的脸蛋<br>感受到了真实的疼痛</p><p>总是在自己后悔<br>什么也做不到的那时<br>从中迈出一步<br>心里便松了一口气</p><p>就这样与你再度相遇<br>你会给我指引吗？<br>意外地固执的人的优点<br>不管怎样都想接受你</p><p>超喜欢你了这件事<br>想要从我传达给你<br>虽然会绕些远路<br>心却彼此相连</p><p>未曾设想的突然事件<br>让每一天都手忙脚乱<br>拼命抑制着<br>内心深处的悸动不已</p><p>如果跳出朋友的框框<br>又会变成什么样呢<br>悄悄产生的不安<br>不知不觉间便怀揣心中</p><p>尽情地与你交谈<br>实在是太好了<br>下定决心“不再逃避！”<br>你就到了我的身旁</p><p>真的超级喜欢你呢<br>两个人一齐前进吧<br>共同奏响的音色<br>朝着未来不断回响</p><p>超喜欢你了这件事<br>还想更多更多地同你说<br>穿过时空最终到达<br>仔细品味这份心意</p></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;&lt;span lang=&quot;ja&quot;&gt;大好き&lt;/span&gt;（超喜欢）&lt;/strong&gt; - 游戏《魔女的夜宴》假屋和奏线片尾曲&lt;/p&gt;
+&lt;p&gt;作词：&lt;span lang=&quot;ja&quot;&gt;中山♡マミ&lt;/span&gt;；作曲：Famishin&lt;/p&gt;
+&lt;p&gt;本歌曲歌词翻译最初于</summary>
+      
+    
+    
+    
+    
+    <category term="歌词翻译" scheme="https://guopcingithub.github.io/tags/%E6%AD%8C%E8%AF%8D%E7%BF%BB%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《スカート（Skirt）》歌词翻译</title>
+    <link href="https://guopcingithub.github.io/2023/05/05/skirt/"/>
+    <id>https://guopcingithub.github.io/2023/05/05/skirt/</id>
+    <published>2023-05-04T16:00:00.000Z</published>
+    <updated>2023-08-02T13:09:48.736Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong><span lang="ja">スカート</span>（Skirt）</strong> - 游戏《魔女的夜宴》椎叶䌷线片尾曲</p><p>作词：<span lang="ja">葉月</span>；作曲：Famishin</p><p>本歌曲歌词翻译最初于2023年5月5日发布于萌娘百科。</p><p>条目链接：<a class="link"   href="https://zh.moegirl.org.cn/Skirt" >https://zh.moegirl.org.cn/Skirt <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><hr><p><strong>歌词</strong></p><p><em>注：歌词著作权归原作者所有。</em></p><div lang="ja" style="white-space: pre;"><p>窓から見上げた空　君の笑顔見える<br>今何してるのかな　考えちゃうよ<br>初めてあった日から　少しずつ君を知って<br>いつの間にか心が　惹かれていたの</p><p>もっと近くで　君のことを見つめたり<br>ギュッとその手で　私のすべてを抱きしめて</p><p>今日はきっと君に　可愛いねと言われるように<br>いつもの服脱いで　スカートに着替えてみる<br>手を繋いで歩く　恥ずかしくて顔見れない<br>でも今日は君にね　ちゃんと好きを伝えられるかな</p><p>可愛いものに触れて　好きな服を着てる<br>普通の女の子に　憧れてたの</p><p>ギュッと抱き寄せた　ぬいぐるみに心込め<br>そっと願うの　この思い君に届くように</p><p>君の髪が頬に　触れるくらい近くにいる<br>高鳴る胸の音　君に聞かれてないかな<br>目と目あわせかわす　言葉で心満たされる<br>私のそばに居て　誰よりも大切な人だから</p><p>ずっと夢見てた　普通の女の子みたい<br>私も恋して　女の子してる</p><p>今日はきっと君に　可愛いねと言われるように<br>いつもの服脱いで　スカートに着替えてみる<br>手を繋いで歩く　恥ずかしくて顔見れない<br>でも今日は君にね　好きと大好きと伝えるからね</p></div><hr><p><strong>翻译</strong></p><div style="white-space: pre;"><p>透过窗户看向天空　浮现出你的笑容<br>你现在在做什么呢　我这样思考着<br>从初次遇见那天起　我渐渐地了解你<br>不知何时我的内心　就被你深深吸引</p><p>再稍微靠近一些　注视着你的一切<br>你的那双手紧紧　抱住了我的全部</p><p>为了今天一定要　朝你说出“可爱吧”<br>脱下平时的衣服　试着穿上了裙子<br>手牵着手前行　不要看着我害羞的脸<br>但是今天有好好地　把我的喜欢告诉你吗</p><p>触摸着可爱的东西　穿着喜欢的衣服<br>憧憬能够成为　一个平常的女孩</p><p>悉心照顾紧紧抱在　怀中的玩偶<br>我悄悄地许下心愿　将这份心意传达给你</p><p>你的头发延伸到　约可轻拂脸颊之处<br>颤动不已的心跳声　你有没有听到呢<br>四目相视　彼此的话语充盈着内心<br>因为你在我的身边　是我最重要的人</p><p>一直在梦里看到的　像平常的女孩一样<br>我也与你相恋　成为一个女孩</p><p>为了今天一定要　朝你说出“可爱吧”<br>脱下平时的衣服　试着穿上了裙子<br>手牵着手前行　不要看着我害羞的脸<br>但是今天有把喜欢　与最喜欢告诉你了呢</p></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;&lt;span lang=&quot;ja&quot;&gt;スカート&lt;/span&gt;（Skirt）&lt;/strong&gt; - 游戏《魔女的夜宴》椎叶䌷线片尾曲&lt;/p&gt;
+&lt;p&gt;作词：&lt;span lang=&quot;ja&quot;&gt;葉月&lt;/span&gt;；作曲：Famishin&lt;/p&gt;
+&lt;p&gt;本歌曲歌词翻译最初于2</summary>
+      
+    
+    
+    
+    
+    <category term="歌词翻译" scheme="https://guopcingithub.github.io/tags/%E6%AD%8C%E8%AF%8D%E7%BF%BB%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《Hazy》歌词翻译</title>
+    <link href="https://guopcingithub.github.io/2023/05/01/hazy/"/>
+    <id>https://guopcingithub.github.io/2023/05/01/hazy/</id>
+    <published>2023-04-30T16:00:00.000Z</published>
+    <updated>2023-05-18T01:47:50.443Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>Hazy</strong> - TV动画《花开伊吕波》片尾曲</p><p>作词：<span lang="ja">坂井季乃</span>；作曲：<span lang="ja">黒須克彦</span></p><p>本歌曲歌词翻译最初于2023年5月1日发布于萌娘百科。</p><p>条目链接：<a class="link"   href="https://zh.moegirl.org.cn/Hazy" >https://zh.moegirl.org.cn/Hazy <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><hr><p><strong>歌词</strong></p><p><em>注：歌词著作权归原作者所有。</em></p><div lang="ja" style="white-space: pre;"><p>夢を見る少し手前で<br>置いてきたものはなんだっけ<br>忘れてしまいたくはないけど<br>時折ふっと記憶の隅に浮かぶのは<br>ふんわりぼやけたセピア色<br>目の前を塞ぐ日々の向こう少しずつ遠く</p><p>大体なんで息を切らして<br>走ってるんだろう</p><p>スピードを上げてゆくほど立ち止まることが怖くて<br>早くなる鼓動に触れココに居ると確かめた<br>ココロの奥の小さな声に耳を澄ましたら<br>包み込む世界が晴れ広がるよ明日へ</p><p>近付いて少し離れて<br>出会った人に手を振って<br>繰り返しみたいな道の上で素直になって<br>笑い顔も泣き顔も<br>重なればほらキレイでしょう<br>変わらないものはいつの日も奥の方にある</p><p>泣いた頬に陽が射して<br>だんだん愛を知ってくの？<br>曖昧だった遠い遠い<br>未来に目を凝らそう</p><p>風が頬をかすめて耳元でウタを歌えば<br>高く鳴る鼓動につれ空に近付けるから<br>軽やかに弾むような足取りに運ばれて<br>まだだれも見たことない物語へ続く</p><p>スピードを上げてゆくほど立ち止まることが怖くて<br>早くなる鼓動に触れココに居ると確かめた<br>ココロの奥の小さな声に耳を澄ましたら<br>包み込む世界が晴れ広がるよ明日へ</p><p>包み込む世界が晴れ広がるよ明日へ</p></div><hr><p><strong>翻译</strong></p><div style="white-space: pre;"><p>在陷入美妙的幻梦之前<br>刚刚放下的东西是什么呢<br>虽然还依旧不想去忘记<br>偶尔倏然浮现在记忆角落的是<br>模糊不清一片朦胧的深棕色<br>时光流逝将视线阻挡逐渐远去</p><p>到底为何要这样气喘吁吁<br>一直奔跑着呢</p><p>越是加快自己的速度就越是害怕停下来<br>感受这渐渐加速的心跳确定自己就存在于此<br>若是侧耳倾听内心深处微小的声音<br>周围的世界便会豁然开朗延向明天</p><p>走近一些又稍稍远离<br>朝着相遇的人挥手问好<br>在看似反复的路上逐渐坦率<br>不管是笑容还是哭脸<br>交叠在一起不也很美丽吗<br>永恒不变的东西终会留在心底</p><p>阳光照在泪干的脸上<br>是否就渐渐懂得了爱？<br>把目光投向那模糊<br>而又遥远的未来吧</p><p>清风拂过脸颊好像在耳边歌唱<br>伴随激动的心跳就能靠近天空<br>脚步也随之踏起高涨起来<br>朝着崭新的故事迈向前方</p><p>越是加快自己的速度就越是害怕停下来<br>感受这渐渐加速的心跳确定自己就存在于此<br>若是侧耳倾听内心深处微小的声音<br>周围的世界便会豁然开朗延向明天</p><p>周围的世界便会豁然开朗延向明天</p></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Hazy&lt;/strong&gt; - TV动画《花开伊吕波》片尾曲&lt;/p&gt;
+&lt;p&gt;作词：&lt;span lang=&quot;ja&quot;&gt;坂井季乃&lt;/span&gt;；作曲：&lt;span lang=&quot;ja&quot;&gt;黒須克彦&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;本歌曲歌词翻译最初于2023年5月1日发布于</summary>
+      
+    
+    
+    
+    
+    <category term="歌词翻译" scheme="https://guopcingithub.github.io/tags/%E6%AD%8C%E8%AF%8D%E7%BF%BB%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《radiant melody》歌词翻译</title>
+    <link href="https://guopcingithub.github.io/2023/04/23/radiant_melody/"/>
+    <id>https://guopcingithub.github.io/2023/04/23/radiant_melody/</id>
+    <published>2023-04-22T16:00:00.000Z</published>
+    <updated>2023-07-08T08:26:13.570Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>radiant melody</strong> - TV动画《TARI TARI》插曲</p><p>作词：riya；作曲：<span lang="ja">浜口史郎</span></p><p>本歌曲歌词翻译最初于2023年4月23日发布于萌娘百科。</p><p>条目链接：<a class="link"   href="https://zh.moegirl.org.cn/Radiant_melody" >https://zh.moegirl.org.cn/Radiant_melody <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><hr><p><strong>歌词</strong></p><p><em>注：歌词著作权归原作者所有。</em></p><div lang="ja" style="white-space: pre;"><p>青い空の下で<br>両手　大きく広げた<br>迷いも痛みも願った<ruby>証<rt>あかし</rt></ruby><br>自分だけの速さで行こう</p><p>どんな時も信じられるよ<br>通り雨なら<br>いつか過ぎ去るから</p><p>夢を持った心なら<br>ずっと自由さ<br>誰かがほら<br>一緒に笑ってくれるから</p><p>このメロディが<br>光を指してる<br>輝く笑顔に今日もなれるよ</p><p>広い空　見上げて<br>深く息を吸ってみた<br>出会いたい　知りたい　たくさんの事<br>自分だけの速さで行こう</p><p>嵐の日も飛ばされないで<br>やり過ごせば<br>いつか見つけられる</p><p>涙を知る心なら<br>きっと自由さ<br>誰かがほら<br>肩を叩いてくれるから</p><p>このメロディが<br>光を連れ出す<br>煌めく瞳に<ruby>明日<rt>あす</rt></ruby>を映すよ</p><p>夢を持った心なら<br>ずっと自由さ<br>誰かがほら<br>一緒に笑ってくれるから</p><p>このメロディが<br>光を呼んでる<br>曲がった道でも　もう大丈夫</p><p>輝く笑顔で飛び立てるよ</p></div><hr><p><strong>翻译</strong></p><div style="white-space: pre;"><p>蔚蓝的天空之下<br>将双手　大大地张开<br>迷惘或是伤痛　都是心愿的证明<br>以自己特有的步伐前进吧</p><p>无论何时都会相信<br>即便骤雨忽至<br>也终会有止息之时</p><p>心里若怀揣着梦想<br>就会永远自由<br>与某个人相伴<br>一同欢笑着就足矣</p><p>这段旋律<br>将光芒指引<br>今天也展现出光彩笑容</p><p>抬头望着　广阔天空<br>试着深吸一口气<br>想要遇见　想要了解　各种各样的事情<br>以自己特有的步伐前进吧</p><p>即便没法在暴雨之日翱翔<br>在停歇之后<br>终究能够有所发现</p><p>明白泪水的心灵<br>一定是自由的<br>与某个人一同<br>轻拍下肩膀就足矣</p><p>这段旋律<br>使光芒展现<br>明天映照在闪亮眼瞳中</p><p>心里若怀揣着梦想<br>就会永远自由<br>与某个人相伴<br>一同欢笑着就足矣</p><p>这段旋律<br>呼唤着光芒<br>就算路途曲折　也没关系</p><p>以灿烂的笑容飞上天空吧</p></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;radiant melody&lt;/strong&gt; - TV动画《TARI TARI》插曲&lt;/p&gt;
+&lt;p&gt;作词：riya；作曲：&lt;span lang=&quot;ja&quot;&gt;浜口史郎&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;本歌曲歌词翻译最初于2023年4月23日发布于萌娘百科。&lt;/p&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="歌词翻译" scheme="https://guopcingithub.github.io/tags/%E6%AD%8C%E8%AF%8D%E7%BF%BB%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《goin&#39; my way!!》歌词翻译</title>
+    <link href="https://guopcingithub.github.io/2023/03/26/goin&#39;_my_way!!/"/>
+    <id>https://guopcingithub.github.io/2023/03/26/goin&#39;_my_way!!/</id>
+    <published>2023-03-25T16:00:00.000Z</published>
+    <updated>2023-03-28T14:28:37.747Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>goin’ my way!!</strong> - TV动画《TARI TARI》插曲</p><p>作词：riya；作曲：<span lang="ja">浜口史郎</span></p><p>本歌曲歌词翻译最初于2023年3月26日发布于萌娘百科。</p><p>条目链接：<a class="link"   href="https://zh.moegirl.org.cn/Goin'_my_way" >https://zh.moegirl.org.cn/Goin&#39;_my_way <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>!!</p><hr><p><strong>歌词</strong></p><p><em>注：歌词著作权归原作者所有。</em></p><div lang="ja" style="white-space: pre;"><p>Fly　Fly　Fly<br>必要なのは輝くその瞳<br>Try　Try　Try<br>身体一つで<br>どこまでも走るmy　way</p><p>心なんて形のない物を<br>いつも信じてる<br>それでもいいじゃない</p><p>昨日よりも楽しくいたいから<br>どんな事があっても<br>笑い飛ばしたくて</p><p>他人(ひと)は他人だって<br>解ってるけど上手くいかない<br>そんな日は手を伸ばし<br>空に触れてみよう</p><p>ずっと<br>Fly　Fly　Fly<br>必要なのは輝くその瞳<br>Try　Try　Try<br>身体一つで<br>どこまでも走る</p><p>二度とは無い<br>この時間を刻んで行く<br>絶対譲れないmy　way</p><p>思っていた通りにならなくて<br>引き返してみる<br>それでもいいじゃない</p><p>繰り返しの毎日を蹴飛ばし<br>傷つく覚悟でなら<br>何も問題ないね</p><p>知らないうちに<br>大声一つ出せなくなって<br>臆病になってちゃ<br>世界は変わらない</p><p>今は<br>Fly　Fly　Fly<br>必要なのはまっすぐなその瞳<br>Shine　Shine　Shine<br>想像を超えた<br>素晴らしい明日</p><p>二度とは無い<br>この時間の中　生きてる<br>作り出して行くmy　way</p><p>もっと<br>Fly　Fly　Fly<br>必要なのは輝くその瞳<br>Try　Try　Try<br>身体一つで<br>どこまでも走って行く</p><p>何かが待ってる<br>絶対譲れないmy　way</p></div><hr><p><strong>翻译</strong></p><div style="white-space: pre;"><p>Fly　Fly　Fly<br>需要的是一双闪闪发光的眼睛<br>Try　Try　Try<br>即便独自一人<br>也能沿着自己的路向目标奔去</p><p>虽然总是认为心灵什么的<br>应当是无形之物<br>就这样也不错不是吗</p><p>因为想要比昨日更加快乐<br>不管发生什么事<br>都会选择一笑置之</p><p>自己与别人不同<br>尽管心知肚明分辨绝非易事<br>那么就试着伸出手<br>触碰蔚蓝天空吧</p><p>一直<br>Fly　Fly　Fly<br>需要的是一双闪闪发光的眼睛<br>Try　Try　Try<br>即便独自一人<br>也能向目标奔去</p><p>深知时不再来<br>铭记这段时光向前走去<br>绝对沿着自己的路不会让步</p><p>现实常常不会顺遂心愿<br>试着回首往事<br>就这样也不错不是吗</p><p>一脚踢开无趣重复的每日<br>若是做好受伤的觉悟<br>就什么都不是问题了</p><p>不知不觉之间<br>畏于发出自己的声音<br>要是变得胆小怕事<br>世界就会一成不变</p><p>现在就<br>Fly　Fly　Fly<br>需要的是一双耿直不讳的眼睛<br>Shine　Shine　Shine<br>超出原先的想象<br>明天万分美好</p><p>深知时不再来<br>在这段时光中　活出自己<br>造出一条自己的路迈出脚步</p><p>再多些<br>Fly　Fly　Fly<br>需要的是一双闪闪发光的眼睛<br>Try　Try　Try<br>即便独自一人<br>也能向目标奔去</p><p>有什么在等待着<br>绝对沿着自己的路不会让步</p></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;goin’ my way!!&lt;/strong&gt; - TV动画《TARI TARI》插曲&lt;/p&gt;
+&lt;p&gt;作词：riya；作曲：&lt;span lang=&quot;ja&quot;&gt;浜口史郎&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;本歌曲歌词翻译最初于2023年3月26日发布于萌娘百科。&lt;/p&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="歌词翻译" scheme="https://guopcingithub.github.io/tags/%E6%AD%8C%E8%AF%8D%E7%BF%BB%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《Hau&#39;oli♪》歌词翻译</title>
+    <link href="https://guopcingithub.github.io/2023/03/26/hau&#39;oli/"/>
+    <id>https://guopcingithub.github.io/2023/03/26/hau&#39;oli/</id>
+    <published>2023-03-25T16:00:00.000Z</published>
+    <updated>2023-04-24T06:51:57.631Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>Hau’oli♪</strong> - TV动画《TARI TARI》插曲</p><p>作词：riya；作曲：<span lang="ja">浜口史郎</span></p><p>本歌曲歌词翻译最初于2023年3月26日发布于萌娘百科。</p><p>条目链接：<a class="link"   href="https://zh.moegirl.org.cn/Hau'oli" >https://zh.moegirl.org.cn/Hau&#39;oli <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><hr><p><strong>歌词</strong></p><p><em>注：歌词著作权归原作者所有。</em></p><div lang="ja" style="white-space: pre;"><p>寄せては返して行く<br>波に思い馳せて<br>見えるよ<br>あの白い砂浜</p><p>熱い太陽の下<br>「アロハ!」行き交う声<br>行きましょ<br>青い海まで</p></div><hr><p><strong>翻译</strong></p><div style="white-space: pre;"><p>海边潮涨又潮落<br>思念随波浪起伏<br>可以看见<br>那白色的沙滩</p><p>在火热的太阳下<br>「你好啊！」此起彼伏<br>一起走吧<br>前往蔚蓝的海</p></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;Hau’oli♪&lt;/strong&gt; - TV动画《TARI TARI》插曲&lt;/p&gt;
+&lt;p&gt;作词：riya；作曲：&lt;span lang=&quot;ja&quot;&gt;浜口史郎&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;本歌曲歌词翻译最初于2023年3月26日发布于萌娘百科。&lt;/p&gt;
+&lt;p&gt;条目</summary>
+      
+    
+    
+    
+    
+    <category term="歌词翻译" scheme="https://guopcingithub.github.io/tags/%E6%AD%8C%E8%AF%8D%E7%BF%BB%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《潮風のハーモニー（海风的和声）》歌词翻译</title>
+    <link href="https://guopcingithub.github.io/2023/02/14/shiokaze_no_harmony/"/>
+    <id>https://guopcingithub.github.io/2023/02/14/shiokaze_no_harmony/</id>
+    <published>2023-02-13T16:00:00.000Z</published>
+    <updated>2023-02-17T04:10:49.162Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong><span lang="ja">潮風のハーモニー</span>（海风的和声）</strong> - TV动画《TARI TARI》片尾曲</p><p>作词：micco；作曲：<span lang="ja">杉森舞</span></p><p>本歌曲歌词翻译最初于2023年2月14日发布于萌娘百科。</p><p>条目链接：<a class="link"   href="https://zh.moegirl.org.cn/%E6%B5%B7%E9%A3%8E%E7%9A%84%E5%92%8C%E5%A3%B0" >https://zh.moegirl.org.cn/海风的和声 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><hr><p><strong>歌词</strong></p><p><em>注：歌词著作权归原作者所有。</em></p><div lang="ja" style="white-space: pre;"><p>新しい風が吹いて<br>笑ったり、泣いたり、歌ってみたり<br>閉じていた心を開いて<br>潮風のハーモニー　口ずさむ</p><p>晴れた日　雨の日でも　みんながいれば　いつも笑顔になれた<br>記憶の彼方まで　思い出したり　たゆたう声耳すまそう</p><p>さぁ、手を差し伸べられて　輪の中へ<br>一人じゃない空間で　夢中になってる時間</p><p>心地好い風が吹いて<br>笑ったり、泣いたり、歌ってみたり<br>閉じていた心を開いて<br>思い出のフレーズ　口ずさむ</p><p>映らない未来の日は　自由な彩りを想像してみよう<br>それぞれ不安持って　叫んでみたり　見つめながら歩き出そう</p><p>さぁ、踏切の向こう側　恐いけど<br>勇気出して一歩進む　曇ってた心　晴れた</p><p>新しい風が吹いて<br>見つけたり、気付いたり、希望のうた<br>まだ知らない明日への扉<br>潮風のハーモニー　口ずさむ</p><p>教科書に書いた跡　音符　みんなで歌う場所　波音<br>包み込んでくれる太陽　砂浜へと続く階段を下りて広がる</p><p>心地好い風が吹いて<br>笑ったり、泣いたり、歌ってみたり<br>閉じていた心を開いて<br>思い出のフレーズ　口ずさむ　奏でよう</p></div><hr><p><strong>翻译</strong></p><div style="white-space: pre;"><p>清新的风吹拂而过<br>时而欢笑，时而哭泣，时而尝试歌唱<br>将紧闭的内心　重新敞开<br>轻轻哼唱出　海风的和声</p><p>不论是晴天　亦或是雨天　只要大家在身边　就能露出笑脸<br>那悠远的记忆　时而浮现脑海　如若声音回荡耳边</p><p>来吧，将双手伸出　到圆环之中<br>在有大家陪伴的地方　度过梦般的时光</p><p>舒畅的风吹拂而过<br>时而欢笑，时而哭泣，时而尝试歌唱<br>将紧闭的内心　重新敞开<br>轻轻哼唱出　回想起的短句</p><p>若是看不清未来的日子　就试着以自由的色彩尽情想象<br>怀揣着各种各样的不安　尝试着呼喊　试探着迈出脚步</p><p>看啊，路口的另一边　尽管令人胆怯<br>鼓起勇气踏出第一步　阴郁着的内心　就会放晴</p><p>清新的风吹拂而过<br>时而探寻，时而感知，希望的歌谣<br>前往未知明天的大门已然打开<br>轻轻哼唱出　海风的和声</p><p>教科书上留下的笔迹　音符　大家一起歌唱的地方　涛声回响<br>沐浴着洒下的阳光　走下阶梯去往沙滩景色便在眼前展开</p><p>舒畅的风吹拂而过<br>时而欢笑，时而哭泣，时而尝试歌唱<br>将紧闭的内心　重新敞开<br>将回想起的短句　轻轻哼唱　一同奏响</p></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;&lt;span lang=&quot;ja&quot;&gt;潮風のハーモニー&lt;/span&gt;（海风的和声）&lt;/strong&gt; - TV动画《TARI TARI》片尾曲&lt;/p&gt;
+&lt;p&gt;作词：micco；作曲：&lt;span lang=&quot;ja&quot;&gt;杉森舞&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;本歌曲歌词翻译</summary>
+      
+    
+    
+    
+    
+    <category term="歌词翻译" scheme="https://guopcingithub.github.io/tags/%E6%AD%8C%E8%AF%8D%E7%BF%BB%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用于MoeSkin的MoeLatte主题包现已发布！</title>
+    <link href="https://guopcingithub.github.io/2023/02/12/moelatte/"/>
+    <id>https://guopcingithub.github.io/2023/02/12/moelatte/</id>
+    <published>2023-02-11T16:00:00.000Z</published>
+    <updated>2023-09-15T02:58:35.690Z</updated>
+    
+    <content type="html"><![CDATA[<p><a class="link"   href="https://zh.moegirl.org.cn/User:GuoPC/MoeLatte" >MoeLatte <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>是基于<a class="link"   href="https://catppuccin.com/" >Catppuccin Theme <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>中的Latte调色风格制作的一款用于MoeSkin皮肤的主题包。采用了Latte中的绿—蓝系列色作为主要配色，并进行了一定调整。</p><p>主题包制作：<a class="link"   href="https://zh.moegirl.org.cn/User:GuoPC" >GuoPC <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><p><span style="width:10px;height:10px;background-color:rgb(140, 143, 161);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(32, 159, 181);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(76, 79, 105);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(3, 105, 146);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(230, 233, 239);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(251, 252, 253);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(220, 224, 232);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(32, 159, 181);display:inline-block;"></span><span style="width:10px;height:10px;background-color:#209FB5;display:inline-block;"></span><span style="width:10px;height:10px;background-color:#04A5E5;display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(253, 251, 246);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgba(140, 143, 161, 0.1);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgba(140, 143, 161, 0.2);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(230, 233, 239);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(230, 69, 83);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(247, 248, 250);display:inline-block;"></span><span style="width:10px;height:10px;background-color:hsl(232, 10%, 53%);display:inline-block;"></span></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;   href=&quot;https://zh.moegirl.org.cn/User:GuoPC/MoeLatte&quot; &gt;MoeLatte &lt;i class=&quot;fa-regular fa-arrow-up-right-from-square fa-sm</summary>
+      
+    
+    
+    
+    
+    <category term="MoeSkin主题包" scheme="https://guopcingithub.github.io/tags/MoeSkin%E4%B8%BB%E9%A2%98%E5%8C%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《たまゆら（玉响）》歌词翻译</title>
+    <link href="https://guopcingithub.github.io/2023/02/08/tamayura/"/>
+    <id>https://guopcingithub.github.io/2023/02/08/tamayura/</id>
+    <published>2023-02-07T16:00:00.000Z</published>
+    <updated>2023-02-08T05:18:26.483Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong><span lang="ja">たまゆら</span>（玉响）</strong> - 游戏《猫忍之心3》片头曲</p><p>作词：<span lang="ja">薬師るり</span>；作曲：<span lang="ja">薬師るり</span></p><p>本歌曲歌词翻译最初于2023年2月8日发布于萌娘百科。</p><p>条目链接：<a class="link"   href="https://zh.moegirl.org.cn/%E7%8E%89%E5%93%8D(%E7%8C%AB%E5%BF%8D%E4%B9%8B%E5%BF%83)" >https://zh.moegirl.org.cn/玉响(猫忍之心) <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p><hr><p><strong>歌词</strong></p><p><em>注：歌词著作权归原作者所有。</em></p><div lang="ja" style="white-space: pre;"><p>たまゆらのキセキを繋いでく　絶対離れないよ　もっともっと　強く<br>だって　あのね　あなたのこと　こんなに大好きなの</p><p>いつだってここで見守ってるから　安心して任せてね<br>ほら　難しいことはいいでしょ　一緒にお昼寝でもしよう<br>いつだって終わりは始まりで　わかってるの　毎日が<br>ほら　少しずつ変わっていくけど　こわくはないから</p><p>夢のしっぽ追いかけて　ここまで来たの　今日も<br>はずむリズム　影法師　追いかけっこしようよ</p><p>たまゆらのキセキを繋いでく　小さくたっていいの　いつか叶うと信じて<br>風雲急を告げる　何があっても　守ってみせるよ<br>ヤマもあればタニもあって　雅とはいかなくとも　己を律して進め<br>でもね　あのね　本当はただあなたのそばにいたいの</p><p>なんだってここにはあるんだから　夢も希望も愛も<br>ほら　難しい顔しないで　一緒におやつでも食べよう<br>なんでって後悔したってね　わからないけど今は<br>ほら　少しずつ傷の分だけ　強くなってるから</p><p>耳をピンとすましたら　チャンスはくるの　きっと<br>どんな厚い壁だって　爪痕を残すから</p><p>たまゆらのキセキが繋がって　大きな橋になって　いつか届くと信じて<br>季節を告げる風　いつまででも　守ってみせるよ<br>ときにわからなくなって　逃げ出したくなる時も　ここが居場所なんだよね<br>あのね　だから　最後まであなたのそばにいさせて</p><p>たまゆらのキセキを繋いでく　小さくたっていいの　いつか叶うと信じて<br>風雲急を告げる　何があっても　守ってみせるよ<br>ヤマもあればタニもあって　雅とはいかなくとも　己を律して進め<br>でもね　あのね　本当はただあなたのそばにいたいの</p></div><hr><p><strong>翻译</strong></p><div style="white-space: pre;"><p>连系起转瞬之间的轨迹　绝对不会彼此分离　这份希冀　逐渐强烈<br>只是　因为啊　我是这样地　发自内心地喜欢着你</p><p>无论何时我都会在这里守望着你　所以放心交给我吧<br>看吧　困难的事情也不错呢　午觉也一同入眠吧<br>对结束之时亦是起始之处　心知肚明的　一天天<br>看吧　尽管逐渐产生了细小的变化　但这并不可怕</p><p>追赶着梦的尾巴　今天也来到了　这个地方<br>韵律高涨　人影绰绰　互相追逐嬉戏吧</p><p>连系起转瞬之间的轨迹　即使微小也没问题　相信总有一天会成真<br>若是情势紧急　不管发生什么　我都会守护着你<br>生活中有起亦有伏　即便算不上风雅　也要律己前行<br>不过　我其实　只是想待在你的身边而已</p><p>无论怎样这里总是会有着　梦想希望与爱<br>好啦　不要摆出为难的表情了　一起吃点点心吧<br>虽然暂时不太清楚　你因什么事而后悔<br>没错　这点点的伤痕　会使你变得更强</p><p>如果能侧耳倾听的话　契机就一定会　到来<br>不管屏障有多么坚实　也一定可以留下痕迹</p><p>连系起转瞬之间的轨迹　相信最终会化作桥梁　传达到你的心里<br>风宣告着季节变换　直到永远　我都会守护着你<br>有时感到不知所措　有时想要脱身而出　这里便是容身之所<br>所以　请让我　从今以后一直陪在你的身边</p><p>连系起转瞬之间的轨迹　即使微小也没问题　相信总有一天会成真<br>若是情势紧急　不管发生什么　我都会守护着你<br>生活中有起亦有伏　即便算不上风雅　也要律己前行<br>不过　我其实　只是想待在你的身边而已</p></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;&lt;span lang=&quot;ja&quot;&gt;たまゆら&lt;/span&gt;（玉响）&lt;/strong&gt; - 游戏《猫忍之心3》片头曲&lt;/p&gt;
+&lt;p&gt;作词：&lt;span lang=&quot;ja&quot;&gt;薬師るり&lt;/span&gt;；作曲：&lt;span lang=&quot;ja&quot;&gt;薬師るり&lt;/span&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="歌词翻译" scheme="https://guopcingithub.github.io/tags/%E6%AD%8C%E8%AF%8D%E7%BF%BB%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《Hacknet》介绍</title>
+    <link href="https://guopcingithub.github.io/2023/02/03/hacknet/"/>
+    <id>https://guopcingithub.github.io/2023/02/03/hacknet/</id>
+    <published>2023-02-02T16:00:00.000Z</published>
+    <updated>2023-02-17T05:22:24.896Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近玩完了《Hacknet》。虽然是2015年的游戏，但是我觉得是一款不错的黑客模拟游戏。写篇文章简单介绍一下。</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="https://media.st.dl.eccdnx.com/steam/apps/365450/header.jpg"                      alt="Hacknet" title="Hacknet封面"                ></p><table><thead><tr><th align="center">项目</th><th align="center">内容</th></tr></thead><tbody><tr><td align="center">原名</td><td align="center">Hacknet</td></tr><tr><td align="center">常用译名</td><td align="center">黑客网络</td></tr><tr><td align="center">类型</td><td align="center">模拟</td></tr><tr><td align="center">平台</td><td align="center">Microsoft Windows<br/>macOS<br/>Linux</td></tr><tr><td align="center">分级</td><td align="center">ESRB：青少年<br/>PEGI：12岁以上</td></tr><tr><td align="center">开发</td><td align="center">Team Fractal Alligator</td></tr><tr><td align="center">发行</td><td align="center">Fellow Traveller</td></tr><tr><td align="center">引擎</td><td align="center">XNA、FNA</td></tr><tr><td align="center">模式</td><td align="center">单人</td></tr><tr><td align="center">发行时间</td><td align="center"><strong>Microsoft Windows</strong>：<br/>2015年8月13日<br/><strong>macOS、Linux</strong>：<br/>2015年12月18日</td></tr></tbody></table><p>《<strong>Hacknet</strong>》是一款由Team Fractal Alligator开发、Fellow Traveller发行的独立模拟游戏，于2015年8月13日在Microsoft Windows平台上发售，于2015年12月18日在macOS和Linux平台发售。支持简体中文。</p><h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p>《Hacknet》是一款基于终端的黑客模拟器。你将跟随一位最近刚过世的黑客，通过他遗留的线索，来探询混乱未知的网络世界。他的死可能并非像媒体所报道的仅仅是一场意外那么简单。只需进行简单的教学，你便能使用基础的指令来完成真实的黑入过程，探索这充满了谜团的黑客世界。</p><p>Bit，一位负责开发世界上最具攻击性的黑入系统的黑客，去世了。当他的系统连续14天都没有检测到他的操作后，保险程序便开始运行，将他未完成的计划发给了一位陌生的用户。作为这名用户，你需要一步步揭开事实的真相，并且确保Hacknet操作系统不会落入到不法之徒手中。</p><p>《Hacknet》为你提供一个全方位的真实黑客模拟器，可以让你探索人类窥探隐私的天性、制止企业贪婪盛行并对抗隐藏在网络世界中的强大黑客。同时它又能提供学习支持，可以让一个电脑小白通过游戏了解到现实世界的电脑指令和对应用程序的操控。<span id="文注_1.0"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></p><h3 id="游戏特色"><a href="#游戏特色" class="headerlink" title="游戏特色"></a>游戏特色</h3><p><strong>真实的黑入</strong></p><p>基于真实的UNIX指令，将重点放在真实的黑入过程，而不是追求炫酷的好莱坞式黑客。通过拟真化的黑入过程，让玩家们仿佛置身黑入现场，体验打破防火墙时几近真实的感受。</p><p><strong>探寻Bit的死亡之谜</strong></p><p>一位黑客莫名死亡，而媒体们的报道根本无法自圆其说。跟随着他的“灵魂”（一个自动邮件发送系统）带给你的指示，你将会慢慢深入并参与到一个黑暗而又庞大的黑客阴谋之中。</p><p><strong>完全的沉浸式体验</strong></p><p>你将会被带入一个无尽的虚拟黑客世界，在这里没有“等级”或者是明显的游戏元素来打破这一体验。你可以选择跟随Bit的邮件的指引，或是直接遨游在整个网络之中，探索并追寻信息的蛛丝马迹。</p><p><strong>上手简单精通难</strong></p><p>游戏不会限制你的游戏方式或让你按部就班。</p><p>游戏内容和学习曲线的设计，能够让初学者或有终端操作经验的人都能找到属于自己的快乐。</p><p><strong>杀手级音乐</strong></p><p>原声带由地下风格音乐家创作，包括Carpenter Brut（Hotline Miami）和Remi Gallego（又名The Algorithm），由The Otherworld Agency协助创作。<span id="文注_1.1"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></p><h3 id="开发历史"><a href="#开发历史" class="headerlink" title="开发历史"></a>开发历史</h3><ul><li>2015年7月15日，开发者放出游戏宣传片。<span id="文参_1"></span><a href="#%E5%8F%82_1"><sup>[1]</sup></a></li><li>2015年8月13日，游戏在Microsoft Windows平台上发售。</li><li>2015年10月21日，游戏原声带发售。</li><li>2015年12月18日，游戏在macOS和Linux平台发售。</li><li>2016年8月30日，开发者宣布游戏扩展内容《Hacknet - Labyrinths》的制作。</li><li>2016年10月12日，游戏推出简体中文支持。</li><li>2017年3月21日，开发者宣布游戏扩展内容《Hacknet - Labyrinths》将于3月31日发售，并放出宣传片。</li><li>2017年3月31日，游戏扩展内容《Hacknet - Labyrinths》发售。</li><li>2017年5月23日，游戏mod《Hacknet Extensions》发布。</li></ul><h2 id="额外内容"><a href="#额外内容" class="headerlink" title="额外内容"></a>额外内容</h2><h3 id="Hacknet-Labyrinths"><a href="#Hacknet-Labyrinths" class="headerlink" title="Hacknet - Labyrinths"></a>Hacknet - Labyrinths</h3><p>游戏扩展内容《Hacknet - Labyrinths》于2017年3月31日发售。</p><h4 id="基本介绍-1"><a href="#基本介绍-1" class="headerlink" title="基本介绍"></a>基本介绍</h4><p>加入黑客精英小队，破解复杂的数据。</p><p>加入了一个3-4小时流程的全新章节。你将由神秘人Kaguya招募到一个黑客精英团队，发掘新的强大工具与程序。</p><p>然而与最棒的团队一起工作并不会特别容易。随着愈演愈烈的危机与越来越复杂的任务接踵而至，你需要利用团队的一切资源去黑入并完成任务，最后完美脱身。</p><p>加入了全新工具，比如内存分析器，可以在RAM中进行内存取证。探索新的程序、网络、UI主题，以及新的秘密和音乐。<span id="文注_1.2"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></p><p><strong>主要特点</strong></p><ul><li><strong>一个全新的篇章。</strong> 在原有故事的基础上加入了惊心动魄的3-4小时流程的新章节。你可以把它看做原有故事的拓展，也可以当做一个继续研究Hacknet的全新机会。</li><li><strong>新的工具与程序。</strong> 得到全新的、更加复杂的黑入工具和程序来破解系统与网络。比如，通过使用内存分析器在RAM上使用内存取证，发现隐藏在其中的秘密。</li><li><strong>团队工作。</strong> 你不再是独行侠，需要与你的队友在IRC交流，共同合作完成目标。</li><li><strong>危险而大胆的数据抢劫。</strong> 网络系统变得更加复杂，不是通过简简单单的“破门而入”就能解决问题。探索，适应，生存！</li><li><strong>新的杀手级音乐。</strong> 包括重金属&#x2F;电音艺术家Remi Gallego的《The Algorithm》和《Orge》。<span id="文注_1.3"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></li></ul><h3 id="Hacknet-Extensions"><a href="#Hacknet-Extensions" class="headerlink" title="Hacknet Extensions"></a>Hacknet Extensions</h3><p>游戏mod《<strong>Hacknet Extensions</strong>》于2017年5月23日发布。允许玩家创建自定义故事、任务、网络、主题以及音乐等，并可通过上传至Steam创意工坊与其他玩家分享。</p><h2 id="游戏评价"><a href="#游戏评价" class="headerlink" title="游戏评价"></a>游戏评价</h2><table><thead><tr><th align="center">汇总媒体</th><th align="center">得分</th></tr></thead><tbody><tr><td align="center">Metacritic</td><td align="center">82 &#x2F; 100<span id="文参_2"></span><a href="#%E5%8F%82_2"><sup>[2]</sup></a></td></tr></tbody></table><table><thead><tr><th align="center">媒体</th><th align="center">评分</th></tr></thead><tbody><tr><td align="center">GameSpot</td><td align="center">8 &#x2F; 10<span id="文参_3"></span><a href="#%E5%8F%82_3"><sup>[3]</sup></a></td></tr></tbody></table><blockquote><p>《Hacknet》是我见过的最接近现实的黑客模拟游戏。——Kotaku<span id="文参_4"></span><a href="#%E5%8F%82_4"><sup>[4]</sup></a></p><p>作为迄今为止最好的黑客模拟游戏，《Hacknet》让我们想去了解更多有关黑客世界的真实和详细描述。毫无疑问，这是最棒的合法黑客经验。——LevelUp<span id="文参_5"></span><a href="#%E5%8F%82_5"><sup>[5]</sup></a></p></blockquote><h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><ol><li>^ <a href="#%E6%96%87%E6%B3%A8_1.0"><sup>1.0</sup></a> <a href="#%E6%96%87%E6%B3%A8_1.1"><sup>1.1</sup></a> <a href="#%E6%96%87%E6%B3%A8_1.2"><sup>1.2</sup></a> <a href="#%E6%96%87%E6%B3%A8_1.3"><sup>1.3</sup></a> <span id="注_1"></span>Steam商店页面介绍，有改动。</li></ol><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol><li><a id="参_1" href="#文参_1">^</a> Fellow Traveller. <a class="link"   href="https://www.youtube.com/watch?v=FgDmU7Pb96Y" >Hacknet宣传片 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>. YouTube. 2015-07-15 [引用时间: 2023-02-03].</li><li><a id="参_2" href="#文参_2">^</a> <a class="link"   href="https://www.metacritic.com/game/pc/hacknet" >Hacknet for PC Reviews <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>. Metacritic. [引用时间: 2023-02-03].</li><li><a id="参_3" href="#文参_3">^</a> <a class="link"   href="https://www.gamespot.com/games/hacknet/" >Hacknet <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>. GameSpot. [引用时间: 2023-02-03].</li><li><a id="参_4" href="#文参_4">^</a> Mark Serrels. <a class="link"   href="https://www.kotaku.com.au/2015/07/this-australian-game-will-turn-us-all-into-hackers/" >This Australian Game Will Turn Us All Into Hackers <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>. 2015-07-16 [引用时间: 2023-02-03].</li><li><a id="参_5" href="#文参_5">^</a> Alonso Zamora. <a class="link"   href="https://www.levelup.com/PC/juegos/335304/Hacknet/review" >Reseña del Juego Hacknet <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>. LevelUp. 2015-08-14 [引用时间: 2023-02-03].</li></ol><h2 id="外部链接"><a href="#外部链接" class="headerlink" title="外部链接"></a>外部链接</h2><ul><li><a class="link"   href="https://www.hacknet-os.com/" >Hacknet官方网站 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li><li><a class="link"   href="https://www.hacknet-os.com/index_dlc.php" >Hacknet - Labyrinths官方网站 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li><li><a class="link"   href="https://twitter.com/hacknetOS" >Hacknet官方Twitter <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li><li><a class="link"   href="https://store.steampowered.com/app/365450/Hacknet/" >Hacknet的Steam商店页面 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li><li><a class="link"   href="https://store.steampowered.com/app/521840/Hacknet__Labyrinths/" >Hacknet - Labyrinths的Steam商店页面 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;最近玩完了《Hacknet》。虽然是2015年的游戏，但是我觉得是一款不错的黑客模拟游戏。写篇文章简单介绍一下。&lt;/p&gt;
+&lt;p&gt;&lt;img  
+                     lazyload
+                     src=&quot;/images/lo</summary>
+      
+    
+    
+    
+    
+    <category term="游戏" scheme="https://guopcingithub.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+  </entry>
+  
+</feed>
