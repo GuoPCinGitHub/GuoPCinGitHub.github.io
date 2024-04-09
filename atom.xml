@@ -6,7 +6,7 @@
   <link href="https://guopcingithub.github.io/atom.xml" rel="self"/>
   
   <link href="https://guopcingithub.github.io/"/>
-  <updated>2024-04-08T13:39:59.235Z</updated>
+  <updated>2024-04-09T02:19:23.777Z</updated>
   <id>https://guopcingithub.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>QQNT自定义字体记录</title>
+    <link href="https://guopcingithub.github.io/2024/04/09/qqnt-custom-fonts/"/>
+    <id>https://guopcingithub.github.io/2024/04/09/qqnt-custom-fonts/</id>
+    <published>2024-04-08T16:00:00.000Z</published>
+    <updated>2024-04-09T02:19:23.777Z</updated>
+    
+    <content type="html"><![CDATA[<p>想了想还是记录一下自己QQNT电脑版设置的自定义字体。<del>万一哪一天手滑删了呢。</del></p><p>需要使用到的加载器以及插件：</p><ul><li><a class="link"   href="https://liteloaderqqnt.github.io/" >LiteLoaderQQNT <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li><li><a class="link"   href="https://github.com/xiyuesaves/LiteLoaderQQNT-lite_tools" >轻量工具箱 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（也可在安装LiteLoaderQQNT之后从设置中的“插件商店”下载此插件）</li></ul><p><del>某一天无意间发现自定义字体可以不从下拉列表选择字体，而是自己敲字体家族。</del></p><p>目前使用的自定义字体：<code>IBM Plex Sans, Nu Wakkaoi M1, MiSans VF, MiSans L3, LINE Seed Sans KR, Plangothic P1, Plangothic P2, Sukima Gothic, Jigmo, Jigmo2, Jigmo3</code></p><p>顺便附上各字体相关网址：</p><ul><li><a class="link"   href="https://www.ibm.com/plex/" >IBM Plex <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（<code>IBM Plex Sans</code>）</li><li><span lang="ja"><a class="link"   href="https://kokagem.sakura.ne.jp/font/wakkaoi/" >Nu ワッカオイ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></span>（<code>Nu Wakkaoi M1</code>）</li><li><a class="link"   href="https://hyperos.mi.com/font/zh/" >MiSans <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（<code>MiSans VF, MiSans L3</code>）</li><li><a class="link"   href="https://seed.line.me/" >LINE Seed <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（<code>LINE Seed Sans KR</code>）</li><li><a class="link"   href="https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic-Project" >遍黑体项目 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（<code>Plangothic P1, Plangothic P2</code>）</li><li><span lang="ja"><a class="link"   href="https://booth.pm/ja/items/2117070" >すきまゴシック <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></span>（<code>Sukima Gothic</code>）</li><li><span lang="ja"><a class="link"   href="https://kamichikoichi.github.io/jigmo/" >Jigmo（字雲） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></span>（<code>Jigmo, Jigmo2, Jigmo3</code>）</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;想了想还是记录一下自己QQNT电脑版设置的自定义字体。&lt;del&gt;万一哪一天手滑删了呢。&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;需要使用到的加载器以及插件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;link&quot;   href=&quot;https://liteloaderqqnt.githu</summary>
+      
+    
+    
+    
+    
+    <category term="学习" scheme="https://guopcingithub.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>《I wish》歌词翻译</title>
@@ -482,32 +507,6 @@
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;歌词&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;</summary>
-      
-    
-    
-    
-    
-    <category term="歌词翻译" scheme="https://guopcingithub.github.io/tags/%E6%AD%8C%E8%AF%8D%E7%BF%BB%E8%AF%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《MUGEN∞MIRAI》歌词翻译</title>
-    <link href="https://guopcingithub.github.io/2024/01/23/mugen_mirai/"/>
-    <id>https://guopcingithub.github.io/2024/01/23/mugen_mirai/</id>
-    <published>2024-01-22T16:00:00.000Z</published>
-    <updated>2024-03-15T11:28:15.353Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>MUGEN∞MIRAI</strong> - 游戏《天神乱漫》片尾曲</p><p>作词：<span lang="ja">神代あみ</span>；作曲：Famishin</p><hr><p><strong>歌词</strong></p><p><em>注：歌词著作权归原作者所有。</em></p><div lang="ja" style="white-space: pre;"><p>映画みたいな日々に憧れて<br>無いものねだりばかりしていた<br>水たまりの中の空　蹴散らして<br><ruby>現実<rt>リアル</rt></ruby>に飛び込んでみたよ</p><p>英語のテストより　ずっと難しいわ<br>Ah…想い届かなくて<br>追いかけるほどに　すれ違うこともあるね</p><p>My dear friends　笑って、支えあって<br>時に喧嘩して　仲直りして<br>無限の未来は<br>繋いだ手と手から生まれてくんだね<br>とびきりのミラクルは<br>いつもすぐそばにある</p><p>フシギで満ちてるこの世界は<br>解らないことだらけ！だけれど…<br>もし、何でも簡単に叶ったら？<br>退屈で味気ないよね</p><p>Ah!ひとりじゃ解けない　人生のナゾナゾ<br>そう、隠された「鍵」は<br>大切な<ruby>君<rt>きみ</rt></ruby>と　ココロ合わせてく絆！</p><p>My dear friends　これからもよろしくね☆<br>君と一緒に歩いていきたい<br>無限の未来は<br>「自分たち次第」なら<br>悩んでるより身体中で感じたい<br>めいっぱい輝こうよ！</p><p>My dear friends　笑って、支えあって<br>時に喧嘩して　仲直りして<br>無限の未来は<br>繋いだ手と手から生まれてくんだね<br>とびきりのミラクルは<br>いつもすぐそばにある</p></div><hr><p><strong>翻译</strong></p><div style="white-space: pre;"><p>憧憬着如电影一般的日子<br>我不禁艳羡他人的美好生活<br>把水洼中映出的天空　肆意踢散<br>试着跳进现实之中吧</p><p>比起英语测试　还要难上不少<br>Ah…心意无法传达<br>我不停地追赶　有时又会擦肩而过</p><p>My dear friends　欢笑着，相互依靠吧<br>偶尔争执不下　再重归于好吧<br>无限的未来<br>是会从相牵的手中创造而出的<br>美妙的奇迹<br>总会存在于我们身边</p><p>充满着不可思议的世界<br>尽是不解的事物！虽然如此…<br>要是，什么愿望都能轻松实现？<br>也会觉得无趣乏味吧</p><p>Ah!一个人无法解开的　人生的种种谜题<br>原来，隐藏着的「钥匙」是<br>同重要的你　心心相印的牵绊！</p><p>My dear friends　从今以后也请多关照☆<br>想与你相伴一起走向前方<br>无限的未来<br>「取决于我们自己」的话<br>与其烦恼更想去全身心感受<br>以全力散发出光辉吧！</p><p>My dear friends　欢笑着，相互依靠吧<br>偶尔争执不下　再重归于好吧<br>无限的未来<br>是会从相牵的手中创造而出的<br>美妙的奇迹<br>总会存在于我们身边</p></div>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;MUGEN∞MIRAI&lt;/strong&gt; - 游戏《天神乱漫》片尾曲&lt;/p&gt;
-&lt;p&gt;作词：&lt;span lang=&quot;ja&quot;&gt;神代あみ&lt;/span&gt;；作曲：Famishin&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;歌词&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;注</summary>
       
     
     
