@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>洛谷 P1598 垂直柱状图 题解</title>
+    <url>/2020/02/15/luogu_p1598/</url>
+    <content><![CDATA[<p>本题解最初发布于洛谷个人博客。链接：<a class="link"   href="https://www.luogu.com.cn/blog/guopc/p1598" >https://www.luogu.com.cn/blog/guopc/p1598 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><strong>Python 3</strong></p>
+<p><a class="link"   href="https://www.luogu.com.cn/problem/P1598" >题目链接 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>好像没看到有人写 Python 3 的题解，本蒟蒻就来献丑了。</p>
+<p>模拟，嗯。主要用到列表和字典。</p>
+<p>直接上代码：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">letters = [<span class="built_in">chr</span>(i) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">65</span>, <span class="number">91</span>)] <span class="comment"># 创建字符 A~Z 的列表</span></span><br><span class="line">staDic = <span class="built_in">dict</span>(<span class="built_in">zip</span>(letters, [<span class="number">0</span>] * <span class="number">26</span>)) <span class="comment"># 以字母为键创建统计每个字母出现次数的字典</span></span><br><span class="line">ins = [j <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>) <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">input</span>()] <span class="comment"># 读入输入，同时将输入拆成单个字符存入列表</span></span><br><span class="line"><span class="keyword">for</span> k <span class="keyword">in</span> ins:</span><br><span class="line">    <span class="keyword">if</span> k <span class="keyword">in</span> letters:</span><br><span class="line">        staDic[k] += <span class="number">1</span> <span class="comment"># 遍历输入的每一个字符，过滤出 A~Z，同时统计出现次数</span></span><br><span class="line">maxValue = <span class="built_in">max</span>(staDic.values()) <span class="comment"># 获取最大出现次数</span></span><br><span class="line">ZDic = &#123;<span class="string">&#x27;Z&#x27;</span>: staDic.pop(<span class="string">&#x27;Z&#x27;</span>)&#125; <span class="comment"># 将 Z 的键值对拿出来用于单独处理，此时统计字典 staDic 里只有 A~Y 的键值对了</span></span><br><span class="line"><span class="keyword">while</span> maxValue &gt; <span class="number">0</span>:</span><br><span class="line"><span class="comment"># 这里考虑的是，因为题目要求的“柱状图”是底部对齐的，所以应当将值从大到小层层过滤。</span></span><br><span class="line"><span class="comment"># 没理解的话可以照着输出样例，在左侧从底部往上标注 1、2、3、…（也就是手动加个纵轴）。现在就是从顶部向下进行输出</span></span><br><span class="line">    <span class="keyword">for</span> value <span class="keyword">in</span> staDic.values(): <span class="comment"># 遍历统计字典里（现在只有 A~Y）的各值</span></span><br><span class="line">        <span class="keyword">if</span> value &gt;= maxValue:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;*&#x27;</span>, end=<span class="string">&#x27; &#x27;</span>) <span class="comment"># 对应的键能达到这个出现次数，输出 * 加个空格</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27; &#x27;</span>, end=<span class="string">&#x27; &#x27;</span>) <span class="comment"># 对应的键达不到这个出现次数，输出 2 个空格</span></span><br><span class="line">    <span class="keyword">if</span> ZDic[<span class="string">&#x27;Z&#x27;</span>] &gt;= maxValue: <span class="comment"># 单独处理 Z，因为 Z 后面就要换行了嘛</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;*&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">    maxValue -= <span class="number">1</span> <span class="comment"># 一行输出完之后出现次数自减，到下一行进行输出（继续循环）</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27; &#x27;</span>.join(letters)) <span class="comment"># 输出横轴</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>语言表达苦手qwq，如果能看懂我写的注释的话那再好不过了（</p>
+]]></content>
+      <tags>
+        <tag>题解</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《Le zoo》歌词翻译</title>
     <url>/2020/07/24/le_zoo/</url>
     <content><![CDATA[<p><strong>Le zoo</strong> - 动画《BEASTARS》片尾曲</p>
@@ -84,23 +101,6 @@
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>洛谷 P1598 垂直柱状图 题解</title>
-    <url>/2020/02/15/luogu_p1598/</url>
-    <content><![CDATA[<p>本题解最初发布于洛谷个人博客。链接：<a class="link"   href="https://www.luogu.com.cn/blog/guopc/p1598" >https://www.luogu.com.cn/blog/guopc/p1598 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p><strong>Python 3</strong></p>
-<p><a class="link"   href="https://www.luogu.com.cn/problem/P1598" >题目链接 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p>好像没看到有人写 Python 3 的题解，本蒟蒻就来献丑了。</p>
-<p>模拟，嗯。主要用到列表和字典。</p>
-<p>直接上代码：</p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">letters = [<span class="built_in">chr</span>(i) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">65</span>, <span class="number">91</span>)] <span class="comment"># 创建字符 A~Z 的列表</span></span><br><span class="line">staDic = <span class="built_in">dict</span>(<span class="built_in">zip</span>(letters, [<span class="number">0</span>] * <span class="number">26</span>)) <span class="comment"># 以字母为键创建统计每个字母出现次数的字典</span></span><br><span class="line">ins = [j <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>) <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">input</span>()] <span class="comment"># 读入输入，同时将输入拆成单个字符存入列表</span></span><br><span class="line"><span class="keyword">for</span> k <span class="keyword">in</span> ins:</span><br><span class="line">    <span class="keyword">if</span> k <span class="keyword">in</span> letters:</span><br><span class="line">        staDic[k] += <span class="number">1</span> <span class="comment"># 遍历输入的每一个字符，过滤出 A~Z，同时统计出现次数</span></span><br><span class="line">maxValue = <span class="built_in">max</span>(staDic.values()) <span class="comment"># 获取最大出现次数</span></span><br><span class="line">ZDic = &#123;<span class="string">&#x27;Z&#x27;</span>: staDic.pop(<span class="string">&#x27;Z&#x27;</span>)&#125; <span class="comment"># 将 Z 的键值对拿出来用于单独处理，此时统计字典 staDic 里只有 A~Y 的键值对了</span></span><br><span class="line"><span class="keyword">while</span> maxValue &gt; <span class="number">0</span>:</span><br><span class="line"><span class="comment"># 这里考虑的是，因为题目要求的“柱状图”是底部对齐的，所以应当将值从大到小层层过滤。</span></span><br><span class="line"><span class="comment"># 没理解的话可以照着输出样例，在左侧从底部往上标注 1、2、3、…（也就是手动加个纵轴）。现在就是从顶部向下进行输出</span></span><br><span class="line">    <span class="keyword">for</span> value <span class="keyword">in</span> staDic.values(): <span class="comment"># 遍历统计字典里（现在只有 A~Y）的各值</span></span><br><span class="line">        <span class="keyword">if</span> value &gt;= maxValue:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;*&#x27;</span>, end=<span class="string">&#x27; &#x27;</span>) <span class="comment"># 对应的键能达到这个出现次数，输出 * 加个空格</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27; &#x27;</span>, end=<span class="string">&#x27; &#x27;</span>) <span class="comment"># 对应的键达不到这个出现次数，输出 2 个空格</span></span><br><span class="line">    <span class="keyword">if</span> ZDic[<span class="string">&#x27;Z&#x27;</span>] &gt;= maxValue: <span class="comment"># 单独处理 Z，因为 Z 后面就要换行了嘛</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;*&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">    maxValue -= <span class="number">1</span> <span class="comment"># 一行输出完之后出现次数自减，到下一行进行输出（继续循环）</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27; &#x27;</span>.join(letters)) <span class="comment"># 输出横轴</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-<p>语言表达苦手qwq，如果能看懂我写的注释的话那再好不过了（</p>
-]]></content>
-      <tags>
-        <tag>题解</tag>
       </tags>
   </entry>
   <entry>
@@ -733,43 +733,49 @@
       </tags>
   </entry>
   <entry>
-    <title>《100にゃんパワーで夢心地（100喵能量恍如梦境）》歌词翻译</title>
-    <url>/2021/02/10/100_nyan_power_de_yumegokochi/</url>
-    <content><![CDATA[<p><strong><span lang="ja">100にゃんパワーで夢心地</span>（100喵能量恍如梦境）</strong> - 游戏《NEKOPARA Vol.2》片尾曲</p>
-<p>作词：<span lang="ja">山下慎一狼</span>；作曲：Team-OZ</p>
+    <title>《だから僕は僕を手放す（所以我放开我的手）》歌词翻译</title>
+    <url>/2021/03/17/dakara_boku_wa_boku_wo_tebanasu/</url>
+    <content><![CDATA[<p><strong><span lang="ja">だから僕は僕を手放す</span>（所以我放开我的手）</strong> - 动画《重启咲良田》片头曲</p>
+<p>作词：<span lang="ja">杉本雄治</span>；作曲：<span lang="ja">杉本雄治</span></p>
 <hr>
 <p><strong>歌词</strong></p>
 <p><em>注：歌词著作权归原作者所有。</em></p>
 <div lang="ja" style="white-space: pre;">
 
-<p>100にゃんパワーの笑顔<br>君に見せてあげる</p>
-<p>聞き耳猫耳で近づく足音<br>ドアを開けた瞬間<br>飛び付いちゃうよ</p>
-<p>ずっとずっと待ってたの<br>誰より一番に<br>いつも以上<br>ねぇなでなでしてね？</p>
-<p>甘え上手なのも特権<br>背伸びしても無理はしない<br>にゃーにゃーすりすり<br>ぺろりころころ<br>もぉ、離れないんだから</p>
-<p>気の向くまま鈴のなるまま<br>大好きな君ともっと<br>いられたらそれだけで<br>にゃんとも夢心地</p>
-<p>どこに見せたときも<br>恥ずかしくなんかない<br>君の自慢できる<br>レディーになるよ<br>名前を呼ばれたなら<br>ほっぺにチュウの返事<br>可愛いでしょ？<br>ねぇ大事にしてね</p>
-<p>甘えるばかりだけじゃ甘い<br>たまにはムチも必要<br>ツンツン、プリプリそっぽ向いたら<br>ほら、とてもあせってる<br>大丈夫よあともうちょっと<br>君の困り顔見たら<br>100にゃんパワーの笑顔<br>君に見せてあげる</p>
-<p>いつでも、どこにいても<br>想うは<br>君のことだけ</p>
-<p>甘え上手なのも特権<br>背伸びしても無理はしない<br>にゃんにゃんすりすり<br>ぺろりころころ<br>もぉ、離れないんだから</p>
-<p>気の向くまま鈴のなるまま<br>大好きな君ともっと<br>いられたらそれだけで<br>ネコ冥利につきちゃう</p>
-<p>甘えるばかりだけじゃ甘い<br>たまにはムチも必要<br>ツンツン、プリプリそっぽ向いたら<br>ほら、とてもあせってる<br>大丈夫よあともうちょっと<br>君の困り顔見たら<br>100にゃんパワーの笑顔<br>君に見せてあげる</p>
+<p>10年前好きだった　開く事のない小説<br>これが「自分らしさ」と　カッコつけ飾っては</p>
+<p>借り物の偉人たちの言葉を<br>まるで自分の物のように<br>得意げに話す人を嘲笑う</p>
+<p>でも棚にあげた「自分らしさ」も<br>同じような物なのは<br>本当は　気づいてた　心を今リセットして</p>
+<p>僕を手放すのは僕だ<br>胸に強く言い聞かせた<br>後ろ指さされても　前だけを向けるよな？</p>
+<p>世界が残して来た足跡を<br>辿るより刻む方がいい<br>自分が信じた道なら<br>迷わずに行けるよな？　大丈夫</p>
+<p>大人になった僕らは　分かち合うのが面倒で<br>空にならない代わりに　満たされることもない</p>
+<p>その場しのぎで並べた言葉を<br>いつも悔やんでいるのは<br>気づいて欲しい　ほんとの自分がいるから</p>
+<p>埃をかぶった「自分らしさ」に<br>挟まれたままの栞<br>開いたら　懐かしい言葉が今リセットしていく</p>
+<p>僕を手放すのは僕だ<br>誰の言葉も動かせない<br>後ろ指さされても　前だけを向けるよな？</p>
+<p>正解が何もない世界でも<br>問題は無限に溢れてる<br>きっと間違いもないから<br>迷わずに行けるよな？　大丈夫</p>
+<p>傷つかないように　守ってきた自分が<br>重ねたその理論武装が<br>重い鎧になってた　身動きさえも出来ない<br>錆びた言葉を　脱ぎ捨てて眩しい明日へ</p>
+<p>リセットして</p>
+<p>僕を手放すのは僕だ<br>胸に強く言い聞かせた<br>後ろ指さされても　前だけを向けるよな？</p>
+<p>世界が残して来た足跡を<br>辿るより刻む方がいい<br>自分が信じた道なら<br>迷わずに行けるよな？　大丈夫</p>
 </div>
 
 <hr>
 <p><strong>翻译</strong></p>
 <div style="white-space: pre;">
 
-<p>100喵能量的笑容<br>向你尽情展现</p>
-<p>竖起猫耳听见靠近的脚步声<br>在大门打开的瞬间<br>向你飞扑过去</p>
-<p>一直一直等着你<br>比谁都要<br>等得久<br>呐　给我更多的抚摸吧？</p>
-<p>擅长撒娇是猫儿的特权<br>挺直腰板也不会乱来<br>喵喵蹭蹭<br>舔舔咕噜咕噜<br>已经，离不开你了</p>
-<p>随心跃动任铃作响<br>只要能和最爱的你<br>相依相伴<br>就恍如在梦境之中</p>
-<p>无论站在谁的面前<br>都不会感到难为情<br>我会成为<br>让你骄傲的淑女哟<br>如果喊了我的名字<br>就会在脸上亲吻作为回应<br>很可爱对吧？<br>呐　要好好珍惜哦</p>
-<p>只是撒娇的话过于孩子气<br>偶尔也需要大胆一点<br>气冲冲鼓着脸转向一边<br>看吧，非常着急呢<br>没关系哟让我再多看看<br>你那困扰的神情<br>100喵能量的笑容<br>就会向你尽情展现</p>
-<p>无论何时，无论何地<br>我的心中<br>只想着你</p>
-<p>擅长撒娇是猫儿的特权<br>挺直腰板也不会乱来<br>喵喵蹭蹭<br>舔舔咕噜咕噜<br>已经，离不开你了</p>
-<p>随心跃动任铃作响<br>只要能和最爱的你<br>相依相伴<br>猫儿的甜头就要用光了</p>
-<p>只是撒娇的话过于孩子气<br>偶尔也需要大胆一点<br>气冲冲鼓着脸转向一边<br>看吧，非常着急呢<br>没关系哟让我再多看看<br>你那困扰的神情<br>100喵能量的笑容<br>就会向你尽情展现</p>
+<p>10年前就喜欢　却未曾翻开的小说<br>这「就像我自己」　在装扮和掩饰</p>
+<p>借用伟人说过的言语<br>就当做自己的名言<br>嘲笑着得意洋洋侃侃而谈的人们</p>
+<p>可是我「对自己」的置之不理<br>不也是这样的吗<br>实际上　我已注意到　如今心灵正在重启</p>
+<p>放开我的手的是我自己<br>对着内心强烈地诉说<br>即使被人背后指指点点　也只能继续向前迈进吧？</p>
+<p>世界与其遗留往来的足迹<br>不如都好好地刻画出来<br>如果是自己所相信的道路<br>就不要犹豫向前走吧？　没问题</p>
+<p>长大成人的我们　对互相分享也感到麻烦<br>空白无法被替代　也无法将其填满</p>
+<p>那时一连串的敷衍了事<br>一直让我感到后悔<br>想要察觉到　因为真正的自己是存在的</p>
+<p>对于沾染着灰尘的「这样的自己」<br>如果将夹着的书签<br>展开的话　怀念的言语将在此刻重启</p>
+<p>放开我的手的是我自己<br>不论谁的话语都无法动摇<br>即使被人背后指指点点　也只能继续向前迈进吧？</p>
+<p>即使世界没有什么正确答案<br>问题也会不断地涌现出来<br>因为一定不会有错误<br>就不要犹豫向前走吧？　没问题</p>
+<p>为了不受到伤害　守护着的自己<br>互相重叠的理论武装<br>成为沉重的盔甲　让自己动弹不得<br>抛弃那锈蚀的话语　朝着耀眼的明天走去</p>
+<p>就此重启</p>
+<p>放开我的手的是我自己<br>对着内心强烈地诉说<br>即使被人背后指指点点　也只能继续向前迈进吧？</p>
+<p>世界与其遗留往来的足迹<br>不如都好好地刻画出来<br>如果是自己所相信的道路<br>就不要犹豫向前走吧？　没问题</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -819,49 +825,125 @@
       </tags>
   </entry>
   <entry>
-    <title>《だから僕は僕を手放す（所以我放开我的手）》歌词翻译</title>
-    <url>/2021/03/17/dakara_boku_wa_boku_wo_tebanasu/</url>
-    <content><![CDATA[<p><strong><span lang="ja">だから僕は僕を手放す</span>（所以我放开我的手）</strong> - 动画《重启咲良田》片头曲</p>
-<p>作词：<span lang="ja">杉本雄治</span>；作曲：<span lang="ja">杉本雄治</span></p>
+    <title>《100にゃんパワーで夢心地（100喵能量恍如梦境）》歌词翻译</title>
+    <url>/2021/02/10/100_nyan_power_de_yumegokochi/</url>
+    <content><![CDATA[<p><strong><span lang="ja">100にゃんパワーで夢心地</span>（100喵能量恍如梦境）</strong> - 游戏《NEKOPARA Vol.2》片尾曲</p>
+<p>作词：<span lang="ja">山下慎一狼</span>；作曲：Team-OZ</p>
 <hr>
 <p><strong>歌词</strong></p>
 <p><em>注：歌词著作权归原作者所有。</em></p>
 <div lang="ja" style="white-space: pre;">
 
-<p>10年前好きだった　開く事のない小説<br>これが「自分らしさ」と　カッコつけ飾っては</p>
-<p>借り物の偉人たちの言葉を<br>まるで自分の物のように<br>得意げに話す人を嘲笑う</p>
-<p>でも棚にあげた「自分らしさ」も<br>同じような物なのは<br>本当は　気づいてた　心を今リセットして</p>
-<p>僕を手放すのは僕だ<br>胸に強く言い聞かせた<br>後ろ指さされても　前だけを向けるよな？</p>
-<p>世界が残して来た足跡を<br>辿るより刻む方がいい<br>自分が信じた道なら<br>迷わずに行けるよな？　大丈夫</p>
-<p>大人になった僕らは　分かち合うのが面倒で<br>空にならない代わりに　満たされることもない</p>
-<p>その場しのぎで並べた言葉を<br>いつも悔やんでいるのは<br>気づいて欲しい　ほんとの自分がいるから</p>
-<p>埃をかぶった「自分らしさ」に<br>挟まれたままの栞<br>開いたら　懐かしい言葉が今リセットしていく</p>
-<p>僕を手放すのは僕だ<br>誰の言葉も動かせない<br>後ろ指さされても　前だけを向けるよな？</p>
-<p>正解が何もない世界でも<br>問題は無限に溢れてる<br>きっと間違いもないから<br>迷わずに行けるよな？　大丈夫</p>
-<p>傷つかないように　守ってきた自分が<br>重ねたその理論武装が<br>重い鎧になってた　身動きさえも出来ない<br>錆びた言葉を　脱ぎ捨てて眩しい明日へ</p>
-<p>リセットして</p>
-<p>僕を手放すのは僕だ<br>胸に強く言い聞かせた<br>後ろ指さされても　前だけを向けるよな？</p>
-<p>世界が残して来た足跡を<br>辿るより刻む方がいい<br>自分が信じた道なら<br>迷わずに行けるよな？　大丈夫</p>
+<p>100にゃんパワーの笑顔<br>君に見せてあげる</p>
+<p>聞き耳猫耳で近づく足音<br>ドアを開けた瞬間<br>飛び付いちゃうよ</p>
+<p>ずっとずっと待ってたの<br>誰より一番に<br>いつも以上<br>ねぇなでなでしてね？</p>
+<p>甘え上手なのも特権<br>背伸びしても無理はしない<br>にゃーにゃーすりすり<br>ぺろりころころ<br>もぉ、離れないんだから</p>
+<p>気の向くまま鈴のなるまま<br>大好きな君ともっと<br>いられたらそれだけで<br>にゃんとも夢心地</p>
+<p>どこに見せたときも<br>恥ずかしくなんかない<br>君の自慢できる<br>レディーになるよ<br>名前を呼ばれたなら<br>ほっぺにチュウの返事<br>可愛いでしょ？<br>ねぇ大事にしてね</p>
+<p>甘えるばかりだけじゃ甘い<br>たまにはムチも必要<br>ツンツン、プリプリそっぽ向いたら<br>ほら、とてもあせってる<br>大丈夫よあともうちょっと<br>君の困り顔見たら<br>100にゃんパワーの笑顔<br>君に見せてあげる</p>
+<p>いつでも、どこにいても<br>想うは<br>君のことだけ</p>
+<p>甘え上手なのも特権<br>背伸びしても無理はしない<br>にゃんにゃんすりすり<br>ぺろりころころ<br>もぉ、離れないんだから</p>
+<p>気の向くまま鈴のなるまま<br>大好きな君ともっと<br>いられたらそれだけで<br>ネコ冥利につきちゃう</p>
+<p>甘えるばかりだけじゃ甘い<br>たまにはムチも必要<br>ツンツン、プリプリそっぽ向いたら<br>ほら、とてもあせってる<br>大丈夫よあともうちょっと<br>君の困り顔見たら<br>100にゃんパワーの笑顔<br>君に見せてあげる</p>
 </div>
 
 <hr>
 <p><strong>翻译</strong></p>
 <div style="white-space: pre;">
 
-<p>10年前就喜欢　却未曾翻开的小说<br>这「就像我自己」　在装扮和掩饰</p>
-<p>借用伟人说过的言语<br>就当做自己的名言<br>嘲笑着得意洋洋侃侃而谈的人们</p>
-<p>可是我「对自己」的置之不理<br>不也是这样的吗<br>实际上　我已注意到　如今心灵正在重启</p>
-<p>放开我的手的是我自己<br>对着内心强烈地诉说<br>即使被人背后指指点点　也只能继续向前迈进吧？</p>
-<p>世界与其遗留往来的足迹<br>不如都好好地刻画出来<br>如果是自己所相信的道路<br>就不要犹豫向前走吧？　没问题</p>
-<p>长大成人的我们　对互相分享也感到麻烦<br>空白无法被替代　也无法将其填满</p>
-<p>那时一连串的敷衍了事<br>一直让我感到后悔<br>想要察觉到　因为真正的自己是存在的</p>
-<p>对于沾染着灰尘的「这样的自己」<br>如果将夹着的书签<br>展开的话　怀念的言语将在此刻重启</p>
-<p>放开我的手的是我自己<br>不论谁的话语都无法动摇<br>即使被人背后指指点点　也只能继续向前迈进吧？</p>
-<p>即使世界没有什么正确答案<br>问题也会不断地涌现出来<br>因为一定不会有错误<br>就不要犹豫向前走吧？　没问题</p>
-<p>为了不受到伤害　守护着的自己<br>互相重叠的理论武装<br>成为沉重的盔甲　让自己动弹不得<br>抛弃那锈蚀的话语　朝着耀眼的明天走去</p>
-<p>就此重启</p>
-<p>放开我的手的是我自己<br>对着内心强烈地诉说<br>即使被人背后指指点点　也只能继续向前迈进吧？</p>
-<p>世界与其遗留往来的足迹<br>不如都好好地刻画出来<br>如果是自己所相信的道路<br>就不要犹豫向前走吧？　没问题</p>
+<p>100喵能量的笑容<br>向你尽情展现</p>
+<p>竖起猫耳听见靠近的脚步声<br>在大门打开的瞬间<br>向你飞扑过去</p>
+<p>一直一直等着你<br>比谁都要<br>等得久<br>呐　给我更多的抚摸吧？</p>
+<p>擅长撒娇是猫儿的特权<br>挺直腰板也不会乱来<br>喵喵蹭蹭<br>舔舔咕噜咕噜<br>已经，离不开你了</p>
+<p>随心跃动任铃作响<br>只要能和最爱的你<br>相依相伴<br>就恍如在梦境之中</p>
+<p>无论站在谁的面前<br>都不会感到难为情<br>我会成为<br>让你骄傲的淑女哟<br>如果喊了我的名字<br>就会在脸上亲吻作为回应<br>很可爱对吧？<br>呐　要好好珍惜哦</p>
+<p>只是撒娇的话过于孩子气<br>偶尔也需要大胆一点<br>气冲冲鼓着脸转向一边<br>看吧，非常着急呢<br>没关系哟让我再多看看<br>你那困扰的神情<br>100喵能量的笑容<br>就会向你尽情展现</p>
+<p>无论何时，无论何地<br>我的心中<br>只想着你</p>
+<p>擅长撒娇是猫儿的特权<br>挺直腰板也不会乱来<br>喵喵蹭蹭<br>舔舔咕噜咕噜<br>已经，离不开你了</p>
+<p>随心跃动任铃作响<br>只要能和最爱的你<br>相依相伴<br>猫儿的甜头就要用光了</p>
+<p>只是撒娇的话过于孩子气<br>偶尔也需要大胆一点<br>气冲冲鼓着脸转向一边<br>看吧，非常着急呢<br>没关系哟让我再多看看<br>你那困扰的神情<br>100喵能量的笑容<br>就会向你尽情展现</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《ネコイチ（猫咪同心）》歌词翻译</title>
+    <url>/2021/05/09/neko_ichi/</url>
+    <content><![CDATA[<p><strong><span lang="ja">ネコイチ</span>（猫咪同心）</strong> - 游戏《NEKOPARA Vol.3》片头曲</p>
+<p>作词：Duca；作曲：Scuderia K</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>ずっと大切だよ　いつだって隣にいるよ<br>同じ時間の中で　そっと寄り添っていたい</p>
+<p>出逢いの日に感じたこと　まだ覚えてる<br>きっと特別！　そう感じたから</p>
+<p>猛スピードで季節は過ぎ　思い出キラリ<br>すぐ横には　変わらない笑顔</p>
+<p>落ち込んでうつむく雨降りでも<br>大丈夫　同じ傘でほら　手をつなごう</p>
+<p>ずっと大好きだよ　いつだって味方でいるよ<br>うまく伝えられず　ギュッと結んだ手のひら</p>
+<p>あとちょっとが　もどかしい程　素直になれず<br>いちばん痛い言葉を投げたり</p>
+<p>柔らかくて　壊れやすいキミの心は<br>きっと誰より優しさ知ってる</p>
+<p>はにかんでうつむくその横顔<br>大丈夫　何も言わないでも　わかってるよ</p>
+<p>ずっとそばにいるよ　どんな時も応援してるよ<br>悔しい涙の日は　そっと抱きしめてあげる</p>
+<p>マイナスな感情さえ愛しい<br>いつもどんな時もキミを想ってるよ</p>
+<p>ずっと大切だよ　いつだって隣にいるよ<br>同じ時間の中で　そっと寄り添っていたい</p>
+<p>ずっと大好きだよ　いつだって味方でいるよ<br>手と手　心繋ぎ　ずっと一緒にいようね</p>
+<p>そうね　2人で1つだ</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>一直都很珍惜你　无论何时都陪在你身边<br>想在和你共处的时光里　轻轻地靠在你怀里</p>
+<p>与你相遇那天的感觉　我还记在心里<br>一定十分特别！　这就是我的心声</p>
+<p>季节飞快更替　回忆闪闪发光<br>近在咫尺的是　你那不曾改变的笑容</p>
+<p>即便垂头丧气降雨连连<br>没关系　让我们在同一把伞下　牵紧彼此的手</p>
+<p>一直都喜欢着你　无论何时都是你的伙伴<br>尽管不能好好传达　也会紧紧握住你的手掌</p>
+<p>明明只差一点点　心里十分急切　却没法坦率起来<br>朝你扔出了最伤人的话语</p>
+<p>你那柔软而又如此脆弱的心灵<br>一定比任何人都能感受到温柔</p>
+<p>看见侧颜　你腼腆地低下了头<br>没关系　即便你什么都不说　我也能明白</p>
+<p>一直都在你的身边　无论何时都会为你加油<br>在流下悔恨眼泪的日子里　我会轻轻抱着你</p>
+<p>就算是负面的感情也令人喜爱<br>不管什么时候我也一直想着你</p>
+<p>一直都很珍惜你　无论何时都陪在你身边<br>想在和你共处的时光里　轻轻地靠在你怀里</p>
+<p>一直都喜欢着你　无论何时都是你的伙伴<br>手牵手　心连心　让我们永远在一起吧</p>
+<p>是啊　让我们合二为一吧</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《Growing》歌词翻译</title>
+    <url>/2021/05/24/growing/</url>
+    <content><![CDATA[<p><strong>Growing</strong> - 游戏《NEKOPARA Vol.3》片尾曲</p>
+<p>作词：Duca；作曲：Scuderia K</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>いつもどんな時でも<br>心繋がってるから大丈夫<br>ずっと一番そばで　見守ってきたから<br>頑張るキミの　強がりもあの涙も</p>
+<p>昨日までの日々が　今を築いている<br>一つ一つの　想いのカケラが<br>また明日を輝かせるよ</p>
+<p>新しい毎日が続いてゆく<br>笑顔が導いた　一緒の未来ずっと<br>終わらない　またここから始まるよ<br>泣き笑い　お話は続く　ワクワクするよね</p>
+<p>いつだってまっすぐに<br>本気でぶつかってきたからわかるよ<br>曲げない強さそして　不器用な優しさ<br>全部まとめて　それが私達なんだね</p>
+<p>いつか見た景色が　宝物になった<br>キミと見たから　なんてことのない<br>景色も特別に変わるよ</p>
+<p>誰よりも大切を分かち合ってる<br>かけがえのないもの　胸の奥に満ちてく<br>止まらない　一緒に日々を重ねて<br>新たな物語始まる　ドキドキするよね</p>
+<p>これからも続いてく時間の中で<br>どんな大きな壁も　一緒なら超えられる<br>終わらない　また始まる今日がある<br>泣き笑い　お話は続く　未来へ向かって<br>Growing　歩いてゆこう</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>无论什么时候都不必担心<br>因为我们彼此都心连着心<br>因为一直在你的身边　默默守护着你<br>所以了解努力的你的　那些逞强那些落泪</p>
+<p>以往过去的每一天　都造就了现在的日子<br>一个又一个的　回忆的碎片<br>也将使明天闪闪发光哟</p>
+<p>崭新的每一天还将继续<br>笑容引导着　我们的未来直到永远<br>不会停止的　再度从这里开始吧<br>破涕为笑的　故事仍在继续　让人兴奋不已呢</p>
+<p>无论何时都十分坦率<br>认真地面对一切所以能明白哟<br>不屈不挠的坚强以及　笨拙不已的温柔<br>全部放在一起　就是我们自己呢</p>
+<p>不知何时看过的景色　都成为了珍贵之物<br>因为和你一起欣赏　什么都不值一提了<br>景色也变得特别起来</p>
+<p>比任何人都要珍视着彼此<br>不能替代的东西　逐渐充满着内心<br>无法停下的　在一起的日子交织着<br>全新的故事开始了　真是令人激动不已呢</p>
+<p>从今以后也将继续的时光里<br>不管多大的障碍　在一起的话就能越过<br>不会停止的　还有将要开始的今日<br>破涕为笑的　故事仍在继续　面对着未来<br>不断成长　向前迈进吧</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -914,88 +996,6 @@
 <li><a id="注_6" href="#文注_6">^</a> <span lang="ja">アラモード</span>，源自法语<span lang="fr">à la mode</span>，有“时髦”“流行”之意，也可指派配以冰淇淋、牛排佐以浓汁。</li>
 </ol>
 ]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《Growing》歌词翻译</title>
-    <url>/2021/05/24/growing/</url>
-    <content><![CDATA[<p><strong>Growing</strong> - 游戏《NEKOPARA Vol.3》片尾曲</p>
-<p>作词：Duca；作曲：Scuderia K</p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>いつもどんな時でも<br>心繋がってるから大丈夫<br>ずっと一番そばで　見守ってきたから<br>頑張るキミの　強がりもあの涙も</p>
-<p>昨日までの日々が　今を築いている<br>一つ一つの　想いのカケラが<br>また明日を輝かせるよ</p>
-<p>新しい毎日が続いてゆく<br>笑顔が導いた　一緒の未来ずっと<br>終わらない　またここから始まるよ<br>泣き笑い　お話は続く　ワクワクするよね</p>
-<p>いつだってまっすぐに<br>本気でぶつかってきたからわかるよ<br>曲げない強さそして　不器用な優しさ<br>全部まとめて　それが私達なんだね</p>
-<p>いつか見た景色が　宝物になった<br>キミと見たから　なんてことのない<br>景色も特別に変わるよ</p>
-<p>誰よりも大切を分かち合ってる<br>かけがえのないもの　胸の奥に満ちてく<br>止まらない　一緒に日々を重ねて<br>新たな物語始まる　ドキドキするよね</p>
-<p>これからも続いてく時間の中で<br>どんな大きな壁も　一緒なら超えられる<br>終わらない　また始まる今日がある<br>泣き笑い　お話は続く　未来へ向かって<br>Growing　歩いてゆこう</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>无论什么时候都不必担心<br>因为我们彼此都心连着心<br>因为一直在你的身边　默默守护着你<br>所以了解努力的你的　那些逞强那些落泪</p>
-<p>以往过去的每一天　都造就了现在的日子<br>一个又一个的　回忆的碎片<br>也将使明天闪闪发光哟</p>
-<p>崭新的每一天还将继续<br>笑容引导着　我们的未来直到永远<br>不会停止的　再度从这里开始吧<br>破涕为笑的　故事仍在继续　让人兴奋不已呢</p>
-<p>无论何时都十分坦率<br>认真地面对一切所以能明白哟<br>不屈不挠的坚强以及　笨拙不已的温柔<br>全部放在一起　就是我们自己呢</p>
-<p>不知何时看过的景色　都成为了珍贵之物<br>因为和你一起欣赏　什么都不值一提了<br>景色也变得特别起来</p>
-<p>比任何人都要珍视着彼此<br>不能替代的东西　逐渐充满着内心<br>无法停下的　在一起的日子交织着<br>全新的故事开始了　真是令人激动不已呢</p>
-<p>从今以后也将继续的时光里<br>不管多大的障碍　在一起的话就能越过<br>不会停止的　还有将要开始的今日<br>破涕为笑的　故事仍在继续　面对着未来<br>不断成长　向前迈进吧</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《ネコイチ（猫咪同心）》歌词翻译</title>
-    <url>/2021/05/09/neko_ichi/</url>
-    <content><![CDATA[<p><strong><span lang="ja">ネコイチ</span>（猫咪同心）</strong> - 游戏《NEKOPARA Vol.3》片头曲</p>
-<p>作词：Duca；作曲：Scuderia K</p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>ずっと大切だよ　いつだって隣にいるよ<br>同じ時間の中で　そっと寄り添っていたい</p>
-<p>出逢いの日に感じたこと　まだ覚えてる<br>きっと特別！　そう感じたから</p>
-<p>猛スピードで季節は過ぎ　思い出キラリ<br>すぐ横には　変わらない笑顔</p>
-<p>落ち込んでうつむく雨降りでも<br>大丈夫　同じ傘でほら　手をつなごう</p>
-<p>ずっと大好きだよ　いつだって味方でいるよ<br>うまく伝えられず　ギュッと結んだ手のひら</p>
-<p>あとちょっとが　もどかしい程　素直になれず<br>いちばん痛い言葉を投げたり</p>
-<p>柔らかくて　壊れやすいキミの心は<br>きっと誰より優しさ知ってる</p>
-<p>はにかんでうつむくその横顔<br>大丈夫　何も言わないでも　わかってるよ</p>
-<p>ずっとそばにいるよ　どんな時も応援してるよ<br>悔しい涙の日は　そっと抱きしめてあげる</p>
-<p>マイナスな感情さえ愛しい<br>いつもどんな時もキミを想ってるよ</p>
-<p>ずっと大切だよ　いつだって隣にいるよ<br>同じ時間の中で　そっと寄り添っていたい</p>
-<p>ずっと大好きだよ　いつだって味方でいるよ<br>手と手　心繋ぎ　ずっと一緒にいようね</p>
-<p>そうね　2人で1つだ</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>一直都很珍惜你　无论何时都陪在你身边<br>想在和你共处的时光里　轻轻地靠在你怀里</p>
-<p>与你相遇那天的感觉　我还记在心里<br>一定十分特别！　这就是我的心声</p>
-<p>季节飞快更替　回忆闪闪发光<br>近在咫尺的是　你那不曾改变的笑容</p>
-<p>即便垂头丧气降雨连连<br>没关系　让我们在同一把伞下　牵紧彼此的手</p>
-<p>一直都喜欢着你　无论何时都是你的伙伴<br>尽管不能好好传达　也会紧紧握住你的手掌</p>
-<p>明明只差一点点　心里十分急切　却没法坦率起来<br>朝你扔出了最伤人的话语</p>
-<p>你那柔软而又如此脆弱的心灵<br>一定比任何人都能感受到温柔</p>
-<p>看见侧颜　你腼腆地低下了头<br>没关系　即便你什么都不说　我也能明白</p>
-<p>一直都在你的身边　无论何时都会为你加油<br>在流下悔恨眼泪的日子里　我会轻轻抱着你</p>
-<p>就算是负面的感情也令人喜爱<br>不管什么时候我也一直想着你</p>
-<p>一直都很珍惜你　无论何时都陪在你身边<br>想在和你共处的时光里　轻轻地靠在你怀里</p>
-<p>一直都喜欢着你　无论何时都是你的伙伴<br>手牵手　心连心　让我们永远在一起吧</p>
-<p>是啊　让我们合二为一吧</p>
-</div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
       </tags>
@@ -1071,86 +1071,6 @@
 <p>已经逝去的时间　没有动摇的余地<br>那温柔的歌声　互相交换的话语<br>彼此平行　将世界切成碎片</p>
 <p>约定好的旅行<br>怀揣着将命运　全部接受的觉悟<br>相互吸引同步<br>超过错综复杂的丝线<br>被托付的答案　就在次元的那端<br>一定在等待着<br>扮演那传说中的勇者<br>比任何人都了解　生命的意义<br>就如同利剑———</p>
 <p>没有终点的旅行<br>没有尽头的宇宙　只有点点星光<br>循着微弱的导航<br>在得到真理之前　我不会放弃<br>这份想要传达出的感伤　若能像那被抛弃的时间<br>重新开始转动<br>那就是永远不会　褪色的故事<br>耀眼的光芒　将明天照亮<br>就如同利剑———</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《Baby→Lady LOVE》歌词翻译</title>
-    <url>/2021/08/07/baby_lady_love/</url>
-    <content><![CDATA[<p><strong>Baby→Lady LOVE</strong> - OVA《猫娘乐园》片头曲</p>
-<p>作词：<span lang="ja">うらん</span>；作曲：<span lang="ja">山口朗彦</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>Baby→Lady　駆け出そう<br>ドラマティックに憧れて<br>夢見るストーリー<br>君と一緒なら　カラフルになる</p>
-<p>Let’s Go! Dreaming<br>エール届くといいな<br>Happy Sunshine<br>キラキラ</p>
-<p>お日様みたい　君の笑顔<br>ポカポカするから（って眠たいはNG）<br>いつもそばで　ばっちり決めたいのに<br>わりと失敗しちゃう<br>特別な気持ち<br>甘い甘いコーティングで（君と）<br>ねぇ　伝えたなら　何が待ってる？</p>
-<p>Baby→Lady　駆け出そう<br>ドラマティックに憧れて<br>夢見るストーリー<br>素直になって（踏み出せば）<br>なんか急にドキドキ<br>止まらなくて　どうしよう<br>恋想ループ再生　キミのもとへと響いて行くよ</p>
-<p>Let’s Go! Dreaming<br>エール届いたかな<br>Happy Sunshine<br>キラキラ</p>
-<p>その瞳に映る世界<br>私もいたくて（行ったり来たり）<br>センチメンタル　恋のいたずらから<br>二人守ってほしい<br>トキメキはまるで　ミルフィーユみたい<br>やさしく（わりと）<br>あぁ　重なるから　壊さないで</p>
-<p>Maybe→Baby　ここから<br>ロマンティックに連れ出して<br>知らない私を教えてほしい（だからもっと）<br>近づいてそわそわ　慌てないで急ごうよ<br>二つのスピードで<br>描く明日が煌めきになる</p>
-<p>大切な思い出たち<br>君色リボンかけて<br>心でギュってしたら<br>今（すぐ）会いたくなるよ（加速してゆくの）<br>Baby→Lady LOVE</p>
-<p>一緒に　駆け出そう<br>ドラマティックに憧れて<br>夢見るストーリー<br>素直になって（どこまでも）</p>
-<p>Baby→Lady　ドキドキ<br>止まらなくて　どうしよう<br>恋想ループ再生　キミのもとへと響いて行くよ<br>想いの先で　会えるといいな</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>Baby→Lady　向前奔去吧<br>憧憬着戏剧般的现实<br>梦想中的故事<br>只要和你在一起　就会变得五彩缤纷</p>
-<p>让我们走吧！　梦想着<br>应援能传达到就好了<br>欢乐　阳光<br>闪闪发亮</p>
-<p>像太阳一般的　你的笑容<br>让人感到十分温暖（想要睡觉可不行）<br>一直想要下定决心　永远待在你的身边<br>却总是以失败告终<br>把特别的心情<br>裹上甜甜的糖衣（送给你）<br>呐　传达到了的话　还在等待什么呢？</p>
-<p>Baby→Lady　向前奔去吧<br>憧憬着戏剧般的现实<br>梦想中的故事<br>变得更加坦率（只要踏出那一步）<br>为何突然心跳加速<br>无法平静　如何是好<br>爱恋心声循环播放　在你的身边不断回响</p>
-<p>让我们走吧！　梦想着<br>应援有没有传达到呢<br>欢乐　阳光<br>闪闪发亮</p>
-<p>那双眼睛映照着的世界<br>我也想存在其中（四处走走）<br>这份多愁善感　是恋爱的恶作剧<br>想要两个人来守护<br>激动不已的心情　简直就像千层酥<br>如此温柔（出乎意料）<br>啊　交错在一起的话　不要破坏它</p>
-<p>Maybe→Baby　现在开始<br>带着我前往浪漫之地<br>请告诉我我不知道的自己（告诉我更多）<br>不断靠近就会坐立不安　不要慌张加快脚步<br>以二人各自的速度<br>将描绘的明天变得绚烂多彩</p>
-<p>那些重要的回忆<br>系上有你颜色的丝带<br>在心里好好地系紧之后<br>现在（立刻）就十分想见到你（要逐渐加速了）<br>Baby→Lady LOVE</p>
-<p>让我们一起　向前奔去吧<br>憧憬着戏剧般的现实<br>梦想中的故事<br>变得更加坦率（无论在哪里）</p>
-<p>Baby→Lady　心跳加速<br>无法平静　如何是好<br>爱恋心声循环播放　在你的身边不断回响<br>在这份思念的尽头　能够遇见就好了</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《▲MEW▲△MEW△CAKE》歌词翻译</title>
-    <url>/2021/08/13/mew_mew_cake/</url>
-    <content><![CDATA[<p><strong>▲MEW▲△MEW△CAKE</strong> - OVA《猫娘乐园》片尾曲</p>
-<p>作词：KOTOKO；作曲：sky delta</p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>甘い香り包まれて<br>朝の光　跳ねた<br>生クリームほっぺにつけて<br>さあ　今日も始めよう</p>
-<p>上手に出来たら褒めてね<br>いつだって君の笑顔で　RANK UP<br>ふわふわマシュマロみたいな<br>気持ちは　触れたらとろけそう</p>
-<p>一歩ずつ近づく<br>夢のSugar land<br>早く君に見せたくて<br>&lt;mew mew work&gt;</p>
-<p>左耳で　ツンとして<br>右耳で　甘えて<br>どんな時もここにいるよ！　としっぽ立てた<br>熱すぎるのは苦手でーす　猫舌は許して<br>君が冷ます　紅茶の湯気の中<br>今日が始まる</p>
-<p>しょんぼり　ぺしゃんこな夜も<br>ハチミツ　みたいな言葉で　JUMP UP<br>シナモンスティックで　そっとかき混ぜ<br>スパイスも下さい</p>
-<p>バニラビーンズ散りばめ<br>香るNeverland<br>今夜は君と夢の中<br>&lt;mew mew dance&gt;</p>
-<p>左耳で　キャッチして<br>右耳で　答えて<br>本当はもっと知りたいんだよ　としっぽ立てた<br>苦すぎるのは苦手でーす　不器用も許して<br>おヒゲみたいな　ほっぺのチョコ見つけて<br>君が微笑む</p>
-<p>続いてく日々の中<br>“スキダヨ”の四文字が<br>少しずつ育ってく<br>一つずつ乗せてゆく<br>特大のフルーツケーキみたい</p>
-<p>左耳で　ツンとして<br>右耳で　甘えて<br>運命ずっと感じてるよ　としっぽ立てた<br>甘い香り包まれた　ここはきっとパラダイス<br>イチゴを一個ほおばって<br>&lt;kiss kiss!&gt;<br>君に口づけ<br>&lt;topping!&gt;<br>届くかな？　この想い<br>&lt;loving!&gt;<br>真っ白なケーキみたいな<br>今日が始まる</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>被甜甜的香气包围<br>早晨的阳光　跳跃着<br>生奶油抹到了脸上<br>来吧　今天也开始吧</p>
-<p>如果做得好的话要夸夸我哟<br>无论何时你的笑容都能让我不断提升<br>心情就如同松松软软的棉花糖<br>一旦触碰到就像要融化一般</p>
-<p>一步一步地接近<br>那梦中的甜蜜之城<br>想要早点让你看到<br>&lt;mew mew work&gt;</p>
-<p>左耳　不理不睬<br>右耳　却在撒娇<br>什么时候我都在这里哦！　想着竖起了尾巴<br>太烫的食物应付不来　原谅我的猫舌头<br>在你降下温来的　红茶的热气之中<br>今天就这样开始了</p>
-<p>在无精打采　垂头丧气的夜晚<br>也要用蜂蜜般　甜美的话语　打起精神<br>用肉桂棒　轻轻地搅拌混合<br>再加一点香料吧</p>
-<p>香草豆荚点缀着的<br>那芬芳的梦幻之岛<br>今夜与你在梦中相会<br>&lt;mew mew dance&gt;</p>
-<p>左耳　仔细聆听<br>右耳　作出回答<br>其实还想更多地了解你　想着竖起了尾巴<br>太苦的东西应付不来　原谅我的笨手笨脚<br>发现我脸颊上留下的　像胡子一样的巧克力<br>你露出了微笑</p>
-<p>在不断向前的日子里<br>“喜欢你哟”这四个字<br>逐渐在心里产生<br>一个一个承载于此<br>就像巨大的水果蛋糕</p>
-<p>左耳　不理不睬<br>右耳　却在撒娇<br>总能感觉到命运的存在　想着竖起了尾巴<br>被甜甜的香气包围　这里一定就是乐园<br>一口吃下一颗草莓<br>&lt;kiss kiss!&gt;<br>和你深情相吻<br>&lt;topping!&gt;<br>传达到了吗？　这份心意<br>&lt;loving!&gt;<br>就像纯白的蛋糕一般<br>今天就这样开始了</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -1246,6 +1166,86 @@
       </tags>
   </entry>
   <entry>
+    <title>《Baby→Lady LOVE》歌词翻译</title>
+    <url>/2021/08/07/baby_lady_love/</url>
+    <content><![CDATA[<p><strong>Baby→Lady LOVE</strong> - OVA《猫娘乐园》片头曲</p>
+<p>作词：<span lang="ja">うらん</span>；作曲：<span lang="ja">山口朗彦</span></p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>Baby→Lady　駆け出そう<br>ドラマティックに憧れて<br>夢見るストーリー<br>君と一緒なら　カラフルになる</p>
+<p>Let’s Go! Dreaming<br>エール届くといいな<br>Happy Sunshine<br>キラキラ</p>
+<p>お日様みたい　君の笑顔<br>ポカポカするから（って眠たいはNG）<br>いつもそばで　ばっちり決めたいのに<br>わりと失敗しちゃう<br>特別な気持ち<br>甘い甘いコーティングで（君と）<br>ねぇ　伝えたなら　何が待ってる？</p>
+<p>Baby→Lady　駆け出そう<br>ドラマティックに憧れて<br>夢見るストーリー<br>素直になって（踏み出せば）<br>なんか急にドキドキ<br>止まらなくて　どうしよう<br>恋想ループ再生　キミのもとへと響いて行くよ</p>
+<p>Let’s Go! Dreaming<br>エール届いたかな<br>Happy Sunshine<br>キラキラ</p>
+<p>その瞳に映る世界<br>私もいたくて（行ったり来たり）<br>センチメンタル　恋のいたずらから<br>二人守ってほしい<br>トキメキはまるで　ミルフィーユみたい<br>やさしく（わりと）<br>あぁ　重なるから　壊さないで</p>
+<p>Maybe→Baby　ここから<br>ロマンティックに連れ出して<br>知らない私を教えてほしい（だからもっと）<br>近づいてそわそわ　慌てないで急ごうよ<br>二つのスピードで<br>描く明日が煌めきになる</p>
+<p>大切な思い出たち<br>君色リボンかけて<br>心でギュってしたら<br>今（すぐ）会いたくなるよ（加速してゆくの）<br>Baby→Lady LOVE</p>
+<p>一緒に　駆け出そう<br>ドラマティックに憧れて<br>夢見るストーリー<br>素直になって（どこまでも）</p>
+<p>Baby→Lady　ドキドキ<br>止まらなくて　どうしよう<br>恋想ループ再生　キミのもとへと響いて行くよ<br>想いの先で　会えるといいな</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>Baby→Lady　向前奔去吧<br>憧憬着戏剧般的现实<br>梦想中的故事<br>只要和你在一起　就会变得五彩缤纷</p>
+<p>让我们走吧！　梦想着<br>应援能传达到就好了<br>欢乐　阳光<br>闪闪发亮</p>
+<p>像太阳一般的　你的笑容<br>让人感到十分温暖（想要睡觉可不行）<br>一直想要下定决心　永远待在你的身边<br>却总是以失败告终<br>把特别的心情<br>裹上甜甜的糖衣（送给你）<br>呐　传达到了的话　还在等待什么呢？</p>
+<p>Baby→Lady　向前奔去吧<br>憧憬着戏剧般的现实<br>梦想中的故事<br>变得更加坦率（只要踏出那一步）<br>为何突然心跳加速<br>无法平静　如何是好<br>爱恋心声循环播放　在你的身边不断回响</p>
+<p>让我们走吧！　梦想着<br>应援有没有传达到呢<br>欢乐　阳光<br>闪闪发亮</p>
+<p>那双眼睛映照着的世界<br>我也想存在其中（四处走走）<br>这份多愁善感　是恋爱的恶作剧<br>想要两个人来守护<br>激动不已的心情　简直就像千层酥<br>如此温柔（出乎意料）<br>啊　交错在一起的话　不要破坏它</p>
+<p>Maybe→Baby　现在开始<br>带着我前往浪漫之地<br>请告诉我我不知道的自己（告诉我更多）<br>不断靠近就会坐立不安　不要慌张加快脚步<br>以二人各自的速度<br>将描绘的明天变得绚烂多彩</p>
+<p>那些重要的回忆<br>系上有你颜色的丝带<br>在心里好好地系紧之后<br>现在（立刻）就十分想见到你（要逐渐加速了）<br>Baby→Lady LOVE</p>
+<p>让我们一起　向前奔去吧<br>憧憬着戏剧般的现实<br>梦想中的故事<br>变得更加坦率（无论在哪里）</p>
+<p>Baby→Lady　心跳加速<br>无法平静　如何是好<br>爱恋心声循环播放　在你的身边不断回响<br>在这份思念的尽头　能够遇见就好了</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《▲MEW▲△MEW△CAKE》歌词翻译</title>
+    <url>/2021/08/13/mew_mew_cake/</url>
+    <content><![CDATA[<p><strong>▲MEW▲△MEW△CAKE</strong> - OVA《猫娘乐园》片尾曲</p>
+<p>作词：KOTOKO；作曲：sky delta</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>甘い香り包まれて<br>朝の光　跳ねた<br>生クリームほっぺにつけて<br>さあ　今日も始めよう</p>
+<p>上手に出来たら褒めてね<br>いつだって君の笑顔で　RANK UP<br>ふわふわマシュマロみたいな<br>気持ちは　触れたらとろけそう</p>
+<p>一歩ずつ近づく<br>夢のSugar land<br>早く君に見せたくて<br>&lt;mew mew work&gt;</p>
+<p>左耳で　ツンとして<br>右耳で　甘えて<br>どんな時もここにいるよ！　としっぽ立てた<br>熱すぎるのは苦手でーす　猫舌は許して<br>君が冷ます　紅茶の湯気の中<br>今日が始まる</p>
+<p>しょんぼり　ぺしゃんこな夜も<br>ハチミツ　みたいな言葉で　JUMP UP<br>シナモンスティックで　そっとかき混ぜ<br>スパイスも下さい</p>
+<p>バニラビーンズ散りばめ<br>香るNeverland<br>今夜は君と夢の中<br>&lt;mew mew dance&gt;</p>
+<p>左耳で　キャッチして<br>右耳で　答えて<br>本当はもっと知りたいんだよ　としっぽ立てた<br>苦すぎるのは苦手でーす　不器用も許して<br>おヒゲみたいな　ほっぺのチョコ見つけて<br>君が微笑む</p>
+<p>続いてく日々の中<br>“スキダヨ”の四文字が<br>少しずつ育ってく<br>一つずつ乗せてゆく<br>特大のフルーツケーキみたい</p>
+<p>左耳で　ツンとして<br>右耳で　甘えて<br>運命ずっと感じてるよ　としっぽ立てた<br>甘い香り包まれた　ここはきっとパラダイス<br>イチゴを一個ほおばって<br>&lt;kiss kiss!&gt;<br>君に口づけ<br>&lt;topping!&gt;<br>届くかな？　この想い<br>&lt;loving!&gt;<br>真っ白なケーキみたいな<br>今日が始まる</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>被甜甜的香气包围<br>早晨的阳光　跳跃着<br>生奶油抹到了脸上<br>来吧　今天也开始吧</p>
+<p>如果做得好的话要夸夸我哟<br>无论何时你的笑容都能让我不断提升<br>心情就如同松松软软的棉花糖<br>一旦触碰到就像要融化一般</p>
+<p>一步一步地接近<br>那梦中的甜蜜之城<br>想要早点让你看到<br>&lt;mew mew work&gt;</p>
+<p>左耳　不理不睬<br>右耳　却在撒娇<br>什么时候我都在这里哦！　想着竖起了尾巴<br>太烫的食物应付不来　原谅我的猫舌头<br>在你降下温来的　红茶的热气之中<br>今天就这样开始了</p>
+<p>在无精打采　垂头丧气的夜晚<br>也要用蜂蜜般　甜美的话语　打起精神<br>用肉桂棒　轻轻地搅拌混合<br>再加一点香料吧</p>
+<p>香草豆荚点缀着的<br>那芬芳的梦幻之岛<br>今夜与你在梦中相会<br>&lt;mew mew dance&gt;</p>
+<p>左耳　仔细聆听<br>右耳　作出回答<br>其实还想更多地了解你　想着竖起了尾巴<br>太苦的东西应付不来　原谅我的笨手笨脚<br>发现我脸颊上留下的　像胡子一样的巧克力<br>你露出了微笑</p>
+<p>在不断向前的日子里<br>“喜欢你哟”这四个字<br>逐渐在心里产生<br>一个一个承载于此<br>就像巨大的水果蛋糕</p>
+<p>左耳　不理不睬<br>右耳　却在撒娇<br>总能感觉到命运的存在　想着竖起了尾巴<br>被甜甜的香气包围　这里一定就是乐园<br>一口吃下一颗草莓<br>&lt;kiss kiss!&gt;<br>和你深情相吻<br>&lt;topping!&gt;<br>传达到了吗？　这份心意<br>&lt;loving!&gt;<br>就像纯白的蛋糕一般<br>今天就这样开始了</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《Pale Blue》歌词翻译</title>
     <url>/2021/09/01/pale_blue/</url>
     <content><![CDATA[<p><strong>Pale Blue</strong> - 动画《烧窑的话也要马克杯》片尾曲</p>
@@ -1285,43 +1285,6 @@
       </tags>
   </entry>
   <entry>
-    <title>《NEGAIGOTO》歌词翻译</title>
-    <url>/2021/09/21/negaigoto/</url>
-    <content><![CDATA[<p><strong>NEGAIGOTO</strong> - 游戏《NEKOPARA Vol.4》片尾曲</p>
-<p>作词：PHA；作曲：PHA</p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>星空のキャンドルに　そっと願いをこめて<br>「いつかその想いが　叶いますように」</p>
-<p>街中どこかでそわそわして<br>カラフルにいま気持ち変わる<br>こころもやもやしたら一緒に<br>REDECORATEしよう</p>
-<p>ふわふわりしあわせな<br>胸が弾むようなspecial day<br>魔法みたいなスノーホワイトに<br>想い散りばめてみたら…</p>
-<p>星空のキャンドルに　願いごとがキラキラ<br>いつも君のそばで　ワクワクしたい<br>甘いホイップみたいな　ドキドキ頬張って<br>何色の夢だって　叶えていこうね　一緒にね</p>
-<p>ハート飛び交う素敵な日は<br>自然と笑顔もイルミネイト<br>君が嬉しそうだから嬉しい<br>伝わってたらいいな</p>
-<p>ほわほわにあったかい<br>ブランケットみたいなtonight<br>魔法以上の君の優しさに<br>ずっと寄り添っていたい</p>
-<p>星空のキャンドルが　世界中キャラメリゼ<br>答えに迷ったときは　見上げてみて<br>遠くで鐘の音が　歌い始める頃には<br>トキメキと夢の中　手をつないでいたい<br>白い羽根に触れたら　手のひらですぐ解けた<br>どんな一瞬も　ギュッて大事にしよう</p>
-<p>魔法みたいなスノーホワイトに<br>大好きが積もってる<br>星空のキャンドルに　そっと願いをこめて<br>「いつもすぐ隣で　思いあえたら…」<br>もっと甘いホイップみたいな　ドキドキ頬張って<br>何色の夢だって　叶えていこうね　一緒にね<br>一緒にね</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>若烛光点点的星空下　悄悄地许下愿望<br>「总有一天那个念想　会实现的吧」</p>
-<p>在街上某处坐立不安<br>现在心情变得多彩缤纷<br>心里感到痒痒的的话就一起<br>重新装点起来吧</p>
-<p>飘上空中幸福欢乐<br>激动人心的特殊之日<br>就像魔法般的雪白<br>如果将思绪镶嵌其中的话…</p>
-<p>若烛光点点的星空下　心中的愿望闪闪发光<br>无论何时在你的身边　我都感到兴奋不已<br>如同甜蜜的奶油一样　心灵震颤一口塞满<br>不论什么颜色的梦想　都一起去实现吧</p>
-<p>心灵飞翔的美好日子<br>自然笑容就会闪耀<br>你感到开心我也快乐<br>转达到的话就好了啊</p>
-<p>舒服自在平和温暖<br>就像毛毯一样的今晚<br>你那超越魔法的温柔<br>让我想一直靠近你</p>
-<p>若烛光点点的星空下　世界淋上焦糖<br>在答案中迷茫的时候　试着向上看看<br>远处传来钟声　歌唱开始之时<br>期待不已的梦境之中　想要牵紧你的手<br>一旦触碰那白色的羽毛　它就会在手心融化<br>不管什么瞬间　都要认认真真对待</p>
-<p>在像魔法般的雪白中<br>我的爱积蓄起来<br>若烛光点点的星空下　悄悄地许下愿望<br>「能够一直在身边的想法成真的话…」<br>如同更加甜蜜的奶油一样　心灵震颤一口塞满<br>不论什么颜色的梦想　都一起去实现吧<br>去实现吧</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《パトリシア（Patricia）》歌词翻译</title>
     <url>/2021/11/04/patrica/</url>
     <content><![CDATA[<p><strong><span lang="ja">パトリシア</span>（Patricia）</strong> - 动画《花开伊吕波》印象曲</p>
@@ -1355,6 +1318,43 @@
 <p>为了与你相遇　因此而生<br>为了守护着你　献出此身<br>虽然这些话还说不出口　尽管如此</p>
 <p>想念你的时候　触碰到那双手的时候<br>会记起我也有正在寻找之物<br>逐渐明白“我爱你”这句话的含义</p>
 <p>逐渐明白“我爱你”这句话的含义</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《NEGAIGOTO》歌词翻译</title>
+    <url>/2021/09/21/negaigoto/</url>
+    <content><![CDATA[<p><strong>NEGAIGOTO</strong> - 游戏《NEKOPARA Vol.4》片尾曲</p>
+<p>作词：PHA；作曲：PHA</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>星空のキャンドルに　そっと願いをこめて<br>「いつかその想いが　叶いますように」</p>
+<p>街中どこかでそわそわして<br>カラフルにいま気持ち変わる<br>こころもやもやしたら一緒に<br>REDECORATEしよう</p>
+<p>ふわふわりしあわせな<br>胸が弾むようなspecial day<br>魔法みたいなスノーホワイトに<br>想い散りばめてみたら…</p>
+<p>星空のキャンドルに　願いごとがキラキラ<br>いつも君のそばで　ワクワクしたい<br>甘いホイップみたいな　ドキドキ頬張って<br>何色の夢だって　叶えていこうね　一緒にね</p>
+<p>ハート飛び交う素敵な日は<br>自然と笑顔もイルミネイト<br>君が嬉しそうだから嬉しい<br>伝わってたらいいな</p>
+<p>ほわほわにあったかい<br>ブランケットみたいなtonight<br>魔法以上の君の優しさに<br>ずっと寄り添っていたい</p>
+<p>星空のキャンドルが　世界中キャラメリゼ<br>答えに迷ったときは　見上げてみて<br>遠くで鐘の音が　歌い始める頃には<br>トキメキと夢の中　手をつないでいたい<br>白い羽根に触れたら　手のひらですぐ解けた<br>どんな一瞬も　ギュッて大事にしよう</p>
+<p>魔法みたいなスノーホワイトに<br>大好きが積もってる<br>星空のキャンドルに　そっと願いをこめて<br>「いつもすぐ隣で　思いあえたら…」<br>もっと甘いホイップみたいな　ドキドキ頬張って<br>何色の夢だって　叶えていこうね　一緒にね<br>一緒にね</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>若烛光点点的星空下　悄悄地许下愿望<br>「总有一天那个念想　会实现的吧」</p>
+<p>在街上某处坐立不安<br>现在心情变得多彩缤纷<br>心里感到痒痒的的话就一起<br>重新装点起来吧</p>
+<p>飘上空中幸福欢乐<br>激动人心的特殊之日<br>就像魔法般的雪白<br>如果将思绪镶嵌其中的话…</p>
+<p>若烛光点点的星空下　心中的愿望闪闪发光<br>无论何时在你的身边　我都感到兴奋不已<br>如同甜蜜的奶油一样　心灵震颤一口塞满<br>不论什么颜色的梦想　都一起去实现吧</p>
+<p>心灵飞翔的美好日子<br>自然笑容就会闪耀<br>你感到开心我也快乐<br>转达到的话就好了啊</p>
+<p>舒服自在平和温暖<br>就像毛毯一样的今晚<br>你那超越魔法的温柔<br>让我想一直靠近你</p>
+<p>若烛光点点的星空下　世界淋上焦糖<br>在答案中迷茫的时候　试着向上看看<br>远处传来钟声　歌唱开始之时<br>期待不已的梦境之中　想要牵紧你的手<br>一旦触碰那白色的羽毛　它就会在手心融化<br>不管什么瞬间　都要认认真真对待</p>
+<p>在像魔法般的雪白中<br>我的爱积蓄起来<br>若烛光点点的星空下　悄悄地许下愿望<br>「能够一直在身边的想法成真的话…」<br>如同更加甜蜜的奶油一样　心灵震颤一口塞满<br>不论什么颜色的梦想　都一起去实现吧<br>去实现吧</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -1520,29 +1520,6 @@
       </tags>
   </entry>
   <entry>
-    <title>《でっかいものの歌（很大的东西的歌）》歌词翻译</title>
-    <url>/2021/12/25/dekkai_mono_no_uta/</url>
-    <content><![CDATA[<p><strong><span lang="ja">でっかいものの歌</span>（很大的东西的歌）</strong> - 动画《草莓棉花糖》插曲</p>
-<p>作词：<span lang="ja">平見瞠</span>；作曲：<span lang="ja">川澄綾子</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>でっかいおとこがやってくる<br>のをこえやまこえうみこえて<br>でっかいおんなもやってくる<br>びるこえはしこえあまぎごえ</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>很大的男人走了过来<br>越过田野越过高山越过了大海<br>很大的女人也走了过来<br>越过大楼越过小桥越过天城山</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《あっかん berry berry（Akkan berry berry）》歌词翻译</title>
     <url>/2022/01/11/akkan_berry_berry/</url>
     <content><![CDATA[<p><strong><span lang="ja">あっかん berry berry</span>（Akkan berry berry）</strong> - 动画《草莓棉花糖OVA》片头曲</p>
@@ -1578,6 +1555,31 @@
 <p>不要弄坏　不要弄坏　一直在这个地方<br>想要在这里　一直嬉戏<br>Thank you　Thank you　<ruby>berry<rt>very</rt></ruby>　much</p>
 <p>不要落下　不要落下　用双手捧起来<br>用大大的爱　包裹起来<br>Thank you　Thank you　<ruby>berry<rt>very</rt></ruby>　much<br>圆圆的　酸酸的　轻飘飘　迷糊糊　女孩子们<br>勾指约定了的话　就不会离开了哦</p>
 <p>小草莓　berry　berry<br>哭起来　眼泪　汪汪<br>那样可　不行　不行<br>做鬼脸　berry　berry!</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《夕待ちの風（等待黄昏的风）》歌词翻译</title>
+    <url>/2022/01/18/yuu_machi_no_kaze/</url>
+    <content><![CDATA[<p><strong><span lang="ja">夕待ちの風</span>（等待黄昏的风）</strong> - 动画《草莓棉花糖OVA》片尾曲</p>
+<p>作词：<span lang="ja">くまのきよみ</span>；作曲：<span lang="ja">渡辺剛</span></p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>なにも聞こえない<br>空の色は茜<br>記憶はいつも<br>やさしい手触り<br>そっと微笑みをくれる</p>
+<p>紙飛行機<br>さっき飛ばしたでしょう?<br>はかなすぎる<br>放物線　ふりるら<br>いつの間にか大人になってたけど<br>待ちぼうけた雨上がり<br>驚くほどやさしい匂いがしてた</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>什么也听不见<br>天空是一片茜色<br>记忆一直是<br>一种温柔的触感<br>微微朝我笑着</p>
+<p>纸飞机<br>刚刚已经放飞了吧？<br>那过于渺茫的<br>抛物线　飘忽不定<br>不知何时已经长大成人<br>久久等待的雨后初晴<br>散发出令人惊奇的温柔气息</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -1623,25 +1625,23 @@
       </tags>
   </entry>
   <entry>
-    <title>《夕待ちの風（等待黄昏的风）》歌词翻译</title>
-    <url>/2022/01/18/yuu_machi_no_kaze/</url>
-    <content><![CDATA[<p><strong><span lang="ja">夕待ちの風</span>（等待黄昏的风）</strong> - 动画《草莓棉花糖OVA》片尾曲</p>
-<p>作词：<span lang="ja">くまのきよみ</span>；作曲：<span lang="ja">渡辺剛</span></p>
+    <title>《でっかいものの歌（很大的东西的歌）》歌词翻译</title>
+    <url>/2021/12/25/dekkai_mono_no_uta/</url>
+    <content><![CDATA[<p><strong><span lang="ja">でっかいものの歌</span>（很大的东西的歌）</strong> - 动画《草莓棉花糖》插曲</p>
+<p>作词：<span lang="ja">平見瞠</span>；作曲：<span lang="ja">川澄綾子</span></p>
 <hr>
 <p><strong>歌词</strong></p>
 <p><em>注：歌词著作权归原作者所有。</em></p>
 <div lang="ja" style="white-space: pre;">
 
-<p>なにも聞こえない<br>空の色は茜<br>記憶はいつも<br>やさしい手触り<br>そっと微笑みをくれる</p>
-<p>紙飛行機<br>さっき飛ばしたでしょう?<br>はかなすぎる<br>放物線　ふりるら<br>いつの間にか大人になってたけど<br>待ちぼうけた雨上がり<br>驚くほどやさしい匂いがしてた</p>
+<p>でっかいおとこがやってくる<br>のをこえやまこえうみこえて<br>でっかいおんなもやってくる<br>びるこえはしこえあまぎごえ</p>
 </div>
 
 <hr>
 <p><strong>翻译</strong></p>
 <div style="white-space: pre;">
 
-<p>什么也听不见<br>天空是一片茜色<br>记忆一直是<br>一种温柔的触感<br>微微朝我笑着</p>
-<p>纸飞机<br>刚刚已经放飞了吧？<br>那过于渺茫的<br>抛物线　飘忽不定<br>不知何时已经长大成人<br>久久等待的雨后初晴<br>散发出令人惊奇的温柔气息</p>
+<p>很大的男人走了过来<br>越过田野越过高山越过了大海<br>很大的女人也走了过来<br>越过大楼越过小桥越过天城山</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -1684,6 +1684,118 @@
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SVG Learning - 1</title>
+    <url>/2022/04/22/svg_learning/</url>
+    <content><![CDATA[<p>SVG 学习第一部分，包括基本结构、<code>&lt;line&gt;</code>、<code>&lt;rect&gt;</code>、<code>&lt;circle&gt;</code>和<code>&lt;ellipse&gt;</code>图形元素。简单罗列，英文为主。</p>
+<blockquote>
+<p>References</p>
+<ul>
+<li><a class="link"   href="https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html" >An SVG Primer for Today’s Browsers <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><ul>
+<li><a class="link"   href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright" >Copyright <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> © 2010 <a class="link"   href="http://www.w3.org/" >W3C <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>® (<a class="link"   href="http://www.csail.mit.edu/" >MIT <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>, <a class="link"   href="http://www.ercim.org/" >ERCIM <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>, <a class="link"   href="http://www.keio.ac.jp/" >Keio <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>), All Rights Reserved.</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 id="Basic-structure"><a href="#Basic-structure" class="headerlink" title="Basic structure"></a>Basic structure</h2><div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/2000/svg&quot;</span>&gt;</span></span><br><span class="line">    ……</span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/2000/svg&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">circle</span>  <span class="attr">cx</span>=<span class="string">&quot;50&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;50&quot;</span> <span class="attr">r</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;wheat&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<svg xmlns="http://www.w3.org/2000/svg" width=100 height=100>
+    <circle  cx="50" cy="50" r="50" fill="wheat"/>
+</svg>
+
+<h2 id="SVG-graphics-elements"><a href="#SVG-graphics-elements" class="headerlink" title="SVG graphics elements"></a>SVG graphics elements</h2><ul>
+<li><code>&lt;path&gt;</code></li>
+<li><code>&lt;line&gt;</code></li>
+<li><code>&lt;rect&gt;</code></li>
+<li><code>&lt;circle&gt;</code></li>
+<li><code>&lt;line&gt;</code></li>
+<li><code>&lt;polyline&gt;</code></li>
+<li><code>&lt;polygon&gt;</code></li>
+<li><code>&lt;image&gt;</code></li>
+<li><code>&lt;use&gt;</code></li>
+</ul>
+<h3 id=""><a href="#" class="headerlink" title="&lt;line&gt;"></a><code>&lt;line&gt;</code></h3><ul>
+<li><code>x1</code>, <code>y1</code> → <code>x2</code>, <code>y2</code><ul>
+<li><code>x1</code>, <code>y1</code>: Start position</li>
+<li><code>x2</code>, <code>y2</code>: End position</li>
+</ul>
+</li>
+</ul>
+<h4 id="stroke-stroke-width"><a href="#stroke-stroke-width" class="headerlink" title="stroke &amp; stroke-width"></a><code>stroke</code> &amp; <code>stroke-width</code></h4><p>The effect of varying stroke widths</p>
+<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;5&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;10&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;99&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;30&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;.5&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;red&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;5&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;30&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;99&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;50&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;1&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;red&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;5&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;50&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;99&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;70&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2.5&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;red&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;5&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;70&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;99&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;90&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;4&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;blue&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<svg xmlns="http://www.w3.org/2000/svg" width=100 height=100>
+    <line x1="5" y1="10" x2="99" y2="30" stroke-width=".5" stroke="red"/>
+    <line x1="5" y1="30" x2="99" y2="50" stroke-width="1" stroke="red"/>
+    <line x1="5" y1="50" x2="99" y2="70" stroke-width="2.5" stroke="red"/>
+    <line x1="5" y1="70" x2="99" y2="90" stroke-width="4" stroke="blue"/>
+</svg>
+
+<h4 id="stroke-dasharray-stroke-lineup"><a href="#stroke-dasharray-stroke-lineup" class="headerlink" title="stroke-dasharray &amp; stroke-lineup"></a><code>stroke-dasharray</code> &amp; <code>stroke-lineup</code></h4><p>The effect of other attributes on line elements</p>
+<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;15&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;15&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;140&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;135&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;blue&quot;</span> <span class="attr">stroke-linecap</span>=<span class="string">&quot;round&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;15&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;15&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;140&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;135&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;aqua&quot;</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;8,3,2,18&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;15&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;155&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;160&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;60&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;blue&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;15&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;155&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;160&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;60&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;orange&quot;</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;8,3,2&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<svg xmlns="http://www.w3.org/2000/svg" width=200 height=200>
+    <line x1="15" y1="15" x2="140" y2="135" stroke-width="25" stroke="blue" stroke-linecap="round"/>
+    <line x1="15" y1="15" x2="140" y2="135" stroke-width="25" stroke="aqua" stroke-dasharray="8,3,2,18"/>
+    <line x1="15" y1="155" x2="160" y2="60" stroke-width="25" stroke="blue"/>
+    <line x1="15" y1="155" x2="160" y2="60" stroke-width="25" stroke="orange" stroke-dasharray="8,3,2"/>
+</svg>
+
+<h3 id="-1"><a href="#-1" class="headerlink" title="&lt;rect&gt;"></a><code>&lt;rect&gt;</code></h3><ul>
+<li><code>x</code>, <code>y</code>: Top-left corner position</li>
+<li><code>height</code>, <code>width</code></li>
+</ul>
+<p>A variety of rectangles</p>
+<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;62&quot;</span> <span class="attr">y</span>=<span class="string">&quot;25&quot;</span> <span class="attr">height</span>=<span class="string">&quot;110&quot;</span> <span class="attr">width</span>=<span class="string">&quot;16&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;rgb(100%,50%,50%)&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;35&quot;</span> <span class="attr">y</span>=<span class="string">&quot;35&quot;</span> <span class="attr">height</span>=<span class="string">&quot;30&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;red&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;5&quot;</span> <span class="attr">y</span>=<span class="string">&quot;60&quot;</span> <span class="attr">height</span>=<span class="string">&quot;30&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#f88&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;25&quot;</span> <span class="attr">y</span>=<span class="string">&quot;70&quot;</span> <span class="attr">height</span>=<span class="string">&quot;30&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#ff8888&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;65&quot;</span> <span class="attr">y</span>=<span class="string">&quot;60&quot;</span> <span class="attr">height</span>=<span class="string">&quot;30&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#eac&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;85&quot;</span> <span class="attr">y</span>=<span class="string">&quot;70&quot;</span> <span class="attr">height</span>=<span class="string">&quot;30&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#eeaacc&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;60&quot;</span> <span class="attr">y</span>=<span class="string">&quot;95&quot;</span> <span class="attr">height</span>=<span class="string">&quot;30&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;rgb(255,0,0)&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<svg xmlns="http://www.w3.org/2000/svg" width=150 height=150>
+    <rect x="62" y="25" height="110" width="16" fill="rgb(100%,50%,50%)" stroke="black" stroke-width="2"/>
+    <rect x="35" y="35" height="30" width="50" fill="red" stroke="black" stroke-width="2"/>
+    <rect x="5" y="60" height="30" width="50" fill="#f88" stroke="black" stroke-width="2"/>
+    <rect x="25" y="70" height="30" width="50" fill="#ff8888" stroke="black" stroke-width="2"/>
+    <rect x="65" y="60" height="30" width="50" fill="#eac" stroke="black" stroke-width="2"/>
+    <rect x="85" y="70" height="30" width="50" fill="#eeaacc" stroke="black" stroke-width="2"/>
+    <rect x="60" y="95" height="30" width="50" fill="rgb(255,0,0)" stroke="black" stroke-width="2"/>
+</svg>
+
+<h3 id="-2"><a href="#-2" class="headerlink" title="&lt;circle&gt;"></a><code>&lt;circle&gt;</code></h3><ul>
+<li><code>cx</code>, <code>cy</code>: Centre position</li>
+<li><code>r</code>: Radius</li>
+</ul>
+<p>Circles with varying fill, stroke, stroke-width and stroke-dasharray</p>
+<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;50&quot;</span> <span class="attr">r</span>=<span class="string">&quot;40&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;110&quot;</span> <span class="attr">r</span>=<span class="string">&quot;40&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;red&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;170&quot;</span> <span class="attr">r</span>=<span class="string">&quot;40&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;yellow&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;blue&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;160&quot;</span> <span class="attr">r</span>=<span class="string">&quot;20&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;red&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;10&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;140&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;110&quot;</span> <span class="attr">r</span>=<span class="string">&quot;60&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;#579&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;30&quot;</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;3,5,8,13&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<svg xmlns="http://www.w3.org/2000/svg" width=250 height=250>
+    <circle cx="80" cy="50" r="40"/>
+    <circle cx="80" cy="110" r="40" fill="red"/>
+    <circle cx="80" cy="170" r="40" fill="yellow" stroke="blue" />
+    <circle cx="80" cy="160" r="20" fill="red" stroke="black" stroke-width="10"/>
+    <circle cx="140" cy="110" r="60" fill="none" stroke="#579" stroke-width="30" stroke-dasharray="3,5,8,13">
+</svg>
+
+<h3 id="-3"><a href="#-3" class="headerlink" title="&lt;ellipse&gt;"></a><code>&lt;ellipse&gt;</code></h3><ul>
+<li><code>cx</code>, <code>cy</code>: Centre position</li>
+<li><code>rx</code>: Half of the distance from the leftmost side to centre</li>
+<li><code>ry</code>: Half of the distance from top to centre</li>
+</ul>
+<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;110&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;75&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;105&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#538&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;110&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;60&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;40&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;red&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;110&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;35&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;20&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#538&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;yellow&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;50&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;40&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;30&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;red&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;50&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;30&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;20&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;orange&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;red&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;10&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;170&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;40&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;30&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;yellow&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;orange&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;170&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;30&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;20&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;red&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;10&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<svg xmlns="http://www.w3.org/2000/svg" width=200 height=250>
+    <ellipse cx="80" cy="110" rx="75" ry="105" fill="#538"/>
+    <ellipse cx="80" cy="110" rx="60" ry="40" fill="black" stroke="red" stroke-width="25"/>
+    <ellipse cx="80" cy="110" rx="35" ry="20" fill="#538" stroke="yellow" stroke-width="25"/>
+    <ellipse cx="80" cy="50" rx="40" ry="30" fill="red" stroke="black" stroke-width="25"/>
+    <ellipse cx="80" cy="50" rx="30" ry="20" fill="orange" stroke="red" stroke-width="10"/>
+    <ellipse cx="80" cy="170" rx="40" ry="30" fill="yellow" stroke="orange" stroke-width="25" />
+    <ellipse cx="80" cy="170" rx="30" ry="20" fill="red" stroke="black" stroke-width="10"/>
+</svg>
+]]></content>
+      <tags>
+        <tag>学习</tag>
       </tags>
   </entry>
   <entry>
@@ -1840,118 +1952,6 @@
                      data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m38b4a957.png"
                       alt="Four elliptical arcs sharing endpoints" title="Four elliptical arcs sharing endpoints"
                 ></p>
-]]></content>
-      <tags>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SVG Learning - 1</title>
-    <url>/2022/04/22/svg_learning/</url>
-    <content><![CDATA[<p>SVG 学习第一部分，包括基本结构、<code>&lt;line&gt;</code>、<code>&lt;rect&gt;</code>、<code>&lt;circle&gt;</code>和<code>&lt;ellipse&gt;</code>图形元素。简单罗列，英文为主。</p>
-<blockquote>
-<p>References</p>
-<ul>
-<li><a class="link"   href="https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html" >An SVG Primer for Today’s Browsers <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a><ul>
-<li><a class="link"   href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright" >Copyright <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> © 2010 <a class="link"   href="http://www.w3.org/" >W3C <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>® (<a class="link"   href="http://www.csail.mit.edu/" >MIT <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>, <a class="link"   href="http://www.ercim.org/" >ERCIM <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>, <a class="link"   href="http://www.keio.ac.jp/" >Keio <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>), All Rights Reserved.</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<h2 id="Basic-structure"><a href="#Basic-structure" class="headerlink" title="Basic structure"></a>Basic structure</h2><div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/2000/svg&quot;</span>&gt;</span></span><br><span class="line">    ……</span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/2000/svg&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">circle</span>  <span class="attr">cx</span>=<span class="string">&quot;50&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;50&quot;</span> <span class="attr">r</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;wheat&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<svg xmlns="http://www.w3.org/2000/svg" width=100 height=100>
-    <circle  cx="50" cy="50" r="50" fill="wheat"/>
-</svg>
-
-<h2 id="SVG-graphics-elements"><a href="#SVG-graphics-elements" class="headerlink" title="SVG graphics elements"></a>SVG graphics elements</h2><ul>
-<li><code>&lt;path&gt;</code></li>
-<li><code>&lt;line&gt;</code></li>
-<li><code>&lt;rect&gt;</code></li>
-<li><code>&lt;circle&gt;</code></li>
-<li><code>&lt;line&gt;</code></li>
-<li><code>&lt;polyline&gt;</code></li>
-<li><code>&lt;polygon&gt;</code></li>
-<li><code>&lt;image&gt;</code></li>
-<li><code>&lt;use&gt;</code></li>
-</ul>
-<h3 id=""><a href="#" class="headerlink" title="&lt;line&gt;"></a><code>&lt;line&gt;</code></h3><ul>
-<li><code>x1</code>, <code>y1</code> → <code>x2</code>, <code>y2</code><ul>
-<li><code>x1</code>, <code>y1</code>: Start position</li>
-<li><code>x2</code>, <code>y2</code>: End position</li>
-</ul>
-</li>
-</ul>
-<h4 id="stroke-stroke-width"><a href="#stroke-stroke-width" class="headerlink" title="stroke &amp; stroke-width"></a><code>stroke</code> &amp; <code>stroke-width</code></h4><p>The effect of varying stroke widths</p>
-<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;5&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;10&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;99&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;30&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;.5&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;red&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;5&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;30&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;99&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;50&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;1&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;red&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;5&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;50&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;99&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;70&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2.5&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;red&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;5&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;70&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;99&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;90&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;4&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;blue&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<svg xmlns="http://www.w3.org/2000/svg" width=100 height=100>
-    <line x1="5" y1="10" x2="99" y2="30" stroke-width=".5" stroke="red"/>
-    <line x1="5" y1="30" x2="99" y2="50" stroke-width="1" stroke="red"/>
-    <line x1="5" y1="50" x2="99" y2="70" stroke-width="2.5" stroke="red"/>
-    <line x1="5" y1="70" x2="99" y2="90" stroke-width="4" stroke="blue"/>
-</svg>
-
-<h4 id="stroke-dasharray-stroke-lineup"><a href="#stroke-dasharray-stroke-lineup" class="headerlink" title="stroke-dasharray &amp; stroke-lineup"></a><code>stroke-dasharray</code> &amp; <code>stroke-lineup</code></h4><p>The effect of other attributes on line elements</p>
-<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;15&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;15&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;140&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;135&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;blue&quot;</span> <span class="attr">stroke-linecap</span>=<span class="string">&quot;round&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;15&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;15&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;140&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;135&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;aqua&quot;</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;8,3,2,18&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;15&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;155&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;160&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;60&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;blue&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;15&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;155&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;160&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;60&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;orange&quot;</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;8,3,2&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<svg xmlns="http://www.w3.org/2000/svg" width=200 height=200>
-    <line x1="15" y1="15" x2="140" y2="135" stroke-width="25" stroke="blue" stroke-linecap="round"/>
-    <line x1="15" y1="15" x2="140" y2="135" stroke-width="25" stroke="aqua" stroke-dasharray="8,3,2,18"/>
-    <line x1="15" y1="155" x2="160" y2="60" stroke-width="25" stroke="blue"/>
-    <line x1="15" y1="155" x2="160" y2="60" stroke-width="25" stroke="orange" stroke-dasharray="8,3,2"/>
-</svg>
-
-<h3 id="-1"><a href="#-1" class="headerlink" title="&lt;rect&gt;"></a><code>&lt;rect&gt;</code></h3><ul>
-<li><code>x</code>, <code>y</code>: Top-left corner position</li>
-<li><code>height</code>, <code>width</code></li>
-</ul>
-<p>A variety of rectangles</p>
-<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;62&quot;</span> <span class="attr">y</span>=<span class="string">&quot;25&quot;</span> <span class="attr">height</span>=<span class="string">&quot;110&quot;</span> <span class="attr">width</span>=<span class="string">&quot;16&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;rgb(100%,50%,50%)&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;35&quot;</span> <span class="attr">y</span>=<span class="string">&quot;35&quot;</span> <span class="attr">height</span>=<span class="string">&quot;30&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;red&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;5&quot;</span> <span class="attr">y</span>=<span class="string">&quot;60&quot;</span> <span class="attr">height</span>=<span class="string">&quot;30&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#f88&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;25&quot;</span> <span class="attr">y</span>=<span class="string">&quot;70&quot;</span> <span class="attr">height</span>=<span class="string">&quot;30&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#ff8888&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;65&quot;</span> <span class="attr">y</span>=<span class="string">&quot;60&quot;</span> <span class="attr">height</span>=<span class="string">&quot;30&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#eac&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;85&quot;</span> <span class="attr">y</span>=<span class="string">&quot;70&quot;</span> <span class="attr">height</span>=<span class="string">&quot;30&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#eeaacc&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;60&quot;</span> <span class="attr">y</span>=<span class="string">&quot;95&quot;</span> <span class="attr">height</span>=<span class="string">&quot;30&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;rgb(255,0,0)&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<svg xmlns="http://www.w3.org/2000/svg" width=150 height=150>
-    <rect x="62" y="25" height="110" width="16" fill="rgb(100%,50%,50%)" stroke="black" stroke-width="2"/>
-    <rect x="35" y="35" height="30" width="50" fill="red" stroke="black" stroke-width="2"/>
-    <rect x="5" y="60" height="30" width="50" fill="#f88" stroke="black" stroke-width="2"/>
-    <rect x="25" y="70" height="30" width="50" fill="#ff8888" stroke="black" stroke-width="2"/>
-    <rect x="65" y="60" height="30" width="50" fill="#eac" stroke="black" stroke-width="2"/>
-    <rect x="85" y="70" height="30" width="50" fill="#eeaacc" stroke="black" stroke-width="2"/>
-    <rect x="60" y="95" height="30" width="50" fill="rgb(255,0,0)" stroke="black" stroke-width="2"/>
-</svg>
-
-<h3 id="-2"><a href="#-2" class="headerlink" title="&lt;circle&gt;"></a><code>&lt;circle&gt;</code></h3><ul>
-<li><code>cx</code>, <code>cy</code>: Centre position</li>
-<li><code>r</code>: Radius</li>
-</ul>
-<p>Circles with varying fill, stroke, stroke-width and stroke-dasharray</p>
-<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;50&quot;</span> <span class="attr">r</span>=<span class="string">&quot;40&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;110&quot;</span> <span class="attr">r</span>=<span class="string">&quot;40&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;red&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;170&quot;</span> <span class="attr">r</span>=<span class="string">&quot;40&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;yellow&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;blue&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;160&quot;</span> <span class="attr">r</span>=<span class="string">&quot;20&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;red&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;10&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;140&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;110&quot;</span> <span class="attr">r</span>=<span class="string">&quot;60&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;#579&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;30&quot;</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;3,5,8,13&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<svg xmlns="http://www.w3.org/2000/svg" width=250 height=250>
-    <circle cx="80" cy="50" r="40"/>
-    <circle cx="80" cy="110" r="40" fill="red"/>
-    <circle cx="80" cy="170" r="40" fill="yellow" stroke="blue" />
-    <circle cx="80" cy="160" r="20" fill="red" stroke="black" stroke-width="10"/>
-    <circle cx="140" cy="110" r="60" fill="none" stroke="#579" stroke-width="30" stroke-dasharray="3,5,8,13">
-</svg>
-
-<h3 id="-3"><a href="#-3" class="headerlink" title="&lt;ellipse&gt;"></a><code>&lt;ellipse&gt;</code></h3><ul>
-<li><code>cx</code>, <code>cy</code>: Centre position</li>
-<li><code>rx</code>: Half of the distance from the leftmost side to centre</li>
-<li><code>ry</code>: Half of the distance from top to centre</li>
-</ul>
-<div class="highlight-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;110&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;75&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;105&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#538&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;110&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;60&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;40&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;red&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;110&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;35&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;20&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#538&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;yellow&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;50&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;40&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;30&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;red&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;50&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;30&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;20&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;orange&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;red&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;10&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;170&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;40&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;30&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;yellow&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;orange&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;170&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;30&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;20&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;red&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;10&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<svg xmlns="http://www.w3.org/2000/svg" width=200 height=250>
-    <ellipse cx="80" cy="110" rx="75" ry="105" fill="#538"/>
-    <ellipse cx="80" cy="110" rx="60" ry="40" fill="black" stroke="red" stroke-width="25"/>
-    <ellipse cx="80" cy="110" rx="35" ry="20" fill="#538" stroke="yellow" stroke-width="25"/>
-    <ellipse cx="80" cy="50" rx="40" ry="30" fill="red" stroke="black" stroke-width="25"/>
-    <ellipse cx="80" cy="50" rx="30" ry="20" fill="orange" stroke="red" stroke-width="10"/>
-    <ellipse cx="80" cy="170" rx="40" ry="30" fill="yellow" stroke="orange" stroke-width="25" />
-    <ellipse cx="80" cy="170" rx="30" ry="20" fill="red" stroke="black" stroke-width="10"/>
-</svg>
 ]]></content>
       <tags>
         <tag>学习</tag>
@@ -2213,6 +2213,39 @@
       </tags>
   </entry>
   <entry>
+    <title>《今は このまま…（现在 就这样…）》歌词翻译</title>
+    <url>/2022/09/15/ima_wa_kono_mama/</url>
+    <content><![CDATA[<p><strong><span lang="ja">今は このまま…</span>（现在 就这样…）</strong> - 游戏《现在就想告诉哥哥，我是妹妹！》奈奈濑奉莉角色曲</p>
+<p>作词：lotta；作曲：lotta</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>お気に入りのリップ塗って<br>今日も　笑顔で駆け抜けて行こう！<br>曇り空も　気分次第<br>笑い飛ばせば　元気になるよ<br>どんなに　ささいなことも　君がいるから<br>幸せに　見えてくるんだ</p>
+<p>いつだって　そばにいてくれて　ありがとうね<br>大切だよ　かけがえのない日々<br>友達よりもほんの少し　強い絆　それでいい<br>今は　このまま…<br>そうでしょ　そうだよ　そうだね</p>
+<p>口に出して　言わなくても<br>分かり合えている　ふたりの距離<br>そんな奇跡　いつまででも<br>続きますようにと　願っている<br>どんなに　けんかをしても　次の朝には<br>肩組んで　素直になれる</p>
+<p>いつだって　そばにいれること　うれしいから<br>大事にしたい　かけがえのない君<br>もぅ少し近づきたいなって　思うけれど　やっぱり<br>今は　このまま…<br>そうでしょ　そうだよ　そうだね</p>
+<p>どんなに　落ち込んだ日も　君がいるから<br>前向いて　楽しくなれる</p>
+<p>いつだって　そばにいてくれて　ありがとうね<br>大切だよ　かけがえのない君<br>友達よりもほんの少し　強い絆　それでいい<br>今は　このまま…<br>そうでしょ　そうだよ　そうだね</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>涂上自己喜爱的口红<br>今天也　要笑着跑步前行！<br>阴天也会　随心情而变<br>若能一笑而过　就会变得有精神<br>不管是什么　琐碎的小事　都因为有你在<br>才让我　看到了幸福</p>
+<p>无论何时　你总陪在我的身边　我心怀感谢<br>都是重要　而又无可替代的日子<br>比朋友之间还要稍微　紧密的牵绊　已经足够了<br>现在　就这样…<br>是这样吧　是这样哟　是这样呢</p>
+<p>说出口也好　不说出来也罢<br>我们也都明白　两人间的距离<br>那样的奇迹　直到天荒地老<br>都能延续下去　我许下心愿<br>不管发生了　怎样的争执　第二天早晨也会<br>肩靠着肩　变得坦诚</p>
+<p>无论何时　你总陪在我的身边　我心生喜悦<br>想好好珍惜　不可替代的你<br>真的好想再　靠近你一点　果然<br>现在　就这样…<br>是这样吧　是这样哟　是这样呢</p>
+<p>不论在什么　心情失落的日子　因为有你在<br>面朝前方　我重拾快乐</p>
+<p>无论何时　你总陪在我的身边　我心怀感谢<br>十分重要　又不可替代的你<br>比朋友之间还要稍微　紧密的牵绊　已经足够了<br>现在　就这样…<br>是这样吧　是这样哟　是这样呢</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《サクラ前線（樱前线）》歌词翻译</title>
     <url>/2022/09/12/sakura_zensen/</url>
     <content><![CDATA[<p><strong><span lang="ja">サクラ前線</span>（樱前线）</strong> - 游戏《现在就想告诉哥哥，我是妹妹！》三谷步梦角色曲</p>
@@ -2244,148 +2277,6 @@
 <p>乘着樱前线　现在就想与你相见<br>因为我无法入眠　都是你的错<br>在“同一空间”“同一瞬间”一起参与的奇迹<br>让我们共同闪耀吧　一定要　以二人的风格</p>
 <p>即便是暴风雨　在日记中<br>书写着幸运　呼唤着笑容</p>
 <p>乘着盛开LOVE!?前线的“激动不已”和“闪闪发光”<br>齐声呼喊　拥抱彼此　朝着未来彼岸<br>在樱花飘落之前　想要传达　这份心情<br>有些扭捏不安　与你一同飞翔　直到永远</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《未来シルエット（未来剪影）》歌词翻译</title>
-    <url>/2022/11/28/mirai_silhouette/</url>
-    <content><![CDATA[<p><strong><span lang="ja">未来シルエット</span>（未来剪影）</strong> - 游戏《现在就想告诉哥哥，我是妹妹！》插曲</p>
-<p>作词：micco；作曲：<span lang="ja">菊池達也</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>そよぐ風　照らされてる校舎に向かう小道<br>今日もまた真っ直ぐには君を見れないんだろうなぁ、、、<br>深呼吸　海の匂い　思い切り吸い込んだら<br>溜め息は捨てて行こう　教室のドアその先に</p>
-<p>一歩さえ進めないまま　過去になる毎日を</p>
-<p>追いかけるよ未来シルエット　明日の自分追い越せるように<br>溢れ出す希望の粒を　大切に育てよう　ちょっとずつ育てよう</p>
-<p>人の波　時の波に　心が押されそうで<br>差し伸べた手のひらには　暖かい温もりの中<br>移りゆく　変わり続く季節と心の痛み<br>いつの日か笑顔でね　きっと素直にね　なれる日を</p>
-<p>ぼんやりと眺めたまま　過去になる一瞬を</p>
-<p>進んでいく未来シルエット　君のそばにいられるように<br>溢れ出す希望の花を大切に咲かせよう　枯れないよう咲かせよう</p>
-<p>追いかけるよ未来シルエット　明日の自分追い越せるように<br>溢れ出す希望の粒を　大切に育てよう<br>進んで行く未来シルエット　君のそばにいられるように<br>溢れ出す希望の花を大切に咲かせよう　枯れないよう咲かせよう</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>清风吹拂　照亮通往校舍的小径<br>今天我大概也无法坦率地与你对视吧……<br>深呼吸　若是尽情　嗅着大海的气息<br>就能把叹息丢在身后　来到教室门前吧</p>
-<p>变为过去的每一天　没有向前迈出一步</p>
-<p>为了超越明天的自己　我追赶未来的剪影<br>将满溢希望的种子　小心种下　精心培育</p>
-<p>在人潮与　时间的波动中　压抑着自己的内心<br>你伸出的手掌给予我　暖和与温热<br>不断更替　不断变换的季节与心中的痛苦<br>我相信会有一天　我们能相视而笑　坦诚相待</p>
-<p>恍惚之间望向　已成为过去的一瞬</p>
-<p>为了待在你的身边　不断前进的未来剪影<br>让满溢希望的花朵珍重绽放　不会枯萎随心绽放</p>
-<p>为了超越明天的自己　我追赶未来的剪影<br>将满溢希望的种子　精心培育<br>为了待在你的身边　不断前进的未来剪影<br>让满溢希望的花朵珍重绽放　不会枯萎随心绽放</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《my mind》歌词翻译</title>
-    <url>/2022/11/24/my_mind/</url>
-    <content><![CDATA[<p><strong>my mind</strong> - 游戏《现在就想告诉哥哥，我是妹妹！》拜田希实花角色曲</p>
-<p>作词：lotta；作曲：<span lang="ja">戸田章世</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>新しい春の風に誘われて　少しだけ勇気。<br>「今までの弱い私、<br>脱ぎ捨ててみようかな…」</p>
-<p>本当は変わりたくていつだって<br>夢は見ていたけれど<br>臆病なココロ揺れて　立ちすくむだけの現実</p>
-<p>うつむいて、いるばかりじゃ<br>何も始まらないからね</p>
-<p>さよならを告げよう　曇り空の　毎日に<br>キラめいた　明日からの私　目指し<br>突き抜けるような　青い空と　花の色<br>穏やかな日々に身をゆだねて<br>笑いたい…</p>
-<p>花びらがヒラヒラ舞う<br>春の日がくれたよ、偶然。<br>懐かしい君の笑顔　また会わせてくれた</p>
-<p>ドキドキは高鳴るけど<br>新しい日々が背中押すから<br>すくんでた足も　一歩<br>踏み出せる様な気がした</p>
-<p>愛しさが、積もるたびに<br>過去も色付いてくみたい</p>
-<p>ありがとう告げよう　君がくれた　優しさが<br>かたくなな　昨日までの世界　溶かし<br>柔らかな日差し　運び込んで　くれたから<br>あたたかな　ひだまりに　揺られて<br>踏み出そう…</p>
-<p>さよならを告げよう　寂しすぎた　今までに<br>仰ぎみた　明日からの私　目指し<br>吹き抜ける風と　広い空と　君の側<br>安らかな日々に身をゆだねて<br>歩いてみよう…</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>被清新的春风所吸引　稍稍鼓起了勇气。<br>「迄今为止软弱的我，<br>试着摆脱过去的束缚吧…」</p>
-<p>真的想去改变自己却总是<br>在梦中让它成真<br>胆怯的内心在颤抖　现实让我畏缩不前</p>
-<p>低着头，只是一直低着头<br>就什么也没法开始呢</p>
-<p>向阴沉的每一天　说一声　再见<br>将闪闪发光的　明天开始的自己　作为目标<br>天空同花朵呈现出　透明澄澈般的　一片蔚蓝<br>想委身于平静的生活之中<br>放声欢笑…</p>
-<p>花瓣随风翩翩起舞<br>为我带来春日，不过偶然。<br>再一次见到那　令人怀念的你的笑脸</p>
-<p>尽管心在怦怦直跳<br>全新的每天促使我前进<br>畏缩的双脚向前　一步<br>感觉可以踏步前行</p>
-<p>在爱怜，不断积累之时<br>过去也似乎着上了颜色</p>
-<p>对你给予我的温柔　说一声　谢谢<br>挥之不去的　到昨天为止的世界　逐渐融化<br>你把柔和的阳光　收起来搬进了　我的心里<br>在温暖的　向阳之处　随之摇曳<br>向前迈出…</p>
-<p>同陪伴至今的孤独　说一声　再见<br>把仰望着的　明天开始的自己　作为目标<br>轻抚而过的风　广阔的天空　与你的身旁<br>委身于这安逸的日子之中<br>尝试走下去…</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《恋物語（恋物语）》歌词翻译</title>
-    <url>/2022/12/01/koi_monogatari/</url>
-    <content><![CDATA[<p><strong><span lang="ja">恋物語</span>（恋物语）</strong> - 游戏《现在就想告诉哥哥，我是妹妹！》三谷步梦线片尾曲</p>
-<p>作词：RUCCA；作曲：rino</p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>ちいさな胸のなかには<br>眩しすぎるくらい　キミがあふれてる<br>好きになればなるほどに<br>嘘つきの過去　かなしいよ</p>
-<p>薄紅の　心の痕へ<br>涙　流れ　キミを想った</p>
-<p>「ごめんね」と「ありがとう」をいま<br>ありのままに　凛と伝えたい<br>微笑んで　許しあえたなら<br>新たな軌跡を　一緒に綴ろうよ</p>
-<p>ちいさな恋物語<br>いろんな場面で　泣いて笑ったね<br>互いを想う願いで<br>欠けてた断片が　繋がるよ</p>
-<p>暮れなずむ　太陽を停めて<br>「好きだよ」って　キミにKissを</p>
-<p>降りしきる　花びらがいま<br>2人の夢　そっと包んで<br>結ばれた　見えない糸で　ねぇ<br>いとしい未来へ　僕らを導くよ</p>
-<p>誰よりも「キミが大好き」<br>ありのままに　凛と伝えたい<br>終わりない　恋物語を<br>新たな軌跡と　一緒に綴ろうよ<br>優しい風が吹く</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>在我小小的心里<br>充盈着你的一切　无比闪亮炫目<br>我愈加地喜欢你<br>作出谎言的过去　倍感伤心</p>
-<p>淡红色的　心上的疤痕<br>泪水　滴落　想念着你</p>
-<p>想把「对不起」和「谢谢你」<br>现在就真诚　正式地传达给你<br>如果能　微笑着原谅我<br>就让我们　编织出新的轨迹吧</p>
-<p>小小的恋物语<br>在一个个情景中　我们哭着笑着<br>为彼此许下心愿<br>残缺破碎的片段　重新连结起来</p>
-<p>日暮迟迟　将落日停下<br>说出「喜欢你」　与你亲吻</p>
-<p>翩翩起舞的　花瓣现在<br>将两人的梦　轻轻包裹<br>联系彼此的　不可见的丝线　呐<br>将我们引向　那美好的未来</p>
-<p>超越一切的「我喜欢你」<br>想要真诚　正式地传达给你<br>不会结束的　恋物语<br>就让我们　编织出新的轨迹吧<br>温柔的风徐徐而来</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《今は このまま…（现在 就这样…）》歌词翻译</title>
-    <url>/2022/09/15/ima_wa_kono_mama/</url>
-    <content><![CDATA[<p><strong><span lang="ja">今は このまま…</span>（现在 就这样…）</strong> - 游戏《现在就想告诉哥哥，我是妹妹！》奈奈濑奉莉角色曲</p>
-<p>作词：lotta；作曲：lotta</p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>お気に入りのリップ塗って<br>今日も　笑顔で駆け抜けて行こう！<br>曇り空も　気分次第<br>笑い飛ばせば　元気になるよ<br>どんなに　ささいなことも　君がいるから<br>幸せに　見えてくるんだ</p>
-<p>いつだって　そばにいてくれて　ありがとうね<br>大切だよ　かけがえのない日々<br>友達よりもほんの少し　強い絆　それでいい<br>今は　このまま…<br>そうでしょ　そうだよ　そうだね</p>
-<p>口に出して　言わなくても<br>分かり合えている　ふたりの距離<br>そんな奇跡　いつまででも<br>続きますようにと　願っている<br>どんなに　けんかをしても　次の朝には<br>肩組んで　素直になれる</p>
-<p>いつだって　そばにいれること　うれしいから<br>大事にしたい　かけがえのない君<br>もぅ少し近づきたいなって　思うけれど　やっぱり<br>今は　このまま…<br>そうでしょ　そうだよ　そうだね</p>
-<p>どんなに　落ち込んだ日も　君がいるから<br>前向いて　楽しくなれる</p>
-<p>いつだって　そばにいてくれて　ありがとうね<br>大切だよ　かけがえのない君<br>友達よりもほんの少し　強い絆　それでいい<br>今は　このまま…<br>そうでしょ　そうだよ　そうだね</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>涂上自己喜爱的口红<br>今天也　要笑着跑步前行！<br>阴天也会　随心情而变<br>若能一笑而过　就会变得有精神<br>不管是什么　琐碎的小事　都因为有你在<br>才让我　看到了幸福</p>
-<p>无论何时　你总陪在我的身边　我心怀感谢<br>都是重要　而又无可替代的日子<br>比朋友之间还要稍微　紧密的牵绊　已经足够了<br>现在　就这样…<br>是这样吧　是这样哟　是这样呢</p>
-<p>说出口也好　不说出来也罢<br>我们也都明白　两人间的距离<br>那样的奇迹　直到天荒地老<br>都能延续下去　我许下心愿<br>不管发生了　怎样的争执　第二天早晨也会<br>肩靠着肩　变得坦诚</p>
-<p>无论何时　你总陪在我的身边　我心生喜悦<br>想好好珍惜　不可替代的你<br>真的好想再　靠近你一点　果然<br>现在　就这样…<br>是这样吧　是这样哟　是这样呢</p>
-<p>不论在什么　心情失落的日子　因为有你在<br>面朝前方　我重拾快乐</p>
-<p>无论何时　你总陪在我的身边　我心怀感谢<br>十分重要　又不可替代的你<br>比朋友之间还要稍微　紧密的牵绊　已经足够了<br>现在　就这样…<br>是这样吧　是这样哟　是这样呢</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -2433,6 +2324,115 @@
       </tags>
   </entry>
   <entry>
+    <title>《my mind》歌词翻译</title>
+    <url>/2022/11/24/my_mind/</url>
+    <content><![CDATA[<p><strong>my mind</strong> - 游戏《现在就想告诉哥哥，我是妹妹！》拜田希实花角色曲</p>
+<p>作词：lotta；作曲：<span lang="ja">戸田章世</span></p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>新しい春の風に誘われて　少しだけ勇気。<br>「今までの弱い私、<br>脱ぎ捨ててみようかな…」</p>
+<p>本当は変わりたくていつだって<br>夢は見ていたけれど<br>臆病なココロ揺れて　立ちすくむだけの現実</p>
+<p>うつむいて、いるばかりじゃ<br>何も始まらないからね</p>
+<p>さよならを告げよう　曇り空の　毎日に<br>キラめいた　明日からの私　目指し<br>突き抜けるような　青い空と　花の色<br>穏やかな日々に身をゆだねて<br>笑いたい…</p>
+<p>花びらがヒラヒラ舞う<br>春の日がくれたよ、偶然。<br>懐かしい君の笑顔　また会わせてくれた</p>
+<p>ドキドキは高鳴るけど<br>新しい日々が背中押すから<br>すくんでた足も　一歩<br>踏み出せる様な気がした</p>
+<p>愛しさが、積もるたびに<br>過去も色付いてくみたい</p>
+<p>ありがとう告げよう　君がくれた　優しさが<br>かたくなな　昨日までの世界　溶かし<br>柔らかな日差し　運び込んで　くれたから<br>あたたかな　ひだまりに　揺られて<br>踏み出そう…</p>
+<p>さよならを告げよう　寂しすぎた　今までに<br>仰ぎみた　明日からの私　目指し<br>吹き抜ける風と　広い空と　君の側<br>安らかな日々に身をゆだねて<br>歩いてみよう…</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>被清新的春风所吸引　稍稍鼓起了勇气。<br>「迄今为止软弱的我，<br>试着摆脱过去的束缚吧…」</p>
+<p>真的想去改变自己却总是<br>在梦中让它成真<br>胆怯的内心在颤抖　现实让我畏缩不前</p>
+<p>低着头，只是一直低着头<br>就什么也没法开始呢</p>
+<p>向阴沉的每一天　说一声　再见<br>将闪闪发光的　明天开始的自己　作为目标<br>天空同花朵呈现出　透明澄澈般的　一片蔚蓝<br>想委身于平静的生活之中<br>放声欢笑…</p>
+<p>花瓣随风翩翩起舞<br>为我带来春日，不过偶然。<br>再一次见到那　令人怀念的你的笑脸</p>
+<p>尽管心在怦怦直跳<br>全新的每天促使我前进<br>畏缩的双脚向前　一步<br>感觉可以踏步前行</p>
+<p>在爱怜，不断积累之时<br>过去也似乎着上了颜色</p>
+<p>对你给予我的温柔　说一声　谢谢<br>挥之不去的　到昨天为止的世界　逐渐融化<br>你把柔和的阳光　收起来搬进了　我的心里<br>在温暖的　向阳之处　随之摇曳<br>向前迈出…</p>
+<p>同陪伴至今的孤独　说一声　再见<br>把仰望着的　明天开始的自己　作为目标<br>轻抚而过的风　广阔的天空　与你的身旁<br>委身于这安逸的日子之中<br>尝试走下去…</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《未来シルエット（未来剪影）》歌词翻译</title>
+    <url>/2022/11/28/mirai_silhouette/</url>
+    <content><![CDATA[<p><strong><span lang="ja">未来シルエット</span>（未来剪影）</strong> - 游戏《现在就想告诉哥哥，我是妹妹！》插曲</p>
+<p>作词：micco；作曲：<span lang="ja">菊池達也</span></p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>そよぐ風　照らされてる校舎に向かう小道<br>今日もまた真っ直ぐには君を見れないんだろうなぁ、、、<br>深呼吸　海の匂い　思い切り吸い込んだら<br>溜め息は捨てて行こう　教室のドアその先に</p>
+<p>一歩さえ進めないまま　過去になる毎日を</p>
+<p>追いかけるよ未来シルエット　明日の自分追い越せるように<br>溢れ出す希望の粒を　大切に育てよう　ちょっとずつ育てよう</p>
+<p>人の波　時の波に　心が押されそうで<br>差し伸べた手のひらには　暖かい温もりの中<br>移りゆく　変わり続く季節と心の痛み<br>いつの日か笑顔でね　きっと素直にね　なれる日を</p>
+<p>ぼんやりと眺めたまま　過去になる一瞬を</p>
+<p>進んでいく未来シルエット　君のそばにいられるように<br>溢れ出す希望の花を大切に咲かせよう　枯れないよう咲かせよう</p>
+<p>追いかけるよ未来シルエット　明日の自分追い越せるように<br>溢れ出す希望の粒を　大切に育てよう<br>進んで行く未来シルエット　君のそばにいられるように<br>溢れ出す希望の花を大切に咲かせよう　枯れないよう咲かせよう</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>清风吹拂　照亮通往校舍的小径<br>今天我大概也无法坦率地与你对视吧……<br>深呼吸　若是尽情　嗅着大海的气息<br>就能把叹息丢在身后　来到教室门前吧</p>
+<p>变为过去的每一天　没有向前迈出一步</p>
+<p>为了超越明天的自己　我追赶未来的剪影<br>将满溢希望的种子　小心种下　精心培育</p>
+<p>在人潮与　时间的波动中　压抑着自己的内心<br>你伸出的手掌给予我　暖和与温热<br>不断更替　不断变换的季节与心中的痛苦<br>我相信会有一天　我们能相视而笑　坦诚相待</p>
+<p>恍惚之间望向　已成为过去的一瞬</p>
+<p>为了待在你的身边　不断前进的未来剪影<br>让满溢希望的花朵珍重绽放　不会枯萎随心绽放</p>
+<p>为了超越明天的自己　我追赶未来的剪影<br>将满溢希望的种子　精心培育<br>为了待在你的身边　不断前进的未来剪影<br>让满溢希望的花朵珍重绽放　不会枯萎随心绽放</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《恋物語（恋物语）》歌词翻译</title>
+    <url>/2022/12/01/koi_monogatari/</url>
+    <content><![CDATA[<p><strong><span lang="ja">恋物語</span>（恋物语）</strong> - 游戏《现在就想告诉哥哥，我是妹妹！》三谷步梦线片尾曲</p>
+<p>作词：RUCCA；作曲：rino</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>ちいさな胸のなかには<br>眩しすぎるくらい　キミがあふれてる<br>好きになればなるほどに<br>嘘つきの過去　かなしいよ</p>
+<p>薄紅の　心の痕へ<br>涙　流れ　キミを想った</p>
+<p>「ごめんね」と「ありがとう」をいま<br>ありのままに　凛と伝えたい<br>微笑んで　許しあえたなら<br>新たな軌跡を　一緒に綴ろうよ</p>
+<p>ちいさな恋物語<br>いろんな場面で　泣いて笑ったね<br>互いを想う願いで<br>欠けてた断片が　繋がるよ</p>
+<p>暮れなずむ　太陽を停めて<br>「好きだよ」って　キミにKissを</p>
+<p>降りしきる　花びらがいま<br>2人の夢　そっと包んで<br>結ばれた　見えない糸で　ねぇ<br>いとしい未来へ　僕らを導くよ</p>
+<p>誰よりも「キミが大好き」<br>ありのままに　凛と伝えたい<br>終わりない　恋物語を<br>新たな軌跡と　一緒に綴ろうよ<br>優しい風が吹く</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>在我小小的心里<br>充盈着你的一切　无比闪亮炫目<br>我愈加地喜欢你<br>作出谎言的过去　倍感伤心</p>
+<p>淡红色的　心上的疤痕<br>泪水　滴落　想念着你</p>
+<p>想把「对不起」和「谢谢你」<br>现在就真诚　正式地传达给你<br>如果能　微笑着原谅我<br>就让我们　编织出新的轨迹吧</p>
+<p>小小的恋物语<br>在一个个情景中　我们哭着笑着<br>为彼此许下心愿<br>残缺破碎的片段　重新连结起来</p>
+<p>日暮迟迟　将落日停下<br>说出「喜欢你」　与你亲吻</p>
+<p>翩翩起舞的　花瓣现在<br>将两人的梦　轻轻包裹<br>联系彼此的　不可见的丝线　呐<br>将我们引向　那美好的未来</p>
+<p>超越一切的「我喜欢你」<br>想要真诚　正式地传达给你<br>不会结束的　恋物语<br>就让我们　编织出新的轨迹吧<br>温柔的风徐徐而来</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《どきどき黙示録（心跳不已默示录）》歌词翻译</title>
     <url>/2022/12/27/dokidoki_mokushiroku/</url>
     <content><![CDATA[<p><strong><span lang="ja">どきどき黙示録</span>（心跳不已默示录）</strong> - 多媒体企划《兽娘动物园》曲目</p>
@@ -2468,78 +2468,6 @@
 <p>仰望着　仰望吧　崇高的旋律<br>遨游着　遨游吧　最棒的激动不已编年史<br>已过之日　所展现出的<br>我们的繁荣…就这样没错！心跳不已默示录</p>
 <p>若在遥远的虚空　放飞思绪的话<br>就能在更深远处　将世界包覆起来——</p>
 <p>回响吧　回响吧　命运的咏唱<br>还会永远书写下去　激动不已编年史<br>我们会证明　自己的灵魂<br>一起不停地翻阅吧！心跳不已默示录</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《告白（告白）》歌词翻译</title>
-    <url>/2022/12/27/kokuhaku/</url>
-    <content><![CDATA[<p><strong><span lang="ja">告白</span>（告白）</strong> - 游戏《现在就想告诉哥哥，我是妹妹！》奈奈濑奉莉线片尾曲</p>
-<p>作词：RUCCA；作曲：rino</p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>まるで磁石みたいだね“好き”と“好き”ってキモチは<br>時として　いたずらに　すれ違う刹那揺られて</p>
-<p>これ以上　近づけないよ…　淡い蜃気楼みたい<br>それでもキミは　待っててくれた　私だけを</p>
-<p>ふとした瞬間　色づく記憶　想い出してた<br>はじめて逢った日の　桜色<br>キミへ恋していた<br>現在なら云える　ホントの願い　溢れるくらい<br>“キミが大好きだよ”“ありがとう”<br>何度でも　伝えたいよ</p>
-<p>春色の風がそっと　心の鳥かごから<br>遠い日の　哀しみを　連れ出して　空で踊るよ</p>
-<p>迷いの先で流れる　恋と夢のメロディー<br>見つけてくれた　ひとはやっぱり　ねぇキミでした</p>
-<p>触れあうたびに　弾ける果実　甘酸っぱくて<br>ふたりぼっち帰る　桜道<br>橙へ染めてく<br>不揃いだった　あの影法師 1つへなって<br>おなじ未来を現在　夢見てる<br>ときめきを　忘れないよ</p>
-<p>ふとした瞬間　色づく記憶　重ねてゆくの<br>はじめて逢った日の　桜色<br>キミへ恋している<br>これまでずっと…　これからもっと…　100年だって<br>“キミが大好きだよ”“ありがとう”<br>心から　伝えたいよ</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>“喜欢”与说出“喜欢”的心情就如同磁石一般<br>时不时　不经意间　被擦肩而过的刹那动摇</p>
-<p>无法再　更加接近你…　就像虚幻的海市蜃楼<br>即便如此你还是　只为我一人　等待</p>
-<p>偶然的瞬间　五彩的记忆　让我想起<br>最初与你相遇时的　樱花之色<br>是对你的爱恋<br>现在说来　真是满溢着　真诚的心愿<br>“最喜欢你了”“谢谢你”<br>想一遍遍　传达给你</p>
-<p>和煦的春风轻轻地　从心中的牢笼<br>带走了　远去日子的　悲伤与愁思　在空中起舞</p>
-<p>迷惘之后流淌出的　爱与梦的旋律<br>将我发现的　那个人果然　就是你呢</p>
-<p>互相触碰之时　绽开的果实　又酸又甜<br>只有我俩归途的　樱花道<br>染上了橙色<br>那参差不齐的　两个人影　合而为一<br>当下的梦境中看到的　相同的未来<br>不会忘记　那份悸动</p>
-<p>偶然的瞬间　五彩的记忆　逐渐交叠的<br>最初与你相遇时的　樱花之色<br>是对你的爱恋<br>迄今为止一直…　从今开始更加…　直到百年<br>“最喜欢你了”“谢谢你”<br>想从心底　传达给你</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《la la for you》歌词翻译</title>
-    <url>/2023/01/29/la_la_for_you/</url>
-    <content><![CDATA[<p><strong>la la for you</strong> - 游戏《猫忍之心》片头曲</p>
-<p>作词：<span lang="ja">薬師るり</span>；作曲：<span lang="ja">薬師るり</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>あの日描いた夢が　私を強くしてる<br>そうだ！今がチャンスだ　願いをかなえて</p>
-<p>それは突然　なにがどうして　あなたは目を回してるけど<br>これは偶然なんかじゃなくて　ずっと前から決まってた<br>これは必然　どんな時でも　あなたのために忍びます<br>それが私の使命です</p>
-<p>雲の行くへは変えられないけど<br>雨が降っても　槍が降っても　全部全部任せて<br>（I will save you）</p>
-<p>あの日交わした約束が　私を強くするよ<br>必殺！今だチャンスだ　狙いを定めて<br>あの日夢にみたのは　正にこんな日常で<br>絶対！失くせないんだ　守ってみせるよ<br>la la I’ll be there for you.<br>la la I always stand by you.<br>la la lalalala for you.</p>
-<p>そうよ当然　２４時間　あなたを影で支えます<br>それが私のお役目です</p>
-<p>目を光らせてるからねずっと<br>暗闇の中も　狭いとこも　全部全部任せて<br>（so just trust me）</p>
-<p>あの日描いた夢が　私を強くしてる<br>そうだ！今がチャンスだ　 願いをかなえて<br>あの日から続いてる　正に夢の続きを<br>絶対！守りたいんだ　離れないでいて</p>
-<p>あの日交わした約束が　私を強くするよ<br>必殺！今だチャンスだ　狙いを定めて<br>あの日夢にみたのは　正にこんな日常で<br>絶対！失くせないんだ　守ってみせるよ　離れないでいて<br>la la I’ll be there for you.<br>la la I always stand by you.<br>la la lalalala for you.</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>那一天所描绘的梦想　让我变得更加强大<br>没错！现在就是让愿望　实现的好机会</p>
-<p>那是突然间　不知如何是好　你变得不知所措<br>这并非偶然发生的事　而是在很久之前就已确定了<br>这就是必然　无论什么时候　我都能为你隐忍<br>因为那就是我的使命</p>
-<p>虽然改变不了云流动的方向<br>不论是降下大雨　还是落下刀枪　全部全部交给我吧<br>（我会保护你）</p>
-<p>那一天所许下的约定　让我变得更加强大<br>必杀！现在就是将目标　锁定的好机会<br>那一天在梦中看见的　正是像这样的日常<br>一定！不会就这样失去　守护着给你看<br>啦啦　我会在这等你。<br>啦啦　我永远支持你。<br>啦啦　我会为你打气。</p>
-<p>没错当然是　一天24小时　都会在背后支持你<br>因为那就是我的职责</p>
-<p>我会时刻保持警戒<br>不管是在黑暗中　或在狭小之处　全部全部交给我吧<br>（所以只管信任我）</p>
-<p>那一天所描绘的梦想　让我变得更加强大<br>没错！现在就是让愿望　实现的好机会<br>从那天一直经历着的　正是梦境的延续<br>一定！想要守护着你　不要从我身边离开</p>
-<p>那一天所许下的约定　让我变得更加强大<br>必杀！现在就是将目标　锁定的好机会<br>那一天在梦中看见的　正是像这样的日常<br>一定！不会就这样失去　守护着给你看　不要从我身边离开<br>啦啦　我会在这等你。<br>啦啦　我永远支持你。<br>啦啦　我会为你打气。</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -2585,6 +2513,41 @@
       </tags>
   </entry>
   <entry>
+    <title>《告白（告白）》歌词翻译</title>
+    <url>/2022/12/27/kokuhaku/</url>
+    <content><![CDATA[<p><strong><span lang="ja">告白</span>（告白）</strong> - 游戏《现在就想告诉哥哥，我是妹妹！》奈奈濑奉莉线片尾曲</p>
+<p>作词：RUCCA；作曲：rino</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>まるで磁石みたいだね“好き”と“好き”ってキモチは<br>時として　いたずらに　すれ違う刹那揺られて</p>
+<p>これ以上　近づけないよ…　淡い蜃気楼みたい<br>それでもキミは　待っててくれた　私だけを</p>
+<p>ふとした瞬間　色づく記憶　想い出してた<br>はじめて逢った日の　桜色<br>キミへ恋していた<br>現在なら云える　ホントの願い　溢れるくらい<br>“キミが大好きだよ”“ありがとう”<br>何度でも　伝えたいよ</p>
+<p>春色の風がそっと　心の鳥かごから<br>遠い日の　哀しみを　連れ出して　空で踊るよ</p>
+<p>迷いの先で流れる　恋と夢のメロディー<br>見つけてくれた　ひとはやっぱり　ねぇキミでした</p>
+<p>触れあうたびに　弾ける果実　甘酸っぱくて<br>ふたりぼっち帰る　桜道<br>橙へ染めてく<br>不揃いだった　あの影法師 1つへなって<br>おなじ未来を現在　夢見てる<br>ときめきを　忘れないよ</p>
+<p>ふとした瞬間　色づく記憶　重ねてゆくの<br>はじめて逢った日の　桜色<br>キミへ恋している<br>これまでずっと…　これからもっと…　100年だって<br>“キミが大好きだよ”“ありがとう”<br>心から　伝えたいよ</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>“喜欢”与说出“喜欢”的心情就如同磁石一般<br>时不时　不经意间　被擦肩而过的刹那动摇</p>
+<p>无法再　更加接近你…　就像虚幻的海市蜃楼<br>即便如此你还是　只为我一人　等待</p>
+<p>偶然的瞬间　五彩的记忆　让我想起<br>最初与你相遇时的　樱花之色<br>是对你的爱恋<br>现在说来　真是满溢着　真诚的心愿<br>“最喜欢你了”“谢谢你”<br>想一遍遍　传达给你</p>
+<p>和煦的春风轻轻地　从心中的牢笼<br>带走了　远去日子的　悲伤与愁思　在空中起舞</p>
+<p>迷惘之后流淌出的　爱与梦的旋律<br>将我发现的　那个人果然　就是你呢</p>
+<p>互相触碰之时　绽开的果实　又酸又甜<br>只有我俩归途的　樱花道<br>染上了橙色<br>那参差不齐的　两个人影　合而为一<br>当下的梦境中看到的　相同的未来<br>不会忘记　那份悸动</p>
+<p>偶然的瞬间　五彩的记忆　逐渐交叠的<br>最初与你相遇时的　樱花之色<br>是对你的爱恋<br>迄今为止一直…　从今开始更加…　直到百年<br>“最喜欢你了”“谢谢你”<br>想从心底　传达给你</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《君とずっと（永远与你在一起）》歌词翻译</title>
     <url>/2023/01/09/kimi_to_zutto/</url>
     <content><![CDATA[<p><strong><span lang="ja">君とずっと</span>（永远与你在一起）</strong> - 游戏《现在就想告诉哥哥，我是妹妹！》拜田希实花线片尾曲</p>
@@ -2616,43 +2579,6 @@
 <p>泪流满面的　辛酸的日子<br>全部都　坦然接受的话<br>能结出　愉悦　心灵的<br>花朵就会绽放<br>永远与你　在一起</p>
 <p>你总是　向我伸出手<br>给予我体贴与温柔<br>呐</p>
 <p>在幸福　与日俱增时<br>想要和你　相依相伴<br>高声欢笑着　相互交织<br>一同前行<br>永远与你　在一起</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《たまゆら（玉响）》歌词翻译</title>
-    <url>/2023/02/08/tamayura/</url>
-    <content><![CDATA[<p><strong><span lang="ja">たまゆら</span>（玉响）</strong> - 游戏《猫忍之心3》片头曲</p>
-<p>作词：<span lang="ja">薬師るり</span>；作曲：<span lang="ja">薬師るり</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>たまゆらのキセキを繋いでく　絶対離れないよ　もっともっと　強く<br>だって　あのね　あなたのこと　こんなに大好きなの</p>
-<p>いつだってここで見守ってるから　安心して任せてね<br>ほら　難しいことはいいでしょ　一緒にお昼寝でもしよう<br>いつだって終わりは始まりで　わかってるの　毎日が<br>ほら　少しずつ変わっていくけど　こわくはないから</p>
-<p>夢のしっぽ追いかけて　ここまで来たの　今日も<br>はずむリズム　影法師　追いかけっこしようよ</p>
-<p>たまゆらのキセキを繋いでく　小さくたっていいの　いつか叶うと信じて<br>風雲急を告げる　何があっても　守ってみせるよ<br>ヤマもあればタニもあって　雅とはいかなくとも　己を律して進め<br>でもね　あのね　本当はただあなたのそばにいたいの</p>
-<p>なんだってここにはあるんだから　夢も希望も愛も<br>ほら　難しい顔しないで　一緒におやつでも食べよう<br>なんでって後悔したってね　わからないけど今は<br>ほら　少しずつ傷の分だけ　強くなってるから</p>
-<p>耳をピンとすましたら　チャンスはくるの　きっと<br>どんな厚い壁だって　爪痕を残すから</p>
-<p>たまゆらのキセキが繋がって　大きな橋になって　いつか届くと信じて<br>季節を告げる風　いつまででも　守ってみせるよ<br>ときにわからなくなって　逃げ出したくなる時も　ここが居場所なんだよね<br>あのね　だから　最後まであなたのそばにいさせて</p>
-<p>たまゆらのキセキを繋いでく　小さくたっていいの　いつか叶うと信じて<br>風雲急を告げる　何があっても　守ってみせるよ<br>ヤマもあればタニもあって　雅とはいかなくとも　己を律して進め<br>でもね　あのね　本当はただあなたのそばにいたいの</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>连系起转瞬之间的轨迹　绝对不会彼此分离　这份希冀　逐渐强烈<br>只是　因为啊　我是这样地　发自内心地喜欢着你</p>
-<p>无论何时我都会在这里守望着你　所以放心交给我吧<br>看吧　困难的事情也不错呢　午觉也一同入眠吧<br>对结束之时亦是起始之处　心知肚明的　一天天<br>看吧　尽管逐渐产生了细小的变化　但这并不可怕</p>
-<p>追赶着梦的尾巴　今天也来到了　这个地方<br>韵律高涨　人影绰绰　互相追逐嬉戏吧</p>
-<p>连系起转瞬之间的轨迹　即使微小也没问题　相信总有一天会成真<br>若是情势紧急　不管发生什么　我都会守护着你<br>生活中有起亦有伏　即便算不上风雅　也要律己前行<br>不过　我其实　只是想待在你的身边而已</p>
-<p>无论怎样这里总是会有着　梦想希望与爱<br>好啦　不要摆出为难的表情了　一起吃点点心吧<br>虽然暂时不太清楚　你因什么事而后悔<br>没错　这点点的伤痕　会使你变得更强</p>
-<p>如果能侧耳倾听的话　契机就一定会　到来<br>不管屏障有多么坚实　也一定可以留下痕迹</p>
-<p>连系起转瞬之间的轨迹　相信最终会化作桥梁　传达到你的心里<br>风宣告着季节变换　直到永远　我都会守护着你<br>有时感到不知所措　有时想要脱身而出　这里便是容身之所<br>所以　请让我　从今以后一直陪在你的身边</p>
-<p>连系起转瞬之间的轨迹　即使微小也没问题　相信总有一天会成真<br>若是情势紧急　不管发生什么　我都会守护着你<br>生活中有起亦有伏　即便算不上风雅　也要律己前行<br>不过　我其实　只是想待在你的身边而已</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -2807,50 +2733,88 @@
       </tags>
   </entry>
   <entry>
-    <title>《goin&#39; my way!!》歌词翻译</title>
-    <url>/2023/03/26/goin&#39;_my_way!!/</url>
-    <content><![CDATA[<p><strong>goin’ my way!!</strong> - TV动画《TARI TARI》插曲</p>
-<p>作词：riya；作曲：<span lang="ja">浜口史郎</span></p>
+    <title>《la la for you》歌词翻译</title>
+    <url>/2023/01/29/la_la_for_you/</url>
+    <content><![CDATA[<p><strong>la la for you</strong> - 游戏《猫忍之心》片头曲</p>
+<p>作词：<span lang="ja">薬師るり</span>；作曲：<span lang="ja">薬師るり</span></p>
 <hr>
 <p><strong>歌词</strong></p>
 <p><em>注：歌词著作权归原作者所有。</em></p>
 <div lang="ja" style="white-space: pre;">
 
-<p>Fly　Fly　Fly<br>必要なのは輝くその瞳<br>Try　Try　Try<br>身体一つで<br>どこまでも走るmy　way</p>
-<p>心なんて形のない物を<br>いつも信じてる<br>それでもいいじゃない</p>
-<p>昨日よりも楽しくいたいから<br>どんな事があっても<br>笑い飛ばしたくて</p>
-<p>他人(ひと)は他人だって<br>解ってるけど上手くいかない<br>そんな日は手を伸ばし<br>空に触れてみよう</p>
-<p>ずっと<br>Fly　Fly　Fly<br>必要なのは輝くその瞳<br>Try　Try　Try<br>身体一つで<br>どこまでも走る</p>
-<p>二度とは無い<br>この時間を刻んで行く<br>絶対譲れないmy　way</p>
-<p>思っていた通りにならなくて<br>引き返してみる<br>それでもいいじゃない</p>
-<p>繰り返しの毎日を蹴飛ばし<br>傷つく覚悟でなら<br>何も問題ないね</p>
-<p>知らないうちに<br>大声一つ出せなくなって<br>臆病になってちゃ<br>世界は変わらない</p>
-<p>今は<br>Fly　Fly　Fly<br>必要なのはまっすぐなその瞳<br>Shine　Shine　Shine<br>想像を超えた<br>素晴らしい明日</p>
-<p>二度とは無い<br>この時間の中　生きてる<br>作り出して行くmy　way</p>
-<p>もっと<br>Fly　Fly　Fly<br>必要なのは輝くその瞳<br>Try　Try　Try<br>身体一つで<br>どこまでも走って行く</p>
-<p>何かが待ってる<br>絶対譲れないmy　way</p>
+<p>あの日描いた夢が　私を強くしてる<br>そうだ！今がチャンスだ　願いをかなえて</p>
+<p>それは突然　なにがどうして　あなたは目を回してるけど<br>これは偶然なんかじゃなくて　ずっと前から決まってた<br>これは必然　どんな時でも　あなたのために忍びます<br>それが私の使命です</p>
+<p>雲の行くへは変えられないけど<br>雨が降っても　槍が降っても　全部全部任せて<br>（I will save you）</p>
+<p>あの日交わした約束が　私を強くするよ<br>必殺！今だチャンスだ　狙いを定めて<br>あの日夢にみたのは　正にこんな日常で<br>絶対！失くせないんだ　守ってみせるよ<br>la la I’ll be there for you.<br>la la I always stand by you.<br>la la lalalala for you.</p>
+<p>そうよ当然　２４時間　あなたを影で支えます<br>それが私のお役目です</p>
+<p>目を光らせてるからねずっと<br>暗闇の中も　狭いとこも　全部全部任せて<br>（so just trust me）</p>
+<p>あの日描いた夢が　私を強くしてる<br>そうだ！今がチャンスだ　 願いをかなえて<br>あの日から続いてる　正に夢の続きを<br>絶対！守りたいんだ　離れないでいて</p>
+<p>あの日交わした約束が　私を強くするよ<br>必殺！今だチャンスだ　狙いを定めて<br>あの日夢にみたのは　正にこんな日常で<br>絶対！失くせないんだ　守ってみせるよ　離れないでいて<br>la la I’ll be there for you.<br>la la I always stand by you.<br>la la lalalala for you.</p>
 </div>
 
 <hr>
 <p><strong>翻译</strong></p>
 <div style="white-space: pre;">
 
-<p>Fly　Fly　Fly<br>需要的是一双闪闪发光的眼睛<br>Try　Try　Try<br>即便独自一人<br>也能沿着自己的路向目标奔去</p>
-<p>虽然总是认为心灵什么的<br>应当是无形之物<br>就这样也不错不是吗</p>
-<p>因为想要比昨日更加快乐<br>不管发生什么事<br>都会选择一笑置之</p>
-<p>自己与别人不同<br>尽管心知肚明分辨绝非易事<br>那么就试着伸出手<br>触碰蔚蓝天空吧</p>
-<p>一直<br>Fly　Fly　Fly<br>需要的是一双闪闪发光的眼睛<br>Try　Try　Try<br>即便独自一人<br>也能向目标奔去</p>
-<p>深知时不再来<br>铭记这段时光向前走去<br>绝对沿着自己的路不会让步</p>
-<p>现实常常不会顺遂心愿<br>试着回首往事<br>就这样也不错不是吗</p>
-<p>一脚踢开无趣重复的每日<br>若是做好受伤的觉悟<br>就什么都不是问题了</p>
-<p>不知不觉之间<br>畏于发出自己的声音<br>要是变得胆小怕事<br>世界就会一成不变</p>
-<p>现在就<br>Fly　Fly　Fly<br>需要的是一双耿直不讳的眼睛<br>Shine　Shine　Shine<br>超出原先的想象<br>明天万分美好</p>
-<p>深知时不再来<br>在这段时光中　活出自己<br>造出一条自己的路迈出脚步</p>
-<p>再多些<br>Fly　Fly　Fly<br>需要的是一双闪闪发光的眼睛<br>Try　Try　Try<br>即便独自一人<br>也能向目标奔去</p>
-<p>有什么在等待着<br>绝对沿着自己的路不会让步</p>
+<p>那一天所描绘的梦想　让我变得更加强大<br>没错！现在就是让愿望　实现的好机会</p>
+<p>那是突然间　不知如何是好　你变得不知所措<br>这并非偶然发生的事　而是在很久之前就已确定了<br>这就是必然　无论什么时候　我都能为你隐忍<br>因为那就是我的使命</p>
+<p>虽然改变不了云流动的方向<br>不论是降下大雨　还是落下刀枪　全部全部交给我吧<br>（我会保护你）</p>
+<p>那一天所许下的约定　让我变得更加强大<br>必杀！现在就是将目标　锁定的好机会<br>那一天在梦中看见的　正是像这样的日常<br>一定！不会就这样失去　守护着给你看<br>啦啦　我会在这等你。<br>啦啦　我永远支持你。<br>啦啦　我会为你打气。</p>
+<p>没错当然是　一天24小时　都会在背后支持你<br>因为那就是我的职责</p>
+<p>我会时刻保持警戒<br>不管是在黑暗中　或在狭小之处　全部全部交给我吧<br>（所以只管信任我）</p>
+<p>那一天所描绘的梦想　让我变得更加强大<br>没错！现在就是让愿望　实现的好机会<br>从那天一直经历着的　正是梦境的延续<br>一定！想要守护着你　不要从我身边离开</p>
+<p>那一天所许下的约定　让我变得更加强大<br>必杀！现在就是将目标　锁定的好机会<br>那一天在梦中看见的　正是像这样的日常<br>一定！不会就这样失去　守护着给你看　不要从我身边离开<br>啦啦　我会在这等你。<br>啦啦　我永远支持你。<br>啦啦　我会为你打气。</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《たまゆら（玉响）》歌词翻译</title>
+    <url>/2023/02/08/tamayura/</url>
+    <content><![CDATA[<p><strong><span lang="ja">たまゆら</span>（玉响）</strong> - 游戏《猫忍之心3》片头曲</p>
+<p>作词：<span lang="ja">薬師るり</span>；作曲：<span lang="ja">薬師るり</span></p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>たまゆらのキセキを繋いでく　絶対離れないよ　もっともっと　強く<br>だって　あのね　あなたのこと　こんなに大好きなの</p>
+<p>いつだってここで見守ってるから　安心して任せてね<br>ほら　難しいことはいいでしょ　一緒にお昼寝でもしよう<br>いつだって終わりは始まりで　わかってるの　毎日が<br>ほら　少しずつ変わっていくけど　こわくはないから</p>
+<p>夢のしっぽ追いかけて　ここまで来たの　今日も<br>はずむリズム　影法師　追いかけっこしようよ</p>
+<p>たまゆらのキセキを繋いでく　小さくたっていいの　いつか叶うと信じて<br>風雲急を告げる　何があっても　守ってみせるよ<br>ヤマもあればタニもあって　雅とはいかなくとも　己を律して進め<br>でもね　あのね　本当はただあなたのそばにいたいの</p>
+<p>なんだってここにはあるんだから　夢も希望も愛も<br>ほら　難しい顔しないで　一緒におやつでも食べよう<br>なんでって後悔したってね　わからないけど今は<br>ほら　少しずつ傷の分だけ　強くなってるから</p>
+<p>耳をピンとすましたら　チャンスはくるの　きっと<br>どんな厚い壁だって　爪痕を残すから</p>
+<p>たまゆらのキセキが繋がって　大きな橋になって　いつか届くと信じて<br>季節を告げる風　いつまででも　守ってみせるよ<br>ときにわからなくなって　逃げ出したくなる時も　ここが居場所なんだよね<br>あのね　だから　最後まであなたのそばにいさせて</p>
+<p>たまゆらのキセキを繋いでく　小さくたっていいの　いつか叶うと信じて<br>風雲急を告げる　何があっても　守ってみせるよ<br>ヤマもあればタニもあって　雅とはいかなくとも　己を律して進め<br>でもね　あのね　本当はただあなたのそばにいたいの</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>连系起转瞬之间的轨迹　绝对不会彼此分离　这份希冀　逐渐强烈<br>只是　因为啊　我是这样地　发自内心地喜欢着你</p>
+<p>无论何时我都会在这里守望着你　所以放心交给我吧<br>看吧　困难的事情也不错呢　午觉也一同入眠吧<br>对结束之时亦是起始之处　心知肚明的　一天天<br>看吧　尽管逐渐产生了细小的变化　但这并不可怕</p>
+<p>追赶着梦的尾巴　今天也来到了　这个地方<br>韵律高涨　人影绰绰　互相追逐嬉戏吧</p>
+<p>连系起转瞬之间的轨迹　即使微小也没问题　相信总有一天会成真<br>若是情势紧急　不管发生什么　我都会守护着你<br>生活中有起亦有伏　即便算不上风雅　也要律己前行<br>不过　我其实　只是想待在你的身边而已</p>
+<p>无论怎样这里总是会有着　梦想希望与爱<br>好啦　不要摆出为难的表情了　一起吃点点心吧<br>虽然暂时不太清楚　你因什么事而后悔<br>没错　这点点的伤痕　会使你变得更强</p>
+<p>如果能侧耳倾听的话　契机就一定会　到来<br>不管屏障有多么坚实　也一定可以留下痕迹</p>
+<p>连系起转瞬之间的轨迹　相信最终会化作桥梁　传达到你的心里<br>风宣告着季节变换　直到永远　我都会守护着你<br>有时感到不知所措　有时想要脱身而出　这里便是容身之所<br>所以　请让我　从今以后一直陪在你的身边</p>
+<p>连系起转瞬之间的轨迹　即使微小也没问题　相信总有一天会成真<br>若是情势紧急　不管发生什么　我都会守护着你<br>生活中有起亦有伏　即便算不上风雅　也要律己前行<br>不过　我其实　只是想待在你的身边而已</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用于MoeSkin的MoeLatte主题包现已发布！</title>
+    <url>/2023/02/12/moelatte/</url>
+    <content><![CDATA[<p><a class="link"   href="https://zh.moegirl.org.cn/User:GuoPC/MoeLatte" >MoeLatte <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>是基于<a class="link"   href="https://catppuccin.com/" >Catppuccin Theme <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>中的Latte调色风格制作的一款用于MoeSkin皮肤的主题包。采用了Latte中的绿—蓝系列色作为主要配色，并进行了一定调整。</p>
+<p>主题包制作：<a class="link"   href="https://zh.moegirl.org.cn/User:GuoPC" >GuoPC <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><span style="width:10px;height:10px;background-color:rgb(140, 143, 161);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(32, 159, 181);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(76, 79, 105);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(3, 105, 146);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(230, 233, 239);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(251, 252, 253);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(220, 224, 232);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(32, 159, 181);display:inline-block;"></span><span style="width:10px;height:10px;background-color:#209FB5;display:inline-block;"></span><span style="width:10px;height:10px;background-color:#04A5E5;display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(253, 251, 246);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgba(140, 143, 161, 0.1);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgba(140, 143, 161, 0.2);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(230, 233, 239);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(230, 69, 83);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(247, 248, 250);display:inline-block;"></span><span style="width:10px;height:10px;background-color:hsl(232, 10%, 53%);display:inline-block;"></span></p>
+]]></content>
+      <tags>
+        <tag>MoeSkin主题包</tag>
       </tags>
   </entry>
   <entry>
@@ -2919,14 +2883,50 @@
       </tags>
   </entry>
   <entry>
-    <title>用于MoeSkin的MoeLatte主题包现已发布！</title>
-    <url>/2023/02/12/moelatte/</url>
-    <content><![CDATA[<p><a class="link"   href="https://zh.moegirl.org.cn/User:GuoPC/MoeLatte" >MoeLatte <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>是基于<a class="link"   href="https://catppuccin.com/" >Catppuccin Theme <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>中的Latte调色风格制作的一款用于MoeSkin皮肤的主题包。采用了Latte中的绿—蓝系列色作为主要配色，并进行了一定调整。</p>
-<p>主题包制作：<a class="link"   href="https://zh.moegirl.org.cn/User:GuoPC" >GuoPC <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p><span style="width:10px;height:10px;background-color:rgb(140, 143, 161);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(32, 159, 181);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(76, 79, 105);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(3, 105, 146);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(230, 233, 239);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(251, 252, 253);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(220, 224, 232);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(32, 159, 181);display:inline-block;"></span><span style="width:10px;height:10px;background-color:#209FB5;display:inline-block;"></span><span style="width:10px;height:10px;background-color:#04A5E5;display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(253, 251, 246);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgba(140, 143, 161, 0.1);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgba(140, 143, 161, 0.2);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(230, 233, 239);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(230, 69, 83);display:inline-block;"></span><span style="width:10px;height:10px;background-color:rgb(247, 248, 250);display:inline-block;"></span><span style="width:10px;height:10px;background-color:hsl(232, 10%, 53%);display:inline-block;"></span></p>
-]]></content>
+    <title>《goin&#39; my way!!》歌词翻译</title>
+    <url>/2023/03/26/goin&#39;_my_way!!/</url>
+    <content><![CDATA[<p><strong>goin’ my way!!</strong> - TV动画《TARI TARI》插曲</p>
+<p>作词：riya；作曲：<span lang="ja">浜口史郎</span></p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>Fly　Fly　Fly<br>必要なのは輝くその瞳<br>Try　Try　Try<br>身体一つで<br>どこまでも走るmy　way</p>
+<p>心なんて形のない物を<br>いつも信じてる<br>それでもいいじゃない</p>
+<p>昨日よりも楽しくいたいから<br>どんな事があっても<br>笑い飛ばしたくて</p>
+<p>他人(ひと)は他人だって<br>解ってるけど上手くいかない<br>そんな日は手を伸ばし<br>空に触れてみよう</p>
+<p>ずっと<br>Fly　Fly　Fly<br>必要なのは輝くその瞳<br>Try　Try　Try<br>身体一つで<br>どこまでも走る</p>
+<p>二度とは無い<br>この時間を刻んで行く<br>絶対譲れないmy　way</p>
+<p>思っていた通りにならなくて<br>引き返してみる<br>それでもいいじゃない</p>
+<p>繰り返しの毎日を蹴飛ばし<br>傷つく覚悟でなら<br>何も問題ないね</p>
+<p>知らないうちに<br>大声一つ出せなくなって<br>臆病になってちゃ<br>世界は変わらない</p>
+<p>今は<br>Fly　Fly　Fly<br>必要なのはまっすぐなその瞳<br>Shine　Shine　Shine<br>想像を超えた<br>素晴らしい明日</p>
+<p>二度とは無い<br>この時間の中　生きてる<br>作り出して行くmy　way</p>
+<p>もっと<br>Fly　Fly　Fly<br>必要なのは輝くその瞳<br>Try　Try　Try<br>身体一つで<br>どこまでも走って行く</p>
+<p>何かが待ってる<br>絶対譲れないmy　way</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>Fly　Fly　Fly<br>需要的是一双闪闪发光的眼睛<br>Try　Try　Try<br>即便独自一人<br>也能沿着自己的路向目标奔去</p>
+<p>虽然总是认为心灵什么的<br>应当是无形之物<br>就这样也不错不是吗</p>
+<p>因为想要比昨日更加快乐<br>不管发生什么事<br>都会选择一笑置之</p>
+<p>自己与别人不同<br>尽管心知肚明分辨绝非易事<br>那么就试着伸出手<br>触碰蔚蓝天空吧</p>
+<p>一直<br>Fly　Fly　Fly<br>需要的是一双闪闪发光的眼睛<br>Try　Try　Try<br>即便独自一人<br>也能向目标奔去</p>
+<p>深知时不再来<br>铭记这段时光向前走去<br>绝对沿着自己的路不会让步</p>
+<p>现实常常不会顺遂心愿<br>试着回首往事<br>就这样也不错不是吗</p>
+<p>一脚踢开无趣重复的每日<br>若是做好受伤的觉悟<br>就什么都不是问题了</p>
+<p>不知不觉之间<br>畏于发出自己的声音<br>要是变得胆小怕事<br>世界就会一成不变</p>
+<p>现在就<br>Fly　Fly　Fly<br>需要的是一双耿直不讳的眼睛<br>Shine　Shine　Shine<br>超出原先的想象<br>明天万分美好</p>
+<p>深知时不再来<br>在这段时光中　活出自己<br>造出一条自己的路迈出脚步</p>
+<p>再多些<br>Fly　Fly　Fly<br>需要的是一双闪闪发光的眼睛<br>Try　Try　Try<br>即便独自一人<br>也能向目标奔去</p>
+<p>有什么在等待着<br>绝对沿着自己的路不会让步</p>
+</div>]]></content>
       <tags>
-        <tag>MoeSkin主题包</tag>
+        <tag>歌词翻译</tag>
       </tags>
   </entry>
   <entry>
@@ -3088,6 +3088,45 @@
       </tags>
   </entry>
   <entry>
+    <title>《リアルフレンド（Real Friend）》歌词翻译</title>
+    <url>/2023/05/11/real_friend/</url>
+    <content><![CDATA[<p><strong><span lang="ja">リアルフレンド</span>（Real Friend）</strong> - 游戏《魔女的夜宴》因幡巡角色歌</p>
+<p>作词：Tohko；作曲：<span lang="ja">伊福部武史</span> (Angel Notes)</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>今日もひとりぼっちで　屋上に上がる<br>時間つぶしの午後は　慣れてきたけど<br>見た目だけは明るく　派手にしてても<br>どこか追いつかないよ　こころ置き去り</p>
+<p>うわべだけなら　笑えるけど<br>どこかギクシャク　上手く馴染めない</p>
+<p>女の子はいつでも　駆け引きして<br>飾られたフレーズを　並べて<br>本音で付き合いたい　胸の奥は<br>そんなリアルフレンド　どこかに探してる</p>
+<p>いつも輪の中にいる　クラスメイトが<br>すごく羨ましくて　眩しく見えた<br>どんな話をしたら　仲良くなれる？<br>授業中そんなこと　グルグル回る</p>
+<p>鏡の中の　自分を見て<br>笑顔作って　練習してみるの</p>
+<p>時間忘れるほどに　おしゃべりして<br>買い物に出かけたり　はしゃいで<br>好きな人ができたら　報告して<br>そんな日を過ごしたい　いつかは叶うかな？</p>
+<p>勇気を出して　ほんの少し<br>声かけたいな　上手くできるかな？</p>
+<p>本当は寂しがり屋　誰かの手を<br>繋いでいたいなんて　言えない<br>強がる私の癖　もうやめたい<br>素直な言葉　聞いてほしいよ</p>
+<p>女の子はいつでも　駆け引きして<br>飾られたフレーズを　並べて<br>本音で付き合いたい　胸の奥は<br>そんなリアルフレンド　どこかに探してる</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>今天也是孤单一人　走上屋顶<br>这样消磨时间的午后　早已习惯了<br>尽管外表活泼开朗　穿着光鲜<br>却没法追到心中　想到达的地方</p>
+<p>光从表面上看来　是在吟吟笑着<br>却总是有些生硬　难以顺利融入环境</p>
+<p>女孩子总是能　做到临机应变<br>将粉饰过的语言　句句送出<br>心灵深处只想　真诚地互相交往<br>那样真实的朋友　要去哪里才能找到呢</p>
+<p>一直聚在一起的　同班同学们<br>我真的十分羡慕　看上去那么炫目<br>究竟要说些什么　关系才能变好呢？<br>上课的时候也在　反复思考着</p>
+<p>我看着　镜子里的自己<br>尝试练习　摆出一张笑脸</p>
+<p>忘记时间的流逝　与你尽情交谈<br>出门买东西的时候　也面带喜悦<br>如果有喜欢的人了　要记得报告<br>过着那种生活的愿望　何时才能实现呢？</p>
+<p>打起勇气来　就算只有一点<br>想和你搭话　能顺利地说出来吗？</p>
+<p>其实我容易寂寞　想要牵起<br>某人的手什么的　说不出口<br>逞强是我的癖性　已经想去放弃<br>好想亲耳听到　率真的话语啊</p>
+<p>女孩子总是能　做到临机应变<br>将粉饰过的语言　句句送出<br>心灵深处只想　真诚地互相交往<br>依然在不停寻找着　那样真正的朋友</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《Without You》歌词翻译</title>
     <url>/2023/05/07/without_you/</url>
     <content><![CDATA[<p><strong>Without You</strong> - 游戏《魔女的夜宴》插曲</p>
@@ -3131,45 +3170,6 @@
       </tags>
   </entry>
   <entry>
-    <title>《リアルフレンド（Real Friend）》歌词翻译</title>
-    <url>/2023/05/11/real_friend/</url>
-    <content><![CDATA[<p><strong><span lang="ja">リアルフレンド</span>（Real Friend）</strong> - 游戏《魔女的夜宴》因幡巡角色歌</p>
-<p>作词：Tohko；作曲：<span lang="ja">伊福部武史</span> (Angel Notes)</p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>今日もひとりぼっちで　屋上に上がる<br>時間つぶしの午後は　慣れてきたけど<br>見た目だけは明るく　派手にしてても<br>どこか追いつかないよ　こころ置き去り</p>
-<p>うわべだけなら　笑えるけど<br>どこかギクシャク　上手く馴染めない</p>
-<p>女の子はいつでも　駆け引きして<br>飾られたフレーズを　並べて<br>本音で付き合いたい　胸の奥は<br>そんなリアルフレンド　どこかに探してる</p>
-<p>いつも輪の中にいる　クラスメイトが<br>すごく羨ましくて　眩しく見えた<br>どんな話をしたら　仲良くなれる？<br>授業中そんなこと　グルグル回る</p>
-<p>鏡の中の　自分を見て<br>笑顔作って　練習してみるの</p>
-<p>時間忘れるほどに　おしゃべりして<br>買い物に出かけたり　はしゃいで<br>好きな人ができたら　報告して<br>そんな日を過ごしたい　いつかは叶うかな？</p>
-<p>勇気を出して　ほんの少し<br>声かけたいな　上手くできるかな？</p>
-<p>本当は寂しがり屋　誰かの手を<br>繋いでいたいなんて　言えない<br>強がる私の癖　もうやめたい<br>素直な言葉　聞いてほしいよ</p>
-<p>女の子はいつでも　駆け引きして<br>飾られたフレーズを　並べて<br>本音で付き合いたい　胸の奥は<br>そんなリアルフレンド　どこかに探してる</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>今天也是孤单一人　走上屋顶<br>这样消磨时间的午后　早已习惯了<br>尽管外表活泼开朗　穿着光鲜<br>却没法追到心中　想到达的地方</p>
-<p>光从表面上看来　是在吟吟笑着<br>却总是有些生硬　难以顺利融入环境</p>
-<p>女孩子总是能　做到临机应变<br>将粉饰过的语言　句句送出<br>心灵深处只想　真诚地互相交往<br>那样真实的朋友　要去哪里才能找到呢</p>
-<p>一直聚在一起的　同班同学们<br>我真的十分羡慕　看上去那么炫目<br>究竟要说些什么　关系才能变好呢？<br>上课的时候也在　反复思考着</p>
-<p>我看着　镜子里的自己<br>尝试练习　摆出一张笑脸</p>
-<p>忘记时间的流逝　与你尽情交谈<br>出门买东西的时候　也面带喜悦<br>如果有喜欢的人了　要记得报告<br>过着那种生活的愿望　何时才能实现呢？</p>
-<p>打起勇气来　就算只有一点<br>想和你搭话　能顺利地说出来吗？</p>
-<p>其实我容易寂寞　想要牵起<br>某人的手什么的　说不出口<br>逞强是我的癖性　已经想去放弃<br>好想亲耳听到　率真的话语啊</p>
-<p>女孩子总是能　做到临机应变<br>将粉饰过的语言　句句送出<br>心灵深处只想　真诚地互相交往<br>依然在不停寻找着　那样真正的朋友</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《Midday Star》歌词翻译</title>
     <url>/2023/05/17/midday_star/</url>
     <content><![CDATA[<p><strong>Midday Star</strong> - 游戏《魔女的夜宴》户隐憧子角色歌</p>
@@ -3206,40 +3206,6 @@
 <p>正午时闪耀着的群星　就像飘舞着的火焰<br>映出犹疑二人的光芒　温和地引导</p>
 <p>心意总是虚实难辨　秘密也是妖娆魅人<br>就让我悄悄告诉你　无人知晓的真相<br>只与你言说</p>
 </div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《はなさくいろは（花开伊吕波）》歌词翻译</title>
-    <url>/2023/08/02/hana_saku_iroha/</url>
-    <content><![CDATA[<p><strong><span lang="ja">はなさくいろは</span>（花开伊吕波）</strong> - TV动画《花开伊吕波》片尾曲</p>
-<p>作词：<span lang="ja">原田郁子</span>；作曲：<span lang="ja">ミト</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>ブルー　イエロー　パープル　レッド　溜め息のいろいろは<br>あの日の後ろ姿　まぶたの裏で揺れる<br>ひい　ふう　み　よ　いっつ　むう　なな　や　喜びのいろいろは<br>あなたが教えてくれた　言葉にならない想い<br>何度も　何度も　思い出す</p>
-<p>風のまにまにふっと　輝くプリズム<br>うつろいながらもきっと<br>夢にみた場所へと　近づいてゆける<br>とまどいながらもそっと　手をのばしてみる<br>まだ見ぬ空　いつか　花咲く頃</p>
-<p>帰り道　忘れても<br>それぞれの　旅はつづいてく<br>胸の奥　ともる火よ<br>あぁ　どうか　消えないでいて</p>
-<p>ブルー　イエロー　パープル　レッド　溜め息のいろいろは<br>確かめてみたいこと　ひとつだけ　あるの<br>ひい　ふう　み　よ　いっつ　むう　なな　や　喜びのいろいろは<br>渇いた喉からこぼれる　なつかしいメロディ<br>何度も　何度も　口ずさむ</p>
-<p>風のまにまにふっと　輝くプリズム<br>うつろいながらもきっと<br>夢にみた場所へと　近づいてゆける<br>とまどいながらもそっと　手をのばしてみる</p>
-<p>まだ見ぬ空　その先へと　いつか　花咲く頃</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>蓝色　黄色　紫色　红色　叹息的声音悄悄传出<br>那一天你的背影　在我的眼中摇曳<br>一　二　三　四　五　六　七　八　喜悦的心情渐渐显露<br>是你所告诉我的　无法言说的思念<br>无数次　无数次　回荡在脑海</p>
-<p>随风飘舞着的　闪闪发光的棱镜<br>就这样不停变换一定能<br>朝梦中所见之处　一步一步靠近<br>尽管心生迷惘也要试着　缓缓将手伸出<br>未曾见过的天空　也定有　花开之时</p>
-<p>即便忘记了　回家的路<br>人们各自的　旅程仍在继续<br>照亮心底的　点点灯火<br>啊　请一定　不要就此熄灭</p>
-<p>蓝色　黄色　紫色　红色　叹息的声音悄悄传出<br>心里有一件　想要确认的　事情<br>一　二　三　四　五　六　七　八　喜悦的心情渐渐显露<br>干涸的喉咙流淌出　令人怀念的旋律<br>一次次　一次次　轻轻地哼唱</p>
-<p>随风飘舞着的　闪闪发光的棱镜<br>就这样不停变换一定能<br>朝梦中所见之处　一步一步靠近<br>尽管心生迷惘也要试着　缓缓将手伸出</p>
-<p>未曾见过的天空　在那之后　也定有　花开之时</p>
-</div>
-]]></content>
       <tags>
         <tag>歌词翻译</tag>
       </tags>
@@ -3313,6 +3279,41 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
+    <title>《My Dear》歌词翻译</title>
+    <url>/2023/06/30/my_dear/</url>
+    <content><![CDATA[<p><strong>My Dear</strong> - 游戏《管乐恋曲》片尾曲</p>
+<p>作词：<span lang="ja">中山♥マミ</span>；作曲：Famishin</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>淡い桃色の花びらが　舞い散る頃<br>陽だまりと共に微笑む　あなたと巡り逢った<br>過ごす日々たちと　移りゆく季節の中<br>刻んできた時は全てが　宝物</p>
+<p>悩みもがいた涙も　喜び溢れた涙<br>いつも隣で見守られてた<br>同じことを感じてた　一緒に歩いてきたことも<br>かけがえのない想い出</p>
+<p>二人で描いた　美しいこのメロディ<br>この先もずっと続きを　奏でていけたらいいな</p>
+<p>あなたがいたから　毎日が輝いてた<br>誰かを愛する気持ちにも　会えたから<br>叶えたい夢と希望　胸に強く抱けたのも<br>いつも一人ではなかったから</p>
+<p>移り変わった季節の　それぞれに詰まった軌跡は<br>かけがえのない想い出</p>
+<p>そうして生まれた　美しいこのメロディ<br>この先も永遠に続きを　奏でていこうね　my dear</p>
+<p>二人で描いた　美しいこのメロディ<br>この先もずっと続きを　奏でていきたいの<br>照れくさいけれど　伝えたいことがあるの<br>私に出逢ってくれたこと　心からありがとう</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>当片片粉红的花瓣　轻轻飘落之时<br>我同微笑着的你相遇　如同暖阳照进心房<br>一起度过的每天　与不断更迭的季节<br>刻画出的时光全都是　珍贵之物</p>
+<p>是因苦闷焦急落泪　又或因欢喜而泣<br>你总是在一旁守护着我<br>一同感受到的事物　一齐迈步走过的路途<br>都是无可替代的回忆</p>
+<p>两个人共同描绘　这美丽动听的旋律<br>只希望从今往后得以　时时奏响余音缭绕</p>
+<p>有你陪在我的身边　每天都闪闪发光<br>托付出名为爱的感情　只为与你邂逅<br>心里得以怀揣着　要实现的梦想与希望<br>正因为我并不是孤身一人</p>
+<p>不断变换的季节里　两个人留下的足迹<br>就是彼此独特的回忆</p>
+<p>如此诞生而出的　这美妙迷人的旋律<br>就让我们一起永远　演奏下去吧　亲爱之人</p>
+<p>两个人共同描绘　这美丽动听的旋律<br>只希望从今往后得以　时时奏响余音缭绕<br>虽然有些感到羞涩　也有想传达出的话语<br>发自内心真诚感谢你　最终能够与我相遇</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《true drop》歌词翻译</title>
     <url>/2023/07/22/true_drop/</url>
     <content><![CDATA[<p><strong>true drop</strong> - 游戏《E×E》片尾曲</p>
@@ -3344,36 +3345,35 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
-    <title>《My Dear》歌词翻译</title>
-    <url>/2023/06/30/my_dear/</url>
-    <content><![CDATA[<p><strong>My Dear</strong> - 游戏《管乐恋曲》片尾曲</p>
-<p>作词：<span lang="ja">中山♥マミ</span>；作曲：Famishin</p>
+    <title>《はなさくいろは（花开伊吕波）》歌词翻译</title>
+    <url>/2023/08/02/hana_saku_iroha/</url>
+    <content><![CDATA[<p><strong><span lang="ja">はなさくいろは</span>（花开伊吕波）</strong> - TV动画《花开伊吕波》片尾曲</p>
+<p>作词：<span lang="ja">原田郁子</span>；作曲：<span lang="ja">ミト</span></p>
 <hr>
 <p><strong>歌词</strong></p>
 <p><em>注：歌词著作权归原作者所有。</em></p>
 <div lang="ja" style="white-space: pre;">
 
-<p>淡い桃色の花びらが　舞い散る頃<br>陽だまりと共に微笑む　あなたと巡り逢った<br>過ごす日々たちと　移りゆく季節の中<br>刻んできた時は全てが　宝物</p>
-<p>悩みもがいた涙も　喜び溢れた涙<br>いつも隣で見守られてた<br>同じことを感じてた　一緒に歩いてきたことも<br>かけがえのない想い出</p>
-<p>二人で描いた　美しいこのメロディ<br>この先もずっと続きを　奏でていけたらいいな</p>
-<p>あなたがいたから　毎日が輝いてた<br>誰かを愛する気持ちにも　会えたから<br>叶えたい夢と希望　胸に強く抱けたのも<br>いつも一人ではなかったから</p>
-<p>移り変わった季節の　それぞれに詰まった軌跡は<br>かけがえのない想い出</p>
-<p>そうして生まれた　美しいこのメロディ<br>この先も永遠に続きを　奏でていこうね　my dear</p>
-<p>二人で描いた　美しいこのメロディ<br>この先もずっと続きを　奏でていきたいの<br>照れくさいけれど　伝えたいことがあるの<br>私に出逢ってくれたこと　心からありがとう</p>
+<p>ブルー　イエロー　パープル　レッド　溜め息のいろいろは<br>あの日の後ろ姿　まぶたの裏で揺れる<br>ひい　ふう　み　よ　いっつ　むう　なな　や　喜びのいろいろは<br>あなたが教えてくれた　言葉にならない想い<br>何度も　何度も　思い出す</p>
+<p>風のまにまにふっと　輝くプリズム<br>うつろいながらもきっと<br>夢にみた場所へと　近づいてゆける<br>とまどいながらもそっと　手をのばしてみる<br>まだ見ぬ空　いつか　花咲く頃</p>
+<p>帰り道　忘れても<br>それぞれの　旅はつづいてく<br>胸の奥　ともる火よ<br>あぁ　どうか　消えないでいて</p>
+<p>ブルー　イエロー　パープル　レッド　溜め息のいろいろは<br>確かめてみたいこと　ひとつだけ　あるの<br>ひい　ふう　み　よ　いっつ　むう　なな　や　喜びのいろいろは<br>渇いた喉からこぼれる　なつかしいメロディ<br>何度も　何度も　口ずさむ</p>
+<p>風のまにまにふっと　輝くプリズム<br>うつろいながらもきっと<br>夢にみた場所へと　近づいてゆける<br>とまどいながらもそっと　手をのばしてみる</p>
+<p>まだ見ぬ空　その先へと　いつか　花咲く頃</p>
 </div>
 
 <hr>
 <p><strong>翻译</strong></p>
 <div style="white-space: pre;">
 
-<p>当片片粉红的花瓣　轻轻飘落之时<br>我同微笑着的你相遇　如同暖阳照进心房<br>一起度过的每天　与不断更迭的季节<br>刻画出的时光全都是　珍贵之物</p>
-<p>是因苦闷焦急落泪　又或因欢喜而泣<br>你总是在一旁守护着我<br>一同感受到的事物　一齐迈步走过的路途<br>都是无可替代的回忆</p>
-<p>两个人共同描绘　这美丽动听的旋律<br>只希望从今往后得以　时时奏响余音缭绕</p>
-<p>有你陪在我的身边　每天都闪闪发光<br>托付出名为爱的感情　只为与你邂逅<br>心里得以怀揣着　要实现的梦想与希望<br>正因为我并不是孤身一人</p>
-<p>不断变换的季节里　两个人留下的足迹<br>就是彼此独特的回忆</p>
-<p>如此诞生而出的　这美妙迷人的旋律<br>就让我们一起永远　演奏下去吧　亲爱之人</p>
-<p>两个人共同描绘　这美丽动听的旋律<br>只希望从今往后得以　时时奏响余音缭绕<br>虽然有些感到羞涩　也有想传达出的话语<br>发自内心真诚感谢你　最终能够与我相遇</p>
-</div>]]></content>
+<p>蓝色　黄色　紫色　红色　叹息的声音悄悄传出<br>那一天你的背影　在我的眼中摇曳<br>一　二　三　四　五　六　七　八　喜悦的心情渐渐显露<br>是你所告诉我的　无法言说的思念<br>无数次　无数次　回荡在脑海</p>
+<p>随风飘舞着的　闪闪发光的棱镜<br>就这样不停变换一定能<br>朝梦中所见之处　一步一步靠近<br>尽管心生迷惘也要试着　缓缓将手伸出<br>未曾见过的天空　也定有　花开之时</p>
+<p>即便忘记了　回家的路<br>人们各自的　旅程仍在继续<br>照亮心底的　点点灯火<br>啊　请一定　不要就此熄灭</p>
+<p>蓝色　黄色　紫色　红色　叹息的声音悄悄传出<br>心里有一件　想要确认的　事情<br>一　二　三　四　五　六　七　八　喜悦的心情渐渐显露<br>干涸的喉咙流淌出　令人怀念的旋律<br>一次次　一次次　轻轻地哼唱</p>
+<p>随风飘舞着的　闪闪发光的棱镜<br>就这样不停变换一定能<br>朝梦中所见之处　一步一步靠近<br>尽管心生迷惘也要试着　缓缓将手伸出</p>
+<p>未曾见过的天空　在那之后　也定有　花开之时</p>
+</div>
+]]></content>
       <tags>
         <tag>歌词翻译</tag>
       </tags>
@@ -3454,6 +3454,37 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
 ]]></content>
       <tags>
         <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Stelpolvo Sans字体现已发布！</title>
+    <url>/2023/12/29/stelpolvo_sans/</url>
+    <content><![CDATA[<p>项目地址：<a class="link"   href="https://github.com/GuoPCinGitHub/StelpolvoSans" >GuoPCinGitHub&#x2F;StelpolvoSans <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>在线试用地址：<a href="https://guopcingithub.github.io/StelpolvoSans">Stelpolvo Sans</a></p>
+<p>欢迎为项目star或提issue！</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/img/StelpolvoSans-1.PNG"
+                      alt="StelpolvoSans-1" title="封面"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/img/StelpolvoSans-2.PNG"
+                      alt="StelpolvoSans-2" title="简介：Stelpolvo Sans 字体基于动画《星灵感应》中以世界语为原型的宇宙语字母制作而成。Stelpolvo 在世界语中意为星尘。"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/img/StelpolvoSans-3.PNG"
+                      alt="StelpolvoSans-3" title="安装：可直接下载 TTF 文件后安装。WOFF 文件亦有提供，可根据需求取用。"
+                ></p>
+<p><img src="/img/StelpolvoSans-4.PNG" alt="StelpolvoSans-4" title="使用：A ~ P (a ~ p) / R ~ V (r ~ v) / Z (z) 可直接通过键盘输入。Ĉ (ĉ) / Ĝ (ĝ) / Ĥ (ĥ) / Ĵ (ĵ) / Ŝ (ŝ) / Ŭ (ŭ) 亦可直接输入，或通过输入对应无修饰符字母，后加 X (x) 得到，如输入“cx”得到“ĉ”。"></p>
+<p><img src="/img/StelpolvoSans-5.PNG" alt="StelpolvoSans-5" title="许可：本字体依照 SIL Open Font License 1.1 进行许可。您可以：自由下载传播、个人或商业使用、安装和嵌入字体、修改和重新分发；您不得：单独售卖此字体、将修改后字体以其他许可发布。协议原文见 http://scripts.sil.org/OFL。"></p>
+]]></content>
+      <tags>
+        <tag>字体</tag>
       </tags>
   </entry>
   <entry>
@@ -3552,37 +3583,6 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
 ]]></content>
       <tags>
         <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Stelpolvo Sans字体现已发布！</title>
-    <url>/2023/12/29/stelpolvo_sans/</url>
-    <content><![CDATA[<p>项目地址：<a class="link"   href="https://github.com/GuoPCinGitHub/StelpolvoSans" >GuoPCinGitHub&#x2F;StelpolvoSans <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p>在线试用地址：<a href="https://guopcingithub.github.io/StelpolvoSans">Stelpolvo Sans</a></p>
-<p>欢迎为项目star或提issue！</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/img/StelpolvoSans-1.PNG"
-                      alt="StelpolvoSans-1" title="封面"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/img/StelpolvoSans-2.PNG"
-                      alt="StelpolvoSans-2" title="简介：Stelpolvo Sans 字体基于动画《星灵感应》中以世界语为原型的宇宙语字母制作而成。Stelpolvo 在世界语中意为星尘。"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/img/StelpolvoSans-3.PNG"
-                      alt="StelpolvoSans-3" title="安装：可直接下载 TTF 文件后安装。WOFF 文件亦有提供，可根据需求取用。"
-                ></p>
-<p><img src="/img/StelpolvoSans-4.PNG" alt="StelpolvoSans-4" title="使用：A ~ P (a ~ p) / R ~ V (r ~ v) / Z (z) 可直接通过键盘输入。Ĉ (ĉ) / Ĝ (ĝ) / Ĥ (ĥ) / Ĵ (ĵ) / Ŝ (ŝ) / Ŭ (ŭ) 亦可直接输入，或通过输入对应无修饰符字母，后加 X (x) 得到，如输入“cx”得到“ĉ”。"></p>
-<p><img src="/img/StelpolvoSans-5.PNG" alt="StelpolvoSans-5" title="许可：本字体依照 SIL Open Font License 1.1 进行许可。您可以：自由下载传播、个人或商业使用、安装和嵌入字体、修改和重新分发；您不得：单独售卖此字体、将修改后字体以其他许可发布。协议原文见 http://scripts.sil.org/OFL。"></p>
-]]></content>
-      <tags>
-        <tag>字体</tag>
       </tags>
   </entry>
   <entry>
@@ -3730,6 +3730,41 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
+    <title>《MUGEN∞MIRAI》歌词翻译</title>
+    <url>/2024/01/23/mugen_mirai/</url>
+    <content><![CDATA[<p><strong>MUGEN∞MIRAI</strong> - 游戏《天神乱漫》片尾曲</p>
+<p>作词：<span lang="ja">神代あみ</span>；作曲：Famishin</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>映画みたいな日々に憧れて<br>無いものねだりばかりしていた<br>水たまりの中の空　蹴散らして<br><ruby>現実<rt>リアル</rt></ruby>に飛び込んでみたよ</p>
+<p>英語のテストより　ずっと難しいわ<br>Ah…想い届かなくて<br>追いかけるほどに　すれ違うこともあるね</p>
+<p>My dear friends　笑って、支えあって<br>時に喧嘩して　仲直りして<br>無限の未来は<br>繋いだ手と手から生まれてくんだね<br>とびきりのミラクルは<br>いつもすぐそばにある</p>
+<p>フシギで満ちてるこの世界は<br>解らないことだらけ！だけれど…<br>もし、何でも簡単に叶ったら？<br>退屈で味気ないよね</p>
+<p>Ah!ひとりじゃ解けない　人生のナゾナゾ<br>そう、隠された「鍵」は<br>大切な<ruby>君<rt>きみ</rt></ruby>と　ココロ合わせてく絆！</p>
+<p>My dear friends　これからもよろしくね☆<br>君と一緒に歩いていきたい<br>無限の未来は<br>「自分たち次第」なら<br>悩んでるより身体中で感じたい<br>めいっぱい輝こうよ！</p>
+<p>My dear friends　笑って、支えあって<br>時に喧嘩して　仲直りして<br>無限の未来は<br>繋いだ手と手から生まれてくんだね<br>とびきりのミラクルは<br>いつもすぐそばにある</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>憧憬着如电影一般的日子<br>我不禁艳羡他人的美好生活<br>把水洼中映出的天空　肆意踢散<br>试着跳进现实之中吧</p>
+<p>比起英语测试　还要难上不少<br>Ah…心意无法传达<br>我不停地追赶　有时又会擦肩而过</p>
+<p>My dear friends　欢笑着，相互依靠吧<br>偶尔争执不下　再重归于好吧<br>无限的未来<br>是会从相牵的手中创造而出的<br>美妙的奇迹<br>总会存在于我们身边</p>
+<p>充满着不可思议的世界<br>尽是不解的事物！虽然如此…<br>要是，什么愿望都能轻松实现？<br>也会觉得无趣乏味吧</p>
+<p>Ah!一个人无法解开的　人生的种种谜题<br>原来，隐藏着的「钥匙」是<br>同重要的你　心心相印的牵绊！</p>
+<p>My dear friends　从今以后也请多关照☆<br>想与你相伴一起走向前方<br>无限的未来<br>「取决于我们自己」的话<br>与其烦恼更想去全身心感受<br>以全力散发出光辉吧！</p>
+<p>My dear friends　欢笑着，相互依靠吧<br>偶尔争执不下　再重归于好吧<br>无限的未来<br>是会从相牵的手中创造而出的<br>美妙的奇迹<br>总会存在于我们身边</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>奈奈濑奉莉</title>
     <url>/2024/01/22/nanase_matsuri/</url>
     <content><![CDATA[<p><strong>奈奈濑奉莉</strong> 是fairys发行游戏 <strong>《现在就想告诉哥哥，我是妹妹！》</strong> 及其衍生作品的登场角色，女主角之一。</p>
@@ -3818,35 +3853,35 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
-    <title>《MUGEN∞MIRAI》歌词翻译</title>
-    <url>/2024/01/23/mugen_mirai/</url>
-    <content><![CDATA[<p><strong>MUGEN∞MIRAI</strong> - 游戏《天神乱漫》片尾曲</p>
-<p>作词：<span lang="ja">神代あみ</span>；作曲：Famishin</p>
+    <title>《小さな願い（小小的愿望）》歌词翻译</title>
+    <url>/2024/01/26/chiisana_negai/</url>
+    <content><![CDATA[<p><strong><span lang="ja">小さな願い</span>（小小的愿望）</strong> - 游戏《天神乱漫》龙胆琉璃角色歌</p>
+<p>作词：kala；作曲：Famishin</p>
 <hr>
 <p><strong>歌词</strong></p>
 <p><em>注：歌词著作权归原作者所有。</em></p>
 <div lang="ja" style="white-space: pre;">
 
-<p>映画みたいな日々に憧れて<br>無いものねだりばかりしていた<br>水たまりの中の空　蹴散らして<br><ruby>現実<rt>リアル</rt></ruby>に飛び込んでみたよ</p>
-<p>英語のテストより　ずっと難しいわ<br>Ah…想い届かなくて<br>追いかけるほどに　すれ違うこともあるね</p>
-<p>My dear friends　笑って、支えあって<br>時に喧嘩して　仲直りして<br>無限の未来は<br>繋いだ手と手から生まれてくんだね<br>とびきりのミラクルは<br>いつもすぐそばにある</p>
-<p>フシギで満ちてるこの世界は<br>解らないことだらけ！だけれど…<br>もし、何でも簡単に叶ったら？<br>退屈で味気ないよね</p>
-<p>Ah!ひとりじゃ解けない　人生のナゾナゾ<br>そう、隠された「鍵」は<br>大切な<ruby>君<rt>きみ</rt></ruby>と　ココロ合わせてく絆！</p>
-<p>My dear friends　これからもよろしくね☆<br>君と一緒に歩いていきたい<br>無限の未来は<br>「自分たち次第」なら<br>悩んでるより身体中で感じたい<br>めいっぱい輝こうよ！</p>
-<p>My dear friends　笑って、支えあって<br>時に喧嘩して　仲直りして<br>無限の未来は<br>繋いだ手と手から生まれてくんだね<br>とびきりのミラクルは<br>いつもすぐそばにある</p>
+<p>いつでも　どこでも　一緒に　居たいの<br>あなたが　大好き　お菓子も　大好き</p>
+<p>ボーっと風に吹かれ　しっぼの手入れして<br>あなたの帰り　待つの　プレゼント　探しながら</p>
+<p>La La La　くちずさむ　一人寂しい気持ち<br>みんなの輪に　「入れて」　そう言えたらいいな</p>
+<p>いつでも　しあわせ　そばにね　居れたら<br>あなたが　大好き　一番　大好き</p>
+<p>ぽかぽかな午後の　香りを匂って<br>あなたの帰り　待つの　恋しさを　抱えながら</p>
+<p>La La La　わたしにも　いつか見つかるかな<br>大きく変わる世界　安らげるその場所</p>
+<p>La La La　くちずさむ　もっと愛しい気持ち<br>どこにいても　ずっと　あなたに会いたいな</p>
 </div>
 
 <hr>
 <p><strong>翻译</strong></p>
 <div style="white-space: pre;">
 
-<p>憧憬着如电影一般的日子<br>我不禁艳羡他人的美好生活<br>把水洼中映出的天空　肆意踢散<br>试着跳进现实之中吧</p>
-<p>比起英语测试　还要难上不少<br>Ah…心意无法传达<br>我不停地追赶　有时又会擦肩而过</p>
-<p>My dear friends　欢笑着，相互依靠吧<br>偶尔争执不下　再重归于好吧<br>无限的未来<br>是会从相牵的手中创造而出的<br>美妙的奇迹<br>总会存在于我们身边</p>
-<p>充满着不可思议的世界<br>尽是不解的事物！虽然如此…<br>要是，什么愿望都能轻松实现？<br>也会觉得无趣乏味吧</p>
-<p>Ah!一个人无法解开的　人生的种种谜题<br>原来，隐藏着的「钥匙」是<br>同重要的你　心心相印的牵绊！</p>
-<p>My dear friends　从今以后也请多关照☆<br>想与你相伴一起走向前方<br>无限的未来<br>「取决于我们自己」的话<br>与其烦恼更想去全身心感受<br>以全力散发出光辉吧！</p>
-<p>My dear friends　欢笑着，相互依靠吧<br>偶尔争执不下　再重归于好吧<br>无限的未来<br>是会从相牵的手中创造而出的<br>美妙的奇迹<br>总会存在于我们身边</p>
+<p>无论何时　无论何地　都想和你　待在一起<br>这样的你　最喜欢了　小点心也　最喜欢了</p>
+<p>风儿突然吹起　我梳理着尾巴<br>静静等待着　你回来　前去寻找　神秘的礼物</p>
+<p>La La La　轻轻地哼着　孤独一人的心情<br>大家围成圈子　「快进来」　能这样邀请我最好了</p>
+<p>时刻都会　感到幸福　只要你能　陪在身边<br>这样的你　最喜欢了　是我心里　最喜欢的</p>
+<p>午后暖洋洋的　散发着香甜的气息<br>静静等待着　你回来　默默怀揣　爱恋的心意</p>
+<p>La La La　我自己也　终有一天可以找到吧<br>变化巨大的世界里　让我能够安心的地方</p>
+<p>La La La　轻轻地哼着　爱慕万分的心情<br>不管在哪里　都想　前去与你相见</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -3890,35 +3925,37 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
-    <title>《小さな願い（小小的愿望）》歌词翻译</title>
-    <url>/2024/01/26/chiisana_negai/</url>
-    <content><![CDATA[<p><strong><span lang="ja">小さな願い</span>（小小的愿望）</strong> - 游戏《天神乱漫》龙胆琉璃角色歌</p>
-<p>作词：kala；作曲：Famishin</p>
+    <title>《With You!!》歌词翻译</title>
+    <url>/2024/01/31/with_you/</url>
+    <content><![CDATA[<p><strong>With You!!</strong> - 游戏《天神乱漫》千岁佐奈角色歌</p>
+<p>作词：<span lang="ja">神代あみ</span>；作曲：Famishin</p>
 <hr>
 <p><strong>歌词</strong></p>
 <p><em>注：歌词著作权归原作者所有。</em></p>
 <div lang="ja" style="white-space: pre;">
 
-<p>いつでも　どこでも　一緒に　居たいの<br>あなたが　大好き　お菓子も　大好き</p>
-<p>ボーっと風に吹かれ　しっぼの手入れして<br>あなたの帰り　待つの　プレゼント　探しながら</p>
-<p>La La La　くちずさむ　一人寂しい気持ち<br>みんなの輪に　「入れて」　そう言えたらいいな</p>
-<p>いつでも　しあわせ　そばにね　居れたら<br>あなたが　大好き　一番　大好き</p>
-<p>ぽかぽかな午後の　香りを匂って<br>あなたの帰り　待つの　恋しさを　抱えながら</p>
-<p>La La La　わたしにも　いつか見つかるかな<br>大きく変わる世界　安らげるその場所</p>
-<p>La La La　くちずさむ　もっと愛しい気持ち<br>どこにいても　ずっと　あなたに会いたいな</p>
+<p>大好きなあなたと　いつでもそばにいたいだけなの···！！</p>
+<p>もう朝だよ？早く起きてね<br>朝ごはんもできてるから、たくさん食べてね<br>腕組んで学校へ行こう<br>一緒にいられる<ruby>時間<rb>とき</rb></ruby>が私の宝物です</p>
+<p>ちょっと可愛い　クラスメイトのあの娘に<br>そんな優しい顔で笑いかけないで！<br>妬けちゃうから···</p>
+<p>大好きなあなたと　いつでもそばにいたいだけなのに<br>素直になれなくて　そっぽ向いたり　可愛くなれない<br>もどかしい気持ちを伝えられたら　何か変わるかな？<br>こんな私だけど　きっと誰より、あなたが好きです！！</p>
+<p>大丈夫？心配になる<br>世話が焼けちゃう　でも　本当はそんなトコも好き（笑）<br>大切な優しい家族と<br>そして、あなたに包まれる日々が幸せです</p>
+<p>あなたのこと　ひとりじめしたい！<br>···ワガママだってわかっているけど<br>時々止められなくなるの</p>
+<p>大好きなあなたを　一途な愛で見守っていたい<br>あなたがいてくれて　毎日がそう、特別なのです<br>ラッキーガールになるよ　あなたのために　なんだってしちゃう！<br>だから、どうかお願い　私のことを見ててください</p>
+<p>大好きなあなたと　いつでもそばにいたいだけなのに<br>素直になれなくて　そっぼ向いたり　可愛くなれない<br>もどかしい気持ちを伝えられたら　何か変わるかな？<br>こんな私だけど　きっと誰より、あなたが好きです！！</p>
 </div>
 
 <hr>
 <p><strong>翻译</strong></p>
 <div style="white-space: pre;">
 
-<p>无论何时　无论何地　都想和你　待在一起<br>这样的你　最喜欢了　小点心也　最喜欢了</p>
-<p>风儿突然吹起　我梳理着尾巴<br>静静等待着　你回来　前去寻找　神秘的礼物</p>
-<p>La La La　轻轻地哼着　孤独一人的心情<br>大家围成圈子　「快进来」　能这样邀请我最好了</p>
-<p>时刻都会　感到幸福　只要你能　陪在身边<br>这样的你　最喜欢了　是我心里　最喜欢的</p>
-<p>午后暖洋洋的　散发着香甜的气息<br>静静等待着　你回来　默默怀揣　爱恋的心意</p>
-<p>La La La　我自己也　终有一天可以找到吧<br>变化巨大的世界里　让我能够安心的地方</p>
-<p>La La La　轻轻地哼着　爱慕万分的心情<br>不管在哪里　都想　前去与你相见</p>
+<p>只想要一直陪在　自己心里最喜欢的你的身边…！！</p>
+<p>已经到早上了哟？赶快起床吧<br>早餐也已经准备好了，要多吃一些喔<br>挽着胳膊一起去上学吧<br>和你在一起的时间是我的珍贵之物</p>
+<p>不要朝着有些　可爱的同班的那个女生<br>露出那样亲切温柔的笑容！<br>我会吃醋的啦…</p>
+<p>明明只想一直陪在　自己心里最喜欢的你的身边<br>却没法变得坦率　目光躲向一旁　完全可爱不起来<br>若是将这焦急的心绪传达而出　会有什么变化吗？<br>即便是这样的我　也会比任何人，都要喜欢着你！！</p>
+<p>没事吧？我很担心你<br>虽然照顾有些费神　不过　实际上自己很喜欢这样（笑）<br>被重要且温柔的家人<br>再加上，你一起围在身旁的日子非常幸福</p>
+<p>想要独自占有　与你有关的一切！<br>…我也知道想着这些十分任性<br>但有时也会这样不能自已</p>
+<p>想用这专一的爱　永远守护着心里最喜欢的你<br>有你伴我同行的　每一天都是，这么的特别<br>我会成为幸运的女孩　只要是为了你　我什么都愿意做！<br>所以，请务必一直　像这样注视着我的身姿</p>
+<p>明明只想一直陪在　自己心里最喜欢的你的身边<br>却没法变得坦率　目光躲向一旁　完全可爱不起来<br>若是将这焦急的心绪传达而出　会有什么变化吗？<br>即便是这样的我　也会比任何人，都要喜欢着你！！</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -3997,43 +4034,6 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
 <p>如果寻见了　真正的自己<br>注视着的目光　还请别再移开<br>只有对我说出那句“喜欢”<br>才让我真正感觉到自己坚强的事实</p>
 <p>朝着逐渐出现变化的世界<br>踏出脚步的我们二人<br>都坚定地相信充盈而出的<br>这份心意就是真实</p>
 <p>互相伸出的手若是　交叠在一起<br>那就紧紧握住不要轻易松开<br>二人相依相伴迈出步伐吧<br>走向洒满阳光的未来</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《With You!!》歌词翻译</title>
-    <url>/2024/01/31/with_you/</url>
-    <content><![CDATA[<p><strong>With You!!</strong> - 游戏《天神乱漫》千岁佐奈角色歌</p>
-<p>作词：<span lang="ja">神代あみ</span>；作曲：Famishin</p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>大好きなあなたと　いつでもそばにいたいだけなの···！！</p>
-<p>もう朝だよ？早く起きてね<br>朝ごはんもできてるから、たくさん食べてね<br>腕組んで学校へ行こう<br>一緒にいられる<ruby>時間<rb>とき</rb></ruby>が私の宝物です</p>
-<p>ちょっと可愛い　クラスメイトのあの娘に<br>そんな優しい顔で笑いかけないで！<br>妬けちゃうから···</p>
-<p>大好きなあなたと　いつでもそばにいたいだけなのに<br>素直になれなくて　そっぽ向いたり　可愛くなれない<br>もどかしい気持ちを伝えられたら　何か変わるかな？<br>こんな私だけど　きっと誰より、あなたが好きです！！</p>
-<p>大丈夫？心配になる<br>世話が焼けちゃう　でも　本当はそんなトコも好き（笑）<br>大切な優しい家族と<br>そして、あなたに包まれる日々が幸せです</p>
-<p>あなたのこと　ひとりじめしたい！<br>···ワガママだってわかっているけど<br>時々止められなくなるの</p>
-<p>大好きなあなたを　一途な愛で見守っていたい<br>あなたがいてくれて　毎日がそう、特別なのです<br>ラッキーガールになるよ　あなたのために　なんだってしちゃう！<br>だから、どうかお願い　私のことを見ててください</p>
-<p>大好きなあなたと　いつでもそばにいたいだけなのに<br>素直になれなくて　そっぼ向いたり　可愛くなれない<br>もどかしい気持ちを伝えられたら　何か変わるかな？<br>こんな私だけど　きっと誰より、あなたが好きです！！</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>只想要一直陪在　自己心里最喜欢的你的身边…！！</p>
-<p>已经到早上了哟？赶快起床吧<br>早餐也已经准备好了，要多吃一些喔<br>挽着胳膊一起去上学吧<br>和你在一起的时间是我的珍贵之物</p>
-<p>不要朝着有些　可爱的同班的那个女生<br>露出那样亲切温柔的笑容！<br>我会吃醋的啦…</p>
-<p>明明只想一直陪在　自己心里最喜欢的你的身边<br>却没法变得坦率　目光躲向一旁　完全可爱不起来<br>若是将这焦急的心绪传达而出　会有什么变化吗？<br>即便是这样的我　也会比任何人，都要喜欢着你！！</p>
-<p>没事吧？我很担心你<br>虽然照顾有些费神　不过　实际上自己很喜欢这样（笑）<br>被重要且温柔的家人<br>再加上，你一起围在身旁的日子非常幸福</p>
-<p>想要独自占有　与你有关的一切！<br>…我也知道想着这些十分任性<br>但有时也会这样不能自已</p>
-<p>想用这专一的爱　永远守护着心里最喜欢的你<br>有你伴我同行的　每一天都是，这么的特别<br>我会成为幸运的女孩　只要是为了你　我什么都愿意做！<br>所以，请务必一直　像这样注视着我的身姿</p>
-<p>明明只想一直陪在　自己心里最喜欢的你的身边<br>却没法变得坦率　目光躲向一旁　完全可爱不起来<br>若是将这焦急的心绪传达而出　会有什么变化吗？<br>即便是这样的我　也会比任何人，都要喜欢着你！！</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -4231,43 +4231,6 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
-    <title>《Kissin&#39; Me, Kissin&#39; You》歌词翻译</title>
-    <url>/2024/03/11/kissin_me_kissin_you/</url>
-    <content><![CDATA[<p><strong>Kissin’ Me, Kissin’ You</strong> - 游戏《花之天使的夏日恋歌》片尾曲</p>
-<p>作词：RUCCA；作曲：<span lang="ja">矢鴇つかさ</span> (Arte Refact)</p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>遠い日の記憶たちが<br>花々の薫りから　リプレイする<br>不器用な言葉でほら<br>傷付いて　涙して　恋を育んだ</p>
-<p>未来は誰かの　<ruby>所有物<rt>もの</rt></ruby>じゃないから<br>すべての瞬間　わたしたちで描こう</p>
-<p>翼のように　広げた花のヴェール<br>世界中が　きっと　祝福してるわ<br>キミの事だけ　選んだ答えを<br>ずっと　１００年先も　後悔しないよ<br>いま　甘く　Kissin’ Me</p>
-<p>想いで絡んだ運命<br>断ち切らず　諦めず　そっと　解いてく</p>
-<p>何度間違っても　誰かの<ruby>真心<rt>こころ</rt></ruby><br>護るつよさがあれば　やり直せるよ</p>
-<p>「夢」も「涙」も「希望」も「憂い」さえも<br>そのどれも欠かせて　今日と逢えなかった<br>キミに贈れる　ものを探しても<br>「アイシテル」以上の　ものが見つからない<br>ねえ　だから　Kissin’ You</p>
-<p>不確かな未来に　確かなものがあるよ<br><ruby>瞳<rt>め</rt></ruby>に<ruby>視<rt>み</rt></ruby>えない　互いを　想いあう鼓動</p>
-<p>翼のように　広げた花のヴェール<br>世界中が　きっと　祝福してるわ<br>キミの事だけ　選んだ答えを<br>ずっと　１００年先も　後悔しないよ<br>ねえ　溶けるほど…　いま　甘く　Kissin’ Me</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>久远时日的诸多记忆<br>伴随花儿的芬芳　在我眼前重现<br>说着笨拙不堪的话语<br>经受苦楚　洒下泪水　孕育出恋情</p>
-<p>未来并不是　谁一个人的所有物<br>每一个瞬间　都让我们一同描绘吧</p>
-<p>戴上如双翼　展开的花之面纱<br>整个世界　一定都在　献上祝福吧<br>在众多可能中　最终只选择了你<br>就算　再过100年　我也不会后悔<br>现在　甜蜜地　Kissin’ Me</p>
-<p>心意交织出的命运<br>不要断绝　不要放弃　轻柔地　消解开来</p>
-<p>不管误会多少次　只要拥有这份<br>守护着真心的力量　就能再度携手</p>
-<p>「梦想」「泪水」「希望」以及「苦闷」<br>若是缺少任何一样　我都无法走到今天<br>四下物色着　打算送给你的礼物<br>最终发现没有比　「我喜欢你」更适合的东西<br>那么　就这样　Kissin’ You</p>
-<p>不确定的未来中　也有着真切的事物<br>那是眼中无形的　彼此间　思念的律动</p>
-<p>戴上如双翼　展开的花之面纱<br>整个世界　一定都在　献上祝福吧<br>在众多可能中　最终只选择了你<br>就算　再过100年　我也不会后悔<br>那么　就这样沉沦…　现在　甜蜜地　Kissin’ Me</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《お仕事します（努力工作）》歌词翻译</title>
     <url>/2024/03/03/oshigoto_shimasu/</url>
     <content><![CDATA[<p><strong><span lang="ja">お仕事します</span>（努力工作）</strong> - 游戏《Noble☆Works》月山濑奈角色歌</p>
@@ -4299,6 +4262,43 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
 <p>思考着如何才能让你高兴<br>这便是我　最为基本的行事方针<br>不论遇到什么事情　都能就这样乐在其中<br>每天肯定都会　让我感到幸福</p>
 <p>若是能看到你一丝真诚的笑容<br>仅仅是这样　明天开始也会再次鼓起干劲<br>尽管自认为没有什么　远超于他人的长处<br>要是有帮助的话　我就会感到欣喜了</p>
 <p>这便是我经历的　日常的每一天</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《Kissin&#39; Me, Kissin&#39; You》歌词翻译</title>
+    <url>/2024/03/11/kissin_me_kissin_you/</url>
+    <content><![CDATA[<p><strong>Kissin’ Me, Kissin’ You</strong> - 游戏《花之天使的夏日恋歌》片尾曲</p>
+<p>作词：RUCCA；作曲：<span lang="ja">矢鴇つかさ</span> (Arte Refact)</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>遠い日の記憶たちが<br>花々の薫りから　リプレイする<br>不器用な言葉でほら<br>傷付いて　涙して　恋を育んだ</p>
+<p>未来は誰かの　<ruby>所有物<rt>もの</rt></ruby>じゃないから<br>すべての瞬間　わたしたちで描こう</p>
+<p>翼のように　広げた花のヴェール<br>世界中が　きっと　祝福してるわ<br>キミの事だけ　選んだ答えを<br>ずっと　１００年先も　後悔しないよ<br>いま　甘く　Kissin’ Me</p>
+<p>想いで絡んだ運命<br>断ち切らず　諦めず　そっと　解いてく</p>
+<p>何度間違っても　誰かの<ruby>真心<rt>こころ</rt></ruby><br>護るつよさがあれば　やり直せるよ</p>
+<p>「夢」も「涙」も「希望」も「憂い」さえも<br>そのどれも欠かせて　今日と逢えなかった<br>キミに贈れる　ものを探しても<br>「アイシテル」以上の　ものが見つからない<br>ねえ　だから　Kissin’ You</p>
+<p>不確かな未来に　確かなものがあるよ<br><ruby>瞳<rt>め</rt></ruby>に<ruby>視<rt>み</rt></ruby>えない　互いを　想いあう鼓動</p>
+<p>翼のように　広げた花のヴェール<br>世界中が　きっと　祝福してるわ<br>キミの事だけ　選んだ答えを<br>ずっと　１００年先も　後悔しないよ<br>ねえ　溶けるほど…　いま　甘く　Kissin’ Me</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>久远时日的诸多记忆<br>伴随花儿的芬芳　在我眼前重现<br>说着笨拙不堪的话语<br>经受苦楚　洒下泪水　孕育出恋情</p>
+<p>未来并不是　谁一个人的所有物<br>每一个瞬间　都让我们一同描绘吧</p>
+<p>戴上如双翼　展开的花之面纱<br>整个世界　一定都在　献上祝福吧<br>在众多可能中　最终只选择了你<br>就算　再过100年　我也不会后悔<br>现在　甜蜜地　Kissin’ Me</p>
+<p>心意交织出的命运<br>不要断绝　不要放弃　轻柔地　消解开来</p>
+<p>不管误会多少次　只要拥有这份<br>守护着真心的力量　就能再度携手</p>
+<p>「梦想」「泪水」「希望」以及「苦闷」<br>若是缺少任何一样　我都无法走到今天<br>四下物色着　打算送给你的礼物<br>最终发现没有比　「我喜欢你」更适合的东西<br>那么　就这样　Kissin’ You</p>
+<p>不确定的未来中　也有着真切的事物<br>那是眼中无形的　彼此间　思念的律动</p>
+<p>戴上如双翼　展开的花之面纱<br>整个世界　一定都在　献上祝福吧<br>在众多可能中　最终只选择了你<br>就算　再过100年　我也不会后悔<br>那么　就这样沉沦…　现在　甜蜜地　Kissin’ Me</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -4402,45 +4402,6 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
-    <title>《ピース（Piece）》歌词翻译</title>
-    <url>/2024/03/15/piece/</url>
-    <content><![CDATA[<p><strong><span lang="ja">ピース</span>（Piece）</strong> - 游戏《花开Work Spring！》片尾曲</p>
-<p>作词：<span lang="ja">氷青</span>；作曲：Meis Clauson</p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>どこまでも続く青い空と<br>伸びて行く飛行機雲の線<br>振り向けば　細く長い影が<br>あなたまで　届くような気がした</p>
-<p>二人を繋ぐ宇宙には　ときめく物が溢れてるの<br>感じていたい</p>
-<p>思い切り息をして　思い切り恋をしたい<br>いつでも２人で笑ってる<br>何気ない毎日が　愛しくて　今　輝く<br>ピースを集めて繋いで行きたい<br>La La La…</p>
-<p>俯いて踏み出せない時も<br>気がつくと隣りにいてくれた<br>変わらずに陽だまりの笑顔で<br>迷ってた背中押してくれる</p>
-<p>どんな不安も　溶けて行く　あなたの声に<br>どうしてだろう　涙が出るの</p>
-<p>思い切り悩んだり　思い切り泣いた夜も<br>いつかは大事なピースに<br>変わるから大丈夫　ゆっくりと　また歩いて<br>二人の未来を信じて行くから</p>
-<p>もしも明日晴れて　風が吹いてきたら<br>アリガトウって気持ち　言葉にするの</p>
-<p>思い切り悩んだり　思い切り泣いた夜も<br>いつかは大事なピースに<br>変わるから大丈夫　ゆっくりと　また歩いて<br>二人の未来を信じて</p>
-<p>思い切り息をして　思い切り恋をしたい<br>いつでも２人で笑ってる<br>何気ない毎日が　愛しくて　今　輝く<br>ピースを集めて繋いで行きたい<br>La La La…</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>头顶的蓝天一直拓展至远方<br>飞机航迹线也随之延伸开去<br>我蓦然回首　身后拉长的影子<br>感觉可以就　这样子触碰到你</p>
-<p>将彼此连系起的宇宙里　充满着令人期待的事物<br>我想亲身感受</p>
-<p>想去尽情地感受呼吸　想去尽情地品味恋心<br>只愿你我始终都能露出笑颜<br>平淡静好的每一天　惹人怜爱　如今　散发出光辉<br>想将收集到的碎片再度拼合起来<br>La La La…</p>
-<p>垂头丧气踌躇不前的那些日子<br>回过神来发现你就陪在我的身边<br>向我展现着始终如故的灿烂笑容<br>在尚处迷惘的我身后加油鼓劲</p>
-<p>听见你的声音　心里的不安　一瞬间烟消云散<br>泪水也夺眶而出　究竟又是为何</p>
-<p>不顾一切的黯然神伤　夜深人静时的泣不成声<br>终会转变为宝贵的碎片<br>所以不必再焦躁疑虑　不紧不慢地　再度出发<br>坚信着彼此的未来迈步向前</p>
-<p>若明天是一个好天气　微风也轻拂过我身旁<br>便会将这感激的心情　用言语传达给你</p>
-<p>不顾一切的黯然神伤　夜深人静时的泣不成声<br>终会转变为宝贵的碎片<br>所以不必再焦躁疑虑　不紧不慢地　再度出发<br>坚信着彼此的未来</p>
-<p>想去尽情地感受呼吸　想去尽情地品味恋心<br>只愿你我始终都能露出笑颜<br>平淡静好的每一天　惹人怜爱　如今　散发出光辉<br>想将收集到的碎片再度拼合起来<br>La La La…</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>叶山秋音</title>
     <url>/2024/03/14/hayama_tokine/</url>
     <content><![CDATA[<p><strong>叶山秋音</strong> 是Lump of Sugar制作发行游戏 <strong>《魔卡魅恋！》</strong> 的登场角色，女主角之一。</p>
@@ -4493,6 +4454,45 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
+    <title>《ピース（Piece）》歌词翻译</title>
+    <url>/2024/03/15/piece/</url>
+    <content><![CDATA[<p><strong><span lang="ja">ピース</span>（Piece）</strong> - 游戏《花开Work Spring！》片尾曲</p>
+<p>作词：<span lang="ja">氷青</span>；作曲：Meis Clauson</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>どこまでも続く青い空と<br>伸びて行く飛行機雲の線<br>振り向けば　細く長い影が<br>あなたまで　届くような気がした</p>
+<p>二人を繋ぐ宇宙には　ときめく物が溢れてるの<br>感じていたい</p>
+<p>思い切り息をして　思い切り恋をしたい<br>いつでも２人で笑ってる<br>何気ない毎日が　愛しくて　今　輝く<br>ピースを集めて繋いで行きたい<br>La La La…</p>
+<p>俯いて踏み出せない時も<br>気がつくと隣りにいてくれた<br>変わらずに陽だまりの笑顔で<br>迷ってた背中押してくれる</p>
+<p>どんな不安も　溶けて行く　あなたの声に<br>どうしてだろう　涙が出るの</p>
+<p>思い切り悩んだり　思い切り泣いた夜も<br>いつかは大事なピースに<br>変わるから大丈夫　ゆっくりと　また歩いて<br>二人の未来を信じて行くから</p>
+<p>もしも明日晴れて　風が吹いてきたら<br>アリガトウって気持ち　言葉にするの</p>
+<p>思い切り悩んだり　思い切り泣いた夜も<br>いつかは大事なピースに<br>変わるから大丈夫　ゆっくりと　また歩いて<br>二人の未来を信じて</p>
+<p>思い切り息をして　思い切り恋をしたい<br>いつでも２人で笑ってる<br>何気ない毎日が　愛しくて　今　輝く<br>ピースを集めて繋いで行きたい<br>La La La…</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>头顶的蓝天一直拓展至远方<br>飞机航迹线也随之延伸开去<br>我蓦然回首　身后拉长的影子<br>感觉可以就　这样子触碰到你</p>
+<p>将彼此连系起的宇宙里　充满着令人期待的事物<br>我想亲身感受</p>
+<p>想去尽情地感受呼吸　想去尽情地品味恋心<br>只愿你我始终都能露出笑颜<br>平淡静好的每一天　惹人怜爱　如今　散发出光辉<br>想将收集到的碎片再度拼合起来<br>La La La…</p>
+<p>垂头丧气踌躇不前的那些日子<br>回过神来发现你就陪在我的身边<br>向我展现着始终如故的灿烂笑容<br>在尚处迷惘的我身后加油鼓劲</p>
+<p>听见你的声音　心里的不安　一瞬间烟消云散<br>泪水也夺眶而出　究竟又是为何</p>
+<p>不顾一切的黯然神伤　夜深人静时的泣不成声<br>终会转变为宝贵的碎片<br>所以不必再焦躁疑虑　不紧不慢地　再度出发<br>坚信着彼此的未来迈步向前</p>
+<p>若明天是一个好天气　微风也轻拂过我身旁<br>便会将这感激的心情　用言语传达给你</p>
+<p>不顾一切的黯然神伤　夜深人静时的泣不成声<br>终会转变为宝贵的碎片<br>所以不必再焦躁疑虑　不紧不慢地　再度出发<br>坚信着彼此的未来</p>
+<p>想去尽情地感受呼吸　想去尽情地品味恋心<br>只愿你我始终都能露出笑颜<br>平淡静好的每一天　惹人怜爱　如今　散发出光辉<br>想将收集到的碎片再度拼合起来<br>La La La…</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《find a piece》歌词翻译</title>
     <url>/2024/04/04/find_a_piece/</url>
     <content><![CDATA[<p><strong>find a piece</strong> - 游戏《卡卢玛卢卡＊同好会》第二片头曲</p>
@@ -4528,98 +4528,6 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
 <p>仰望这天空延伸开来<br>如果能有什么理由的话<br>到尽兴为止都一直追逐吧<br>那一天的自己<br>所知道的真实<br>尽管很微小<br>还是生硬地笑着眨动着眼睛<br>那个星座会应允什么<br>又会用光芒照亮何物？</p>
 <p>七颗星　相互联系在一起<br>正如曾经说出「飞船」<br>如今依然会深信<br>这只有我们能看见的事物<br>一定是真实存在的<br>就此凝神窥视着<br>这无垠的夜空！</p>
 <p>指尖所指向的前方<br>如果这疑问存在着答案<br>即使烦恼　也绝不后悔<br>那天的自己下定决心<br>立足于“现在”<br>遥望着明天<br>深邃的天空<br>繁星流转不息<br>这只有我们能看见的碎片<br>缓缓地将伸出的手照亮</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>QQNT自定义字体记录</title>
-    <url>/2024/04/09/qqnt-custom-fonts/</url>
-    <content><![CDATA[<p>想了想还是记录一下自己QQNT电脑版设置的自定义字体。</p>
-<p>需要使用到的加载器以及插件：</p>
-<ul>
-<li><a class="link"   href="https://liteloaderqqnt.github.io/" >LiteLoaderQQNT <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li><a class="link"   href="https://github.com/xiyuesaves/LiteLoaderQQNT-lite_tools" >轻量工具箱 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-</ul>
-<p><del>某一天无意间发现自定义字体可以不从下拉列表选择字体，而是自己敲字体家族。</del></p>
-<p>目前使用的自定义字体声明：<code>IBM Plex Sans, Nu Wakkaoi M1, MiSans VF, MiSans L3, LINE Seed Sans KR, Plangothic P1, Plangothic P2, Sukima Gothic, Jigmo, Jigmo2, Jigmo3</code></p>
-<p>顺便附上各字体相关网址：</p>
-<ul>
-<li><a class="link"   href="https://www.ibm.com/plex/" >IBM Plex <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（<code>IBM Plex Sans</code>）</li>
-<li><span lang="ja"><a class="link"   href="https://kokagem.sakura.ne.jp/font/wakkaoi/" >Nu ワッカオイ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></span>（<code>Nu Wakkaoi M1</code>）</li>
-<li><a class="link"   href="https://hyperos.mi.com/font/zh/" >MiSans <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（<code>MiSans VF, MiSans L3</code>）</li>
-<li><a class="link"   href="https://seed.line.me/" >LINE Seed <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（<code>LINE Seed Sans KR</code>）</li>
-<li><a class="link"   href="https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic-Project" >遍黑体项目 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（<code>Plangothic P1, Plangothic P2</code>）</li>
-<li><span lang="ja"><a class="link"   href="https://booth.pm/ja/items/2117070" >すきまゴシック <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></span>（<code>Sukima Gothic</code>）</li>
-<li><span lang="ja"><a class="link"   href="https://kamichikoichi.github.io/jigmo/" >Jigmo（字雲） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></span>（<code>Jigmo, Jigmo2, Jigmo3</code>）</li>
-</ul>
-<hr>
-<p>5.7补充：若希望保留QQNT默认情况下的Emoji样式（苹果的Apple Color Emoji），在上面的声明最前面加上<code>Color Emoji,</code>即可。</p>
-]]></content>
-      <tags>
-        <tag>随记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《Floating up》歌词翻译</title>
-    <url>/2024/04/03/floating_up/</url>
-    <content><![CDATA[<p><strong>Floating up</strong> - 游戏《卡卢玛卢卡＊同好会》片头曲</p>
-<p>作词：KOTOKO；作曲：<span lang="ja">菊田大介</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>ひらひら夏をかすめ　踊るミニスカート<br>誘う太陽　逃げる素足</p>
-<p>勢い余ったままで　距離が近づく<br>目が眩むような炎天下で<br>ねえ、何見てるの？大きな双眼鏡で<br><ruby>灯台<rt>とう</rt></ruby>の上　二人だけの星座見つかる！って<br>探しているね？<br>Jump and GO!!　jump and GO!!<br>僕らの汗が空へと舞う<br>未来予報　南風にまかせて<br>Here we go!!　さあ、行こう！<br>砂に描いた夢　消さぬように<br>髪をかきあげたら<br>真っ白なシャツで　飛び込もう！</p>
-<p>突然呼び出された　夜の海辺で<br>ロケット花火に驚く君<br>二人をまたぐように流れるMilky Way<br>あそこで泳ぎたい！って背伸びした<br>なぜ出会えたの？<br>そんなことはもういいね<br>ソーダフロート弾ける瞬間<br>君と一緒にdive<br>溺れちゃっても<br>良いじゃん？　Float and Jump!!<br>僕らの汗が海を創る<br>塩辛い涙も全部とかして<br>Here we go!!　日常+僕らの不思議<br>繋ぎ合わせ<br>七色の海まで<br>白い帆を揚げて　漕ぎ出そう！</p>
-<p>いつもなんとなく　過ぎて来た夏だけど<br>なんなんだ？！<br>それじゃいけないっ！<br>君が胸をknock knock　叩くから<br>Tap and call..　Tap and call..<br>君の扉も叩き返そう<br>準備などないままで良い　応えて！<br>Here we go!!　さあ、行こう！<br>汗で描いた地図　繋ぎ合わせ<br>星屑のコンパスと<br>白い帆揚げて　漕ぎ出そう<br>七色の海へ</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>轻飘飘地掠过夏日　迷你裙随之起舞<br>太阳盛情难却　赤着脚只欲逃走</p>
-<p>就这样借着劲头　和你拉近距离<br>在这耀眼无比的炎炎烈日之下<br>喂，你在用大大的望远镜看着什么？<br>灯塔之上　说道“找到只属于我们的星座！”<br>不断地寻觅吧？<br>Jump and GO!!　jump and GO!!<br>我们的汗水在空中飞舞<br>未来预报　就交给南风搞定<br>Here we go!!　来，出发吧！<br>沙上画出的梦想　不愿让它消失<br>那就把头发扎起<br>身穿洁白的衬衣　一跃而入吧！</p>
-<p>突然收到了邀请　在夜晚的海滨<br>你被火箭烟花吓了一跳<br>似要将我们拥入般流淌着的Milky Way<br>你说“想在那里游泳！”踮起了脚尖<br>为何会遇见彼此呢？<br>这件事不去深究也行吧<br>冰淇淋苏打绽开的瞬间<br>与你一起dive<br>即便就此沉溺<br>不也挺好吗？　Float and Jump!!<br>我们的汗水创造出海洋<br>微咸的泪花也一并消解<br>Here we go!!　日常+我们的不可思议<br>相互连接起来<br>朝着七色之海<br>扬起雪白的风帆　就此起航吧！</p>
-<p>一直以来总会觉得　夏天无意间就过去了<br>怎么一回事？！<br>这样子可不行啊！<br>对你的胸口knock knock　微微叩响<br>Tap and call..　Tap and call..<br>你的心门也回以轻敲<br>没有做好准备也没问题　就此应答！<br>Here we go!!　来，出发吧！<br>用汗水绘出的地图　彼此相连<br>以群星为罗盘<br>扬起雪白的风帆　就此起航吧！<br>前往七色之海</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《ミライメロディ（未来旋律）》歌词翻译</title>
-    <url>/2024/04/12/mirai_melody/</url>
-    <content><![CDATA[<p><strong><span lang="ja">ミライメロディ</span>（未来旋律）</strong> - 游戏《少女＊领域》片尾曲</p>
-<p>作词：rino；作曲：yozuca*</p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>胸の奥で見つけた　思い出の花束に<br>微笑みの雫きらひら　ちょっと照れくさい<br>見慣れた横顔　でも　昨日とは違う距離<br>熱くなる頬を隠して　君を見つめてた</p>
-<p>あの日　（あの日）　交わした言葉に<br>（ふたり）　染まってく<br>愛しさは勇気になるよ<br>その先へ行こう</p>
-<p>溢れてゆく　ミライメロディ　弾む願いを包んでゆく<br>続く未知を歩いて行こう　新しい風に乗って<br>君がくれた優しいキセキ　不思議と気持ちが届くから<br>ずっと　ずっと　そばにいたい<br>巡り会えて　ありがとう<br>これから　ここから　君と</p>
-<p>単純に「すき」なんだって　心が騒いでる<br>そりゃまぁいろいろあるけど　わらっていたいね<br>たまに真面目な顔で　相談　そんなのもいい<br>答えは変わってゆくから　それを話そうよ</p>
-<p>ふいに　（ふいに）　困らせたくなって<br>（ごめん）　わがままも<br>君がいて出来ることだって<br>嬉しくなってた</p>
-<p>愛しい季節　巡る思い<br>ずっと　ずっと　忘れないように<br>楽しい事　たくさんしよう<br>夢の続きを描いて<br>守りたくて　守られてた<br>だから今日も笑顔でいるよ<br>きらめく空　その向こうへ<br>明日を迎えに行こう</p>
-<p>溢れてゆく　ミライメロディ　弾む願いを包んでゆく<br>続く未知を歩いて行こう　新しい風に乗って<br>君がくれた優しいキセキ　不思議と気持ちが届くから<br>ずっと　ずっと　そばにいたい<br>巡り会えて　ありがとう<br>これから　ここから　君と</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>在内心深处发现的　珍贵回忆的花束上<br>微笑的水珠闪烁摇动　稍稍有些羞涩<br>看惯了的侧颜　距离　与昨日有些不同<br>遮起已经发热的脸颊　静静地注视着你</p>
-<p>那一天　（那一天）　互相交谈的言语<br>（将两人）　悄然浸染<br>将爱慕之情化为一份勇气<br>朝前方迈出步伐</p>
-<p>这充盈而出的　未来旋律　环抱起高涨不止的心愿<br>走上那向远方延伸的未知　乘着清新的和风<br>你所给予我的温柔奇迹　不可思议地将情意传达出来<br>永远　永远　想待在你身边<br>能同你相遇　由衷感谢<br>现在开始　从此出发　陪伴你</p>
-<p>仅仅是「喜欢」什么的　内心就兴奋不已<br>虽然也会遇到各种事情　但还是想露出笑容<br>有时候停下来认真地　讨论　感觉也不错<br>答案也在不断地变化着　放轻松来聊一聊吧</p>
-<p>一时间　（一时间）　想让你替我为难<br>（对不起）　我这份任性<br>有你在为我无私地满足<br>让我无比喜悦</p>
-<p>在惬意的时节　我思绪翩跹<br>永远　永远　不愿轻易去忘记<br>让我们去享受　一件件高兴事<br>勾画出美梦的后续<br>想上前去守护　也得到了呵护<br>正因此今天也要展现出笑颜<br>让自己去面对　这绚烂的天空<br>踏出脚步迎接明天的到来</p>
-<p>这充盈而出的　未来旋律　环抱起高涨不止的心愿<br>走上那向远方延伸的未知　乘着清新的和风<br>你所给予我的温柔奇迹　不可思议地将情意传达出来<br>永远　永远　想待在你身边<br>能同你相遇　由衷感谢<br>现在开始　从此出发　陪伴你</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -4665,78 +4573,93 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
-    <title>《Sugar Ripple》歌词翻译</title>
-    <url>/2024/04/18/sugar_ripple/</url>
-    <content><![CDATA[<p><strong>Sugar Ripple</strong> - 游戏《魔卡魅恋！》片尾曲</p>
-<p>作词：<span lang="ja">佐倉紗織</span> (ave;new)；作曲：a.k.a.dRESS (ave;new)</p>
+    <title>《Floating up》歌词翻译</title>
+    <url>/2024/04/03/floating_up/</url>
+    <content><![CDATA[<p><strong>Floating up</strong> - 游戏《卡卢玛卢卡＊同好会》片头曲</p>
+<p>作词：KOTOKO；作曲：<span lang="ja">菊田大介</span></p>
 <hr>
 <p><strong>歌词</strong></p>
 <p><em>注：歌词著作权归原作者所有。</em></p>
 <div lang="ja" style="white-space: pre;">
 
-<p>そう　「大好き」を言うよ<br>今日も遠い季節も<br>キミと信じたい<br>終わらないハッピーエンド</p>
-<p>誰かに聞いた恋心<br>お伽話のロマンス<br>夢にみてた　大切な宝物<br>こんなに長く　キミといたんだね<br>変わらない笑顔　嬉しくて</p>
-<p>ふたつ重ねたぬくもり<br>守りたい、守られてる<br>この優しい気持ちに　名前をつけたら<br>世界中キミの香り<br>いつまでも離れないように<br>心も溶けちゃうほど　抱きしめて</p>
-<p>La La La La Sha La La La La<br>Magical Love of Little Charming<br>Sugar Love, Sugar Smile La La La La La<br>Sha La La La La La La La</p>
-<p>同じ温度の指先を<br>ほどく時には　本当は<br>泣きそうだから<br>次の約束をしてね<br>欲しがっていた　傍にいる意味より<br>素直なまま　キミに触れよう</p>
-<p>遠まわりの愛しさも<br>二人らしいと<ruby>微笑<rt>わら</rt></ruby>ってた<br>恋の果実　甘く色づく瞬間に<br>キミがいる幸せを囁くから　キスをして<br>勇気の魔法は　もう解けないね</p>
-<p>こんなに長く　キミといたんだね<br>変わらない笑顔　嬉しくて</p>
-<p>ふたつ重ねたぬくもり<br>守りたい、守られてる<br>この優しい気持ちに　名前をつけたら<br>世界中キミの香り<br>いつまでも離れないように<br>心も溶けちゃうほど　抱きしめて</p>
-<p>La La La La Sha La La La La<br>Magical Love of Little Charming<br>Sugar Love, Sugar Smile La La La La La<br>Sha La La La La La La La<br>La La La La Sha La La La La<br>Magical Love of Little Charming<br>Sugar Love, Sugar Smile La La La La La<br>Sha La La La La La La La</p>
+<p>ひらひら夏をかすめ　踊るミニスカート<br>誘う太陽　逃げる素足</p>
+<p>勢い余ったままで　距離が近づく<br>目が眩むような炎天下で<br>ねえ、何見てるの？大きな双眼鏡で<br><ruby>灯台<rt>とう</rt></ruby>の上　二人だけの星座見つかる！って<br>探しているね？<br>Jump and GO!!　jump and GO!!<br>僕らの汗が空へと舞う<br>未来予報　南風にまかせて<br>Here we go!!　さあ、行こう！<br>砂に描いた夢　消さぬように<br>髪をかきあげたら<br>真っ白なシャツで　飛び込もう！</p>
+<p>突然呼び出された　夜の海辺で<br>ロケット花火に驚く君<br>二人をまたぐように流れるMilky Way<br>あそこで泳ぎたい！って背伸びした<br>なぜ出会えたの？<br>そんなことはもういいね<br>ソーダフロート弾ける瞬間<br>君と一緒にdive<br>溺れちゃっても<br>良いじゃん？　Float and Jump!!<br>僕らの汗が海を創る<br>塩辛い涙も全部とかして<br>Here we go!!　日常+僕らの不思議<br>繋ぎ合わせ<br>七色の海まで<br>白い帆を揚げて　漕ぎ出そう！</p>
+<p>いつもなんとなく　過ぎて来た夏だけど<br>なんなんだ？！<br>それじゃいけないっ！<br>君が胸をknock knock　叩くから<br>Tap and call..　Tap and call..<br>君の扉も叩き返そう<br>準備などないままで良い　応えて！<br>Here we go!!　さあ、行こう！<br>汗で描いた地図　繋ぎ合わせ<br>星屑のコンパスと<br>白い帆揚げて　漕ぎ出そう<br>七色の海へ</p>
 </div>
 
 <hr>
 <p><strong>翻译</strong></p>
 <div style="white-space: pre;">
 
-<p>没错　我会说出「最喜欢你」<br>今天直到遥远的时节<br>我和你都深信会<br>迎来永不谢幕的快乐结局</p>
-<p>从别处听说的恋慕之情<br>有着如童话一般的浪漫<br>是我曾梦见的　珍重无比的宝物<br>与你相随以来　已过去不少时日<br>你始终如一的笑容　让我心生欢喜</p>
-<p>二人互相交织起的温暖<br>想要去呵护，也获得了守护<br>若要给这温和的感情　起一个名字的话<br>便是全世界你的芬芳<br>为了彼此永远都能在一起<br>请让我的心也融化般　将我拥入怀中</p>
-<p>La La La La Sha La La La La<br>Magical Love of Little Charming<br>Sugar Love, Sugar Smile La La La La La<br>Sha La La La La La La La</p>
-<p>同样温热的两个指尖<br>将要分开之时　我差点<br>就要涌出泪水<br>做出下一个约定吧<br>一直渴求着的　并非在你身边的意义<br>而是就这样　坦诚地与你相触</p>
-<p>兜兜转转的那份爱慕<br>彼此相视后会心一笑<br>恋爱的果实　在甘甜成熟的瞬间<br>轻语有你相伴的这份幸福　与你相吻<br>勇气的魔法　已经无法消除了呢</p>
-<p>与你相随以来　已过去不少时日<br>你始终如一的笑容　让我心生欢喜</p>
-<p>二人互相交织起的温暖<br>想要去呵护，也获得了守护<br>若要给这温和的感情　起一个名字的话<br>便是全世界你的芬芳<br>为了彼此永远都能在一起<br>请让我的心也融化般　将我拥入怀中</p>
-<p>La La La La Sha La La La La<br>Magical Love of Little Charming<br>Sugar Love, Sugar Smile La La La La La<br>Sha La La La La La La La<br>La La La La Sha La La La La<br>Magical Love of Little Charming<br>Sugar Love, Sugar Smile La La La La La<br>Sha La La La La La La La</p>
+<p>轻飘飘地掠过夏日　迷你裙随之起舞<br>太阳盛情难却　赤着脚只欲逃走</p>
+<p>就这样借着劲头　和你拉近距离<br>在这耀眼无比的炎炎烈日之下<br>喂，你在用大大的望远镜看着什么？<br>灯塔之上　说道“找到只属于我们的星座！”<br>不断地寻觅吧？<br>Jump and GO!!　jump and GO!!<br>我们的汗水在空中飞舞<br>未来预报　就交给南风搞定<br>Here we go!!　来，出发吧！<br>沙上画出的梦想　不愿让它消失<br>那就把头发扎起<br>身穿洁白的衬衣　一跃而入吧！</p>
+<p>突然收到了邀请　在夜晚的海滨<br>你被火箭烟花吓了一跳<br>似要将我们拥入般流淌着的Milky Way<br>你说“想在那里游泳！”踮起了脚尖<br>为何会遇见彼此呢？<br>这件事不去深究也行吧<br>冰淇淋苏打绽开的瞬间<br>与你一起dive<br>即便就此沉溺<br>不也挺好吗？　Float and Jump!!<br>我们的汗水创造出海洋<br>微咸的泪花也一并消解<br>Here we go!!　日常+我们的不可思议<br>相互连接起来<br>朝着七色之海<br>扬起雪白的风帆　就此起航吧！</p>
+<p>一直以来总会觉得　夏天无意间就过去了<br>怎么一回事？！<br>这样子可不行啊！<br>对你的胸口knock knock　微微叩响<br>Tap and call..　Tap and call..<br>你的心门也回以轻敲<br>没有做好准备也没问题　就此应答！<br>Here we go!!　来，出发吧！<br>用汗水绘出的地图　彼此相连<br>以群星为罗盘<br>扬起雪白的风帆　就此起航吧！<br>前往七色之海</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
       </tags>
   </entry>
   <entry>
-    <title>《RAJA（王者）》歌词翻译</title>
-    <url>/2024/05/18/raja/</url>
-    <content><![CDATA[<p><strong>RAJA（王者）</strong> - 游戏《无畏契约》海神英雄主题曲</p>
-<p>作词：Tienas；作曲：ARB4</p>
+    <title>QQNT自定义字体记录</title>
+    <url>/2024/04/09/qqnt-custom-fonts/</url>
+    <content><![CDATA[<p>想了想还是记录一下自己QQNT电脑版设置的自定义字体。</p>
+<p>需要使用到的加载器以及插件：</p>
+<ul>
+<li><a class="link"   href="https://liteloaderqqnt.github.io/" >LiteLoaderQQNT <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://github.com/xiyuesaves/LiteLoaderQQNT-lite_tools" >轻量工具箱 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+<p><del>某一天无意间发现自定义字体可以不从下拉列表选择字体，而是自己敲字体家族。</del></p>
+<p>目前使用的自定义字体声明：<code>IBM Plex Sans, Nu Wakkaoi M1, MiSans VF, MiSans L3, LINE Seed Sans KR, Plangothic P1, Plangothic P2, Sukima Gothic, Jigmo, Jigmo2, Jigmo3</code></p>
+<p>顺便附上各字体相关网址：</p>
+<ul>
+<li><a class="link"   href="https://www.ibm.com/plex/" >IBM Plex <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（<code>IBM Plex Sans</code>）</li>
+<li><span lang="ja"><a class="link"   href="https://kokagem.sakura.ne.jp/font/wakkaoi/" >Nu ワッカオイ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></span>（<code>Nu Wakkaoi M1</code>）</li>
+<li><a class="link"   href="https://hyperos.mi.com/font/zh/" >MiSans <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（<code>MiSans VF, MiSans L3</code>）</li>
+<li><a class="link"   href="https://seed.line.me/" >LINE Seed <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（<code>LINE Seed Sans KR</code>）</li>
+<li><a class="link"   href="https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic-Project" >遍黑体项目 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（<code>Plangothic P1, Plangothic P2</code>）</li>
+<li><span lang="ja"><a class="link"   href="https://booth.pm/ja/items/2117070" >すきまゴシック <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></span>（<code>Sukima Gothic</code>）</li>
+<li><span lang="ja"><a class="link"   href="https://kamichikoichi.github.io/jigmo/" >Jigmo（字雲） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></span>（<code>Jigmo, Jigmo2, Jigmo3</code>）</li>
+</ul>
+<hr>
+<p>5.7补充：若希望保留QQNT默认情况下的Emoji样式（苹果的Apple Color Emoji），在上面的声明最前面加上<code>Color Emoji,</code>即可。</p>
+]]></content>
+      <tags>
+        <tag>随记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《ミライメロディ（未来旋律）》歌词翻译</title>
+    <url>/2024/04/12/mirai_melody/</url>
+    <content><![CDATA[<p><strong><span lang="ja">ミライメロディ</span>（未来旋律）</strong> - 游戏《少女＊领域》片尾曲</p>
+<p>作词：rino；作曲：yozuca*</p>
 <hr>
 <p><strong>歌词</strong></p>
 <p><em>注：歌词著作权归原作者所有。</em></p>
-<div style="white-space: pre;">
+<div lang="ja" style="white-space: pre;">
 
-<p>Looking at the world from the eye of the Horus<br>If you’re Alexander the Great, then I’m the Porus<br>Coming straight from the mud like I’m a Lotus<br>सौ हाथियों का बल, कैसे सकेगा तू मुझे रोक अब?<br>देख तू कैसे मैं लड़ूँ, तुम लोगों से ऐसा ना डरूँ<br>तरु मैं जबसे मैं तरुण, पानी पे चलूँ मैं, जैसे मैं वरुण<br>चाहे मैं जियूँ या मरूँ, जो करना चाहूँ मैं वही तो करूँ<br>आता है तू ना करीब, तू बेटे चीख, जभी तक कटे ना तेरी यह जीभ<br>Better believe, you gonna bleed, lick up a seat, get all your team<br>I’m the king of kings, brother in arms in a battle<br>You all gonna die if you act like a Vandal<br>Bring the realm to reality from every angle<br>This is the public service announcement from<br>Mumbai to the rest of the World<br>I am a राजा, ah</p>
-<p>I am the राजा, भिड़ेगा तो उठेगा जनाज़ा ना<br>तू मेरी तरफ़ आ ना, आ गया तो होगा फिर तनाज़ा ना<br>यह भारतीय भाषा, फिर दुनिया सुनेगी यह तराना ना<br>‘Causе I am the राजा, ‘cause I am the राजा</p>
-<p>I am thе—<br>‘Cause I am the राजा<br>I am the—<br>‘Cause I am the राजा</p>
-<p>Look in my eyes, what do you see? I’m more than an average man<br>I’m a maverick, I can grow flowers on a barren land<br>Break a moutain with my bare hands and step back<br>And cause a literal avalanche, shoot a bullet while it’s traveling<br>अष्ट भुजाएँ मेरी जैसे मैं tarantula, ना है कोई तोड़ मेरा जबसे पुर्वजों का ज्ञान मिला<br>मेरे जैसा मिलेगा कोई ना, तू और, तू और, चाहे जो भी था, सबकी कब्र मैंने खोदी<br>क्या तुम लगाओगे बोलियाँ, कम पड़े गोलियाँ<br>चंद्रगुप्त, मैं मौर्य, याद दिला दूँ लोरियाँ<br>Come to me, and you’re just gonna die<br>That’s really a given, I’m invincible and you’re invisible<br>See, that’s really a difference<br>Get out of my way or leave the world, the choice is yours<br>I look at my enemies, I play with them, that’s what the toys are for<br>From Mumbai to the rest of the world</p>
-<p>I am the राजा, भिड़ेगा तो उठेगा जनाज़ा ना<br>तू मेरी तरफ़ आ ना, आ गया तो होगा फिर तनाज़ा ना<br>यह भारतीय भाषा, फिर दुनिया सुनेगी यह तराना ना<br>‘Cause I am the राजा, ‘cause I am the राजा</p>
-<p>I am the—<br>‘Cause I am the राजा</p>
-<p>Put your back down on your knees, won’t you kiss the ring?<br>Put your back down on your knees (I am the—)<br>Put your back down on your knees, won’t you kiss the ring, ah? (‘Cause I am the राजा)</p>
-<p>I am the—<br>‘Cause I am the राजा<br>I am the—<br>‘Cause I am the राजा</p>
+<p>胸の奥で見つけた　思い出の花束に<br>微笑みの雫きらひら　ちょっと照れくさい<br>見慣れた横顔　でも　昨日とは違う距離<br>熱くなる頬を隠して　君を見つめてた</p>
+<p>あの日　（あの日）　交わした言葉に<br>（ふたり）　染まってく<br>愛しさは勇気になるよ<br>その先へ行こう</p>
+<p>溢れてゆく　ミライメロディ　弾む願いを包んでゆく<br>続く未知を歩いて行こう　新しい風に乗って<br>君がくれた優しいキセキ　不思議と気持ちが届くから<br>ずっと　ずっと　そばにいたい<br>巡り会えて　ありがとう<br>これから　ここから　君と</p>
+<p>単純に「すき」なんだって　心が騒いでる<br>そりゃまぁいろいろあるけど　わらっていたいね<br>たまに真面目な顔で　相談　そんなのもいい<br>答えは変わってゆくから　それを話そうよ</p>
+<p>ふいに　（ふいに）　困らせたくなって<br>（ごめん）　わがままも<br>君がいて出来ることだって<br>嬉しくなってた</p>
+<p>愛しい季節　巡る思い<br>ずっと　ずっと　忘れないように<br>楽しい事　たくさんしよう<br>夢の続きを描いて<br>守りたくて　守られてた<br>だから今日も笑顔でいるよ<br>きらめく空　その向こうへ<br>明日を迎えに行こう</p>
+<p>溢れてゆく　ミライメロディ　弾む願いを包んでゆく<br>続く未知を歩いて行こう　新しい風に乗って<br>君がくれた優しいキセキ　不思議と気持ちが届くから<br>ずっと　ずっと　そばにいたい<br>巡り会えて　ありがとう<br>これから　ここから　君と</p>
 </div>
 
 <hr>
 <p><strong>翻译</strong></p>
 <div style="white-space: pre;">
 
-<p>透过荷鲁斯之眼注视寰宇人世<br>你若是亚历山大大帝，我便是波鲁斯<br>身经污浊泥泞却如莲花般洁净<br>我拥有百头巨象之力，你又怎可阻止？<br>欣赏这场战斗，你无法恐吓到我<br>自幼壮硕似大树，水面上漫步，宛如那伐楼拿<br>从不在乎生与死，我只为达成我的用意<br>要是轻易靠近，你定会惊异，在舌头扯掉前快些逃离<br>不必怀疑，流血不停，蠢蠢不安，倾巢而来<br>我是众王之王，场上坚实的盟友<br>尔等若狂妄不已就准备束手就擒<br>我会让你们切身体会我的领域<br>这是一条来自孟买<br>发往世界的公开宣告<br>我是名王者</p>
-<p>我即是王者，同我对峙会丢掉小命<br>莫要与我接近，挡我的路别怪我毫不留情<br>传播这自印度的语言，全世界都要听见这段音乐<br>因为我即是王者，因为我即是王者</p>
-<p>我即是—<br>因为我即是王者<br>我即是—<br>因为我即是王者</p>
-<p>直视着我，你看见什么？我并非平庸之辈<br>我超然不群，于荒地栽得百花争艳<br>赤手凿穿高山再纵身就此离开<br>崩塌随之而来，我淡然射出弹丸<br>我有八条臂膀就像致命毒蛛，习得先祖之识我无人可挡<br>我便是所谓举世无双，做好觉悟，先前何人当路，我都已掘开坟墓<br>快快亮出你的底牌，弹药就快要告竭<br>我乃旃陀罗笈多·孔雀，让我唤起你的安眠曲<br>向我接近，你死期将临<br>此即天赐恩宠，我所向披靡你则渺小无名<br>看，这正是天差地别<br>一时回避还是灰飞烟灭，由你决定<br>我盯住仇敌，消遣鼓掌之中，变为自己玩物<br>从孟买告知整个世界</p>
-<p>我即是王者，同我对峙会丢掉小命<br>莫要与我接近，挡我的路别怪我毫不留情<br>传播这自印度的语言，全世界都要听见这段音乐<br>因为我即是王者，因为我即是王者</p>
-<p>我即是—<br>因为我即是王者</p>
-<p>就此在我面前跪下，何不献上吻礼？<br>就此在我面前跪下（我即是—）<br>就此在我面前跪下，何不献上吻礼？（因为我即是王者）</p>
-<p>我即是—<br>因为我即是王者<br>我即是—<br>因为我即是王者</p>
-</div>
-]]></content>
+<p>在内心深处发现的　珍贵回忆的花束上<br>微笑的水珠闪烁摇动　稍稍有些羞涩<br>看惯了的侧颜　距离　与昨日有些不同<br>遮起已经发热的脸颊　静静地注视着你</p>
+<p>那一天　（那一天）　互相交谈的言语<br>（将两人）　悄然浸染<br>将爱慕之情化为一份勇气<br>朝前方迈出步伐</p>
+<p>这充盈而出的　未来旋律　环抱起高涨不止的心愿<br>走上那向远方延伸的未知　乘着清新的和风<br>你所给予我的温柔奇迹　不可思议地将情意传达出来<br>永远　永远　想待在你身边<br>能同你相遇　由衷感谢<br>现在开始　从此出发　陪伴你</p>
+<p>仅仅是「喜欢」什么的　内心就兴奋不已<br>虽然也会遇到各种事情　但还是想露出笑容<br>有时候停下来认真地　讨论　感觉也不错<br>答案也在不断地变化着　放轻松来聊一聊吧</p>
+<p>一时间　（一时间）　想让你替我为难<br>（对不起）　我这份任性<br>有你在为我无私地满足<br>让我无比喜悦</p>
+<p>在惬意的时节　我思绪翩跹<br>永远　永远　不愿轻易去忘记<br>让我们去享受　一件件高兴事<br>勾画出美梦的后续<br>想上前去守护　也得到了呵护<br>正因此今天也要展现出笑颜<br>让自己去面对　这绚烂的天空<br>踏出脚步迎接明天的到来</p>
+<p>这充盈而出的　未来旋律　环抱起高涨不止的心愿<br>走上那向远方延伸的未知　乘着清新的和风<br>你所给予我的温柔奇迹　不可思议地将情意传达出来<br>永远　永远　想待在你身边<br>能同你相遇　由衷感谢<br>现在开始　从此出发　陪伴你</p>
+</div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
       </tags>
@@ -4780,6 +4703,83 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
+    <title>《RAJA（王者）》歌词翻译</title>
+    <url>/2024/05/18/raja/</url>
+    <content><![CDATA[<p><strong>RAJA（王者）</strong> - 游戏《无畏契约》海神英雄主题曲</p>
+<p>作词：Tienas；作曲：ARB4</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div style="white-space: pre;">
+
+<p>Looking at the world from the eye of the Horus<br>If you’re Alexander the Great, then I’m the Porus<br>Coming straight from the mud like I’m a Lotus<br>सौ हाथियों का बल, कैसे सकेगा तू मुझे रोक अब?<br>देख तू कैसे मैं लड़ूँ, तुम लोगों से ऐसा ना डरूँ<br>तरु मैं जबसे मैं तरुण, पानी पे चलूँ मैं, जैसे मैं वरुण<br>चाहे मैं जियूँ या मरूँ, जो करना चाहूँ मैं वही तो करूँ<br>आता है तू ना करीब, तू बेटे चीख, जभी तक कटे ना तेरी यह जीभ<br>Better believe, you gonna bleed, lick up a seat, get all your team<br>I’m the king of kings, brother in arms in a battle<br>You all gonna die if you act like a Vandal<br>Bring the realm to reality from every angle<br>This is the public service announcement from<br>Mumbai to the rest of the World<br>I am a राजा, ah</p>
+<p>I am the राजा, भिड़ेगा तो उठेगा जनाज़ा ना<br>तू मेरी तरफ़ आ ना, आ गया तो होगा फिर तनाज़ा ना<br>यह भारतीय भाषा, फिर दुनिया सुनेगी यह तराना ना<br>‘Causе I am the राजा, ‘cause I am the राजा</p>
+<p>I am thе—<br>‘Cause I am the राजा<br>I am the—<br>‘Cause I am the राजा</p>
+<p>Look in my eyes, what do you see? I’m more than an average man<br>I’m a maverick, I can grow flowers on a barren land<br>Break a moutain with my bare hands and step back<br>And cause a literal avalanche, shoot a bullet while it’s traveling<br>अष्ट भुजाएँ मेरी जैसे मैं tarantula, ना है कोई तोड़ मेरा जबसे पुर्वजों का ज्ञान मिला<br>मेरे जैसा मिलेगा कोई ना, तू और, तू और, चाहे जो भी था, सबकी कब्र मैंने खोदी<br>क्या तुम लगाओगे बोलियाँ, कम पड़े गोलियाँ<br>चंद्रगुप्त, मैं मौर्य, याद दिला दूँ लोरियाँ<br>Come to me, and you’re just gonna die<br>That’s really a given, I’m invincible and you’re invisible<br>See, that’s really a difference<br>Get out of my way or leave the world, the choice is yours<br>I look at my enemies, I play with them, that’s what the toys are for<br>From Mumbai to the rest of the world</p>
+<p>I am the राजा, भिड़ेगा तो उठेगा जनाज़ा ना<br>तू मेरी तरफ़ आ ना, आ गया तो होगा फिर तनाज़ा ना<br>यह भारतीय भाषा, फिर दुनिया सुनेगी यह तराना ना<br>‘Cause I am the राजा, ‘cause I am the राजा</p>
+<p>I am the—<br>‘Cause I am the राजा</p>
+<p>Put your back down on your knees, won’t you kiss the ring?<br>Put your back down on your knees (I am the—)<br>Put your back down on your knees, won’t you kiss the ring, ah? (‘Cause I am the राजा)</p>
+<p>I am the—<br>‘Cause I am the राजा<br>I am the—<br>‘Cause I am the राजा</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>透过荷鲁斯之眼注视寰宇人世<br>你若是亚历山大大帝，我便是波鲁斯<br>身经污浊泥泞却如莲花般洁净<br>我拥有百头巨象之力，你又怎可阻止？<br>欣赏这场战斗，你无法恐吓到我<br>自幼壮硕似大树，水面上漫步，宛如那伐楼拿<br>从不在乎生与死，我只为达成我的用意<br>要是轻易靠近，你定会惊异，在舌头扯掉前快些逃离<br>不必怀疑，流血不停，蠢蠢不安，倾巢而来<br>我是众王之王，场上坚实的盟友<br>尔等若狂妄不已就准备束手就擒<br>我会让你们切身体会我的领域<br>这是一条来自孟买<br>发往世界的公开宣告<br>我是名王者</p>
+<p>我即是王者，同我对峙会丢掉小命<br>莫要与我接近，挡我的路别怪我毫不留情<br>传播这自印度的语言，全世界都要听见这段音乐<br>因为我即是王者，因为我即是王者</p>
+<p>我即是—<br>因为我即是王者<br>我即是—<br>因为我即是王者</p>
+<p>直视着我，你看见什么？我并非平庸之辈<br>我超然不群，于荒地栽得百花争艳<br>赤手凿穿高山再纵身就此离开<br>崩塌随之而来，我淡然射出弹丸<br>我有八条臂膀就像致命毒蛛，习得先祖之识我无人可挡<br>我便是所谓举世无双，做好觉悟，先前何人当路，我都已掘开坟墓<br>快快亮出你的底牌，弹药就快要告竭<br>我乃旃陀罗笈多·孔雀，让我唤起你的安眠曲<br>向我接近，你死期将临<br>此即天赐恩宠，我所向披靡你则渺小无名<br>看，这正是天差地别<br>一时回避还是灰飞烟灭，由你决定<br>我盯住仇敌，消遣鼓掌之中，变为自己玩物<br>从孟买告知整个世界</p>
+<p>我即是王者，同我对峙会丢掉小命<br>莫要与我接近，挡我的路别怪我毫不留情<br>传播这自印度的语言，全世界都要听见这段音乐<br>因为我即是王者，因为我即是王者</p>
+<p>我即是—<br>因为我即是王者</p>
+<p>就此在我面前跪下，何不献上吻礼？<br>就此在我面前跪下（我即是—）<br>就此在我面前跪下，何不献上吻礼？（因为我即是王者）</p>
+<p>我即是—<br>因为我即是王者<br>我即是—<br>因为我即是王者</p>
+</div>
+]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《Sugar Ripple》歌词翻译</title>
+    <url>/2024/04/18/sugar_ripple/</url>
+    <content><![CDATA[<p><strong>Sugar Ripple</strong> - 游戏《魔卡魅恋！》片尾曲</p>
+<p>作词：<span lang="ja">佐倉紗織</span> (ave;new)；作曲：a.k.a.dRESS (ave;new)</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>そう　「大好き」を言うよ<br>今日も遠い季節も<br>キミと信じたい<br>終わらないハッピーエンド</p>
+<p>誰かに聞いた恋心<br>お伽話のロマンス<br>夢にみてた　大切な宝物<br>こんなに長く　キミといたんだね<br>変わらない笑顔　嬉しくて</p>
+<p>ふたつ重ねたぬくもり<br>守りたい、守られてる<br>この優しい気持ちに　名前をつけたら<br>世界中キミの香り<br>いつまでも離れないように<br>心も溶けちゃうほど　抱きしめて</p>
+<p>La La La La Sha La La La La<br>Magical Love of Little Charming<br>Sugar Love, Sugar Smile La La La La La<br>Sha La La La La La La La</p>
+<p>同じ温度の指先を<br>ほどく時には　本当は<br>泣きそうだから<br>次の約束をしてね<br>欲しがっていた　傍にいる意味より<br>素直なまま　キミに触れよう</p>
+<p>遠まわりの愛しさも<br>二人らしいと<ruby>微笑<rt>わら</rt></ruby>ってた<br>恋の果実　甘く色づく瞬間に<br>キミがいる幸せを囁くから　キスをして<br>勇気の魔法は　もう解けないね</p>
+<p>こんなに長く　キミといたんだね<br>変わらない笑顔　嬉しくて</p>
+<p>ふたつ重ねたぬくもり<br>守りたい、守られてる<br>この優しい気持ちに　名前をつけたら<br>世界中キミの香り<br>いつまでも離れないように<br>心も溶けちゃうほど　抱きしめて</p>
+<p>La La La La Sha La La La La<br>Magical Love of Little Charming<br>Sugar Love, Sugar Smile La La La La La<br>Sha La La La La La La La<br>La La La La Sha La La La La<br>Magical Love of Little Charming<br>Sugar Love, Sugar Smile La La La La La<br>Sha La La La La La La La</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>没错　我会说出「最喜欢你」<br>今天直到遥远的时节<br>我和你都深信会<br>迎来永不谢幕的快乐结局</p>
+<p>从别处听说的恋慕之情<br>有着如童话一般的浪漫<br>是我曾梦见的　珍重无比的宝物<br>与你相随以来　已过去不少时日<br>你始终如一的笑容　让我心生欢喜</p>
+<p>二人互相交织起的温暖<br>想要去呵护，也获得了守护<br>若要给这温和的感情　起一个名字的话<br>便是全世界你的芬芳<br>为了彼此永远都能在一起<br>请让我的心也融化般　将我拥入怀中</p>
+<p>La La La La Sha La La La La<br>Magical Love of Little Charming<br>Sugar Love, Sugar Smile La La La La La<br>Sha La La La La La La La</p>
+<p>同样温热的两个指尖<br>将要分开之时　我差点<br>就要涌出泪水<br>做出下一个约定吧<br>一直渴求着的　并非在你身边的意义<br>而是就这样　坦诚地与你相触</p>
+<p>兜兜转转的那份爱慕<br>彼此相视后会心一笑<br>恋爱的果实　在甘甜成熟的瞬间<br>轻语有你相伴的这份幸福　与你相吻<br>勇气的魔法　已经无法消除了呢</p>
+<p>与你相随以来　已过去不少时日<br>你始终如一的笑容　让我心生欢喜</p>
+<p>二人互相交织起的温暖<br>想要去呵护，也获得了守护<br>若要给这温和的感情　起一个名字的话<br>便是全世界你的芬芳<br>为了彼此永远都能在一起<br>请让我的心也融化般　将我拥入怀中</p>
+<p>La La La La Sha La La La La<br>Magical Love of Little Charming<br>Sugar Love, Sugar Smile La La La La La<br>Sha La La La La La La La<br>La La La La Sha La La La La<br>Magical Love of Little Charming<br>Sugar Love, Sugar Smile La La La La La<br>Sha La La La La La La La</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《メッセージ（Message）》歌词翻译</title>
     <url>/2024/05/22/message/</url>
     <content><![CDATA[<p><strong><span lang="ja">メッセージ</span>（Message）</strong> - 游戏《闪耀★青春追逐记！》Grand ED</p>
@@ -4811,6 +4811,48 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
 <p>不顾一切地拼命追逐着　向着明天不断踏出脚步<br>心中怀揣着这份逞强<br>定有一日会再与你相见　今天也就此露出微笑<br>只愿让你能为我骄傲地挺起胸膛</p>
 <p>我决不会与你告别<br>将仅剩的一张照片默默收进胸前的口袋<br>两人共度的珍贵瞬间依然闪耀着光辉<br>约好再一起去看　夏日的天空吧</p>
 <p>你我相逢　是奇迹互相交织而出的邂逅<br>有如头发随风儿飘舞<br>一切是命中注定　现在我才如梦初醒<br>为了将你珍爱我仍然在奔波不止<br>把这爱　交予你</p>
+</div>
+]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《shining! our life》歌词翻译</title>
+    <url>/2024/05/31/shining_our_life/</url>
+    <content><![CDATA[<p><strong>shining! our life</strong> - 游戏《金辉恋曲四重奏》片尾曲</p>
+<p>作词：<span lang="ja">柚子乃</span>；作曲：<span lang="ja">高瀬一矢</span></p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>朝日が笑う”おはよう”<br>チャイム聞こえたら　手をとって駆け出そう<br>(Sky high! Shining! High five! Lala)</p>
+<p>欲張りかな　選べないよ<br>今しかないって言うから<br>目いっぱい　遊べ！手いっぱい　抱きしめて<br>求めて　まだ物足りない<br>夢いっぱい詰め込んで<br>弾けそうなスクールバッグでも<br>それもいいでしょ？</p>
+<p>昨日と今日は似ていて<br>(Hectic! Day to day)<br>だけど見上げればいつもより晴れていて</p>
+<p>Sky high!　今日の空より<br>Shining　キミが眩しい<br>そっと　ペン走る　想いのせて</p>
+<p>震える鼓動　でも聞いてよ<br>隅っこに小さく書いた<br>キミに届け　feel my heart　きらめいて<br>悩みの種バラまいて　笑顔の花咲かせて<br>弾け飛んだメロディ　唄えば<br>明日はもっと強くなれる</p>
+<p>廊下を駆ける足音<br>(Lively! Day to day)<br>はしゃぐ笑い声と重なるハーモニー</p>
+<p>High five!　どんな過去でも<br>Shining　塗りつぶすから<br>ずっと　今か続けば良いのにって思ってる</p>
+<p>Bittersweet love　胸をしめつける<br>もどかしいね　キミとの距離<br>そんな今　胸いっぱいの宝物</p>
+<p>欲張りかな　選べないよ<br>今しかないって言うから<br>目いっぱい　遊べ！手いっぱい　抱きしめて<br>求めて　まだ物足りない<br>夢いっぱい詰め込んで<br>弾けそうなスクールバッグ持って<br>また明日　キミに会おう</p>
+<p>(Sky high! Shining! High five! Lala)</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>朝阳笑着说道“早上好”<br>听见了上课的铃声　就牵上手奔跑起来吧<br>(Sky high! Shining! High five! Lala)</p>
+<p>贪心还是知足　没法打定主意<br>毕竟你告诉我时不再来<br>全身心　尽情玩！张开手　坦诚地拥抱<br>一直追求　还是不觉得满足<br>书包满载着美好梦想<br>即使快要就此倾泻而出<br>也不必在意对吧？</p>
+<p>昨天和今天也大同小异<br>(Hectic! Day to day)<br>可是抬起头便发现前所未见的一片晴天</p>
+<p>Sky high!　今日天高气爽<br>Shining　而你更为闪耀<br>淡淡　笔尖飞舞　将思绪写出</p>
+<p>心灵微微震颤　我也听得真切<br>轻轻记在秘密的一角<br>向你传达而出　feel my heart　散发出光辉<br>随意撒下烦恼的种子　最终开出笑容的花朵<br>若是把欢快的旋律　高声唱响<br>明天就能变得更加坚强</p>
+<p>走廊上飞奔的脚步声<br>(Lively! Day to day)<br>与欢闹的嬉笑一同交织出一段和声</p>
+<p>High five!　不管过去如何<br>Shining　全都一笑而过<br>只愿　现在的日子能永远继续下去就好</p>
+<p>Bittersweet love　将胸口紧紧揪住<br>真是烦闷不安　彼此间的距离<br>现在已然是　充盈内心的宝物</p>
+<p>贪心还是知足　没法打定主意<br>毕竟你告诉我时不再来<br>全身心　尽情玩！张开手　坦诚地拥抱<br>一直追求　还是不觉得满足<br>书包满载着美好梦想<br>拿在手上快要倾泻而出<br>明天也要　再与你相遇</p>
+<p>(Sky high! Shining! High five! Lala)</p>
 </div>
 ]]></content>
       <tags>
@@ -4870,48 +4912,6 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
-    <title>《shining! our life》歌词翻译</title>
-    <url>/2024/05/31/shining_our_life/</url>
-    <content><![CDATA[<p><strong>shining! our life</strong> - 游戏《金辉恋曲四重奏》片尾曲</p>
-<p>作词：<span lang="ja">柚子乃</span>；作曲：<span lang="ja">高瀬一矢</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>朝日が笑う”おはよう”<br>チャイム聞こえたら　手をとって駆け出そう<br>(Sky high! Shining! High five! Lala)</p>
-<p>欲張りかな　選べないよ<br>今しかないって言うから<br>目いっぱい　遊べ！手いっぱい　抱きしめて<br>求めて　まだ物足りない<br>夢いっぱい詰め込んで<br>弾けそうなスクールバッグでも<br>それもいいでしょ？</p>
-<p>昨日と今日は似ていて<br>(Hectic! Day to day)<br>だけど見上げればいつもより晴れていて</p>
-<p>Sky high!　今日の空より<br>Shining　キミが眩しい<br>そっと　ペン走る　想いのせて</p>
-<p>震える鼓動　でも聞いてよ<br>隅っこに小さく書いた<br>キミに届け　feel my heart　きらめいて<br>悩みの種バラまいて　笑顔の花咲かせて<br>弾け飛んだメロディ　唄えば<br>明日はもっと強くなれる</p>
-<p>廊下を駆ける足音<br>(Lively! Day to day)<br>はしゃぐ笑い声と重なるハーモニー</p>
-<p>High five!　どんな過去でも<br>Shining　塗りつぶすから<br>ずっと　今か続けば良いのにって思ってる</p>
-<p>Bittersweet love　胸をしめつける<br>もどかしいね　キミとの距離<br>そんな今　胸いっぱいの宝物</p>
-<p>欲張りかな　選べないよ<br>今しかないって言うから<br>目いっぱい　遊べ！手いっぱい　抱きしめて<br>求めて　まだ物足りない<br>夢いっぱい詰め込んで<br>弾けそうなスクールバッグ持って<br>また明日　キミに会おう</p>
-<p>(Sky high! Shining! High five! Lala)</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>朝阳笑着说道“早上好”<br>听见了上课的铃声　就牵上手奔跑起来吧<br>(Sky high! Shining! High five! Lala)</p>
-<p>贪心还是知足　没法打定主意<br>毕竟你告诉我时不再来<br>全身心　尽情玩！张开手　坦诚地拥抱<br>一直追求　还是不觉得满足<br>书包满载着美好梦想<br>即使快要就此倾泻而出<br>也不必在意对吧？</p>
-<p>昨天和今天也大同小异<br>(Hectic! Day to day)<br>可是抬起头便发现前所未见的一片晴天</p>
-<p>Sky high!　今日天高气爽<br>Shining　而你更为闪耀<br>淡淡　笔尖飞舞　将思绪写出</p>
-<p>心灵微微震颤　我也听得真切<br>轻轻记在秘密的一角<br>向你传达而出　feel my heart　散发出光辉<br>随意撒下烦恼的种子　最终开出笑容的花朵<br>若是把欢快的旋律　高声唱响<br>明天就能变得更加坚强</p>
-<p>走廊上飞奔的脚步声<br>(Lively! Day to day)<br>与欢闹的嬉笑一同交织出一段和声</p>
-<p>High five!　不管过去如何<br>Shining　全都一笑而过<br>只愿　现在的日子能永远继续下去就好</p>
-<p>Bittersweet love　将胸口紧紧揪住<br>真是烦闷不安　彼此间的距离<br>现在已然是　充盈内心的宝物</p>
-<p>贪心还是知足　没法打定主意<br>毕竟你告诉我时不再来<br>全身心　尽情玩！张开手　坦诚地拥抱<br>一直追求　还是不觉得满足<br>书包满载着美好梦想<br>拿在手上快要倾泻而出<br>明天也要　再与你相遇</p>
-<p>(Sky high! Shining! High five! Lala)</p>
-</div>
-]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《・・・すぐ来てね（…请马上来吧）》歌词翻译</title>
     <url>/2024/06/03/sugu_kite_ne/</url>
     <content><![CDATA[<p><strong><span lang="ja">・・・すぐ来てね</span>（…请马上来吧）</strong> - 游戏《金辉恋曲四重奏 -Golden Time-》片尾曲</p>
@@ -4949,46 +4949,6 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
 <p>提前到得有些太早了，不禁一笑<br>立下约定就有如此高兴</p>
 <p>喂　ring! ring!<br>想见你的心情在胸中高扬不止<br>就好像要盖过车站嘈杂的声音一般<br>1个人等待的这段时光虽然也有些幸福<br>还是想快些见到你<br>果然还是与你2个人才更好<br>…请马上来吧</p>
 <p>Now! Now! Right Now!<br>Now! Now! Right Now!<br>Now! Now! Right Now!<br>…Stay with me.</p>
-</div>
-]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《ReJOIN♪》歌词翻译</title>
-    <url>/2024/06/09/rejoin/</url>
-    <content><![CDATA[<p><strong>ReJOIN♪</strong> - 动画《ReLIFE》小野屋杏角色歌</p>
-<p>作词：<span lang="ja">橋本彩子</span>；作曲：<span lang="ja">iz・藤松樹</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space:pre;">
-
-<p>ReJOIN♪一度ダメでもまた繋ごう</p>
-<p>一度きりなんて誰が決めたのかしら<br>楽しいことは何度だって</p>
-<p>一度で十分な悲しいことはノンノン！<br>もう一度塗り替えよう</p>
-<p>ハニートラップ　かわいい女の子で誘惑<br>もしかしたら本気になる？遊んであげるよ</p>
-<p>ReJOIN♪チャレンジなら何度でもできる<br>立ち止まるよりスキップが楽しいよ<br>ReJOIN♪たまにしょんぼりしちゃう時なら<br>コーヒーブレイク♪ひと休みしよう</p>
-<p>本気出してないだけ<br>出さないままで終わるの？<br>もったいないよ　大人も子供も！</p>
-<p>青春時代遠くから見ているのもいいけれど<br>どうせならね　飛び込むのも　悪くないかもね</p>
-<p>ReJOIN♪1人よりも2人がいいね<br>少しずつ色づくカラフルなパレットなら<br>どんな絵でも描けるから<br>まずは明日に虹かけて<br>明日はどんな絵を描く？</p>
-<p>ReJOIN♪一度ダメでもまた繋ごう<br>過去にして嘆くには早すぎる<br>ReJOIN♪ソツなくより悔いなくがいいよね<br>何度でも始められる<br>パレードなう♪みんな巻き込んで回そう<br>日々のメリーゴーランド</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>ReJOIN♪就算失败一回也要再度相牵</p>
-<p>只有一次什么的又究竟是谁决定的呢<br>快乐的时光总会如期而至</p>
-<p>仅此一次只会特别伤感所以NONO！<br>再试一次让自己焕然一新</p>
-<p>甜蜜的陷阱　以可爱的女孩试着引诱<br>难道说你信以为真了？那就陪你玩乐吧</p>
-<p>ReJOIN♪遇到挑战每次都能成功通过<br>比起驻足不前纵身一跃才更加喜悦<br>ReJOIN♪如果偶尔感到有些消沉失落<br>茶歇时间♪稍稍休息一下吧</p>
-<p>只是还没有全力应对<br>就要以平庸结束这一切吗？<br>论谁都会觉得　实在太过可惜！</p>
-<p>远远地回首自己的青春时代可能挺好的<br>既然心怀期待　就此投入其中　或许也不错</p>
-<p>ReJOIN♪比起一个人更希望有人作伴<br>只要用色彩斑斓的调色板在画布上细细点缀<br>便能绘成自己满意的作品<br>为明天先架起一道彩虹<br>明天又可以再画些什么？</p>
-<p>ReJOIN♪就算失败一回也要再度相牵<br>叹息过往的遗憾还为时过早<br>ReJOIN♪比起不得要领更应不留悔恨<br>不管几次都能再度开始<br>游行庆祝♪大家都聚在一起享受<br>每天都乘着旋转木马</p>
 </div>
 ]]></content>
       <tags>
@@ -5045,6 +5005,46 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
 <li><a id="注_1" href="#文注_1">^</a> “<span lang="ja">またグー</span>”出自猜拳时的顺口溜“<span lang="ja">最初はグー、またまたグー、いかりや長介アタマはパー、正義は勝つじゃんけんポン</span>”。“<span lang="ja">石</span>”／“<span lang="ja">グー</span>”对应石头，“<span lang="ja">鋏</span>”／“<span lang="ja">チョキ</span>”对应剪刀，“<span lang="ja">紙</span>”／“<span lang="ja">パー</span>”对应布或者纸。</li>
 <li><a id="注_2" href="#文注_2">^</a> “<span lang="ja">やぶの中</span>”指日本作家芥川龙之介所著短篇小说<span lang="ja">「藪の中」</span>（《竹林中》），由此引申出“<span lang="ja">真相は藪の中</span>”（真相在竹林之中）一句。</li>
 </ol>
+]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《ReJOIN♪》歌词翻译</title>
+    <url>/2024/06/09/rejoin/</url>
+    <content><![CDATA[<p><strong>ReJOIN♪</strong> - 动画《ReLIFE》小野屋杏角色歌</p>
+<p>作词：<span lang="ja">橋本彩子</span>；作曲：<span lang="ja">iz・藤松樹</span></p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space:pre;">
+
+<p>ReJOIN♪一度ダメでもまた繋ごう</p>
+<p>一度きりなんて誰が決めたのかしら<br>楽しいことは何度だって</p>
+<p>一度で十分な悲しいことはノンノン！<br>もう一度塗り替えよう</p>
+<p>ハニートラップ　かわいい女の子で誘惑<br>もしかしたら本気になる？遊んであげるよ</p>
+<p>ReJOIN♪チャレンジなら何度でもできる<br>立ち止まるよりスキップが楽しいよ<br>ReJOIN♪たまにしょんぼりしちゃう時なら<br>コーヒーブレイク♪ひと休みしよう</p>
+<p>本気出してないだけ<br>出さないままで終わるの？<br>もったいないよ　大人も子供も！</p>
+<p>青春時代遠くから見ているのもいいけれど<br>どうせならね　飛び込むのも　悪くないかもね</p>
+<p>ReJOIN♪1人よりも2人がいいね<br>少しずつ色づくカラフルなパレットなら<br>どんな絵でも描けるから<br>まずは明日に虹かけて<br>明日はどんな絵を描く？</p>
+<p>ReJOIN♪一度ダメでもまた繋ごう<br>過去にして嘆くには早すぎる<br>ReJOIN♪ソツなくより悔いなくがいいよね<br>何度でも始められる<br>パレードなう♪みんな巻き込んで回そう<br>日々のメリーゴーランド</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>ReJOIN♪就算失败一回也要再度相牵</p>
+<p>只有一次什么的又究竟是谁决定的呢<br>快乐的时光总会如期而至</p>
+<p>仅此一次只会特别伤感所以NONO！<br>再试一次让自己焕然一新</p>
+<p>甜蜜的陷阱　以可爱的女孩试着引诱<br>难道说你信以为真了？那就陪你玩乐吧</p>
+<p>ReJOIN♪遇到挑战每次都能成功通过<br>比起驻足不前纵身一跃才更加喜悦<br>ReJOIN♪如果偶尔感到有些消沉失落<br>茶歇时间♪稍稍休息一下吧</p>
+<p>只是还没有全力应对<br>就要以平庸结束这一切吗？<br>论谁都会觉得　实在太过可惜！</p>
+<p>远远地回首自己的青春时代可能挺好的<br>既然心怀期待　就此投入其中　或许也不错</p>
+<p>ReJOIN♪比起一个人更希望有人作伴<br>只要用色彩斑斓的调色板在画布上细细点缀<br>便能绘成自己满意的作品<br>为明天先架起一道彩虹<br>明天又可以再画些什么？</p>
+<p>ReJOIN♪就算失败一回也要再度相牵<br>叹息过往的遗憾还为时过早<br>ReJOIN♪比起不得要领更应不留悔恨<br>不管几次都能再度开始<br>游行庆祝♪大家都聚在一起享受<br>每天都乘着旋转木马</p>
+</div>
 ]]></content>
       <tags>
         <tag>歌词翻译</tag>
