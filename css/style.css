@@ -7732,11 +7732,100 @@ html.is-animating .scroll-progress-bar {
 .tagcloud-container .tagcloud-content {
   text-align: justify;
 }
-.tagcloud-container .tagcloud-content a {
-  display: inline-block;
-  box-sizing: border-box;
-  padding: 0.7rem 0.5rem;
-  line-height: 0.7;
+.tagcloud-container .tagcloud-content:hover .tag-list a {
+  filter: blur(0px) !important;
+  transition: filter 0.3s ease;
+}
+.tagcloud-container .tagcloud-content .tag-list[data-show-value] a::after {
+  content: attr(data-weight);
+  font-size: 1.5rem;
+  background-color: var(--third-background-color);
+  padding: 4px 8px;
+  min-width: 35px;
+  margin-left: 10px;
+  border-radius: 9px;
+  color: var(--third-text-color);
+  transition: background-color 0.2s ease;
+}
+.tagcloud-container .tagcloud-content .tags-punctuation,
+.tagcloud-container .tagcloud-content .tag-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  line-height: 2.5rem;
+}
+.tagcloud-container .tagcloud-content .tags-punctuation li a,
+.tagcloud-container .tagcloud-content .tag-list li a {
+  font-size: 1.4rem;
+  opacity: var(--opacity);
+  padding: 0.9rem 1.4rem;
+  display: block;
+  position: relative;
+  flex: 1;
+  border-radius: 18px;
+  box-shadow: var(--redefine-box-shadow);
+  margin: 10px;
+  color: var(--default-text-color);
+  filter: blur(var(--blur));
+  transform: scaleX(1) scaleY(1);
+  background-color: var(--default-background-color);
+  transition: transform 0.2s ease, filter 0.3s ease, color 0.2s ease, background-color 0.2s ease;
+}
+.tagcloud-container .tagcloud-content .tags-punctuation li a[data-weight],
+.tagcloud-container .tagcloud-content .tag-list li a[data-weight] {
+  --blur: 0;
+}
+.tagcloud-container .tagcloud-content .tags-punctuation li a[data-weight='1'],
+.tagcloud-container .tagcloud-content .tag-list li a[data-weight='1'] {
+  --blur: 3px;
+}
+.tagcloud-container .tagcloud-content .tags-punctuation li a[data-weight='2'],
+.tagcloud-container .tagcloud-content .tag-list li a[data-weight='2'] {
+  --blur: 1.8px;
+}
+.tagcloud-container .tagcloud-content .tags-punctuation li a[data-weight='3'],
+.tagcloud-container .tagcloud-content .tag-list li a[data-weight='3'] {
+  --blur: 0.8px;
+}
+.tagcloud-container .tagcloud-content .tags-punctuation li a[data-weight='4'],
+.tagcloud-container .tagcloud-content .tag-list li a[data-weight='4'] {
+  --blur: 0.4px;
+}
+.tagcloud-container .tagcloud-content .tags-punctuation li a[data-weight='5'],
+.tagcloud-container .tagcloud-content .tag-list li a[data-weight='5'] {
+  --blur: 0;
+}
+.tagcloud-container .tagcloud-content .tags-punctuation li a .fa-hashtag,
+.tagcloud-container .tagcloud-content .tag-list li a .fa-hashtag {
+  margin-right: 5px;
+  opacity: 0.3;
+}
+.tagcloud-container .tagcloud-content .tags-punctuation li a:hover,
+.tagcloud-container .tagcloud-content .tag-list li a:hover {
+  transform: scaleX(1.05) scaleY(1.05);
+  box-shadow: var(--redefine-box-shadow-hover);
+  background-color: var(--primary-color);
+  color: var(--invert-text-color);
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+.tagcloud-container .tagcloud-content .tags-punctuation li a:hover .fa-hashtag,
+.tagcloud-container .tagcloud-content .tag-list li a:hover .fa-hashtag {
+  margin-right: 5px;
+  color: var(--invert-text-color);
+  opacity: 0.4;
+}
+.tagcloud-container .tagcloud-content .tags-punctuation li a:active,
+.tagcloud-container .tagcloud-content .tag-list li a:active {
+  transform: translateY(2px);
+  transition: transform 0.1s;
+}
+@media (prefers-reduced-motion) {
+  .tagcloud-container .tagcloud-content .tag-list * {
+    transition: none !important;
+  }
 }
 .nf-container {
   width: 100%;
