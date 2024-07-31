@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>洛谷 P1598 垂直柱状图 题解</title>
-    <url>/2020/02/15/luogu_p1598/</url>
-    <content><![CDATA[<p>本题解最初发布于洛谷个人博客。链接：<a class="link"   href="https://www.luogu.com.cn/blog/guopc/p1598" >https://www.luogu.com.cn/blog/guopc/p1598 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p><strong>Python 3</strong></p>
-<p><a class="link"   href="https://www.luogu.com.cn/problem/P1598" >题目链接 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<p>好像没看到有人写 Python 3 的题解，本蒟蒻就来献丑了。</p>
-<p>模拟，嗯。主要用到列表和字典。</p>
-<p>直接上代码：</p>
-<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">letters = [<span class="built_in">chr</span>(i) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">65</span>, <span class="number">91</span>)] <span class="comment"># 创建字符 A~Z 的列表</span></span><br><span class="line">staDic = <span class="built_in">dict</span>(<span class="built_in">zip</span>(letters, [<span class="number">0</span>] * <span class="number">26</span>)) <span class="comment"># 以字母为键创建统计每个字母出现次数的字典</span></span><br><span class="line">ins = [j <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>) <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">input</span>()] <span class="comment"># 读入输入，同时将输入拆成单个字符存入列表</span></span><br><span class="line"><span class="keyword">for</span> k <span class="keyword">in</span> ins:</span><br><span class="line">    <span class="keyword">if</span> k <span class="keyword">in</span> letters:</span><br><span class="line">        staDic[k] += <span class="number">1</span> <span class="comment"># 遍历输入的每一个字符，过滤出 A~Z，同时统计出现次数</span></span><br><span class="line">maxValue = <span class="built_in">max</span>(staDic.values()) <span class="comment"># 获取最大出现次数</span></span><br><span class="line">ZDic = &#123;<span class="string">&#x27;Z&#x27;</span>: staDic.pop(<span class="string">&#x27;Z&#x27;</span>)&#125; <span class="comment"># 将 Z 的键值对拿出来用于单独处理，此时统计字典 staDic 里只有 A~Y 的键值对了</span></span><br><span class="line"><span class="keyword">while</span> maxValue &gt; <span class="number">0</span>:</span><br><span class="line"><span class="comment"># 这里考虑的是，因为题目要求的“柱状图”是底部对齐的，所以应当将值从大到小层层过滤。</span></span><br><span class="line"><span class="comment"># 没理解的话可以照着输出样例，在左侧从底部往上标注 1、2、3、…（也就是手动加个纵轴）。现在就是从顶部向下进行输出</span></span><br><span class="line">    <span class="keyword">for</span> value <span class="keyword">in</span> staDic.values(): <span class="comment"># 遍历统计字典里（现在只有 A~Y）的各值</span></span><br><span class="line">        <span class="keyword">if</span> value &gt;= maxValue:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;*&#x27;</span>, end=<span class="string">&#x27; &#x27;</span>) <span class="comment"># 对应的键能达到这个出现次数，输出 * 加个空格</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27; &#x27;</span>, end=<span class="string">&#x27; &#x27;</span>) <span class="comment"># 对应的键达不到这个出现次数，输出 2 个空格</span></span><br><span class="line">    <span class="keyword">if</span> ZDic[<span class="string">&#x27;Z&#x27;</span>] &gt;= maxValue: <span class="comment"># 单独处理 Z，因为 Z 后面就要换行了嘛</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;*&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">    maxValue -= <span class="number">1</span> <span class="comment"># 一行输出完之后出现次数自减，到下一行进行输出（继续循环）</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27; &#x27;</span>.join(letters)) <span class="comment"># 输出横轴</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-<p>语言表达苦手qwq，如果能看懂我写的注释的话那再好不过了（</p>
-]]></content>
-      <tags>
-        <tag>题解</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《Le zoo》歌词翻译</title>
     <url>/2020/07/24/le_zoo/</url>
     <content><![CDATA[<p><strong>Le zoo</strong> - 动画《BEASTARS》片尾曲</p>
@@ -58,6 +41,23 @@
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>洛谷 P1598 垂直柱状图 题解</title>
+    <url>/2020/02/15/luogu_p1598/</url>
+    <content><![CDATA[<p>本题解最初发布于洛谷个人博客。链接：<a class="link"   href="https://www.luogu.com.cn/blog/guopc/p1598" >https://www.luogu.com.cn/blog/guopc/p1598 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><strong>Python 3</strong></p>
+<p><a class="link"   href="https://www.luogu.com.cn/problem/P1598" >题目链接 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p>好像没看到有人写 Python 3 的题解，本蒟蒻就来献丑了。</p>
+<p>模拟，嗯。主要用到列表和字典。</p>
+<p>直接上代码：</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">letters = [<span class="built_in">chr</span>(i) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">65</span>, <span class="number">91</span>)] <span class="comment"># 创建字符 A~Z 的列表</span></span><br><span class="line">staDic = <span class="built_in">dict</span>(<span class="built_in">zip</span>(letters, [<span class="number">0</span>] * <span class="number">26</span>)) <span class="comment"># 以字母为键创建统计每个字母出现次数的字典</span></span><br><span class="line">ins = [j <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>) <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">input</span>()] <span class="comment"># 读入输入，同时将输入拆成单个字符存入列表</span></span><br><span class="line"><span class="keyword">for</span> k <span class="keyword">in</span> ins:</span><br><span class="line">    <span class="keyword">if</span> k <span class="keyword">in</span> letters:</span><br><span class="line">        staDic[k] += <span class="number">1</span> <span class="comment"># 遍历输入的每一个字符，过滤出 A~Z，同时统计出现次数</span></span><br><span class="line">maxValue = <span class="built_in">max</span>(staDic.values()) <span class="comment"># 获取最大出现次数</span></span><br><span class="line">ZDic = &#123;<span class="string">&#x27;Z&#x27;</span>: staDic.pop(<span class="string">&#x27;Z&#x27;</span>)&#125; <span class="comment"># 将 Z 的键值对拿出来用于单独处理，此时统计字典 staDic 里只有 A~Y 的键值对了</span></span><br><span class="line"><span class="keyword">while</span> maxValue &gt; <span class="number">0</span>:</span><br><span class="line"><span class="comment"># 这里考虑的是，因为题目要求的“柱状图”是底部对齐的，所以应当将值从大到小层层过滤。</span></span><br><span class="line"><span class="comment"># 没理解的话可以照着输出样例，在左侧从底部往上标注 1、2、3、…（也就是手动加个纵轴）。现在就是从顶部向下进行输出</span></span><br><span class="line">    <span class="keyword">for</span> value <span class="keyword">in</span> staDic.values(): <span class="comment"># 遍历统计字典里（现在只有 A~Y）的各值</span></span><br><span class="line">        <span class="keyword">if</span> value &gt;= maxValue:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;*&#x27;</span>, end=<span class="string">&#x27; &#x27;</span>) <span class="comment"># 对应的键能达到这个出现次数，输出 * 加个空格</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27; &#x27;</span>, end=<span class="string">&#x27; &#x27;</span>) <span class="comment"># 对应的键达不到这个出现次数，输出 2 个空格</span></span><br><span class="line">    <span class="keyword">if</span> ZDic[<span class="string">&#x27;Z&#x27;</span>] &gt;= maxValue: <span class="comment"># 单独处理 Z，因为 Z 后面就要换行了嘛</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;*&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">    maxValue -= <span class="number">1</span> <span class="comment"># 一行输出完之后出现次数自减，到下一行进行输出（继续循环）</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27; &#x27;</span>.join(letters)) <span class="comment"># 输出横轴</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>语言表达苦手qwq，如果能看懂我写的注释的话那再好不过了（</p>
+]]></content>
+      <tags>
+        <tag>题解</tag>
       </tags>
   </entry>
   <entry>
@@ -151,49 +151,6 @@
       </tags>
   </entry>
   <entry>
-    <title>《余白のほんね（留白的心声）》歌词翻译</title>
-    <url>/2020/08/14/yohaku_no_honne/</url>
-    <content><![CDATA[<p><strong><span lang="ja">余白のほんね</span>（留白的心声）</strong> - 游戏《魔法纪录 魔法少女小圆外传》第一部片尾曲</p>
-<p>作词：<span lang="ja">渡辺翔</span>；作曲：<span lang="ja">渡辺翔</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>書き記してまた振り返ってみた<br>記憶は穴だらけだ<br>伝えたい事も言えない口は<br>過去もぼやかした</p>
-<p>咲き誇っている桜のような<br>誰からも認められている<br>存在になりたいなって顔を上げてみた</p>
-<p>君の見てた世界を覗いて<br>必要なもの確かめたい<br>そっと触れてふわっと包んで<br>寄り添って行こう</p>
-<p>涙は意味が変わって<br>帰る場所しるし付けて<br>大事に綴ろう</p>
-<p>温かいだけで中身のない<br>思い出　手放し「本物」が<br>こんなに眩しいなんて想像しなかった</p>
-<p>側に出来た世界を守って<br>無邪気に未来期待しよう<br>もっと自然にくしゃっと笑って<br>瞳合わそう</p>
-<p>なんにも抱え込こまずに<br>小さな夢を育て<br>君といれたら</p>
-<p>隠していた本音ならここにあるよ<br>飾ることない言葉は空に昇る</p>
-<p>君の見てた世界を覗いて<br>必要なもの確かめたい<br>そっと触れてふわっと包んで<br>寄り添って離さない</p>
-<p>側に出来た世界を守って<br>無邪気に未来期待しよう<br>もっと自然にくしゃっと笑って<br>瞳合わそう</p>
-<p>涙は意味が変わって<br>帰る場所しるし付けて<br>大事に綴ろう</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>用笔写下　尝试回首<br>记忆却已千疮百孔<br>想传达的事却说不出口<br>过去也已模糊不清</p>
-<p>如同灿烂开放的樱花一般<br>想要成为被所有人<br>认同的存在　我试着抬起头</p>
-<p>窥探着你所看到的世界<br>想要确认必要的东西<br>轻轻触碰　温柔包裹<br>互相依靠着前进</p>
-<p>眼泪的意义已经改变<br>在回归之所留下印记<br>珍重地写下</p>
-<p>记忆温暖但内心空虚<br>回忆　放手后的「真谛」<br>竟如此耀眼超出我的想象</p>
-<p>在你身边守护创造出的世界<br>天真无邪地期待未来吧<br>更自然地露出笑容<br>相对而视</p>
-<p>不再抱有任何负担<br>只要和你在一起<br>就能孕育小小的梦想</p>
-<p>隐藏起来的真心话就在这里<br>朴实无华的言语升上天空</p>
-<p>窥探着你所看到的世界<br>想要确认必要的东西<br>轻轻触碰　温柔包裹<br>互相依靠不再分开</p>
-<p>在你身边守护创造出的世界<br>天真无邪地期待未来吧<br>更自然地露出笑容<br>相对而视</p>
-<p>眼泪的意义已经改变<br>在回归之所留下印记<br>珍重地写下</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《想いはCarnaval（思慕是场Carnaval）》歌词翻译</title>
     <url>/2020/08/16/omoi_wa_carnaval/</url>
     <content><![CDATA[<p><strong><span lang="ja">想いはCarnaval</span>（思慕是场Carnaval）</strong> - 游戏《偶像大师 百万现场》曲目</p>
@@ -231,6 +188,41 @@
 <p>不要如此轻易地说出　我是像妹妹一样的存在<br>抱歉　我已经等不及未来<br>请你告诉我吧</p>
 <p>思慕是场Carnaval<br>我一直关注你　无法停下<br>如果能两手相牵<br>心情就能传达到　是这样吧？</p>
 <p>思慕是场Carnaval<br>对你的爱慕不断涌出无法停止<br>在天亮之前都一直起舞吧<br>火热的派对开始吧</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《月に浮かぶ物語（月亮上浮现的故事）》歌词翻译</title>
+    <url>/2020/09/09/tsuki_ni_ukabu_monogatari/</url>
+    <content><![CDATA[<p><strong><span lang="ja">月に浮かぶ物語</span>（月亮上浮现的故事）</strong> - 动画《BEASTARS》片尾曲</p>
+<p>作词：<span lang="ja">唐沢美帆</span>；作曲：<span lang="ja">神前暁</span></p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>月に浮かぶ<br>物語を話そう<br>とても優しく<br>すこし悲しい物語</p>
+<p>チクタクと刻む時<br>ぬくもりを数えてる<br>やわらかな夜の帳<br>君とふたり</p>
+<p>空の向こうに憧れて<br>身を焦がした<br>何ひとつ怖くなかった<br>まるで幸せだった<br>悲しみよりも<br>よろこびを抱きしめよう<br>はじまりと終わりの向こう<br>闇を照らす光</p>
+<p>見上げたのは<br>はるか遠いお別れ<br>問いかけるように<br>語り継がれる物語</p>
+<p>透きとおる意識のなか<br>こころ触れる</p>
+<p>早く大人になりたくて<br>手を伸ばした<br>何ひとつ迷わなかった<br>まるで必然だった<br>信じることで<br>僕たちは強くなれる<br>さよならに願いを込めた<br>まるで月のうさぎ</p>
+<p>空の向こうに憧れて<br>身を焦がした<br>何ひとつ怖くなかった<br>まるで幸せだった<br>悲しみよりも<br>よろこびを抱きしめよう<br>はじまりと終わりの向こう<br>闇を照らす光</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>让我来跟你说说<br>月亮上浮现的故事<br>一段极其温柔<br>又有些悲伤的故事</p>
+<p>滴答滴答刻下的时间<br>细数着那些温暖<br>在温柔的夜之帐幕下<br>我和你二人</p>
+<p>憧憬着天空那边<br>身体感到焦灼<br>我什么也不害怕<br>这就像是幸福<br>比起一味悲伤<br>让我们拥抱喜悦<br>在开始与结束之处<br>光芒照亮了黑暗</p>
+<p>抬头仰望着<br>那无比遥远的分别<br>就像在问着什么<br>故事就这样继续传颂着</p>
+<p>在通透的意识之中<br>触碰着心灵</p>
+<p>想要快点成为大人<br>我伸出了手<br>没有任何迷茫<br>一切就像是必然<br>所相信的事情<br>让我们变得更加强大<br>向告别献上祝愿<br>就像月亮上的兔子</p>
+<p>憧憬着天空那边<br>身体感到焦灼<br>我什么也不害怕<br>这就像是幸福<br>比起一味悲伤<br>让我们拥抱喜悦<br>在开始与结束之处<br>光芒照亮了黑暗</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -278,87 +270,6 @@
       </tags>
   </entry>
   <entry>
-    <title>《Many Stories》歌词翻译</title>
-    <url>/2020/09/13/many_stories/</url>
-    <content><![CDATA[<p><strong>Many Stories</strong> - 动画《BEASTARS》插曲</p>
-<p>作词：Chica；作曲：<span lang="ja">神前暁</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="en" style="white-space: pre;">
-
-<p>Like the clouds, never stay<br>Moving away<br>The sunlight coming into<br>That’s the way it goes<br>No one else could be you, we’re different<br>That is why we’re beautiful<br>One world many stories</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>就像云朵从不停留<br>逐渐飘去<br>太阳洒下它的光芒<br>一如既往<br>没有人能够替代你<br>我们不同<br>这就是为什么我们这样美丽<br>一个世界　许多故事</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《月に浮かぶ物語（月亮上浮现的故事）》歌词翻译</title>
-    <url>/2020/09/09/tsuki_ni_ukabu_monogatari/</url>
-    <content><![CDATA[<p><strong><span lang="ja">月に浮かぶ物語</span>（月亮上浮现的故事）</strong> - 动画《BEASTARS》片尾曲</p>
-<p>作词：<span lang="ja">唐沢美帆</span>；作曲：<span lang="ja">神前暁</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>月に浮かぶ<br>物語を話そう<br>とても優しく<br>すこし悲しい物語</p>
-<p>チクタクと刻む時<br>ぬくもりを数えてる<br>やわらかな夜の帳<br>君とふたり</p>
-<p>空の向こうに憧れて<br>身を焦がした<br>何ひとつ怖くなかった<br>まるで幸せだった<br>悲しみよりも<br>よろこびを抱きしめよう<br>はじまりと終わりの向こう<br>闇を照らす光</p>
-<p>見上げたのは<br>はるか遠いお別れ<br>問いかけるように<br>語り継がれる物語</p>
-<p>透きとおる意識のなか<br>こころ触れる</p>
-<p>早く大人になりたくて<br>手を伸ばした<br>何ひとつ迷わなかった<br>まるで必然だった<br>信じることで<br>僕たちは強くなれる<br>さよならに願いを込めた<br>まるで月のうさぎ</p>
-<p>空の向こうに憧れて<br>身を焦がした<br>何ひとつ怖くなかった<br>まるで幸せだった<br>悲しみよりも<br>よろこびを抱きしめよう<br>はじまりと終わりの向こう<br>闇を照らす光</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>让我来跟你说说<br>月亮上浮现的故事<br>一段极其温柔<br>又有些悲伤的故事</p>
-<p>滴答滴答刻下的时间<br>细数着那些温暖<br>在温柔的夜之帐幕下<br>我和你二人</p>
-<p>憧憬着天空那边<br>身体感到焦灼<br>我什么也不害怕<br>这就像是幸福<br>比起一味悲伤<br>让我们拥抱喜悦<br>在开始与结束之处<br>光芒照亮了黑暗</p>
-<p>抬头仰望着<br>那无比遥远的分别<br>就像在问着什么<br>故事就这样继续传颂着</p>
-<p>在通透的意识之中<br>触碰着心灵</p>
-<p>想要快点成为大人<br>我伸出了手<br>没有任何迷茫<br>一切就像是必然<br>所相信的事情<br>让我们变得更加强大<br>向告别献上祝愿<br>就像月亮上的兔子</p>
-<p>憧憬着天空那边<br>身体感到焦灼<br>我什么也不害怕<br>这就像是幸福<br>比起一味悲伤<br>让我们拥抱喜悦<br>在开始与结束之处<br>光芒照亮了黑暗</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《A Tale of Moon》歌词翻译</title>
-    <url>/2020/09/13/a_tale_of_moon/</url>
-    <content><![CDATA[<p><strong>A Tale of Moon</strong> - 动画《BEASTARS》插曲</p>
-<p>作词：<span lang="ja">唐沢美帆</span>、Chica；作曲：<span lang="ja">神前暁</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="en" style="white-space: pre;">
-
-<p>I’ll tell you a story<br>Floating on the moon in the night<br>It is tenderly sweet<br>But it is a little bitter and slightly sad<br>When I hear the clock is ticking tocking<br>Count the lovingness and warmth of affection<br>Beautifully soft curtain of darkness</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>我会和你讲个故事<br>漂浮在那夜晚月亮之上<br>它是那温柔的甜蜜<br>却也有一丝苦涩和悲伤<br>当我听到闹钟滴答作响<br>细数着爱的深情和温暖<br>那美丽柔软的暗之帘幕</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《oneXone》歌词翻译</title>
     <url>/2020/09/20/onexone/</url>
     <content><![CDATA[<p><strong>oneXone</strong> - 游戏《A3!》满开剧团 秋组主题歌</p>
@@ -396,6 +307,49 @@
 <p>永远不要欺骗自己<br>快起来你这该死的骗子<br>向全世界放声呼喊<br>你必须打破这堵墙<br>开始吧</p>
 <p>准备好了吗？</p>
 <p>永远不要让我失望<br>不论什么时候<br>都有互相提升的力量<br>你是否曾有过这种感觉<br>我承认<br>感受到了那真切的热忱<br>和无法替代的伙伴</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《余白のほんね（留白的心声）》歌词翻译</title>
+    <url>/2020/08/14/yohaku_no_honne/</url>
+    <content><![CDATA[<p><strong><span lang="ja">余白のほんね</span>（留白的心声）</strong> - 游戏《魔法纪录 魔法少女小圆外传》第一部片尾曲</p>
+<p>作词：<span lang="ja">渡辺翔</span>；作曲：<span lang="ja">渡辺翔</span></p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>書き記してまた振り返ってみた<br>記憶は穴だらけだ<br>伝えたい事も言えない口は<br>過去もぼやかした</p>
+<p>咲き誇っている桜のような<br>誰からも認められている<br>存在になりたいなって顔を上げてみた</p>
+<p>君の見てた世界を覗いて<br>必要なもの確かめたい<br>そっと触れてふわっと包んで<br>寄り添って行こう</p>
+<p>涙は意味が変わって<br>帰る場所しるし付けて<br>大事に綴ろう</p>
+<p>温かいだけで中身のない<br>思い出　手放し「本物」が<br>こんなに眩しいなんて想像しなかった</p>
+<p>側に出来た世界を守って<br>無邪気に未来期待しよう<br>もっと自然にくしゃっと笑って<br>瞳合わそう</p>
+<p>なんにも抱え込こまずに<br>小さな夢を育て<br>君といれたら</p>
+<p>隠していた本音ならここにあるよ<br>飾ることない言葉は空に昇る</p>
+<p>君の見てた世界を覗いて<br>必要なもの確かめたい<br>そっと触れてふわっと包んで<br>寄り添って離さない</p>
+<p>側に出来た世界を守って<br>無邪気に未来期待しよう<br>もっと自然にくしゃっと笑って<br>瞳合わそう</p>
+<p>涙は意味が変わって<br>帰る場所しるし付けて<br>大事に綴ろう</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>用笔写下　尝试回首<br>记忆却已千疮百孔<br>想传达的事却说不出口<br>过去也已模糊不清</p>
+<p>如同灿烂开放的樱花一般<br>想要成为被所有人<br>认同的存在　我试着抬起头</p>
+<p>窥探着你所看到的世界<br>想要确认必要的东西<br>轻轻触碰　温柔包裹<br>互相依靠着前进</p>
+<p>眼泪的意义已经改变<br>在回归之所留下印记<br>珍重地写下</p>
+<p>记忆温暖但内心空虚<br>回忆　放手后的「真谛」<br>竟如此耀眼超出我的想象</p>
+<p>在你身边守护创造出的世界<br>天真无邪地期待未来吧<br>更自然地露出笑容<br>相对而视</p>
+<p>不再抱有任何负担<br>只要和你在一起<br>就能孕育小小的梦想</p>
+<p>隐藏起来的真心话就在这里<br>朴实无华的言语升上天空</p>
+<p>窥探着你所看到的世界<br>想要确认必要的东西<br>轻轻触碰　温柔包裹<br>互相依靠不再分开</p>
+<p>在你身边守护创造出的世界<br>天真无邪地期待未来吧<br>更自然地露出笑容<br>相对而视</p>
+<p>眼泪的意义已经改变<br>在回归之所留下印记<br>珍重地写下</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -527,53 +481,33 @@
       </tags>
   </entry>
   <entry>
-    <title>《ソナタ（奏鸣曲）》歌词翻译</title>
-    <url>/2020/10/16/sonata/</url>
-    <content><![CDATA[<p><strong><span lang="ja">ソナタ</span>（奏鸣曲）</strong> - 动画《她和她的猫 -Everything Flows-》片尾曲</p>
-<p>作词：<span lang="ja">ミト(クラムボン)</span>；作曲：<span lang="ja">ミト(クラムボン)</span></p>
+    <title>《恋する名探偵（恋爱名侦探）》歌词翻译</title>
+    <url>/2020/10/28/koisuru_meitantei/</url>
+    <content><![CDATA[<p><strong><span lang="ja">恋する名探偵</span>（恋爱名侦探）</strong> - 《女神异闻录4 动画版》片尾曲</p>
+<p>作词：meg rock；作曲：<span lang="ja">目黒将司</span></p>
 <hr>
 <p><strong>歌词</strong></p>
 <p><em>注：歌词著作权归原作者所有。</em></p>
 <div lang="ja" style="white-space: pre;">
 
-<p>さみしさのその先で<br>優しさは手を差し伸べる</p>
-<p>きっとみんな<br>そう信じて今を生きてる</p>
-<p>かけがえないあなたが<br>今日も幸せであるように</p>
-<p>ただひとつの<br>愛しい願いが</p>
-<p>この世界に<br>こだましている</p>
-<p>何度も　何度も<br>目と目を合わせ</p>
-<p>胸に灯った<br>ぬくもり抱いて<br>扉を開こう</p>
-<p>風が空をみがいて<br>次の朝を迎えるように</p>
-<p>重なり合う<br>ふたつの想いが<br>その先へと　導いている</p>
-<p>何度も　何度も<br>その手にふれて</p>
-<p>胸に灯った<br>ぬくもり抱いて<br>扉を開こう</p>
-<p>夕陽が影を伸ばして<br>こころとこころ繋いで</p>
-<p>ふたり歩きだした<br>あの日から</p>
-<p>何度も　何度も<br>目と目を合わせ</p>
-<p>胸に灯った<br>ぬくもり抱いて</p>
-<p>そっとほほえんで<br>扉を開こう</p>
+<p>瞳と瞳が合えば<br>事件の始まり<br>その言葉を尾行する</p>
+<p>手と手が触れて<br>ほら　急展開<br>謎がまた解けてく</p>
+<p>恋に落ちたらね<br>女の子はみんな<br>カリスマ名探偵</p>
+<p>あなたのことならね<br>全部　わかっちゃう<br>ちいさな嘘でも</p>
+<p>抜き足　差し足<br>心に忍び込む<br>ときどきミステイク<br>どきどきミステリー</p>
+<p>抜き足　差し足<br>あなたに忍び込む<br>わたしはミスラブリーン<br>どうか　ご用心!</p>
 </div>
 
 <hr>
 <p><strong>翻译</strong></p>
 <div style="white-space: pre;">
 
-<p>在寂寞的前方<br>善良会伸出双手</p>
-<p>大家一定都是<br>抱着这样的信念活在当下</p>
-<p>希望不可替代的你<br>今天也能感到幸福</p>
-<p>就算只是一个<br>可爱的愿望</p>
-<p>也会在这个世界上<br>发出回响</p>
-<p>无数次　无数次<br>我们双目对视</p>
-<p>怀抱着心中<br>点亮的温暖<br>打开那门扉吧</p>
-<p>微风将天空擦亮<br>为了迎接下一个早晨</p>
-<p>相互重叠的<br>两份思念<br>指引着我们向前</p>
-<p>无数次　无数次<br>轻轻触碰那双手</p>
-<p>怀抱着心中<br>点亮的温暖<br>打开那门扉吧</p>
-<p>夕阳拉长了影子<br>心灵相连在一起</p>
-<p>两个人并肩同行<br>从那一天开始</p>
-<p>无数次　无数次<br>我们双目对视</p>
-<p>怀抱着心中<br>点亮的温暖</p>
-<p>轻轻地笑着<br>打开那门扉吧</p>
+<p>视线交汇的瞬间<br>就是案件的开始<br>跟随着那句话语</p>
+<p>手与手相互触碰<br>看吧　急速的展开<br>谜题又将会解决</p>
+<p>如果坠入了爱河<br>所有的女孩都是<br>有魅力的名侦探</p>
+<p>只要是你的事情<br>全部　我都能知道<br>即使是小小的谎</p>
+<p>蹑手蹑脚　悄悄地<br>偷偷潜入你的心<br>有时会出现错误<br>心跳不停是秘密</p>
+<p>蹑手蹑脚　悄悄地<br>偷偷潜入你的心<br>我是拉布丽小姐<br>不管怎样　请小心！</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -621,82 +555,6 @@
 <p>来吧　在可憎的犹豫之前　荣耀闪闪发光<br>啊啊　在邪念与不安之间　圆桌骑士继续战斗<br>并不只是疑惑　走向只有信念才能打开的世界<br>来吧一起献出这身体<br>一起得到这荣光<br>举起拳头直指天空　骑士的荣耀</p>
 </div>
 ]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《恋する名探偵（恋爱名侦探）》歌词翻译</title>
-    <url>/2020/10/28/koisuru_meitantei/</url>
-    <content><![CDATA[<p><strong><span lang="ja">恋する名探偵</span>（恋爱名侦探）</strong> - 《女神异闻录4 动画版》片尾曲</p>
-<p>作词：meg rock；作曲：<span lang="ja">目黒将司</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>瞳と瞳が合えば<br>事件の始まり<br>その言葉を尾行する</p>
-<p>手と手が触れて<br>ほら　急展開<br>謎がまた解けてく</p>
-<p>恋に落ちたらね<br>女の子はみんな<br>カリスマ名探偵</p>
-<p>あなたのことならね<br>全部　わかっちゃう<br>ちいさな嘘でも</p>
-<p>抜き足　差し足<br>心に忍び込む<br>ときどきミステイク<br>どきどきミステリー</p>
-<p>抜き足　差し足<br>あなたに忍び込む<br>わたしはミスラブリーン<br>どうか　ご用心!</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>视线交汇的瞬间<br>就是案件的开始<br>跟随着那句话语</p>
-<p>手与手相互触碰<br>看吧　急速的展开<br>谜题又将会解决</p>
-<p>如果坠入了爱河<br>所有的女孩都是<br>有魅力的名侦探</p>
-<p>只要是你的事情<br>全部　我都能知道<br>即使是小小的谎</p>
-<p>蹑手蹑脚　悄悄地<br>偷偷潜入你的心<br>有时会出现错误<br>心跳不停是秘密</p>
-<p>蹑手蹑脚　悄悄地<br>偷偷潜入你的心<br>我是拉布丽小姐<br>不管怎样　请小心！</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《タイミング～Timing～（Timing～Timing～）》歌词翻译</title>
-    <url>/2020/11/08/timing_timing/</url>
-    <content><![CDATA[<p><strong><span lang="ja">タイミング～Timing～</span>（Timing～Timing～）</strong> - 动画《ReLIFE》片尾曲</p>
-<p>作词：meg rock；作曲：<span lang="ja">目黒将司</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>急に冷たくなって　ソッポ向かれたり　なんでなんでなんで?<br>どんなにいいことだって　間がワルいとね　カチンときたりで</p>
-<p>それがなぜか　君が喋り出すと<br>イヤな<ruby>空気<rt>ムード</rt></ruby>　すっかり変えてしまうから</p>
-<p>ズレた間のワルさも　それも君の”タイミング”<br>僕のココロ和ます　なんてフシギなチカラ</p>
-<p>妙にセコセコ生きて　楽しくなくて　昨日と同じで<br>君と出会う前まで　キモチ張りつめ　折れそうだったよ</p>
-<p>小さなこと　いちいちムカついて<br>笑い方も　なんだか忘れてしまってた</p>
-<p>ヒトも街も宇宙も　まわれまわる”タイミング”<br>ヘンにね合わせ過ぎても　たぶん辛いだけさ</p>
-<p>たまに間のワルさも　大事なんだね”タイミング”<br>君と僕のシアワセ　笑いながらいこう</p>
-<p>誰もみんな　君のようならいい<br>争いまで　きっとなくなったりするでしょう</p>
-<p>ヒトも街も宇宙も　まわれまわる　タイミング<br>ヘンにね合わせ過ぎても　たぶん辛いだけさ</p>
-<p>たまに間のワルさも　大事なんだね”タイミング”<br>君と僕のシアワセ　笑いながらいこう</p>
-<p>ズレた間のワルさも　それも君の”タイミング”<br>僕のココロ和ます　なんてフシギなチカラ</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>突然变得冷淡　对我不理不睬　为何为何为何？<br>不管是多好的事情　时机不对的话　也会让人不愉快</p>
-<p>那是为什么呢　当你开口说话时<br>令人不快的空气　就完全改变了</p>
-<p>碰巧遇到的坏事　那也是你的“时机”<br>缓和我的心灵　多么不可思议的力量</p>
-<p>微妙地拮据生活　并不快乐　和昨日一样<br>和你相遇之前　我的绷紧心弦　几近崩溃</p>
-<p>对每件微小的事情　也会感到生气<br>对于笑的方法　似乎也已经忘记了</p>
-<p>无论是人还是街道或者宇宙　那些旋转的“时机”<br>即便过于生硬配合　大概也只有辛苦</p>
-<p>偶尔遇到的坏事　也是重要的“时机”<br>让你与我的幸福　一齐笑着向前吧</p>
-<p>如果每个人　都能像你一样就好了<br>一定就不会在交流时　发展成争执</p>
-<p>无论是人还是街道或者宇宙　那些旋转的　时机<br>即便过于生硬配合　大概也只有辛苦</p>
-<p>偶尔遇到的坏事　也是重要的“时机”<br>让你与我的幸福　一齐笑着向前吧</p>
-<p>碰巧遇到的坏事　那也是你的“时机”<br>缓和我的心灵　多么不可思议的力量</p>
-</div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
       </tags>
@@ -825,47 +683,43 @@
       </tags>
   </entry>
   <entry>
-    <title>《ネコイチ（猫咪同心）》歌词翻译</title>
-    <url>/2021/05/09/neko_ichi/</url>
-    <content><![CDATA[<p><strong><span lang="ja">ネコイチ</span>（猫咪同心）</strong> - 游戏《NEKOPARA Vol.3》片头曲</p>
-<p>作词：Duca；作曲：Scuderia K</p>
+    <title>《タイミング～Timing～（Timing～Timing～）》歌词翻译</title>
+    <url>/2020/11/08/timing_timing/</url>
+    <content><![CDATA[<p><strong><span lang="ja">タイミング～Timing～</span>（Timing～Timing～）</strong> - 动画《ReLIFE》片尾曲</p>
+<p>作词：meg rock；作曲：<span lang="ja">目黒将司</span></p>
 <hr>
 <p><strong>歌词</strong></p>
 <p><em>注：歌词著作权归原作者所有。</em></p>
 <div lang="ja" style="white-space: pre;">
 
-<p>ずっと大切だよ　いつだって隣にいるよ<br>同じ時間の中で　そっと寄り添っていたい</p>
-<p>出逢いの日に感じたこと　まだ覚えてる<br>きっと特別！　そう感じたから</p>
-<p>猛スピードで季節は過ぎ　思い出キラリ<br>すぐ横には　変わらない笑顔</p>
-<p>落ち込んでうつむく雨降りでも<br>大丈夫　同じ傘でほら　手をつなごう</p>
-<p>ずっと大好きだよ　いつだって味方でいるよ<br>うまく伝えられず　ギュッと結んだ手のひら</p>
-<p>あとちょっとが　もどかしい程　素直になれず<br>いちばん痛い言葉を投げたり</p>
-<p>柔らかくて　壊れやすいキミの心は<br>きっと誰より優しさ知ってる</p>
-<p>はにかんでうつむくその横顔<br>大丈夫　何も言わないでも　わかってるよ</p>
-<p>ずっとそばにいるよ　どんな時も応援してるよ<br>悔しい涙の日は　そっと抱きしめてあげる</p>
-<p>マイナスな感情さえ愛しい<br>いつもどんな時もキミを想ってるよ</p>
-<p>ずっと大切だよ　いつだって隣にいるよ<br>同じ時間の中で　そっと寄り添っていたい</p>
-<p>ずっと大好きだよ　いつだって味方でいるよ<br>手と手　心繋ぎ　ずっと一緒にいようね</p>
-<p>そうね　2人で1つだ</p>
+<p>急に冷たくなって　ソッポ向かれたり　なんでなんでなんで?<br>どんなにいいことだって　間がワルいとね　カチンときたりで</p>
+<p>それがなぜか　君が喋り出すと<br>イヤな<ruby>空気<rt>ムード</rt></ruby>　すっかり変えてしまうから</p>
+<p>ズレた間のワルさも　それも君の”タイミング”<br>僕のココロ和ます　なんてフシギなチカラ</p>
+<p>妙にセコセコ生きて　楽しくなくて　昨日と同じで<br>君と出会う前まで　キモチ張りつめ　折れそうだったよ</p>
+<p>小さなこと　いちいちムカついて<br>笑い方も　なんだか忘れてしまってた</p>
+<p>ヒトも街も宇宙も　まわれまわる”タイミング”<br>ヘンにね合わせ過ぎても　たぶん辛いだけさ</p>
+<p>たまに間のワルさも　大事なんだね”タイミング”<br>君と僕のシアワセ　笑いながらいこう</p>
+<p>誰もみんな　君のようならいい<br>争いまで　きっとなくなったりするでしょう</p>
+<p>ヒトも街も宇宙も　まわれまわる　タイミング<br>ヘンにね合わせ過ぎても　たぶん辛いだけさ</p>
+<p>たまに間のワルさも　大事なんだね”タイミング”<br>君と僕のシアワセ　笑いながらいこう</p>
+<p>ズレた間のワルさも　それも君の”タイミング”<br>僕のココロ和ます　なんてフシギなチカラ</p>
 </div>
 
 <hr>
 <p><strong>翻译</strong></p>
 <div style="white-space: pre;">
 
-<p>一直都很珍惜你　无论何时都陪在你身边<br>想在和你共处的时光里　轻轻地靠在你怀里</p>
-<p>与你相遇那天的感觉　我还记在心里<br>一定十分特别！　这就是我的心声</p>
-<p>季节飞快更替　回忆闪闪发光<br>近在咫尺的是　你那不曾改变的笑容</p>
-<p>即便垂头丧气降雨连连<br>没关系　让我们在同一把伞下　牵紧彼此的手</p>
-<p>一直都喜欢着你　无论何时都是你的伙伴<br>尽管不能好好传达　也会紧紧握住你的手掌</p>
-<p>明明只差一点点　心里十分急切　却没法坦率起来<br>朝你扔出了最伤人的话语</p>
-<p>你那柔软而又如此脆弱的心灵<br>一定比任何人都能感受到温柔</p>
-<p>看见侧颜　你腼腆地低下了头<br>没关系　即便你什么都不说　我也能明白</p>
-<p>一直都在你的身边　无论何时都会为你加油<br>在流下悔恨眼泪的日子里　我会轻轻抱着你</p>
-<p>就算是负面的感情也令人喜爱<br>不管什么时候我也一直想着你</p>
-<p>一直都很珍惜你　无论何时都陪在你身边<br>想在和你共处的时光里　轻轻地靠在你怀里</p>
-<p>一直都喜欢着你　无论何时都是你的伙伴<br>手牵手　心连心　让我们永远在一起吧</p>
-<p>是啊　让我们合二为一吧</p>
+<p>突然变得冷淡　对我不理不睬　为何为何为何？<br>不管是多好的事情　时机不对的话　也会让人不愉快</p>
+<p>那是为什么呢　当你开口说话时<br>令人不快的空气　就完全改变了</p>
+<p>碰巧遇到的坏事　那也是你的“时机”<br>缓和我的心灵　多么不可思议的力量</p>
+<p>微妙地拮据生活　并不快乐　和昨日一样<br>和你相遇之前　我的绷紧心弦　几近崩溃</p>
+<p>对每件微小的事情　也会感到生气<br>对于笑的方法　似乎也已经忘记了</p>
+<p>无论是人还是街道或者宇宙　那些旋转的“时机”<br>即便过于生硬配合　大概也只有辛苦</p>
+<p>偶尔遇到的坏事　也是重要的“时机”<br>让你与我的幸福　一齐笑着向前吧</p>
+<p>如果每个人　都能像你一样就好了<br>一定就不会在交流时　发展成争执</p>
+<p>无论是人还是街道或者宇宙　那些旋转的　时机<br>即便过于生硬配合　大概也只有辛苦</p>
+<p>偶尔遇到的坏事　也是重要的“时机”<br>让你与我的幸福　一齐笑着向前吧</p>
+<p>碰巧遇到的坏事　那也是你的“时机”<br>缓和我的心灵　多么不可思议的力量</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -915,72 +769,47 @@
       </tags>
   </entry>
   <entry>
-    <title>《Growing》歌词翻译</title>
-    <url>/2021/05/24/growing/</url>
-    <content><![CDATA[<p><strong>Growing</strong> - 游戏《NEKOPARA Vol.3》片尾曲</p>
+    <title>《ネコイチ（猫咪同心）》歌词翻译</title>
+    <url>/2021/05/09/neko_ichi/</url>
+    <content><![CDATA[<p><strong><span lang="ja">ネコイチ</span>（猫咪同心）</strong> - 游戏《NEKOPARA Vol.3》片头曲</p>
 <p>作词：Duca；作曲：Scuderia K</p>
 <hr>
 <p><strong>歌词</strong></p>
 <p><em>注：歌词著作权归原作者所有。</em></p>
 <div lang="ja" style="white-space: pre;">
 
-<p>いつもどんな時でも<br>心繋がってるから大丈夫<br>ずっと一番そばで　見守ってきたから<br>頑張るキミの　強がりもあの涙も</p>
-<p>昨日までの日々が　今を築いている<br>一つ一つの　想いのカケラが<br>また明日を輝かせるよ</p>
-<p>新しい毎日が続いてゆく<br>笑顔が導いた　一緒の未来ずっと<br>終わらない　またここから始まるよ<br>泣き笑い　お話は続く　ワクワクするよね</p>
-<p>いつだってまっすぐに<br>本気でぶつかってきたからわかるよ<br>曲げない強さそして　不器用な優しさ<br>全部まとめて　それが私達なんだね</p>
-<p>いつか見た景色が　宝物になった<br>キミと見たから　なんてことのない<br>景色も特別に変わるよ</p>
-<p>誰よりも大切を分かち合ってる<br>かけがえのないもの　胸の奥に満ちてく<br>止まらない　一緒に日々を重ねて<br>新たな物語始まる　ドキドキするよね</p>
-<p>これからも続いてく時間の中で<br>どんな大きな壁も　一緒なら超えられる<br>終わらない　また始まる今日がある<br>泣き笑い　お話は続く　未来へ向かって<br>Growing　歩いてゆこう</p>
+<p>ずっと大切だよ　いつだって隣にいるよ<br>同じ時間の中で　そっと寄り添っていたい</p>
+<p>出逢いの日に感じたこと　まだ覚えてる<br>きっと特別！　そう感じたから</p>
+<p>猛スピードで季節は過ぎ　思い出キラリ<br>すぐ横には　変わらない笑顔</p>
+<p>落ち込んでうつむく雨降りでも<br>大丈夫　同じ傘でほら　手をつなごう</p>
+<p>ずっと大好きだよ　いつだって味方でいるよ<br>うまく伝えられず　ギュッと結んだ手のひら</p>
+<p>あとちょっとが　もどかしい程　素直になれず<br>いちばん痛い言葉を投げたり</p>
+<p>柔らかくて　壊れやすいキミの心は<br>きっと誰より優しさ知ってる</p>
+<p>はにかんでうつむくその横顔<br>大丈夫　何も言わないでも　わかってるよ</p>
+<p>ずっとそばにいるよ　どんな時も応援してるよ<br>悔しい涙の日は　そっと抱きしめてあげる</p>
+<p>マイナスな感情さえ愛しい<br>いつもどんな時もキミを想ってるよ</p>
+<p>ずっと大切だよ　いつだって隣にいるよ<br>同じ時間の中で　そっと寄り添っていたい</p>
+<p>ずっと大好きだよ　いつだって味方でいるよ<br>手と手　心繋ぎ　ずっと一緒にいようね</p>
+<p>そうね　2人で1つだ</p>
 </div>
 
 <hr>
 <p><strong>翻译</strong></p>
 <div style="white-space: pre;">
 
-<p>无论什么时候都不必担心<br>因为我们彼此都心连着心<br>因为一直在你的身边　默默守护着你<br>所以了解努力的你的　那些逞强那些落泪</p>
-<p>以往过去的每一天　都造就了现在的日子<br>一个又一个的　回忆的碎片<br>也将使明天闪闪发光哟</p>
-<p>崭新的每一天还将继续<br>笑容引导着　我们的未来直到永远<br>不会停止的　再度从这里开始吧<br>破涕为笑的　故事仍在继续　让人兴奋不已呢</p>
-<p>无论何时都十分坦率<br>认真地面对一切所以能明白哟<br>不屈不挠的坚强以及　笨拙不已的温柔<br>全部放在一起　就是我们自己呢</p>
-<p>不知何时看过的景色　都成为了珍贵之物<br>因为和你一起欣赏　什么都不值一提了<br>景色也变得特别起来</p>
-<p>比任何人都要珍视着彼此<br>不能替代的东西　逐渐充满着内心<br>无法停下的　在一起的日子交织着<br>全新的故事开始了　真是令人激动不已呢</p>
-<p>从今以后也将继续的时光里<br>不管多大的障碍　在一起的话就能越过<br>不会停止的　还有将要开始的今日<br>破涕为笑的　故事仍在继续　面对着未来<br>不断成长　向前迈进吧</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《真理の鏡、剣乃ように（真理之镜，如同利剑）》歌词翻译</title>
-    <url>/2021/07/17/shinri_no_kagami_kennou_you_ni/</url>
-    <content><![CDATA[<p><strong><span lang="ja">真理の鏡、剣乃ように</span>（真理之镜，如同利剑）</strong> - 动画《在世界尽头咏唱恋曲的少女YU-NO》片尾曲</p>
-<p>作词：志仓千代丸；作曲：志仓千代丸</p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>終わらないトラベリング　それは色褪せない<br>誰より命の意味を知る　剣乃ように</p>
-<p>一億以前　命尽きた　星は今も輝き<br>深い場所まで　求めるほど　宇宙はまた　広がってく</p>
-<p>傲慢な理想は　調和を演じて<br>描かれた設計　神による筆跡<br>パラレルは　不変さえ飲み込んでゆく</p>
-<p>終わらないトラベリング<br>果ての無い宇宙は　星の光だけが<br>微弱なナビゲーション<br>真理に届くまで　諦めやしない<br>伝えたい感傷　置き去りの時間が<br>動き始めたなら<br>それは色褪せない　物語のように<br>強く眩しいほど　明日を照らす<br>剣乃ように───</p>
-<p>無限並列　時は可逆　青写真のラプラス<br>次元を越えて　キミの波動　感じたいよ　いつもここに</p>
-<p>過ぎさりし時間は　揺らぐ余地もなく<br>優しいあの歌も　交わされた言葉も<br>パラレルは　世界を切り刻んでゆく</p>
-<p>約束のトラベリング<br>運命の全てを　受け入れる覚悟で<br>引き寄せるシンクロ<br>複雑に絡んだ　糸のその先へ<br>託された答えは　次元のその先で<br>きっと待ってるから<br>伝説の勇者を　演じきって見せる<br>誰より命の　意味を知る<br>剣乃ように───</p>
-<p>終わらないトラベリング<br>果ての無い宇宙は　星の光だけが<br>微弱なナビゲーション<br>真理に届くまで　諦めやしない<br>伝えたい感傷　置き去りの時間が<br>動き始めたなら<br>それは色褪せない　物語のように<br>強く眩しいほど　明日を照らす<br>剣乃ように───</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>没有终点的旅行　永远不会褪色<br>比任何人都了解生命的意义　就如同利剑</p>
-<p>一亿年之前　命数已尽的星星　如今仍在闪耀<br>逐渐向深处求索　宇宙也愈发广阔</p>
-<p>傲慢的理想　演绎着和谐<br>描绘的设计　依照着神的笔迹<br>彼此平行　将不变尽数吞噬</p>
-<p>没有终点的旅行<br>没有尽头的宇宙　只有点点星光<br>循着微弱的导航<br>在得到真理之前　我不会放弃<br>这份想要传达出的感伤　若能像那被抛弃的时间<br>重新开始转动<br>那就是永远不会　褪色的故事<br>耀眼的光芒　将明天照亮<br>就如同利剑———</p>
-<p>无限并列　可逆时间　蓝图变换<br>超越次元　想要在此　一直感受　你的波动</p>
-<p>已经逝去的时间　没有动摇的余地<br>那温柔的歌声　互相交换的话语<br>彼此平行　将世界切成碎片</p>
-<p>约定好的旅行<br>怀揣着将命运　全部接受的觉悟<br>相互吸引同步<br>超过错综复杂的丝线<br>被托付的答案　就在次元的那端<br>一定在等待着<br>扮演那传说中的勇者<br>比任何人都了解　生命的意义<br>就如同利剑———</p>
-<p>没有终点的旅行<br>没有尽头的宇宙　只有点点星光<br>循着微弱的导航<br>在得到真理之前　我不会放弃<br>这份想要传达出的感伤　若能像那被抛弃的时间<br>重新开始转动<br>那就是永远不会　褪色的故事<br>耀眼的光芒　将明天照亮<br>就如同利剑———</p>
+<p>一直都很珍惜你　无论何时都陪在你身边<br>想在和你共处的时光里　轻轻地靠在你怀里</p>
+<p>与你相遇那天的感觉　我还记在心里<br>一定十分特别！　这就是我的心声</p>
+<p>季节飞快更替　回忆闪闪发光<br>近在咫尺的是　你那不曾改变的笑容</p>
+<p>即便垂头丧气降雨连连<br>没关系　让我们在同一把伞下　牵紧彼此的手</p>
+<p>一直都喜欢着你　无论何时都是你的伙伴<br>尽管不能好好传达　也会紧紧握住你的手掌</p>
+<p>明明只差一点点　心里十分急切　却没法坦率起来<br>朝你扔出了最伤人的话语</p>
+<p>你那柔软而又如此脆弱的心灵<br>一定比任何人都能感受到温柔</p>
+<p>看见侧颜　你腼腆地低下了头<br>没关系　即便你什么都不说　我也能明白</p>
+<p>一直都在你的身边　无论何时都会为你加油<br>在流下悔恨眼泪的日子里　我会轻轻抱着你</p>
+<p>就算是负面的感情也令人喜爱<br>不管什么时候我也一直想着你</p>
+<p>一直都很珍惜你　无论何时都陪在你身边<br>想在和你共处的时光里　轻轻地靠在你怀里</p>
+<p>一直都喜欢着你　无论何时都是你的伙伴<br>手牵手　心连心　让我们永远在一起吧</p>
+<p>是啊　让我们合二为一吧</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -1038,80 +867,60 @@
       </tags>
   </entry>
   <entry>
-    <title>《Get Into My Heart》歌词翻译</title>
-    <url>/2021/07/08/get_into_my_heart/</url>
-    <content><![CDATA[<p><strong>Get Into My Heart</strong> - 动画《付丧神出租中》片头曲</p>
-<p>作词：MIYAVI、Kanata Okajima、Lenard Skolnik、Seann Bowe、Troi Irons；作曲：MIYAVI、Lenard Skolnik、Seann Bowe、Troi Irons</p>
+    <title>《真理の鏡、剣乃ように（真理之镜，如同利剑）》歌词翻译</title>
+    <url>/2021/07/17/shinri_no_kagami_kennou_you_ni/</url>
+    <content><![CDATA[<p><strong><span lang="ja">真理の鏡、剣乃ように</span>（真理之镜，如同利剑）</strong> - 动画《在世界尽头咏唱恋曲的少女YU-NO》片尾曲</p>
+<p>作词：志仓千代丸；作曲：志仓千代丸</p>
 <hr>
 <p><strong>歌词</strong></p>
 <p><em>注：歌词著作权归原作者所有。</em></p>
 <div lang="ja" style="white-space: pre;">
 
-<p>Ah　色とりどりの　世界で今<br>キミ色に　染まっていく<br>How’d you get into my heart？</p>
-<p>さあ　始めましょう<br>夢の続きを<br>聞こえるでしょう<br>キミを呼ぶ声が</p>
-<p>Ah　色とりどりの　世界で今<br>キミ色に　染まっていく<br>How’d you get into my heart？</p>
-<p>いつだって<br>本当は知ってる<br>すれ違って<br>また交差していく</p>
-<p>Ah　色とりどりの　世界で今<br>キミ色に　染まっていく<br>How’d you get into my heart？</p>
-<p>How’d you get into my heart？</p>
-<p>Trust me, trust me<br>もうあとは　キミ次第<br>Touch me, Touch me<br>ほら　触れてごらん</p>
-<p>Ah　色とりどりの　世界で今<br>キミ色に　染まっていく<br>How’d you get into my heart？</p>
-<p>How’d you get into my heart？</p>
+<p>終わらないトラベリング　それは色褪せない<br>誰より命の意味を知る　剣乃ように</p>
+<p>一億以前　命尽きた　星は今も輝き<br>深い場所まで　求めるほど　宇宙はまた　広がってく</p>
+<p>傲慢な理想は　調和を演じて<br>描かれた設計　神による筆跡<br>パラレルは　不変さえ飲み込んでゆく</p>
+<p>終わらないトラベリング<br>果ての無い宇宙は　星の光だけが<br>微弱なナビゲーション<br>真理に届くまで　諦めやしない<br>伝えたい感傷　置き去りの時間が<br>動き始めたなら<br>それは色褪せない　物語のように<br>強く眩しいほど　明日を照らす<br>剣乃ように───</p>
+<p>無限並列　時は可逆　青写真のラプラス<br>次元を越えて　キミの波動　感じたいよ　いつもここに</p>
+<p>過ぎさりし時間は　揺らぐ余地もなく<br>優しいあの歌も　交わされた言葉も<br>パラレルは　世界を切り刻んでゆく</p>
+<p>約束のトラベリング<br>運命の全てを　受け入れる覚悟で<br>引き寄せるシンクロ<br>複雑に絡んだ　糸のその先へ<br>託された答えは　次元のその先で<br>きっと待ってるから<br>伝説の勇者を　演じきって見せる<br>誰より命の　意味を知る<br>剣乃ように───</p>
+<p>終わらないトラベリング<br>果ての無い宇宙は　星の光だけが<br>微弱なナビゲーション<br>真理に届くまで　諦めやしない<br>伝えたい感傷　置き去りの時間が<br>動き始めたなら<br>それは色褪せない　物語のように<br>強く眩しいほど　明日を照らす<br>剣乃ように───</p>
 </div>
 
 <hr>
 <p><strong>翻译</strong></p>
 <div style="white-space: pre;">
 
-<p>啊　五颜六色的世界<br>如今正逐渐　染上你的颜色<br>你是如何走进我的心的？</p>
-<p>来吧　让我们开始<br>梦想的延续<br>你应该能听见<br>呼唤你的声音吧</p>
-<p>啊　五颜六色的世界<br>如今正逐渐　染上你的颜色<br>你是如何走进我的心的？</p>
-<p>无论何时<br>其实我都知道<br>擦肩而过<br>亦或是有所交集</p>
-<p>啊　五颜六色的世界<br>如今正逐渐　染上你的颜色<br>你是如何走进我的心的？</p>
-<p>你是如何走进我的心的？</p>
-<p>相信我，相信我<br>之后的事情　就看你的了<br>触摸我，触摸我<br>来吧　试着触摸看看</p>
-<p>啊　五颜六色的世界<br>如今正逐渐　染上你的颜色<br>你是如何走进我的心的？</p>
-<p>你是如何走进我的心的？</p>
+<p>没有终点的旅行　永远不会褪色<br>比任何人都了解生命的意义　就如同利剑</p>
+<p>一亿年之前　命数已尽的星星　如今仍在闪耀<br>逐渐向深处求索　宇宙也愈发广阔</p>
+<p>傲慢的理想　演绎着和谐<br>描绘的设计　依照着神的笔迹<br>彼此平行　将不变尽数吞噬</p>
+<p>没有终点的旅行<br>没有尽头的宇宙　只有点点星光<br>循着微弱的导航<br>在得到真理之前　我不会放弃<br>这份想要传达出的感伤　若能像那被抛弃的时间<br>重新开始转动<br>那就是永远不会　褪色的故事<br>耀眼的光芒　将明天照亮<br>就如同利剑———</p>
+<p>无限并列　可逆时间　蓝图变换<br>超越次元　想要在此　一直感受　你的波动</p>
+<p>已经逝去的时间　没有动摇的余地<br>那温柔的歌声　互相交换的话语<br>彼此平行　将世界切成碎片</p>
+<p>约定好的旅行<br>怀揣着将命运　全部接受的觉悟<br>相互吸引同步<br>超过错综复杂的丝线<br>被托付的答案　就在次元的那端<br>一定在等待着<br>扮演那传说中的勇者<br>比任何人都了解　生命的意义<br>就如同利剑———</p>
+<p>没有终点的旅行<br>没有尽头的宇宙　只有点点星光<br>循着微弱的导航<br>在得到真理之前　我不会放弃<br>这份想要传达出的感伤　若能像那被抛弃的时间<br>重新开始转动<br>那就是永远不会　褪色的故事<br>耀眼的光芒　将明天照亮<br>就如同利剑———</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
       </tags>
   </entry>
   <entry>
-    <title>《Baby→Lady LOVE》歌词翻译</title>
-    <url>/2021/08/07/baby_lady_love/</url>
-    <content><![CDATA[<p><strong>Baby→Lady LOVE</strong> - OVA《猫娘乐园》片头曲</p>
-<p>作词：<span lang="ja">うらん</span>；作曲：<span lang="ja">山口朗彦</span></p>
+    <title>《Many Stories》歌词翻译</title>
+    <url>/2020/09/13/many_stories/</url>
+    <content><![CDATA[<p><strong>Many Stories</strong> - 动画《BEASTARS》插曲</p>
+<p>作词：Chica；作曲：<span lang="ja">神前暁</span></p>
 <hr>
 <p><strong>歌词</strong></p>
 <p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
+<div lang="en" style="white-space: pre;">
 
-<p>Baby→Lady　駆け出そう<br>ドラマティックに憧れて<br>夢見るストーリー<br>君と一緒なら　カラフルになる</p>
-<p>Let’s Go! Dreaming<br>エール届くといいな<br>Happy Sunshine<br>キラキラ</p>
-<p>お日様みたい　君の笑顔<br>ポカポカするから（って眠たいはNG）<br>いつもそばで　ばっちり決めたいのに<br>わりと失敗しちゃう<br>特別な気持ち<br>甘い甘いコーティングで（君と）<br>ねぇ　伝えたなら　何が待ってる？</p>
-<p>Baby→Lady　駆け出そう<br>ドラマティックに憧れて<br>夢見るストーリー<br>素直になって（踏み出せば）<br>なんか急にドキドキ<br>止まらなくて　どうしよう<br>恋想ループ再生　キミのもとへと響いて行くよ</p>
-<p>Let’s Go! Dreaming<br>エール届いたかな<br>Happy Sunshine<br>キラキラ</p>
-<p>その瞳に映る世界<br>私もいたくて（行ったり来たり）<br>センチメンタル　恋のいたずらから<br>二人守ってほしい<br>トキメキはまるで　ミルフィーユみたい<br>やさしく（わりと）<br>あぁ　重なるから　壊さないで</p>
-<p>Maybe→Baby　ここから<br>ロマンティックに連れ出して<br>知らない私を教えてほしい（だからもっと）<br>近づいてそわそわ　慌てないで急ごうよ<br>二つのスピードで<br>描く明日が煌めきになる</p>
-<p>大切な思い出たち<br>君色リボンかけて<br>心でギュってしたら<br>今（すぐ）会いたくなるよ（加速してゆくの）<br>Baby→Lady LOVE</p>
-<p>一緒に　駆け出そう<br>ドラマティックに憧れて<br>夢見るストーリー<br>素直になって（どこまでも）</p>
-<p>Baby→Lady　ドキドキ<br>止まらなくて　どうしよう<br>恋想ループ再生　キミのもとへと響いて行くよ<br>想いの先で　会えるといいな</p>
+<p>Like the clouds, never stay<br>Moving away<br>The sunlight coming into<br>That’s the way it goes<br>No one else could be you, we’re different<br>That is why we’re beautiful<br>One world many stories</p>
 </div>
 
 <hr>
 <p><strong>翻译</strong></p>
 <div style="white-space: pre;">
 
-<p>Baby→Lady　向前奔去吧<br>憧憬着戏剧般的现实<br>梦想中的故事<br>只要和你在一起　就会变得五彩缤纷</p>
-<p>让我们走吧！　梦想着<br>应援能传达到就好了<br>欢乐　阳光<br>闪闪发亮</p>
-<p>像太阳一般的　你的笑容<br>让人感到十分温暖（想要睡觉可不行）<br>一直想要下定决心　永远待在你的身边<br>却总是以失败告终<br>把特别的心情<br>裹上甜甜的糖衣（送给你）<br>呐　传达到了的话　还在等待什么呢？</p>
-<p>Baby→Lady　向前奔去吧<br>憧憬着戏剧般的现实<br>梦想中的故事<br>变得更加坦率（只要踏出那一步）<br>为何突然心跳加速<br>无法平静　如何是好<br>爱恋心声循环播放　在你的身边不断回响</p>
-<p>让我们走吧！　梦想着<br>应援有没有传达到呢<br>欢乐　阳光<br>闪闪发亮</p>
-<p>那双眼睛映照着的世界<br>我也想存在其中（四处走走）<br>这份多愁善感　是恋爱的恶作剧<br>想要两个人来守护<br>激动不已的心情　简直就像千层酥<br>如此温柔（出乎意料）<br>啊　交错在一起的话　不要破坏它</p>
-<p>Maybe→Baby　现在开始<br>带着我前往浪漫之地<br>请告诉我我不知道的自己（告诉我更多）<br>不断靠近就会坐立不安　不要慌张加快脚步<br>以二人各自的速度<br>将描绘的明天变得绚烂多彩</p>
-<p>那些重要的回忆<br>系上有你颜色的丝带<br>在心里好好地系紧之后<br>现在（立刻）就十分想见到你（要逐渐加速了）<br>Baby→Lady LOVE</p>
-<p>让我们一起　向前奔去吧<br>憧憬着戏剧般的现实<br>梦想中的故事<br>变得更加坦率（无论在哪里）</p>
-<p>Baby→Lady　心跳加速<br>无法平静　如何是好<br>爱恋心声循环播放　在你的身边不断回响<br>在这份思念的尽头　能够遇见就好了</p>
+<p>就像云朵从不停留<br>逐渐飘去<br>太阳洒下它的光芒<br>一如既往<br>没有人能够替代你<br>我们不同<br>这就是为什么我们这样美丽<br>一个世界　许多故事</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -1207,6 +1016,80 @@
       </tags>
   </entry>
   <entry>
+    <title>《Growing》歌词翻译</title>
+    <url>/2021/05/24/growing/</url>
+    <content><![CDATA[<p><strong>Growing</strong> - 游戏《NEKOPARA Vol.3》片尾曲</p>
+<p>作词：Duca；作曲：Scuderia K</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>いつもどんな時でも<br>心繋がってるから大丈夫<br>ずっと一番そばで　見守ってきたから<br>頑張るキミの　強がりもあの涙も</p>
+<p>昨日までの日々が　今を築いている<br>一つ一つの　想いのカケラが<br>また明日を輝かせるよ</p>
+<p>新しい毎日が続いてゆく<br>笑顔が導いた　一緒の未来ずっと<br>終わらない　またここから始まるよ<br>泣き笑い　お話は続く　ワクワクするよね</p>
+<p>いつだってまっすぐに<br>本気でぶつかってきたからわかるよ<br>曲げない強さそして　不器用な優しさ<br>全部まとめて　それが私達なんだね</p>
+<p>いつか見た景色が　宝物になった<br>キミと見たから　なんてことのない<br>景色も特別に変わるよ</p>
+<p>誰よりも大切を分かち合ってる<br>かけがえのないもの　胸の奥に満ちてく<br>止まらない　一緒に日々を重ねて<br>新たな物語始まる　ドキドキするよね</p>
+<p>これからも続いてく時間の中で<br>どんな大きな壁も　一緒なら超えられる<br>終わらない　また始まる今日がある<br>泣き笑い　お話は続く　未来へ向かって<br>Growing　歩いてゆこう</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>无论什么时候都不必担心<br>因为我们彼此都心连着心<br>因为一直在你的身边　默默守护着你<br>所以了解努力的你的　那些逞强那些落泪</p>
+<p>以往过去的每一天　都造就了现在的日子<br>一个又一个的　回忆的碎片<br>也将使明天闪闪发光哟</p>
+<p>崭新的每一天还将继续<br>笑容引导着　我们的未来直到永远<br>不会停止的　再度从这里开始吧<br>破涕为笑的　故事仍在继续　让人兴奋不已呢</p>
+<p>无论何时都十分坦率<br>认真地面对一切所以能明白哟<br>不屈不挠的坚强以及　笨拙不已的温柔<br>全部放在一起　就是我们自己呢</p>
+<p>不知何时看过的景色　都成为了珍贵之物<br>因为和你一起欣赏　什么都不值一提了<br>景色也变得特别起来</p>
+<p>比任何人都要珍视着彼此<br>不能替代的东西　逐渐充满着内心<br>无法停下的　在一起的日子交织着<br>全新的故事开始了　真是令人激动不已呢</p>
+<p>从今以后也将继续的时光里<br>不管多大的障碍　在一起的话就能越过<br>不会停止的　还有将要开始的今日<br>破涕为笑的　故事仍在继续　面对着未来<br>不断成长　向前迈进吧</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《Get Into My Heart》歌词翻译</title>
+    <url>/2021/07/08/get_into_my_heart/</url>
+    <content><![CDATA[<p><strong>Get Into My Heart</strong> - 动画《付丧神出租中》片头曲</p>
+<p>作词：MIYAVI、Kanata Okajima、Lenard Skolnik、Seann Bowe、Troi Irons；作曲：MIYAVI、Lenard Skolnik、Seann Bowe、Troi Irons</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>Ah　色とりどりの　世界で今<br>キミ色に　染まっていく<br>How’d you get into my heart？</p>
+<p>さあ　始めましょう<br>夢の続きを<br>聞こえるでしょう<br>キミを呼ぶ声が</p>
+<p>Ah　色とりどりの　世界で今<br>キミ色に　染まっていく<br>How’d you get into my heart？</p>
+<p>いつだって<br>本当は知ってる<br>すれ違って<br>また交差していく</p>
+<p>Ah　色とりどりの　世界で今<br>キミ色に　染まっていく<br>How’d you get into my heart？</p>
+<p>How’d you get into my heart？</p>
+<p>Trust me, trust me<br>もうあとは　キミ次第<br>Touch me, Touch me<br>ほら　触れてごらん</p>
+<p>Ah　色とりどりの　世界で今<br>キミ色に　染まっていく<br>How’d you get into my heart？</p>
+<p>How’d you get into my heart？</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>啊　五颜六色的世界<br>如今正逐渐　染上你的颜色<br>你是如何走进我的心的？</p>
+<p>来吧　让我们开始<br>梦想的延续<br>你应该能听见<br>呼唤你的声音吧</p>
+<p>啊　五颜六色的世界<br>如今正逐渐　染上你的颜色<br>你是如何走进我的心的？</p>
+<p>无论何时<br>其实我都知道<br>擦肩而过<br>亦或是有所交集</p>
+<p>啊　五颜六色的世界<br>如今正逐渐　染上你的颜色<br>你是如何走进我的心的？</p>
+<p>你是如何走进我的心的？</p>
+<p>相信我，相信我<br>之后的事情　就看你的了<br>触摸我，触摸我<br>来吧　试着触摸看看</p>
+<p>啊　五颜六色的世界<br>如今正逐渐　染上你的颜色<br>你是如何走进我的心的？</p>
+<p>你是如何走进我的心的？</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《▲MEW▲△MEW△CAKE》歌词翻译</title>
     <url>/2021/08/13/mew_mew_cake/</url>
     <content><![CDATA[<p><strong>▲MEW▲△MEW△CAKE</strong> - OVA《猫娘乐园》片尾曲</p>
@@ -1285,6 +1168,47 @@
       </tags>
   </entry>
   <entry>
+    <title>《Baby→Lady LOVE》歌词翻译</title>
+    <url>/2021/08/07/baby_lady_love/</url>
+    <content><![CDATA[<p><strong>Baby→Lady LOVE</strong> - OVA《猫娘乐园》片头曲</p>
+<p>作词：<span lang="ja">うらん</span>；作曲：<span lang="ja">山口朗彦</span></p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>Baby→Lady　駆け出そう<br>ドラマティックに憧れて<br>夢見るストーリー<br>君と一緒なら　カラフルになる</p>
+<p>Let’s Go! Dreaming<br>エール届くといいな<br>Happy Sunshine<br>キラキラ</p>
+<p>お日様みたい　君の笑顔<br>ポカポカするから（って眠たいはNG）<br>いつもそばで　ばっちり決めたいのに<br>わりと失敗しちゃう<br>特別な気持ち<br>甘い甘いコーティングで（君と）<br>ねぇ　伝えたなら　何が待ってる？</p>
+<p>Baby→Lady　駆け出そう<br>ドラマティックに憧れて<br>夢見るストーリー<br>素直になって（踏み出せば）<br>なんか急にドキドキ<br>止まらなくて　どうしよう<br>恋想ループ再生　キミのもとへと響いて行くよ</p>
+<p>Let’s Go! Dreaming<br>エール届いたかな<br>Happy Sunshine<br>キラキラ</p>
+<p>その瞳に映る世界<br>私もいたくて（行ったり来たり）<br>センチメンタル　恋のいたずらから<br>二人守ってほしい<br>トキメキはまるで　ミルフィーユみたい<br>やさしく（わりと）<br>あぁ　重なるから　壊さないで</p>
+<p>Maybe→Baby　ここから<br>ロマンティックに連れ出して<br>知らない私を教えてほしい（だからもっと）<br>近づいてそわそわ　慌てないで急ごうよ<br>二つのスピードで<br>描く明日が煌めきになる</p>
+<p>大切な思い出たち<br>君色リボンかけて<br>心でギュってしたら<br>今（すぐ）会いたくなるよ（加速してゆくの）<br>Baby→Lady LOVE</p>
+<p>一緒に　駆け出そう<br>ドラマティックに憧れて<br>夢見るストーリー<br>素直になって（どこまでも）</p>
+<p>Baby→Lady　ドキドキ<br>止まらなくて　どうしよう<br>恋想ループ再生　キミのもとへと響いて行くよ<br>想いの先で　会えるといいな</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>Baby→Lady　向前奔去吧<br>憧憬着戏剧般的现实<br>梦想中的故事<br>只要和你在一起　就会变得五彩缤纷</p>
+<p>让我们走吧！　梦想着<br>应援能传达到就好了<br>欢乐　阳光<br>闪闪发亮</p>
+<p>像太阳一般的　你的笑容<br>让人感到十分温暖（想要睡觉可不行）<br>一直想要下定决心　永远待在你的身边<br>却总是以失败告终<br>把特别的心情<br>裹上甜甜的糖衣（送给你）<br>呐　传达到了的话　还在等待什么呢？</p>
+<p>Baby→Lady　向前奔去吧<br>憧憬着戏剧般的现实<br>梦想中的故事<br>变得更加坦率（只要踏出那一步）<br>为何突然心跳加速<br>无法平静　如何是好<br>爱恋心声循环播放　在你的身边不断回响</p>
+<p>让我们走吧！　梦想着<br>应援有没有传达到呢<br>欢乐　阳光<br>闪闪发亮</p>
+<p>那双眼睛映照着的世界<br>我也想存在其中（四处走走）<br>这份多愁善感　是恋爱的恶作剧<br>想要两个人来守护<br>激动不已的心情　简直就像千层酥<br>如此温柔（出乎意料）<br>啊　交错在一起的话　不要破坏它</p>
+<p>Maybe→Baby　现在开始<br>带着我前往浪漫之地<br>请告诉我我不知道的自己（告诉我更多）<br>不断靠近就会坐立不安　不要慌张加快脚步<br>以二人各自的速度<br>将描绘的明天变得绚烂多彩</p>
+<p>那些重要的回忆<br>系上有你颜色的丝带<br>在心里好好地系紧之后<br>现在（立刻）就十分想见到你（要逐渐加速了）<br>Baby→Lady LOVE</p>
+<p>让我们一起　向前奔去吧<br>憧憬着戏剧般的现实<br>梦想中的故事<br>变得更加坦率（无论在哪里）</p>
+<p>Baby→Lady　心跳加速<br>无法平静　如何是好<br>爱恋心声循环播放　在你的身边不断回响<br>在这份思念的尽头　能够遇见就好了</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《パトリシア（Patricia）》歌词翻译</title>
     <url>/2021/11/04/patrica/</url>
     <content><![CDATA[<p><strong><span lang="ja">パトリシア</span>（Patricia）</strong> - 动画《花开伊吕波》印象曲</p>
@@ -1318,6 +1242,48 @@
 <p>为了与你相遇　因此而生<br>为了守护着你　献出此身<br>虽然这些话还说不出口　尽管如此</p>
 <p>想念你的时候　触碰到那双手的时候<br>会记起我也有正在寻找之物<br>逐渐明白“我爱你”这句话的含义</p>
 <p>逐渐明白“我爱你”这句话的含义</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《新世界（新世界）》歌词翻译</title>
+    <url>/2021/11/19/shin_sekai/</url>
+    <content><![CDATA[<p><strong><span lang="ja">新世界</span>（新世界）</strong> - 动画电影《HELLO WORLD》主题曲</p>
+<p>作词：<span lang="ja">オカモトショウ</span>；作曲：<span lang="ja">オカモトショウ</span>、<span lang="ja">オカモトコウキ</span></p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>いつもよりも　薄い空気　作り物みたいな表情して<br>心は不感症気味で止まない雨に濡れて<br>傘がないこといつまでも　案じてる何してるんだろう</p>
+<p>君の元へ　急ぎたいけど　約束の時間はもう過ぎた<br>飛び出して　好き勝手散らかしちゃえばいいのに<br>変えられないことばっか感じてる</p>
+<p>Well they keep on tellin’ me<br>自分　だけは　愛せと</p>
+<p>だけど<br>愛したくて愛せなくて　毎日耐えるだけなんて嫌だ<br>Just do it</p>
+<p>何度でも何度でも　書き殴ったノートのページめくって<br>まっさらなところへ　書き出した　僕らの　新しい世界<br>いつか君にも　届いてくれるよう　願いを　込めよう</p>
+<p>馬鹿みたいに勇気振り回してさ　カスリもせずただ空振りして<br>大声でそれを笑ってくれた　そんな君が急に必要になった</p>
+<p>When the sky comes fallin’ down<br>深く　長い　穴を抜けて</p>
+<p>君の<br>愛に触れて　全部変わって　そうしたら<br>もう元には　戻れなくて　どうしてか<br>安心しちゃって　泣きじゃくって　なぜか<br>笑い合って　抱き合って　今も<br>会いたくて　会いたくて　声を枯らしながら伝えた<br>愛してる</p>
+<p>何度でも何度でも　不完全過ぎる　僕らに　花束を贈り<br>世界中この香りで満たしてしまえばいい<br>いろんな色で　塗り潰した　星さえ　ひとつない　黒い夜空も<br>壊すように　光さして　もう一度　真っ白く　塗り替えるから</p>
+<p>新しい世界　いつの日も　その手を　握ろう</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>比任何时候都　更加稀薄的空气　我做出虚假的表情<br>心中的冷淡感也被止不住的雨淋湿<br>即便没有带伞也一直在　关心着你在做什么</p>
+<p>想要快一点　到你的身边　却发现已过了约定的时间<br>飞奔出去　就这样任性地飞奔出去就好了<br>却只能感觉到无力改变什么</p>
+<p>他们总是跟我说<br>只要　爱着自己　就好了</p>
+<p>可是啊<br>想要去爱却无法去爱　就算是每天忍耐也令我厌烦<br>放手去做</p>
+<p>无数次无数次　翻着胡乱涂写的笔记<br>在全新的地方　描绘出　我们的　崭新世界<br>有一天可以将　心意传达给你　我许下　这个愿望</p>
+<p>像傻瓜一样空凭一身勇气　伤不到一根毫毛只是白费力气<br>突然想让你就这样　大声地嘲笑我的举动</p>
+<p>当天空开始崩塌<br>深深地　陷入　幽邃的洞穴</p>
+<p>被你的<br>爱所触碰　一切都改变了　在这之后<br>已经不能再　回到过去了　这是为什么<br>放下心来　放声大哭　又为何<br>相视而笑　互相拥抱　如今也<br>想要见到你　想要见到你　声嘶力竭地传达给你<br>我爱着你</p>
+<p>无数次无数次　将花束献给　过于　不完美的我们<br>要是把这香气充满这个世界就好了<br>那深色的夜空　没有一颗　被各种　颜色　涂满的星星<br>仿佛要破坏一切　照射进的光芒　再一次　粉刷成　一片纯白</p>
+<p>在全新的世界　无论哪一天　也会握紧　那双手</p>
+<p>无数次无数次　无论何时　也会握紧　你的　那双手</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -1361,42 +1327,53 @@
       </tags>
   </entry>
   <entry>
-    <title>《新世界（新世界）》歌词翻译</title>
-    <url>/2021/11/19/shin_sekai/</url>
-    <content><![CDATA[<p><strong><span lang="ja">新世界</span>（新世界）</strong> - 动画电影《HELLO WORLD》主题曲</p>
-<p>作词：<span lang="ja">オカモトショウ</span>；作曲：<span lang="ja">オカモトショウ</span>、<span lang="ja">オカモトコウキ</span></p>
+    <title>《ソナタ（奏鸣曲）》歌词翻译</title>
+    <url>/2020/10/16/sonata/</url>
+    <content><![CDATA[<p><strong><span lang="ja">ソナタ</span>（奏鸣曲）</strong> - 动画《她和她的猫 -Everything Flows-》片尾曲</p>
+<p>作词：<span lang="ja">ミト(クラムボン)</span>；作曲：<span lang="ja">ミト(クラムボン)</span></p>
 <hr>
 <p><strong>歌词</strong></p>
 <p><em>注：歌词著作权归原作者所有。</em></p>
 <div lang="ja" style="white-space: pre;">
 
-<p>いつもよりも　薄い空気　作り物みたいな表情して<br>心は不感症気味で止まない雨に濡れて<br>傘がないこといつまでも　案じてる何してるんだろう</p>
-<p>君の元へ　急ぎたいけど　約束の時間はもう過ぎた<br>飛び出して　好き勝手散らかしちゃえばいいのに<br>変えられないことばっか感じてる</p>
-<p>Well they keep on tellin’ me<br>自分　だけは　愛せと</p>
-<p>だけど<br>愛したくて愛せなくて　毎日耐えるだけなんて嫌だ<br>Just do it</p>
-<p>何度でも何度でも　書き殴ったノートのページめくって<br>まっさらなところへ　書き出した　僕らの　新しい世界<br>いつか君にも　届いてくれるよう　願いを　込めよう</p>
-<p>馬鹿みたいに勇気振り回してさ　カスリもせずただ空振りして<br>大声でそれを笑ってくれた　そんな君が急に必要になった</p>
-<p>When the sky comes fallin’ down<br>深く　長い　穴を抜けて</p>
-<p>君の<br>愛に触れて　全部変わって　そうしたら<br>もう元には　戻れなくて　どうしてか<br>安心しちゃって　泣きじゃくって　なぜか<br>笑い合って　抱き合って　今も<br>会いたくて　会いたくて　声を枯らしながら伝えた<br>愛してる</p>
-<p>何度でも何度でも　不完全過ぎる　僕らに　花束を贈り<br>世界中この香りで満たしてしまえばいい<br>いろんな色で　塗り潰した　星さえ　ひとつない　黒い夜空も<br>壊すように　光さして　もう一度　真っ白く　塗り替えるから</p>
-<p>新しい世界　いつの日も　その手を　握ろう</p>
+<p>さみしさのその先で<br>優しさは手を差し伸べる</p>
+<p>きっとみんな<br>そう信じて今を生きてる</p>
+<p>かけがえないあなたが<br>今日も幸せであるように</p>
+<p>ただひとつの<br>愛しい願いが</p>
+<p>この世界に<br>こだましている</p>
+<p>何度も　何度も<br>目と目を合わせ</p>
+<p>胸に灯った<br>ぬくもり抱いて<br>扉を開こう</p>
+<p>風が空をみがいて<br>次の朝を迎えるように</p>
+<p>重なり合う<br>ふたつの想いが<br>その先へと　導いている</p>
+<p>何度も　何度も<br>その手にふれて</p>
+<p>胸に灯った<br>ぬくもり抱いて<br>扉を開こう</p>
+<p>夕陽が影を伸ばして<br>こころとこころ繋いで</p>
+<p>ふたり歩きだした<br>あの日から</p>
+<p>何度も　何度も<br>目と目を合わせ</p>
+<p>胸に灯った<br>ぬくもり抱いて</p>
+<p>そっとほほえんで<br>扉を開こう</p>
 </div>
 
 <hr>
 <p><strong>翻译</strong></p>
 <div style="white-space: pre;">
 
-<p>比任何时候都　更加稀薄的空气　我做出虚假的表情<br>心中的冷淡感也被止不住的雨淋湿<br>即便没有带伞也一直在　关心着你在做什么</p>
-<p>想要快一点　到你的身边　却发现已过了约定的时间<br>飞奔出去　就这样任性地飞奔出去就好了<br>却只能感觉到无力改变什么</p>
-<p>他们总是跟我说<br>只要　爱着自己　就好了</p>
-<p>可是啊<br>想要去爱却无法去爱　就算是每天忍耐也令我厌烦<br>放手去做</p>
-<p>无数次无数次　翻着胡乱涂写的笔记<br>在全新的地方　描绘出　我们的　崭新世界<br>有一天可以将　心意传达给你　我许下　这个愿望</p>
-<p>像傻瓜一样空凭一身勇气　伤不到一根毫毛只是白费力气<br>突然想让你就这样　大声地嘲笑我的举动</p>
-<p>当天空开始崩塌<br>深深地　陷入　幽邃的洞穴</p>
-<p>被你的<br>爱所触碰　一切都改变了　在这之后<br>已经不能再　回到过去了　这是为什么<br>放下心来　放声大哭　又为何<br>相视而笑　互相拥抱　如今也<br>想要见到你　想要见到你　声嘶力竭地传达给你<br>我爱着你</p>
-<p>无数次无数次　将花束献给　过于　不完美的我们<br>要是把这香气充满这个世界就好了<br>那深色的夜空　没有一颗　被各种　颜色　涂满的星星<br>仿佛要破坏一切　照射进的光芒　再一次　粉刷成　一片纯白</p>
-<p>在全新的世界　无论哪一天　也会握紧　那双手</p>
-<p>无数次无数次　无论何时　也会握紧　你的　那双手</p>
+<p>在寂寞的前方<br>善良会伸出双手</p>
+<p>大家一定都是<br>抱着这样的信念活在当下</p>
+<p>希望不可替代的你<br>今天也能感到幸福</p>
+<p>就算只是一个<br>可爱的愿望</p>
+<p>也会在这个世界上<br>发出回响</p>
+<p>无数次　无数次<br>我们双目对视</p>
+<p>怀抱着心中<br>点亮的温暖<br>打开那门扉吧</p>
+<p>微风将天空擦亮<br>为了迎接下一个早晨</p>
+<p>相互重叠的<br>两份思念<br>指引着我们向前</p>
+<p>无数次　无数次<br>轻轻触碰那双手</p>
+<p>怀抱着心中<br>点亮的温暖<br>打开那门扉吧</p>
+<p>夕阳拉长了影子<br>心灵相连在一起</p>
+<p>两个人并肩同行<br>从那一天开始</p>
+<p>无数次　无数次<br>我们双目对视</p>
+<p>怀抱着心中<br>点亮的温暖</p>
+<p>轻轻地笑着<br>打开那门扉吧</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -1448,6 +1425,41 @@
       </tags>
   </entry>
   <entry>
+    <title>《クラス・メイト（Classmate）》歌词翻译</title>
+    <url>/2021/12/21/classmate/</url>
+    <content><![CDATA[<p><strong><span lang="ja">クラス・メイト</span>（Classmate）</strong> - 动画《草莓棉花糖》片尾曲</p>
+<p>作词：<span lang="ja">くまのきよみ</span>；作曲：<span lang="ja">上野洋子</span></p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>忘れかけた夢を　思い出したら<br>ふいに君の笑顔が　浮かんできたよ</p>
+<p>明日さえ　まだ知らない<br>ねえ、遊んでばかりいた　あの日<br>急な坂道でも<br>ねえ、平気なふりして走った</p>
+<p>いそいで　いそいで<br>耳元で　ささやくイタズラ影法師<br>スカートゆらめき　涼風が膝をたたいた　あのね<br>キミハ　イマ　ドコニ　イマスカ？</p>
+<p>約束と呼べない　些細な事柄(こと)は<br>あの頃なら特別　大切なこと</p>
+<p>返し忘れた教科書も<br>ああ、どこかにしまいこんだまま<br>忙しい毎日<br>ああ、誰もが失くしてゆくモノ</p>
+<p>わらって　わらって<br>その場所へ　ココロが勝手に忍び込む<br>前髪ゆらして　楽しげに頬を染めてた　そして<br>キミハ　イマ　ナニ　シテマスカ？</p>
+<p>いそいで　いそいで<br>耳元で　ささやくイタズラ影法師<br>スカートゆらめき　涼風が膝をたたいた　あのね<br>イツカ　マタ　ココデ　アイタイ…</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>快要忘记的梦　再度想起的时候<br>不知不觉你的笑容　浮现在我的脑海中</p>
+<p>明天　尚且不可知<br>呐，就记得尽情游玩的那一天<br>即便遇到陡峭的坡道<br>呐，也轻松地跑过了</p>
+<p>快一点　快一点<br>在耳边　轻声细语闪现着身影<br>裙子轻轻摇动　凉风掠过膝边　喂喂<br>你现在　究竟　身处　何方呢？</p>
+<p>称不上约定的　一些琐碎之事<br>那时却是十分特别　重要的事情</p>
+<p>忘记归还的教科书<br>啊啊，就这样收进了某处<br>忙碌的每一天<br>啊啊，谁都有逐渐失去的东西</p>
+<p>笑出来吧　笑出来吧<br>那个地方　心灵会任性地潜藏<br>刘海轻轻摆动　开心地脸颊通红　喂喂<br>你现在　究竟　在做着　什么呢？</p>
+<p>快一点　快一点<br>在耳边　轻声细语闪现着身影<br>裙子轻轻摇动　凉风掠过膝边　喂喂<br>有一天　还想　在这里　再见面…</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《Lost Game》歌词翻译</title>
     <url>/2021/11/23/lost_game/</url>
     <content><![CDATA[<p><strong>Lost Game</strong> - 动画电影《HELLO WORLD》主题曲</p>
@@ -1485,99 +1497,25 @@
       </tags>
   </entry>
   <entry>
-    <title>《クラス・メイト（Classmate）》歌词翻译</title>
-    <url>/2021/12/21/classmate/</url>
-    <content><![CDATA[<p><strong><span lang="ja">クラス・メイト</span>（Classmate）</strong> - 动画《草莓棉花糖》片尾曲</p>
-<p>作词：<span lang="ja">くまのきよみ</span>；作曲：<span lang="ja">上野洋子</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>忘れかけた夢を　思い出したら<br>ふいに君の笑顔が　浮かんできたよ</p>
-<p>明日さえ　まだ知らない<br>ねえ、遊んでばかりいた　あの日<br>急な坂道でも<br>ねえ、平気なふりして走った</p>
-<p>いそいで　いそいで<br>耳元で　ささやくイタズラ影法師<br>スカートゆらめき　涼風が膝をたたいた　あのね<br>キミハ　イマ　ドコニ　イマスカ？</p>
-<p>約束と呼べない　些細な事柄(こと)は<br>あの頃なら特別　大切なこと</p>
-<p>返し忘れた教科書も<br>ああ、どこかにしまいこんだまま<br>忙しい毎日<br>ああ、誰もが失くしてゆくモノ</p>
-<p>わらって　わらって<br>その場所へ　ココロが勝手に忍び込む<br>前髪ゆらして　楽しげに頬を染めてた　そして<br>キミハ　イマ　ナニ　シテマスカ？</p>
-<p>いそいで　いそいで<br>耳元で　ささやくイタズラ影法師<br>スカートゆらめき　涼風が膝をたたいた　あのね<br>イツカ　マタ　ココデ　アイタイ…</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>快要忘记的梦　再度想起的时候<br>不知不觉你的笑容　浮现在我的脑海中</p>
-<p>明天　尚且不可知<br>呐，就记得尽情游玩的那一天<br>即便遇到陡峭的坡道<br>呐，也轻松地跑过了</p>
-<p>快一点　快一点<br>在耳边　轻声细语闪现着身影<br>裙子轻轻摇动　凉风掠过膝边　喂喂<br>你现在　究竟　身处　何方呢？</p>
-<p>称不上约定的　一些琐碎之事<br>那时却是十分特别　重要的事情</p>
-<p>忘记归还的教科书<br>啊啊，就这样收进了某处<br>忙碌的每一天<br>啊啊，谁都有逐渐失去的东西</p>
-<p>笑出来吧　笑出来吧<br>那个地方　心灵会任性地潜藏<br>刘海轻轻摆动　开心地脸颊通红　喂喂<br>你现在　究竟　在做着　什么呢？</p>
-<p>快一点　快一点<br>在耳边　轻声细语闪现着身影<br>裙子轻轻摇动　凉风掠过膝边　喂喂<br>有一天　还想　在这里　再见面…</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《あっかん berry berry（Akkan berry berry）》歌词翻译</title>
-    <url>/2022/01/11/akkan_berry_berry/</url>
-    <content><![CDATA[<p><strong><span lang="ja">あっかん berry berry</span>（Akkan berry berry）</strong> - 动画《草莓棉花糖OVA》片头曲</p>
+    <title>《夕待ちの風（等待黄昏的风）》歌词翻译</title>
+    <url>/2022/01/18/yuu_machi_no_kaze/</url>
+    <content><![CDATA[<p><strong><span lang="ja">夕待ちの風</span>（等待黄昏的风）</strong> - 动画《草莓棉花糖OVA》片尾曲</p>
 <p>作词：<span lang="ja">くまのきよみ</span>；作曲：<span lang="ja">渡辺剛</span></p>
 <hr>
 <p><strong>歌词</strong></p>
 <p><em>注：歌词著作权归原作者所有。</em></p>
 <div lang="ja" style="white-space: pre;">
 
-<p>さわらないで　さわらないで　やわらかな愛で<br>ふんわりと　見守ってね<br>おーらい　おーらい　OK　OK?</p>
-<p>３度目の正直が　ばっちり失敗しても<br>それでも地球はまわってる　ぐるぐる！<br>欲望に正直で　無邪気に貪欲です<br>いまごろ気づいたの？　遅いよねぇ</p>
-<p>この目に映る素敵を　ぜーんぶください<br>スキなものを　スキと言える　シ・ア・ワ・セ</p>
-<p>落とさないで　落とさないで　両手ですくって<br>大きめの愛で　包んで<br>さんきゅう　さんきゅう　berry　まっち<br>まあるくって　酸っぱくって　ふわり　ぼんやり　オンナノコ<br>指きりしちゃったなら　離れないぞ<br>あっかんべー　berry　berry</p>
-<p>４度目の失敗で　見事に開き直る<br>コドモは元気が取り柄でしょ　びばびば！<br>虫歯よりコワイのは　退屈な日曜日<br>ひとりぼっちは　カラダに悪い</p>
-<p>神様がもしいるなら　質問したい<br>楽しいって　どこからくるの？　オ・シ・エ・テ</p>
-<p>さわらないで　さわらないで　やわらかな愛で<br>ふんわりと　見守っててね<br>おーらい　おーらい　OK　OK?<br>まぁるくって　酸っぱくって　きらり　うらら　オンナノコ<br>ケンカをしたぶんだけ　仲良しなの<br>まん<ruby>○<rt>マル</rt></ruby>で　シュワしゅわー　ぷにゅぷにゅっと　ルリルラ♪</p>
-<p>こわさないで　こわさないで　この場所でずっと<br>いつまでも　遊んでいたい<br>さんきゅう　さんきゅう　berry　まっち</p>
-<p>落とさないで　落とさないで　両手ですくって<br>大きめの愛で　包んで<br>さんきゅう　さんきゅう　berry　まっち<br>まぁるくって　酸っぱくって　ふわり　ぼんやり　オンナノコ<br>指きりしちゃったなら　離れないぞ</p>
-<p>いちご　berry　berry<br>泣いた　<ruby>furry<rt>フリ</rt></ruby>　<ruby>furry<rt>フリ</rt></ruby><br>それは　<ruby>murry<rt>ムリ</rt></ruby>　<ruby>murry<rt>ムリ</rt></ruby><br>あっかんべー　berry　berry!</p>
+<p>なにも聞こえない<br>空の色は茜<br>記憶はいつも<br>やさしい手触り<br>そっと微笑みをくれる</p>
+<p>紙飛行機<br>さっき飛ばしたでしょう?<br>はかなすぎる<br>放物線　ふりるら<br>いつの間にか大人になってたけど<br>待ちぼうけた雨上がり<br>驚くほどやさしい匂いがしてた</p>
 </div>
 
 <hr>
 <p><strong>翻译</strong></p>
 <div style="white-space: pre;">
 
-<p>不要触碰　不要触碰　这份柔软的爱<br>轻轻地　照看着它吧<br>All right　All right　OK　OK？</p>
-<p>俗话说三次见分晓　可最后还是失败了<br>尽管如此地球还在旋转着　咕噜咕噜！<br>欲望实际上　就是纯真无邪的贪欲<br>现在才意识到吗？　真是太晚了</p>
-<p>映入眼帘的美妙事物　全都想收入囊中<br>对喜欢的东西　能说出喜欢　就·是·幸·福</p>
-<p>不要落下　不要落下　用双手捧起来<br>用大大的爱　包裹起来<br>Thank you　Thank you　<ruby>berry<rt>very</rt></ruby>　much<br>圆圆的　酸酸的　轻飘飘　迷糊糊　女孩子们<br>勾指约定了的话　就不会离开了哦<br>做鬼脸　berry　berry</p>
-<p>虽然第四次也失败了　就这样将错就错<br>小孩子的优点就是朝气蓬勃　哔叭哔叭！<br>比蛀牙更可怕的　是无趣的周日<br>如果独自一个人　全身都会不舒服</p>
-<p>神明如果存在的话　我想问一问<br>快乐这种东西　到底从哪里来？　告·诉·我·吧</p>
-<p>不要触碰　不要触碰　这份柔软的爱<br>轻轻地　照看着它吧<br>All right　All right　OK　OK？<br>圆圆的　酸酸的　闪亮的　开朗的　女孩子们<br>就算是争吵也会　使我们更加亲密<br>圆圆滚滚　咻哇咻哇　软软弹弹　噜哩噜啦♪</p>
-<p>不要弄坏　不要弄坏　一直在这个地方<br>想要在这里　一直嬉戏<br>Thank you　Thank you　<ruby>berry<rt>very</rt></ruby>　much</p>
-<p>不要落下　不要落下　用双手捧起来<br>用大大的爱　包裹起来<br>Thank you　Thank you　<ruby>berry<rt>very</rt></ruby>　much<br>圆圆的　酸酸的　轻飘飘　迷糊糊　女孩子们<br>勾指约定了的话　就不会离开了哦</p>
-<p>小草莓　berry　berry<br>哭起来　眼泪　汪汪<br>那样可　不行　不行<br>做鬼脸　berry　berry!</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《でっかいものの歌（很大的东西的歌）》歌词翻译</title>
-    <url>/2021/12/25/dekkai_mono_no_uta/</url>
-    <content><![CDATA[<p><strong><span lang="ja">でっかいものの歌</span>（很大的东西的歌）</strong> - 动画《草莓棉花糖》插曲</p>
-<p>作词：<span lang="ja">平見瞠</span>；作曲：<span lang="ja">川澄綾子</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>でっかいおとこがやってくる<br>のをこえやまこえうみこえて<br>でっかいおんなもやってくる<br>びるこえはしこえあまぎごえ</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>很大的男人走了过来<br>越过田野越过高山越过了大海<br>很大的女人也走了过来<br>越过大楼越过小桥越过天城山</p>
+<p>什么也听不见<br>天空是一片茜色<br>记忆一直是<br>一种温柔的触感<br>微微朝我笑着</p>
+<p>纸飞机<br>刚刚已经放飞了吧？<br>那过于渺茫的<br>抛物线　飘忽不定<br>不知何时已经长大成人<br>久久等待的雨后初晴<br>散发出令人惊奇的温柔气息</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -1617,31 +1555,6 @@
 <p>赞成——！　就那样决定了<br>心里痒痒急不可耐　已经等不及了<br>脑海的角落里　闪烁的信号　嘀嗒嘀嗒！<br>反对——！　撅起了嘴<br>梦中的天使来了哦<br>虽然很麻烦　但很容易懂呢　小·家·伙<br>你的一切</p>
 <p>万岁——！　原来是这样啊！<br>在坡道的中间　站住不走<br>露出微笑　酸甜奇怪的心情<br>赞成——！　就那样决定了<br>啪嗒啪嗒啪嗒啪嗒　勇往直前<br>“一生的请求”又有几次　呐OK OK？</p>
 <p>反对——！　之后要怎么办？<br>开关发出咔嚓的声响<br>似乎明白了　却依然没有明白　的·未·来<br>一定是光芒四射的　未来<br>水花飞溅　摇动～　跳跃～<br>「哗啦！」歌唱～　舞蹈～<br>欢·呼　喝·彩</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《夕待ちの風（等待黄昏的风）》歌词翻译</title>
-    <url>/2022/01/18/yuu_machi_no_kaze/</url>
-    <content><![CDATA[<p><strong><span lang="ja">夕待ちの風</span>（等待黄昏的风）</strong> - 动画《草莓棉花糖OVA》片尾曲</p>
-<p>作词：<span lang="ja">くまのきよみ</span>；作曲：<span lang="ja">渡辺剛</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>なにも聞こえない<br>空の色は茜<br>記憶はいつも<br>やさしい手触り<br>そっと微笑みをくれる</p>
-<p>紙飛行機<br>さっき飛ばしたでしょう?<br>はかなすぎる<br>放物線　ふりるら<br>いつの間にか大人になってたけど<br>待ちぼうけた雨上がり<br>驚くほどやさしい匂いがしてた</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>什么也听不见<br>天空是一片茜色<br>记忆一直是<br>一种温柔的触感<br>微微朝我笑着</p>
-<p>纸飞机<br>刚刚已经放飞了吧？<br>那过于渺茫的<br>抛物线　飘忽不定<br>不知何时已经长大成人<br>久久等待的雨后初晴<br>散发出令人惊奇的温柔气息</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -1793,6 +1706,29 @@
 <p>浪花朝空中　飞起<br>水珠留下了印记<br>把它剪下　是梦的图案</p>
 <p>1秒　1秒…</p>
 <p>想把手伸进白白的云里<br>向着天空　伸出双手<br>就算被丢在后面　也很开心<br>在这里　一直　一直<br>大家都　一直　一直<br>玩耍嬉戏</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《でっかいものの歌（很大的东西的歌）》歌词翻译</title>
+    <url>/2021/12/25/dekkai_mono_no_uta/</url>
+    <content><![CDATA[<p><strong><span lang="ja">でっかいものの歌</span>（很大的东西的歌）</strong> - 动画《草莓棉花糖》插曲</p>
+<p>作词：<span lang="ja">平見瞠</span>；作曲：<span lang="ja">川澄綾子</span></p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>でっかいおとこがやってくる<br>のをこえやまこえうみこえて<br>でっかいおんなもやってくる<br>びるこえはしこえあまぎごえ</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>很大的男人走了过来<br>越过田野越过高山越过了大海<br>很大的女人也走了过来<br>越过大楼越过小桥越过天城山</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -1958,37 +1894,64 @@
       </tags>
   </entry>
   <entry>
-    <title>《インコンプリートノーツ（Incomplete Notes）》歌词翻译</title>
-    <url>/2022/04/30/incomplete_notes/</url>
-    <content><![CDATA[<p><strong><span lang="ja">インコンプリートノーツ</span>（Incomplete Notes）</strong> - 动画《消灭都市》插曲</p>
-<p>作词：<span lang="ja">俊龍</span>；作曲：<span lang="ja">俊龍</span></p>
+    <title>《あっかん berry berry（Akkan berry berry）》歌词翻译</title>
+    <url>/2022/01/11/akkan_berry_berry/</url>
+    <content><![CDATA[<p><strong><span lang="ja">あっかん berry berry</span>（Akkan berry berry）</strong> - 动画《草莓棉花糖OVA》片头曲</p>
+<p>作词：<span lang="ja">くまのきよみ</span>；作曲：<span lang="ja">渡辺剛</span></p>
 <hr>
 <p><strong>歌词</strong></p>
 <p><em>注：歌词著作权归原作者所有。</em></p>
 <div lang="ja" style="white-space: pre;">
 
-<p>不器用に<br>かき鳴らす<br>この鼓動<br>君にだけ<br>伝えよう</p>
-<p>答えを急かす世界<br>秘密の計画立てて<br>君とエスケープ<br>衝動は幼すぎて<br>幸せな歌をまだ<br>口ずさめないうちに<br>朝日が今日を告げる</p>
-<p>ヤケドしそうなくらい<br>夢は沸騰してるんだ<br>私たちは<br>こう叫ぶよ<br>純粋と<br>現実との<br>真ん中で</p>
-<p>君となら時代を壊してもいい<br>鮮やかな命をぶつけ合って<br>嵐の中でなら<br>泣いてもバレないさ<br>涙はやがて<br>永遠の色になる<br>輝きに失くしたその名前も<br>愛し合う一瞬を繰り返して<br>何度も思い出そう<br>笑顔も傷跡も<br>未来の風起こしながら<br>君に走るよ<br>私じゃなきゃ<br>ダメなんだと<br>その胸に突き刺そう</p>
-<p>春のささやきと<br>花火香る夏<br>ざわめいた落ち葉降る秋と<br>冬の星空<br>優しい雪も<br>私の瞳が忘れないから</p>
-<p>君となら時代を壊してもいい<br>鮮やかな命をぶつけ合って<br>嵐の中でなら<br>大声で泣いていいさ<br>涙はやがて永遠の色になる</p>
-<p>輝きに生まれたその名前を<br>愛し合う一瞬を繰り返して<br>何度も呼び合おう　声が枯れてもまだ<br>未来の風起こしながら君に走るよ<br>私じゃなきゃダメなんだと<br>その胸に突き刺そう</p>
-<p>不器用に<br>かき鳴らす<br>鼓動君と<br>伝えよう<br>夢の先へ</p>
+<p>さわらないで　さわらないで　やわらかな愛で<br>ふんわりと　見守ってね<br>おーらい　おーらい　OK　OK?</p>
+<p>３度目の正直が　ばっちり失敗しても<br>それでも地球はまわってる　ぐるぐる！<br>欲望に正直で　無邪気に貪欲です<br>いまごろ気づいたの？　遅いよねぇ</p>
+<p>この目に映る素敵を　ぜーんぶください<br>スキなものを　スキと言える　シ・ア・ワ・セ</p>
+<p>落とさないで　落とさないで　両手ですくって<br>大きめの愛で　包んで<br>さんきゅう　さんきゅう　berry　まっち<br>まあるくって　酸っぱくって　ふわり　ぼんやり　オンナノコ<br>指きりしちゃったなら　離れないぞ<br>あっかんべー　berry　berry</p>
+<p>４度目の失敗で　見事に開き直る<br>コドモは元気が取り柄でしょ　びばびば！<br>虫歯よりコワイのは　退屈な日曜日<br>ひとりぼっちは　カラダに悪い</p>
+<p>神様がもしいるなら　質問したい<br>楽しいって　どこからくるの？　オ・シ・エ・テ</p>
+<p>さわらないで　さわらないで　やわらかな愛で<br>ふんわりと　見守っててね<br>おーらい　おーらい　OK　OK?<br>まぁるくって　酸っぱくって　きらり　うらら　オンナノコ<br>ケンカをしたぶんだけ　仲良しなの<br>まん<ruby>○<rt>マル</rt></ruby>で　シュワしゅわー　ぷにゅぷにゅっと　ルリルラ♪</p>
+<p>こわさないで　こわさないで　この場所でずっと<br>いつまでも　遊んでいたい<br>さんきゅう　さんきゅう　berry　まっち</p>
+<p>落とさないで　落とさないで　両手ですくって<br>大きめの愛で　包んで<br>さんきゅう　さんきゅう　berry　まっち<br>まぁるくって　酸っぱくって　ふわり　ぼんやり　オンナノコ<br>指きりしちゃったなら　離れないぞ</p>
+<p>いちご　berry　berry<br>泣いた　<ruby>furry<rt>フリ</rt></ruby>　<ruby>furry<rt>フリ</rt></ruby><br>それは　<ruby>murry<rt>ムリ</rt></ruby>　<ruby>murry<rt>ムリ</rt></ruby><br>あっかんべー　berry　berry!</p>
 </div>
 
 <hr>
 <p><strong>翻译</strong></p>
-<div lang="zh-Hant" style="white-space: pre;">
+<div style="white-space: pre;">
 
-<p>笨拙地<br>彈出的<br>這份鼓動<br>只想向你<br>傳達</p>
-<p>在急於尋找答案的世界<br>制定出秘密的計劃<br>與你一同逃離<br>衝動還過於幼稚<br>幸福的歌謠<br>還未從口中唱出<br>朝陽宣告著今天的開始</p>
-<p>就如同灼燒一般<br>夢想沸騰起來<br>我們<br>這樣呼喊著<br>在純粹與<br>現實的<br>正中央</p>
-<p>只要能和你一起就算破壞這時代也沒關係<br>鮮活的生命相互碰撞<br>如果身處風暴之中<br>不會露出哭泣的模樣<br>淚水最終也會<br>成為永恆的色彩<br>那失去光輝的名字<br>反復著相愛的瞬間<br>無數次回想起<br>笑容與傷痕<br>未來的風揚起之時<br>我就會向你奔去<br>如果不是我<br>就不可以的話<br>就刺向那心中吧</p>
-<p>春天的耳語同<br>煙花熏香的夏日<br>落葉紛飛飄落的秋天與<br>冬日的星空<br>落下柔和的雪<br>我的眼睛都不會忘記</p>
-<p>只要能和你一起就算破壞這時代也沒關係<br>鮮活的生命相互碰撞<br>既然身處風暴之中<br>大聲哭泣也可以<br>淚水最終也會成為永恆的色彩</p>
-<p>那失去光輝的名字<br>反復著相愛的瞬間<br>無數次互相呼喚　即便聲嘶力竭<br>未來的風揚起之時我就會向你奔去<br>如果不是我就不可以的話<br>就刺向那心中吧</p>
-<p>笨拙地<br>彈出的<br>這份鼓動就與你<br>傳達吧<br>直到夢想的前方</p>
+<p>不要触碰　不要触碰　这份柔软的爱<br>轻轻地　照看着它吧<br>All right　All right　OK　OK？</p>
+<p>俗话说三次见分晓　可最后还是失败了<br>尽管如此地球还在旋转着　咕噜咕噜！<br>欲望实际上　就是纯真无邪的贪欲<br>现在才意识到吗？　真是太晚了</p>
+<p>映入眼帘的美妙事物　全都想收入囊中<br>对喜欢的东西　能说出喜欢　就·是·幸·福</p>
+<p>不要落下　不要落下　用双手捧起来<br>用大大的爱　包裹起来<br>Thank you　Thank you　<ruby>berry<rt>very</rt></ruby>　much<br>圆圆的　酸酸的　轻飘飘　迷糊糊　女孩子们<br>勾指约定了的话　就不会离开了哦<br>做鬼脸　berry　berry</p>
+<p>虽然第四次也失败了　就这样将错就错<br>小孩子的优点就是朝气蓬勃　哔叭哔叭！<br>比蛀牙更可怕的　是无趣的周日<br>如果独自一个人　全身都会不舒服</p>
+<p>神明如果存在的话　我想问一问<br>快乐这种东西　到底从哪里来？　告·诉·我·吧</p>
+<p>不要触碰　不要触碰　这份柔软的爱<br>轻轻地　照看着它吧<br>All right　All right　OK　OK？<br>圆圆的　酸酸的　闪亮的　开朗的　女孩子们<br>就算是争吵也会　使我们更加亲密<br>圆圆滚滚　咻哇咻哇　软软弹弹　噜哩噜啦♪</p>
+<p>不要弄坏　不要弄坏　一直在这个地方<br>想要在这里　一直嬉戏<br>Thank you　Thank you　<ruby>berry<rt>very</rt></ruby>　much</p>
+<p>不要落下　不要落下　用双手捧起来<br>用大大的爱　包裹起来<br>Thank you　Thank you　<ruby>berry<rt>very</rt></ruby>　much<br>圆圆的　酸酸的　轻飘飘　迷糊糊　女孩子们<br>勾指约定了的话　就不会离开了哦</p>
+<p>小草莓　berry　berry<br>哭起来　眼泪　汪汪<br>那样可　不行　不行<br>做鬼脸　berry　berry!</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《A Tale of Moon》歌词翻译</title>
+    <url>/2020/09/13/a_tale_of_moon/</url>
+    <content><![CDATA[<p><strong>A Tale of Moon</strong> - 动画《BEASTARS》插曲</p>
+<p>作词：<span lang="ja">唐沢美帆</span>、Chica；作曲：<span lang="ja">神前暁</span></p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="en" style="white-space: pre;">
+
+<p>I’ll tell you a story<br>Floating on the moon in the night<br>It is tenderly sweet<br>But it is a little bitter and slightly sad<br>When I hear the clock is ticking tocking<br>Count the lovingness and warmth of affection<br>Beautifully soft curtain of darkness</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>我会和你讲个故事<br>漂浮在那夜晚月亮之上<br>它是那温柔的甜蜜<br>却也有一丝苦涩和悲伤<br>当我听到闹钟滴答作响<br>细数着爱的深情和温暖<br>那美丽柔软的暗之帘幕</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -2051,6 +2014,43 @@
       </tags>
   </entry>
   <entry>
+    <title>《インコンプリートノーツ（Incomplete Notes）》歌词翻译</title>
+    <url>/2022/04/30/incomplete_notes/</url>
+    <content><![CDATA[<p><strong><span lang="ja">インコンプリートノーツ</span>（Incomplete Notes）</strong> - 动画《消灭都市》插曲</p>
+<p>作词：<span lang="ja">俊龍</span>；作曲：<span lang="ja">俊龍</span></p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>不器用に<br>かき鳴らす<br>この鼓動<br>君にだけ<br>伝えよう</p>
+<p>答えを急かす世界<br>秘密の計画立てて<br>君とエスケープ<br>衝動は幼すぎて<br>幸せな歌をまだ<br>口ずさめないうちに<br>朝日が今日を告げる</p>
+<p>ヤケドしそうなくらい<br>夢は沸騰してるんだ<br>私たちは<br>こう叫ぶよ<br>純粋と<br>現実との<br>真ん中で</p>
+<p>君となら時代を壊してもいい<br>鮮やかな命をぶつけ合って<br>嵐の中でなら<br>泣いてもバレないさ<br>涙はやがて<br>永遠の色になる<br>輝きに失くしたその名前も<br>愛し合う一瞬を繰り返して<br>何度も思い出そう<br>笑顔も傷跡も<br>未来の風起こしながら<br>君に走るよ<br>私じゃなきゃ<br>ダメなんだと<br>その胸に突き刺そう</p>
+<p>春のささやきと<br>花火香る夏<br>ざわめいた落ち葉降る秋と<br>冬の星空<br>優しい雪も<br>私の瞳が忘れないから</p>
+<p>君となら時代を壊してもいい<br>鮮やかな命をぶつけ合って<br>嵐の中でなら<br>大声で泣いていいさ<br>涙はやがて永遠の色になる</p>
+<p>輝きに生まれたその名前を<br>愛し合う一瞬を繰り返して<br>何度も呼び合おう　声が枯れてもまだ<br>未来の風起こしながら君に走るよ<br>私じゃなきゃダメなんだと<br>その胸に突き刺そう</p>
+<p>不器用に<br>かき鳴らす<br>鼓動君と<br>伝えよう<br>夢の先へ</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div lang="zh-Hant" style="white-space: pre;">
+
+<p>笨拙地<br>彈出的<br>這份鼓動<br>只想向你<br>傳達</p>
+<p>在急於尋找答案的世界<br>制定出秘密的計劃<br>與你一同逃離<br>衝動還過於幼稚<br>幸福的歌謠<br>還未從口中唱出<br>朝陽宣告著今天的開始</p>
+<p>就如同灼燒一般<br>夢想沸騰起來<br>我們<br>這樣呼喊著<br>在純粹與<br>現實的<br>正中央</p>
+<p>只要能和你一起就算破壞這時代也沒關係<br>鮮活的生命相互碰撞<br>如果身處風暴之中<br>不會露出哭泣的模樣<br>淚水最終也會<br>成為永恆的色彩<br>那失去光輝的名字<br>反復著相愛的瞬間<br>無數次回想起<br>笑容與傷痕<br>未來的風揚起之時<br>我就會向你奔去<br>如果不是我<br>就不可以的話<br>就刺向那心中吧</p>
+<p>春天的耳語同<br>煙花熏香的夏日<br>落葉紛飛飄落的秋天與<br>冬日的星空<br>落下柔和的雪<br>我的眼睛都不會忘記</p>
+<p>只要能和你一起就算破壞這時代也沒關係<br>鮮活的生命相互碰撞<br>既然身處風暴之中<br>大聲哭泣也可以<br>淚水最終也會成為永恆的色彩</p>
+<p>那失去光輝的名字<br>反復著相愛的瞬間<br>無數次互相呼喚　即便聲嘶力竭<br>未來的風揚起之時我就會向你奔去<br>如果不是我就不可以的話<br>就刺向那心中吧</p>
+<p>笨拙地<br>彈出的<br>這份鼓動就與你<br>傳達吧<br>直到夢想的前方</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《Darkness sympathizer》歌词翻译</title>
     <url>/2022/06/10/darkness_sympathizer/</url>
     <content><![CDATA[<p><strong>Darkness sympathizer</strong> - 多媒体企划《IDOLY PRIDE》曲目</p>
@@ -2092,6 +2092,86 @@
 <p>比起甜蜜的烦闷　坚定而又苦恼更能<br>使互相感受到彼此<br>比起甜蜜的烦闷　坚定而又苦恼的梦<br>更能感觉到彼此的守护<br>一心一意的时候<br>心愿破灭了<br>即便如此若有一天<br>愿望诞生了（Darkness sympathizer）<br>连接起来（Darkness sympathizer）<br>在那前方（Darkness sympathizer）<br>描绘着什么呢？</p>
 <p>（Darkness sympathizer）<br>比起外在更想要内心<br>（Darkness sympathizer）<br>并不需要平庸的言辞<br>要是流失了又怎么办　想带着骄傲爱着你<br>吞下这种想法向前奔跑的夜晚</p>
 <p>（Darkness sympathizer）<br>不要掩盖疼痛<br>（Darkness sympathizer）<br>不要隐瞒本心<br>面对着自己　将认真的恋情<br>要是流失了又怎么办　想带着骄傲爱着你<br>吞下这种想法向前奔跑<br>街道上闪着红色光亮　即便是虚幻　上前追逐也有些空洞</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《Secret Season 〜桜色の恋人〜（Secret Season ～樱色的恋人～）》歌词翻译</title>
+    <url>/2022/08/08/secret_season_sakurairo_no_koibito/</url>
+    <content><![CDATA[<p><strong><span lang="ja">Secret Season 〜桜色の恋人〜</span>（Secret Season ～樱色的恋人～）</strong> - 游戏《现在就想告诉哥哥，我是妹妹！》开场曲</p>
+<p>作词：<span lang="ja">茅原実里</span>；作曲：<span lang="ja">菊田大介(Elements Garden)</span></p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>ひらり舞う華　私の頬に優しく<br>春風がキスして微笑む</p>
+<p>眠れない夜をひとつひとつ越えて<br>カレンダー赤マル見つめて深呼吸<br>少しずつ近づいてくその瞬間に<br>高鳴る　my sweet heart</p>
+<p>見慣れない景色に　揺れる視線<br>色とりどり輝く世界　飛び込む私</p>
+<p>遙かなる夢未来　桜色に染まってく　君に続く並木道<br>名前呼ぶその声が　ただ嬉しかったから<br>言葉を探して…　その手を握った</p>
+<p>胸の奥小さな棘少し痛む<br>届かない大きな背中は遠い記憶<br>ふいに春風が運んだプレゼント<br>ときめく　my sweet home</p>
+<p>巡り巡るふたり　近づく距離<br>春と共にあたたかい華を咲かすよ　きっと</p>
+<p>まるで運命的な　桜色した恋人　君を想う並木道<br>私強くなるから　君を守りたいから<br>確かな想いで　心に誓うよ</p>
+<p>あの日の涙を　忘れないよ　約束する<br>君がくれた　言葉が笑顔が　私を変えてくれた</p>
+<p>遙かなる夢未来　桜色に染まってく　君に続く並木道<br>名前呼ぶその声が　ただ嬉しかったから<br>言葉を探して…　その手を握った</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>花瓣翩翩起舞　轻抚着我的脸颊的<br>是那春风的亲吻与微笑</p>
+<p>越过一个个难以入眠的夜晚<br>看着日历上的红圈做着深呼吸<br>在缓缓接近的那个瞬间<br>悸动不已　my sweet heart</p>
+<p>不定的视线　看向那陌生的景色<br>我闯入了这　五彩缤纷闪闪发光的世界</p>
+<p>遥远梦中的未来　通往你的林荫道　逐渐染上了樱色<br>呼唤着名字的那个声音　让人感到欣喜<br>寻找着话语…　握紧那双手</p>
+<p>心中那小小的尖刺让我稍感疼痛<br>触及不到的高大背影是遥远的记忆<br>突然春风带来的礼物<br>令人激动　my sweet home</p>
+<p>相遇邂逅的二人　不断靠近的距离<br>一定会使温暖的花朵在春天到来之时开放</p>
+<p>就像命中注定　染上樱色的恋人　想念着你的林荫道<br>为了让我变强　为了能守护你<br>怀揣着明确的心情　在心中起誓</p>
+<p>那一天流下的泪　我不会忘记　立下约定<br>你所给予的　话语和笑容　将我改变</p>
+<p>遥远梦中的未来　通往你的林荫道　逐渐染上了樱色<br>呼唤着名字的那个声音　让人感到欣喜<br>寻找着话语…　握紧那双手</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《明日になって（化作明日）》歌词翻译</title>
+    <url>/2022/10/03/ashita_ni_natte/</url>
+    <content><![CDATA[<p><strong><span lang="ja">明日になって</span>（化作明日）</strong> - 游戏《现在就想告诉哥哥，我是妹妹！》茂森真央角色曲</p>
+<p>作词：rino；作曲：<span lang="ja">戸田章世</span></p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>広がる空を　突き抜ける願いと<br>動き出す世界　明日になって<br>私は行くよ!</p>
+<p>降り注ぐ木洩れ日から<br>届くよ　春風のメロディ</p>
+<p>追いかけて　今すぐ会いたい<br>桜色　染まるこの場所で</p>
+<p>夢に架かるシルエット　煌めいて<br>戸惑いを振りほどいてく<br>真っすぐに進め!</p>
+<p>理想に揺れる鼓動のシグナル<br>触れて知る未来　加速して行くよ<br>心に秘めたる想いは<br>強さになってく<br>不器用でも　伝えたいよ</p>
+<p>そう　突然　君と出会い<br>この日々は確かに変わったの</p>
+<p>高鳴りと切なさは似てる<br>その仕草　言葉　抱きしめて</p>
+<p>今は誰も知らない　本当の私へと<br>満ち欠けてゆく　諦めないよ</p>
+<p>透明な心　希望色で描いたら<br>未来地図へと　迷わずに行ける<br>負けないと誓う　剣と<br>動き出す世界　明日になって<br>私は行くよ</p>
+<p>理想に揺れる鼓動のシグナル<br>触れて知る未来　もう止まらないんだ<br>心に秘めたる想いは<br>いつか届くの　明日になって<br>“私”で行くよ</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>将广阔的天空　穿透而过的心愿<br>运转起来的世界　化作明日之时<br>我就此前行！</p>
+<p>从树叶间照射下来的阳光<br>传达出　春风的旋律</p>
+<p>追逐着你　现在就想与你相会<br>在这　染上樱花之色的地方</p>
+<p>在梦中架起的剪影　闪闪发光<br>那么就摆脱困惑<br>笔直地前进！</p>
+<p>理想中摇动心跳的信号<br>通过触摸了解到的未来　想要加速前进<br>隐藏在心中的感情<br>渐渐变得强烈<br>即便有些笨拙　也想要传达</p>
+<p>那样　突然　与你相遇<br>这些日子的确发生了改变</p>
+<p>兴奋与悲伤是相似的<br>将那举动　言语　怀抱在心</p>
+<p>现在朝着无人知晓的　真正的自己<br>盈亏不定　我也不会放弃</p>
+<p>透明之心　以希望之色描绘<br>对着未来地图　毫不犹豫地前行<br>以剑立下誓言　不会认输<br>运转起来的世界　化作明日之时<br>我就此前行</p>
+<p>理想中摇动心跳的信号<br>通过触摸了解到的未来　已经无法停下<br>隐藏在心中的感情<br>总会传达得到　化作明日之时<br>以“我”之名前行</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -2141,45 +2221,6 @@
       </tags>
   </entry>
   <entry>
-    <title>《Secret Season 〜桜色の恋人〜（Secret Season ～樱色的恋人～）》歌词翻译</title>
-    <url>/2022/08/08/secret_season_sakurairo_no_koibito/</url>
-    <content><![CDATA[<p><strong><span lang="ja">Secret Season 〜桜色の恋人〜</span>（Secret Season ～樱色的恋人～）</strong> - 游戏《现在就想告诉哥哥，我是妹妹！》开场曲</p>
-<p>作词：<span lang="ja">茅原実里</span>；作曲：<span lang="ja">菊田大介(Elements Garden)</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>ひらり舞う華　私の頬に優しく<br>春風がキスして微笑む</p>
-<p>眠れない夜をひとつひとつ越えて<br>カレンダー赤マル見つめて深呼吸<br>少しずつ近づいてくその瞬間に<br>高鳴る　my sweet heart</p>
-<p>見慣れない景色に　揺れる視線<br>色とりどり輝く世界　飛び込む私</p>
-<p>遙かなる夢未来　桜色に染まってく　君に続く並木道<br>名前呼ぶその声が　ただ嬉しかったから<br>言葉を探して…　その手を握った</p>
-<p>胸の奥小さな棘少し痛む<br>届かない大きな背中は遠い記憶<br>ふいに春風が運んだプレゼント<br>ときめく　my sweet home</p>
-<p>巡り巡るふたり　近づく距離<br>春と共にあたたかい華を咲かすよ　きっと</p>
-<p>まるで運命的な　桜色した恋人　君を想う並木道<br>私強くなるから　君を守りたいから<br>確かな想いで　心に誓うよ</p>
-<p>あの日の涙を　忘れないよ　約束する<br>君がくれた　言葉が笑顔が　私を変えてくれた</p>
-<p>遙かなる夢未来　桜色に染まってく　君に続く並木道<br>名前呼ぶその声が　ただ嬉しかったから<br>言葉を探して…　その手を握った</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>花瓣翩翩起舞　轻抚着我的脸颊的<br>是那春风的亲吻与微笑</p>
-<p>越过一个个难以入眠的夜晚<br>看着日历上的红圈做着深呼吸<br>在缓缓接近的那个瞬间<br>悸动不已　my sweet heart</p>
-<p>不定的视线　看向那陌生的景色<br>我闯入了这　五彩缤纷闪闪发光的世界</p>
-<p>遥远梦中的未来　通往你的林荫道　逐渐染上了樱色<br>呼唤着名字的那个声音　让人感到欣喜<br>寻找着话语…　握紧那双手</p>
-<p>心中那小小的尖刺让我稍感疼痛<br>触及不到的高大背影是遥远的记忆<br>突然春风带来的礼物<br>令人激动　my sweet home</p>
-<p>相遇邂逅的二人　不断靠近的距离<br>一定会使温暖的花朵在春天到来之时开放</p>
-<p>就像命中注定　染上樱色的恋人　想念着你的林荫道<br>为了让我变强　为了能守护你<br>怀揣着明确的心情　在心中起誓</p>
-<p>那一天流下的泪　我不会忘记　立下约定<br>你所给予的　话语和笑容　将我改变</p>
-<p>遥远梦中的未来　通往你的林荫道　逐渐染上了樱色<br>呼唤着名字的那个声音　让人感到欣喜<br>寻找着话语…　握紧那双手</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《未来を開く鍵（打开未来的钥匙）》歌词翻译</title>
     <url>/2022/08/09/mirai_wo_hiraku_kagi/</url>
     <content><![CDATA[<p><strong><span lang="ja">未来を開く鍵</span>（打开未来的钥匙）</strong> - 游戏《现在就想告诉哥哥，我是妹妹！》片尾曲</p>
@@ -2207,156 +2248,6 @@
 <p>不知不觉间　封闭着的大门　锁已经解开<br>被毫无防备的你所吸引　想要一起由衷欢笑<br>也想要接受　这样真实的自己</p>
 <p>你天真无邪的举止　温柔地在我背后打气<br>让我成为全新的「自己」　给予我契机与勇气</p>
 <p>不知不觉间　封闭着的大门　锁已经解开<br>想要同毫无防备的你　一起由衷地欢笑<br>也想要接受　这样真实的自己</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《サクラ前線（樱前线）》歌词翻译</title>
-    <url>/2022/09/12/sakura_zensen/</url>
-    <content><![CDATA[<p><strong><span lang="ja">サクラ前線</span>（樱前线）</strong> - 游戏《现在就想告诉哥哥，我是妹妹！》三谷步梦角色曲</p>
-<p>作词：RUCCA；作曲：<span lang="ja">東タカゴー</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>真新しい　日記帳<br>はじまりへの　期待ばかり　膨らんでく<br>いつの間にか　ラクガキ<br>この分だと“未来日記”になっちゃうけど　イイかなぁ?</p>
-<p>でもね　恋の　神様は<br>予告もなしに　ドラマを呼ぶよ</p>
-<p>サクラ前線へ乗っかって“ドキドキ”と“トキメキ”<br>例年よりも早く　心へやってきた<br>夢にまで観た“現実”が突然、降り注ぐ<br>チョット戸惑うけれど　駆け出そう　私らしく</p>
-<p>恋心も　キセキも<br>科学できない　モノだから　素敵なんてね<br>そう想ったら“弱み”の<br>GOODもBADも全部　キモチ次第って気付いた</p>
-<p>雨の日にも　日記には<br>ハッピー描こう　笑顔を呼ぼう</p>
-<p>サクラ前線へ乗っかって　いますぐ逢いに行こう<br>だって寝れないのは　キミの所為だから<br>“おなじ空間”“おなじ瞬間”いっしょにいる奇跡<br>輝かせていこうよ　ぜったい 2人らしく</p>
-<p>嵐だって　日記には<br>ラッキー描こう　笑顔を呼ぼう</p>
-<p>咲くLOVE!?前線へ乗っかって“トキメキ”と“キラメキ”<br>いっせーので　抱きしめ　未来の向こうへ<br>サクラの花が散るまえに　この想い　伝えたい<br>チョットはにかみながら　飛びだそう　キミとずっと</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>一本全新的　日记本<br>对崭新开端的　那份期待　逐渐充盈<br>不知不觉中　胡乱写下<br>这样的话就会变成一本“未来日记”　可以吗？</p>
-<p>可是啊　恋爱的　神明<br>毫无预兆地　招呼着戏剧</p>
-<p>乘着樱前线的“心跳加速”和“激动不已”<br>比往年更早地　来到我的心中<br>梦中见到的“现实”突然间，降临下来<br>尽管感到有些困惑　还是以自己的风格　飞奔出去</p>
-<p>恋慕之心　以及奇迹<br>因为是科学无法　解释的东西　所以十分精美<br>这样认为的话就能注意到<br>好与坏的全部这些　都取决于心情这一弱点</p>
-<p>在下雨天也　在日记中<br>描绘着喜悦　呼唤着笑容</p>
-<p>乘着樱前线　现在就想与你相见<br>因为我无法入眠　都是你的错<br>在“同一空间”“同一瞬间”一起参与的奇迹<br>让我们共同闪耀吧　一定要　以二人的风格</p>
-<p>即便是暴风雨　在日记中<br>书写着幸运　呼唤着笑容</p>
-<p>乘着盛开LOVE!?前线的“激动不已”和“闪闪发光”<br>齐声呼喊　拥抱彼此　朝着未来彼岸<br>在樱花飘落之前　想要传达　这份心情<br>有些扭捏不安　与你一同飞翔　直到永远</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《今は このまま…（现在 就这样…）》歌词翻译</title>
-    <url>/2022/09/15/ima_wa_kono_mama/</url>
-    <content><![CDATA[<p><strong><span lang="ja">今は このまま…</span>（现在 就这样…）</strong> - 游戏《现在就想告诉哥哥，我是妹妹！》奈奈濑奉莉角色曲</p>
-<p>作词：lotta；作曲：lotta</p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>お気に入りのリップ塗って<br>今日も　笑顔で駆け抜けて行こう！<br>曇り空も　気分次第<br>笑い飛ばせば　元気になるよ<br>どんなに　ささいなことも　君がいるから<br>幸せに　見えてくるんだ</p>
-<p>いつだって　そばにいてくれて　ありがとうね<br>大切だよ　かけがえのない日々<br>友達よりもほんの少し　強い絆　それでいい<br>今は　このまま…<br>そうでしょ　そうだよ　そうだね</p>
-<p>口に出して　言わなくても<br>分かり合えている　ふたりの距離<br>そんな奇跡　いつまででも<br>続きますようにと　願っている<br>どんなに　けんかをしても　次の朝には<br>肩組んで　素直になれる</p>
-<p>いつだって　そばにいれること　うれしいから<br>大事にしたい　かけがえのない君<br>もぅ少し近づきたいなって　思うけれど　やっぱり<br>今は　このまま…<br>そうでしょ　そうだよ　そうだね</p>
-<p>どんなに　落ち込んだ日も　君がいるから<br>前向いて　楽しくなれる</p>
-<p>いつだって　そばにいてくれて　ありがとうね<br>大切だよ　かけがえのない君<br>友達よりもほんの少し　強い絆　それでいい<br>今は　このまま…<br>そうでしょ　そうだよ　そうだね</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>涂上自己喜爱的口红<br>今天也　要笑着跑步前行！<br>阴天也会　随心情而变<br>若能一笑而过　就会变得有精神<br>不管是什么　琐碎的小事　都因为有你在<br>才让我　看到了幸福</p>
-<p>无论何时　你总陪在我的身边　我心怀感谢<br>都是重要　而又无可替代的日子<br>比朋友之间还要稍微　紧密的牵绊　已经足够了<br>现在　就这样…<br>是这样吧　是这样哟　是这样呢</p>
-<p>说出口也好　不说出来也罢<br>我们也都明白　两人间的距离<br>那样的奇迹　直到天荒地老<br>都能延续下去　我许下心愿<br>不管发生了　怎样的争执　第二天早晨也会<br>肩靠着肩　变得坦诚</p>
-<p>无论何时　你总陪在我的身边　我心生喜悦<br>想好好珍惜　不可替代的你<br>真的好想再　靠近你一点　果然<br>现在　就这样…<br>是这样吧　是这样哟　是这样呢</p>
-<p>不论在什么　心情失落的日子　因为有你在<br>面朝前方　我重拾快乐</p>
-<p>无论何时　你总陪在我的身边　我心怀感谢<br>十分重要　又不可替代的你<br>比朋友之间还要稍微　紧密的牵绊　已经足够了<br>现在　就这样…<br>是这样吧　是这样哟　是这样呢</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《明日になって（化作明日）》歌词翻译</title>
-    <url>/2022/10/03/ashita_ni_natte/</url>
-    <content><![CDATA[<p><strong><span lang="ja">明日になって</span>（化作明日）</strong> - 游戏《现在就想告诉哥哥，我是妹妹！》茂森真央角色曲</p>
-<p>作词：rino；作曲：<span lang="ja">戸田章世</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>広がる空を　突き抜ける願いと<br>動き出す世界　明日になって<br>私は行くよ!</p>
-<p>降り注ぐ木洩れ日から<br>届くよ　春風のメロディ</p>
-<p>追いかけて　今すぐ会いたい<br>桜色　染まるこの場所で</p>
-<p>夢に架かるシルエット　煌めいて<br>戸惑いを振りほどいてく<br>真っすぐに進め!</p>
-<p>理想に揺れる鼓動のシグナル<br>触れて知る未来　加速して行くよ<br>心に秘めたる想いは<br>強さになってく<br>不器用でも　伝えたいよ</p>
-<p>そう　突然　君と出会い<br>この日々は確かに変わったの</p>
-<p>高鳴りと切なさは似てる<br>その仕草　言葉　抱きしめて</p>
-<p>今は誰も知らない　本当の私へと<br>満ち欠けてゆく　諦めないよ</p>
-<p>透明な心　希望色で描いたら<br>未来地図へと　迷わずに行ける<br>負けないと誓う　剣と<br>動き出す世界　明日になって<br>私は行くよ</p>
-<p>理想に揺れる鼓動のシグナル<br>触れて知る未来　もう止まらないんだ<br>心に秘めたる想いは<br>いつか届くの　明日になって<br>“私”で行くよ</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>将广阔的天空　穿透而过的心愿<br>运转起来的世界　化作明日之时<br>我就此前行！</p>
-<p>从树叶间照射下来的阳光<br>传达出　春风的旋律</p>
-<p>追逐着你　现在就想与你相会<br>在这　染上樱花之色的地方</p>
-<p>在梦中架起的剪影　闪闪发光<br>那么就摆脱困惑<br>笔直地前进！</p>
-<p>理想中摇动心跳的信号<br>通过触摸了解到的未来　想要加速前进<br>隐藏在心中的感情<br>渐渐变得强烈<br>即便有些笨拙　也想要传达</p>
-<p>那样　突然　与你相遇<br>这些日子的确发生了改变</p>
-<p>兴奋与悲伤是相似的<br>将那举动　言语　怀抱在心</p>
-<p>现在朝着无人知晓的　真正的自己<br>盈亏不定　我也不会放弃</p>
-<p>透明之心　以希望之色描绘<br>对着未来地图　毫不犹豫地前行<br>以剑立下誓言　不会认输<br>运转起来的世界　化作明日之时<br>我就此前行</p>
-<p>理想中摇动心跳的信号<br>通过触摸了解到的未来　已经无法停下<br>隐藏在心中的感情<br>总会传达得到　化作明日之时<br>以“我”之名前行</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《my mind》歌词翻译</title>
-    <url>/2022/11/24/my_mind/</url>
-    <content><![CDATA[<p><strong>my mind</strong> - 游戏《现在就想告诉哥哥，我是妹妹！》拜田希实花角色曲</p>
-<p>作词：lotta；作曲：<span lang="ja">戸田章世</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>新しい春の風に誘われて　少しだけ勇気。<br>「今までの弱い私、<br>脱ぎ捨ててみようかな…」</p>
-<p>本当は変わりたくていつだって<br>夢は見ていたけれど<br>臆病なココロ揺れて　立ちすくむだけの現実</p>
-<p>うつむいて、いるばかりじゃ<br>何も始まらないからね</p>
-<p>さよならを告げよう　曇り空の　毎日に<br>キラめいた　明日からの私　目指し<br>突き抜けるような　青い空と　花の色<br>穏やかな日々に身をゆだねて<br>笑いたい…</p>
-<p>花びらがヒラヒラ舞う<br>春の日がくれたよ、偶然。<br>懐かしい君の笑顔　また会わせてくれた</p>
-<p>ドキドキは高鳴るけど<br>新しい日々が背中押すから<br>すくんでた足も　一歩<br>踏み出せる様な気がした</p>
-<p>愛しさが、積もるたびに<br>過去も色付いてくみたい</p>
-<p>ありがとう告げよう　君がくれた　優しさが<br>かたくなな　昨日までの世界　溶かし<br>柔らかな日差し　運び込んで　くれたから<br>あたたかな　ひだまりに　揺られて<br>踏み出そう…</p>
-<p>さよならを告げよう　寂しすぎた　今までに<br>仰ぎみた　明日からの私　目指し<br>吹き抜ける風と　広い空と　君の側<br>安らかな日々に身をゆだねて<br>歩いてみよう…</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>被清新的春风所吸引　稍稍鼓起了勇气。<br>「迄今为止软弱的我，<br>试着摆脱过去的束缚吧…」</p>
-<p>真的想去改变自己却总是<br>在梦中让它成真<br>胆怯的内心在颤抖　现实让我畏缩不前</p>
-<p>低着头，只是一直低着头<br>就什么也没法开始呢</p>
-<p>向阴沉的每一天　说一声　再见<br>将闪闪发光的　明天开始的自己　作为目标<br>天空同花朵呈现出　透明澄澈般的　一片蔚蓝<br>想委身于平静的生活之中<br>放声欢笑…</p>
-<p>花瓣随风翩翩起舞<br>为我带来春日，不过偶然。<br>再一次见到那　令人怀念的你的笑脸</p>
-<p>尽管心在怦怦直跳<br>全新的每天促使我前进<br>畏缩的双脚向前　一步<br>感觉可以踏步前行</p>
-<p>在爱怜，不断积累之时<br>过去也似乎着上了颜色</p>
-<p>对你给予我的温柔　说一声　谢谢<br>挥之不去的　到昨天为止的世界　逐渐融化<br>你把柔和的阳光　收起来搬进了　我的心里<br>在温暖的　向阳之处　随之摇曳<br>向前迈出…</p>
-<p>同陪伴至今的孤独　说一声　再见<br>把仰望着的　明天开始的自己　作为目标<br>轻抚而过的风　广阔的天空　与你的身旁<br>委身于这安逸的日子之中<br>尝试走下去…</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -2398,41 +2289,37 @@
       </tags>
   </entry>
   <entry>
-    <title>《どきどき黙示録（心跳不已默示录）》歌词翻译</title>
-    <url>/2022/12/27/dokidoki_mokushiroku/</url>
-    <content><![CDATA[<p><strong><span lang="ja">どきどき黙示録</span>（心跳不已默示录）</strong> - 多媒体企划《兽娘动物园》曲目</p>
-<p>作词：<span lang="ja">磯谷佳江</span>；作曲：Marty Friedman</p>
+    <title>《サクラ前線（樱前线）》歌词翻译</title>
+    <url>/2022/09/12/sakura_zensen/</url>
+    <content><![CDATA[<p><strong><span lang="ja">サクラ前線</span>（樱前线）</strong> - 游戏《现在就想告诉哥哥，我是妹妹！》三谷步梦角色曲</p>
+<p>作词：RUCCA；作曲：<span lang="ja">東タカゴー</span></p>
 <hr>
 <p><strong>歌词</strong></p>
 <p><em>注：歌词著作权归原作者所有。</em></p>
 <div lang="ja" style="white-space: pre;">
 
-<p><ruby>Jump<rt>じゃーん</rt></ruby>！花びらに<ruby>誘<rt>いざな</rt></ruby>われ　今生まれし切なる<ruby>願望<rt>ねがい</rt></ruby><br>未知という大いなる輝きにこの身委ねよう――</p>
-<p>つまりはそう…まだ知らない楽しいこといっぱいしよう！<br>桜舞う　春色のイデアに踊る我が胸…</p>
-<p>紡がれゆく　<ruby>冒険譚<rt>アドベンチャー</rt></ruby><br>さぁ<ruby>盟友<rt>フレンズ</rt></ruby>よ　ともに刻むぞ！<br>ほとばしる　<ruby>闇ノ鼓動<rt>ダークネスビート</rt></ruby>！！！</p>
-<p>響け　響け　<ruby>運命<rt>さだめ</rt></ruby>の<ruby>詠唱<rt>こえ</rt></ruby><br>今日もみんなでめくるよ　どきどき黙示録</p>
-<p>嗚呼…うららかな陽光に邪眼ガ疼ク…この刹那<br>魂を解き放ち　約束の場所目指してこう</p>
-<p>ほらどうだ？凄いだろう？なんかリア充っぽくないか！？<br>ふわふわって　春色の夢想に染まる盟約</p>
-<p>伝承されし　<ruby>聖なる卒業の儀<rt>セイントグラデュエーション</rt></ruby><br>その全容は未だ不明だが<br>全力で　<ruby>闇ノ高揚<rt>ダークネスハイ</rt></ruby>！！！</p>
-<p>仰ぎ　仰げ　尊き<ruby>旋律<rt>しらべ</rt></ruby><br>遊び　遊ぼう　最高のわくわくクロニクル<br>かの日既に　示されてた<br>我らの繁栄…それがそう！どきどき黙示録</p>
-<p>遥かな虚空に　思いを馳せれば<br>さらなる深遠が　<ruby>世界<rt>パーク</rt></ruby>を包むだろう――</p>
-<p>響け　響け　<ruby>運命<rt>さだめ</rt></ruby>の<ruby>詠唱<rt>こえ</rt></ruby><br>まだまだずっと続くよ　わくわくクロニクル<br>証明するぞ　我らの<ruby>魂<rt>ソウル</rt></ruby><br>一緒にずーっとめくろう！どきどき黙示録</p>
+<p>真新しい　日記帳<br>はじまりへの　期待ばかり　膨らんでく<br>いつの間にか　ラクガキ<br>この分だと“未来日記”になっちゃうけど　イイかなぁ?</p>
+<p>でもね　恋の　神様は<br>予告もなしに　ドラマを呼ぶよ</p>
+<p>サクラ前線へ乗っかって“ドキドキ”と“トキメキ”<br>例年よりも早く　心へやってきた<br>夢にまで観た“現実”が突然、降り注ぐ<br>チョット戸惑うけれど　駆け出そう　私らしく</p>
+<p>恋心も　キセキも<br>科学できない　モノだから　素敵なんてね<br>そう想ったら“弱み”の<br>GOODもBADも全部　キモチ次第って気付いた</p>
+<p>雨の日にも　日記には<br>ハッピー描こう　笑顔を呼ぼう</p>
+<p>サクラ前線へ乗っかって　いますぐ逢いに行こう<br>だって寝れないのは　キミの所為だから<br>“おなじ空間”“おなじ瞬間”いっしょにいる奇跡<br>輝かせていこうよ　ぜったい 2人らしく</p>
+<p>嵐だって　日記には<br>ラッキー描こう　笑顔を呼ぼう</p>
+<p>咲くLOVE!?前線へ乗っかって“トキメキ”と“キラメキ”<br>いっせーので　抱きしめ　未来の向こうへ<br>サクラの花が散るまえに　この想い　伝えたい<br>チョットはにかみながら　飛びだそう　キミとずっと</p>
 </div>
 
 <hr>
 <p><strong>翻译</strong></p>
 <div style="white-space: pre;">
 
-<p>Jump！被花瓣吸引　现在产生的强烈的心愿<br>把此身寄托给被称为未知的巨大光辉——</p>
-<p>也就是说…让我们多多去做尚未了解的事情吧！<br>樱花飞舞　在春色的意念中舞动着的我的内心…</p>
-<p>逐渐编织出的　冒险谭<br>来吧盟友们　一同铭刻吧！<br>迸发而出　暗之鼓动！！！</p>
-<p>回响吧　回响吧　命运的咏唱<br>今天也一同翻阅吧　心跳不已默示录</p>
-<p>啊啊…灿烂的阳光之下邪眼阵阵作痛…这一刹那<br>释放自己的灵魂　以约定之处为目标出发</p>
-<p>看看如何？很厉害吧？这不就是现充吗！？<br>轻飘飘地　春色的梦想将盟约洇染</p>
-<p>传承而来　神圣的毕业之礼<br>尽管其全貌尚且不明<br>使出全力　暗之高涨！！！</p>
-<p>仰望着　仰望吧　崇高的旋律<br>遨游着　遨游吧　最棒的激动不已编年史<br>已过之日　所展现出的<br>我们的繁荣…就这样没错！心跳不已默示录</p>
-<p>若在遥远的虚空　放飞思绪的话<br>就能在更深远处　将世界包覆起来——</p>
-<p>回响吧　回响吧　命运的咏唱<br>还会永远书写下去　激动不已编年史<br>我们会证明　自己的灵魂<br>一起不停地翻阅吧！心跳不已默示录</p>
+<p>一本全新的　日记本<br>对崭新开端的　那份期待　逐渐充盈<br>不知不觉中　胡乱写下<br>这样的话就会变成一本“未来日记”　可以吗？</p>
+<p>可是啊　恋爱的　神明<br>毫无预兆地　招呼着戏剧</p>
+<p>乘着樱前线的“心跳加速”和“激动不已”<br>比往年更早地　来到我的心中<br>梦中见到的“现实”突然间，降临下来<br>尽管感到有些困惑　还是以自己的风格　飞奔出去</p>
+<p>恋慕之心　以及奇迹<br>因为是科学无法　解释的东西　所以十分精美<br>这样认为的话就能注意到<br>好与坏的全部这些　都取决于心情这一弱点</p>
+<p>在下雨天也　在日记中<br>描绘着喜悦　呼唤着笑容</p>
+<p>乘着樱前线　现在就想与你相见<br>因为我无法入眠　都是你的错<br>在“同一空间”“同一瞬间”一起参与的奇迹<br>让我们共同闪耀吧　一定要　以二人的风格</p>
+<p>即便是暴风雨　在日记中<br>书写着幸运　呼唤着笑容</p>
+<p>乘着盛开LOVE!?前线的“激动不已”和“闪闪发光”<br>齐声呼喊　拥抱彼此　朝着未来彼岸<br>在樱花飘落之前　想要传达　这份心情<br>有些扭捏不安　与你一同飞翔　直到永远</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -2509,43 +2396,6 @@
       </tags>
   </entry>
   <entry>
-    <title>《君とずっと（永远与你在一起）》歌词翻译</title>
-    <url>/2023/01/09/kimi_to_zutto/</url>
-    <content><![CDATA[<p><strong><span lang="ja">君とずっと</span>（永远与你在一起）</strong> - 游戏《现在就想告诉哥哥，我是妹妹！》拜田希实花线片尾曲</p>
-<p>作词：lotta；作曲：rino</p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>絶え間なく　降り続いた<br>雨も　いつの日か<br>閉ざされた　雲を割いて　虹になるから</p>
-<p>おだやかな君の手が<br>導いてくれた<br>ねぇ</p>
-<p>悲しみも　つらい過去も<br>すべてを　抱きしめたら<br>鮮やかな　彩をつけた<br>花が咲くよ<br>君と　ずっと</p>
-<p>変わりたい　でも変われない<br>そんなジレンマに<br>ただそっと　そばに立って　希望をくれた</p>
-<p>震えだす指をぎゅっと<br>握っててくれた<br>ねぇ</p>
-<p>泣き濡れた　つらい日々も<br>すべてを　受け入れたら<br>晴れやかな　心　実る<br>花が咲くよ<br>君と　ずっと</p>
-<p>いつだって　優しさを<br>差し伸べてくれた<br>ねぇ</p>
-<p>幸せも　募る日々も<br>すべてを　君と共に<br>重ねたい　歩みたいな<br>笑いながら<br>君と　ずっと</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>无休无止地　从天而降的<br>雨也会　终有一天<br>划开那　紧闭的乌云　化作一道彩虹</p>
-<p>你的温和的手<br>为我指引方向<br>呐</p>
-<p>不管是悲伤　还是痛苦的过去<br>全部都　拥入怀中的话<br>鲜艳美丽　色彩缤纷的<br>花朵就会绽放<br>永远与你　在一起</p>
-<p>想要改变　却又无法改变<br>我处在这困境之时<br>你轻轻地　站在我的身边　就给了我希望</p>
-<p>你紧握住我逐渐<br>开始颤抖的手<br>呐</p>
-<p>泪流满面的　辛酸的日子<br>全部都　坦然接受的话<br>能结出　愉悦　心灵的<br>花朵就会绽放<br>永远与你　在一起</p>
-<p>你总是　向我伸出手<br>给予我体贴与温柔<br>呐</p>
-<p>在幸福　与日俱增时<br>想要和你　相依相伴<br>高声欢笑着　相互交织<br>一同前行<br>永远与你　在一起</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《翼の詩（翼之诗）》歌词翻译</title>
     <url>/2023/01/08/tsubasa_no_uta/</url>
     <content><![CDATA[<p><strong><span lang="ja">翼の詩</span>（翼之诗）</strong> - 游戏《现在就想告诉哥哥，我是妹妹！》茂森真央线片尾曲</p>
@@ -2579,6 +2429,84 @@
 <p>刹那之间　以及悲伤之中　构筑起现在的幸福的<br>是“喜爱”“温柔”“勇气”　的碎片　我已心知肚明</p>
 <p>以自己的风格唱响　明天的歌谣<br>想在心中坚定地　守护这一切<br>无论何时　答案都　一定不只有一个<br>与你同行的话　就会找到</p>
 <p>朝着蓝天挥起　牵绊之诗<br>向你的心中传达出“感谢”<br>这双翼　不管是　什么夜晚都能飞越<br>指引我去往　任何地方</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《どきどき黙示録（心跳不已默示录）》歌词翻译</title>
+    <url>/2022/12/27/dokidoki_mokushiroku/</url>
+    <content><![CDATA[<p><strong><span lang="ja">どきどき黙示録</span>（心跳不已默示录）</strong> - 多媒体企划《兽娘动物园》曲目</p>
+<p>作词：<span lang="ja">磯谷佳江</span>；作曲：Marty Friedman</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p><ruby>Jump<rt>じゃーん</rt></ruby>！花びらに<ruby>誘<rt>いざな</rt></ruby>われ　今生まれし切なる<ruby>願望<rt>ねがい</rt></ruby><br>未知という大いなる輝きにこの身委ねよう――</p>
+<p>つまりはそう…まだ知らない楽しいこといっぱいしよう！<br>桜舞う　春色のイデアに踊る我が胸…</p>
+<p>紡がれゆく　<ruby>冒険譚<rt>アドベンチャー</rt></ruby><br>さぁ<ruby>盟友<rt>フレンズ</rt></ruby>よ　ともに刻むぞ！<br>ほとばしる　<ruby>闇ノ鼓動<rt>ダークネスビート</rt></ruby>！！！</p>
+<p>響け　響け　<ruby>運命<rt>さだめ</rt></ruby>の<ruby>詠唱<rt>こえ</rt></ruby><br>今日もみんなでめくるよ　どきどき黙示録</p>
+<p>嗚呼…うららかな陽光に邪眼ガ疼ク…この刹那<br>魂を解き放ち　約束の場所目指してこう</p>
+<p>ほらどうだ？凄いだろう？なんかリア充っぽくないか！？<br>ふわふわって　春色の夢想に染まる盟約</p>
+<p>伝承されし　<ruby>聖なる卒業の儀<rt>セイントグラデュエーション</rt></ruby><br>その全容は未だ不明だが<br>全力で　<ruby>闇ノ高揚<rt>ダークネスハイ</rt></ruby>！！！</p>
+<p>仰ぎ　仰げ　尊き<ruby>旋律<rt>しらべ</rt></ruby><br>遊び　遊ぼう　最高のわくわくクロニクル<br>かの日既に　示されてた<br>我らの繁栄…それがそう！どきどき黙示録</p>
+<p>遥かな虚空に　思いを馳せれば<br>さらなる深遠が　<ruby>世界<rt>パーク</rt></ruby>を包むだろう――</p>
+<p>響け　響け　<ruby>運命<rt>さだめ</rt></ruby>の<ruby>詠唱<rt>こえ</rt></ruby><br>まだまだずっと続くよ　わくわくクロニクル<br>証明するぞ　我らの<ruby>魂<rt>ソウル</rt></ruby><br>一緒にずーっとめくろう！どきどき黙示録</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>Jump！被花瓣吸引　现在产生的强烈的心愿<br>把此身寄托给被称为未知的巨大光辉——</p>
+<p>也就是说…让我们多多去做尚未了解的事情吧！<br>樱花飞舞　在春色的意念中舞动着的我的内心…</p>
+<p>逐渐编织出的　冒险谭<br>来吧盟友们　一同铭刻吧！<br>迸发而出　暗之鼓动！！！</p>
+<p>回响吧　回响吧　命运的咏唱<br>今天也一同翻阅吧　心跳不已默示录</p>
+<p>啊啊…灿烂的阳光之下邪眼阵阵作痛…这一刹那<br>释放自己的灵魂　以约定之处为目标出发</p>
+<p>看看如何？很厉害吧？这不就是现充吗！？<br>轻飘飘地　春色的梦想将盟约洇染</p>
+<p>传承而来　神圣的毕业之礼<br>尽管其全貌尚且不明<br>使出全力　暗之高涨！！！</p>
+<p>仰望着　仰望吧　崇高的旋律<br>遨游着　遨游吧　最棒的激动不已编年史<br>已过之日　所展现出的<br>我们的繁荣…就这样没错！心跳不已默示录</p>
+<p>若在遥远的虚空　放飞思绪的话<br>就能在更深远处　将世界包覆起来——</p>
+<p>回响吧　回响吧　命运的咏唱<br>还会永远书写下去　激动不已编年史<br>我们会证明　自己的灵魂<br>一起不停地翻阅吧！心跳不已默示录</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《君とずっと（永远与你在一起）》歌词翻译</title>
+    <url>/2023/01/09/kimi_to_zutto/</url>
+    <content><![CDATA[<p><strong><span lang="ja">君とずっと</span>（永远与你在一起）</strong> - 游戏《现在就想告诉哥哥，我是妹妹！》拜田希实花线片尾曲</p>
+<p>作词：lotta；作曲：rino</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>絶え間なく　降り続いた<br>雨も　いつの日か<br>閉ざされた　雲を割いて　虹になるから</p>
+<p>おだやかな君の手が<br>導いてくれた<br>ねぇ</p>
+<p>悲しみも　つらい過去も<br>すべてを　抱きしめたら<br>鮮やかな　彩をつけた<br>花が咲くよ<br>君と　ずっと</p>
+<p>変わりたい　でも変われない<br>そんなジレンマに<br>ただそっと　そばに立って　希望をくれた</p>
+<p>震えだす指をぎゅっと<br>握っててくれた<br>ねぇ</p>
+<p>泣き濡れた　つらい日々も<br>すべてを　受け入れたら<br>晴れやかな　心　実る<br>花が咲くよ<br>君と　ずっと</p>
+<p>いつだって　優しさを<br>差し伸べてくれた<br>ねぇ</p>
+<p>幸せも　募る日々も<br>すべてを　君と共に<br>重ねたい　歩みたいな<br>笑いながら<br>君と　ずっと</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>无休无止地　从天而降的<br>雨也会　终有一天<br>划开那　紧闭的乌云　化作一道彩虹</p>
+<p>你的温和的手<br>为我指引方向<br>呐</p>
+<p>不管是悲伤　还是痛苦的过去<br>全部都　拥入怀中的话<br>鲜艳美丽　色彩缤纷的<br>花朵就会绽放<br>永远与你　在一起</p>
+<p>想要改变　却又无法改变<br>我处在这困境之时<br>你轻轻地　站在我的身边　就给了我希望</p>
+<p>你紧握住我逐渐<br>开始颤抖的手<br>呐</p>
+<p>泪流满面的　辛酸的日子<br>全部都　坦然接受的话<br>能结出　愉悦　心灵的<br>花朵就会绽放<br>永远与你　在一起</p>
+<p>你总是　向我伸出手<br>给予我体贴与温柔<br>呐</p>
+<p>在幸福　与日俱增时<br>想要和你　相依相伴<br>高声欢笑着　相互交织<br>一同前行<br>永远与你　在一起</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -2807,6 +2735,78 @@
       </tags>
   </entry>
   <entry>
+    <title>《my mind》歌词翻译</title>
+    <url>/2022/11/24/my_mind/</url>
+    <content><![CDATA[<p><strong>my mind</strong> - 游戏《现在就想告诉哥哥，我是妹妹！》拜田希实花角色曲</p>
+<p>作词：lotta；作曲：<span lang="ja">戸田章世</span></p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>新しい春の風に誘われて　少しだけ勇気。<br>「今までの弱い私、<br>脱ぎ捨ててみようかな…」</p>
+<p>本当は変わりたくていつだって<br>夢は見ていたけれど<br>臆病なココロ揺れて　立ちすくむだけの現実</p>
+<p>うつむいて、いるばかりじゃ<br>何も始まらないからね</p>
+<p>さよならを告げよう　曇り空の　毎日に<br>キラめいた　明日からの私　目指し<br>突き抜けるような　青い空と　花の色<br>穏やかな日々に身をゆだねて<br>笑いたい…</p>
+<p>花びらがヒラヒラ舞う<br>春の日がくれたよ、偶然。<br>懐かしい君の笑顔　また会わせてくれた</p>
+<p>ドキドキは高鳴るけど<br>新しい日々が背中押すから<br>すくんでた足も　一歩<br>踏み出せる様な気がした</p>
+<p>愛しさが、積もるたびに<br>過去も色付いてくみたい</p>
+<p>ありがとう告げよう　君がくれた　優しさが<br>かたくなな　昨日までの世界　溶かし<br>柔らかな日差し　運び込んで　くれたから<br>あたたかな　ひだまりに　揺られて<br>踏み出そう…</p>
+<p>さよならを告げよう　寂しすぎた　今までに<br>仰ぎみた　明日からの私　目指し<br>吹き抜ける風と　広い空と　君の側<br>安らかな日々に身をゆだねて<br>歩いてみよう…</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>被清新的春风所吸引　稍稍鼓起了勇气。<br>「迄今为止软弱的我，<br>试着摆脱过去的束缚吧…」</p>
+<p>真的想去改变自己却总是<br>在梦中让它成真<br>胆怯的内心在颤抖　现实让我畏缩不前</p>
+<p>低着头，只是一直低着头<br>就什么也没法开始呢</p>
+<p>向阴沉的每一天　说一声　再见<br>将闪闪发光的　明天开始的自己　作为目标<br>天空同花朵呈现出　透明澄澈般的　一片蔚蓝<br>想委身于平静的生活之中<br>放声欢笑…</p>
+<p>花瓣随风翩翩起舞<br>为我带来春日，不过偶然。<br>再一次见到那　令人怀念的你的笑脸</p>
+<p>尽管心在怦怦直跳<br>全新的每天促使我前进<br>畏缩的双脚向前　一步<br>感觉可以踏步前行</p>
+<p>在爱怜，不断积累之时<br>过去也似乎着上了颜色</p>
+<p>对你给予我的温柔　说一声　谢谢<br>挥之不去的　到昨天为止的世界　逐渐融化<br>你把柔和的阳光　收起来搬进了　我的心里<br>在温暖的　向阳之处　随之摇曳<br>向前迈出…</p>
+<p>同陪伴至今的孤独　说一声　再见<br>把仰望着的　明天开始的自己　作为目标<br>轻抚而过的风　广阔的天空　与你的身旁<br>委身于这安逸的日子之中<br>尝试走下去…</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《今は このまま…（现在 就这样…）》歌词翻译</title>
+    <url>/2022/09/15/ima_wa_kono_mama/</url>
+    <content><![CDATA[<p><strong><span lang="ja">今は このまま…</span>（现在 就这样…）</strong> - 游戏《现在就想告诉哥哥，我是妹妹！》奈奈濑奉莉角色曲</p>
+<p>作词：lotta；作曲：lotta</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>お気に入りのリップ塗って<br>今日も　笑顔で駆け抜けて行こう！<br>曇り空も　気分次第<br>笑い飛ばせば　元気になるよ<br>どんなに　ささいなことも　君がいるから<br>幸せに　見えてくるんだ</p>
+<p>いつだって　そばにいてくれて　ありがとうね<br>大切だよ　かけがえのない日々<br>友達よりもほんの少し　強い絆　それでいい<br>今は　このまま…<br>そうでしょ　そうだよ　そうだね</p>
+<p>口に出して　言わなくても<br>分かり合えている　ふたりの距離<br>そんな奇跡　いつまででも<br>続きますようにと　願っている<br>どんなに　けんかをしても　次の朝には<br>肩組んで　素直になれる</p>
+<p>いつだって　そばにいれること　うれしいから<br>大事にしたい　かけがえのない君<br>もぅ少し近づきたいなって　思うけれど　やっぱり<br>今は　このまま…<br>そうでしょ　そうだよ　そうだね</p>
+<p>どんなに　落ち込んだ日も　君がいるから<br>前向いて　楽しくなれる</p>
+<p>いつだって　そばにいてくれて　ありがとうね<br>大切だよ　かけがえのない君<br>友達よりもほんの少し　強い絆　それでいい<br>今は　このまま…<br>そうでしょ　そうだよ　そうだね</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>涂上自己喜爱的口红<br>今天也　要笑着跑步前行！<br>阴天也会　随心情而变<br>若能一笑而过　就会变得有精神<br>不管是什么　琐碎的小事　都因为有你在<br>才让我　看到了幸福</p>
+<p>无论何时　你总陪在我的身边　我心怀感谢<br>都是重要　而又无可替代的日子<br>比朋友之间还要稍微　紧密的牵绊　已经足够了<br>现在　就这样…<br>是这样吧　是这样哟　是这样呢</p>
+<p>说出口也好　不说出来也罢<br>我们也都明白　两人间的距离<br>那样的奇迹　直到天荒地老<br>都能延续下去　我许下心愿<br>不管发生了　怎样的争执　第二天早晨也会<br>肩靠着肩　变得坦诚</p>
+<p>无论何时　你总陪在我的身边　我心生喜悦<br>想好好珍惜　不可替代的你<br>真的好想再　靠近你一点　果然<br>现在　就这样…<br>是这样吧　是这样哟　是这样呢</p>
+<p>不论在什么　心情失落的日子　因为有你在<br>面朝前方　我重拾快乐</p>
+<p>无论何时　你总陪在我的身边　我心怀感谢<br>十分重要　又不可替代的你<br>比朋友之间还要稍微　紧密的牵绊　已经足够了<br>现在　就这样…<br>是这样吧　是这样哟　是这样呢</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>用于MoeSkin的MoeLatte主题包现已发布！</title>
     <url>/2023/02/12/moelatte/</url>
     <content><![CDATA[<p><a class="link"   href="https://zh.moegirl.org.cn/User:GuoPC/MoeLatte" >MoeLatte <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>是基于<a class="link"   href="https://catppuccin.com/" >Catppuccin Theme <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>中的Latte调色风格制作的一款用于MoeSkin皮肤的主题包。采用了Latte中的绿—蓝系列色作为主要配色，并进行了一定调整。</p>
@@ -2930,6 +2930,44 @@
       </tags>
   </entry>
   <entry>
+    <title>《Hazy》歌词翻译</title>
+    <url>/2023/05/01/hazy/</url>
+    <content><![CDATA[<p><strong>Hazy</strong> - TV动画《花开伊吕波》片尾曲</p>
+<p>作词：<span lang="ja">坂井季乃</span>；作曲：<span lang="ja">黒須克彦</span></p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>夢を見る少し手前で<br>置いてきたものはなんだっけ<br>忘れてしまいたくはないけど<br>時折ふっと記憶の隅に浮かぶのは<br>ふんわりぼやけたセピア色<br>目の前を塞ぐ日々の向こう少しずつ遠く</p>
+<p>大体なんで息を切らして<br>走ってるんだろう</p>
+<p>スピードを上げてゆくほど立ち止まることが怖くて<br>早くなる鼓動に触れココに居ると確かめた<br>ココロの奥の小さな声に耳を澄ましたら<br>包み込む世界が晴れ広がるよ明日へ</p>
+<p>近付いて少し離れて<br>出会った人に手を振って<br>繰り返しみたいな道の上で素直になって<br>笑い顔も泣き顔も<br>重なればほらキレイでしょう<br>変わらないものはいつの日も奥の方にある</p>
+<p>泣いた頬に陽が射して<br>だんだん愛を知ってくの？<br>曖昧だった遠い遠い<br>未来に目を凝らそう</p>
+<p>風が頬をかすめて耳元でウタを歌えば<br>高く鳴る鼓動につれ空に近付けるから<br>軽やかに弾むような足取りに運ばれて<br>まだだれも見たことない物語へ続く</p>
+<p>スピードを上げてゆくほど立ち止まることが怖くて<br>早くなる鼓動に触れココに居ると確かめた<br>ココロの奥の小さな声に耳を澄ましたら<br>包み込む世界が晴れ広がるよ明日へ</p>
+<p>包み込む世界が晴れ広がるよ明日へ</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>在陷入美妙的幻梦之前<br>刚刚放下的东西是什么呢<br>虽然还依旧不想去忘记<br>偶尔倏然浮现在记忆角落的是<br>模糊不清一片朦胧的深棕色<br>时光流逝将视线阻挡逐渐远去</p>
+<p>到底为何要这样气喘吁吁<br>一直奔跑着呢</p>
+<p>越是加快自己的速度就越是害怕停下来<br>感受这渐渐加速的心跳确定自己就存在于此<br>若是侧耳倾听内心深处微小的声音<br>周围的世界便会豁然开朗延向明天</p>
+<p>走近一些又稍稍远离<br>朝着相遇的人挥手问好<br>在看似反复的路上逐渐坦率<br>不管是笑容还是哭脸<br>交叠在一起不也很美丽吗<br>永恒不变的东西终会留在心底</p>
+<p>阳光照在泪干的脸上<br>是否就渐渐懂得了爱？<br>把目光投向那模糊<br>而又遥远的未来吧</p>
+<p>清风拂过脸颊耳边歌声传来时<br>伴随激动的心跳就能靠近天空<br>脚步也随之踏起高涨起来<br>朝着崭新的故事迈向前方</p>
+<p>越是加快自己的速度就越是害怕停下来<br>感受这渐渐加速的心跳确定自己就存在于此<br>若是侧耳倾听内心深处微小的声音<br>周围的世界便会豁然开朗延向明天</p>
+<p>周围的世界便会豁然开朗延向明天</p>
+</div>
+]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《radiant melody》歌词翻译</title>
     <url>/2023/04/23/radiant_melody/</url>
     <content><![CDATA[<p><strong>radiant melody</strong> - TV动画《TARI TARI》插曲</p>
@@ -3006,44 +3044,6 @@
 <p>一直在梦里看到的　像平常的女孩一样<br>我也与你相恋　成为一个女孩</p>
 <p>为了今天一定要　朝你说出“可爱吧”<br>脱下平时的衣服　试着穿上了裙子<br>手牵着手前行　不要看着我害羞的脸<br>但是今天有把喜欢　与最喜欢告诉你了呢</p>
 </div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《Hazy》歌词翻译</title>
-    <url>/2023/05/01/hazy/</url>
-    <content><![CDATA[<p><strong>Hazy</strong> - TV动画《花开伊吕波》片尾曲</p>
-<p>作词：<span lang="ja">坂井季乃</span>；作曲：<span lang="ja">黒須克彦</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>夢を見る少し手前で<br>置いてきたものはなんだっけ<br>忘れてしまいたくはないけど<br>時折ふっと記憶の隅に浮かぶのは<br>ふんわりぼやけたセピア色<br>目の前を塞ぐ日々の向こう少しずつ遠く</p>
-<p>大体なんで息を切らして<br>走ってるんだろう</p>
-<p>スピードを上げてゆくほど立ち止まることが怖くて<br>早くなる鼓動に触れココに居ると確かめた<br>ココロの奥の小さな声に耳を澄ましたら<br>包み込む世界が晴れ広がるよ明日へ</p>
-<p>近付いて少し離れて<br>出会った人に手を振って<br>繰り返しみたいな道の上で素直になって<br>笑い顔も泣き顔も<br>重なればほらキレイでしょう<br>変わらないものはいつの日も奥の方にある</p>
-<p>泣いた頬に陽が射して<br>だんだん愛を知ってくの？<br>曖昧だった遠い遠い<br>未来に目を凝らそう</p>
-<p>風が頬をかすめて耳元でウタを歌えば<br>高く鳴る鼓動につれ空に近付けるから<br>軽やかに弾むような足取りに運ばれて<br>まだだれも見たことない物語へ続く</p>
-<p>スピードを上げてゆくほど立ち止まることが怖くて<br>早くなる鼓動に触れココに居ると確かめた<br>ココロの奥の小さな声に耳を澄ましたら<br>包み込む世界が晴れ広がるよ明日へ</p>
-<p>包み込む世界が晴れ広がるよ明日へ</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>在陷入美妙的幻梦之前<br>刚刚放下的东西是什么呢<br>虽然还依旧不想去忘记<br>偶尔倏然浮现在记忆角落的是<br>模糊不清一片朦胧的深棕色<br>时光流逝将视线阻挡逐渐远去</p>
-<p>到底为何要这样气喘吁吁<br>一直奔跑着呢</p>
-<p>越是加快自己的速度就越是害怕停下来<br>感受这渐渐加速的心跳确定自己就存在于此<br>若是侧耳倾听内心深处微小的声音<br>周围的世界便会豁然开朗延向明天</p>
-<p>走近一些又稍稍远离<br>朝着相遇的人挥手问好<br>在看似反复的路上逐渐坦率<br>不管是笑容还是哭脸<br>交叠在一起不也很美丽吗<br>永恒不变的东西终会留在心底</p>
-<p>阳光照在泪干的脸上<br>是否就渐渐懂得了爱？<br>把目光投向那模糊<br>而又遥远的未来吧</p>
-<p>清风拂过脸颊耳边歌声传来时<br>伴随激动的心跳就能靠近天空<br>脚步也随之踏起高涨起来<br>朝着崭新的故事迈向前方</p>
-<p>越是加快自己的速度就越是害怕停下来<br>感受这渐渐加速的心跳确定自己就存在于此<br>若是侧耳倾听内心深处微小的声音<br>周围的世界便会豁然开朗延向明天</p>
-<p>周围的世界便会豁然开朗延向明天</p>
-</div>
-]]></content>
       <tags>
         <tag>歌词翻译</tag>
       </tags>
@@ -3211,6 +3211,72 @@
       </tags>
   </entry>
   <entry>
+    <title>《My Dear》歌词翻译</title>
+    <url>/2023/06/30/my_dear/</url>
+    <content><![CDATA[<p><strong>My Dear</strong> - 游戏《管乐恋曲》片尾曲</p>
+<p>作词：<span lang="ja">中山♥マミ</span>；作曲：Famishin</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>淡い桃色の花びらが　舞い散る頃<br>陽だまりと共に微笑む　あなたと巡り逢った<br>過ごす日々たちと　移りゆく季節の中<br>刻んできた時は全てが　宝物</p>
+<p>悩みもがいた涙も　喜び溢れた涙<br>いつも隣で見守られてた<br>同じことを感じてた　一緒に歩いてきたことも<br>かけがえのない想い出</p>
+<p>二人で描いた　美しいこのメロディ<br>この先もずっと続きを　奏でていけたらいいな</p>
+<p>あなたがいたから　毎日が輝いてた<br>誰かを愛する気持ちにも　会えたから<br>叶えたい夢と希望　胸に強く抱けたのも<br>いつも一人ではなかったから</p>
+<p>移り変わった季節の　それぞれに詰まった軌跡は<br>かけがえのない想い出</p>
+<p>そうして生まれた　美しいこのメロディ<br>この先も永遠に続きを　奏でていこうね　my dear</p>
+<p>二人で描いた　美しいこのメロディ<br>この先もずっと続きを　奏でていきたいの<br>照れくさいけれど　伝えたいことがあるの<br>私に出逢ってくれたこと　心からありがとう</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>当片片粉红的花瓣　轻轻飘落之时<br>我同微笑着的你相遇　如同暖阳照进心房<br>一起度过的每天　与不断更迭的季节<br>刻画出的时光全都是　珍贵之物</p>
+<p>是因苦闷焦急落泪　又或因欢喜而泣<br>你总是在一旁守护着我<br>一同感受到的事物　一齐迈步走过的路途<br>都是无可替代的回忆</p>
+<p>两个人共同描绘　这美丽动听的旋律<br>只希望从今往后得以　时时奏响余音缭绕</p>
+<p>有你陪在我的身边　每天都闪闪发光<br>托付出名为爱的感情　只为与你邂逅<br>心里得以怀揣着　要实现的梦想与希望<br>正因为我并不是孤身一人</p>
+<p>不断变换的季节里　两个人留下的足迹<br>就是彼此独特的回忆</p>
+<p>如此诞生而出的　这美妙迷人的旋律<br>就让我们一起永远　演奏下去吧　亲爱之人</p>
+<p>两个人共同描绘　这美丽动听的旋律<br>只希望从今往后得以　时时奏响余音缭绕<br>虽然有些感到羞涩　也有想传达出的话语<br>发自内心真诚感谢你　最终能够与我相遇</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《true drop》歌词翻译</title>
+    <url>/2023/07/22/true_drop/</url>
+    <content><![CDATA[<p><strong>true drop</strong> - 游戏《E×E》片尾曲</p>
+<p>作词：<span lang="ja">霜月はるか</span>；作曲：Famishin</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>吹き抜ける風　街を洗い流して<br>新しい日を　優しく包む<br>遠すぎる夢　諦めて背を向けた<br>過ぎた日の私まで　届けたい<br>固く閉ざした<br>心に、沁みてく</p>
+<p>ほら少し　軽くなる　歩き出す一歩は<br>いつだって　貴方の側にある<br>瞳から　零れ落つ　<ruby>真実<rt>ほんとう</rt></ruby>のカケラを<br>見つけたら　拾って抱きとめてね</p>
+<p>掬った雫　大事に守るその手<br>いずれ儚く消えてしまうのに？<br>じわり広かり<br>世界に、沁みてく</p>
+<p>差し込んだ　ヒカリたち　はじいてきらめいた<br>輝きは　貴方と共にある<br>まっすぐな　言葉から　伝わるその想い<br>気付いたの　信じてみるよ　きっと</p>
+<p>迷わない　この場所で　私生きてゆく<br><ruby>真実<rt>ほんとう</rt></ruby>は　貴方がくれたから<br>ほら少し　軽くなる　歩き出す一歩は<br>いつだって　貴方の側にある<br>瞳から　零れ落つ　<ruby>真実<rt>ほんとう</rt></ruby>のカケラを<br>見つけたら　拾って抱きとめてね</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>街上疾风吹过　仿佛被冲洗一新<br>温柔地怀抱着　全新的一天<br>将久远的梦想　尽数抛在身后<br>只想把它们留给　过去的自己<br>在紧紧封闭的<br>心中，深深铭刻</p>
+<p>你看只要　这样轻快地　迈出一步<br>我就能一直　待在你的身边<br>从眼中　潸然落下的　真实的碎片<br>若是找到了　就捡拾收藏起来吧</p>
+<p>将水滴捧起　悉心呵护的那双手<br>终究也会如虚幻一般消失不见吗？<br>在缓缓延伸的<br>世界，默默洇染</p>
+<p>射入我心灵的光芒　闪亮无比灿烂夺目<br>这份光辉　就与你同在<br>从直率的　话语中　传达出的这份感情<br>已经收到了　并且一定会　深信不疑</p>
+<p>毫不迷惘　我会在这里　生活下去<br>因为真实　是你所给予我的<br>你看只要　这样轻快地　迈出一步<br>我就能一直　待在你的身边<br>从眼中　潸然落下的　真实的碎片<br>若是找到了　就捡拾收藏起来吧</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>内裁圆角+双线边框的gradient实现</title>
     <url>/2023/06/16/gradient_based_inner_crop_radius_and_double_border/</url>
     <content><![CDATA[<p>使用CSS <code>background</code>里的gradient系列函数实现内裁圆角+双线边框。</p>
@@ -3279,67 +3345,37 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
-    <title>《My Dear》歌词翻译</title>
-    <url>/2023/06/30/my_dear/</url>
-    <content><![CDATA[<p><strong>My Dear</strong> - 游戏《管乐恋曲》片尾曲</p>
-<p>作词：<span lang="ja">中山♥マミ</span>；作曲：Famishin</p>
+    <title>《Blue Canvas》歌词翻译</title>
+    <url>/2023/08/04/blue_canvas/</url>
+    <content><![CDATA[<p><strong>Blue Canvas</strong> - <span lang="ja">いるかアイス</span>投稿的VOCALOID日文原创歌曲</p>
+<p>作词：<span lang="ja">いるかアイス</span>；作曲：<span lang="ja">いるかアイス</span></p>
 <hr>
 <p><strong>歌词</strong></p>
 <p><em>注：歌词著作权归原作者所有。</em></p>
 <div lang="ja" style="white-space: pre;">
 
-<p>淡い桃色の花びらが　舞い散る頃<br>陽だまりと共に微笑む　あなたと巡り逢った<br>過ごす日々たちと　移りゆく季節の中<br>刻んできた時は全てが　宝物</p>
-<p>悩みもがいた涙も　喜び溢れた涙<br>いつも隣で見守られてた<br>同じことを感じてた　一緒に歩いてきたことも<br>かけがえのない想い出</p>
-<p>二人で描いた　美しいこのメロディ<br>この先もずっと続きを　奏でていけたらいいな</p>
-<p>あなたがいたから　毎日が輝いてた<br>誰かを愛する気持ちにも　会えたから<br>叶えたい夢と希望　胸に強く抱けたのも<br>いつも一人ではなかったから</p>
-<p>移り変わった季節の　それぞれに詰まった軌跡は<br>かけがえのない想い出</p>
-<p>そうして生まれた　美しいこのメロディ<br>この先も永遠に続きを　奏でていこうね　my dear</p>
-<p>二人で描いた　美しいこのメロディ<br>この先もずっと続きを　奏でていきたいの<br>照れくさいけれど　伝えたいことがあるの<br>私に出逢ってくれたこと　心からありがとう</p>
+<p>君と見てたいつかの映画で　未だ見たこと無い空と海が<br>どうしようもない青さに満ちて　こんな世界で歌いたいねと<br>笑う君はどこか似ていたね　その物語のヒロインと<br>何千年前のお話も　染まる時を待っている</p>
+<p>願うから魔法がかかるよ　僕らの絵筆が彩る<br>感じた未来　今を塗り替え　零れ落ちてく</p>
+<p>もっと君らしく空を描けるから　君らしく海も渡れるから<br>注ぐ太陽の眩しささえ　光る飛沫を跳ね返す<br>夢に訪れたあの景色を　遍く予感を超える色で<br>誰も塗り直すことはできない　君だけの青いキャンバス</p>
+<p>暮れる時の夕焼けの色も　眠る星空の夜の色も<br>何もなかった白いキャンバスに　描いてみれば美しいのでしょう<br>でも君は「あの青じゃないと」と　飛び込んだ淡い夏空間<br>御伽の世界に迷い込めば　そのまま時を忘れて</p>
+<p>「ねえ見えたよ」　隣で君が言う　眩しくてキラキラ光る<br>虹を渡れば　始まっていた　僕らの世界</p>
+<p>透き通る色の中　手をとって落ちていく<br>溶けそうな感覚も　想像を越えていた<br>君は歌い　水面は弧を描き作られる<br>表せない感情がただ涙となった</p>
+<p>もっと君らしく空を描けるから　君らしく海も渡れるから<br>注ぐ太陽の眩しささえ　光る飛沫を跳ね返す<br>夢に訪れたあの景色を　遍く予感を超える色で<br>誰も塗り直すことはできない　君だけの青いキャンバス</p>
 </div>
 
 <hr>
 <p><strong>翻译</strong></p>
 <div style="white-space: pre;">
 
-<p>当片片粉红的花瓣　轻轻飘落之时<br>我同微笑着的你相遇　如同暖阳照进心房<br>一起度过的每天　与不断更迭的季节<br>刻画出的时光全都是　珍贵之物</p>
-<p>是因苦闷焦急落泪　又或因欢喜而泣<br>你总是在一旁守护着我<br>一同感受到的事物　一齐迈步走过的路途<br>都是无可替代的回忆</p>
-<p>两个人共同描绘　这美丽动听的旋律<br>只希望从今往后得以　时时奏响余音缭绕</p>
-<p>有你陪在我的身边　每天都闪闪发光<br>托付出名为爱的感情　只为与你邂逅<br>心里得以怀揣着　要实现的梦想与希望<br>正因为我并不是孤身一人</p>
-<p>不断变换的季节里　两个人留下的足迹<br>就是彼此独特的回忆</p>
-<p>如此诞生而出的　这美妙迷人的旋律<br>就让我们一起永远　演奏下去吧　亲爱之人</p>
-<p>两个人共同描绘　这美丽动听的旋律<br>只希望从今往后得以　时时奏响余音缭绕<br>虽然有些感到羞涩　也有想传达出的话语<br>发自内心真诚感谢你　最终能够与我相遇</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《true drop》歌词翻译</title>
-    <url>/2023/07/22/true_drop/</url>
-    <content><![CDATA[<p><strong>true drop</strong> - 游戏《E×E》片尾曲</p>
-<p>作词：<span lang="ja">霜月はるか</span>；作曲：Famishin</p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>吹き抜ける風　街を洗い流して<br>新しい日を　優しく包む<br>遠すぎる夢　諦めて背を向けた<br>過ぎた日の私まで　届けたい<br>固く閉ざした<br>心に、沁みてく</p>
-<p>ほら少し　軽くなる　歩き出す一歩は<br>いつだって　貴方の側にある<br>瞳から　零れ落つ　<ruby>真実<rt>ほんとう</rt></ruby>のカケラを<br>見つけたら　拾って抱きとめてね</p>
-<p>掬った雫　大事に守るその手<br>いずれ儚く消えてしまうのに？<br>じわり広かり<br>世界に、沁みてく</p>
-<p>差し込んだ　ヒカリたち　はじいてきらめいた<br>輝きは　貴方と共にある<br>まっすぐな　言葉から　伝わるその想い<br>気付いたの　信じてみるよ　きっと</p>
-<p>迷わない　この場所で　私生きてゆく<br><ruby>真実<rt>ほんとう</rt></ruby>は　貴方がくれたから<br>ほら少し　軽くなる　歩き出す一歩は<br>いつだって　貴方の側にある<br>瞳から　零れ落つ　<ruby>真実<rt>ほんとう</rt></ruby>のカケラを<br>見つけたら　拾って抱きとめてね</p>
+<p>与你一同看过的电影里　未曾见过的天空与大海<br>想要在一片蓝色的世界中　就这样无可救药地歌唱<br>笑着的你看上去有些像　那篇故事里的女主人公<br>数千年前的传说也在　等待着洇染之时的到来</p>
+<p>许下心愿魔法施展而出　予我们的画笔以色彩<br>感受到的未来　把当下重新涂抹　而飘然散落</p>
+<p>我会更加如你一般描绘天空　如你一般渡过大海<br>就连太阳洒下的光辉　也会弹出闪耀的飞沫<br>将梦中见到的那景色　用超出预感的颜色画出<br>任何人都无法再次着色　只属于你的蓝色画布</p>
+<p>那日暮时分晚霞的颜色　那星空安眠夜晚的颜色<br>在空无一物的纯白画布上　描画出来一定会很美丽吧<br>但你说着「若不是那个蓝色」　跳进了淡淡的夏之空间<br>若是迷失在幻想的世界　就会忘记时间的流逝</p>
+<p>「喂看见了哦」　你在一旁说道　耀眼无比闪闪发光<br>越过彩虹　我们的世界　便会由此开始</p>
+<p>在透明的颜色中　手牵着手向下坠落<br>像要融化的感觉　超越了我们的想象<br>你放声歌唱　水面勾勒出一道弧线<br>无以言表的感情最终化作泪珠</p>
+<p>我会更加如你一般描绘天空　如你一般渡过大海<br>就连太阳洒下的光辉　也会弹出闪耀的飞沫<br>将梦中见到的那景色　用超出预感的颜色画出<br>任何人都无法再次着色　只属于你的蓝色画布</p>
 </div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>街上疾风吹过　仿佛被冲洗一新<br>温柔地怀抱着　全新的一天<br>将久远的梦想　尽数抛在身后<br>只想把它们留给　过去的自己<br>在紧紧封闭的<br>心中，深深铭刻</p>
-<p>你看只要　这样轻快地　迈出一步<br>我就能一直　待在你的身边<br>从眼中　潸然落下的　真实的碎片<br>若是找到了　就捡拾收藏起来吧</p>
-<p>将水滴捧起　悉心呵护的那双手<br>终究也会如虚幻一般消失不见吗？<br>在缓缓延伸的<br>世界，默默洇染</p>
-<p>射入我心灵的光芒　闪亮无比灿烂夺目<br>这份光辉　就与你同在<br>从直率的　话语中　传达出的这份感情<br>已经收到了　并且一定会　深信不疑</p>
-<p>毫不迷惘　我会在这里　生活下去<br>因为真实　是你所给予我的<br>你看只要　这样轻快地　迈出一步<br>我就能一直　待在你的身边<br>从眼中　潸然落下的　真实的碎片<br>若是找到了　就捡拾收藏起来吧</p>
-</div>]]></content>
+]]></content>
       <tags>
         <tag>歌词翻译</tag>
       </tags>
@@ -3372,6 +3408,48 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
 <p>蓝色　黄色　紫色　红色　叹息的声音悄悄传出<br>心里有一件　想要确认的　事情<br>一　二　三　四　五　六　七　八　喜悦的心情渐渐显露<br>干涸的喉咙流淌出　令人怀念的旋律<br>一次次　一次次　轻轻地哼唱</p>
 <p>随风飘舞着的　闪闪发光的棱镜<br>就这样不停变换一定能<br>朝梦中所见之处　一步一步靠近<br>尽管心生迷惘也要试着　缓缓将手伸出</p>
 <p>未曾见过的天空　在那之后　也定有　花开之时</p>
+</div>
+]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《NOiSY MONSTER》歌词翻译</title>
+    <url>/2023/08/16/noisy_monster/</url>
+    <content><![CDATA[<p><strong>NOiSY MONSTER</strong> - TV动画《SELECTION PROJECT》插曲</p>
+<p>作词：<span lang="ja">牡丹</span>；作曲：<span lang="ja">藤井健太郎</span></p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>衝動のままに掻き鳴らせ<br>あれもこれも欲しくてしょうがない<br>教科書通りの綺麗事じゃ<br>満足できないわ　まだ食べ足りない<br>＜EAT MORE PLEASE＞</p>
+<p>誰にでも言うでしょう<br>“期待してる”＜IS THAT TRUE？＞<br>前へ倣えで　量産型良いこちゃん<br>はみ出した私　見えてるかな？<br>不協和音＜ALL CLASH！＞<br>何もかも　非常事態</p>
+<p>Rising noise, I want to prove<br>押し潰されそうな<br>理想がせめぎ合う攻防戦<br>吠えてみたくて　騒めき始める<br>はね返る心臓　響く合図(チャイム)<br>Rising noise, I want to prove<br>模範回答は捨てて<br>本能のまま求めてよ<br>邪魔するものは一片残さず<br>喰らい尽くしてやるから</p>
+<p>小さな机　狭い世界<br>ここにいるだけじゃ満たされない<br>オール５の数字があれば<br>どこにでもいける　ひどい冗談ね<br>＜NEED MORE PLEASE＞</p>
+<p>大事な時はいつだって<br>“目隠し”＜IT’S SO FOOL＞<br>同じ色の制服だって囲えない<br>背負ってるのは私の人生<br>右脳左脳＜ALL DOWN！＞<br>要求は　自由だけ</p>
+<p>Changing noise, and Make a way<br>白黒つけてよ<br>噛み付かれる前に噛み切ってやれ<br>所詮はコップの中の嵐なら<br>嘘も罠も笑い飛ばせばいい<br>Changing noise, and Make a way<br>歪めば歪んだ分だけ<br>耳が痛い……ハウリング<br>強がるフリが隠せないのなら<br>心ごと曝け出して<br>弱さも飼い慣らせば　REVITALIZE</p>
+<p>生まれ落ちたこの場所さえ<br>逃げられない日常さえ<br>抱き締めたら　向き合って今<br>爆発的にさ＜INCITE＞<br>弱肉強食＜KNOCK OUT＞<br>生き残るため</p>
+<p>Rising noise, I want to prove<br>押し潰されそうな<br>理想がせめぎ合う攻防戦<br>吠えてみたくて　騒めき始める<br>はね返る心臓　響く合図(チャイム)<br>Rising noise, I want to prove<br>模範回答は捨てて<br>本能のまま求めてよ<br>邪魔するものは一片残さず<br>喰らい尽くしてやるから</p>
+<p>IT’S OVER－－<br>全て　飲み込んでみせるよ<br>BREAKING THE HABIT</p>
+<p>お腹いっぱい　嗚呼、ご馳走様</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>随着这份冲动恣意弹响<br>那个和这个都想得到真是没办法<br>教科书式的漂亮事<br>根本没法满足　还远远没有吃够<br>＜再多吃些吧＞</p>
+<p>对谁都会这么说吧<br>“我很期待喔”＜是真的吗？＞<br>向前看齐　量产而出的好孩子<br>又是否看到了　特立独行的我呢？<br>不协和音＜尽数冲突！＞<br>完全就是　紧急状态</p>
+<p>渐强的噪声，我只欲证明<br>快要被压成齑粉<br>理想间互相竞争的攻防战<br>渴望呐喊咆哮　喧嚣随之而起<br>跳动的心脏　把信号鸣响<br>渐强的噪声，我只欲证明<br>标准答案扔在一边<br>仅凭着本能不停求索<br>一切妨碍之物皆片甲不留<br>你们只会被吞噬殆尽</p>
+<p>一张小方桌　一片小世界<br>只是待在此处是没法满足的<br>如果得到的数字全是５点<br>便能去往任何地方　这玩笑真过分<br>＜还要再来点＞</p>
+<p>重要的时刻总是在<br>“捉迷藏”＜真是愚蠢＞<br>穿着同样的制服也找不到<br>背上担着的是我的人生<br>右脑左脑＜全部停转！＞<br>诉求　只有自由</p>
+<p>变换着噪声，找到条出路<br>分清是非黑白<br>在被咬住之前把对手咬断<br>若终究只是一场小风波<br>谎言抑或陷阱都一笑而过<br>变换着噪声，找到条出路<br>歪斜的只是扭曲的部分<br>耳朵刺痛……正因这鸣噪<br>若无法掩饰这份虚伪的强大<br>那就敞开这心扉吧<br>将这份软弱驯服便能　重获新生</p>
+<p>把这诞生于此的地方<br>把这无法逃离的日常<br>紧紧拥入怀中　便能直面当下<br>喷薄而出＜鼓动＞<br>弱肉强食＜淘汰＞<br>只为保全性命</p>
+<p>渐强的噪声，我只欲证明<br>快要被压成齑粉<br>理想间互相竞争的攻防战<br>渴望呐喊咆哮　喧嚣随之而起<br>跳动的心脏　把信号鸣响<br>渐强的噪声，我只欲证明<br>标准答案扔在一边<br>仅凭着本能不停求索<br>一切妨碍之物皆片甲不留<br>你们只会被吞噬殆尽</p>
+<p>都结束了－－<br>全部都　就此吞食干净<br>打破这习惯</p>
+<p>吃饱喝足　啊，多谢款待</p>
 </div>
 ]]></content>
       <tags>
@@ -3477,6 +3555,94 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
+    <title>拜田希实花</title>
+    <url>/2024/01/11/haida_kimika/</url>
+    <content><![CDATA[<p><strong>拜田希实花</strong> 是fairys发行游戏 <strong>《现在就想告诉哥哥，我是妹妹！》</strong> 及其衍生作品的登场角色，女主角之一。</p>
+
+  <div class="note-large blue">
+    <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
+      <p>基本资料</p>
+
+    </div>
+    <div class="notel-content">
+      <p>身高：161cm<br>体重：46kg<br>三围：B:80 W:59 H:81<br>年龄：16岁</p>
+
+    </div>
+  </div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/img/kimika.png"
+                      alt="拜田希实花"
+                ></p>
+<p><span style="font-size:small;color:gray;">▲ 游戏CG。原作者保留权利，仅以介绍为目的引用。</span></p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><span style="font-size:larger;">为摆脱土气形象而努力着的，<br>腼腆的班长</span></p>
+<p>进入朝冈学园，成为新一届的高一学生，希实花在陆斗等人的班级里担任班长一职。她成绩十分优秀，在入学仪式上也被选为新生代表。性格畏畏缩缩并且很难有自己的主见，在小学和中学时期有被他人在背地里称作“土气花”的事情。随着升学，希实花下定决心改变自己，做的第一件事就是将带框眼镜换成了隐形眼镜。可是她腼腆的性格却几乎没有变化，付出的努力似乎也还是白忙一场。她与陆斗在小学时做过1年的同班同学。希实花还很清楚地记得陆斗，对方却不记得她了。希实花一方面对这种情况感到寂寞，另一方面也不太希望陆斗回忆起过去，她因此而苦恼着。</p>
+<details class="green" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>日文原文，点击展开 </summary>
+              <div class='content'>
+              <div lang="ja"><span style="font-size:larger;">地味キャラを捨て去ろうとがんばる、<br>内気な委員長</span><p>朝岡学園の新一年生で、陸斗たちのクラスの委員長を務めることになります。とても成績優秀で、入学式でも新入生総代に選ばれました。引っ込み思案でなかなか自己主張ができず、小中学生の頃は陰で「地味花」と呼ばれていた過去があります。進学にともなって自分を変えようと決意し、まずメガネをコンタクトにしました。でも内気なところは少しも変わっておらず、努力もいまいち空回りぎみです。陸斗とは小学生の頃に１年だけ同じクラスだったことがあります。希実花のほうは陸斗をはっきり覚えていましたが、陸斗は希実花のことを覚えていませんでした。そのことを寂しく感じる一方、陸斗に昔のことを思い出されるのもあまり歓迎できず、悩んでいるようです。</p></div>
+              </div>
+            </details>
+
+<h2 id="短篇故事：希实花的心绪"><a href="#短篇故事：希实花的心绪" class="headerlink" title="短篇故事：希实花的心绪"></a>短篇故事：希实花的心绪</h2><p><span style="font-size:larger;">重逢，<br>但只是自说自话</span></p>
+<p>疼痛。<br>十分疼痛。<br>第一次戴上隐形眼镜真的很痛。<br>今天是新生活的开始……试着鼓起干劲，但……<br>“呜……”<br>果然还是很痛。<br>电车开起来之后变得更加疼痛。<br>好不容易被朝冈学园录取了，我却完全笑不出来。<br>已经把隐形眼镜摘下来了，带框眼镜在……<br>“唔！？”<br>对面的空座位有人来了，和对方撞上了膝盖。<br>一时间，我与他四目相对。<br>是差不多年龄的，男孩子……<br>旁边，也是年龄一般大的女孩。<br>大概，是和我一样来看朝冈的录取结果公示的吧。<br>能看出两个人明朗的表情。一定是顺利通过了吧。<br>也就是说，开春之后也可能会成为同班同学……<br>“…………”<br>果然，还是不戴带框眼镜比较好。<br>但是，那样的话，眼睛就会这样疼痛。<br>疼痛，比刚才更加剧烈了。<br>“啊……”<br>眼泪……可能流出来了。<br>不对，不是“可能”，我已经泪如雨下了。</p>
+<details class="green" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>日文原文，点击展开 </summary>
+              <div class='content'>
+              <div lang="ja"><span style="font-size:larger;">再会、<br>でも一方通行</span><p>痛い。<br>とても痛い。<br>はじめて付けたコンタクトがとっても痛い。<br>今日から新しい人生のはじまり……なんて気合いを入れてみたけど……<br>「ぅっ……」<br>痛いものは痛い。<br>電車が走り出してからはさらに痛い。<br>せっかく朝岡学園に合格したのに、笑顔のひとつも作れない。<br>もうコンタクトははずして、メガネに……<br>「っ！？」<br>向かいの空席に人が来て、コツンと膝があたった。<br>瞬間、ちらっと視線が合う。<br>同い年くらいの、男の人……<br>隣は、やっぱり同い年くらいの女の子。<br>たぶん、私と同じく朝岡の合格発表を見に来た人たち。<br>ふたりの表情は明るい感じ。きっと合格したんだろう。<br>ということは、春からクラスメイトになる可能性も……<br>「…………」<br>やっぱり、メガネはやめておいた方がいいかも。<br>でも、そうなると、目は痛いまま。<br>さっきより、痛みが増してきている感じ。<br>「ぁ……」<br>涙……出てきたかも。<br>ううん、『かも』じゃなくて、出てる。</p></div>
+              </div>
+            </details>
+
+<h2 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h2><h3 id="共通线"><a href="#共通线" class="headerlink" title="共通线"></a>共通线</h3><details class="yellow" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开 </summary>
+              <div class='content'>
+              <p><strong>升学考试结果公示</strong></p><p>陆斗与青梅竹马奉莉一同在朝冈学园确认考试通过顺利升学后乘电车返程。</p><p>电车座位采用的是四人两两对坐的形式，空间略显狭小。陆斗和奉莉并排坐下，二人聊天时陆斗膝盖不小心碰到了对坐的女生，此时二人注意到女生在轻声哭泣，陆斗以为是自己碰到了她把她弄哭了，又推测应该是因为她也报考了朝冈但是不幸落榜了。陆斗尝试搭话安慰，被奉莉偷偷劝阻。女生注意到陆斗，不由得发出吃惊的声音，随即向陆斗道歉。陆斗迟疑之时电车到站，将随身的手帕递给了女生后急忙下车。</p><p>电车即将到达终点站。女生独自懊恼着自己依旧毫无改变，什么也没能说出口，同时注意到手帕上绣着“三谷”字样，确定了给她手帕的人是以前就认识的三谷同学，对方却没能认出她来。女生认为忘记了也好，但心里也感到痛苦。</p><p><strong>新生入学准备说明会</strong></p><p>新生入学准备说明会分为新生入学仪式和新生分组参观环节。入学仪式结束后，陆斗再次遇见了在电车上碰到的女生，并了解了女生在电车上哭泣的原因。参观时女生说自己名叫拜田希实花，陆斗感觉到她在偷偷打量着自己。</p><p>回家途中，希实花又想到陆斗不记得自己，这正是自己所期望的，自己正是出于这个目的才选择了不会有人认识自己的朝冈。但是自己又似乎因为陆斗没能认出自己而寂寞，不知道如何是好。</p><p><strong>开学典礼</strong></p><p>开学典礼上，主持人请新生代表致辞时，希实花不自然地走上台开始致辞。但因为过于紧张，致辞在途中卡住了，陆斗朝希实花挥了挥手，希实花勉强完成了致辞。</p><p>开学典礼结束后，班主任夏奏老师指名希实花担任班长一职。希实花虽然惊讶，但没有拒绝。夏奏老师继续进行副班长的竞选，陆斗举手提出要成为副班长。之后奉莉、步梦和章介主动担任活动实行委员，以辅助两位班长筹划包括樱花祭在内的各种校园活动。之后当天没有到场的茂森同学也暂被举荐为活动实行委员。</p><p>回家途中，众人安慰鼓励了希实花，希实花认为自己给大家添了麻烦，陆斗则解释道大家都是自愿成为班委的，劝她不要在意。到了陆斗等人需要换乘的车站，希实花表示自己想换条路线回家，也同众人一起换乘。陆斗直言能增加在一起的时间很高兴，希实花听完脸红起来。</p><p><strong>正式开学后</strong></p><p>第二天放学后，众人前往陆斗的父亲直真的甜品店举办茶会。到了甜品店门前，章介好奇店名“een×vijf”怎么读，希实花在谈论中说出店名是荷兰语数字1和5的意思，陆斗等人称赞希实花，希实花却流下眼泪，然后连忙顺着陆斗的话解释是隐形眼镜的原因。餐品上好后，众人谈到彼此称呼的问题。聊到希实花时，希实花稍显强硬地希望大家称呼她为“拜田同学”。归家途中，希实花独自回想起今天发生的事情，为能够到een×vijf聚会而高兴，但想到陆斗不记得以前的事情，眼泪又不禁流了出来。</p><p>到了一天中的最后一节课班会，夏奏老师与班上的同学们商议这周末要进行的合宿集训的相关事项。之后谈到下周末要进行的慈善义卖节，夏奏老师请希实花和陆斗两位班长上台主持，让大家讨论打算经营什么模拟店。希实花一开场就因为紧张咬到了舌头，陆斗便提出代替她主持，希实花则负责记录工作。放学后，班委们和夏奏老师留在班里继续开会。陆斗表示继续让自己主持，其他人则希望希实花在这种场合适应主持工作，希实花便开始主持。最后众人决定以女仆为主题经营模拟店。</p>
+              </div>
+            </details>
+
+<h3 id="个人线"><a href="#个人线" class="headerlink" title="个人线"></a>个人线</h3><details class="yellow" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开 </summary>
+              <div class='content'>
+              <p><strong>球技大会</strong></p><p>合宿第一天是樱花祭的球技大会，大家前往各自的会场参加比赛。在与真央配合拿下沙滩排球半决赛后，休息时陆斗前往希实花和步梦所在的乒乓球比赛。发现陆斗前来观看比赛后，希实花乱了阵脚，输掉了比赛。之后三人一同回到沙滩排球赛场，在陆斗与真央获得沙滩排球冠军后，希实花与陆斗交谈时表现出对真央的钦佩和憧憬。</p><p>一天的比赛结束后，大家回到教室等待班级排名结果。章介分析后认为会与第三名有微弱差距，居于第四。希实花自责地表示如果自己拿下了比赛，排名就会升到第三名了，众人给以安慰。夏奏老师前来宣布班级位居第四，希实花感到很失落。傍晚，大家在天台吃自助餐，希实花独自一人默默坐在一旁，陆斗上前关心，同时下定决心要在明天的洗场任务中努力。</p><p>晚上，陆斗从男生宿舍的枕头大战中离开，在走廊上散步，遇见了因为其他女生在聊恋爱话题而逃出来的希实花。因为没有戴隐形眼镜，希实花有些踉跄。考虑到一时半会回不了宿舍，二人登上天台。陆斗感叹夜景美丽的同时感觉有些冷，希实花将身上的毛毯递给陆斗，自己却打起喷嚏，二人决定共用毛毯。陆斗聊到天上的星星，希实花便滔滔不绝地说了很多星星相关的知识，陆斗大吃一惊。希实花解释自己是通过看书学到的这些知识，自己很喜欢看书，之后向陆斗推荐了矶野绫子写的畅销小说《天使之泪》，并提出将书借给陆斗看，陆斗因为与希实花立下约定而暗自开心。回到房间后，希实花想着刚才的事情，心里既害羞又高兴。</p><p><strong>洗场任务</strong></p><p>第二天，洗场任务顺利进行一段时间后，众人在一项任务上就人员安排方案产生分歧，做出决定的压力来到希实花身上。但最终希实花没能给出判断，章介表达歉意后以负责人身份结束了决议。傍晚所有任务结束后，希实花因自责而处在消沉之中。夏奏老师进班宣布排名，同学们大多接受了结果，但希实花仍难以释怀。</p><p>晚上，同学们在沙滩上烧烤。夏奏老师赶来通知需要两位同学守着一旁的篝火，陆斗便邀请希实花一起。其间，希实花向陆斗坦言自己曾下定决心要做出改变，但只是改变了外表，自己还是同以前一样笨拙，给周围的人带来麻烦。陆斗说正因为大家是朋友，所以不会过于在意这些，也希望希实花不要一直把这些事挂在心上，继续试着改变就好。希实花哭了一场后冷静下来，说自己虽然决定做出改变却还没有明确的目标，陆斗提议希实花作为班长，可以为带领班级获得樱花祭综合冠军努力。之后，希实花将班委们召集到班里，做出拿下综合冠军的宣言，众人也切实感受到了希实花的决心。</p><p>合宿结束后，班委们一同前往陆斗的父亲直真的甜品店。希实花想自己来同陆斗的父亲商量模拟店事宜，经过简单介绍后，希实花提出在慈善义卖节再现直真店里甜品的味道。直真思索后提议制作泡芙，希实花似乎有些慌乱，看到陆斗反应平淡后又有些失望。商讨过后确定增加的甜品为草莓奶油泡芙，希实花表示想自己一个人也能制作出来，众人决定第二天到陆斗家中练习。回家途中，希实花回忆起小时候陆斗安慰她的场景和当时吃的泡芙，明白了自己还是希望陆斗回想起过去的经历。</p><p><strong>慈善义卖节前的准备与当天</strong></p><p>周二是合宿集训调休，下午众人在陆斗家集合。希实花开始练习制作泡芙，众人品尝后赞不绝口，希实花有些感动。傍晚众人同陆斗分别，希实花趁机将之前提到的小说《天使之泪》借给了陆斗。之后两天希实花在陆斗家练习制作果酱。</p><p>慈善义卖节前一天，陆斗回到家后听闻由于房地产商的问题，搬家不能如期进行。来到甜品店后，陆斗还在烦恼着刚才的事情，希实花到达后二人如期开始制作泡芙。但因为陆斗和面时的失误，烤出的酥皮没能鼓起来。希实花先前就察觉到陆斗的异样，便希望陆斗能将发生的事情说给她听。陆斗倾诉后二人回到制作中，希实花提议减少一次制作的数量以避免进一步损失，只是会花些时间。二人最后决定在甜品店留宿，专心制作泡芙。</p><p>深夜，希实花的眼睛因为戴久了隐形眼镜有些不舒服，陆斗建议换成带框眼镜。希实花犹豫后戴上了带框眼镜，陆斗看着希实花，终于想起小学三年级时与希实花是同班同学，希实花也因此高兴得流下眼泪。</p><p>慈善义卖节当天早上，希实花因为制作的泡芙得到了同学们的称赞而十分开心。之后希实花提出成为服务员接客，一开始还有些紧张和拘谨，之后便习惯起来。慈善义卖节结束后，夏奏老师宣布班级排名上升到第二，希实花由衷感到高兴。回家路上，众人打算明天一起出去玩，希实花提议去看电影《天使之泪》，是由小说改编的。</p><p><strong>话剧编剧风波</strong></p><p>第二天，众人在车站汇合后前往电影院。途中，陆斗因为自己还没来得及看原著而抱歉，希实花表示并不在意，反而认为如果没看过原著先来观看电影，或许会有不同的感受。之后二人聊到原著与改编电影的话题，陆斗发现希实花一旦涉及到感兴趣的话题，也会变得很健谈，心里有些喜悦。预订的座位并不全连在一起，陆斗与希实花恰巧拿到了相邻座位的电影票。</p><p>看完电影后，众人前往陆斗家的甜品店。谈到之后的表演派对，希实花希望班级能以《天使之泪》为原型表演话剧。晚上，陆斗阅读借来的小说，希实花重读一遍小说后与陆斗通过手机邮件聊天。</p><p>早上陆斗想同希实花交流读书心得，希实花想先关注表演派对的安排于是谢绝了，但同时表示这本书是自己在身陷挫折时发现的宝贵希望，陆斗不是很理解她的意思。到了班会课，希实花将计划告诉同学们，大家欣然接受，并打算让希实花同时担任编剧和导演，希实花听到后既惊讶又感动。班委们商量服装相关事宜时，同班的麻耶等三位女生提出来帮忙编剧。</p><p>但效果并不理想，三位女生完全没能帮上希实花的忙，还耽误了不少时间。希实花也深知这样下去不行，但似乎有些被孤立了，剧本基本上是由那三位女生自行编写的。经过众人的考虑和开导后，希实花鼓起勇气前去拒绝了三位女生的继续编写，班会时众人也向班上的同学们表达了歉意。</p><p>剧本顺利完成，也获得了同学们的认可，希实花安排了陆斗和奉莉分别扮演男女主人公。周六正式排练时，众人注意到剧本中的女主人公与希实花十分相像，陆斗也才体会到希实花对这本小说所怀有的深刻情感。周日排练中途休息时，希实花端出做好的泡芙犒劳大家，奉莉则感觉希实花有些逞强，催促陆斗带希实花去天台休息。二人在天台回想甜品店成立时的事情，陆斗为希实花还牢记着这些而感谢。</p><p><strong>希实花与过去</strong></p><p>之后排练休息时，希实花的眼睛又因为隐形眼镜而疼痛，班上其他同学这才知道希实花原来戴着隐形眼镜。陆斗让她暂时取下隐形眼镜，但希实花不小心踩碎了一片。在内心挣扎一番后，希实花戴上了带框眼镜与大伙汇合。之前的三位女生看到希实花这个样子，无心喊出了“土气花”的称呼，不料希实花突然呼吸急促晕了过去。在经过校医检查和简单处理后，希实花恢复了意识。陆斗也完全记起了小学时，希实花就被别人起了这个外号来捉弄她，这也导致她变得自卑，同时不愿别人用名字称呼她。</p><p>第二天，希实花因为去医院检查而延迟到校，众人前来关心。三位女生意识到自己做了错事，主动向希实花道歉。之后的排练中，希实花依然不在状态，陆斗见状要求暂停排练，同希实花两个人来到天台谈心。陆斗希望希实花不要再继续逃避过去，而应该勇敢地面对。在经过同意后，陆斗试着称呼她为希实花同学。希实花感到有些害羞，又进一步让陆斗直接喊她的名字，心中的畏惧也已烟消云散。回到班上，希实花希望班委们直接以名字称呼她，众人继续排练。休息时间，希实花稍感不安，陆斗上前握住她的手，为她加油鼓劲，希实花感觉自己已经喜欢上陆斗了。</p><p><strong>表演派对前的约会和当天</strong></p><p>离表演派对还有两天，虽然排练效果在不断变好，但希实花因为自己是倡议者和主要负责人，所以比起期待，更多的是紧张和不安。希实花被其他人叫走时，其他班委聚在一起检查剧本。其间大家都看出来希实花现在压力很大，奉莉指出陆斗和希实花约会时最好的解决办法，其他人表示赞成。此时希实花回到教室，陆斗被推到希实花面前。陆斗整理好语言后邀请希实花一起去商场。</p><p>在经过聊天、占卜和卡拉OK之后，希实花的心情逐渐平复，二人的关系也逐渐升温。来到车站，希实花直言想用名字称呼陆斗，陆斗同意后二人又聊到看完小说的感想。在说出那本小说对自己的特殊意义后，希实花想顺势向陆斗告白，但陆斗心中认为自己还需要确认自己的心意，岔开了话题。</p><p>表演派对当天，奉莉因受伤无法正常出演，同学们感到十分焦急。此时希实花鼓起勇气，提出代替奉莉扮演女主人公。演出时，虽然开头和临近结尾时发生了一些状况，但依靠陆斗和希实花以及众人的配合，危机成功化解，演出也获得了观众们的热烈掌声。班级得到了第一名的成绩，成功实现逆袭。</p><p>结束后众人回到班上。陆斗来到希实花面前，给予真心的祝贺，希实花却脸红着跑出了教室。在其他班委的催促和指引下，陆斗朝天台跑去。登上天台后，陆斗看见了希实花的背影。二人互相表明自己的心意后双唇相接。</p>
+              </div>
+            </details>
+
+<h2 id="攻略路线"><a href="#攻略路线" class="headerlink" title="攻略路线"></a>攻略路线</h2><p>注：表中个人线之前与希实花相关（带有※）的选项建议选择，其他选项可根据个人喜好选择。</p>
+<details class="green" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>攻略路线，点击展开 </summary>
+              <div class='content'>
+              <p><span lang="ja">あの子が逃げるなんてありえない</span> &#x2F; 那个女生不可能躲着我<br>※<span lang="ja">なんとか助けてあげたくなった</span> &#x2F; ※想设法去帮她一下<br>※<span lang="ja">すぐさま副委員長に立候補する</span> &#x2F; ※立刻竞选副班长<br><span lang="ja">ドキっとしてしまう</span> &#x2F; 不由得心动了<br><span lang="ja">すごく嬉しくなった</span> &#x2F; 感到十分高兴<br><span lang="ja">とても、イヤな気分になった</span> &#x2F; 有一种，很不舒服的气氛<br><span lang="ja">代わりを申し出る</span> &#x2F; 代替那个人去组队<br><span lang="ja">本当にかわいい</span> &#x2F; 真的很可爱<br>※<span lang="ja">議長を代わる</span> &#x2F; ※代替她主持</p><p><strong>拜田希实花线</strong></p><p><span lang="ja">拝田さんだった</span> &#x2F; 拜田同学<br><span lang="ja">若干引いてしまった</span> &#x2F; 稍微有些不适<br><span lang="ja">やめておく</span> &#x2F; 还是算了<br><span lang="ja">拝田さんだった</span> &#x2F; 拜田同学</p><p><strong>希实花 END</strong></p>
+              </div>
+            </details>
+
+<h2 id="相关歌曲"><a href="#相关歌曲" class="headerlink" title="相关歌曲"></a>相关歌曲</h2><p><span style="color:orchid;">片尾曲</span></p>
+<ul>
+<li><a href="/2023/01/09/kimi_to_zutto/"><span lang="ja">君とずっと</span></a>（永远与你在一起）<ul>
+<li>演唱：拜田希实花（CV：日笠阳子）</li>
+<li>作词：lotta，作曲：rino，编曲：户田章世</li>
+</ul>
+</li>
+</ul>
+<p><span style="color:olivedrab;">角色歌</span></p>
+<ul>
+<li><a href="/2022/11/24/my_mind/">my mind</a><ul>
+<li>演唱：拜田希实花（CV：日笠阳子）</li>
+<li>作词：lotta，作曲、编曲：户田章世</li>
+</ul>
+</li>
+<li><span lang="ja">桜色の轍</span>（樱色车辙）<ul>
+<li>演唱：茂田真央（CV：茅野爱衣）、拜田希实花（CV：日笠阳子）</li>
+<li>作词：RUCCA，作曲、编曲：菊田大介（Elements Garden）</li>
+</ul>
+</li>
+</ul>
+<h2 id="外部链接"><a href="#外部链接" class="headerlink" title="外部链接"></a>外部链接</h2><ul>
+<li><a class="link"   href="https://web.archive.org/web/20180312115330/https://fairys.tv/" >fairys官方网站 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（<a class="link"   href="https://fairys.tv/" >原始网页 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）</li>
+<li><a class="link"   href="https://imaimo.com/" >《现在就想告诉哥哥，我是妹妹！》特设网站 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>角色介绍</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Stelpolvo Sans字体现已发布！</title>
     <url>/2023/12/29/stelpolvo_sans/</url>
     <content><![CDATA[<p>项目地址：<a class="link"   href="https://github.com/GuoPCinGitHub/StelpolvoSans" >GuoPCinGitHub&#x2F;StelpolvoSans <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
@@ -3564,42 +3730,6 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
-    <title>《Blue Canvas》歌词翻译</title>
-    <url>/2023/08/04/blue_canvas/</url>
-    <content><![CDATA[<p><strong>Blue Canvas</strong> - <span lang="ja">いるかアイス</span>投稿的VOCALOID日文原创歌曲</p>
-<p>作词：<span lang="ja">いるかアイス</span>；作曲：<span lang="ja">いるかアイス</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>君と見てたいつかの映画で　未だ見たこと無い空と海が<br>どうしようもない青さに満ちて　こんな世界で歌いたいねと<br>笑う君はどこか似ていたね　その物語のヒロインと<br>何千年前のお話も　染まる時を待っている</p>
-<p>願うから魔法がかかるよ　僕らの絵筆が彩る<br>感じた未来　今を塗り替え　零れ落ちてく</p>
-<p>もっと君らしく空を描けるから　君らしく海も渡れるから<br>注ぐ太陽の眩しささえ　光る飛沫を跳ね返す<br>夢に訪れたあの景色を　遍く予感を超える色で<br>誰も塗り直すことはできない　君だけの青いキャンバス</p>
-<p>暮れる時の夕焼けの色も　眠る星空の夜の色も<br>何もなかった白いキャンバスに　描いてみれば美しいのでしょう<br>でも君は「あの青じゃないと」と　飛び込んだ淡い夏空間<br>御伽の世界に迷い込めば　そのまま時を忘れて</p>
-<p>「ねえ見えたよ」　隣で君が言う　眩しくてキラキラ光る<br>虹を渡れば　始まっていた　僕らの世界</p>
-<p>透き通る色の中　手をとって落ちていく<br>溶けそうな感覚も　想像を越えていた<br>君は歌い　水面は弧を描き作られる<br>表せない感情がただ涙となった</p>
-<p>もっと君らしく空を描けるから　君らしく海も渡れるから<br>注ぐ太陽の眩しささえ　光る飛沫を跳ね返す<br>夢に訪れたあの景色を　遍く予感を超える色で<br>誰も塗り直すことはできない　君だけの青いキャンバス</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>与你一同看过的电影里　未曾见过的天空与大海<br>想要在一片蓝色的世界中　就这样无可救药地歌唱<br>笑着的你看上去有些像　那篇故事里的女主人公<br>数千年前的传说也在　等待着洇染之时的到来</p>
-<p>许下心愿魔法施展而出　予我们的画笔以色彩<br>感受到的未来　把当下重新涂抹　而飘然散落</p>
-<p>我会更加如你一般描绘天空　如你一般渡过大海<br>就连太阳洒下的光辉　也会弹出闪耀的飞沫<br>将梦中见到的那景色　用超出预感的颜色画出<br>任何人都无法再次着色　只属于你的蓝色画布</p>
-<p>那日暮时分晚霞的颜色　那星空安眠夜晚的颜色<br>在空无一物的纯白画布上　描画出来一定会很美丽吧<br>但你说着「若不是那个蓝色」　跳进了淡淡的夏之空间<br>若是迷失在幻想的世界　就会忘记时间的流逝</p>
-<p>「喂看见了哦」　你在一旁说道　耀眼无比闪闪发光<br>越过彩虹　我们的世界　便会由此开始</p>
-<p>在透明的颜色中　手牵着手向下坠落<br>像要融化的感觉　超越了我们的想象<br>你放声歌唱　水面勾勒出一道弧线<br>无以言表的感情最终化作泪珠</p>
-<p>我会更加如你一般描绘天空　如你一般渡过大海<br>就连太阳洒下的光辉　也会弹出闪耀的飞沫<br>将梦中见到的那景色　用超出预感的颜色画出<br>任何人都无法再次着色　只属于你的蓝色画布</p>
-</div>
-]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>奈奈濑奉莉</title>
     <url>/2024/01/22/nanase_matsuri/</url>
     <content><![CDATA[<p><strong>奈奈濑奉莉</strong> 是fairys发行游戏 <strong>《现在就想告诉哥哥，我是妹妹！》</strong> 及其衍生作品的登场角色，女主角之一。</p>
@@ -3674,136 +3804,6 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
 </li>
 <li>HeartBeat2!<ul>
 <li>演唱：三谷步梦（CV：茅原实里）、奈奈濑奉莉（CV：伊藤加奈惠）</li>
-<li>作词：RUCCA，作曲、编曲：菊田大介（Elements Garden）</li>
-</ul>
-</li>
-</ul>
-<h2 id="外部链接"><a href="#外部链接" class="headerlink" title="外部链接"></a>外部链接</h2><ul>
-<li><a class="link"   href="https://web.archive.org/web/20180312115330/https://fairys.tv/" >fairys官方网站 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（<a class="link"   href="https://fairys.tv/" >原始网页 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）</li>
-<li><a class="link"   href="https://imaimo.com/" >《现在就想告诉哥哥，我是妹妹！》特设网站 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>角色介绍</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《NOiSY MONSTER》歌词翻译</title>
-    <url>/2023/08/16/noisy_monster/</url>
-    <content><![CDATA[<p><strong>NOiSY MONSTER</strong> - TV动画《SELECTION PROJECT》插曲</p>
-<p>作词：<span lang="ja">牡丹</span>；作曲：<span lang="ja">藤井健太郎</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>衝動のままに掻き鳴らせ<br>あれもこれも欲しくてしょうがない<br>教科書通りの綺麗事じゃ<br>満足できないわ　まだ食べ足りない<br>＜EAT MORE PLEASE＞</p>
-<p>誰にでも言うでしょう<br>“期待してる”＜IS THAT TRUE？＞<br>前へ倣えで　量産型良いこちゃん<br>はみ出した私　見えてるかな？<br>不協和音＜ALL CLASH！＞<br>何もかも　非常事態</p>
-<p>Rising noise, I want to prove<br>押し潰されそうな<br>理想がせめぎ合う攻防戦<br>吠えてみたくて　騒めき始める<br>はね返る心臓　響く合図(チャイム)<br>Rising noise, I want to prove<br>模範回答は捨てて<br>本能のまま求めてよ<br>邪魔するものは一片残さず<br>喰らい尽くしてやるから</p>
-<p>小さな机　狭い世界<br>ここにいるだけじゃ満たされない<br>オール５の数字があれば<br>どこにでもいける　ひどい冗談ね<br>＜NEED MORE PLEASE＞</p>
-<p>大事な時はいつだって<br>“目隠し”＜IT’S SO FOOL＞<br>同じ色の制服だって囲えない<br>背負ってるのは私の人生<br>右脳左脳＜ALL DOWN！＞<br>要求は　自由だけ</p>
-<p>Changing noise, and Make a way<br>白黒つけてよ<br>噛み付かれる前に噛み切ってやれ<br>所詮はコップの中の嵐なら<br>嘘も罠も笑い飛ばせばいい<br>Changing noise, and Make a way<br>歪めば歪んだ分だけ<br>耳が痛い……ハウリング<br>強がるフリが隠せないのなら<br>心ごと曝け出して<br>弱さも飼い慣らせば　REVITALIZE</p>
-<p>生まれ落ちたこの場所さえ<br>逃げられない日常さえ<br>抱き締めたら　向き合って今<br>爆発的にさ＜INCITE＞<br>弱肉強食＜KNOCK OUT＞<br>生き残るため</p>
-<p>Rising noise, I want to prove<br>押し潰されそうな<br>理想がせめぎ合う攻防戦<br>吠えてみたくて　騒めき始める<br>はね返る心臓　響く合図(チャイム)<br>Rising noise, I want to prove<br>模範回答は捨てて<br>本能のまま求めてよ<br>邪魔するものは一片残さず<br>喰らい尽くしてやるから</p>
-<p>IT’S OVER－－<br>全て　飲み込んでみせるよ<br>BREAKING THE HABIT</p>
-<p>お腹いっぱい　嗚呼、ご馳走様</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>随着这份冲动恣意弹响<br>那个和这个都想得到真是没办法<br>教科书式的漂亮事<br>根本没法满足　还远远没有吃够<br>＜再多吃些吧＞</p>
-<p>对谁都会这么说吧<br>“我很期待喔”＜是真的吗？＞<br>向前看齐　量产而出的好孩子<br>又是否看到了　特立独行的我呢？<br>不协和音＜尽数冲突！＞<br>完全就是　紧急状态</p>
-<p>渐强的噪声，我只欲证明<br>快要被压成齑粉<br>理想间互相竞争的攻防战<br>渴望呐喊咆哮　喧嚣随之而起<br>跳动的心脏　把信号鸣响<br>渐强的噪声，我只欲证明<br>标准答案扔在一边<br>仅凭着本能不停求索<br>一切妨碍之物皆片甲不留<br>你们只会被吞噬殆尽</p>
-<p>一张小方桌　一片小世界<br>只是待在此处是没法满足的<br>如果得到的数字全是５点<br>便能去往任何地方　这玩笑真过分<br>＜还要再来点＞</p>
-<p>重要的时刻总是在<br>“捉迷藏”＜真是愚蠢＞<br>穿着同样的制服也找不到<br>背上担着的是我的人生<br>右脑左脑＜全部停转！＞<br>诉求　只有自由</p>
-<p>变换着噪声，找到条出路<br>分清是非黑白<br>在被咬住之前把对手咬断<br>若终究只是一场小风波<br>谎言抑或陷阱都一笑而过<br>变换着噪声，找到条出路<br>歪斜的只是扭曲的部分<br>耳朵刺痛……正因这鸣噪<br>若无法掩饰这份虚伪的强大<br>那就敞开这心扉吧<br>将这份软弱驯服便能　重获新生</p>
-<p>把这诞生于此的地方<br>把这无法逃离的日常<br>紧紧拥入怀中　便能直面当下<br>喷薄而出＜鼓动＞<br>弱肉强食＜淘汰＞<br>只为保全性命</p>
-<p>渐强的噪声，我只欲证明<br>快要被压成齑粉<br>理想间互相竞争的攻防战<br>渴望呐喊咆哮　喧嚣随之而起<br>跳动的心脏　把信号鸣响<br>渐强的噪声，我只欲证明<br>标准答案扔在一边<br>仅凭着本能不停求索<br>一切妨碍之物皆片甲不留<br>你们只会被吞噬殆尽</p>
-<p>都结束了－－<br>全部都　就此吞食干净<br>打破这习惯</p>
-<p>吃饱喝足　啊，多谢款待</p>
-</div>
-]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>拜田希实花</title>
-    <url>/2024/01/11/haida_kimika/</url>
-    <content><![CDATA[<p><strong>拜田希实花</strong> 是fairys发行游戏 <strong>《现在就想告诉哥哥，我是妹妹！》</strong> 及其衍生作品的登场角色，女主角之一。</p>
-
-  <div class="note-large blue">
-    <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
-      <p>基本资料</p>
-
-    </div>
-    <div class="notel-content">
-      <p>身高：161cm<br>体重：46kg<br>三围：B:80 W:59 H:81<br>年龄：16岁</p>
-
-    </div>
-  </div>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/img/kimika.png"
-                      alt="拜田希实花"
-                ></p>
-<p><span style="font-size:small;color:gray;">▲ 游戏CG。原作者保留权利，仅以介绍为目的引用。</span></p>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><span style="font-size:larger;">为摆脱土气形象而努力着的，<br>腼腆的班长</span></p>
-<p>进入朝冈学园，成为新一届的高一学生，希实花在陆斗等人的班级里担任班长一职。她成绩十分优秀，在入学仪式上也被选为新生代表。性格畏畏缩缩并且很难有自己的主见，在小学和中学时期有被他人在背地里称作“土气花”的事情。随着升学，希实花下定决心改变自己，做的第一件事就是将带框眼镜换成了隐形眼镜。可是她腼腆的性格却几乎没有变化，付出的努力似乎也还是白忙一场。她与陆斗在小学时做过1年的同班同学。希实花还很清楚地记得陆斗，对方却不记得她了。希实花一方面对这种情况感到寂寞，另一方面也不太希望陆斗回忆起过去，她因此而苦恼着。</p>
-<details class="green" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>日文原文，点击展开 </summary>
-              <div class='content'>
-              <div lang="ja"><span style="font-size:larger;">地味キャラを捨て去ろうとがんばる、<br>内気な委員長</span><p>朝岡学園の新一年生で、陸斗たちのクラスの委員長を務めることになります。とても成績優秀で、入学式でも新入生総代に選ばれました。引っ込み思案でなかなか自己主張ができず、小中学生の頃は陰で「地味花」と呼ばれていた過去があります。進学にともなって自分を変えようと決意し、まずメガネをコンタクトにしました。でも内気なところは少しも変わっておらず、努力もいまいち空回りぎみです。陸斗とは小学生の頃に１年だけ同じクラスだったことがあります。希実花のほうは陸斗をはっきり覚えていましたが、陸斗は希実花のことを覚えていませんでした。そのことを寂しく感じる一方、陸斗に昔のことを思い出されるのもあまり歓迎できず、悩んでいるようです。</p></div>
-              </div>
-            </details>
-
-<h2 id="短篇故事：希实花的心绪"><a href="#短篇故事：希实花的心绪" class="headerlink" title="短篇故事：希实花的心绪"></a>短篇故事：希实花的心绪</h2><p><span style="font-size:larger;">重逢，<br>但只是自说自话</span></p>
-<p>疼痛。<br>十分疼痛。<br>第一次戴上隐形眼镜真的很痛。<br>今天是新生活的开始……试着鼓起干劲，但……<br>“呜……”<br>果然还是很痛。<br>电车开起来之后变得更加疼痛。<br>好不容易被朝冈学园录取了，我却完全笑不出来。<br>已经把隐形眼镜摘下来了，带框眼镜在……<br>“唔！？”<br>对面的空座位有人来了，和对方撞上了膝盖。<br>一时间，我与他四目相对。<br>是差不多年龄的，男孩子……<br>旁边，也是年龄一般大的女孩。<br>大概，是和我一样来看朝冈的录取结果公示的吧。<br>能看出两个人明朗的表情。一定是顺利通过了吧。<br>也就是说，开春之后也可能会成为同班同学……<br>“…………”<br>果然，还是不戴带框眼镜比较好。<br>但是，那样的话，眼睛就会这样疼痛。<br>疼痛，比刚才更加剧烈了。<br>“啊……”<br>眼泪……可能流出来了。<br>不对，不是“可能”，我已经泪如雨下了。</p>
-<details class="green" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>日文原文，点击展开 </summary>
-              <div class='content'>
-              <div lang="ja"><span style="font-size:larger;">再会、<br>でも一方通行</span><p>痛い。<br>とても痛い。<br>はじめて付けたコンタクトがとっても痛い。<br>今日から新しい人生のはじまり……なんて気合いを入れてみたけど……<br>「ぅっ……」<br>痛いものは痛い。<br>電車が走り出してからはさらに痛い。<br>せっかく朝岡学園に合格したのに、笑顔のひとつも作れない。<br>もうコンタクトははずして、メガネに……<br>「っ！？」<br>向かいの空席に人が来て、コツンと膝があたった。<br>瞬間、ちらっと視線が合う。<br>同い年くらいの、男の人……<br>隣は、やっぱり同い年くらいの女の子。<br>たぶん、私と同じく朝岡の合格発表を見に来た人たち。<br>ふたりの表情は明るい感じ。きっと合格したんだろう。<br>ということは、春からクラスメイトになる可能性も……<br>「…………」<br>やっぱり、メガネはやめておいた方がいいかも。<br>でも、そうなると、目は痛いまま。<br>さっきより、痛みが増してきている感じ。<br>「ぁ……」<br>涙……出てきたかも。<br>ううん、『かも』じゃなくて、出てる。</p></div>
-              </div>
-            </details>
-
-<h2 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h2><h3 id="共通线"><a href="#共通线" class="headerlink" title="共通线"></a>共通线</h3><details class="yellow" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开 </summary>
-              <div class='content'>
-              <p><strong>升学考试结果公示</strong></p><p>陆斗与青梅竹马奉莉一同在朝冈学园确认考试通过顺利升学后乘电车返程。</p><p>电车座位采用的是四人两两对坐的形式，空间略显狭小。陆斗和奉莉并排坐下，二人聊天时陆斗膝盖不小心碰到了对坐的女生，此时二人注意到女生在轻声哭泣，陆斗以为是自己碰到了她把她弄哭了，又推测应该是因为她也报考了朝冈但是不幸落榜了。陆斗尝试搭话安慰，被奉莉偷偷劝阻。女生注意到陆斗，不由得发出吃惊的声音，随即向陆斗道歉。陆斗迟疑之时电车到站，将随身的手帕递给了女生后急忙下车。</p><p>电车即将到达终点站。女生独自懊恼着自己依旧毫无改变，什么也没能说出口，同时注意到手帕上绣着“三谷”字样，确定了给她手帕的人是以前就认识的三谷同学，对方却没能认出她来。女生认为忘记了也好，但心里也感到痛苦。</p><p><strong>新生入学准备说明会</strong></p><p>新生入学准备说明会分为新生入学仪式和新生分组参观环节。入学仪式结束后，陆斗再次遇见了在电车上碰到的女生，并了解了女生在电车上哭泣的原因。参观时女生说自己名叫拜田希实花，陆斗感觉到她在偷偷打量着自己。</p><p>回家途中，希实花又想到陆斗不记得自己，这正是自己所期望的，自己正是出于这个目的才选择了不会有人认识自己的朝冈。但是自己又似乎因为陆斗没能认出自己而寂寞，不知道如何是好。</p><p><strong>开学典礼</strong></p><p>开学典礼上，主持人请新生代表致辞时，希实花不自然地走上台开始致辞。但因为过于紧张，致辞在途中卡住了，陆斗朝希实花挥了挥手，希实花勉强完成了致辞。</p><p>开学典礼结束后，班主任夏奏老师指名希实花担任班长一职。希实花虽然惊讶，但没有拒绝。夏奏老师继续进行副班长的竞选，陆斗举手提出要成为副班长。之后奉莉、步梦和章介主动担任活动实行委员，以辅助两位班长筹划包括樱花祭在内的各种校园活动。之后当天没有到场的茂森同学也暂被举荐为活动实行委员。</p><p>回家途中，众人安慰鼓励了希实花，希实花认为自己给大家添了麻烦，陆斗则解释道大家都是自愿成为班委的，劝她不要在意。到了陆斗等人需要换乘的车站，希实花表示自己想换条路线回家，也同众人一起换乘。陆斗直言能增加在一起的时间很高兴，希实花听完脸红起来。</p><p><strong>正式开学后</strong></p><p>第二天放学后，众人前往陆斗的父亲直真的甜品店举办茶会。到了甜品店门前，章介好奇店名“een×vijf”怎么读，希实花在谈论中说出店名是荷兰语数字1和5的意思，陆斗等人称赞希实花，希实花却流下眼泪，然后连忙顺着陆斗的话解释是隐形眼镜的原因。餐品上好后，众人谈到彼此称呼的问题。聊到希实花时，希实花稍显强硬地希望大家称呼她为“拜田同学”。归家途中，希实花独自回想起今天发生的事情，为能够到een×vijf聚会而高兴，但想到陆斗不记得以前的事情，眼泪又不禁流了出来。</p><p>到了一天中的最后一节课班会，夏奏老师与班上的同学们商议这周末要进行的合宿集训的相关事项。之后谈到下周末要进行的慈善义卖节，夏奏老师请希实花和陆斗两位班长上台主持，让大家讨论打算经营什么模拟店。希实花一开场就因为紧张咬到了舌头，陆斗便提出代替她主持，希实花则负责记录工作。放学后，班委们和夏奏老师留在班里继续开会。陆斗表示继续让自己主持，其他人则希望希实花在这种场合适应主持工作，希实花便开始主持。最后众人决定以女仆为主题经营模拟店。</p>
-              </div>
-            </details>
-
-<h3 id="个人线"><a href="#个人线" class="headerlink" title="个人线"></a>个人线</h3><details class="yellow" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开 </summary>
-              <div class='content'>
-              <p><strong>球技大会</strong></p><p>合宿第一天是樱花祭的球技大会，大家前往各自的会场参加比赛。在与真央配合拿下沙滩排球半决赛后，休息时陆斗前往希实花和步梦所在的乒乓球比赛。发现陆斗前来观看比赛后，希实花乱了阵脚，输掉了比赛。之后三人一同回到沙滩排球赛场，在陆斗与真央获得沙滩排球冠军后，希实花与陆斗交谈时表现出对真央的钦佩和憧憬。</p><p>一天的比赛结束后，大家回到教室等待班级排名结果。章介分析后认为会与第三名有微弱差距，居于第四。希实花自责地表示如果自己拿下了比赛，排名就会升到第三名了，众人给以安慰。夏奏老师前来宣布班级位居第四，希实花感到很失落。傍晚，大家在天台吃自助餐，希实花独自一人默默坐在一旁，陆斗上前关心，同时下定决心要在明天的洗场任务中努力。</p><p>晚上，陆斗从男生宿舍的枕头大战中离开，在走廊上散步，遇见了因为其他女生在聊恋爱话题而逃出来的希实花。因为没有戴隐形眼镜，希实花有些踉跄。考虑到一时半会回不了宿舍，二人登上天台。陆斗感叹夜景美丽的同时感觉有些冷，希实花将身上的毛毯递给陆斗，自己却打起喷嚏，二人决定共用毛毯。陆斗聊到天上的星星，希实花便滔滔不绝地说了很多星星相关的知识，陆斗大吃一惊。希实花解释自己是通过看书学到的这些知识，自己很喜欢看书，之后向陆斗推荐了矶野绫子写的畅销小说《天使之泪》，并提出将书借给陆斗看，陆斗因为与希实花立下约定而暗自开心。回到房间后，希实花想着刚才的事情，心里既害羞又高兴。</p><p><strong>洗场任务</strong></p><p>第二天，洗场任务顺利进行一段时间后，众人在一项任务上就人员安排方案产生分歧，做出决定的压力来到希实花身上。但最终希实花没能给出判断，章介表达歉意后以负责人身份结束了决议。傍晚所有任务结束后，希实花因自责而处在消沉之中。夏奏老师进班宣布排名，同学们大多接受了结果，但希实花仍难以释怀。</p><p>晚上，同学们在沙滩上烧烤。夏奏老师赶来通知需要两位同学守着一旁的篝火，陆斗便邀请希实花一起。其间，希实花向陆斗坦言自己曾下定决心要做出改变，但只是改变了外表，自己还是同以前一样笨拙，给周围的人带来麻烦。陆斗说正因为大家是朋友，所以不会过于在意这些，也希望希实花不要一直把这些事挂在心上，继续试着改变就好。希实花哭了一场后冷静下来，说自己虽然决定做出改变却还没有明确的目标，陆斗提议希实花作为班长，可以为带领班级获得樱花祭综合冠军努力。之后，希实花将班委们召集到班里，做出拿下综合冠军的宣言，众人也切实感受到了希实花的决心。</p><p>合宿结束后，班委们一同前往陆斗的父亲直真的甜品店。希实花想自己来同陆斗的父亲商量模拟店事宜，经过简单介绍后，希实花提出在慈善义卖节再现直真店里甜品的味道。直真思索后提议制作泡芙，希实花似乎有些慌乱，看到陆斗反应平淡后又有些失望。商讨过后确定增加的甜品为草莓奶油泡芙，希实花表示想自己一个人也能制作出来，众人决定第二天到陆斗家中练习。回家途中，希实花回忆起小时候陆斗安慰她的场景和当时吃的泡芙，明白了自己还是希望陆斗回想起过去的经历。</p><p><strong>慈善义卖节前的准备与当天</strong></p><p>周二是合宿集训调休，下午众人在陆斗家集合。希实花开始练习制作泡芙，众人品尝后赞不绝口，希实花有些感动。傍晚众人同陆斗分别，希实花趁机将之前提到的小说《天使之泪》借给了陆斗。之后两天希实花在陆斗家练习制作果酱。</p><p>慈善义卖节前一天，陆斗回到家后听闻由于房地产商的问题，搬家不能如期进行。来到甜品店后，陆斗还在烦恼着刚才的事情，希实花到达后二人如期开始制作泡芙。但因为陆斗和面时的失误，烤出的酥皮没能鼓起来。希实花先前就察觉到陆斗的异样，便希望陆斗能将发生的事情说给她听。陆斗倾诉后二人回到制作中，希实花提议减少一次制作的数量以避免进一步损失，只是会花些时间。二人最后决定在甜品店留宿，专心制作泡芙。</p><p>深夜，希实花的眼睛因为戴久了隐形眼镜有些不舒服，陆斗建议换成带框眼镜。希实花犹豫后戴上了带框眼镜，陆斗看着希实花，终于想起小学三年级时与希实花是同班同学，希实花也因此高兴得流下眼泪。</p><p>慈善义卖节当天早上，希实花因为制作的泡芙得到了同学们的称赞而十分开心。之后希实花提出成为服务员接客，一开始还有些紧张和拘谨，之后便习惯起来。慈善义卖节结束后，夏奏老师宣布班级排名上升到第二，希实花由衷感到高兴。回家路上，众人打算明天一起出去玩，希实花提议去看电影《天使之泪》，是由小说改编的。</p><p><strong>话剧编剧风波</strong></p><p>第二天，众人在车站汇合后前往电影院。途中，陆斗因为自己还没来得及看原著而抱歉，希实花表示并不在意，反而认为如果没看过原著先来观看电影，或许会有不同的感受。之后二人聊到原著与改编电影的话题，陆斗发现希实花一旦涉及到感兴趣的话题，也会变得很健谈，心里有些喜悦。预订的座位并不全连在一起，陆斗与希实花恰巧拿到了相邻座位的电影票。</p><p>看完电影后，众人前往陆斗家的甜品店。谈到之后的表演派对，希实花希望班级能以《天使之泪》为原型表演话剧。晚上，陆斗阅读借来的小说，希实花重读一遍小说后与陆斗通过手机邮件聊天。</p><p>早上陆斗想同希实花交流读书心得，希实花想先关注表演派对的安排于是谢绝了，但同时表示这本书是自己在身陷挫折时发现的宝贵希望，陆斗不是很理解她的意思。到了班会课，希实花将计划告诉同学们，大家欣然接受，并打算让希实花同时担任编剧和导演，希实花听到后既惊讶又感动。班委们商量服装相关事宜时，同班的麻耶等三位女生提出来帮忙编剧。</p><p>但效果并不理想，三位女生完全没能帮上希实花的忙，还耽误了不少时间。希实花也深知这样下去不行，但似乎有些被孤立了，剧本基本上是由那三位女生自行编写的。经过众人的考虑和开导后，希实花鼓起勇气前去拒绝了三位女生的继续编写，班会时众人也向班上的同学们表达了歉意。</p><p>剧本顺利完成，也获得了同学们的认可，希实花安排了陆斗和奉莉分别扮演男女主人公。周六正式排练时，众人注意到剧本中的女主人公与希实花十分相像，陆斗也才体会到希实花对这本小说所怀有的深刻情感。周日排练中途休息时，希实花端出做好的泡芙犒劳大家，奉莉则感觉希实花有些逞强，催促陆斗带希实花去天台休息。二人在天台回想甜品店成立时的事情，陆斗为希实花还牢记着这些而感谢。</p><p><strong>希实花与过去</strong></p><p>之后排练休息时，希实花的眼睛又因为隐形眼镜而疼痛，班上其他同学这才知道希实花原来戴着隐形眼镜。陆斗让她暂时取下隐形眼镜，但希实花不小心踩碎了一片。在内心挣扎一番后，希实花戴上了带框眼镜与大伙汇合。之前的三位女生看到希实花这个样子，无心喊出了“土气花”的称呼，不料希实花突然呼吸急促晕了过去。在经过校医检查和简单处理后，希实花恢复了意识。陆斗也完全记起了小学时，希实花就被别人起了这个外号来捉弄她，这也导致她变得自卑，同时不愿别人用名字称呼她。</p><p>第二天，希实花因为去医院检查而延迟到校，众人前来关心。三位女生意识到自己做了错事，主动向希实花道歉。之后的排练中，希实花依然不在状态，陆斗见状要求暂停排练，同希实花两个人来到天台谈心。陆斗希望希实花不要再继续逃避过去，而应该勇敢地面对。在经过同意后，陆斗试着称呼她为希实花同学。希实花感到有些害羞，又进一步让陆斗直接喊她的名字，心中的畏惧也已烟消云散。回到班上，希实花希望班委们直接以名字称呼她，众人继续排练。休息时间，希实花稍感不安，陆斗上前握住她的手，为她加油鼓劲，希实花感觉自己已经喜欢上陆斗了。</p><p><strong>表演派对前的约会和当天</strong></p><p>离表演派对还有两天，虽然排练效果在不断变好，但希实花因为自己是倡议者和主要负责人，所以比起期待，更多的是紧张和不安。希实花被其他人叫走时，其他班委聚在一起检查剧本。其间大家都看出来希实花现在压力很大，奉莉指出陆斗和希实花约会时最好的解决办法，其他人表示赞成。此时希实花回到教室，陆斗被推到希实花面前。陆斗整理好语言后邀请希实花一起去商场。</p><p>在经过聊天、占卜和卡拉OK之后，希实花的心情逐渐平复，二人的关系也逐渐升温。来到车站，希实花直言想用名字称呼陆斗，陆斗同意后二人又聊到看完小说的感想。在说出那本小说对自己的特殊意义后，希实花想顺势向陆斗告白，但陆斗心中认为自己还需要确认自己的心意，岔开了话题。</p><p>表演派对当天，奉莉因受伤无法正常出演，同学们感到十分焦急。此时希实花鼓起勇气，提出代替奉莉扮演女主人公。演出时，虽然开头和临近结尾时发生了一些状况，但依靠陆斗和希实花以及众人的配合，危机成功化解，演出也获得了观众们的热烈掌声。班级得到了第一名的成绩，成功实现逆袭。</p><p>结束后众人回到班上。陆斗来到希实花面前，给予真心的祝贺，希实花却脸红着跑出了教室。在其他班委的催促和指引下，陆斗朝天台跑去。登上天台后，陆斗看见了希实花的背影。二人互相表明自己的心意后双唇相接。</p>
-              </div>
-            </details>
-
-<h2 id="攻略路线"><a href="#攻略路线" class="headerlink" title="攻略路线"></a>攻略路线</h2><p>注：表中个人线之前与希实花相关（带有※）的选项建议选择，其他选项可根据个人喜好选择。</p>
-<details class="green" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>攻略路线，点击展开 </summary>
-              <div class='content'>
-              <p><span lang="ja">あの子が逃げるなんてありえない</span> &#x2F; 那个女生不可能躲着我<br>※<span lang="ja">なんとか助けてあげたくなった</span> &#x2F; ※想设法去帮她一下<br>※<span lang="ja">すぐさま副委員長に立候補する</span> &#x2F; ※立刻竞选副班长<br><span lang="ja">ドキっとしてしまう</span> &#x2F; 不由得心动了<br><span lang="ja">すごく嬉しくなった</span> &#x2F; 感到十分高兴<br><span lang="ja">とても、イヤな気分になった</span> &#x2F; 有一种，很不舒服的气氛<br><span lang="ja">代わりを申し出る</span> &#x2F; 代替那个人去组队<br><span lang="ja">本当にかわいい</span> &#x2F; 真的很可爱<br>※<span lang="ja">議長を代わる</span> &#x2F; ※代替她主持</p><p><strong>拜田希实花线</strong></p><p><span lang="ja">拝田さんだった</span> &#x2F; 拜田同学<br><span lang="ja">若干引いてしまった</span> &#x2F; 稍微有些不适<br><span lang="ja">やめておく</span> &#x2F; 还是算了<br><span lang="ja">拝田さんだった</span> &#x2F; 拜田同学</p><p><strong>希实花 END</strong></p>
-              </div>
-            </details>
-
-<h2 id="相关歌曲"><a href="#相关歌曲" class="headerlink" title="相关歌曲"></a>相关歌曲</h2><p><span style="color:orchid;">片尾曲</span></p>
-<ul>
-<li><a href="/2023/01/09/kimi_to_zutto/"><span lang="ja">君とずっと</span></a>（永远与你在一起）<ul>
-<li>演唱：拜田希实花（CV：日笠阳子）</li>
-<li>作词：lotta，作曲：rino，编曲：户田章世</li>
-</ul>
-</li>
-</ul>
-<p><span style="color:olivedrab;">角色歌</span></p>
-<ul>
-<li><a href="/2022/11/24/my_mind/">my mind</a><ul>
-<li>演唱：拜田希实花（CV：日笠阳子）</li>
-<li>作词：lotta，作曲、编曲：户田章世</li>
-</ul>
-</li>
-<li><span lang="ja">桜色の轍</span>（樱色车辙）<ul>
-<li>演唱：茂田真央（CV：茅野爱衣）、拜田希实花（CV：日笠阳子）</li>
 <li>作词：RUCCA，作曲、编曲：菊田大介（Elements Garden）</li>
 </ul>
 </li>
@@ -3962,47 +3962,6 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
-    <title>《光差す未来（洒满阳光的未来）》歌词翻译</title>
-    <url>/2024/02/06/hikari_sasu_mirai/</url>
-    <content><![CDATA[<p><strong><span lang="ja">光差す未来</span>（洒满阳光的未来）</strong> - 游戏《Noble☆Works》片尾曲</p>
-<p>作词：<span lang="ja">霜月はるか</span>；作曲：Famishin</p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>差しのべられた手　重ねたら<br>見つめ合う瞳　逸らさないで<br>寄り添い踊ろう　光差す二人の<ruby>未来<rt>ステージ</rt></ruby></p>
-<p>穏やかな朝　目覚めの<ruby>刻<rt>とき</rt></ruby><br>「おはよう」の声に<br>満ちる幸せ　かみしめてる<br>いつもと同じ紅茶の味　ちょっぴり優しいのは<br>素直な気持ちでいられてる証だね</p>
-<p>唯一つの居場所を守るための理想に<br>届くよう背伸びしてた日々<br>自分に嘘をついて傷つけていた心<br>貴方と言葉を交わすうちに気付いたんだ</p>
-<p>変わり始めていく世界へと<br>踏み出すのは怖いけど<br>それでも譲れないこの想いは<br>真実だと信じたい</p>
-<p>差しのべられた手　重ねたら<br>ぎゅっと握りしめて離さないよ<br>貴方とゆく道なら　大丈夫<br>迷わずに進めるよ</p>
-<p>賑わう街に　戸惑う私<br>からかいながらも<br>楽しい時間　エスコートする<br>少し先行く貴方の背がとっても頼もしくて<br>素直に甘えてる　そんな自分が不思議</p>
-<p>空っぽの胸の中　埋めるための期待を<br>求めては　縋っていた日々<br>張り詰めた糸のようで千切れそうな心も<br>貴方と出逢ってゆっくりと解けていった</p>
-<p>本当の私　見つけたら<br>まっすぐに瞳　逸らさないで<br>「好き」と伝えてくれた<br>それだけで強くなれた気がした</p>
-<p>変わり始めていく世界へと<br>踏み出した私たちは<br>溢れて止まらないこの想いが<br>真実だと信じてる</p>
-<p>差しのべられた手　重ねたら<br>ぎゅっと握りしめて離さないよ<br>二人寄り添い合って歩き出そう<br>光差す<ruby>未来<rt>ステージ</rt></ruby>へ</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>互相伸出的手若是　交叠在一起<br>目光重合之时还请　别再躲开视线<br>彼此依偎着起舞吧　在洒满阳光的未来之上</p>
-<p>平静安稳的早晨　从睡梦醒来时<br>听到你说的“早上好”<br>不禁细细回味着　这充实的幸福<br>与平时别无二致的红茶风味　散发出些许温柔的香气<br>这份坦率的心情便是最好的证明</p>
-<p>为了传达出守护唯一归宿的心愿<br>每一天都在一味地意气用事<br>无形中蒙骗着自己又在伤害着内心<br>在和你交心相谈之时我才如梦初醒</p>
-<p>朝着逐渐出现变化的世界<br>踏出脚步尽管还有些胆怯<br>但我依然愿意去相信不肯退让的<br>这份心意并非虚假</p>
-<p>互相伸出的手若是　交叠在一起<br>那就紧紧握住不要轻易松开<br>路途中有你伴随　便没问题<br>不再迷茫大步向前</p>
-<p>街上车水马龙　我却略显犹豫<br>虽在同你打趣嬉笑<br>我愿去守护　这愉悦的时光<br>稍走在前的你的背影是如此地踏实可靠<br>直率地朝你撒娇　自己真是不可思议</p>
-<p>为了填补内心深处　那片空洞和虚幻<br>我苦苦寻找　那份宝贵的期待<br>如绷紧的线一般快要被扯碎的心灵<br>也在与你相遇后逐渐解开了愁绪</p>
-<p>如果寻见了　真正的自己<br>注视着的目光　还请别再移开<br>只有对我说出那句“喜欢”<br>才让我真正感觉到自己坚强的事实</p>
-<p>朝着逐渐出现变化的世界<br>踏出脚步的我们二人<br>都坚定地相信充盈而出的<br>这份心意就是真实</p>
-<p>互相伸出的手若是　交叠在一起<br>那就紧紧握住不要轻易松开<br>二人相依相伴迈出步伐吧<br>走向洒满阳光的未来</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《モットー（Motto）》歌词翻译</title>
     <url>/2024/02/03/motto/</url>
     <content><![CDATA[<p><strong><span lang="ja">モットー</span>（Motto）</strong> - 游戏《天神乱漫》山吹葵角色歌</p>
@@ -4040,35 +3999,41 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
-    <title>《step forward》歌词翻译</title>
-    <url>/2024/02/15/step_forward/</url>
-    <content><![CDATA[<p><strong>step forward</strong> - 游戏《天色幻想岛》夏莉·沃利克角色歌</p>
-<p>作词：<span lang="ja">夏希美羽</span>(Angel Note)；作曲：Famishin</p>
+    <title>《光差す未来（洒满阳光的未来）》歌词翻译</title>
+    <url>/2024/02/06/hikari_sasu_mirai/</url>
+    <content><![CDATA[<p><strong><span lang="ja">光差す未来</span>（洒满阳光的未来）</strong> - 游戏《Noble☆Works》片尾曲</p>
+<p>作词：<span lang="ja">霜月はるか</span>；作曲：Famishin</p>
 <hr>
 <p><strong>歌词</strong></p>
 <p><em>注：歌词著作权归原作者所有。</em></p>
 <div lang="ja" style="white-space: pre;">
 
-<p>憧れふくらむキャンバス<br>心ときめくストーリー<br>毎日の中に隠れてる<br>ヒントを探してる</p>
-<p>この頃気になるあの人<br>二人の心地良い秘密<br>今までとはなんだか少し<br>景色が変わって映るの</p>
-<p>ひとりじゃ描けない　未来のシチュエーション<br>隣で笑ってくれたら　イメージ湧いてくる<br>ねぇちょっとドキドキしちゃうわ</p>
-<p>優しく背中押すように<br>わたしに気付かせてくれる<br>好きな気持ち大切にして<br>迷わず進もう　一歩踏み出してみようよ</p>
-<p>この頃気になるあの人<br>不意に心くすぐられる<br>やっぱり今までとは少し<br>景色が変わって映るの</p>
-<p>素直に生きて行く　むずかしいことかな？<br>明日を愛おしく思えるようになったから<br>もう何も心配いらない</p>
-<p>優しく背中押すように<br>わたしに気付かせてくれる<br>好きな気持ち大切にして<br>迷わず進もう　一歩踏み出してみようよ</p>
+<p>差しのべられた手　重ねたら<br>見つめ合う瞳　逸らさないで<br>寄り添い踊ろう　光差す二人の<ruby>未来<rt>ステージ</rt></ruby></p>
+<p>穏やかな朝　目覚めの<ruby>刻<rt>とき</rt></ruby><br>「おはよう」の声に<br>満ちる幸せ　かみしめてる<br>いつもと同じ紅茶の味　ちょっぴり優しいのは<br>素直な気持ちでいられてる証だね</p>
+<p>唯一つの居場所を守るための理想に<br>届くよう背伸びしてた日々<br>自分に嘘をついて傷つけていた心<br>貴方と言葉を交わすうちに気付いたんだ</p>
+<p>変わり始めていく世界へと<br>踏み出すのは怖いけど<br>それでも譲れないこの想いは<br>真実だと信じたい</p>
+<p>差しのべられた手　重ねたら<br>ぎゅっと握りしめて離さないよ<br>貴方とゆく道なら　大丈夫<br>迷わずに進めるよ</p>
+<p>賑わう街に　戸惑う私<br>からかいながらも<br>楽しい時間　エスコートする<br>少し先行く貴方の背がとっても頼もしくて<br>素直に甘えてる　そんな自分が不思議</p>
+<p>空っぽの胸の中　埋めるための期待を<br>求めては　縋っていた日々<br>張り詰めた糸のようで千切れそうな心も<br>貴方と出逢ってゆっくりと解けていった</p>
+<p>本当の私　見つけたら<br>まっすぐに瞳　逸らさないで<br>「好き」と伝えてくれた<br>それだけで強くなれた気がした</p>
+<p>変わり始めていく世界へと<br>踏み出した私たちは<br>溢れて止まらないこの想いが<br>真実だと信じてる</p>
+<p>差しのべられた手　重ねたら<br>ぎゅっと握りしめて離さないよ<br>二人寄り添い合って歩き出そう<br>光差す<ruby>未来<rt>ステージ</rt></ruby>へ</p>
 </div>
 
 <hr>
 <p><strong>翻译</strong></p>
 <div style="white-space: pre;">
 
-<p>画布上憧憬高涨不止<br>故事中内心雀跃不已<br>我一直在找寻着那份<br>隐藏在平日里的暗示</p>
-<p>最近在意起的那个人<br>以及彼此的愉快秘密<br>如今让我觉得四周展现的<br>景色似乎和以往有些不同</p>
-<p>独自一人无法描绘出　未来的美妙画面<br>你若在身旁露出笑容　绘卷便倏然展开<br>呐我感觉有些心跳加速了呢</p>
-<p>你轻轻在背后推了一把<br>让我注意到自己的心意<br>珍惜这发自真心的喜欢<br>不再继续犹豫　试着就此迈出前进的一步</p>
-<p>最近在意起的那个人<br>不由得使我心生悸动<br>如今终于发现四周展现的<br>景色已然产生了些许变化</p>
-<p>坦率地度过一天天　是十分困难的事情吗？<br>因为已经开始幻想着明天的美好生活<br>就什么也不必再去担心</p>
-<p>你轻轻在背后推了一把<br>让我注意到自己的心意<br>珍惜这发自真心的喜欢<br>不再继续犹豫　试着就此迈出前进的一步</p>
+<p>互相伸出的手若是　交叠在一起<br>目光重合之时还请　别再躲开视线<br>彼此依偎着起舞吧　在洒满阳光的未来之上</p>
+<p>平静安稳的早晨　从睡梦醒来时<br>听到你说的“早上好”<br>不禁细细回味着　这充实的幸福<br>与平时别无二致的红茶风味　散发出些许温柔的香气<br>这份坦率的心情便是最好的证明</p>
+<p>为了传达出守护唯一归宿的心愿<br>每一天都在一味地意气用事<br>无形中蒙骗着自己又在伤害着内心<br>在和你交心相谈之时我才如梦初醒</p>
+<p>朝着逐渐出现变化的世界<br>踏出脚步尽管还有些胆怯<br>但我依然愿意去相信不肯退让的<br>这份心意并非虚假</p>
+<p>互相伸出的手若是　交叠在一起<br>那就紧紧握住不要轻易松开<br>路途中有你伴随　便没问题<br>不再迷茫大步向前</p>
+<p>街上车水马龙　我却略显犹豫<br>虽在同你打趣嬉笑<br>我愿去守护　这愉悦的时光<br>稍走在前的你的背影是如此地踏实可靠<br>直率地朝你撒娇　自己真是不可思议</p>
+<p>为了填补内心深处　那片空洞和虚幻<br>我苦苦寻找　那份宝贵的期待<br>如绷紧的线一般快要被扯碎的心灵<br>也在与你相遇后逐渐解开了愁绪</p>
+<p>如果寻见了　真正的自己<br>注视着的目光　还请别再移开<br>只有对我说出那句“喜欢”<br>才让我真正感觉到自己坚强的事实</p>
+<p>朝着逐渐出现变化的世界<br>踏出脚步的我们二人<br>都坚定地相信充盈而出的<br>这份心意就是真实</p>
+<p>互相伸出的手若是　交叠在一起<br>那就紧紧握住不要轻易松开<br>二人相依相伴迈出步伐吧<br>走向洒满阳光的未来</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -4141,6 +4106,41 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
 <p>就算只伴你身边与你并肩漫步在路上<br>彼此相随的时光里　心与心也在不断地靠近</p>
 <p>心中的躁动已经无法停下　到达目的地后敲响这扇门<br>推开门扉后安心等待　与全新的自己如约相会<br>心中的昂扬还在不断高涨　牵起彼此的手描绘出未来<br>跨过五彩缤纷的大桥后　再一次迈出步伐的我　会变得更加坦率</p>
 <p>心中的躁动已经无法停下　就此展开一张新的画布<br>期待与不安混合在一起　再配上彩虹色的颜料<br>心中的昂扬还在不断高涨　想要描绘出光辉的未来<br>在这青空中架起一座桥　相信着从心底产生的　真挚温暖的情意</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《step forward》歌词翻译</title>
+    <url>/2024/02/15/step_forward/</url>
+    <content><![CDATA[<p><strong>step forward</strong> - 游戏《天色幻想岛》夏莉·沃利克角色歌</p>
+<p>作词：<span lang="ja">夏希美羽</span>(Angel Note)；作曲：Famishin</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>憧れふくらむキャンバス<br>心ときめくストーリー<br>毎日の中に隠れてる<br>ヒントを探してる</p>
+<p>この頃気になるあの人<br>二人の心地良い秘密<br>今までとはなんだか少し<br>景色が変わって映るの</p>
+<p>ひとりじゃ描けない　未来のシチュエーション<br>隣で笑ってくれたら　イメージ湧いてくる<br>ねぇちょっとドキドキしちゃうわ</p>
+<p>優しく背中押すように<br>わたしに気付かせてくれる<br>好きな気持ち大切にして<br>迷わず進もう　一歩踏み出してみようよ</p>
+<p>この頃気になるあの人<br>不意に心くすぐられる<br>やっぱり今までとは少し<br>景色が変わって映るの</p>
+<p>素直に生きて行く　むずかしいことかな？<br>明日を愛おしく思えるようになったから<br>もう何も心配いらない</p>
+<p>優しく背中押すように<br>わたしに気付かせてくれる<br>好きな気持ち大切にして<br>迷わず進もう　一歩踏み出してみようよ</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>画布上憧憬高涨不止<br>故事中内心雀跃不已<br>我一直在找寻着那份<br>隐藏在平日里的暗示</p>
+<p>最近在意起的那个人<br>以及彼此的愉快秘密<br>如今让我觉得四周展现的<br>景色似乎和以往有些不同</p>
+<p>独自一人无法描绘出　未来的美妙画面<br>你若在身旁露出笑容　绘卷便倏然展开<br>呐我感觉有些心跳加速了呢</p>
+<p>你轻轻在背后推了一把<br>让我注意到自己的心意<br>珍惜这发自真心的喜欢<br>不再继续犹豫　试着就此迈出前进的一步</p>
+<p>最近在意起的那个人<br>不由得使我心生悸动<br>如今终于发现四周展现的<br>景色已然产生了些许变化</p>
+<p>坦率地度过一天天　是十分困难的事情吗？<br>因为已经开始幻想着明天的美好生活<br>就什么也不必再去担心</p>
+<p>你轻轻在背后推了一把<br>让我注意到自己的心意<br>珍惜这发自真心的喜欢<br>不再继续犹豫　试着就此迈出前进的一步</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -4225,80 +4225,6 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
 <p>即使你将我背叛辜负［背叛辜负］　我也不会去责难什么<br>只要有你与我相伴就好<br>在彼此心意相通的日子到来之前［到来之前］　我都会陪在身旁<br>只属于你的我就在这里<br>我就存在于此处［存在于此处　直到永远］</p>
 <p>OH！我深爱着你</p>
 <p>［you make me live baby］</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《お仕事します（努力工作）》歌词翻译</title>
-    <url>/2024/03/03/oshigoto_shimasu/</url>
-    <content><![CDATA[<p><strong><span lang="ja">お仕事します</span>（努力工作）</strong> - 游戏《Noble☆Works》月山濑奈角色歌</p>
-<p>作词：<span lang="ja">中山マミ</span>(Angel Note)；作曲：<span lang="ja">佐々倉マコト</span>(Angel Note)</p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>今日も一日お仕事します<br>家事全般何でもします<br>誰かのためお世話するのが<br>わたし根っから好きみたいです</p>
-<p>目覚めのお紅茶　用意できています<br>お食事も　愛情込めた自信作です</p>
-<p>少しでも笑顔が見られたら<br>それだけで　<ruby>明日<rt>あす</rt></ruby>からも頑張れちゃいます<br>特別な取り柄が　ある訳じゃないけど<br>役に立てれば　幸せなんです</p>
-<p>今日もせっせとお仕事します<br>天職なんだと思っています</p>
-<p>それでもまだまだ　勉強中の身です<br>精進して　もっと立派になりたいです</p>
-<p>喜んで欲しいと思うこと<br>このことを　一番の基本にしています<br>何だっていつでも　楽しんでやれたら<br>毎日はずっと　幸せなんです</p>
-<p>少しでも笑顔が見られたら<br>それだけで　<ruby>明日<rt>あす</rt></ruby>からも頑張れちゃいます<br>特別な取り柄が　ある訳じゃないけど<br>役に立てれば　幸せなんです</p>
-<p>これがわたしの　日常なんです</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>今天一天也要努力工作<br>不管什么家务都请让我来做<br>是为了谁才这么尽心尽力的呢<br>大概是因为我本来就喜欢这样吧</p>
-<p>早晨醒脑的红茶　已经为你准备好了<br>饭菜也都　是倾注了爱意的自信之作</p>
-<p>若是能看到你一丝真诚的笑容<br>仅仅是这样　明天开始也会再次鼓起干劲<br>尽管自认为没有什么　远超于他人的长处<br>要是有帮助的话　我就会感到欣喜了</p>
-<p>今天也要勤恳地努力工作<br>我觉得这就是我的天职</p>
-<p>只是这样还差得远　需要不懈地学习<br>继续精进　希望变成更加杰出的人</p>
-<p>思考着如何才能让你高兴<br>这便是我　最为基本的行事方针<br>不论遇到什么事情　都能就这样乐在其中<br>每天肯定都会　让我感到幸福</p>
-<p>若是能看到你一丝真诚的笑容<br>仅仅是这样　明天开始也会再次鼓起干劲<br>尽管自认为没有什么　远超于他人的长处<br>要是有帮助的话　我就会感到欣喜了</p>
-<p>这便是我经历的　日常的每一天</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《Kissin&#39; Me, Kissin&#39; You》歌词翻译</title>
-    <url>/2024/03/11/kissin_me_kissin_you/</url>
-    <content><![CDATA[<p><strong>Kissin’ Me, Kissin’ You</strong> - 游戏《花之天使的夏日恋歌》片尾曲</p>
-<p>作词：RUCCA；作曲：<span lang="ja">矢鴇つかさ</span> (Arte Refact)</p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>遠い日の記憶たちが<br>花々の薫りから　リプレイする<br>不器用な言葉でほら<br>傷付いて　涙して　恋を育んだ</p>
-<p>未来は誰かの　<ruby>所有物<rt>もの</rt></ruby>じゃないから<br>すべての瞬間　わたしたちで描こう</p>
-<p>翼のように　広げた花のヴェール<br>世界中が　きっと　祝福してるわ<br>キミの事だけ　選んだ答えを<br>ずっと　１００年先も　後悔しないよ<br>いま　甘く　Kissin’ Me</p>
-<p>想いで絡んだ運命<br>断ち切らず　諦めず　そっと　解いてく</p>
-<p>何度間違っても　誰かの<ruby>真心<rt>こころ</rt></ruby><br>護るつよさがあれば　やり直せるよ</p>
-<p>「夢」も「涙」も「希望」も「憂い」さえも<br>そのどれも欠かせて　今日と逢えなかった<br>キミに贈れる　ものを探しても<br>「アイシテル」以上の　ものが見つからない<br>ねえ　だから　Kissin’ You</p>
-<p>不確かな未来に　確かなものがあるよ<br><ruby>瞳<rt>め</rt></ruby>に<ruby>視<rt>み</rt></ruby>えない　互いを　想いあう鼓動</p>
-<p>翼のように　広げた花のヴェール<br>世界中が　きっと　祝福してるわ<br>キミの事だけ　選んだ答えを<br>ずっと　１００年先も　後悔しないよ<br>ねえ　溶けるほど…　いま　甘く　Kissin’ Me</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>久远时日的诸多记忆<br>伴随花儿的芬芳　在我眼前重现<br>说着笨拙不堪的话语<br>经受苦楚　洒下泪水　孕育出恋情</p>
-<p>未来并不是　谁一个人的所有物<br>每一个瞬间　都让我们一同描绘吧</p>
-<p>戴上如双翼　展开的花之面纱<br>整个世界　一定都在　献上祝福吧<br>在众多可能中　最终只选择了你<br>就算　再过100年　我也不会后悔<br>现在　甜蜜地　Kissin’ Me</p>
-<p>心意交织出的命运<br>不要断绝　不要放弃　轻柔地　消解开来</p>
-<p>不管误会多少次　只要拥有这份<br>守护着真心的力量　就能再度携手</p>
-<p>「梦想」「泪水」「希望」以及「苦闷」<br>若是缺少任何一样　我都无法走到今天<br>四下物色着　打算送给你的礼物<br>最终发现没有比　「我喜欢你」更适合的东西<br>那么　就这样　Kissin’ You</p>
-<p>不确定的未来中　也有着真切的事物<br>那是眼中无形的　彼此间　思念的律动</p>
-<p>戴上如双翼　展开的花之面纱<br>整个世界　一定都在　献上祝福吧<br>在众多可能中　最终只选择了你<br>就算　再过100年　我也不会后悔<br>那么　就这样沉沦…　现在　甜蜜地　Kissin’ Me</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -4402,6 +4328,119 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
+    <title>《お仕事します（努力工作）》歌词翻译</title>
+    <url>/2024/03/03/oshigoto_shimasu/</url>
+    <content><![CDATA[<p><strong><span lang="ja">お仕事します</span>（努力工作）</strong> - 游戏《Noble☆Works》月山濑奈角色歌</p>
+<p>作词：<span lang="ja">中山マミ</span>(Angel Note)；作曲：<span lang="ja">佐々倉マコト</span>(Angel Note)</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>今日も一日お仕事します<br>家事全般何でもします<br>誰かのためお世話するのが<br>わたし根っから好きみたいです</p>
+<p>目覚めのお紅茶　用意できています<br>お食事も　愛情込めた自信作です</p>
+<p>少しでも笑顔が見られたら<br>それだけで　<ruby>明日<rt>あす</rt></ruby>からも頑張れちゃいます<br>特別な取り柄が　ある訳じゃないけど<br>役に立てれば　幸せなんです</p>
+<p>今日もせっせとお仕事します<br>天職なんだと思っています</p>
+<p>それでもまだまだ　勉強中の身です<br>精進して　もっと立派になりたいです</p>
+<p>喜んで欲しいと思うこと<br>このことを　一番の基本にしています<br>何だっていつでも　楽しんでやれたら<br>毎日はずっと　幸せなんです</p>
+<p>少しでも笑顔が見られたら<br>それだけで　<ruby>明日<rt>あす</rt></ruby>からも頑張れちゃいます<br>特別な取り柄が　ある訳じゃないけど<br>役に立てれば　幸せなんです</p>
+<p>これがわたしの　日常なんです</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>今天一天也要努力工作<br>不管什么家务都请让我来做<br>是为了谁才这么尽心尽力的呢<br>大概是因为我本来就喜欢这样吧</p>
+<p>早晨醒脑的红茶　已经为你准备好了<br>饭菜也都　是倾注了爱意的自信之作</p>
+<p>若是能看到你一丝真诚的笑容<br>仅仅是这样　明天开始也会再次鼓起干劲<br>尽管自认为没有什么　远超于他人的长处<br>要是有帮助的话　我就会感到欣喜了</p>
+<p>今天也要勤恳地努力工作<br>我觉得这就是我的天职</p>
+<p>只是这样还差得远　需要不懈地学习<br>继续精进　希望变成更加杰出的人</p>
+<p>思考着如何才能让你高兴<br>这便是我　最为基本的行事方针<br>不论遇到什么事情　都能就这样乐在其中<br>每天肯定都会　让我感到幸福</p>
+<p>若是能看到你一丝真诚的笑容<br>仅仅是这样　明天开始也会再次鼓起干劲<br>尽管自认为没有什么　远超于他人的长处<br>要是有帮助的话　我就会感到欣喜了</p>
+<p>这便是我经历的　日常的每一天</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《Kissin&#39; Me, Kissin&#39; You》歌词翻译</title>
+    <url>/2024/03/11/kissin_me_kissin_you/</url>
+    <content><![CDATA[<p><strong>Kissin’ Me, Kissin’ You</strong> - 游戏《花之天使的夏日恋歌》片尾曲</p>
+<p>作词：RUCCA；作曲：<span lang="ja">矢鴇つかさ</span> (Arte Refact)</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>遠い日の記憶たちが<br>花々の薫りから　リプレイする<br>不器用な言葉でほら<br>傷付いて　涙して　恋を育んだ</p>
+<p>未来は誰かの　<ruby>所有物<rt>もの</rt></ruby>じゃないから<br>すべての瞬間　わたしたちで描こう</p>
+<p>翼のように　広げた花のヴェール<br>世界中が　きっと　祝福してるわ<br>キミの事だけ　選んだ答えを<br>ずっと　１００年先も　後悔しないよ<br>いま　甘く　Kissin’ Me</p>
+<p>想いで絡んだ運命<br>断ち切らず　諦めず　そっと　解いてく</p>
+<p>何度間違っても　誰かの<ruby>真心<rt>こころ</rt></ruby><br>護るつよさがあれば　やり直せるよ</p>
+<p>「夢」も「涙」も「希望」も「憂い」さえも<br>そのどれも欠かせて　今日と逢えなかった<br>キミに贈れる　ものを探しても<br>「アイシテル」以上の　ものが見つからない<br>ねえ　だから　Kissin’ You</p>
+<p>不確かな未来に　確かなものがあるよ<br><ruby>瞳<rt>め</rt></ruby>に<ruby>視<rt>み</rt></ruby>えない　互いを　想いあう鼓動</p>
+<p>翼のように　広げた花のヴェール<br>世界中が　きっと　祝福してるわ<br>キミの事だけ　選んだ答えを<br>ずっと　１００年先も　後悔しないよ<br>ねえ　溶けるほど…　いま　甘く　Kissin’ Me</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>久远时日的诸多记忆<br>伴随花儿的芬芳　在我眼前重现<br>说着笨拙不堪的话语<br>经受苦楚　洒下泪水　孕育出恋情</p>
+<p>未来并不是　谁一个人的所有物<br>每一个瞬间　都让我们一同描绘吧</p>
+<p>戴上如双翼　展开的花之面纱<br>整个世界　一定都在　献上祝福吧<br>在众多可能中　最终只选择了你<br>就算　再过100年　我也不会后悔<br>现在　甜蜜地　Kissin’ Me</p>
+<p>心意交织出的命运<br>不要断绝　不要放弃　轻柔地　消解开来</p>
+<p>不管误会多少次　只要拥有这份<br>守护着真心的力量　就能再度携手</p>
+<p>「梦想」「泪水」「希望」以及「苦闷」<br>若是缺少任何一样　我都无法走到今天<br>四下物色着　打算送给你的礼物<br>最终发现没有比　「我喜欢你」更适合的东西<br>那么　就这样　Kissin’ You</p>
+<p>不确定的未来中　也有着真切的事物<br>那是眼中无形的　彼此间　思念的律动</p>
+<p>戴上如双翼　展开的花之面纱<br>整个世界　一定都在　献上祝福吧<br>在众多可能中　最终只选择了你<br>就算　再过100年　我也不会后悔<br>那么　就这样沉沦…　现在　甜蜜地　Kissin’ Me</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《ピース（Piece）》歌词翻译</title>
+    <url>/2024/03/15/piece/</url>
+    <content><![CDATA[<p><strong><span lang="ja">ピース</span>（Piece）</strong> - 游戏《花开Work Spring！》片尾曲</p>
+<p>作词：<span lang="ja">氷青</span>；作曲：Meis Clauson</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>どこまでも続く青い空と<br>伸びて行く飛行機雲の線<br>振り向けば　細く長い影が<br>あなたまで　届くような気がした</p>
+<p>二人を繋ぐ宇宙には　ときめく物が溢れてるの<br>感じていたい</p>
+<p>思い切り息をして　思い切り恋をしたい<br>いつでも２人で笑ってる<br>何気ない毎日が　愛しくて　今　輝く<br>ピースを集めて繋いで行きたい<br>La La La…</p>
+<p>俯いて踏み出せない時も<br>気がつくと隣りにいてくれた<br>変わらずに陽だまりの笑顔で<br>迷ってた背中押してくれる</p>
+<p>どんな不安も　溶けて行く　あなたの声に<br>どうしてだろう　涙が出るの</p>
+<p>思い切り悩んだり　思い切り泣いた夜も<br>いつかは大事なピースに<br>変わるから大丈夫　ゆっくりと　また歩いて<br>二人の未来を信じて行くから</p>
+<p>もしも明日晴れて　風が吹いてきたら<br>アリガトウって気持ち　言葉にするの</p>
+<p>思い切り悩んだり　思い切り泣いた夜も<br>いつかは大事なピースに<br>変わるから大丈夫　ゆっくりと　また歩いて<br>二人の未来を信じて</p>
+<p>思い切り息をして　思い切り恋をしたい<br>いつでも２人で笑ってる<br>何気ない毎日が　愛しくて　今　輝く<br>ピースを集めて繋いで行きたい<br>La La La…</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>头顶的蓝天一直拓展至远方<br>飞机航迹线也随之延伸开去<br>我蓦然回首　身后拉长的影子<br>感觉可以就　这样子触碰到你</p>
+<p>将彼此连系起的宇宙里　充满着令人期待的事物<br>我想亲身感受</p>
+<p>想去尽情地感受呼吸　想去尽情地品味恋心<br>只愿你我始终都能露出笑颜<br>平淡静好的每一天　惹人怜爱　如今　散发出光辉<br>想将收集到的碎片再度拼合起来<br>La La La…</p>
+<p>垂头丧气踌躇不前的那些日子<br>回过神来发现你就陪在我的身边<br>向我展现着始终如故的灿烂笑容<br>在尚处迷惘的我身后加油鼓劲</p>
+<p>听见你的声音　心里的不安　一瞬间烟消云散<br>泪水也夺眶而出　究竟又是为何</p>
+<p>不顾一切的黯然神伤　夜深人静时的泣不成声<br>终会转变为宝贵的碎片<br>所以不必再焦躁疑虑　不紧不慢地　再度出发<br>坚信着彼此的未来迈步向前</p>
+<p>若明天是一个好天气　微风也轻拂过我身旁<br>便会将这感激的心情　用言语传达给你</p>
+<p>不顾一切的黯然神伤　夜深人静时的泣不成声<br>终会转变为宝贵的碎片<br>所以不必再焦躁疑虑　不紧不慢地　再度出发<br>坚信着彼此的未来</p>
+<p>想去尽情地感受呼吸　想去尽情地品味恋心<br>只愿你我始终都能露出笑颜<br>平淡静好的每一天　惹人怜爱　如今　散发出光辉<br>想将收集到的碎片再度拼合起来<br>La La La…</p>
+</div>]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>叶山秋音</title>
     <url>/2024/03/14/hayama_tokine/</url>
     <content><![CDATA[<p><strong>叶山秋音</strong> 是Lump of Sugar制作发行游戏 <strong>《魔卡魅恋！》</strong> 的登场角色，女主角之一。</p>
@@ -4454,45 +4493,6 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
-    <title>《ピース（Piece）》歌词翻译</title>
-    <url>/2024/03/15/piece/</url>
-    <content><![CDATA[<p><strong><span lang="ja">ピース</span>（Piece）</strong> - 游戏《花开Work Spring！》片尾曲</p>
-<p>作词：<span lang="ja">氷青</span>；作曲：Meis Clauson</p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>どこまでも続く青い空と<br>伸びて行く飛行機雲の線<br>振り向けば　細く長い影が<br>あなたまで　届くような気がした</p>
-<p>二人を繋ぐ宇宙には　ときめく物が溢れてるの<br>感じていたい</p>
-<p>思い切り息をして　思い切り恋をしたい<br>いつでも２人で笑ってる<br>何気ない毎日が　愛しくて　今　輝く<br>ピースを集めて繋いで行きたい<br>La La La…</p>
-<p>俯いて踏み出せない時も<br>気がつくと隣りにいてくれた<br>変わらずに陽だまりの笑顔で<br>迷ってた背中押してくれる</p>
-<p>どんな不安も　溶けて行く　あなたの声に<br>どうしてだろう　涙が出るの</p>
-<p>思い切り悩んだり　思い切り泣いた夜も<br>いつかは大事なピースに<br>変わるから大丈夫　ゆっくりと　また歩いて<br>二人の未来を信じて行くから</p>
-<p>もしも明日晴れて　風が吹いてきたら<br>アリガトウって気持ち　言葉にするの</p>
-<p>思い切り悩んだり　思い切り泣いた夜も<br>いつかは大事なピースに<br>変わるから大丈夫　ゆっくりと　また歩いて<br>二人の未来を信じて</p>
-<p>思い切り息をして　思い切り恋をしたい<br>いつでも２人で笑ってる<br>何気ない毎日が　愛しくて　今　輝く<br>ピースを集めて繋いで行きたい<br>La La La…</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>头顶的蓝天一直拓展至远方<br>飞机航迹线也随之延伸开去<br>我蓦然回首　身后拉长的影子<br>感觉可以就　这样子触碰到你</p>
-<p>将彼此连系起的宇宙里　充满着令人期待的事物<br>我想亲身感受</p>
-<p>想去尽情地感受呼吸　想去尽情地品味恋心<br>只愿你我始终都能露出笑颜<br>平淡静好的每一天　惹人怜爱　如今　散发出光辉<br>想将收集到的碎片再度拼合起来<br>La La La…</p>
-<p>垂头丧气踌躇不前的那些日子<br>回过神来发现你就陪在我的身边<br>向我展现着始终如故的灿烂笑容<br>在尚处迷惘的我身后加油鼓劲</p>
-<p>听见你的声音　心里的不安　一瞬间烟消云散<br>泪水也夺眶而出　究竟又是为何</p>
-<p>不顾一切的黯然神伤　夜深人静时的泣不成声<br>终会转变为宝贵的碎片<br>所以不必再焦躁疑虑　不紧不慢地　再度出发<br>坚信着彼此的未来迈步向前</p>
-<p>若明天是一个好天气　微风也轻拂过我身旁<br>便会将这感激的心情　用言语传达给你</p>
-<p>不顾一切的黯然神伤　夜深人静时的泣不成声<br>终会转变为宝贵的碎片<br>所以不必再焦躁疑虑　不紧不慢地　再度出发<br>坚信着彼此的未来</p>
-<p>想去尽情地感受呼吸　想去尽情地品味恋心<br>只愿你我始终都能露出笑颜<br>平淡静好的每一天　惹人怜爱　如今　散发出光辉<br>想将收集到的碎片再度拼合起来<br>La La La…</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《Floating up》歌词翻译</title>
     <url>/2024/04/03/floating_up/</url>
     <content><![CDATA[<p><strong>Floating up</strong> - 游戏《卡卢玛卢卡＊同好会》片头曲</p>
@@ -4516,47 +4516,6 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
 <p>就这样借着劲头　和你拉近距离<br>在这耀眼无比的炎炎烈日之下<br>喂，你在用大大的望远镜看着什么？<br>灯塔之上　说道“找到只属于我们的星座！”<br>不断地寻觅吧？<br>Jump and GO!!　jump and GO!!<br>我们的汗水在空中飞舞<br>未来预报　就交给南风搞定<br>Here we go!!　来，出发吧！<br>沙上画出的梦想　不愿让它消失<br>那就把头发扎起<br>身穿洁白的衬衣　一跃而入吧！</p>
 <p>突然收到了邀请　在夜晚的海滨<br>你被火箭烟花吓了一跳<br>似要将我们拥入般流淌着的Milky Way<br>你说“想在那里游泳！”踮起了脚尖<br>为何会遇见彼此呢？<br>这件事不去深究也行吧<br>冰淇淋苏打绽开的瞬间<br>与你一起dive<br>即便就此沉溺<br>不也挺好吗？　Float and Jump!!<br>我们的汗水创造出海洋<br>微咸的泪花也一并消解<br>Here we go!!　日常+我们的不可思议<br>相互连接起来<br>朝着七色之海<br>扬起雪白的风帆　就此起航吧！</p>
 <p>一直以来总会觉得　夏天无意间就过去了<br>怎么一回事？！<br>这样子可不行啊！<br>对你的胸口knock knock　微微叩响<br>Tap and call..　Tap and call..<br>你的心门也回以轻敲<br>没有做好准备也没问题　就此应答！<br>Here we go!!　来，出发吧！<br>用汗水绘出的地图　彼此相连<br>以群星为罗盘<br>扬起雪白的风帆　就此起航吧！<br>前往七色之海</p>
-</div>]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《find a piece》歌词翻译</title>
-    <url>/2024/04/04/find_a_piece/</url>
-    <content><![CDATA[<p><strong>find a piece</strong> - 游戏《卡卢玛卢卡＊同好会》第二片头曲</p>
-<p>作词：KOTOKO；作曲：<span lang="ja">高瀬一矢</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>少し駆け足で<br>望遠鏡抱えて<br>約束の場所を目指してた</p>
-<p>星が見えない<br>曇りの夜空にがっかり<br>でも君に会えるなら<br>それでも良かった</p>
-<p>幼い君の声が<br>「また来ようよね」って言った<br>ねえ　僕らはあの約束を<br>叶えられそうかい？</p>
-<p>指差す点の先に<br>その答えがあるのなら<br>悩んでも　後悔しない<br>あの日の僕が決めた<br>“今”があって<br>明日を見てる<br>そんなふうに<br>星がまわる空<br>小さな手で掴もうとした<br>あの欠片に　いつか届く</p>
-<p>胸につかえてる<br>あの日見えなかった<br>星をもう一度　探したくて</p>
-<p>ひとり望遠鏡抱えて<br>部屋飛び出した<br>何故だろう？<br>少しだけ視界が滲んだ</p>
-<p>諦め笑う弱さ<br>受け入れたわけじゃないさ<br>ねえ　僕らは消せない夢を<br>刻み込んで来たんだ</p>
-<p>見上げた天が続く<br>その理由があるのなら<br>飽きるまで追いかけよう<br>あの時僕が<br>知った真実など<br>ちっぽけだって<br>そっけなく笑って瞬いてる<br>あの星座は何を許し<br>その光で何を照らす？</p>
-<p>七つ星　ひとつずつ繋げて<br>「飛行船」って言ったっけ<br>今も同じように<br>僕らだけに見えるものが<br>きっとあると信じて<br>大きな夜空を<br>覗き込んでんだ！</p>
-<p>指差す点の先に<br>その答えがあるのなら<br>悩んでも　後悔しない<br>あの日の僕が決めた<br>“今”があって<br>明日を見てる<br>そんなふうに<br>星がまわる空<br>伸ばした手をそっと照らす<br>僕らだけに見えた欠片</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>稍微加快了些脚步<br>把望远镜揣在怀里<br>朝着约定好的地点跑去</p>
-<p>看不到天上群星<br>对着阴沉的夜空灰心丧气<br>但是如果能与你相会<br>即便那样也会开心</p>
-<p>小时候你对着我<br>说道「下次也来吧」<br>呐　我们如今还能实现<br>当时的那份约定吗？</p>
-<p>指尖所指向的前方<br>如果这疑问存在着答案<br>即使烦恼　也绝不后悔<br>那天的自己下定决心<br>立足于“现在”<br>遥望着明天<br>深邃的天空<br>繁星流转不息<br>想用小小的手一把抓住<br>散落的碎片　何时才能触及</p>
-<p>郁积于心的念想<br>便是希望再去探寻<br>彼时未能找见的　那一颗明星</p>
-<p>一个人抱着望远镜<br>从屋里飞奔而出<br>究竟是为何？<br>眼前似乎有些模糊了</p>
-<p>放弃嘲笑软弱<br>并非能轻易地全盘接受<br>呐　我们将不会消散的梦<br>铭刻于彼此的心里</p>
-<p>仰望这天空延伸开来<br>如果能有什么理由的话<br>到尽兴为止都一直追逐吧<br>那一天的自己<br>所知道的真实<br>尽管很微小<br>还是生硬地笑着眨动着眼睛<br>那个星座会应允什么<br>又会用光芒照亮何物？</p>
-<p>七颗星　相互联系在一起<br>正如曾经说出「飞船」<br>如今依然会深信<br>这只有我们能看见的事物<br>一定是真实存在的<br>就此凝神窥视着<br>这无垠的夜空！</p>
-<p>指尖所指向的前方<br>如果这疑问存在着答案<br>即使烦恼　也绝不后悔<br>那天的自己下定决心<br>立足于“现在”<br>遥望着明天<br>深邃的天空<br>繁星流转不息<br>这只有我们能看见的碎片<br>缓缓地将伸出的手照亮</p>
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
@@ -4602,6 +4561,36 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
+    <title>QQNT自定义字体记录</title>
+    <url>/2024/04/09/qqnt-custom-fonts/</url>
+    <content><![CDATA[<p>想了想还是记录一下自己QQNT电脑版设置的自定义字体。</p>
+<p>需要使用到的加载器以及插件：</p>
+<ul>
+<li><a class="link"   href="https://liteloaderqqnt.github.io/" >LiteLoaderQQNT <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+<li><a class="link"   href="https://github.com/xiyuesaves/LiteLoaderQQNT-lite_tools" >轻量工具箱 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+<p><del>某一天无意间发现自定义字体可以不从下拉列表选择字体，而是自己敲字体家族。</del></p>
+<p>目前使用的自定义字体声明：<code>IBM Plex Sans, Nu Wakkaoi M1, MiSans VF, MiSans L3, LINE Seed Sans KR, Plangothic P1, Plangothic P2, Sukima Gothic, Jigmo, Jigmo2, Jigmo3</code></p>
+<p>顺便附上各字体相关网址：</p>
+<ul>
+<li><a class="link"   href="https://www.ibm.com/plex/" >IBM Plex <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（<code>IBM Plex Sans</code>）</li>
+<li><span lang="ja"><a class="link"   href="https://kokagem.sakura.ne.jp/font/wakkaoi/" >Nu ワッカオイ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></span>（<code>Nu Wakkaoi M1</code>）</li>
+<li><a class="link"   href="https://hyperos.mi.com/font/zh/" >MiSans <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（<code>MiSans VF, MiSans L3</code>）</li>
+<li><a class="link"   href="https://seed.line.me/" >LINE Seed <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（<code>LINE Seed Sans KR</code>）</li>
+<li><a class="link"   href="https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic-Project" >遍黑体项目 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（<code>Plangothic P1, Plangothic P2</code>）</li>
+<li><span lang="ja"><a class="link"   href="https://booth.pm/ja/items/2117070" >すきまゴシック <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></span>（<code>Sukima Gothic</code>）</li>
+<li><span lang="ja"><a class="link"   href="https://kamichikoichi.github.io/jigmo/" >Jigmo（字雲） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></span>（<code>Jigmo, Jigmo2, Jigmo3</code>）</li>
+</ul>
+<hr>
+<p>5.7补充：若希望保留QQNT默认情况下的emoji样式（苹果的Apple Color Emoji），在上面的声明最前面加上<code>Color Emoji,</code>即可。</p>
+<hr>
+<p>7.7补充：2.30.10版本的轻量工具箱已对emoji进行处理，将“覆盖默认emoji字体”选项置于关闭即可。</p>
+]]></content>
+      <tags>
+        <tag>随记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《ミライメロディ（未来旋律）》歌词翻译</title>
     <url>/2024/04/12/mirai_melody/</url>
     <content><![CDATA[<p><strong><span lang="ja">ミライメロディ</span>（未来旋律）</strong> - 游戏《少女＊领域》片尾曲</p>
@@ -4634,36 +4623,6 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
 </div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>QQNT自定义字体记录</title>
-    <url>/2024/04/09/qqnt-custom-fonts/</url>
-    <content><![CDATA[<p>想了想还是记录一下自己QQNT电脑版设置的自定义字体。</p>
-<p>需要使用到的加载器以及插件：</p>
-<ul>
-<li><a class="link"   href="https://liteloaderqqnt.github.io/" >LiteLoaderQQNT <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-<li><a class="link"   href="https://github.com/xiyuesaves/LiteLoaderQQNT-lite_tools" >轻量工具箱 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-</ul>
-<p><del>某一天无意间发现自定义字体可以不从下拉列表选择字体，而是自己敲字体家族。</del></p>
-<p>目前使用的自定义字体声明：<code>IBM Plex Sans, Nu Wakkaoi M1, MiSans VF, MiSans L3, LINE Seed Sans KR, Plangothic P1, Plangothic P2, Sukima Gothic, Jigmo, Jigmo2, Jigmo3</code></p>
-<p>顺便附上各字体相关网址：</p>
-<ul>
-<li><a class="link"   href="https://www.ibm.com/plex/" >IBM Plex <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（<code>IBM Plex Sans</code>）</li>
-<li><span lang="ja"><a class="link"   href="https://kokagem.sakura.ne.jp/font/wakkaoi/" >Nu ワッカオイ <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></span>（<code>Nu Wakkaoi M1</code>）</li>
-<li><a class="link"   href="https://hyperos.mi.com/font/zh/" >MiSans <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（<code>MiSans VF, MiSans L3</code>）</li>
-<li><a class="link"   href="https://seed.line.me/" >LINE Seed <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（<code>LINE Seed Sans KR</code>）</li>
-<li><a class="link"   href="https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic-Project" >遍黑体项目 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>（<code>Plangothic P1, Plangothic P2</code>）</li>
-<li><span lang="ja"><a class="link"   href="https://booth.pm/ja/items/2117070" >すきまゴシック <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></span>（<code>Sukima Gothic</code>）</li>
-<li><span lang="ja"><a class="link"   href="https://kamichikoichi.github.io/jigmo/" >Jigmo（字雲） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></span>（<code>Jigmo, Jigmo2, Jigmo3</code>）</li>
-</ul>
-<hr>
-<p>5.7补充：若希望保留QQNT默认情况下的emoji样式（苹果的Apple Color Emoji），在上面的声明最前面加上<code>Color Emoji,</code>即可。</p>
-<hr>
-<p>7.7补充：2.30.10版本的轻量工具箱已对emoji进行处理，将“覆盖默认emoji字体”选项置于关闭即可。</p>
-]]></content>
-      <tags>
-        <tag>随记</tag>
       </tags>
   </entry>
   <entry>
@@ -4744,44 +4703,6 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
-    <title>《メッセージ（Message）》歌词翻译</title>
-    <url>/2024/05/22/message/</url>
-    <content><![CDATA[<p><strong><span lang="ja">メッセージ</span>（Message）</strong> - 游戏《闪耀★青春追逐记！》Grand ED</p>
-<p>作词：<span lang="ja">樋口秀樹</span>；作曲：<span lang="ja">樋口秀樹</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>あの日かわした約束は心に<br>ずっと　ずっと　残っている<br>声も　眼差しも　いたずらな笑顔さえ<br>今も変わらない現実</p>
-<p>嘆くだけの生き方はもうやめたんだ<br>君が僕のこの背中を叩いた日から</p>
-<p>巡りあい　交差した奇跡のような出会いは<br>触れるだけのキスのように<br>わずかな時間　僕はそれでも幸せだった<br>一瞬こそが永遠と言えるはずだから</p>
-<p>君が語ったやりたいとすべて<br>もっと　もっと　叶えたくて<br>不甲斐ない自分<br>そんな僕を叱る声が聞こえた気がした</p>
-<p>立ち止まっているだけじゃもうダメなんだ<br>君を探す旅をさあ　はじめようか</p>
-<p>がむしゃらに駆け抜けて　明日に向かい進んでく<br>強がりを抱えながら<br>またいつか会えるはず　だから今日は微笑むよ<br>君に胸を張れる僕でいられるように</p>
-<p>サヨナラは言わないよ<br>1枚残った写真を胸のポケットに忍ばせて<br>まぶしいほど輝いたあの頃の僕らが見た<br>夏の空を二人　また見上げよう</p>
-<p>巡りあい　交差した奇跡のような出会いは<br>風に髪がなびくように<br>必然のことだった　今ならそれがわかるよ<br>僕は君を愛するために今も走る<br>愛よ　届け</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>那一天彼此立下的约定还依旧<br>一直　一直　萦绕在心头<br>那声音　以及视线　还有恶作剧般的笑容<br>如今也还是不变的现实</p>
-<p>早已舍弃了过去唉声叹气的一天天<br>那时你真诚的鼓励将我深深改变</p>
-<p>你我相逢　是奇迹互相交织而出的邂逅<br>有如稍碰嘴唇的轻吻<br>时光虽稍纵即逝　我也由衷感到幸福<br>因为这一瞬对于我来说便是永远</p>
-<p>你所诉说的一件件想完成的事<br>稍微　稍微　想再多实现<br>发觉自己的不争气<br>就好像亲耳听见了他人无情的斥责</p>
-<p>继续畏缩着停滞不前什么也不会改变<br>那么就这样踏上　寻找你的旅途吧</p>
-<p>不顾一切地拼命追逐着　向着明天不断踏出脚步<br>心中怀揣着这份逞强<br>定有一日会再与你相见　今天也就此露出微笑<br>只愿让你能为我骄傲地挺起胸膛</p>
-<p>我决不会与你告别<br>将仅剩的一张照片默默收进胸前的口袋<br>两人共度的珍贵瞬间依然闪耀着光辉<br>约好再一起去看　夏日的天空吧</p>
-<p>你我相逢　是奇迹互相交织而出的邂逅<br>有如头发随风儿飘舞<br>一切是命中注定　现在我才如梦初醒<br>为了将你珍爱我仍然在奔波不止<br>把这爱　交予你</p>
-</div>
-]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《RAJA（王者）》歌词翻译</title>
     <url>/2024/05/18/raja/</url>
     <content><![CDATA[<p><strong>RAJA（王者）</strong> - 游戏《无畏契约》海神英雄主题曲</p>
@@ -4820,55 +4741,41 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
-    <title>奥莉艾塔·库洛诺·伊斯塔丽嘉·吉娜斯缇尔</title>
-    <url>/2024/05/27/orietta_chrono_istarica_ginasteele/</url>
-    <content><![CDATA[<p><strong>奥莉艾塔·库洛诺·伊斯塔丽嘉·吉娜斯缇尔</strong> 是Lump of Sugar制作发行游戏 <strong>《魔卡魅恋！》</strong> 的登场角色，女主角之一。</p>
+    <title>《メッセージ（Message）》歌词翻译</title>
+    <url>/2024/05/22/message/</url>
+    <content><![CDATA[<p><strong><span lang="ja">メッセージ</span>（Message）</strong> - 游戏《闪耀★青春追逐记！》Grand ED</p>
+<p>作词：<span lang="ja">樋口秀樹</span>；作曲：<span lang="ja">樋口秀樹</span></p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
 
-  <div class="note-large blue">
-    <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
-      <p>基本资料</p>
+<p>あの日かわした約束は心に<br>ずっと　ずっと　残っている<br>声も　眼差しも　いたずらな笑顔さえ<br>今も変わらない現実</p>
+<p>嘆くだけの生き方はもうやめたんだ<br>君が僕のこの背中を叩いた日から</p>
+<p>巡りあい　交差した奇跡のような出会いは<br>触れるだけのキスのように<br>わずかな時間　僕はそれでも幸せだった<br>一瞬こそが永遠と言えるはずだから</p>
+<p>君が語ったやりたいとすべて<br>もっと　もっと　叶えたくて<br>不甲斐ない自分<br>そんな僕を叱る声が聞こえた気がした</p>
+<p>立ち止まっているだけじゃもうダメなんだ<br>君を探す旅をさあ　はじめようか</p>
+<p>がむしゃらに駆け抜けて　明日に向かい進んでく<br>強がりを抱えながら<br>またいつか会えるはず　だから今日は微笑むよ<br>君に胸を張れる僕でいられるように</p>
+<p>サヨナラは言わないよ<br>1枚残った写真を胸のポケットに忍ばせて<br>まぶしいほど輝いたあの頃の僕らが見た<br>夏の空を二人　また見上げよう</p>
+<p>巡りあい　交差した奇跡のような出会いは<br>風に髪がなびくように<br>必然のことだった　今ならそれがわかるよ<br>僕は君を愛するために今も走る<br>愛よ　届け</p>
+</div>
 
-    </div>
-    <div class="notel-content">
-      <p>身高：149cm<br>体重：39kg<br>三围：B:71 W:53 H:72<br>生日：12月13日</p>
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
 
-    </div>
-  </div>
-
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/img/orietta.png"
-                      alt="奥莉艾塔·库洛诺·伊斯塔丽嘉·吉娜斯缇尔"
-                ></p>
-<p><span style="font-size:small;color:gray;">▲ 游戏CG。原作者保留权利，仅以介绍为目的引用。</span></p>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>这个充满活力的小恶魔系萝莉少女，正是伊斯塔丽嘉的公主。<br>她肩负着监视律这个异常存在的任务。</p>
-<p>可再这么过下去，她发现自己就得扛着监视者的任务度过暑假，<br>所以，她一门心思想在毕业典礼之前找出男主角能使用魔法的原因。<br>喜怒哀乐变化剧烈外露，是个非常聒噪的女孩。</p>
-<p>性格很像个小孩子，不过就算被人就此开她玩笑，<br>她也不怎么往心里去，能展现出她成熟和从容的一面。<br>不过，她一直很在意自己胸比较小，拼命做着丰胸的努力。<br>出于她的这种小孩子脾气，总是对男主角提出些无理的要求。<br>十分任性，为所欲为。<br>有时也会耍些奸计，不过由于计谋太过幼稚，立马就会遭到天谴。<br>可谓是典型的因果报应。<br>对主角来说，她倒算得上是个一堆“好麻烦”的制造机。</p>
-<ul>
-<li>喜欢做的事情：上网、收集兔兔宗的周边</li>
-<li>特长：魔法</li>
-<li>喜欢的食物：豆奶、油炸食品、鸡胸肉<span style="font-size:smaller;">（与其说是喜欢吃，不如说是主动摄取的机会较多）</span></li>
-<li>讨厌的食物：卷心菜<span style="font-size:smaller;">（虽然不喜欢吃，但还是会强忍着吃下去）</span>、包子<span style="font-size:smaller;">（仅凭从书上看来的知识就不想吃）</span></li>
-</ul>
-<h2 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h2><h3 id="共通线"><a href="#共通线" class="headerlink" title="共通线"></a>共通线</h3><details class="yellow" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开 </summary>
-              <div class='content'>
-              <p><strong>序章</strong></p><p>律转入维斯利魔法学院之后，奥莉艾塔将包括卡牌在内的各种魔法相关的基础知识教给了律。两人经过一番讨论后得出，律需要实现找到女朋友的愿望来消除身上的魔法，从而重回人间界正常生活。</p><p><strong>开学后</strong></p><p>因为将律尽快送回人间界关系到自己能否度过一个愉快的暑假，奥莉一直催促着律寻找女朋友，自己也在从别处入手调查好办法。这天律来到奥莉的房间商量，二人自然而然谈到恋爱的话题，奥莉表示自己完全不了解什么是恋爱，律便说出了自己的恋爱观念，并进一步解释了自己对于恋爱所秉持的循序渐进主义，奥莉听后若有所思。</p><p>夏珑与奥莉因为课后作业的小事起了争执，下课后奥莉向律坦言自己如果没有夏珑作为女仆帮忙打理，自己就什么也做不成。但奥莉对夏珑指出自己没有女人味一事耿耿于怀，律表示可以去尝试做一些能凸显女性魅力的事情，最终奥莉决定学习编织来让夏珑认识到自己的错误。</p><p>因为两人都不擅长编织，奥莉和律请求姬百合和讽歌帮忙指导。在经过无数次失败之后，奥莉最后一次制作出的“喵线帽”获得了姬百合的认可。奥莉赶忙四下寻找夏珑，二人见面后在律的引导下谈起了彼此过往的交情。最终奥莉将喵线帽作为礼物送给了夏珑，感谢夏珑一直以来对自己无微不至的照顾，夏珑十分惊讶的同时也被奥莉的真挚所感动。</p><p><strong>奥莉的全力协助</strong></p><p>律的寻找对象进展不顺，奥莉听闻后提议先考虑形式上的交往，被律以有违循序渐进回绝。奥莉有些怀疑律一直以来的原则的正确性，提出让律同自己模拟约会来验证。第二天，两人如约前往人间界的水族馆模拟约会。奥莉看到各种新奇的海洋生物后十分兴奋，律也被奥莉的喜悦和劲头所吸引。晚上二人回到学院，奥莉意犹未尽，表示希望以后还能和律一起出去玩，律则以拥抱结束了第一次模拟约会。</p><p>这天律和奥莉约定好课程结束后一起去公园，但律临时被安排补习，无奈之下向奥莉爽约。奥莉回到寝室后深感不甘，又回想起律曾经说过的恋慕一个人时会有的表现，诧异自己可能已经爱上了律。经过加奈特的建议之后，奥莉在图书馆看起了少女漫画。对于漫画中自己以前尚未理解的情节和对话，如今却深有共鸣，奥莉在逐渐探明自己心意的同时，又担心自己提出的模拟约会对律来说是否只是如过家家一般的游戏。</p><p>又一天放学后，两人终于如约来到公园，律面对奥莉积极的亲密举动，心中稍有顾虑，但为了不破坏气氛便全盘接受了。太阳西斜，律在回忆时聊到了如今自己想交到女朋友的愿望，奥莉急切希望知道律喜欢的哪种类型的女孩，并坚称自己也了解恋爱。律迟疑之时，奥莉提到恋人约会在最后应该以亲吻结束。律念及虚伪的恋人练习不能当真，最终以轻吻奥莉的脸颊结束了这场模拟约会。</p><p>晚上二人回到学院，奥莉似乎心不在焉。律尽管觉得有些遗憾，但认识到自己不应该同奥莉再继续这种玩闹一般的事情，下决心向奥莉表示之后不再进行模拟约会，奥莉笑着同意了。</p><p><strong>是演戏，又或是真情？</strong></p><p>律在正式表白之前想得到室友秋音的帮忙，秋音看出律内心十分焦躁不安，便借机开导律。另一边，奥莉在寝室请求夏珑陪她练习表白，夏珑抓住时机指出如果奥莉成为了律的女友，律就会因为实现愿望而需要离开学院，奥莉自己则无法抛弃学院和国家随律而去；如果表白不成功，二人的关系能否恢复如初也不得而知。奥莉这才意识到问题，陷入了深深的迷茫之中。</p><p>这天，律决定晚上向奥莉表白。放学后看见奥莉无精打采的样子，律邀请奥莉在学校里散步。途中，奥莉的好心情渐渐恢复，但来到起落港后又莫名消沉起来。奥莉打算就此分别，律则坚持想让奥莉再一起转转。夜幕降临，二人来到学院外围，奥莉询问律今天邀请散步的原由，律直言这就是约会，奥莉听后沉默不语。律抓住准备离开的奥莉的手想要挽留，回忆完与奥莉度过的这段时光后，律最终向奥莉说出了喜欢。但奥莉没能接受律的表白，反而自己伤心起来。律则认为自己被奥莉拒绝，痛心地逃回了寝室。</p><p>恍惚间，律坐在白天的教室里，正准备邀请奥莉出去约会。自己向奥莉表白却被回绝的记忆涌现出来，律不由得有些混乱，准备离开教室。奥莉则喊住律并提出一起在校内约会，律没有多想便答应了。仿佛再次走过学院内的各处之后，二人来到学院外围。律仍心存疑惑，尝试着询问奥莉邀请约会的原因，奥莉便向律表明了自己的心意。律虽然对之前所发生的事还有些在意，但面对奥莉真心的表白，表示愿意和奥莉交往，两人就此交换了初吻。之后奥莉发觉当时没能回应律的表白让律受伤，自己强烈的悔恨无意间发动了强力的魔法，才导致这一天重新开始。最终二人决定将这份秘密藏在心里，作为恋人一直陪伴彼此就好。</p>
-              </div>
-            </details>
-
-<h3 id="个人线"><a href="#个人线" class="headerlink" title="个人线"></a>个人线</h3><details class="yellow" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开 </summary>
-              <div class='content'>
-              <p>暑假来临，律和奥莉约好来海边玩耍。回到学院后，众人纷纷向二人表达了开始交往的祝福，在律的询问下，奥莉坦言自己毫无保留地向大家公开了恋情。</p><p>律和奥莉决定在学院举办试胆大会，于是这天安排去人间界的商场采购。在买了一堆东西回到学院后，奥莉和律交换了之前偷偷为对方买的纪念品，两人为彼此的合拍而惊喜。试胆大会顺利结束后，奥莉作为最后的胜者得到了公主券的9次使用机会，持有者可以用它来命令任何人做任何事情。然而后来因为奥莉的任性和各种不小心，使用机会很快就花完了。</p><p>一天，律和奥莉一起在奥莉的房间里消遣时光，但奥莉似乎有事情瞒着律。在不经意间承认之后，奥莉拿出了自己为律手织的围巾送给律，律亲身体会到了与之前夏珑收到礼物时同样的、既困扰又高兴的心情。</p><p>暑假即将结束，奥莉与讽歌打闹时，意外地发现自己的魔力似乎正在衰退，不由得感到些许恐惧。但在和律成为恋人后，奥莉明白了自己有比公主身份更加需要去守护的事物，所以即便未来自己的魔力完全消失也不会后悔，只要永远能和律在一起便足够了。</p>
-              </div>
-            </details>
-
-<h2 id="外部链接"><a href="#外部链接" class="headerlink" title="外部链接"></a>外部链接</h2><ul>
-<li><a class="link"   href="https://hikarifield.co.jp/magicha/character/chara01.html" >中文版官网角色介绍 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
-</ul>
+<p>那一天彼此立下的约定还依旧<br>一直　一直　萦绕在心头<br>那声音　以及视线　还有恶作剧般的笑容<br>如今也还是不变的现实</p>
+<p>早已舍弃了过去唉声叹气的一天天<br>那时你真诚的鼓励将我深深改变</p>
+<p>你我相逢　是奇迹互相交织而出的邂逅<br>有如稍碰嘴唇的轻吻<br>时光虽稍纵即逝　我也由衷感到幸福<br>因为这一瞬对于我来说便是永远</p>
+<p>你所诉说的一件件想完成的事<br>稍微　稍微　想再多实现<br>发觉自己的不争气<br>就好像亲耳听见了他人无情的斥责</p>
+<p>继续畏缩着停滞不前什么也不会改变<br>那么就这样踏上　寻找你的旅途吧</p>
+<p>不顾一切地拼命追逐着　向着明天不断踏出脚步<br>心中怀揣着这份逞强<br>定有一日会再与你相见　今天也就此露出微笑<br>只愿让你能为我骄傲地挺起胸膛</p>
+<p>我决不会与你告别<br>将仅剩的一张照片默默收进胸前的口袋<br>两人共度的珍贵瞬间依然闪耀着光辉<br>约好再一起去看　夏日的天空吧</p>
+<p>你我相逢　是奇迹互相交织而出的邂逅<br>有如头发随风儿飘舞<br>一切是命中注定　现在我才如梦初醒<br>为了将你珍爱我仍然在奔波不止<br>把这爱　交予你</p>
+</div>
 ]]></content>
       <tags>
-        <tag>角色介绍</tag>
+        <tag>歌词翻译</tag>
       </tags>
   </entry>
   <entry>
@@ -4969,6 +4876,98 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
+    <title>《ReJOIN♪》歌词翻译</title>
+    <url>/2024/06/09/rejoin/</url>
+    <content><![CDATA[<p><strong>ReJOIN♪</strong> - 动画《ReLIFE》小野屋杏角色歌</p>
+<p>作词：<span lang="ja">橋本彩子</span>；作曲：<span lang="ja">iz・藤松樹</span></p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space:pre;">
+
+<p>ReJOIN♪一度ダメでもまた繋ごう</p>
+<p>一度きりなんて誰が決めたのかしら<br>楽しいことは何度だって</p>
+<p>一度で十分な悲しいことはノンノン！<br>もう一度塗り替えよう</p>
+<p>ハニートラップ　かわいい女の子で誘惑<br>もしかしたら本気になる？遊んであげるよ</p>
+<p>ReJOIN♪チャレンジなら何度でもできる<br>立ち止まるよりスキップが楽しいよ<br>ReJOIN♪たまにしょんぼりしちゃう時なら<br>コーヒーブレイク♪ひと休みしよう</p>
+<p>本気出してないだけ<br>出さないままで終わるの？<br>もったいないよ　大人も子供も！</p>
+<p>青春時代遠くから見ているのもいいけれど<br>どうせならね　飛び込むのも　悪くないかもね</p>
+<p>ReJOIN♪1人よりも2人がいいね<br>少しずつ色づくカラフルなパレットなら<br>どんな絵でも描けるから<br>まずは明日に虹かけて<br>明日はどんな絵を描く？</p>
+<p>ReJOIN♪一度ダメでもまた繋ごう<br>過去にして嘆くには早すぎる<br>ReJOIN♪ソツなくより悔いなくがいいよね<br>何度でも始められる<br>パレードなう♪みんな巻き込んで回そう<br>日々のメリーゴーランド</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>ReJOIN♪就算失败一回也要再度相牵</p>
+<p>只有一次什么的又究竟是谁决定的呢<br>快乐的时光总会如期而至</p>
+<p>仅此一次只会特别伤感所以NONO！<br>再试一次让自己焕然一新</p>
+<p>甜蜜的陷阱　以可爱的女孩试着引诱<br>难道说你信以为真了？那就陪你玩乐吧</p>
+<p>ReJOIN♪遇到挑战每次都能成功通过<br>比起驻足不前纵身一跃才更加喜悦<br>ReJOIN♪如果偶尔感到有些消沉失落<br>茶歇时间♪稍稍休息一下吧</p>
+<p>只是还没有全力应对<br>就要以平庸结束这一切吗？<br>论谁都会觉得　实在太过可惜！</p>
+<p>远远地回首自己的青春时代可能挺好的<br>既然心怀期待　就此投入其中　或许也不错</p>
+<p>ReJOIN♪比起一个人更希望有人作伴<br>只要用色彩斑斓的调色板在画布上细细点缀<br>便能绘成自己满意的作品<br>为明天先架起一道彩虹<br>明天又可以再画些什么？</p>
+<p>ReJOIN♪就算失败一回也要再度相牵<br>叹息过往的遗憾还为时过早<br>ReJOIN♪比起不得要领更应不留悔恨<br>不管几次都能再度开始<br>游行庆祝♪大家都聚在一起享受<br>每天都乘着旋转木马</p>
+</div>
+]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>奥莉艾塔·库洛诺·伊斯塔丽嘉·吉娜斯缇尔</title>
+    <url>/2024/05/27/orietta_chrono_istarica_ginasteele/</url>
+    <content><![CDATA[<p><strong>奥莉艾塔·库洛诺·伊斯塔丽嘉·吉娜斯缇尔</strong> 是Lump of Sugar制作发行游戏 <strong>《魔卡魅恋！》</strong> 的登场角色，女主角之一。</p>
+
+  <div class="note-large blue">
+    <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
+      <p>基本资料</p>
+
+    </div>
+    <div class="notel-content">
+      <p>身高：149cm<br>体重：39kg<br>三围：B:71 W:53 H:72<br>生日：12月13日</p>
+
+    </div>
+  </div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/img/orietta.png"
+                      alt="奥莉艾塔·库洛诺·伊斯塔丽嘉·吉娜斯缇尔"
+                ></p>
+<p><span style="font-size:small;color:gray;">▲ 游戏CG。原作者保留权利，仅以介绍为目的引用。</span></p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>这个充满活力的小恶魔系萝莉少女，正是伊斯塔丽嘉的公主。<br>她肩负着监视律这个异常存在的任务。</p>
+<p>可再这么过下去，她发现自己就得扛着监视者的任务度过暑假，<br>所以，她一门心思想在毕业典礼之前找出男主角能使用魔法的原因。<br>喜怒哀乐变化剧烈外露，是个非常聒噪的女孩。</p>
+<p>性格很像个小孩子，不过就算被人就此开她玩笑，<br>她也不怎么往心里去，能展现出她成熟和从容的一面。<br>不过，她一直很在意自己胸比较小，拼命做着丰胸的努力。<br>出于她的这种小孩子脾气，总是对男主角提出些无理的要求。<br>十分任性，为所欲为。<br>有时也会耍些奸计，不过由于计谋太过幼稚，立马就会遭到天谴。<br>可谓是典型的因果报应。<br>对主角来说，她倒算得上是个一堆“好麻烦”的制造机。</p>
+<ul>
+<li>喜欢做的事情：上网、收集兔兔宗的周边</li>
+<li>特长：魔法</li>
+<li>喜欢的食物：豆奶、油炸食品、鸡胸肉<span style="font-size:smaller;">（与其说是喜欢吃，不如说是主动摄取的机会较多）</span></li>
+<li>讨厌的食物：卷心菜<span style="font-size:smaller;">（虽然不喜欢吃，但还是会强忍着吃下去）</span>、包子<span style="font-size:smaller;">（仅凭从书上看来的知识就不想吃）</span></li>
+</ul>
+<h2 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h2><h3 id="共通线"><a href="#共通线" class="headerlink" title="共通线"></a>共通线</h3><details class="yellow" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开 </summary>
+              <div class='content'>
+              <p><strong>序章</strong></p><p>律转入维斯利魔法学院之后，奥莉艾塔将包括卡牌在内的各种魔法相关的基础知识教给了律。两人经过一番讨论后得出，律需要实现找到女朋友的愿望来消除身上的魔法，从而重回人间界正常生活。</p><p><strong>开学后</strong></p><p>因为将律尽快送回人间界关系到自己能否度过一个愉快的暑假，奥莉一直催促着律寻找女朋友，自己也在从别处入手调查好办法。这天律来到奥莉的房间商量，二人自然而然谈到恋爱的话题，奥莉表示自己完全不了解什么是恋爱，律便说出了自己的恋爱观念，并进一步解释了自己对于恋爱所秉持的循序渐进主义，奥莉听后若有所思。</p><p>夏珑与奥莉因为课后作业的小事起了争执，下课后奥莉向律坦言自己如果没有夏珑作为女仆帮忙打理，自己就什么也做不成。但奥莉对夏珑指出自己没有女人味一事耿耿于怀，律表示可以去尝试做一些能凸显女性魅力的事情，最终奥莉决定学习编织来让夏珑认识到自己的错误。</p><p>因为两人都不擅长编织，奥莉和律请求姬百合和讽歌帮忙指导。在经过无数次失败之后，奥莉最后一次制作出的“喵线帽”获得了姬百合的认可。奥莉赶忙四下寻找夏珑，二人见面后在律的引导下谈起了彼此过往的交情。最终奥莉将喵线帽作为礼物送给了夏珑，感谢夏珑一直以来对自己无微不至的照顾，夏珑十分惊讶的同时也被奥莉的真挚所感动。</p><p><strong>奥莉的全力协助</strong></p><p>律的寻找对象进展不顺，奥莉听闻后提议先考虑形式上的交往，被律以有违循序渐进回绝。奥莉有些怀疑律一直以来的原则的正确性，提出让律同自己模拟约会来验证。第二天，两人如约前往人间界的水族馆模拟约会。奥莉看到各种新奇的海洋生物后十分兴奋，律也被奥莉的喜悦和劲头所吸引。晚上二人回到学院，奥莉意犹未尽，表示希望以后还能和律一起出去玩，律则以拥抱结束了第一次模拟约会。</p><p>这天律和奥莉约定好课程结束后一起去公园，但律临时被安排补习，无奈之下向奥莉爽约。奥莉回到寝室后深感不甘，又回想起律曾经说过的恋慕一个人时会有的表现，诧异自己可能已经爱上了律。经过加奈特的建议之后，奥莉在图书馆看起了少女漫画。对于漫画中自己以前尚未理解的情节和对话，如今却深有共鸣，奥莉在逐渐探明自己心意的同时，又担心自己提出的模拟约会对律来说是否只是如过家家一般的游戏。</p><p>又一天放学后，两人终于如约来到公园，律面对奥莉积极的亲密举动，心中稍有顾虑，但为了不破坏气氛便全盘接受了。太阳西斜，律在回忆时聊到了如今自己想交到女朋友的愿望，奥莉急切希望知道律喜欢的哪种类型的女孩，并坚称自己也了解恋爱。律迟疑之时，奥莉提到恋人约会在最后应该以亲吻结束。律念及虚伪的恋人练习不能当真，最终以轻吻奥莉的脸颊结束了这场模拟约会。</p><p>晚上二人回到学院，奥莉似乎心不在焉。律尽管觉得有些遗憾，但认识到自己不应该同奥莉再继续这种玩闹一般的事情，下决心向奥莉表示之后不再进行模拟约会，奥莉笑着同意了。</p><p><strong>是演戏，又或是真情？</strong></p><p>律在正式表白之前想得到室友秋音的帮忙，秋音看出律内心十分焦躁不安，便借机开导律。另一边，奥莉在寝室请求夏珑陪她练习表白，夏珑抓住时机指出如果奥莉成为了律的女友，律就会因为实现愿望而需要离开学院，奥莉自己则无法抛弃学院和国家随律而去；如果表白不成功，二人的关系能否恢复如初也不得而知。奥莉这才意识到问题，陷入了深深的迷茫之中。</p><p>这天，律决定晚上向奥莉表白。放学后看见奥莉无精打采的样子，律邀请奥莉在学校里散步。途中，奥莉的好心情渐渐恢复，但来到起落港后又莫名消沉起来。奥莉打算就此分别，律则坚持想让奥莉再一起转转。夜幕降临，二人来到学院外围，奥莉询问律今天邀请散步的原由，律直言这就是约会，奥莉听后沉默不语。律抓住准备离开的奥莉的手想要挽留，回忆完与奥莉度过的这段时光后，律最终向奥莉说出了喜欢。但奥莉没能接受律的表白，反而自己伤心起来。律则认为自己被奥莉拒绝，痛心地逃回了寝室。</p><p>恍惚间，律坐在白天的教室里，正准备邀请奥莉出去约会。自己向奥莉表白却被回绝的记忆涌现出来，律不由得有些混乱，准备离开教室。奥莉则喊住律并提出一起在校内约会，律没有多想便答应了。仿佛再次走过学院内的各处之后，二人来到学院外围。律仍心存疑惑，尝试着询问奥莉邀请约会的原因，奥莉便向律表明了自己的心意。律虽然对之前所发生的事还有些在意，但面对奥莉真心的表白，表示愿意和奥莉交往，两人就此交换了初吻。之后奥莉发觉当时没能回应律的表白让律受伤，自己强烈的悔恨无意间发动了强力的魔法，才导致这一天重新开始。最终二人决定将这份秘密藏在心里，作为恋人一直陪伴彼此就好。</p>
+              </div>
+            </details>
+
+<h3 id="个人线"><a href="#个人线" class="headerlink" title="个人线"></a>个人线</h3><details class="yellow" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开 </summary>
+              <div class='content'>
+              <p>暑假来临，律和奥莉约好来海边玩耍。回到学院后，众人纷纷向二人表达了开始交往的祝福，在律的询问下，奥莉坦言自己毫无保留地向大家公开了恋情。</p><p>律和奥莉决定在学院举办试胆大会，于是这天安排去人间界的商场采购。在买了一堆东西回到学院后，奥莉和律交换了之前偷偷为对方买的纪念品，两人为彼此的合拍而惊喜。试胆大会顺利结束后，奥莉作为最后的胜者得到了公主券的9次使用机会，持有者可以用它来命令任何人做任何事情。然而后来因为奥莉的任性和各种不小心，使用机会很快就花完了。</p><p>一天，律和奥莉一起在奥莉的房间里消遣时光，但奥莉似乎有事情瞒着律。在不经意间承认之后，奥莉拿出了自己为律手织的围巾送给律，律亲身体会到了与之前夏珑收到礼物时同样的、既困扰又高兴的心情。</p><p>暑假即将结束，奥莉与讽歌打闹时，意外地发现自己的魔力似乎正在衰退，不由得感到些许恐惧。但在和律成为恋人后，奥莉明白了自己有比公主身份更加需要去守护的事物，所以即便未来自己的魔力完全消失也不会后悔，只要永远能和律在一起便足够了。</p>
+              </div>
+            </details>
+
+<h2 id="外部链接"><a href="#外部链接" class="headerlink" title="外部链接"></a>外部链接</h2><ul>
+<li><a class="link"   href="https://hikarifield.co.jp/magicha/character/chara01.html" >中文版官网角色介绍 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>角色介绍</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《・・・すぐ来てね（…请马上来吧）》歌词翻译</title>
     <url>/2024/06/03/sugu_kite_ne/</url>
     <content><![CDATA[<p><strong><span lang="ja">・・・すぐ来てね</span>（…请马上来吧）</strong> - 游戏《金辉恋曲四重奏 -Golden Time-》片尾曲</p>
@@ -5013,69 +5012,42 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
-    <title>《ぼくらの星座（我们的星座）》歌词翻译</title>
-    <url>/2024/06/19/bokura_no_seiza/</url>
-    <content><![CDATA[<p><strong><span lang="ja">ぼくらの星座</span>（我们的星座）</strong> - 游戏《星恋＊Twinkle》片头曲</p>
-<p>作词：RUCCA；作曲：<span lang="ja">藤田淳平</span></p>
+    <title>《find a piece》歌词翻译</title>
+    <url>/2024/04/04/find_a_piece/</url>
+    <content><![CDATA[<p><strong>find a piece</strong> - 游戏《卡卢玛卢卡＊同好会》第二片头曲</p>
+<p>作词：KOTOKO；作曲：<span lang="ja">高瀬一矢</span></p>
 <hr>
 <p><strong>歌词</strong></p>
 <p><em>注：歌词著作权归原作者所有。</em></p>
 <div lang="ja" style="white-space: pre;">
 
-<p>「どこを目指して、<br>どこに行き着く?」<br>夢の<ruby>座標<rt>ざひょう</rt></ruby>を<br>星は見てた<br>自分ばかりが　不幸せ…だなんて<br>まだ　想ってたね<br>間違うことを　恐れだしたら<br>キリがない…進もう<br>あの日　見上げた　六等星<br>胸に　抱きしめ<br><ruby>煌<rt>きら</rt></ruby>めいたのは　瞳の宇宙<br>明日を　信じてるから<br>願いはいつか　距離さえ越えて<br>見えぬ線で　凛と　繋がって<br>ぼくらだけの　星座をさがそう<br>たった１つ</p>
-<p>立ち止まったら　涙が伝う<br>その重力で　動けなくて<br>だけど走って　風を起こせば　ほら<br>涙は乾くね<br>変わりはじめた　こころ感じて<br>この<ruby>瞬間<rt>とき</rt></ruby>を　生きよう<br>キミと　交わした　約束を<br>ずっと　勇気に<br>聞こえてるのは　果てない鼓動<br>夢に　近づく軌跡<br>誰かのための　願いがきっと<br>満天の　星を作ってる<br>何光年　続く物語　語り明そう</p>
-<p>あの日　見上げた　六等星　光り放って<br><ruby>煌<rt>きら</rt></ruby>めいたのは　瞳の宇宙<br>明日を　信じてるから<br>願いはいつか　距離さえ超えて<br>見えぬ線で　凛と　繋がって<br>ぼくらだけの　星座を見つけた<br>だった１つ</p>
+<p>少し駆け足で<br>望遠鏡抱えて<br>約束の場所を目指してた</p>
+<p>星が見えない<br>曇りの夜空にがっかり<br>でも君に会えるなら<br>それでも良かった</p>
+<p>幼い君の声が<br>「また来ようよね」って言った<br>ねえ　僕らはあの約束を<br>叶えられそうかい？</p>
+<p>指差す点の先に<br>その答えがあるのなら<br>悩んでも　後悔しない<br>あの日の僕が決めた<br>“今”があって<br>明日を見てる<br>そんなふうに<br>星がまわる空<br>小さな手で掴もうとした<br>あの欠片に　いつか届く</p>
+<p>胸につかえてる<br>あの日見えなかった<br>星をもう一度　探したくて</p>
+<p>ひとり望遠鏡抱えて<br>部屋飛び出した<br>何故だろう？<br>少しだけ視界が滲んだ</p>
+<p>諦め笑う弱さ<br>受け入れたわけじゃないさ<br>ねえ　僕らは消せない夢を<br>刻み込んで来たんだ</p>
+<p>見上げた天が続く<br>その理由があるのなら<br>飽きるまで追いかけよう<br>あの時僕が<br>知った真実など<br>ちっぽけだって<br>そっけなく笑って瞬いてる<br>あの星座は何を許し<br>その光で何を照らす？</p>
+<p>七つ星　ひとつずつ繋げて<br>「飛行船」って言ったっけ<br>今も同じように<br>僕らだけに見えるものが<br>きっとあると信じて<br>大きな夜空を<br>覗き込んでんだ！</p>
+<p>指差す点の先に<br>その答えがあるのなら<br>悩んでも　後悔しない<br>あの日の僕が決めた<br>“今”があって<br>明日を見てる<br>そんなふうに<br>星がまわる空<br>伸ばした手をそっと照らす<br>僕らだけに見えた欠片</p>
 </div>
 
 <hr>
 <p><strong>翻译</strong></p>
 <div style="white-space: pre;">
 
-<p>「追求怎样的目标，<br>又要前往何处呢？」<br>梦想的坐标<br>星星已然看清<br>自己总是遇到　种种不幸…之类的<br>如今　依然这么觉得<br>倘若就这样一味地　害怕犯下错误<br>只会没完没了…所以前进吧<br>将那天　抬头看见的　六等星<br>摘下来　揽在怀里<br>闪烁无比的是这　眼瞳之中的宇宙<br>因为我　坚信着明天<br>愿望终有一天会　跨越天南海北<br>以看不见的线　将我们　紧紧相连<br>那么就去寻觅　独一无二只属彼此的<br>那个星座吧</p>
-<p>如果就此驻足　便会潸然泪下<br>受到这股重力　只觉寸步难行<br>但要是奔跑起来　扬起爽快的风　看吧<br>泪水就会干涸<br>心中不由感受到　改变已经开始<br>那么就这样　活在当下吧<br>与你　那天结下的　这份约定<br>始终　给我勇气<br>耳畔所传来的是　永不止息的颤动<br>和不断　接近梦想的轨迹<br>为某人许下的　这份心愿定能<br>造就出　那满天的星辰<br>讲述这　延续数光年的故事　直到拂晓吧</p>
-<p>那一天　抬头看见的　六等星　散发出光辉<br>闪烁无比的是这　眼瞳之中的宇宙<br>因为我　坚信着明天<br>愿望终有一天会　跨越天南海北<br>以看不见的线　将我们　紧紧相连<br>那么就去寻觅　独一无二只属彼此的<br>那个星座吧</p>
-</div>
-]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《ReJOIN♪》歌词翻译</title>
-    <url>/2024/06/09/rejoin/</url>
-    <content><![CDATA[<p><strong>ReJOIN♪</strong> - 动画《ReLIFE》小野屋杏角色歌</p>
-<p>作词：<span lang="ja">橋本彩子</span>；作曲：<span lang="ja">iz・藤松樹</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space:pre;">
-
-<p>ReJOIN♪一度ダメでもまた繋ごう</p>
-<p>一度きりなんて誰が決めたのかしら<br>楽しいことは何度だって</p>
-<p>一度で十分な悲しいことはノンノン！<br>もう一度塗り替えよう</p>
-<p>ハニートラップ　かわいい女の子で誘惑<br>もしかしたら本気になる？遊んであげるよ</p>
-<p>ReJOIN♪チャレンジなら何度でもできる<br>立ち止まるよりスキップが楽しいよ<br>ReJOIN♪たまにしょんぼりしちゃう時なら<br>コーヒーブレイク♪ひと休みしよう</p>
-<p>本気出してないだけ<br>出さないままで終わるの？<br>もったいないよ　大人も子供も！</p>
-<p>青春時代遠くから見ているのもいいけれど<br>どうせならね　飛び込むのも　悪くないかもね</p>
-<p>ReJOIN♪1人よりも2人がいいね<br>少しずつ色づくカラフルなパレットなら<br>どんな絵でも描けるから<br>まずは明日に虹かけて<br>明日はどんな絵を描く？</p>
-<p>ReJOIN♪一度ダメでもまた繋ごう<br>過去にして嘆くには早すぎる<br>ReJOIN♪ソツなくより悔いなくがいいよね<br>何度でも始められる<br>パレードなう♪みんな巻き込んで回そう<br>日々のメリーゴーランド</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>ReJOIN♪就算失败一回也要再度相牵</p>
-<p>只有一次什么的又究竟是谁决定的呢<br>快乐的时光总会如期而至</p>
-<p>仅此一次只会特别伤感所以NONO！<br>再试一次让自己焕然一新</p>
-<p>甜蜜的陷阱　以可爱的女孩试着引诱<br>难道说你信以为真了？那就陪你玩乐吧</p>
-<p>ReJOIN♪遇到挑战每次都能成功通过<br>比起驻足不前纵身一跃才更加喜悦<br>ReJOIN♪如果偶尔感到有些消沉失落<br>茶歇时间♪稍稍休息一下吧</p>
-<p>只是还没有全力应对<br>就要以平庸结束这一切吗？<br>论谁都会觉得　实在太过可惜！</p>
-<p>远远地回首自己的青春时代可能挺好的<br>既然心怀期待　就此投入其中　或许也不错</p>
-<p>ReJOIN♪比起一个人更希望有人作伴<br>只要用色彩斑斓的调色板在画布上细细点缀<br>便能绘成自己满意的作品<br>为明天先架起一道彩虹<br>明天又可以再画些什么？</p>
-<p>ReJOIN♪就算失败一回也要再度相牵<br>叹息过往的遗憾还为时过早<br>ReJOIN♪比起不得要领更应不留悔恨<br>不管几次都能再度开始<br>游行庆祝♪大家都聚在一起享受<br>每天都乘着旋转木马</p>
-</div>
-]]></content>
+<p>稍微加快了些脚步<br>把望远镜揣在怀里<br>朝着约定好的地点跑去</p>
+<p>看不到天上群星<br>对着阴沉的夜空灰心丧气<br>但是如果能与你相会<br>即便那样也会开心</p>
+<p>小时候你对着我<br>说道「下次也来吧」<br>呐　我们如今还能实现<br>当时的那份约定吗？</p>
+<p>指尖所指向的前方<br>如果这疑问存在着答案<br>即使烦恼　也绝不后悔<br>那天的自己下定决心<br>立足于“现在”<br>遥望着明天<br>深邃的天空<br>繁星流转不息<br>想用小小的手一把抓住<br>散落的碎片　何时才能触及</p>
+<p>郁积于心的念想<br>便是希望再去探寻<br>彼时未能找见的　那一颗明星</p>
+<p>一个人抱着望远镜<br>从屋里飞奔而出<br>究竟是为何？<br>眼前似乎有些模糊了</p>
+<p>放弃嘲笑软弱<br>并非能轻易地全盘接受<br>呐　我们将不会消散的梦<br>铭刻于彼此的心里</p>
+<p>仰望这天空延伸开来<br>如果能有什么理由的话<br>到尽兴为止都一直追逐吧<br>那一天的自己<br>所知道的真实<br>尽管很微小<br>还是生硬地笑着眨动着眼睛<br>那个星座会应允什么<br>又会用光芒照亮何物？</p>
+<p>七颗星　相互联系在一起<br>正如曾经说出「飞船」<br>如今依然会深信<br>这只有我们能看见的事物<br>一定是真实存在的<br>就此凝神窥视着<br>这无垠的夜空！</p>
+<p>指尖所指向的前方<br>如果这疑问存在着答案<br>即使烦恼　也绝不后悔<br>那天的自己下定决心<br>立足于“现在”<br>遥望着明天<br>深邃的天空<br>繁星流转不息<br>这只有我们能看见的碎片<br>缓缓地将伸出的手照亮</p>
+</div>]]></content>
       <tags>
         <tag>歌词翻译</tag>
       </tags>
@@ -5110,48 +5082,6 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
 <p>Oh oh, take my 花朵<br>七彩之色也　远远不及的那道光亮<br>为你所　探寻的未来指明一条道路</p>
 <p>独自一人若是难以让梦想绽放<br>将我们彼此的手紧紧相连在一起就好<br>用继续描写而出的故事装饰这片天空<br>将两人的明天　把握手中</p>
 <p>竭尽这份心愿　花朵便会盛开<br>一旁散发出　名为你的光芒<br>只要找到一枝便好　你能保持本我便好<br>就这样绘出光辉之日<br>化作永不凋谢的鲜花</p>
-</div>
-]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《キミイロミライ（君色未来）》歌词翻译</title>
-    <url>/2024/07/04/kimi_iro_mirai/</url>
-    <content><![CDATA[<p><strong><span lang="ja">キミイロミライ</span>（君色未来）</strong> - 游戏《纯白交响曲 -Love is pure white-》片尾曲</p>
-<p>作词：rino；作曲：<span lang="ja">景家淳</span></p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>移りゆく季節を　君と歩んでゆく<br>今ここから　始まる未来へと</p>
-<p>たくさんの思い出は　愛を描くシンフォニー<br>弾むように　輝きに変わってゆくよ</p>
-<p>君を守りたい　初めてのこの感情に<br>潤む心の奥は　二人だけの色に染まってゆく</p>
-<p>手をのばせば　君に届く　それだけで嬉しくて<br>駆け出しそうな　この鼓動を　受け止めて欲しいよ<br>あの日　あの瞬間　触れた　熱い気持ち<br>いつまでも忘れないから</p>
-<p>歩き出した日々は　何処へと続くんだろう…<br>不安になる　そんな時もあるね</p>
-<p>だからこそ二人で　どんな時も一緒に<br>乗り越えよう　痛みは絆に変わる</p>
-<p>君の微笑みが　あの日　涙を溶かしたんだ<br>ましろ色の世界に　溢れたのは　愛しい君との未来</p>
-<p>目を閉じても　君に会える　ずっとそばにいるよ<br>夢みたいな　この幸せ　二人育ててゆこう<br>過ぎる景色の中　そっと手をつないだ<br>温もりを信じてゆこう</p>
-<p>君がいるだけで　とても眩しいよ<br>愛を奏でたい　Sing a song</p>
-<p>手をのばせば　君に届く　それだけで嬉しくて<br>駆け出しそうな　この鼓動を　受け止めて　今すぐ<br>本気で泣いて　笑い合って　辿り着く未来を<br>抱きしめたい　二人ずっと　愛を信じてゆく<br>あの日　あの瞬間　触れた　熱い気持ち<br>ただ一つの言葉になる<br>愛してる…</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>在不断更迭的季节里　我与你一同度过<br>二人携手前行　走向从当下开始的未来</p>
-<p>数之不尽的回忆化作　描绘爱的交响曲<br>跃动着的音符　变成那无比夺目的光芒</p>
-<p>想要去守护着你　面对这初次萌生的感情<br>润湿的内心深处　逐渐染上独属于彼此的颜色</p>
-<p>只要伸出手来　便能触碰到你　仅仅如此就让我喜悦不已<br>这按捺不住的　心中的鼓动　希望你能就此接受<br>那一天　那个瞬间　感受到的　炽热的心意<br>我一定永远都不会忘记</p>
-<p>在踏步前进的每一天　最后究竟会到达何处呢…<br>有时也会这样　暗自担忧而不安起来</p>
-<p>正因为如此才要二人　无论何时都要在一起<br>并肩跨过困难　将这苦痛化作坚实的牵绊</p>
-<p>你那份温和的微笑　那一日　消融了流下的悲恸泪水<br>在纯白色的世界里　满溢而出的是　与你同行的美好未来</p>
-<p>即便闭上双眼　也能与你相见　我会一直陪伴着你<br>宛如美梦一般　这份珍贵幸福　让彼此一同悉心培育吧<br>在二人走过的景色中　两只手轻轻牵起<br>相信着这份温暖迈出步伐</p>
-<p>只要你待在我身边　就变得十分耀眼<br>想去奏响这份爱　Sing a song</p>
-<p>只要伸出手来　便能触碰到你　仅仅如此就让我喜悦不已<br>这按捺不住的　心中的鼓动　请就此接受　现在立刻<br>任性地哭出来　再和你欢笑　摸索而出一片未来<br>只愿紧紧相拥　二个人始终　深信彼此间的爱<br>那一天　那个瞬间　感受到的　炽热的心意<br>如今终于凝聚成了这一句<br>我爱你…</p>
 </div>
 ]]></content>
       <tags>
@@ -5247,77 +5177,27 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
-    <title>《大好き♡スパイラル（最喜欢♡螺旋形）》歌词翻译</title>
-    <url>/2024/07/15/daisuki_spiral/</url>
-    <content><![CDATA[<p><strong><span lang="ja">大好き♡スパイラル</span>（最喜欢♡螺旋形）</strong> - 《纯白交响曲 原创剧集》濑名爱理角色歌</p>
-<p>作词：rino；作曲：rino</p>
+    <title>《ぼくらの星座（我们的星座）》歌词翻译</title>
+    <url>/2024/06/19/bokura_no_seiza/</url>
+    <content><![CDATA[<p><strong><span lang="ja">ぼくらの星座</span>（我们的星座）</strong> - 游戏《星恋＊Twinkle》片头曲</p>
+<p>作词：RUCCA；作曲：<span lang="ja">藤田淳平</span></p>
 <hr>
 <p><strong>歌词</strong></p>
 <p><em>注：歌词著作权归原作者所有。</em></p>
 <div lang="ja" style="white-space: pre;">
 
-<p>鳴り止まない鼓動たち<br>大好きはスパイラル</p>
-<p>弾み過ぎてしょ恋心<br>押さえきれなくて<br>私以上の私って感覚<br>わかんない…</p>
-<p>冷たい言葉投げても打たないで<br>好きで好きでしょうがないみたい<br>スパイラル　つかまえて</p>
-<p>今すぐにギュッとして<br>いつだって触れていたい<br>知りたいのは君の全部です…<br>何度でも確かめよう<br>この愛しさ　君も我慢しないでてね<br>つまりはそう、大好き♡</p>
-<p>名前を呼ぶその声も<br>独り占めしたい<br>初めてばかり増えてく毎日<br>わかった！</p>
-<p>変わりたいと願っていたけど<br>君に会えてすぐ変わってたんだ<br>スパイラル　恋をして</p>
-<p>鳴り止まない鼓動へと<br>涙も解けてく<br>伝えきれない事が悔しい<br>最高の二人へと加速しよう<br>君と愛になりたいんだ<br>ケンカなんて<ruby>嫌<rt>や</rt></ruby>だよ</p>
-<p>閉じ込めたい傷跡も<br>暖めてくれたね<br>意地っ張りだって飛ばして<br>何度でも確かめよう<br>この愛しさ　君も我慢しないでてね<br>つまりはそう、大好き♡</p>
+<p>「どこを目指して、<br>どこに行き着く?」<br>夢の<ruby>座標<rt>ざひょう</rt></ruby>を<br>星は見てた<br>自分ばかりが　不幸せ…だなんて<br>まだ　想ってたね<br>間違うことを　恐れだしたら<br>キリがない…進もう<br>あの日　見上げた　六等星<br>胸に　抱きしめ<br><ruby>煌<rt>きら</rt></ruby>めいたのは　瞳の宇宙<br>明日を　信じてるから<br>願いはいつか　距離さえ越えて<br>見えぬ線で　凛と　繋がって<br>ぼくらだけの　星座をさがそう<br>たった１つ</p>
+<p>立ち止まったら　涙が伝う<br>その重力で　動けなくて<br>だけど走って　風を起こせば　ほら<br>涙は乾くね<br>変わりはじめた　こころ感じて<br>この<ruby>瞬間<rt>とき</rt></ruby>を　生きよう<br>キミと　交わした　約束を<br>ずっと　勇気に<br>聞こえてるのは　果てない鼓動<br>夢に　近づく軌跡<br>誰かのための　願いがきっと<br>満天の　星を作ってる<br>何光年　続く物語　語り明そう</p>
+<p>あの日　見上げた　六等星　光り放って<br><ruby>煌<rt>きら</rt></ruby>めいたのは　瞳の宇宙<br>明日を　信じてるから<br>願いはいつか　距離さえ超えて<br>見えぬ線で　凛と　繋がって<br>ぼくらだけの　星座を見つけた<br>だった１つ</p>
 </div>
 
 <hr>
 <p><strong>翻译</strong></p>
 <div style="white-space: pre;">
 
-<p>心中经久不息的诸多悸动<br>最喜欢的是那螺旋形</p>
-<p>还是太过急切了这份恋心<br>难以抑制呼之欲出<br>超越如今的自己那种感觉<br>我不明白…</p>
-<p>即便抛出冷漠的言语也请别太在意<br>我好像已经喜欢得无法自拔<br>抓住那心中　情意的螺旋</p>
-<p>好想现在立马抱紧你<br>无论何时都想触碰你<br>只愿去了解你的方方面面…<br>五次三番也去确认吧<br>这份真切爱意　你也无需再按捺自己了<br>也就是说啊，最喜欢你了♡</p>
-<p>呼唤我名字的那个声音也<br>只想要据为己有<br>每天都在增添各种新奇的体验<br>我明白了！</p>
-<p>一直渴望自己能有所改变<br>与你相遇心愿便立刻实现<br>迂回的螺旋　走向了爱恋</p>
-<p>面对心中经久不息的悸动<br>泪水也渐渐消融<br>懊恼未能向你传达的种种往事<br>为成为最好的二人加速前进吧<br>想就这样与你真心相爱<br>不愿和你再起争执</p>
-<p>那些想默默尘封的伤痕<br>你也为我温暖了起来<br>自己的固执也消失不见<br>五次三番也去确认吧<br>这份真切爱意　你也无需再按捺自己了<br>也就是说啊，最喜欢你了♡</p>
-</div>
-]]></content>
-      <tags>
-        <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《トゥルリラブ（Truly Love）》歌词翻译</title>
-    <url>/2024/07/18/truly_love/</url>
-    <content><![CDATA[<p><strong><span lang="ja">トゥルリラブ</span>（Truly Love）</strong> - 《纯白交响曲 原创剧集》安洁莉娜·菜夏·史威尔角色歌</p>
-<p>作词：rino；作曲：rino</p>
-<hr>
-<p><strong>歌词</strong></p>
-<p><em>注：歌词著作权归原作者所有。</em></p>
-<div lang="ja" style="white-space: pre;">
-
-<p>トゥルリラブ恋をして<br>変わってくミライを<br>二人で歩けますように…</p>
-<p>送り出す声が校舎に響く<br>一人で見送ったあの日<br>気付いてしまった　恋心は<br>君色に染まっていったの</p>
-<p>何気ない仕草から<br>深読みをしちゃう癖は<br>恋して知った私なんです。</p>
-<p>トゥルリラブ恋をして<br>止まらない鼓動も<br>追い越すくらいの元気をあげるよ<br>切なくって動けない…<br>そんな事ないはず<br>思いっきり飛び込んでみます！</p>
-<p>好奇心だけじゃ子供みたい<br>大人の魅力も探求<br>自慢のコスチューム　<ruby>15<rt>さん</rt></ruby><ruby>時<rt>じ</rt></ruby>に跳ねた<br>情熱を注ぐティータイム</p>
-<p>暖かいお紅茶で<br>その胸も暖めたい<br>どんな事が嬉しいんでしょう?</p>
-<p>トゥルリラブ恋の中<br>混ざってく夢模様<br>陽だまりみたいな笑顔が　嬉しい!!<br>真っ白な吐息はクリームにしちゃおう<br>飲み干す横顔を見てたい</p>
-<p>トゥルリラブ恋をして<br>変わってくミライを<br>二人で迎えに行こうよ　今すぐ<br>会いたくって会えない…<br>そんな日があるから　この恋育ってくんだね</p>
-<p>トゥルリラブ恋をして<br>止まらない鼓動も<br>追い越すくらいの元気をあげるよ<br>切なくって動けない…　そんな事ないはず<br>思いっきり飛び込んでみます!</p>
-</div>
-
-<hr>
-<p><strong>翻译</strong></p>
-<div style="white-space: pre;">
-
-<p>谈一场满含情意的恋爱<br>在不断变换的未来<br>只为二人得以携手前行…</p>
-<p>为大家送行的声音在校园里回响<br>独自目送你离开的那一天<br>我便注意到了　这份恋慕之心<br>已经染上独属于你的颜色</p>
-<p>留意他人不经意的举动<br>我不由得会多想的习惯<br>还是在恋爱之中突然发现的。</p>
-<p>谈一场满含情意的恋爱<br>昂扬不止的心跳也<br>会给予你一份更高一筹的活力<br>伤心到举步维艰什么的…<br>这种事不可能发生<br>我会尽情享受度过的每一天！</p>
-<p>只有好奇心就像小孩一般<br>还要探索大人的魅力<br>身穿得意的服装　15时就此起舞<br>在茶会上倾注这份热情</p>
-<p>想用这温热的红茶<br>暖起你饱经操劳的内心<br>什么事情会让你觉得开心呢？</p>
-<p>所谓深爱的恋情之中<br>交织着梦想的纹样<br>你那如阳光洒下般的笑容　令我欢喜!!<br>将纯白色的呼气化成一团团奶油吧<br>想看着你酣畅喝尽的侧颜</p>
-<p>谈一场满含情意的恋爱<br>那不断变换的未来<br>让我们一同前去迎接吧　立刻出发<br>想要相遇却未能如愿…<br>因为也有那些日子　才会孕育出这份爱恋吧</p>
-<p>谈一场满含情意的恋爱<br>昂扬不止的心跳也<br>会给予你一份更高一筹的活力<br>伤心到举步维艰什么的…　这种事不可能发生<br>我会尽情享受度过的每一天！</p>
+<p>「追求怎样的目标，<br>又要前往何处呢？」<br>梦想的坐标<br>星星已然看清<br>自己总是遇到　种种不幸…之类的<br>如今　依然这么觉得<br>倘若就这样一味地　害怕犯下错误<br>只会没完没了…所以前进吧<br>将那天　抬头看见的　六等星<br>摘下来　揽在怀里<br>闪烁无比的是这　眼瞳之中的宇宙<br>因为我　坚信着明天<br>愿望终有一天会　跨越天南海北<br>以看不见的线　将我们　紧紧相连<br>那么就去寻觅　独一无二只属彼此的<br>那个星座吧</p>
+<p>如果就此驻足　便会潸然泪下<br>受到这股重力　只觉寸步难行<br>但要是奔跑起来　扬起爽快的风　看吧<br>泪水就会干涸<br>心中不由感受到　改变已经开始<br>那么就这样　活在当下吧<br>与你　那天结下的　这份约定<br>始终　给我勇气<br>耳畔所传来的是　永不止息的颤动<br>和不断　接近梦想的轨迹<br>为某人许下的　这份心愿定能<br>造就出　那满天的星辰<br>讲述这　延续数光年的故事　直到拂晓吧</p>
+<p>那一天　抬头看见的　六等星　散发出光辉<br>闪烁无比的是这　眼瞳之中的宇宙<br>因为我　坚信着明天<br>愿望终有一天会　跨越天南海北<br>以看不见的线　将我们　紧紧相连<br>那么就去寻觅　独一无二只属彼此的<br>那个星座吧</p>
 </div>
 ]]></content>
       <tags>
@@ -5398,6 +5278,126 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
 <p>独自一人抬头望去<br>晴朗天空延伸出你的那份笑容</p>
 <p>这温柔的时光　我也希望传递与你<br>沉闷的黑暗　和你在一起便不再害怕<br>收起那害羞的心情　直面这一片真心<br>此刻　我诚挚地将你细细凝视</p>
 <p>这温柔的时光　化作无数耀眼光芒<br>视线重合之时就会明白　我喜欢你…</p>
+</div>
+]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《大好き♡スパイラル（最喜欢♡螺旋形）》歌词翻译</title>
+    <url>/2024/07/15/daisuki_spiral/</url>
+    <content><![CDATA[<p><strong><span lang="ja">大好き♡スパイラル</span>（最喜欢♡螺旋形）</strong> - 《纯白交响曲 原创剧集》濑名爱理角色歌</p>
+<p>作词：rino；作曲：rino</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>鳴り止まない鼓動たち<br>大好きはスパイラル</p>
+<p>弾み過ぎてしょ恋心<br>押さえきれなくて<br>私以上の私って感覚<br>わかんない…</p>
+<p>冷たい言葉投げても打たないで<br>好きで好きでしょうがないみたい<br>スパイラル　つかまえて</p>
+<p>今すぐにギュッとして<br>いつだって触れていたい<br>知りたいのは君の全部です…<br>何度でも確かめよう<br>この愛しさ　君も我慢しないでてね<br>つまりはそう、大好き♡</p>
+<p>名前を呼ぶその声も<br>独り占めしたい<br>初めてばかり増えてく毎日<br>わかった！</p>
+<p>変わりたいと願っていたけど<br>君に会えてすぐ変わってたんだ<br>スパイラル　恋をして</p>
+<p>鳴り止まない鼓動へと<br>涙も解けてく<br>伝えきれない事が悔しい<br>最高の二人へと加速しよう<br>君と愛になりたいんだ<br>ケンカなんて<ruby>嫌<rt>や</rt></ruby>だよ</p>
+<p>閉じ込めたい傷跡も<br>暖めてくれたね<br>意地っ張りだって飛ばして<br>何度でも確かめよう<br>この愛しさ　君も我慢しないでてね<br>つまりはそう、大好き♡</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>心中经久不息的诸多悸动<br>最喜欢的是那螺旋形</p>
+<p>还是太过急切了这份恋心<br>难以抑制呼之欲出<br>超越如今的自己那种感觉<br>我不明白…</p>
+<p>即便抛出冷漠的言语也请别太在意<br>我好像已经喜欢得无法自拔<br>抓住那心中　情意的螺旋</p>
+<p>好想现在立马抱紧你<br>无论何时都想触碰你<br>只愿去了解你的方方面面…<br>五次三番也去确认吧<br>这份真切爱意　你也无需再按捺自己了<br>也就是说啊，最喜欢你了♡</p>
+<p>呼唤我名字的那个声音也<br>只想要据为己有<br>每天都在增添各种新奇的体验<br>我明白了！</p>
+<p>一直渴望自己能有所改变<br>与你相遇心愿便立刻实现<br>迂回的螺旋　走向了爱恋</p>
+<p>面对心中经久不息的悸动<br>泪水也渐渐消融<br>懊恼未能向你传达的种种往事<br>为成为最好的二人加速前进吧<br>想就这样与你真心相爱<br>不愿和你再起争执</p>
+<p>那些想默默尘封的伤痕<br>你也为我温暖了起来<br>自己的固执也消失不见<br>五次三番也去确认吧<br>这份真切爱意　你也无需再按捺自己了<br>也就是说啊，最喜欢你了♡</p>
+</div>
+]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《トゥルリラブ（Truly Love）》歌词翻译</title>
+    <url>/2024/07/18/truly_love/</url>
+    <content><![CDATA[<p><strong><span lang="ja">トゥルリラブ</span>（Truly Love）</strong> - 《纯白交响曲 原创剧集》安洁莉娜·菜夏·史威尔角色歌</p>
+<p>作词：rino；作曲：rino</p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>トゥルリラブ恋をして<br>変わってくミライを<br>二人で歩けますように…</p>
+<p>送り出す声が校舎に響く<br>一人で見送ったあの日<br>気付いてしまった　恋心は<br>君色に染まっていったの</p>
+<p>何気ない仕草から<br>深読みをしちゃう癖は<br>恋して知った私なんです。</p>
+<p>トゥルリラブ恋をして<br>止まらない鼓動も<br>追い越すくらいの元気をあげるよ<br>切なくって動けない…<br>そんな事ないはず<br>思いっきり飛び込んでみます！</p>
+<p>好奇心だけじゃ子供みたい<br>大人の魅力も探求<br>自慢のコスチューム　<ruby>15<rt>さん</rt></ruby><ruby>時<rt>じ</rt></ruby>に跳ねた<br>情熱を注ぐティータイム</p>
+<p>暖かいお紅茶で<br>その胸も暖めたい<br>どんな事が嬉しいんでしょう?</p>
+<p>トゥルリラブ恋の中<br>混ざってく夢模様<br>陽だまりみたいな笑顔が　嬉しい!!<br>真っ白な吐息はクリームにしちゃおう<br>飲み干す横顔を見てたい</p>
+<p>トゥルリラブ恋をして<br>変わってくミライを<br>二人で迎えに行こうよ　今すぐ<br>会いたくって会えない…<br>そんな日があるから　この恋育ってくんだね</p>
+<p>トゥルリラブ恋をして<br>止まらない鼓動も<br>追い越すくらいの元気をあげるよ<br>切なくって動けない…　そんな事ないはず<br>思いっきり飛び込んでみます!</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>谈一场满含情意的恋爱<br>在不断变换的未来<br>只为二人得以携手前行…</p>
+<p>为大家送行的声音在校园里回响<br>独自目送你离开的那一天<br>我便注意到了　这份恋慕之心<br>已经染上独属于你的颜色</p>
+<p>留意他人不经意的举动<br>我不由得会多想的习惯<br>还是在恋爱之中突然发现的。</p>
+<p>谈一场满含情意的恋爱<br>昂扬不止的心跳也<br>会给予你一份更高一筹的活力<br>伤心到举步维艰什么的…<br>这种事不可能发生<br>我会尽情享受度过的每一天！</p>
+<p>只有好奇心就像小孩一般<br>还要探索大人的魅力<br>身穿得意的服装　15时就此起舞<br>在茶会上倾注这份热情</p>
+<p>想用这温热的红茶<br>暖起你饱经操劳的内心<br>什么事情会让你觉得开心呢？</p>
+<p>所谓深爱的恋情之中<br>交织着梦想的纹样<br>你那如阳光洒下般的笑容　令我欢喜!!<br>将纯白色的呼气化成一团团奶油吧<br>想看着你酣畅喝尽的侧颜</p>
+<p>谈一场满含情意的恋爱<br>那不断变换的未来<br>让我们一同前去迎接吧　立刻出发<br>想要相遇却未能如愿…<br>因为也有那些日子　才会孕育出这份爱恋吧</p>
+<p>谈一场满含情意的恋爱<br>昂扬不止的心跳也<br>会给予你一份更高一筹的活力<br>伤心到举步维艰什么的…　这种事不可能发生<br>我会尽情享受度过的每一天！</p>
+</div>
+]]></content>
+      <tags>
+        <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《キミイロミライ（君色未来）》歌词翻译</title>
+    <url>/2024/07/04/kimi_iro_mirai/</url>
+    <content><![CDATA[<p><strong><span lang="ja">キミイロミライ</span>（君色未来）</strong> - 游戏《纯白交响曲 -Love is pure white-》片尾曲</p>
+<p>作词：rino；作曲：<span lang="ja">景家淳</span></p>
+<hr>
+<p><strong>歌词</strong></p>
+<p><em>注：歌词著作权归原作者所有。</em></p>
+<div lang="ja" style="white-space: pre;">
+
+<p>移りゆく季節を　君と歩んでゆく<br>今ここから　始まる未来へと</p>
+<p>たくさんの思い出は　愛を描くシンフォニー<br>弾むように　輝きに変わってゆくよ</p>
+<p>君を守りたい　初めてのこの感情に<br>潤む心の奥は　二人だけの色に染まってゆく</p>
+<p>手をのばせば　君に届く　それだけで嬉しくて<br>駆け出しそうな　この鼓動を　受け止めて欲しいよ<br>あの日　あの瞬間　触れた　熱い気持ち<br>いつまでも忘れないから</p>
+<p>歩き出した日々は　何処へと続くんだろう…<br>不安になる　そんな時もあるね</p>
+<p>だからこそ二人で　どんな時も一緒に<br>乗り越えよう　痛みは絆に変わる</p>
+<p>君の微笑みが　あの日　涙を溶かしたんだ<br>ましろ色の世界に　溢れたのは　愛しい君との未来</p>
+<p>目を閉じても　君に会える　ずっとそばにいるよ<br>夢みたいな　この幸せ　二人育ててゆこう<br>過ぎる景色の中　そっと手をつないだ<br>温もりを信じてゆこう</p>
+<p>君がいるだけで　とても眩しいよ<br>愛を奏でたい　Sing a song</p>
+<p>手をのばせば　君に届く　それだけで嬉しくて<br>駆け出しそうな　この鼓動を　受け止めて　今すぐ<br>本気で泣いて　笑い合って　辿り着く未来を<br>抱きしめたい　二人ずっと　愛を信じてゆく<br>あの日　あの瞬間　触れた　熱い気持ち<br>ただ一つの言葉になる<br>愛してる…</p>
+</div>
+
+<hr>
+<p><strong>翻译</strong></p>
+<div style="white-space: pre;">
+
+<p>在不断更迭的季节里　我与你一同度过<br>二人携手前行　走向从当下开始的未来</p>
+<p>数之不尽的回忆化作　描绘爱的交响曲<br>跃动着的音符　变成那无比夺目的光芒</p>
+<p>想要去守护着你　面对这初次萌生的感情<br>润湿的内心深处　逐渐染上独属于彼此的颜色</p>
+<p>只要伸出手来　便能触碰到你　仅仅如此就让我喜悦不已<br>这按捺不住的　心中的鼓动　希望你能就此接受<br>那一天　那个瞬间　感受到的　炽热的心意<br>我一定永远都不会忘记</p>
+<p>在踏步前进的每一天　最后究竟会到达何处呢…<br>有时也会这样　暗自担忧而不安起来</p>
+<p>正因为如此才要二人　无论何时都要在一起<br>并肩跨过困难　将这苦痛化作坚实的牵绊</p>
+<p>你那份温和的微笑　那一日　消融了流下的悲恸泪水<br>在纯白色的世界里　满溢而出的是　与你同行的美好未来</p>
+<p>即便闭上双眼　也能与你相见　我会一直陪伴着你<br>宛如美梦一般　这份珍贵幸福　让彼此一同悉心培育吧<br>在二人走过的景色中　两只手轻轻牵起<br>相信着这份温暖迈出步伐</p>
+<p>只要你待在我身边　就变得十分耀眼<br>想去奏响这份爱　Sing a song</p>
+<p>只要伸出手来　便能触碰到你　仅仅如此就让我喜悦不已<br>这按捺不住的　心中的鼓动　请就此接受　现在立刻<br>任性地哭出来　再和你欢笑　摸索而出一片未来<br>只愿紧紧相拥　二个人始终　深信彼此间的爱<br>那一天　那个瞬间　感受到的　炽热的心意<br>如今终于凝聚成了这一句<br>我爱你…</p>
 </div>
 ]]></content>
       <tags>
