@@ -238,8 +238,8 @@
   --mermaid-theme: '';
 }
 :root {
-  --code-foreground: #383a42;
-  --code-background: #fafafa;
+  --inline-code-foreground: #24292e;
+  --inline-code-background: #f1f1f1;
   --highlight-background: #fafafa;
   --highlight-foreground: #383a42;
   --highlight-keyword: #a626a4;
@@ -261,8 +261,8 @@
 }
 @media (prefers-color-scheme: light) {
   :root {
-    --code-foreground: #383a42;
-    --code-background: #fafafa;
+    --inline-code-foreground: #24292e;
+    --inline-code-background: #f1f1f1;
     --highlight-background: #fafafa;
     --highlight-foreground: #383a42;
     --highlight-keyword: #a626a4;
@@ -285,8 +285,8 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --code-foreground: $dark-code-foreground;
-    --code-background: $dark-code-background;
+    --inline-code-foreground: #c9d1d9;
+    --inline-code-background: #313131;
     --highlight-background: #282c34;
     --highlight-foreground: #abb2bf;
     --highlight-keyword: #c678dd;
@@ -308,8 +308,8 @@
   }
 }
 .light-mode {
-  --code-foreground: #383a42;
-  --code-background: #fafafa;
+  --inline-code-foreground: #24292e;
+  --inline-code-background: #f1f1f1;
   --highlight-background: #fafafa;
   --highlight-foreground: #383a42;
   --highlight-keyword: #a626a4;
@@ -330,8 +330,8 @@
   --highlight-deletion: #e45649;
 }
 .dark-mode {
-  --code-foreground: $dark-code-foreground;
-  --code-background: $dark-code-background;
+  --inline-code-foreground: #c9d1d9;
+  --inline-code-background: #313131;
   --highlight-background: #282c34;
   --highlight-foreground: #abb2bf;
   --highlight-keyword: #c678dd;
@@ -378,8 +378,8 @@ code {
   padding: 3px 4px;
   word-wrap: break-word;
   border-radius: 4px;
-  color: var(--code-foreground);
-  background: var(--code-background);
+  color: var(--inline-code-foreground);
+  background: var(--inline-code-background);
 }
 .main-content code {
   font-size: 0.9em;
