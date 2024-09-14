@@ -6,7 +6,7 @@
   <link href="https://guopcingithub.github.io/atom.xml" rel="self"/>
   
   <link href="https://guopcingithub.github.io/"/>
-  <updated>2024-09-12T06:19:30.666Z</updated>
+  <updated>2024-09-14T03:23:18.521Z</updated>
   <id>https://guopcingithub.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>某信息栏的边框设计</title>
+    <link href="https://guopcingithub.github.io/2024/09/14/a_certain_infobox_border_design/"/>
+    <id>https://guopcingithub.github.io/2024/09/14/a_certain_infobox_border_design/</id>
+    <published>2024-09-13T16:00:00.000Z</published>
+    <updated>2024-09-14T03:23:18.521Z</updated>
+    
+    <content type="html"><![CDATA[<p>是的，我又来拿CSS <code>background</code>里的gradient系列函数折腾了。上一期见<a href="/2023/06/16/gradient_based_inner_crop_radius_and_double_border/">这里</a>。</p><p>嗯，这一期是受了萌娘百科编辑者<a class="link"   href="https://zh.moegirl.org.cn/User:Grandom" >Grandom <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>为彩虹社成员设计的<a class="link"   href="https://zh.moegirl.org.cn/Template:%E5%BD%A9%E8%99%B9%E7%A4%BE%E4%BF%A1%E6%81%AF%E6%A0%8F" >信息栏模板 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>，以及编辑者<a class="link"   href="https://zh.moegirl.org.cn/User:TsanconBYin" >TsanconBYin <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>在此基础上制作的<a class="link"   href="https://zh.moegirl.org.cn/Template:BanG_Dream!%E4%BA%BA%E7%89%A9%E4%BF%A1%E6%81%AF%E6%A0%8F" >BanG Dream!人物信息栏模板 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>的启发。这两个信息栏模板的边框使用了<code>border</code>与<code>background</code>的组合设计，这里则打算仅使用<code>background</code>来实现类似的效果。那么开始。</p><p>首先是最基本的两侧边框：</p><div style="background:linear-gradient(to right,#F52 8px,transparent 8px calc(100% - 8px),#F52 calc(100% - 8px));height:60vh;width:286px;border-radius:20px;padding:15px;margin:.5em 0 .5em 1em;border-collapse:separate;border-spacing:2px;"><div style="background:#F522;border-radius:9px;height:100%;"></div></div><p>①<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(to right, #F52 8px, transparent 8px calc(100% - 8px), #F52 calc(100% - 8px))</code></p><p>左边上下边框：</p><div style="background:linear-gradient(to right,#F52 8px,transparent 8px calc(100% - 8px),#F52 calc(100% - 8px)),linear-gradient(#F52 8px,transparent 8px calc(100% - 8px),#F52 calc(100% - 8px)) 0 0/15px 100% no-repeat;height:60vh;width:286px;border-radius:20px;padding:15px;margin:.5em 0 .5em 1em;border-collapse:separate;border-spacing:2px;"><div style="background:#F522;border-radius:9px;height:100%;"></div></div><p>②<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(#F52 8px,transparent 8px calc(100% - 8px),#F52 calc(100% - 8px)) <i>0 0/15px 100% no-repeat</i></code></p><p>①<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(to right, #F52 8px, transparent 8px calc(100% - 8px), #F52 calc(100% - 8px))</code></p><p>右边上下边框：</p><div style="background:linear-gradient(to right,#F52 8px,transparent 8px calc(100% - 8px),#F52 calc(100% - 8px)),linear-gradient(#F52 8px,transparent 8px calc(100% - 8px),#F52 calc(100% - 8px)) 0 0/15px 100% no-repeat,linear-gradient(#F52 8px,transparent 8px calc(100% - 8px),#F52 calc(100% - 8px)) 100px 0/100% 100% no-repeat;height:60vh;width:286px;border-radius:20px;padding:15px;margin:.5em 0 .5em 1em;border-collapse:separate;border-spacing:2px;"><div style="background:#F522;border-radius:9px;height:100%;"></div></div><p>③<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(#F52 8px,transparent 8px calc(100% - 8px),#F52 calc(100% - 8px)) <i>100px 0/100% 100% no-repeat</i></code></p><p>②<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(#F52 8px,transparent 8px calc(100% - 8px),#F52 calc(100% - 8px)) <i>0 0/15px 100% no-repeat</i></code></p><p>①<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(to right, #F52 8px, transparent 8px calc(100% - 8px), #F52 calc(100% - 8px))</code></p><p>四周圆角补齐：</p><div style="background:linear-gradient(to right,#F52 8px,transparent 8px calc(100% - 8px),#F52 calc(100% - 8px)),linear-gradient(#F52 8px,transparent 8px calc(100% - 8px),#F52 calc(100% - 8px)) 0 0/15px 100% no-repeat,linear-gradient(#F52 8px,transparent 8px calc(100% - 8px),#F52 calc(100% - 8px)) 100px 0/100% 100% no-repeat,radial-gradient(circle at 20px 20px,transparent 12px,#F52 12px) 0 0/20px 20px no-repeat,radial-gradient(circle at 20px 0,transparent 12px,#F52 12px) 0 100%/20px 20px no-repeat,radial-gradient(circle at 0 20px,transparent 12px,#F52 12px) 100% 0/20px 20px no-repeat,radial-gradient(circle at 0 0,transparent 12px,#F52 12px) 100% 100%/20px 20px no-repeat;height:60vh;width:286px;border-radius:20px;padding:15px;margin:.5em 0 .5em 1em;border-collapse:separate;border-spacing:2px;"><div style="background:#F522;border-radius:9px;height:100%;"></div></div><p>⑦<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at 0 0,transparent 12px,#F52 12px) <i>100% 100%/20px 20px no-repeat</i></code></p><p>⑥<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at 0 20px,transparent 12px,#F52 12px) <i>100% 0/20px 20px no-repeat</i></code></p><p>⑤<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at 20px 0,transparent 12px,#F52 12px) <i>0 100%/20px 20px no-repeat</i></code></p><p>④<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at 20px 20px,transparent 12px,#F52 12px) <i>0 0/20px 20px no-repeat</i></code></p><p>③<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(#F52 8px,transparent 8px calc(100% - 8px),#F52 calc(100% - 8px)) <i>100px 0/100% 100% no-repeat</i></code></p><p>②<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(#F52 8px,transparent 8px calc(100% - 8px),#F52 calc(100% - 8px)) <i>0 0/15px 100% no-repeat</i></code></p><p>①<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(to right, #F52 8px, transparent 8px calc(100% - 8px), #F52 calc(100% - 8px))</code></p><p>中间接头处圆角补齐：</p><div style="background:linear-gradient(to right,#F52 8px,transparent 8px calc(100% - 8px),#F52 calc(100% - 8px)),linear-gradient(#F52 8px,transparent 8px calc(100% - 8px),#F52 calc(100% - 8px)) 0 0/15px 100% no-repeat,linear-gradient(#F52 8px,transparent 8px calc(100% - 8px),#F52 calc(100% - 8px)) 100px 0/100% 100% no-repeat,radial-gradient(circle at 20px 20px,transparent 12px,#F52 12px) 0 0/20px 20px no-repeat,radial-gradient(circle at 20px 0,transparent 12px,#F52 12px) 0 100%/20px 20px no-repeat,radial-gradient(circle at 0 20px,transparent 12px,#F52 12px) 100% 0/20px 20px no-repeat,radial-gradient(circle at 0 0,transparent 12px,#F52 12px) 100% 100%/20px 20px no-repeat,radial-gradient(circle at 20px 4px,#F52 4px,transparent 4px),radial-gradient(circle at 20px calc(100% - 4px),#F52 4px,transparent 4px),radial-gradient(circle at 100px 4px,#F52 4px,transparent 4px),radial-gradient(circle at 100px calc(100% - 4px),#F52 4px,transparent 4px);height:60vh;width:286px;border-radius:20px;padding:15px;margin:.5em 0 .5em 1em;border-collapse:separate;border-spacing:2px;"><div style="background:#F522;border-radius:9px;height:100%;"></div></div><p>⑪<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at 100px calc(100% - 4px),#F52 4px,transparent 4px)</code></p><p>⑩<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at 100px 4px,#F52 4px,transparent 4px)</code></p><p>⑨<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at 20px calc(100% - 4px),#F52 4px,transparent 4px)</code></p><p>⑧<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at 20px 4px,#F52 4px,transparent 4px)</code></p><p>⑦<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at 0 0,transparent 12px,#F52 12px) <i>100% 100%/20px 20px no-repeat</i></code></p><p>⑥<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at 0 20px,transparent 12px,#F52 12px) <i>100% 0/20px 20px no-repeat</i></code></p><p>⑤<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at 20px 0,transparent 12px,#F52 12px) <i>0 100%/20px 20px no-repeat</i></code></p><p>④<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at 20px 20px,transparent 12px,#F52 12px) <i>0 0/20px 20px no-repeat</i></code></p><p>③<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(#F52 8px,transparent 8px calc(100% - 8px),#F52 calc(100% - 8px)) <i>100px 0/100% 100% no-repeat</i></code></p><p>②<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(#F52 8px,transparent 8px calc(100% - 8px),#F52 calc(100% - 8px)) <i>0 0/15px 100% no-repeat</i></code></p><p>①<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(to right, #F52 8px, transparent 8px calc(100% - 8px), #F52 calc(100% - 8px))</code></p><p>到这里就结束了。再次感谢Grandom佬的独特设计。<del>下期会是什么时候呢？</del></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;是的，我又来拿CSS &lt;code&gt;background&lt;/code&gt;里的gradient系列函数折腾了。上一期见&lt;a href=&quot;/2023/06/16/gradient_based_inner_crop_radius_and_double_border/&quot;&gt;这里&lt;/a&gt;。</summary>
+      
+    
+    
+    
+    <category term="随记" scheme="https://guopcingithub.github.io/categories/%E9%9A%8F%E8%AE%B0/"/>
+    
+    
+    <category term="CSS" scheme="https://guopcingithub.github.io/tags/CSS/"/>
+    
+  </entry>
   
   <entry>
     <title>《Precious》歌词翻译</title>
@@ -230,20 +254,20 @@
   </entry>
   
   <entry>
-    <title>《上上下下左右左右BA（上上下下左右左右BA）》歌词翻译</title>
-    <link href="https://guopcingithub.github.io/2024/08/17/ueueshitashita_sayuusayuu_ba/"/>
-    <id>https://guopcingithub.github.io/2024/08/17/ueueshitashita_sayuusayuu_ba/</id>
+    <title>《ゆるぱ☆わンダフル（软绵绵☆Wonderful）》歌词翻译</title>
+    <link href="https://guopcingithub.github.io/2024/08/17/yurupa_wonderful/"/>
+    <id>https://guopcingithub.github.io/2024/08/17/yurupa_wonderful/</id>
     <published>2024-08-16T16:00:00.000Z</published>
-    <updated>2024-08-17T13:55:32.699Z</updated>
+    <updated>2024-08-17T13:55:33.287Z</updated>
     
-    <content type="html"><![CDATA[<p><strong><span lang="ja">上上下下左右左右BA</span>（上上下下左右左右BA）</strong> - TV动画《学生会的一己之见》片尾曲</p><p>作词：RUCCA；作曲：<span lang="ja">安斎孝秋</span></p><hr><p><strong>简介</strong></p><p>本曲与同为该动画片尾曲的《<a href="/2024/08/17/mousou_fetish/"><span lang="ja">妄想☆ふぇてぃっしゅ！</span></a>》《<a href="/2024/08/17/yurupa_wonderful/"><span lang="ja">ゆるぱ☆わンダフル</span></a>》和《<a href="/2024/08/17/zettai_kaichou_sengen/"><span lang="ja">ぜったいかいちょーせんげん？</span></a>》均采用了基本一致的旋律，但在填词和编曲方面有所差异。此外还通过不同演唱者的演绎，或者截取全曲的不同段落，以及编排有跑调、串词、错位等演唱情景，产生了不同的版本与动画对应剧集相配合，最终为整季12集动画提供了旋律相近但又风格各异的片尾曲。</p><p><strong>歌词</strong></p><p><em>注：歌词著作权归原作者所有。</em></p><div lang="ja" style="white-space: pre;"><p>一期一会! イチゴ1円!? サミットしましょ～♪</p><p>“上上下×2で 左右左右 BA”<br>裏コードで 無敵のショータイム<br>迷うなっ 損 (＞_＜)! 損 (T_T)! ドガント秘密“の” アゲる☆</p><p>ゼッタイ私ら ヒロインです!<br>そーゆーナガレです! 必然なんですッ!<br>上下左右に! 縦横無尽です!<br>夢観たモンの勝ち! ミンナ★Blossom★ オンリーワン</p><p>喩えるなら アリスよりも シンデレラが (・∀・) イイッ</p><p>未来にアクセスしたら<br>hな ttpーーーーーーーッ<br>コロン スラスラで wwwビックバン!?<br>キミと私の ココロのミックスジュース♪</p><p>Viva セレブレイトっ! 今日は特別ッ!<br>ハチャメチャなんです! それが正解です!<br>One Two 3 4で! ロケットスタート!<br>まだまだ腹ペコよ もっとREAL頂戴!</p><p>ゼッタイ私ら ヒロインです!<br>そーゆーナガレです! 必然なんですッ!<br>上下左右に! 縦横無尽です!</p><p>夢観たモンの勝ち! ミンナ★Blossom★ オンリーワン</p></div><hr><p><strong>翻译</strong></p><div style="white-space: pre;"><p>一期一会! 一起议会!? 开始首脑峰会吧～♪</p><p>“上上下×2再 左右左右 BA”<br>输入秘技之后 就是无敌表演时间<br>犹豫不决 亏 (＞_＜)! 亏 (T_T)! 干脆把秘密之“键” 告诉你☆</p><p>我们几位注定 是女主人公!<br>就是这样的剧情! 是必然的走向!<br>上下左右之间! 我们自由自在!<br>梦中说先下手为强! 大家★Blossom★ 举世无双</p><p>打个比方的话 相比于爱丽丝 灰姑娘才更 (・∀・) 好些</p><p>打开浏览器去访问未来<br>h又 ttp———————<br>冒号 斜杠斜杠再 www大爆炸!?<br>化作你我分享的 心心相印的混合果汁♪</p><p>Viva 一齐庆贺吧! 今天不同往日!<br>就是要任性妄为! 这就是正确答案!<br>One Two 3 4完! 火箭发射!<br>肚子里还空空如也呢 再拿些REAL给我!</p><p>我们几位注定 是女主人公!<br>就是这样的剧情! 是必然的走向!<br>上下左右之间! 我们自由自在!</p><p>梦中说先下手为强! 大家★Blossom★ 举世无双</p></div>]]></content>
+    <content type="html"><![CDATA[<p><strong><span lang="ja">ゆるぱ☆わンダフル</span>（软绵绵☆Wonderful）</strong> - TV动画《学生会的一己之见》片尾曲</p><p>作词：chacha；作曲：<span lang="ja">安斎孝秋</span></p><hr><p><strong>简介</strong></p><p>本曲与同为该动画片尾曲的《<a href="/2024/08/17/mousou_fetish/"><span lang="ja">妄想☆ふぇてぃっしゅ！</span></a>》《<a href="/2024/08/17/ueueshitashita_sayuusayuu_ba/"><span lang="ja">上上下下左右左右BA</span></a>》和《<a href="/2024/08/17/zettai_kaichou_sengen/"><span lang="ja">ぜったいかいちょーせんげん？</span></a>》均采用了基本一致的旋律，但在填词和编曲方面有所差异。此外还通过不同演唱者的演绎，或者截取全曲的不同段落，以及编排有跑调、串词、错位等演唱情景，产生了不同的版本与动画对应剧集相配合，最终为整季12集动画提供了旋律相近但又风格各异的片尾曲。</p><p><strong>歌词</strong></p><p><em>注：歌词著作权归原作者所有。</em></p><div lang="ja" style="white-space: pre;"><p>清ク正シク しゅわっとココロ ゆるめていきましょ♪</p><p>今日も とぅる♪らった 校門 スキップで超えたら<br>超☆全時空 ぶっとびー (びー) 炸裂ぅ<br>スベらぬ (いやーん。。) 駄ベリ 続けてぇ→燃料投下っ</p><p>ぱ・わー☆全開 タッチの差で勝ち～!<br>夢のデカさで 勝負だぁ なんてね～☆<br>ラフでいいじゃな～い 100まで数えて<br>目をつむってるうちに とびきりぃ～の、をあげる</p><p>過去のことは サラっと水に 流していきましょ♪</p><p>なーんか はにゃにゃーーん… にゃーんか。。。<br>ユーウツな時には (はぁ)　超☆投げキッス (チュッ)<br>猛烈ぅ アタック～!! 走る (ぅ・きゃぁ)</p><p>メガネ 目指してぇ 二人三脚 き・ぶん☆爽快～<br>信号待ちでも 瞬間ダイジェスト 3倍速?! 完璧っ<br>Highでいいじゃな～い 天まで届け<br>ロック解除パスワード 隠してぇ→まーだ、あげない</p><p>ぱ・わー☆全開 タッチの差で勝ち～!<br>夢のデカさで 勝負だぁ なんてね～☆<br>ラフでいいじゃな～い 1000まで数えて<br>目をつむってるうちに とびきりぃ～の、をどうぞ☆</p></div><hr><p><strong>翻译</strong></p><div style="white-space: pre;"><p>高洁而兼具端正 内心充实无比 别太紧张放宽心吧♪</p><p>今天也 一鼓♪作气 跃过 这道校门的话<br>超☆全时空 席卷开来 (来—) 巨大爆炸<br>绝对好笑 (真是—。。) 的漫谈 请继续→燃料投下</p><p>精·力☆全开 以微小优势获胜～!<br>按梦想的大小来 决一胜负 才不会呢～☆<br>随便些不也行吗～ 数到100为止吧<br>在双眼就要合上之时 将最好的～礼、物送给你</p><p>过去的事情就 这样清爽地 让它们随波漂走吧♪</p><p>总—觉得 哎呀呀——… 怎么。。。<br>归于平常的时候 (哈—) 超☆抛出飞吻 (啾)<br>猛烈的 一顿进攻～!! 跑起来 (呜·呀—)</p><p>将眼镜 定为目标 两人三足 心·情☆畅快～<br>等着发令一刻 瞬间精彩集锦 3倍速?! 实在完美<br>高昂些不也挺好～ 直抵那片蓝天<br>将解开限制的密码 藏在一边→现—在，还不能给你</p><p>精·力☆全开 以微小优势获胜～!<br>按梦想的大小来 决一胜负 才不会呢～☆<br>随便些不也行吗～ 数到1000为止吧<br>在双眼就要合上之时 把最好的～礼、物收下吧☆</p></div>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;strong&gt;&lt;span lang=&quot;ja&quot;&gt;上上下下左右左右BA&lt;/span&gt;（上上下下左右左右BA）&lt;/strong&gt; - TV动画《学生会的一己之见》片尾曲&lt;/p&gt;
-&lt;p&gt;作词：RUCCA；作曲：&lt;span lang=&quot;ja&quot;&gt;安斎孝秋&lt;/span&gt;&lt;/p&gt;
-&lt;hr</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;&lt;span lang=&quot;ja&quot;&gt;ゆるぱ☆わンダフル&lt;/span&gt;（软绵绵☆Wonderful）&lt;/strong&gt; - TV动画《学生会的一己之见》片尾曲&lt;/p&gt;
+&lt;p&gt;作词：chacha；作曲：&lt;span lang=&quot;ja&quot;&gt;安斎孝秋&lt;/span&gt;&lt;/p&gt;
+</summary>
       
     
     
@@ -260,20 +284,20 @@
   </entry>
   
   <entry>
-    <title>《ゆるぱ☆わンダフル（软绵绵☆Wonderful）》歌词翻译</title>
-    <link href="https://guopcingithub.github.io/2024/08/17/yurupa_wonderful/"/>
-    <id>https://guopcingithub.github.io/2024/08/17/yurupa_wonderful/</id>
+    <title>《上上下下左右左右BA（上上下下左右左右BA）》歌词翻译</title>
+    <link href="https://guopcingithub.github.io/2024/08/17/ueueshitashita_sayuusayuu_ba/"/>
+    <id>https://guopcingithub.github.io/2024/08/17/ueueshitashita_sayuusayuu_ba/</id>
     <published>2024-08-16T16:00:00.000Z</published>
-    <updated>2024-08-17T13:55:33.287Z</updated>
+    <updated>2024-08-17T13:55:32.699Z</updated>
     
-    <content type="html"><![CDATA[<p><strong><span lang="ja">ゆるぱ☆わンダフル</span>（软绵绵☆Wonderful）</strong> - TV动画《学生会的一己之见》片尾曲</p><p>作词：chacha；作曲：<span lang="ja">安斎孝秋</span></p><hr><p><strong>简介</strong></p><p>本曲与同为该动画片尾曲的《<a href="/2024/08/17/mousou_fetish/"><span lang="ja">妄想☆ふぇてぃっしゅ！</span></a>》《<a href="/2024/08/17/ueueshitashita_sayuusayuu_ba/"><span lang="ja">上上下下左右左右BA</span></a>》和《<a href="/2024/08/17/zettai_kaichou_sengen/"><span lang="ja">ぜったいかいちょーせんげん？</span></a>》均采用了基本一致的旋律，但在填词和编曲方面有所差异。此外还通过不同演唱者的演绎，或者截取全曲的不同段落，以及编排有跑调、串词、错位等演唱情景，产生了不同的版本与动画对应剧集相配合，最终为整季12集动画提供了旋律相近但又风格各异的片尾曲。</p><p><strong>歌词</strong></p><p><em>注：歌词著作权归原作者所有。</em></p><div lang="ja" style="white-space: pre;"><p>清ク正シク しゅわっとココロ ゆるめていきましょ♪</p><p>今日も とぅる♪らった 校門 スキップで超えたら<br>超☆全時空 ぶっとびー (びー) 炸裂ぅ<br>スベらぬ (いやーん。。) 駄ベリ 続けてぇ→燃料投下っ</p><p>ぱ・わー☆全開 タッチの差で勝ち～!<br>夢のデカさで 勝負だぁ なんてね～☆<br>ラフでいいじゃな～い 100まで数えて<br>目をつむってるうちに とびきりぃ～の、をあげる</p><p>過去のことは サラっと水に 流していきましょ♪</p><p>なーんか はにゃにゃーーん… にゃーんか。。。<br>ユーウツな時には (はぁ)　超☆投げキッス (チュッ)<br>猛烈ぅ アタック～!! 走る (ぅ・きゃぁ)</p><p>メガネ 目指してぇ 二人三脚 き・ぶん☆爽快～<br>信号待ちでも 瞬間ダイジェスト 3倍速?! 完璧っ<br>Highでいいじゃな～い 天まで届け<br>ロック解除パスワード 隠してぇ→まーだ、あげない</p><p>ぱ・わー☆全開 タッチの差で勝ち～!<br>夢のデカさで 勝負だぁ なんてね～☆<br>ラフでいいじゃな～い 1000まで数えて<br>目をつむってるうちに とびきりぃ～の、をどうぞ☆</p></div><hr><p><strong>翻译</strong></p><div style="white-space: pre;"><p>高洁而兼具端正 内心充实无比 别太紧张放宽心吧♪</p><p>今天也 一鼓♪作气 跃过 这道校门的话<br>超☆全时空 席卷开来 (来—) 巨大爆炸<br>绝对好笑 (真是—。。) 的漫谈 请继续→燃料投下</p><p>精·力☆全开 以微小优势获胜～!<br>按梦想的大小来 决一胜负 才不会呢～☆<br>随便些不也行吗～ 数到100为止吧<br>在双眼就要合上之时 将最好的～礼、物送给你</p><p>过去的事情就 这样清爽地 让它们随波漂走吧♪</p><p>总—觉得 哎呀呀——… 怎么。。。<br>归于平常的时候 (哈—) 超☆抛出飞吻 (啾)<br>猛烈的 一顿进攻～!! 跑起来 (呜·呀—)</p><p>将眼镜 定为目标 两人三足 心·情☆畅快～<br>等着发令一刻 瞬间精彩集锦 3倍速?! 实在完美<br>高昂些不也挺好～ 直抵那片蓝天<br>将解开限制的密码 藏在一边→现—在，还不能给你</p><p>精·力☆全开 以微小优势获胜～!<br>按梦想的大小来 决一胜负 才不会呢～☆<br>随便些不也行吗～ 数到1000为止吧<br>在双眼就要合上之时 把最好的～礼、物收下吧☆</p></div>]]></content>
+    <content type="html"><![CDATA[<p><strong><span lang="ja">上上下下左右左右BA</span>（上上下下左右左右BA）</strong> - TV动画《学生会的一己之见》片尾曲</p><p>作词：RUCCA；作曲：<span lang="ja">安斎孝秋</span></p><hr><p><strong>简介</strong></p><p>本曲与同为该动画片尾曲的《<a href="/2024/08/17/mousou_fetish/"><span lang="ja">妄想☆ふぇてぃっしゅ！</span></a>》《<a href="/2024/08/17/yurupa_wonderful/"><span lang="ja">ゆるぱ☆わンダフル</span></a>》和《<a href="/2024/08/17/zettai_kaichou_sengen/"><span lang="ja">ぜったいかいちょーせんげん？</span></a>》均采用了基本一致的旋律，但在填词和编曲方面有所差异。此外还通过不同演唱者的演绎，或者截取全曲的不同段落，以及编排有跑调、串词、错位等演唱情景，产生了不同的版本与动画对应剧集相配合，最终为整季12集动画提供了旋律相近但又风格各异的片尾曲。</p><p><strong>歌词</strong></p><p><em>注：歌词著作权归原作者所有。</em></p><div lang="ja" style="white-space: pre;"><p>一期一会! イチゴ1円!? サミットしましょ～♪</p><p>“上上下×2で 左右左右 BA”<br>裏コードで 無敵のショータイム<br>迷うなっ 損 (＞_＜)! 損 (T_T)! ドガント秘密“の” アゲる☆</p><p>ゼッタイ私ら ヒロインです!<br>そーゆーナガレです! 必然なんですッ!<br>上下左右に! 縦横無尽です!<br>夢観たモンの勝ち! ミンナ★Blossom★ オンリーワン</p><p>喩えるなら アリスよりも シンデレラが (・∀・) イイッ</p><p>未来にアクセスしたら<br>hな ttpーーーーーーーッ<br>コロン スラスラで wwwビックバン!?<br>キミと私の ココロのミックスジュース♪</p><p>Viva セレブレイトっ! 今日は特別ッ!<br>ハチャメチャなんです! それが正解です!<br>One Two 3 4で! ロケットスタート!<br>まだまだ腹ペコよ もっとREAL頂戴!</p><p>ゼッタイ私ら ヒロインです!<br>そーゆーナガレです! 必然なんですッ!<br>上下左右に! 縦横無尽です!</p><p>夢観たモンの勝ち! ミンナ★Blossom★ オンリーワン</p></div><hr><p><strong>翻译</strong></p><div style="white-space: pre;"><p>一期一会! 一起议会!? 开始首脑峰会吧～♪</p><p>“上上下×2再 左右左右 BA”<br>输入秘技之后 就是无敌表演时间<br>犹豫不决 亏 (＞_＜)! 亏 (T_T)! 干脆把秘密之“键” 告诉你☆</p><p>我们几位注定 是女主人公!<br>就是这样的剧情! 是必然的走向!<br>上下左右之间! 我们自由自在!<br>梦中说先下手为强! 大家★Blossom★ 举世无双</p><p>打个比方的话 相比于爱丽丝 灰姑娘才更 (・∀・) 好些</p><p>打开浏览器去访问未来<br>h又 ttp———————<br>冒号 斜杠斜杠再 www大爆炸!?<br>化作你我分享的 心心相印的混合果汁♪</p><p>Viva 一齐庆贺吧! 今天不同往日!<br>就是要任性妄为! 这就是正确答案!<br>One Two 3 4完! 火箭发射!<br>肚子里还空空如也呢 再拿些REAL给我!</p><p>我们几位注定 是女主人公!<br>就是这样的剧情! 是必然的走向!<br>上下左右之间! 我们自由自在!</p><p>梦中说先下手为强! 大家★Blossom★ 举世无双</p></div>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;strong&gt;&lt;span lang=&quot;ja&quot;&gt;ゆるぱ☆わンダフル&lt;/span&gt;（软绵绵☆Wonderful）&lt;/strong&gt; - TV动画《学生会的一己之见》片尾曲&lt;/p&gt;
-&lt;p&gt;作词：chacha；作曲：&lt;span lang=&quot;ja&quot;&gt;安斎孝秋&lt;/span&gt;&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;&lt;span lang=&quot;ja&quot;&gt;上上下下左右左右BA&lt;/span&gt;（上上下下左右左右BA）&lt;/strong&gt; - TV动画《学生会的一己之见》片尾曲&lt;/p&gt;
+&lt;p&gt;作词：RUCCA；作曲：&lt;span lang=&quot;ja&quot;&gt;安斎孝秋&lt;/span&gt;&lt;/p&gt;
+&lt;hr</summary>
       
     
     
@@ -596,35 +620,6 @@
     <category term="日本音乐作品" scheme="https://guopcingithub.github.io/tags/%E6%97%A5%E6%9C%AC%E9%9F%B3%E4%B9%90%E4%BD%9C%E5%93%81/"/>
     
     <category term="片尾曲" scheme="https://guopcingithub.github.io/tags/%E7%89%87%E5%B0%BE%E6%9B%B2/"/>
-    
-    <category term="纯白交响曲音乐" scheme="https://guopcingithub.github.io/tags/%E7%BA%AF%E7%99%BD%E4%BA%A4%E5%93%8D%E6%9B%B2%E9%9F%B3%E4%B9%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《さよなら君の声（再见了你的声音）》歌词翻译</title>
-    <link href="https://guopcingithub.github.io/2024/07/06/sayonara_kimi_no_koe/"/>
-    <id>https://guopcingithub.github.io/2024/07/06/sayonara_kimi_no_koe/</id>
-    <published>2024-07-05T16:00:00.000Z</published>
-    <updated>2024-08-10T01:36:31.851Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong><span lang="ja">さよなら君の声</span>（再见了你的声音）</strong> - 游戏《纯白交响曲 -Love is pure white-》天羽美羽线插曲</p><p>作词：rino；作曲：<span lang="ja">田辺トシノ</span></p><hr><p><strong>歌词</strong></p><p><em>注：歌词著作权归原作者所有。</em></p><div lang="ja" style="white-space: pre;"><p>さよなら君の声　忘れたりしない　ずっと<br>たくさんの想い出が　私を包むから…</p><p>悲しくなんてない<br>心でそう呟いてみたんだ<br>君を想えば</p><p>柔らかな温もりが<br>痛みを誘うから　動けないよ</p><p>さよなら君の声　忘れたりしない　ずっと<br>涙はまだいらない　大好きだったから</p><p>言葉じゃなくても届くよ<br>私たちだけの絆<br>胸にあるから</p><p>精一杯の強がりで<br>送り出せば　笑顔に会えるの</p><p>さよなら君の声　どうか元気でいてね<br>離れて気付く愛に　振り向かないで行こう</p><p>さよならの途中で　溢れゆく想い出が<br>滲まないように　今は　涙にもさよなら</p><p>さよなら君の声　別れたくなんてないよ<br>こんなに悲しいなら　出逢わなきゃよかった</p><p>あふれゆく気持ちに　押し潰されそうになる<br>もう泣いてもいいよね　強くなんてないよ</p><p>さよなら君の声　消せない君の笑顔<br>どんなに悲しくても　出逢えてよかったんだ</p><p>さよなら君の声　忘れたりしない　ずっと<br>たくさんの想い出と　この道を歩んでく</p></div><hr><p><strong>翻译</strong></p><div style="white-space: pre;"><p>再见了你的声音　我绝对不会忘记　永远<br>只因无数的美好回忆　一直环绕在我的身旁…</p><p>不会就此独自悲伤<br>心中默默地像这样告诉自己<br>每当想到了你</p><p>柔和舒适的那份温暖<br>总会牵动难忍的苦痛　令我寸步难移</p><p>再见了你的声音　我绝对不会忘记　永远<br>现在还不需要流下眼泪　因为我是这样爱你</p><p>即便闭口不言也能好好传达<br>只属于彼此的这份牵绊<br>存在于我们心底</p><p>尽心竭力地不露愁容<br>在为你送行时　就能够一转笑颜吗</p><p>再见了你的声音　一定要珍重好自己<br>在分别时发觉的爱恋　请你莫要回首就此走远</p><p>说出再见的中途　种种回忆逐渐充盈内心<br>不想被悲情左右　此刻就　同泪水也说声再见</p><p>再见了你的声音　还不愿现在就与你别离<br>早知如今会这样痛心　当初没有相遇该多好</p><p>心中的感情翻涌不已　似乎就快要将我压垮<br>已经可以放声哭泣了吧　没法再强颜欢笑了</p><p>再见了你的声音　你的笑容仍萦绕在心头<br>即便有多么伤感苦闷　与你相识真是太好了</p><p>再见了你的声音　我绝对不会忘记　永远<br>怀揣着数不尽的回忆　沿着这条路走下去</p></div>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;&lt;span lang=&quot;ja&quot;&gt;さよなら君の声&lt;/span&gt;（再见了你的声音）&lt;/strong&gt; - 游戏《纯白交响曲 -Love is pure white-》天羽美羽线插曲&lt;/p&gt;
-&lt;p&gt;作词：rino；作曲：&lt;span lang=&quot;ja&quot;&gt;田辺トシノ&lt;</summary>
-      
-    
-    
-    
-    <category term="歌词翻译" scheme="https://guopcingithub.github.io/categories/%E6%AD%8C%E8%AF%8D%E7%BF%BB%E8%AF%91/"/>
-    
-    
-    <category term="日本音乐作品" scheme="https://guopcingithub.github.io/tags/%E6%97%A5%E6%9C%AC%E9%9F%B3%E4%B9%90%E4%BD%9C%E5%93%81/"/>
-    
-    <category term="插曲" scheme="https://guopcingithub.github.io/tags/%E6%8F%92%E6%9B%B2/"/>
     
     <category term="纯白交响曲音乐" scheme="https://guopcingithub.github.io/tags/%E7%BA%AF%E7%99%BD%E4%BA%A4%E5%93%8D%E6%9B%B2%E9%9F%B3%E4%B9%90/"/>
     
