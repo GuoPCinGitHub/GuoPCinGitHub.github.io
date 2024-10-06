@@ -6,7 +6,7 @@
   <link href="https://guopcingithub.github.io/atom.xml" rel="self"/>
   
   <link href="https://guopcingithub.github.io/"/>
-  <updated>2024-10-06T07:52:21.078Z</updated>
+  <updated>2024-10-06T08:01:17.241Z</updated>
   <id>https://guopcingithub.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://guopcingithub.github.io/2024/10/05/disappearance_of_edge_pdf_icon/"/>
     <id>https://guopcingithub.github.io/2024/10/05/disappearance_of_edge_pdf_icon/</id>
     <published>2024-10-04T16:00:00.000Z</published>
-    <updated>2024-10-06T07:52:21.078Z</updated>
+    <updated>2024-10-06T08:01:17.241Z</updated>
     
-    <content type="html"><![CDATA[<p>前些天下载了所谓“处理文书”需要安装的插件，当时没太在意就下下来让它自己安装了，不过有瞥到里面有涉及PDF处理和签名之类的插件。后来发现直接把PDF文件的图标干没了（关联的默认应用是Microsoft Edge）。<del>最后那堆插件完全没用到更是无语。</del>后来受网上一个自定义图标的帖子的启发，成功恢复了图标，顺手记在这里。反正也就是改改注册表的事情。</p><p>在注册表中找到以下路径：<code>\HKEY_CLASSES_ROOT\MSEdgePDF\DefaultIcon</code>，其中<code>(默认)</code>字符串的值应类似于<code>&lt;路径&gt;,&lt;数字&gt;</code>的形式。比如<code>C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,11</code>。<code>&lt;路径&gt;</code>指明图标所在的文件，也即文件属性中“更改图标…”填入的路径。<code>&lt;数字&gt;</code>则是图标在文件图标列表中的位置。对于本例则是msedge.exe中所包含的图标列表的第11个图标（从0开始从上向下、从左向右计数），在右键Edge后点“属性”再点“更改图标”便能看到第11个图标是一个PDF图标，如下图。</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="/img/edge-icons.png"                      alt="Edge图标列表"                ></p><p>我这边遇到的情况是，前面的<code>&lt;路径&gt;</code>部分不见了，只有<code>,11</code>的部分。除了可以直接补上Edge的路径之外，也可以在注册表同级的<code>\Application</code>下的<code>ApplicationIcon</code>处确认路径。比如我这边是<code>C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,0</code>。</p><p>改完之后顺手把那堆插件卸了，相关注册表内容也手动清理了一遍。</p>]]></content>
+    <content type="html"><![CDATA[<p>前些天下载了所谓“处理文书”需要安装的插件，当时没太在意就下下来让它自己安装了，不过有瞥到里面有涉及PDF处理和签名之类的插件。后来发现直接把PDF文件的图标干没了（关联的默认应用是Microsoft Edge）。<del>最后那堆插件完全没用到更是无语。</del>后来受网上一个自定义图标的帖子的启发，成功恢复了图标，顺手记在这里。反正也就是改改注册表的事情。</p><p>在注册表中找到以下路径：<code>\HKEY_CLASSES_ROOT\MSEdgePDF\DefaultIcon</code>，其中<code>(默认)</code>字符串的值应类似于<code>&lt;路径&gt;,&lt;数字&gt;</code>的形式。比如<code>C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,11</code>。<code>&lt;路径&gt;</code>指明图标所在的文件，<code>&lt;数字&gt;</code>则是图标在文件图标列表中的位置。对于本例则是msedge.exe中所包含的图标列表的第11个图标，在右键Edge后点“属性”再点“更改图标…”便能看到第11个图标（从0开始从上向下、从左向右计数）是一个PDF图标，如下图。</p><p><img                       lazyload                     src="/images/loading.svg"                     data-src="/img/edge-icons.png"                      alt="Edge图标列表"                ></p><p>我这边遇到的情况是，前面的<code>&lt;路径&gt;</code>部分不见了，只有<code>,11</code>的部分。除了可以直接补上Edge的路径之外，也可以在注册表同级的<code>\Application</code>下的<code>ApplicationIcon</code>处确认路径。比如我这边是<code>C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,0</code>。</p><p>改完之后顺手把那堆插件卸了，相关注册表内容也手动清理了一遍。</p>]]></content>
     
     
       
@@ -493,19 +493,20 @@
   </entry>
   
   <entry>
-    <title>《ぜったいかいちょーせんげん？（绝对会长宣言？）》歌词翻译</title>
-    <link href="https://guopcingithub.github.io/2024/08/17/zettai_kaichou_sengen/"/>
-    <id>https://guopcingithub.github.io/2024/08/17/zettai_kaichou_sengen/</id>
+    <title>《ゆるぱ☆わンダフル（软绵绵☆Wonderful）》歌词翻译</title>
+    <link href="https://guopcingithub.github.io/2024/08/17/yurupa_wonderful/"/>
+    <id>https://guopcingithub.github.io/2024/08/17/yurupa_wonderful/</id>
     <published>2024-08-16T16:00:00.000Z</published>
-    <updated>2024-09-09T07:36:37.811Z</updated>
+    <updated>2024-08-17T13:55:33.287Z</updated>
     
-    <content type="html"><![CDATA[<p><strong><span lang="ja">ぜったいかいちょーせんげん？</span>（绝对会长宣言？）</strong> - TV动画《学生会的一己之见》片尾曲</p><p>作词：<span lang="ja">桜野くりむ</span>；作曲：<span lang="ja">安斎孝秋</span></p><hr><p><strong>简介</strong></p><p>本曲与同为该动画片尾曲的《<a href="/2024/08/17/mousou_fetish/"><span lang="ja">妄想☆ふぇてぃっしゅ！</span></a>》《<a href="/2024/08/17/ueueshitashita_sayuusayuu_ba/"><span lang="ja">上上下下左右左右BA</span></a>》和《<a href="/2024/08/17/yurupa_wonderful/"><span lang="ja">ゆるぱ☆わンダフル</span></a>》均采用了基本一致的旋律，但在填词和编曲方面有所差异。此外还通过不同演唱者的演绎，或者截取全曲的不同段落，以及编排有跑调、串词、错位等演唱情景，产生了不同的版本与动画对应剧集相配合，最终为整季12集动画提供了旋律相近但又风格各异的片尾曲。</p><p>动画片头曲《Treasure》的同名单曲中收录的C&#x2F;W曲《<span lang="ja">絶対会長宣言！</span>》与本曲采用了相同的填词。</p><p><strong>歌词</strong></p><p><em>注：歌词著作权归原作者所有。</em></p><div lang="ja" style="white-space: pre;"><p>桜野くりむ、桜野くりむに清き一票を</p><p>っていうか、入れなさいよ。会長命令<br>え？本末転倒？　そんなの知らないよ！<br>だって、会長はなんでもありなんだもん！</p><p>あい、あむ、かいちょー　あい、あむ、かいちょー<br>赤絨毯の上しか　歩かない～<br>あい、あむ、かいちょー　あい、あむ、かいちょー<br>ところで会長って、英語でどう言うの？</p><p>桜野くりむ、桜野くりむに清き一票を！</p><p>っていうか、もう決定。会長命令<br>え？政治腐敗？　そんなの知らないよ！<br>だって、会長は絶対なんだからっ！</p><p>あい、あむ、かいちょー　あい、あむ、かいちょー<br><ruby>頭<rt>こうべ</rt></ruby>をさげい、頭をさげい<br>あい、あむ、かいちょー　あい、あむ、かいちょー<br>ところで会長って、ギャラとかないの？</p><p>え、なんでそんなに美しいのですかって？<br>そうねー。やっぱり、毎日の早寝早起きが決め手かな。<br>女ってものはね。寝て、美しくなるのよ。うふふ。</p><p>え、私みたいに妖艶になりたいって？<br>あのね。高すぎる目標って、時に自分を苦しめちゃうよ。<br>女ってものはね。皆、可愛いものなのよ。うっふっふふーん。</p><p>あい、あむ、かいちょー　あい、あむ、かいちょー<br>「様」をつけても、いいんだよ～<br>あい、あむ、かいちょー　あい、あむ、かいちょー<br>ところで会長って、なんか仕事するの？</p><p>……え、うそ、ホントはこんなに仕事あるの？ほっへー</p><p>……</p><p>らららららー。ららららー。ららららー</p></div><hr><p><strong>翻译</strong></p><div style="white-space: pre;"><p>樱野栗梦，请将庄严一票投给樱野栗梦</p><p>不如说，快加入进来吧。这是会长命令<br>欸？本末倒置？　你说的我完全不懂！<br>因为，会长就是全知全能的嘛！</p><p>I、am、会长　I、am、会长<br>除了柔软的红地毯上　我哪都不走～<br>I、am、会长　I、am、会长<br>说起来会长一词，用英语怎么说？</p><p>樱野栗梦，请将庄严一票投给樱野栗梦！</p><p>不如说，已经决定了。这是会长命令<br>欸？政治腐败？　你说的我完全不懂！<br>因为，会长就是绝对的权威嘛！</p><p>I、am、会长　I、am、会长<br>把脑袋低下来，把头都低下来<br>I、am、会长　I、am、会长<br>说起来担任会长，有报酬之类的吗？</p><p>欸，你问我为什么我会这么漂亮？<br>这个嘛—。果然，每天保持早睡早起是决定性的呢。<br>对于女生来说呢。好好睡觉，就能变得漂亮。哦嘿嘿。</p><p>欸，你说想要变得像我一样美艳？<br>我说啊。设立太高的目标，有时是会让自己吃苦头的哦。<br>对于女生来说呢。大家，都非常的可爱呢。哦嘿嘿嘿—。</p><p>I、am、会长　I、am、会长<br>后面跟上「大人」，也可以哦～<br>I、am、会长　I、am、会长<br>说起来担任会长，是要做什么工作？</p><p>……欸，骗人的吧，真的要干这么多事情吗？呜欸—</p><p>……</p><p>啦啦啦啦啦—。啦啦啦啦—。啦啦啦啦—</p></div>]]></content>
+    <content type="html"><![CDATA[<p><strong><span lang="ja">ゆるぱ☆わンダフル</span>（软绵绵☆Wonderful）</strong> - TV动画《学生会的一己之见》片尾曲</p><p>作词：chacha；作曲：<span lang="ja">安斎孝秋</span></p><hr><p><strong>简介</strong></p><p>本曲与同为该动画片尾曲的《<a href="/2024/08/17/mousou_fetish/"><span lang="ja">妄想☆ふぇてぃっしゅ！</span></a>》《<a href="/2024/08/17/ueueshitashita_sayuusayuu_ba/"><span lang="ja">上上下下左右左右BA</span></a>》和《<a href="/2024/08/17/zettai_kaichou_sengen/"><span lang="ja">ぜったいかいちょーせんげん？</span></a>》均采用了基本一致的旋律，但在填词和编曲方面有所差异。此外还通过不同演唱者的演绎，或者截取全曲的不同段落，以及编排有跑调、串词、错位等演唱情景，产生了不同的版本与动画对应剧集相配合，最终为整季12集动画提供了旋律相近但又风格各异的片尾曲。</p><p><strong>歌词</strong></p><p><em>注：歌词著作权归原作者所有。</em></p><div lang="ja" style="white-space: pre;"><p>清ク正シク しゅわっとココロ ゆるめていきましょ♪</p><p>今日も とぅる♪らった 校門 スキップで超えたら<br>超☆全時空 ぶっとびー (びー) 炸裂ぅ<br>スベらぬ (いやーん。。) 駄ベリ 続けてぇ→燃料投下っ</p><p>ぱ・わー☆全開 タッチの差で勝ち～!<br>夢のデカさで 勝負だぁ なんてね～☆<br>ラフでいいじゃな～い 100まで数えて<br>目をつむってるうちに とびきりぃ～の、をあげる</p><p>過去のことは サラっと水に 流していきましょ♪</p><p>なーんか はにゃにゃーーん… にゃーんか。。。<br>ユーウツな時には (はぁ)　超☆投げキッス (チュッ)<br>猛烈ぅ アタック～!! 走る (ぅ・きゃぁ)</p><p>メガネ 目指してぇ 二人三脚 き・ぶん☆爽快～<br>信号待ちでも 瞬間ダイジェスト 3倍速?! 完璧っ<br>Highでいいじゃな～い 天まで届け<br>ロック解除パスワード 隠してぇ→まーだ、あげない</p><p>ぱ・わー☆全開 タッチの差で勝ち～!<br>夢のデカさで 勝負だぁ なんてね～☆<br>ラフでいいじゃな～い 1000まで数えて<br>目をつむってるうちに とびきりぃ～の、をどうぞ☆</p></div><hr><p><strong>翻译</strong></p><div style="white-space: pre;"><p>高洁而兼具端正 内心充实无比 别太紧张放宽心吧♪</p><p>今天也 一鼓♪作气 跃过 这道校门的话<br>超☆全时空 席卷开来 (来—) 巨大爆炸<br>绝对好笑 (真是—。。) 的漫谈 请继续→燃料投下</p><p>精·力☆全开 以微小优势获胜～!<br>按梦想的大小来 决一胜负 才不会呢～☆<br>随便些不也行吗～ 数到100为止吧<br>在双眼就要合上之时 将最好的～礼、物送给你</p><p>过去的事情就 这样清爽地 让它们随波漂走吧♪</p><p>总—觉得 哎呀呀——… 怎么。。。<br>归于平常的时候 (哈—) 超☆抛出飞吻 (啾)<br>猛烈的 一顿进攻～!! 跑起来 (呜·呀—)</p><p>将眼镜 定为目标 两人三足 心·情☆畅快～<br>等着发令一刻 瞬间精彩集锦 3倍速?! 实在完美<br>高昂些不也挺好～ 直抵那片蓝天<br>将解开限制的密码 藏在一边→现—在，还不能给你</p><p>精·力☆全开 以微小优势获胜～!<br>按梦想的大小来 决一胜负 才不会呢～☆<br>随便些不也行吗～ 数到1000为止吧<br>在双眼就要合上之时 把最好的～礼、物收下吧☆</p></div>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;strong&gt;&lt;span lang=&quot;ja&quot;&gt;ぜったいかいちょーせんげん？&lt;/span&gt;（绝对会长宣言？）&lt;/strong&gt; - TV动画《学生会的一己之见》片尾曲&lt;/p&gt;
-&lt;p&gt;作词：&lt;span lang=&quot;ja&quot;&gt;桜野くりむ&lt;/span&gt;；作曲：&lt;span lang=</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;&lt;span lang=&quot;ja&quot;&gt;ゆるぱ☆わンダフル&lt;/span&gt;（软绵绵☆Wonderful）&lt;/strong&gt; - TV动画《学生会的一己之见》片尾曲&lt;/p&gt;
+&lt;p&gt;作词：chacha；作曲：&lt;span lang=&quot;ja&quot;&gt;安斎孝秋&lt;/span&gt;&lt;/p&gt;
+</summary>
       
     
     
@@ -522,20 +523,19 @@
   </entry>
   
   <entry>
-    <title>《ゆるぱ☆わンダフル（软绵绵☆Wonderful）》歌词翻译</title>
-    <link href="https://guopcingithub.github.io/2024/08/17/yurupa_wonderful/"/>
-    <id>https://guopcingithub.github.io/2024/08/17/yurupa_wonderful/</id>
+    <title>《ぜったいかいちょーせんげん？（绝对会长宣言？）》歌词翻译</title>
+    <link href="https://guopcingithub.github.io/2024/08/17/zettai_kaichou_sengen/"/>
+    <id>https://guopcingithub.github.io/2024/08/17/zettai_kaichou_sengen/</id>
     <published>2024-08-16T16:00:00.000Z</published>
-    <updated>2024-08-17T13:55:33.287Z</updated>
+    <updated>2024-09-09T07:36:37.811Z</updated>
     
-    <content type="html"><![CDATA[<p><strong><span lang="ja">ゆるぱ☆わンダフル</span>（软绵绵☆Wonderful）</strong> - TV动画《学生会的一己之见》片尾曲</p><p>作词：chacha；作曲：<span lang="ja">安斎孝秋</span></p><hr><p><strong>简介</strong></p><p>本曲与同为该动画片尾曲的《<a href="/2024/08/17/mousou_fetish/"><span lang="ja">妄想☆ふぇてぃっしゅ！</span></a>》《<a href="/2024/08/17/ueueshitashita_sayuusayuu_ba/"><span lang="ja">上上下下左右左右BA</span></a>》和《<a href="/2024/08/17/zettai_kaichou_sengen/"><span lang="ja">ぜったいかいちょーせんげん？</span></a>》均采用了基本一致的旋律，但在填词和编曲方面有所差异。此外还通过不同演唱者的演绎，或者截取全曲的不同段落，以及编排有跑调、串词、错位等演唱情景，产生了不同的版本与动画对应剧集相配合，最终为整季12集动画提供了旋律相近但又风格各异的片尾曲。</p><p><strong>歌词</strong></p><p><em>注：歌词著作权归原作者所有。</em></p><div lang="ja" style="white-space: pre;"><p>清ク正シク しゅわっとココロ ゆるめていきましょ♪</p><p>今日も とぅる♪らった 校門 スキップで超えたら<br>超☆全時空 ぶっとびー (びー) 炸裂ぅ<br>スベらぬ (いやーん。。) 駄ベリ 続けてぇ→燃料投下っ</p><p>ぱ・わー☆全開 タッチの差で勝ち～!<br>夢のデカさで 勝負だぁ なんてね～☆<br>ラフでいいじゃな～い 100まで数えて<br>目をつむってるうちに とびきりぃ～の、をあげる</p><p>過去のことは サラっと水に 流していきましょ♪</p><p>なーんか はにゃにゃーーん… にゃーんか。。。<br>ユーウツな時には (はぁ)　超☆投げキッス (チュッ)<br>猛烈ぅ アタック～!! 走る (ぅ・きゃぁ)</p><p>メガネ 目指してぇ 二人三脚 き・ぶん☆爽快～<br>信号待ちでも 瞬間ダイジェスト 3倍速?! 完璧っ<br>Highでいいじゃな～い 天まで届け<br>ロック解除パスワード 隠してぇ→まーだ、あげない</p><p>ぱ・わー☆全開 タッチの差で勝ち～!<br>夢のデカさで 勝負だぁ なんてね～☆<br>ラフでいいじゃな～い 1000まで数えて<br>目をつむってるうちに とびきりぃ～の、をどうぞ☆</p></div><hr><p><strong>翻译</strong></p><div style="white-space: pre;"><p>高洁而兼具端正 内心充实无比 别太紧张放宽心吧♪</p><p>今天也 一鼓♪作气 跃过 这道校门的话<br>超☆全时空 席卷开来 (来—) 巨大爆炸<br>绝对好笑 (真是—。。) 的漫谈 请继续→燃料投下</p><p>精·力☆全开 以微小优势获胜～!<br>按梦想的大小来 决一胜负 才不会呢～☆<br>随便些不也行吗～ 数到100为止吧<br>在双眼就要合上之时 将最好的～礼、物送给你</p><p>过去的事情就 这样清爽地 让它们随波漂走吧♪</p><p>总—觉得 哎呀呀——… 怎么。。。<br>归于平常的时候 (哈—) 超☆抛出飞吻 (啾)<br>猛烈的 一顿进攻～!! 跑起来 (呜·呀—)</p><p>将眼镜 定为目标 两人三足 心·情☆畅快～<br>等着发令一刻 瞬间精彩集锦 3倍速?! 实在完美<br>高昂些不也挺好～ 直抵那片蓝天<br>将解开限制的密码 藏在一边→现—在，还不能给你</p><p>精·力☆全开 以微小优势获胜～!<br>按梦想的大小来 决一胜负 才不会呢～☆<br>随便些不也行吗～ 数到1000为止吧<br>在双眼就要合上之时 把最好的～礼、物收下吧☆</p></div>]]></content>
+    <content type="html"><![CDATA[<p><strong><span lang="ja">ぜったいかいちょーせんげん？</span>（绝对会长宣言？）</strong> - TV动画《学生会的一己之见》片尾曲</p><p>作词：<span lang="ja">桜野くりむ</span>；作曲：<span lang="ja">安斎孝秋</span></p><hr><p><strong>简介</strong></p><p>本曲与同为该动画片尾曲的《<a href="/2024/08/17/mousou_fetish/"><span lang="ja">妄想☆ふぇてぃっしゅ！</span></a>》《<a href="/2024/08/17/ueueshitashita_sayuusayuu_ba/"><span lang="ja">上上下下左右左右BA</span></a>》和《<a href="/2024/08/17/yurupa_wonderful/"><span lang="ja">ゆるぱ☆わンダフル</span></a>》均采用了基本一致的旋律，但在填词和编曲方面有所差异。此外还通过不同演唱者的演绎，或者截取全曲的不同段落，以及编排有跑调、串词、错位等演唱情景，产生了不同的版本与动画对应剧集相配合，最终为整季12集动画提供了旋律相近但又风格各异的片尾曲。</p><p>动画片头曲《Treasure》的同名单曲中收录的C&#x2F;W曲《<span lang="ja">絶対会長宣言！</span>》与本曲采用了相同的填词。</p><p><strong>歌词</strong></p><p><em>注：歌词著作权归原作者所有。</em></p><div lang="ja" style="white-space: pre;"><p>桜野くりむ、桜野くりむに清き一票を</p><p>っていうか、入れなさいよ。会長命令<br>え？本末転倒？　そんなの知らないよ！<br>だって、会長はなんでもありなんだもん！</p><p>あい、あむ、かいちょー　あい、あむ、かいちょー<br>赤絨毯の上しか　歩かない～<br>あい、あむ、かいちょー　あい、あむ、かいちょー<br>ところで会長って、英語でどう言うの？</p><p>桜野くりむ、桜野くりむに清き一票を！</p><p>っていうか、もう決定。会長命令<br>え？政治腐敗？　そんなの知らないよ！<br>だって、会長は絶対なんだからっ！</p><p>あい、あむ、かいちょー　あい、あむ、かいちょー<br><ruby>頭<rt>こうべ</rt></ruby>をさげい、頭をさげい<br>あい、あむ、かいちょー　あい、あむ、かいちょー<br>ところで会長って、ギャラとかないの？</p><p>え、なんでそんなに美しいのですかって？<br>そうねー。やっぱり、毎日の早寝早起きが決め手かな。<br>女ってものはね。寝て、美しくなるのよ。うふふ。</p><p>え、私みたいに妖艶になりたいって？<br>あのね。高すぎる目標って、時に自分を苦しめちゃうよ。<br>女ってものはね。皆、可愛いものなのよ。うっふっふふーん。</p><p>あい、あむ、かいちょー　あい、あむ、かいちょー<br>「様」をつけても、いいんだよ～<br>あい、あむ、かいちょー　あい、あむ、かいちょー<br>ところで会長って、なんか仕事するの？</p><p>……え、うそ、ホントはこんなに仕事あるの？ほっへー</p><p>……</p><p>らららららー。ららららー。ららららー</p></div><hr><p><strong>翻译</strong></p><div style="white-space: pre;"><p>樱野栗梦，请将庄严一票投给樱野栗梦</p><p>不如说，快加入进来吧。这是会长命令<br>欸？本末倒置？　你说的我完全不懂！<br>因为，会长就是全知全能的嘛！</p><p>I、am、会长　I、am、会长<br>除了柔软的红地毯上　我哪都不走～<br>I、am、会长　I、am、会长<br>说起来会长一词，用英语怎么说？</p><p>樱野栗梦，请将庄严一票投给樱野栗梦！</p><p>不如说，已经决定了。这是会长命令<br>欸？政治腐败？　你说的我完全不懂！<br>因为，会长就是绝对的权威嘛！</p><p>I、am、会长　I、am、会长<br>把脑袋低下来，把头都低下来<br>I、am、会长　I、am、会长<br>说起来担任会长，有报酬之类的吗？</p><p>欸，你问我为什么我会这么漂亮？<br>这个嘛—。果然，每天保持早睡早起是决定性的呢。<br>对于女生来说呢。好好睡觉，就能变得漂亮。哦嘿嘿。</p><p>欸，你说想要变得像我一样美艳？<br>我说啊。设立太高的目标，有时是会让自己吃苦头的哦。<br>对于女生来说呢。大家，都非常的可爱呢。哦嘿嘿嘿—。</p><p>I、am、会长　I、am、会长<br>后面跟上「大人」，也可以哦～<br>I、am、会长　I、am、会长<br>说起来担任会长，是要做什么工作？</p><p>……欸，骗人的吧，真的要干这么多事情吗？呜欸—</p><p>……</p><p>啦啦啦啦啦—。啦啦啦啦—。啦啦啦啦—</p></div>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;strong&gt;&lt;span lang=&quot;ja&quot;&gt;ゆるぱ☆わンダフル&lt;/span&gt;（软绵绵☆Wonderful）&lt;/strong&gt; - TV动画《学生会的一己之见》片尾曲&lt;/p&gt;
-&lt;p&gt;作词：chacha；作曲：&lt;span lang=&quot;ja&quot;&gt;安斎孝秋&lt;/span&gt;&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;&lt;span lang=&quot;ja&quot;&gt;ぜったいかいちょーせんげん？&lt;/span&gt;（绝对会长宣言？）&lt;/strong&gt; - TV动画《学生会的一己之见》片尾曲&lt;/p&gt;
+&lt;p&gt;作词：&lt;span lang=&quot;ja&quot;&gt;桜野くりむ&lt;/span&gt;；作曲：&lt;span lang=</summary>
       
     
     
