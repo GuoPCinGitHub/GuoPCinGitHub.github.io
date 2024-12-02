@@ -713,6 +713,24 @@ button {
   transition-timing-function: ease, ease, ease, ease, linear, linear;
   margin: 1rem auto 1rem;
 }
+.markdown-body del.mask {
+  text-decoration: none !important;
+  transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) color, 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) background;
+}
+.markdown-body del.mask * {
+  transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) opacity;
+}
+.markdown-body del.mask:not(:hover) {
+  color: transparent !important;
+  background: #000 !important;
+}
+.markdown-body del.mask:not(:hover) * {
+  opacity: 0 !important;
+}
+.markdown-body del.mask:not(:hover),
+.markdown-body del.mask:not(:hover) * {
+  border: none !important;
+}
 .markdown-body > table,
 .markdown-body .tab-pane > table {
   border-spacing: 0;
@@ -1139,13 +1157,13 @@ pre .deletion {
   display: inline-block;
   width: 100%;
 }
-.highlight-container[data-rel] {
+.code-container {
   position: relative;
 }
-.highlight-container:hover .copy-button,
-.highlight-container .copy-button:focus,
-.highlight-container:hover .fold-button,
-.highlight-container .fold-button:focus {
+.code-container:hover .copy-button,
+.code-container .copy-button:focus,
+.code-container:hover .fold-button,
+.code-container .fold-button:focus {
   opacity: 1;
 }
 .fold-button {
@@ -1202,7 +1220,7 @@ pre .deletion {
   right: 0;
   top: 0;
 }
-.highlight-container[data-rel] {
+.code-container {
   background: var(--highlight-background);
   border-radius: 18px;
   padding-top: 40px;
@@ -1212,7 +1230,7 @@ pre .deletion {
   position: relative;
   box-shadow: var(--redefine-box-shadow-flat);
 }
-.highlight-container[data-rel] figcaption {
+.code-container figcaption {
   font-weight: bold;
   font-size: 16px;
   position: absolute;
@@ -1220,15 +1238,18 @@ pre .deletion {
   left: 50%;
   transform: translateX(-50%);
 }
-.highlight-container[data-rel] figcaption a {
+.code-container figcaption a {
   margin-left: 10px;
 }
-.highlight-container[data-rel] .folded figure {
+.code-container .folded {
+  height: 0 !important;
+}
+.code-container .folded figure {
   height: 0 !important;
   width: 0 !important;
   overflow: hidden !important;
 }
-.highlight-container[data-rel]::before {
+.code-container::before {
   position: absolute;
   content: attr(data-rel);
   line-height: 42px;
