@@ -21,140 +21,6 @@
       </tags>
   </entry>
   <entry>
-    <title>SVG Learning - 1</title>
-    <url>/blog/2022/04/22/svg_learning/</url>
-    <content><![CDATA[<p>SVG 学习第一部分，包括基本结构、<code>&lt;line&gt;</code>、<code>&lt;rect&gt;</code>、<code>&lt;circle&gt;</code>和<code>&lt;ellipse&gt;</code>图形元素。简单罗列，英文为主。</p>
-<blockquote>
-<p>References</p>
-<ul>
-<li><a class="link"   href="https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html" >An SVG Primer for Today’s Browsers<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><ul>
-<li><a class="link"   href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright" >Copyright<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> © 2010 <a class="link"   href="http://www.w3.org/" >W3C<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>® (<a class="link"   href="http://www.csail.mit.edu/" >MIT<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, <a class="link"   href="http://www.ercim.org/" >ERCIM<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, <a class="link"   href="http://www.keio.ac.jp/" >Keio<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>), All Rights Reserved.</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<h2 id="Basic-structure"><a href="#Basic-structure" class="headerlink" title="Basic structure"></a>Basic structure</h2><div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/2000/svg&quot;</span>&gt;</span></span><br><span class="line">    ……</span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/2000/svg&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">circle</span>  <span class="attr">cx</span>=<span class="string">&quot;50&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;50&quot;</span> <span class="attr">r</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;wheat&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<svg xmlns="http://www.w3.org/2000/svg" width=100 height=100>
-    <circle  cx="50" cy="50" r="50" fill="wheat"/>
-</svg>
-
-<h2 id="SVG-graphics-elements"><a href="#SVG-graphics-elements" class="headerlink" title="SVG graphics elements"></a>SVG graphics elements</h2><ul>
-<li><code>&lt;path&gt;</code></li>
-<li><code>&lt;line&gt;</code></li>
-<li><code>&lt;rect&gt;</code></li>
-<li><code>&lt;circle&gt;</code></li>
-<li><code>&lt;line&gt;</code></li>
-<li><code>&lt;polyline&gt;</code></li>
-<li><code>&lt;polygon&gt;</code></li>
-<li><code>&lt;image&gt;</code></li>
-<li><code>&lt;use&gt;</code></li>
-</ul>
-<h3 id=""><a href="#" class="headerlink" title="&lt;line&gt;"></a><code>&lt;line&gt;</code></h3><ul>
-<li><code>x1</code>, <code>y1</code> → <code>x2</code>, <code>y2</code><ul>
-<li><code>x1</code>, <code>y1</code>: Start position</li>
-<li><code>x2</code>, <code>y2</code>: End position</li>
-</ul>
-</li>
-</ul>
-<h4 id="stroke-stroke-width"><a href="#stroke-stroke-width" class="headerlink" title="stroke &amp; stroke-width"></a><code>stroke</code> &amp; <code>stroke-width</code></h4><p>The effect of varying stroke widths</p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;5&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;10&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;99&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;30&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;.5&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;red&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;5&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;30&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;99&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;50&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;1&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;red&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;5&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;50&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;99&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;70&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2.5&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;red&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;5&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;70&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;99&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;90&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;4&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;blue&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<svg xmlns="http://www.w3.org/2000/svg" width=100 height=100>
-    <line x1="5" y1="10" x2="99" y2="30" stroke-width=".5" stroke="red"/>
-    <line x1="5" y1="30" x2="99" y2="50" stroke-width="1" stroke="red"/>
-    <line x1="5" y1="50" x2="99" y2="70" stroke-width="2.5" stroke="red"/>
-    <line x1="5" y1="70" x2="99" y2="90" stroke-width="4" stroke="blue"/>
-</svg>
-
-<h4 id="stroke-dasharray-stroke-lineup"><a href="#stroke-dasharray-stroke-lineup" class="headerlink" title="stroke-dasharray &amp; stroke-lineup"></a><code>stroke-dasharray</code> &amp; <code>stroke-lineup</code></h4><p>The effect of other attributes on line elements</p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;15&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;15&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;140&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;135&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;blue&quot;</span> <span class="attr">stroke-linecap</span>=<span class="string">&quot;round&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;15&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;15&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;140&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;135&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;aqua&quot;</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;8,3,2,18&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;15&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;155&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;160&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;60&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;blue&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;15&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;155&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;160&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;60&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;orange&quot;</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;8,3,2&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<svg xmlns="http://www.w3.org/2000/svg" width=200 height=200>
-    <line x1="15" y1="15" x2="140" y2="135" stroke-width="25" stroke="blue" stroke-linecap="round"/>
-    <line x1="15" y1="15" x2="140" y2="135" stroke-width="25" stroke="aqua" stroke-dasharray="8,3,2,18"/>
-    <line x1="15" y1="155" x2="160" y2="60" stroke-width="25" stroke="blue"/>
-    <line x1="15" y1="155" x2="160" y2="60" stroke-width="25" stroke="orange" stroke-dasharray="8,3,2"/>
-</svg>
-
-<h3 id="-1"><a href="#-1" class="headerlink" title="&lt;rect&gt;"></a><code>&lt;rect&gt;</code></h3><ul>
-<li><code>x</code>, <code>y</code>: Top-left corner position</li>
-<li><code>height</code>, <code>width</code></li>
-</ul>
-<p>A variety of rectangles</p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;62&quot;</span> <span class="attr">y</span>=<span class="string">&quot;25&quot;</span> <span class="attr">height</span>=<span class="string">&quot;110&quot;</span> <span class="attr">width</span>=<span class="string">&quot;16&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;rgb(100%,50%,50%)&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;35&quot;</span> <span class="attr">y</span>=<span class="string">&quot;35&quot;</span> <span class="attr">height</span>=<span class="string">&quot;30&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;red&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;5&quot;</span> <span class="attr">y</span>=<span class="string">&quot;60&quot;</span> <span class="attr">height</span>=<span class="string">&quot;30&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#f88&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;25&quot;</span> <span class="attr">y</span>=<span class="string">&quot;70&quot;</span> <span class="attr">height</span>=<span class="string">&quot;30&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#ff8888&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;65&quot;</span> <span class="attr">y</span>=<span class="string">&quot;60&quot;</span> <span class="attr">height</span>=<span class="string">&quot;30&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#eac&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;85&quot;</span> <span class="attr">y</span>=<span class="string">&quot;70&quot;</span> <span class="attr">height</span>=<span class="string">&quot;30&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#eeaacc&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;60&quot;</span> <span class="attr">y</span>=<span class="string">&quot;95&quot;</span> <span class="attr">height</span>=<span class="string">&quot;30&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;rgb(255,0,0)&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<svg xmlns="http://www.w3.org/2000/svg" width=150 height=150>
-    <rect x="62" y="25" height="110" width="16" fill="rgb(100%,50%,50%)" stroke="black" stroke-width="2"/>
-    <rect x="35" y="35" height="30" width="50" fill="red" stroke="black" stroke-width="2"/>
-    <rect x="5" y="60" height="30" width="50" fill="#f88" stroke="black" stroke-width="2"/>
-    <rect x="25" y="70" height="30" width="50" fill="#ff8888" stroke="black" stroke-width="2"/>
-    <rect x="65" y="60" height="30" width="50" fill="#eac" stroke="black" stroke-width="2"/>
-    <rect x="85" y="70" height="30" width="50" fill="#eeaacc" stroke="black" stroke-width="2"/>
-    <rect x="60" y="95" height="30" width="50" fill="rgb(255,0,0)" stroke="black" stroke-width="2"/>
-</svg>
-
-<h3 id="-2"><a href="#-2" class="headerlink" title="&lt;circle&gt;"></a><code>&lt;circle&gt;</code></h3><ul>
-<li><code>cx</code>, <code>cy</code>: Centre position</li>
-<li><code>r</code>: Radius</li>
-</ul>
-<p>Circles with varying fill, stroke, stroke-width and stroke-dasharray</p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;50&quot;</span> <span class="attr">r</span>=<span class="string">&quot;40&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;110&quot;</span> <span class="attr">r</span>=<span class="string">&quot;40&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;red&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;170&quot;</span> <span class="attr">r</span>=<span class="string">&quot;40&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;yellow&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;blue&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;160&quot;</span> <span class="attr">r</span>=<span class="string">&quot;20&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;red&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;10&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;140&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;110&quot;</span> <span class="attr">r</span>=<span class="string">&quot;60&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;#579&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;30&quot;</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;3,5,8,13&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<svg xmlns="http://www.w3.org/2000/svg" width=250 height=250>
-    <circle cx="80" cy="50" r="40"/>
-    <circle cx="80" cy="110" r="40" fill="red"/>
-    <circle cx="80" cy="170" r="40" fill="yellow" stroke="blue" />
-    <circle cx="80" cy="160" r="20" fill="red" stroke="black" stroke-width="10"/>
-    <circle cx="140" cy="110" r="60" fill="none" stroke="#579" stroke-width="30" stroke-dasharray="3,5,8,13">
-</svg>
-
-<h3 id="-3"><a href="#-3" class="headerlink" title="&lt;ellipse&gt;"></a><code>&lt;ellipse&gt;</code></h3><ul>
-<li><code>cx</code>, <code>cy</code>: Centre position</li>
-<li><code>rx</code>: Half of the distance from the leftmost side to centre</li>
-<li><code>ry</code>: Half of the distance from top to centre</li>
-</ul>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;110&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;75&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;105&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#538&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;110&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;60&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;40&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;red&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;110&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;35&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;20&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#538&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;yellow&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;50&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;40&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;30&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;red&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;50&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;30&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;20&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;orange&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;red&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;10&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;170&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;40&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;30&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;yellow&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;orange&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;170&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;30&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;20&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;red&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;10&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<svg xmlns="http://www.w3.org/2000/svg" width=200 height=250>
-    <ellipse cx="80" cy="110" rx="75" ry="105" fill="#538"/>
-    <ellipse cx="80" cy="110" rx="60" ry="40" fill="black" stroke="red" stroke-width="25"/>
-    <ellipse cx="80" cy="110" rx="35" ry="20" fill="#538" stroke="yellow" stroke-width="25"/>
-    <ellipse cx="80" cy="50" rx="40" ry="30" fill="red" stroke="black" stroke-width="25"/>
-    <ellipse cx="80" cy="50" rx="30" ry="20" fill="orange" stroke="red" stroke-width="10"/>
-    <ellipse cx="80" cy="170" rx="40" ry="30" fill="yellow" stroke="orange" stroke-width="25" />
-    <ellipse cx="80" cy="170" rx="30" ry="20" fill="red" stroke="black" stroke-width="10"/>
-</svg>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>SVG</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>用于MoeSkin的MoeLatte主题包现已发布！</title>
-    <url>/blog/2023/02/12/moelatte/</url>
-    <content><![CDATA[<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/blog/img/MoeLatte-zh-cn.png"
-                      alt="MoeLatte" title="封面"
-                ><figcaption>MoeLatte</figcaption></figure></p>
-<p><a class="link"   href="https://zh.moegirl.org.cn/User:GuoPC/MoeLatte" >MoeLatte<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>是基于<a class="link"   href="https://catppuccin.com/" >Catppuccin Theme<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>中的Latte调色风格制作的一款用于MoeSkin皮肤的主题包。采用了Latte中的绿—蓝系列色作为主要配色，并进行了一定调整。</p>
-<p>主题包制作：<a class="link"   href="https://zh.moegirl.org.cn/User:GuoPC" >GuoPC<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-]]></content>
-      <categories>
-        <category>随记</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《Hacknet》介绍</title>
     <url>/blog/2023/02/03/hacknet/</url>
     <content><![CDATA[<p>最近玩完了《Hacknet》。虽然是2015年的游戏，但是我觉得是一款不错的黑客模拟游戏。写篇文章简单介绍一下。</p>
@@ -297,77 +163,6 @@
       </categories>
       <tags>
         <tag>澳大利亚游戏作品</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>内裁圆角+双线边框的gradient实现</title>
-    <url>/blog/2023/06/16/gradient_based_inner_crop_radius_and_double_border/</url>
-    <content><![CDATA[<p>使用CSS <code>background</code>里的gradient系列函数实现内裁圆角+双线边框。</p>
-<div style="background: 
-radial-gradient(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) 4px 4px/26px 26px no-repeat, 
-skyblue; width: 120px; height: 80px; margin: 5px;">
-</div>
-①<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) <i>4px 4px/26px 26px no-repeat</i></code>
-
-<p>⓪<code style="color: #445B70;"><span style="font-weight: bold;">skyblue</span></code></p>
-<div style="background: 
-conic-gradient(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) 4px 4px/26px 26px no-repeat, 
-radial-gradient(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) 4px 4px/26px 26px no-repeat, 
-skyblue; width: 120px; height: 80px; margin: 5px;">
-</div>
-②<code style="color: #445B70;"><span style="color: #F8961E; font-weight: bold;">conic-gradient</span>(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) <i>4px 4px/26px 26px no-repeat</i></code>
-
-<p>①<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) <i>4px 4px/26px 26px no-repeat</i></code></p>
-<p>⓪<code style="color: #445B70;"><span style="font-weight: bold;">skyblue</span></code></p>
-<div style="background: 
-linear-gradient(white 0 4px, transparent 4px) 5px 5px/115px 26px no-repeat, 
-linear-gradient(to right, white 0 4px, transparent 4px) 5px 5px/26px 75px no-repeat, 
-conic-gradient(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) 4px 4px/26px 26px no-repeat, 
-radial-gradient(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) 4px 4px/26px 26px no-repeat, 
-skyblue; width: 120px; height: 80px; margin: 5px;">
-</div>
-③<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(white 0 4px, transparent 4px) <i>5px 5px/115px 26px no-repeat</i>, <span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(to right, white 0 4px, transparent 4px) <i>5px 5px/26px 75px no-repeat</i></code>
-
-<p>②<code style="color: #445B70;"><span style="color: #F8961E; font-weight: bold;">conic-gradient</span>(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) <i>4px 4px/26px 26px no-repeat</i></code></p>
-<p>①<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) <i>4px 4px/26px 26px no-repeat</i></code></p>
-<p>⓪<code style="color: #445B70;"><span style="font-weight: bold;">skyblue</span></code></p>
-<div style="background: 
-radial-gradient(circle at top left, skyblue 14px, white 14px 19px, transparent 19px) 5px 5px/26px 26px no-repeat, 
-linear-gradient(white 0 4px, transparent 4px) 5px 5px/115px 26px no-repeat, 
-linear-gradient(to right, white 0 4px, transparent 4px) 5px 5px/26px 75px no-repeat, 
-conic-gradient(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) 4px 4px/26px 26px no-repeat, 
-radial-gradient(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) 4px 4px/26px 26px no-repeat, 
-skyblue; width: 120px; height: 80px; margin: 5px;">
-</div>
-④<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 14px, white 14px 19px, transparent 19px) <i>5px 5px/26px 26px no-repeat</i></code>
-
-<p>③<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(white 0 4px, transparent 4px) <i>5px 5px/115px 26px no-repeat</i>, <span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(to right, white 0 4px, transparent 4px) <i>5px 5px/26px 75px no-repeat</i></code></p>
-<p>②<code style="color: #445B70;"><span style="color: #F8961E; font-weight: bold;">conic-gradient</span>(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) <i>4px 4px/26px 26px no-repeat</i></code></p>
-<p>①<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) <i>4px 4px/26px 26px no-repeat</i></code></p>
-<p>⓪<code style="color: #445B70;"><span style="font-weight: bold;">skyblue</span></code></p>
-<div style="background: 
-linear-gradient(white 0 2px, transparent 2px) 27px 12px/93px 5px no-repeat, 
-linear-gradient(to right, white 0 2px, transparent 2px) 12px 27px/5px 53px no-repeat, 
-radial-gradient(circle at top left, skyblue 14px, white 14px 19px, transparent 19px) 5px 5px/26px 26px no-repeat, 
-linear-gradient(white 0 4px, transparent 4px) 5px 5px/115px 26px no-repeat, 
-linear-gradient(to right, white 0 4px, transparent 4px) 5px 5px/26px 75px no-repeat, 
-conic-gradient(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) 4px 4px/26px 26px no-repeat, 
-radial-gradient(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) 4px 4px/26px 26px no-repeat, 
-skyblue; width: 120px; height: 80px; margin: 5px;">
-</div>
-⑤<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(white 0 2px, transparent 2px) <i>27px 12px/93px 5px no-repeat</i>, <span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(to right, white 0 2px, transparent 2px) <i>12px 27px/5px 53px no-repeat</i></code>
-
-<p>④<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 14px, white 14px 19px, transparent 19px) <i>5px 5px/26px 26px no-repeat</i></code></p>
-<p>③<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(white 0 4px, transparent 4px) <i>5px 5px/115px 26px no-repeat</i>, <span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(to right, white 0 4px, transparent 4px) <i>5px 5px/26px 75px no-repeat</i></code></p>
-<p>②<code style="color: #445B70;"><span style="color: #F8961E; font-weight: bold;">conic-gradient</span>(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) <i>4px 4px/26px 26px no-repeat</i></code></p>
-<p>①<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) <i>4px 4px/26px 26px no-repeat</i></code></p>
-<p>⓪<code style="color: #445B70;"><span style="font-weight: bold;">skyblue</span></code></p>
-]]></content>
-      <categories>
-        <category>随记</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
       </tags>
   </entry>
   <entry>
@@ -533,37 +328,208 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
-    <title>Stelpolvo Sans字体现已发布！</title>
-    <url>/blog/2023/12/29/stelpolvo_sans/</url>
-    <content><![CDATA[<p>项目地址：<a class="link"   href="https://github.com/GuoPCinGitHub/StelpolvoSans" >GuoPCinGitHub&#x2F;StelpolvoSans<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p>在线试用地址：<a href="https://guopcingithub.github.io/StelpolvoSans">Stelpolvo Sans</a></p>
-<p>欢迎为项目star或提issue！</p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/blog/img/StelpolvoSans-1.PNG"
-                      alt="StelpolvoSans-1" title="封面"
-                ><figcaption>StelpolvoSans-1</figcaption></figure></p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/blog/img/StelpolvoSans-2.PNG"
-                      alt="StelpolvoSans-2" title="简介：Stelpolvo Sans 字体基于动画《星灵感应》中以世界语为原型的宇宙语字母制作而成。Stelpolvo 在世界语中意为星尘。"
-                ><figcaption>StelpolvoSans-2</figcaption></figure></p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/blog/img/StelpolvoSans-3.PNG"
-                      alt="StelpolvoSans-3" title="安装：可直接下载 TTF 文件后安装。WOFF 文件亦有提供，可根据需求取用。"
-                ><figcaption>StelpolvoSans-3</figcaption></figure></p>
-<p><figure class="image-caption"><img src="/blog/img/StelpolvoSans-4.PNG" alt="StelpolvoSans-4" title="使用：A ~ P (a ~ p) / R ~ V (r ~ v) / Z (z) 可直接通过键盘输入。Ĉ (ĉ) / Ĝ (ĝ) / Ĥ (ĥ) / Ĵ (ĵ) / Ŝ (ŝ) / Ŭ (ŭ) 亦可直接输入，或通过输入对应无修饰符字母，后加 X (x) 得到，如输入“cx”得到“ĉ”。"><figcaption>StelpolvoSans-4</figcaption></figure></p>
-<p><figure class="image-caption"><img src="/blog/img/StelpolvoSans-5.PNG" alt="StelpolvoSans-5" title="许可：本字体依照 SIL Open Font License 1.1 进行许可。您可以：自由下载传播、个人或商业使用、安装和嵌入字体、修改和重新分发；您不得：单独售卖此字体、将修改后字体以其他许可发布。协议原文见 http://scripts.sil.org/OFL。"><figcaption>StelpolvoSans-5</figcaption></figure></p>
+    <title>SVG Learning - 1</title>
+    <url>/blog/2022/04/22/svg_learning/</url>
+    <content><![CDATA[<p>SVG 学习第一部分，包括基本结构、<code>&lt;line&gt;</code>、<code>&lt;rect&gt;</code>、<code>&lt;circle&gt;</code>和<code>&lt;ellipse&gt;</code>图形元素。简单罗列，英文为主。</p>
+<blockquote>
+<p>References</p>
+<ul>
+<li><a class="link"   href="https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html" >An SVG Primer for Today’s Browsers<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><ul>
+<li><a class="link"   href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright" >Copyright<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> © 2010 <a class="link"   href="http://www.w3.org/" >W3C<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>® (<a class="link"   href="http://www.csail.mit.edu/" >MIT<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, <a class="link"   href="http://www.ercim.org/" >ERCIM<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, <a class="link"   href="http://www.keio.ac.jp/" >Keio<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>), All Rights Reserved.</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 id="Basic-structure"><a href="#Basic-structure" class="headerlink" title="Basic structure"></a>Basic structure</h2><div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/2000/svg&quot;</span>&gt;</span></span><br><span class="line">    ……</span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/2000/svg&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">circle</span>  <span class="attr">cx</span>=<span class="string">&quot;50&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;50&quot;</span> <span class="attr">r</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;wheat&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<svg xmlns="http://www.w3.org/2000/svg" width=100 height=100>
+    <circle  cx="50" cy="50" r="50" fill="wheat"/>
+</svg>
+
+<h2 id="SVG-graphics-elements"><a href="#SVG-graphics-elements" class="headerlink" title="SVG graphics elements"></a>SVG graphics elements</h2><ul>
+<li><code>&lt;path&gt;</code></li>
+<li><code>&lt;line&gt;</code></li>
+<li><code>&lt;rect&gt;</code></li>
+<li><code>&lt;circle&gt;</code></li>
+<li><code>&lt;line&gt;</code></li>
+<li><code>&lt;polyline&gt;</code></li>
+<li><code>&lt;polygon&gt;</code></li>
+<li><code>&lt;image&gt;</code></li>
+<li><code>&lt;use&gt;</code></li>
+</ul>
+<h3 id=""><a href="#" class="headerlink" title="&lt;line&gt;"></a><code>&lt;line&gt;</code></h3><ul>
+<li><code>x1</code>, <code>y1</code> → <code>x2</code>, <code>y2</code><ul>
+<li><code>x1</code>, <code>y1</code>: Start position</li>
+<li><code>x2</code>, <code>y2</code>: End position</li>
+</ul>
+</li>
+</ul>
+<h4 id="stroke-stroke-width"><a href="#stroke-stroke-width" class="headerlink" title="stroke &amp; stroke-width"></a><code>stroke</code> &amp; <code>stroke-width</code></h4><p>The effect of varying stroke widths</p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;5&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;10&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;99&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;30&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;.5&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;red&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;5&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;30&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;99&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;50&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;1&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;red&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;5&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;50&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;99&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;70&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2.5&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;red&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;5&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;70&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;99&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;90&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;4&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;blue&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<svg xmlns="http://www.w3.org/2000/svg" width=100 height=100>
+    <line x1="5" y1="10" x2="99" y2="30" stroke-width=".5" stroke="red"/>
+    <line x1="5" y1="30" x2="99" y2="50" stroke-width="1" stroke="red"/>
+    <line x1="5" y1="50" x2="99" y2="70" stroke-width="2.5" stroke="red"/>
+    <line x1="5" y1="70" x2="99" y2="90" stroke-width="4" stroke="blue"/>
+</svg>
+
+<h4 id="stroke-dasharray-stroke-lineup"><a href="#stroke-dasharray-stroke-lineup" class="headerlink" title="stroke-dasharray &amp; stroke-lineup"></a><code>stroke-dasharray</code> &amp; <code>stroke-lineup</code></h4><p>The effect of other attributes on line elements</p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;15&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;15&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;140&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;135&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;blue&quot;</span> <span class="attr">stroke-linecap</span>=<span class="string">&quot;round&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;15&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;15&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;140&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;135&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;aqua&quot;</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;8,3,2,18&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;15&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;155&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;160&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;60&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;blue&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">&quot;15&quot;</span> <span class="attr">y1</span>=<span class="string">&quot;155&quot;</span> <span class="attr">x2</span>=<span class="string">&quot;160&quot;</span> <span class="attr">y2</span>=<span class="string">&quot;60&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;orange&quot;</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;8,3,2&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<svg xmlns="http://www.w3.org/2000/svg" width=200 height=200>
+    <line x1="15" y1="15" x2="140" y2="135" stroke-width="25" stroke="blue" stroke-linecap="round"/>
+    <line x1="15" y1="15" x2="140" y2="135" stroke-width="25" stroke="aqua" stroke-dasharray="8,3,2,18"/>
+    <line x1="15" y1="155" x2="160" y2="60" stroke-width="25" stroke="blue"/>
+    <line x1="15" y1="155" x2="160" y2="60" stroke-width="25" stroke="orange" stroke-dasharray="8,3,2"/>
+</svg>
+
+<h3 id="-1"><a href="#-1" class="headerlink" title="&lt;rect&gt;"></a><code>&lt;rect&gt;</code></h3><ul>
+<li><code>x</code>, <code>y</code>: Top-left corner position</li>
+<li><code>height</code>, <code>width</code></li>
+</ul>
+<p>A variety of rectangles</p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;62&quot;</span> <span class="attr">y</span>=<span class="string">&quot;25&quot;</span> <span class="attr">height</span>=<span class="string">&quot;110&quot;</span> <span class="attr">width</span>=<span class="string">&quot;16&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;rgb(100%,50%,50%)&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;35&quot;</span> <span class="attr">y</span>=<span class="string">&quot;35&quot;</span> <span class="attr">height</span>=<span class="string">&quot;30&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;red&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;5&quot;</span> <span class="attr">y</span>=<span class="string">&quot;60&quot;</span> <span class="attr">height</span>=<span class="string">&quot;30&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#f88&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;25&quot;</span> <span class="attr">y</span>=<span class="string">&quot;70&quot;</span> <span class="attr">height</span>=<span class="string">&quot;30&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#ff8888&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;65&quot;</span> <span class="attr">y</span>=<span class="string">&quot;60&quot;</span> <span class="attr">height</span>=<span class="string">&quot;30&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#eac&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;85&quot;</span> <span class="attr">y</span>=<span class="string">&quot;70&quot;</span> <span class="attr">height</span>=<span class="string">&quot;30&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#eeaacc&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">rect</span> <span class="attr">x</span>=<span class="string">&quot;60&quot;</span> <span class="attr">y</span>=<span class="string">&quot;95&quot;</span> <span class="attr">height</span>=<span class="string">&quot;30&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;rgb(255,0,0)&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;2&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<svg xmlns="http://www.w3.org/2000/svg" width=150 height=150>
+    <rect x="62" y="25" height="110" width="16" fill="rgb(100%,50%,50%)" stroke="black" stroke-width="2"/>
+    <rect x="35" y="35" height="30" width="50" fill="red" stroke="black" stroke-width="2"/>
+    <rect x="5" y="60" height="30" width="50" fill="#f88" stroke="black" stroke-width="2"/>
+    <rect x="25" y="70" height="30" width="50" fill="#ff8888" stroke="black" stroke-width="2"/>
+    <rect x="65" y="60" height="30" width="50" fill="#eac" stroke="black" stroke-width="2"/>
+    <rect x="85" y="70" height="30" width="50" fill="#eeaacc" stroke="black" stroke-width="2"/>
+    <rect x="60" y="95" height="30" width="50" fill="rgb(255,0,0)" stroke="black" stroke-width="2"/>
+</svg>
+
+<h3 id="-2"><a href="#-2" class="headerlink" title="&lt;circle&gt;"></a><code>&lt;circle&gt;</code></h3><ul>
+<li><code>cx</code>, <code>cy</code>: Centre position</li>
+<li><code>r</code>: Radius</li>
+</ul>
+<p>Circles with varying fill, stroke, stroke-width and stroke-dasharray</p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;50&quot;</span> <span class="attr">r</span>=<span class="string">&quot;40&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;110&quot;</span> <span class="attr">r</span>=<span class="string">&quot;40&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;red&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;170&quot;</span> <span class="attr">r</span>=<span class="string">&quot;40&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;yellow&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;blue&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;160&quot;</span> <span class="attr">r</span>=<span class="string">&quot;20&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;red&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;10&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">&quot;140&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;110&quot;</span> <span class="attr">r</span>=<span class="string">&quot;60&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;#579&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;30&quot;</span> <span class="attr">stroke-dasharray</span>=<span class="string">&quot;3,5,8,13&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<svg xmlns="http://www.w3.org/2000/svg" width=250 height=250>
+    <circle cx="80" cy="50" r="40"/>
+    <circle cx="80" cy="110" r="40" fill="red"/>
+    <circle cx="80" cy="170" r="40" fill="yellow" stroke="blue" />
+    <circle cx="80" cy="160" r="20" fill="red" stroke="black" stroke-width="10"/>
+    <circle cx="140" cy="110" r="60" fill="none" stroke="#579" stroke-width="30" stroke-dasharray="3,5,8,13">
+</svg>
+
+<h3 id="-3"><a href="#-3" class="headerlink" title="&lt;ellipse&gt;"></a><code>&lt;ellipse&gt;</code></h3><ul>
+<li><code>cx</code>, <code>cy</code>: Centre position</li>
+<li><code>rx</code>: Half of the distance from the leftmost side to centre</li>
+<li><code>ry</code>: Half of the distance from top to centre</li>
+</ul>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;110&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;75&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;105&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#538&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;110&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;60&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;40&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;red&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;110&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;35&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;20&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#538&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;yellow&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;50&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;40&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;30&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;red&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;50&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;30&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;20&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;orange&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;red&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;10&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;170&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;40&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;30&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;yellow&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;orange&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;25&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">ellipse</span> <span class="attr">cx</span>=<span class="string">&quot;80&quot;</span> <span class="attr">cy</span>=<span class="string">&quot;170&quot;</span> <span class="attr">rx</span>=<span class="string">&quot;30&quot;</span> <span class="attr">ry</span>=<span class="string">&quot;20&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;red&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;10&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<svg xmlns="http://www.w3.org/2000/svg" width=200 height=250>
+    <ellipse cx="80" cy="110" rx="75" ry="105" fill="#538"/>
+    <ellipse cx="80" cy="110" rx="60" ry="40" fill="black" stroke="red" stroke-width="25"/>
+    <ellipse cx="80" cy="110" rx="35" ry="20" fill="#538" stroke="yellow" stroke-width="25"/>
+    <ellipse cx="80" cy="50" rx="40" ry="30" fill="red" stroke="black" stroke-width="25"/>
+    <ellipse cx="80" cy="50" rx="30" ry="20" fill="orange" stroke="red" stroke-width="10"/>
+    <ellipse cx="80" cy="170" rx="40" ry="30" fill="yellow" stroke="orange" stroke-width="25" />
+    <ellipse cx="80" cy="170" rx="30" ry="20" fill="red" stroke="black" stroke-width="10"/>
+</svg>
 ]]></content>
       <categories>
-        <category>字体</category>
+        <category>学习</category>
       </categories>
       <tags>
-        <tag>字体</tag>
+        <tag>SVG</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>内裁圆角+双线边框的gradient实现</title>
+    <url>/blog/2023/06/16/gradient_based_inner_crop_radius_and_double_border/</url>
+    <content><![CDATA[<p>使用CSS <code>background</code>里的gradient系列函数实现内裁圆角+双线边框。</p>
+<div style="background: 
+radial-gradient(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) 4px 4px/26px 26px no-repeat, 
+skyblue; width: 120px; height: 80px; margin: 5px;">
+</div>
+①<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) <i>4px 4px/26px 26px no-repeat</i></code>
+
+<p>⓪<code style="color: #445B70;"><span style="font-weight: bold;">skyblue</span></code></p>
+<div style="background: 
+conic-gradient(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) 4px 4px/26px 26px no-repeat, 
+radial-gradient(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) 4px 4px/26px 26px no-repeat, 
+skyblue; width: 120px; height: 80px; margin: 5px;">
+</div>
+②<code style="color: #445B70;"><span style="color: #F8961E; font-weight: bold;">conic-gradient</span>(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) <i>4px 4px/26px 26px no-repeat</i></code>
+
+<p>①<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) <i>4px 4px/26px 26px no-repeat</i></code></p>
+<p>⓪<code style="color: #445B70;"><span style="font-weight: bold;">skyblue</span></code></p>
+<div style="background: 
+linear-gradient(white 0 4px, transparent 4px) 5px 5px/115px 26px no-repeat, 
+linear-gradient(to right, white 0 4px, transparent 4px) 5px 5px/26px 75px no-repeat, 
+conic-gradient(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) 4px 4px/26px 26px no-repeat, 
+radial-gradient(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) 4px 4px/26px 26px no-repeat, 
+skyblue; width: 120px; height: 80px; margin: 5px;">
+</div>
+③<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(white 0 4px, transparent 4px) <i>5px 5px/115px 26px no-repeat</i>, <span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(to right, white 0 4px, transparent 4px) <i>5px 5px/26px 75px no-repeat</i></code>
+
+<p>②<code style="color: #445B70;"><span style="color: #F8961E; font-weight: bold;">conic-gradient</span>(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) <i>4px 4px/26px 26px no-repeat</i></code></p>
+<p>①<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) <i>4px 4px/26px 26px no-repeat</i></code></p>
+<p>⓪<code style="color: #445B70;"><span style="font-weight: bold;">skyblue</span></code></p>
+<div style="background: 
+radial-gradient(circle at top left, skyblue 14px, white 14px 19px, transparent 19px) 5px 5px/26px 26px no-repeat, 
+linear-gradient(white 0 4px, transparent 4px) 5px 5px/115px 26px no-repeat, 
+linear-gradient(to right, white 0 4px, transparent 4px) 5px 5px/26px 75px no-repeat, 
+conic-gradient(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) 4px 4px/26px 26px no-repeat, 
+radial-gradient(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) 4px 4px/26px 26px no-repeat, 
+skyblue; width: 120px; height: 80px; margin: 5px;">
+</div>
+④<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 14px, white 14px 19px, transparent 19px) <i>5px 5px/26px 26px no-repeat</i></code>
+
+<p>③<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(white 0 4px, transparent 4px) <i>5px 5px/115px 26px no-repeat</i>, <span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(to right, white 0 4px, transparent 4px) <i>5px 5px/26px 75px no-repeat</i></code></p>
+<p>②<code style="color: #445B70;"><span style="color: #F8961E; font-weight: bold;">conic-gradient</span>(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) <i>4px 4px/26px 26px no-repeat</i></code></p>
+<p>①<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) <i>4px 4px/26px 26px no-repeat</i></code></p>
+<p>⓪<code style="color: #445B70;"><span style="font-weight: bold;">skyblue</span></code></p>
+<div style="background: 
+linear-gradient(white 0 2px, transparent 2px) 27px 12px/93px 5px no-repeat, 
+linear-gradient(to right, white 0 2px, transparent 2px) 12px 27px/5px 53px no-repeat, 
+radial-gradient(circle at top left, skyblue 14px, white 14px 19px, transparent 19px) 5px 5px/26px 26px no-repeat, 
+linear-gradient(white 0 4px, transparent 4px) 5px 5px/115px 26px no-repeat, 
+linear-gradient(to right, white 0 4px, transparent 4px) 5px 5px/26px 75px no-repeat, 
+conic-gradient(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) 4px 4px/26px 26px no-repeat, 
+radial-gradient(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) 4px 4px/26px 26px no-repeat, 
+skyblue; width: 120px; height: 80px; margin: 5px;">
+</div>
+⑤<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(white 0 2px, transparent 2px) <i>27px 12px/93px 5px no-repeat</i>, <span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(to right, white 0 2px, transparent 2px) <i>12px 27px/5px 53px no-repeat</i></code>
+
+<p>④<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 14px, white 14px 19px, transparent 19px) <i>5px 5px/26px 26px no-repeat</i></code></p>
+<p>③<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(white 0 4px, transparent 4px) <i>5px 5px/115px 26px no-repeat</i>, <span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(to right, white 0 4px, transparent 4px) <i>5px 5px/26px 75px no-repeat</i></code></p>
+<p>②<code style="color: #445B70;"><span style="color: #F8961E; font-weight: bold;">conic-gradient</span>(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) <i>4px 4px/26px 26px no-repeat</i></code></p>
+<p>①<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) <i>4px 4px/26px 26px no-repeat</i></code></p>
+<p>⓪<code style="color: #445B70;"><span style="font-weight: bold;">skyblue</span></code></p>
+]]></content>
+      <categories>
+        <category>随记</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用于MoeSkin的MoeLatte主题包现已发布！</title>
+    <url>/blog/2023/02/12/moelatte/</url>
+    <content><![CDATA[<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/blog/img/MoeLatte-zh-cn.png"
+                      alt="MoeLatte" title="封面"
+                ><figcaption>MoeLatte</figcaption></figure></p>
+<p><a class="link"   href="https://zh.moegirl.org.cn/User:GuoPC/MoeLatte" >MoeLatte<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>是基于<a class="link"   href="https://catppuccin.com/" >Catppuccin Theme<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>中的Latte调色风格制作的一款用于MoeSkin皮肤的主题包。采用了Latte中的绿—蓝系列色作为主要配色，并进行了一定调整。</p>
+<p>主题包制作：<a class="link"   href="https://zh.moegirl.org.cn/User:GuoPC" >GuoPC<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+]]></content>
+      <categories>
+        <category>随记</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
       </tags>
   </entry>
   <entry>
@@ -666,6 +632,40 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       <tags>
         <tag>QQNT</tag>
         <tag>配色</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Stelpolvo Sans字体现已发布！</title>
+    <url>/blog/2023/12/29/stelpolvo_sans/</url>
+    <content><![CDATA[<p>项目地址：<a class="link"   href="https://github.com/GuoPCinGitHub/StelpolvoSans" >GuoPCinGitHub&#x2F;StelpolvoSans<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>在线试用地址：<a href="https://guopcingithub.github.io/StelpolvoSans">Stelpolvo Sans</a></p>
+<p>欢迎为项目star或提issue！</p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/blog/img/StelpolvoSans-1.PNG"
+                      alt="StelpolvoSans-1" title="封面"
+                ><figcaption>StelpolvoSans-1</figcaption></figure></p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/blog/img/StelpolvoSans-2.PNG"
+                      alt="StelpolvoSans-2" title="简介：Stelpolvo Sans 字体基于动画《星灵感应》中以世界语为原型的宇宙语字母制作而成。Stelpolvo 在世界语中意为星尘。"
+                ><figcaption>StelpolvoSans-2</figcaption></figure></p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/blog/img/StelpolvoSans-3.PNG"
+                      alt="StelpolvoSans-3" title="安装：可直接下载 TTF 文件后安装。WOFF 文件亦有提供，可根据需求取用。"
+                ><figcaption>StelpolvoSans-3</figcaption></figure></p>
+<p><figure class="image-caption"><img src="/blog/img/StelpolvoSans-4.PNG" alt="StelpolvoSans-4" title="使用：A ~ P (a ~ p) / R ~ V (r ~ v) / Z (z) 可直接通过键盘输入。Ĉ (ĉ) / Ĝ (ĝ) / Ĥ (ĥ) / Ĵ (ĵ) / Ŝ (ŝ) / Ŭ (ŭ) 亦可直接输入，或通过输入对应无修饰符字母，后加 X (x) 得到，如输入“cx”得到“ĉ”。"><figcaption>StelpolvoSans-4</figcaption></figure></p>
+<p><figure class="image-caption"><img src="/blog/img/StelpolvoSans-5.PNG" alt="StelpolvoSans-5" title="许可：本字体依照 SIL Open Font License 1.1 进行许可。您可以：自由下载传播、个人或商业使用、安装和嵌入字体、修改和重新分发；您不得：单独售卖此字体、将修改后字体以其他许可发布。协议原文见 http://scripts.sil.org/OFL。"><figcaption>StelpolvoSans-5</figcaption></figure></p>
+]]></content>
+      <categories>
+        <category>字体</category>
+      </categories>
+      <tags>
+        <tag>字体</tag>
       </tags>
   </entry>
   <entry>
@@ -1081,8 +1081,8 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </categories>
       <tags>
         <tag>CSS</tag>
-        <tag>字体</tag>
         <tag>QQNT</tag>
+        <tag>字体</tag>
       </tags>
   </entry>
   <entry>
@@ -1162,6 +1162,29 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
+    <title>Edge PDF图标的消失</title>
+    <url>/blog/2024/10/05/disappearance_of_edge_pdf_icon/</url>
+    <content><![CDATA[<p>前些天下载了所谓“处理文书”需要安装的插件，当时没太在意就下下来让它自己安装了，不过有瞥到里面有涉及PDF处理和签名之类的插件。后来发现直接把PDF文件的图标干没了（关联的默认应用是Microsoft Edge）。<del>最后那堆插件完全没用到更是无语。</del>后来受网上一个自定义图标的帖子的启发，成功恢复了图标，顺手记在这里。反正也就是改改注册表的事情。</p>
+<p>在注册表中找到以下路径：<code>\HKEY_CLASSES_ROOT\MSEdgePDF\DefaultIcon</code>，其中<code>(默认)</code>字符串的值应类似于<code>&lt;路径&gt;,&lt;数字&gt;</code>的形式。比如<code>C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,11</code>。<code>&lt;路径&gt;</code>指明图标所在的文件，<code>&lt;数字&gt;</code>则是图标在文件图标列表中的位置。对于本例则是msedge.exe中所包含的图标列表的第11个图标，在右键Edge后点“属性”再点“更改图标…”便能看到第11个图标（从0开始从上向下、从左向右计数）是一个PDF图标，如下图。</p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/blog/img/edge-icons.png"
+                      alt="Edge图标列表"
+                ><figcaption>Edge图标列表</figcaption></figure></p>
+<p>我这边遇到的情况是，前面的<code>&lt;路径&gt;</code>部分不见了，只有<code>,11</code>的部分。除了可以直接补上Edge的路径之外，也可以在注册表同级的<code>\Application</code>下的<code>ApplicationIcon</code>处确认路径。比如我这边是<code>C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,0</code>。</p>
+<p>改完之后顺手把那堆插件卸了，相关注册表内容也手动清理了一遍。</p>
+]]></content>
+      <categories>
+        <category>随记</category>
+      </categories>
+      <tags>
+        <tag>Microsoft Edge</tag>
+        <tag>图标</tag>
+        <tag>注册表</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>某信息栏的边框设计</title>
     <url>/blog/2024/09/14/a_certain_infobox_border_design/</url>
     <content><![CDATA[<p>是的，我又来拿CSS <code>background</code>里的gradient系列函数折腾了。上一期见<a href="/2023/06/16/gradient_based_inner_crop_radius_and_double_border/">这里</a>。</p>
@@ -1212,29 +1235,6 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </categories>
       <tags>
         <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Edge PDF图标的消失</title>
-    <url>/blog/2024/10/05/disappearance_of_edge_pdf_icon/</url>
-    <content><![CDATA[<p>前些天下载了所谓“处理文书”需要安装的插件，当时没太在意就下下来让它自己安装了，不过有瞥到里面有涉及PDF处理和签名之类的插件。后来发现直接把PDF文件的图标干没了（关联的默认应用是Microsoft Edge）。<del>最后那堆插件完全没用到更是无语。</del>后来受网上一个自定义图标的帖子的启发，成功恢复了图标，顺手记在这里。反正也就是改改注册表的事情。</p>
-<p>在注册表中找到以下路径：<code>\HKEY_CLASSES_ROOT\MSEdgePDF\DefaultIcon</code>，其中<code>(默认)</code>字符串的值应类似于<code>&lt;路径&gt;,&lt;数字&gt;</code>的形式。比如<code>C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,11</code>。<code>&lt;路径&gt;</code>指明图标所在的文件，<code>&lt;数字&gt;</code>则是图标在文件图标列表中的位置。对于本例则是msedge.exe中所包含的图标列表的第11个图标，在右键Edge后点“属性”再点“更改图标…”便能看到第11个图标（从0开始从上向下、从左向右计数）是一个PDF图标，如下图。</p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/blog/img/edge-icons.png"
-                      alt="Edge图标列表"
-                ><figcaption>Edge图标列表</figcaption></figure></p>
-<p>我这边遇到的情况是，前面的<code>&lt;路径&gt;</code>部分不见了，只有<code>,11</code>的部分。除了可以直接补上Edge的路径之外，也可以在注册表同级的<code>\Application</code>下的<code>ApplicationIcon</code>处确认路径。比如我这边是<code>C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,0</code>。</p>
-<p>改完之后顺手把那堆插件卸了，相关注册表内容也手动清理了一遍。</p>
-]]></content>
-      <categories>
-        <category>随记</category>
-      </categories>
-      <tags>
-        <tag>Microsoft Edge</tag>
-        <tag>图标</tag>
-        <tag>注册表</tag>
       </tags>
   </entry>
 </search>
