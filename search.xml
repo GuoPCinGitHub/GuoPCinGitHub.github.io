@@ -136,151 +136,6 @@
       </tags>
   </entry>
   <entry>
-    <title>《Hacknet》介绍</title>
-    <url>/2023/02/03/hacknet/</url>
-    <content><![CDATA[<p>最近玩完了《Hacknet》。虽然是2015年的游戏，但是我觉得是一款不错的黑客模拟游戏。写篇文章简单介绍一下。</p>
-<table>
-<thead>
-<tr>
-<th align="center">项目</th>
-<th align="center">内容</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">原名</td>
-<td align="center">Hacknet</td>
-</tr>
-<tr>
-<td align="center">常用译名</td>
-<td align="center">黑客网络</td>
-</tr>
-<tr>
-<td align="center">类型</td>
-<td align="center">模拟</td>
-</tr>
-<tr>
-<td align="center">平台</td>
-<td align="center">Microsoft Windows<br/>macOS<br/>Linux</td>
-</tr>
-<tr>
-<td align="center">分级</td>
-<td align="center">ESRB：青少年<br/>PEGI：12岁以上</td>
-</tr>
-<tr>
-<td align="center">开发</td>
-<td align="center">Team Fractal Alligator</td>
-</tr>
-<tr>
-<td align="center">发行</td>
-<td align="center">Fellow Traveller</td>
-</tr>
-<tr>
-<td align="center">引擎</td>
-<td align="center">XNA、FNA</td>
-</tr>
-<tr>
-<td align="center">模式</td>
-<td align="center">单人</td>
-</tr>
-<tr>
-<td align="center">发行时间</td>
-<td align="center"><strong>Microsoft Windows</strong>：<br/>2015年8月13日<br/><strong>macOS、Linux</strong>：<br/>2015年12月18日</td>
-</tr>
-</tbody></table>
-<p>《<strong>Hacknet</strong>》是一款由Team Fractal Alligator开发、Fellow Traveller发行的独立模拟游戏，于2015年8月13日在Microsoft Windows平台上发售，于2015年12月18日在macOS和Linux平台发售。支持简体中文。</p>
-<h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p>《Hacknet》是一款基于终端的黑客模拟器。你将跟随一位最近刚过世的黑客，通过他遗留的线索，来探询混乱未知的网络世界。他的死可能并非像媒体所报道的仅仅是一场意外那么简单。只需进行简单的教学，你便能使用基础的指令来完成真实的黑入过程，探索这充满了谜团的黑客世界。</p>
-<p>Bit，一位负责开发世界上最具攻击性的黑入系统的黑客，去世了。当他的系统连续14天都没有检测到他的操作后，保险程序便开始运行，将他未完成的计划发给了一位陌生的用户。作为这名用户，你需要一步步揭开事实的真相，并且确保Hacknet操作系统不会落入到不法之徒手中。</p>
-<p>《Hacknet》为你提供一个全方位的真实黑客模拟器，可以让你探索人类窥探隐私的天性、制止企业贪婪盛行并对抗隐藏在网络世界中的强大黑客。同时它又能提供学习支持，可以让一个电脑小白通过游戏了解到现实世界的电脑指令和对应用程序的操控。<span id="文注_1.0"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></p>
-<h3 id="游戏特色"><a href="#游戏特色" class="headerlink" title="游戏特色"></a>游戏特色</h3><p><strong>真实的黑入</strong></p>
-<p>基于真实的UNIX指令，将重点放在真实的黑入过程，而不是追求炫酷的好莱坞式黑客。通过拟真化的黑入过程，让玩家们仿佛置身黑入现场，体验打破防火墙时几近真实的感受。</p>
-<p><strong>探寻Bit的死亡之谜</strong></p>
-<p>一位黑客莫名死亡，而媒体们的报道根本无法自圆其说。跟随着他的“灵魂”（一个自动邮件发送系统）带给你的指示，你将会慢慢深入并参与到一个黑暗而又庞大的黑客阴谋之中。</p>
-<p><strong>完全的沉浸式体验</strong></p>
-<p>你将会被带入一个无尽的虚拟黑客世界，在这里没有“等级”或者是明显的游戏元素来打破这一体验。你可以选择跟随Bit的邮件的指引，或是直接遨游在整个网络之中，探索并追寻信息的蛛丝马迹。</p>
-<p><strong>上手简单精通难</strong></p>
-<p>游戏不会限制你的游戏方式或让你按部就班。</p>
-<p>游戏内容和学习曲线的设计，能够让初学者或有终端操作经验的人都能找到属于自己的快乐。</p>
-<p><strong>杀手级音乐</strong></p>
-<p>原声带由地下风格音乐家创作，包括Carpenter Brut（Hotline Miami）和Remi Gallego（又名The Algorithm），由The Otherworld Agency协助创作。<span id="文注_1.1"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></p>
-<h3 id="开发历史"><a href="#开发历史" class="headerlink" title="开发历史"></a>开发历史</h3><ul>
-<li>2015年7月15日，开发者放出游戏宣传片。<span id="文参_1"></span><a href="#%E5%8F%82_1"><sup>[1]</sup></a></li>
-<li>2015年8月13日，游戏在Microsoft Windows平台上发售。</li>
-<li>2015年10月21日，游戏原声带发售。</li>
-<li>2015年12月18日，游戏在macOS和Linux平台发售。</li>
-<li>2016年8月30日，开发者宣布游戏扩展内容《Hacknet - Labyrinths》的制作。</li>
-<li>2016年10月12日，游戏推出简体中文支持。</li>
-<li>2017年3月21日，开发者宣布游戏扩展内容《Hacknet - Labyrinths》将于3月31日发售，并放出宣传片。</li>
-<li>2017年3月31日，游戏扩展内容《Hacknet - Labyrinths》发售。</li>
-<li>2017年5月23日，游戏mod《Hacknet Extensions》发布。</li>
-</ul>
-<h2 id="额外内容"><a href="#额外内容" class="headerlink" title="额外内容"></a>额外内容</h2><h3 id="Hacknet-Labyrinths"><a href="#Hacknet-Labyrinths" class="headerlink" title="Hacknet - Labyrinths"></a>Hacknet - Labyrinths</h3><p>游戏扩展内容《Hacknet - Labyrinths》于2017年3月31日发售。</p>
-<h4 id="基本介绍-1"><a href="#基本介绍-1" class="headerlink" title="基本介绍"></a>基本介绍</h4><p>加入黑客精英小队，破解复杂的数据。</p>
-<p>加入了一个3-4小时流程的全新章节。你将由神秘人Kaguya招募到一个黑客精英团队，发掘新的强大工具与程序。</p>
-<p>然而与最棒的团队一起工作并不会特别容易。随着愈演愈烈的危机与越来越复杂的任务接踵而至，你需要利用团队的一切资源去黑入并完成任务，最后完美脱身。</p>
-<p>加入了全新工具，比如内存分析器，可以在RAM中进行内存取证。探索新的程序、网络、UI主题，以及新的秘密和音乐。<span id="文注_1.2"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></p>
-<p><strong>主要特点</strong></p>
-<ul>
-<li><strong>一个全新的篇章。</strong> 在原有故事的基础上加入了惊心动魄的3-4小时流程的新章节。你可以把它看做原有故事的拓展，也可以当做一个继续研究Hacknet的全新机会。</li>
-<li><strong>新的工具与程序。</strong> 得到全新的、更加复杂的黑入工具和程序来破解系统与网络。比如，通过使用内存分析器在RAM上使用内存取证，发现隐藏在其中的秘密。</li>
-<li><strong>团队工作。</strong> 你不再是独行侠，需要与你的队友在IRC交流，共同合作完成目标。</li>
-<li><strong>危险而大胆的数据抢劫。</strong> 网络系统变得更加复杂，不是通过简简单单的“破门而入”就能解决问题。探索，适应，生存！</li>
-<li><strong>新的杀手级音乐。</strong> 包括重金属&#x2F;电音艺术家Remi Gallego的《The Algorithm》和《Orge》。<span id="文注_1.3"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></li>
-</ul>
-<h3 id="Hacknet-Extensions"><a href="#Hacknet-Extensions" class="headerlink" title="Hacknet Extensions"></a>Hacknet Extensions</h3><p>游戏mod《<strong>Hacknet Extensions</strong>》于2017年5月23日发布。允许玩家创建自定义故事、任务、网络、主题以及音乐等，并可通过上传至Steam创意工坊与其他玩家分享。</p>
-<h2 id="游戏评价"><a href="#游戏评价" class="headerlink" title="游戏评价"></a>游戏评价</h2><table>
-<thead>
-<tr>
-<th align="center">汇总媒体</th>
-<th align="center">得分</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Metacritic</td>
-<td align="center">82 &#x2F; 100<span id="文参_2"></span><a href="#%E5%8F%82_2"><sup>[2]</sup></a></td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th align="center">媒体</th>
-<th align="center">评分</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">GameSpot</td>
-<td align="center">8 &#x2F; 10<span id="文参_3"></span><a href="#%E5%8F%82_3"><sup>[3]</sup></a></td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>《Hacknet》是我见过的最接近现实的黑客模拟游戏。——Kotaku<span id="文参_4"></span><a href="#%E5%8F%82_4"><sup>[4]</sup></a></p>
-<p>作为迄今为止最好的黑客模拟游戏，《Hacknet》让我们想去了解更多有关黑客世界的真实和详细描述。毫无疑问，这是最棒的合法黑客经验。——LevelUp<span id="文参_5"></span><a href="#%E5%8F%82_5"><sup>[5]</sup></a></p>
-</blockquote>
-<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><ol>
-<li>^ <a href="#%E6%96%87%E6%B3%A8_1.0"><sup>1.0</sup></a> <a href="#%E6%96%87%E6%B3%A8_1.1"><sup>1.1</sup></a> <a href="#%E6%96%87%E6%B3%A8_1.2"><sup>1.2</sup></a> <a href="#%E6%96%87%E6%B3%A8_1.3"><sup>1.3</sup></a> <span id="注_1"></span>Steam商店页面介绍，有改动。</li>
-</ol>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
-<li><a id="参_1" href="#文参_1">^</a> Fellow Traveller. <a class="link"   href="https://www.youtube.com/watch?v=FgDmU7Pb96Y" >Hacknet宣传片<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. YouTube. 2015-07-15 [引用时间: 2023-02-03].</li>
-<li><a id="参_2" href="#文参_2">^</a> <a class="link"   href="https://www.metacritic.com/game/pc/hacknet" >Hacknet for PC Reviews<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. Metacritic. [引用时间: 2023-02-03].</li>
-<li><a id="参_3" href="#文参_3">^</a> <a class="link"   href="https://www.gamespot.com/games/hacknet/" >Hacknet<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. GameSpot. [引用时间: 2023-02-03].</li>
-<li><a id="参_4" href="#文参_4">^</a> Mark Serrels. <a class="link"   href="https://www.kotaku.com.au/2015/07/this-australian-game-will-turn-us-all-into-hackers/" >This Australian Game Will Turn Us All Into Hackers<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. 2015-07-16 [引用时间: 2023-02-03].</li>
-<li><a id="参_5" href="#文参_5">^</a> Alonso Zamora. <a class="link"   href="https://www.levelup.com/PC/juegos/335304/Hacknet/review" >Reseña del Juego Hacknet<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. LevelUp. 2015-08-14 [引用时间: 2023-02-03].</li>
-</ol>
-<h2 id="外部链接"><a href="#外部链接" class="headerlink" title="外部链接"></a>外部链接</h2><ul>
-<li><a class="link"   href="https://www.hacknet-os.com/" >Hacknet官方网站<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-<li><a class="link"   href="https://www.hacknet-os.com/index_dlc.php" >Hacknet - Labyrinths官方网站<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-<li><a class="link"   href="https://twitter.com/hacknetOS" >Hacknet官方Twitter<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-<li><a class="link"   href="https://store.steampowered.com/app/365450/Hacknet/" >Hacknet的Steam商店页面<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-<li><a class="link"   href="https://store.steampowered.com/app/521840/Hacknet__Labyrinths/" >Hacknet - Labyrinths的Steam商店页面<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>游戏</category>
-      </categories>
-      <tags>
-        <tag>澳大利亚游戏作品</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>SVG Learning - 2</title>
     <url>/2022/04/22/svg_learning_2/</url>
     <content><![CDATA[<p>SVG 学习第二部分，包括<code>&lt;path&gt;</code>图形元素。简单罗列，英文为主。</p>
@@ -443,6 +298,151 @@
       </tags>
   </entry>
   <entry>
+    <title>《Hacknet》介绍</title>
+    <url>/2023/02/03/hacknet/</url>
+    <content><![CDATA[<p>最近玩完了《Hacknet》。虽然是2015年的游戏，但是我觉得是一款不错的黑客模拟游戏。写篇文章简单介绍一下。</p>
+<table>
+<thead>
+<tr>
+<th align="center">项目</th>
+<th align="center">内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">原名</td>
+<td align="center">Hacknet</td>
+</tr>
+<tr>
+<td align="center">常用译名</td>
+<td align="center">黑客网络</td>
+</tr>
+<tr>
+<td align="center">类型</td>
+<td align="center">模拟</td>
+</tr>
+<tr>
+<td align="center">平台</td>
+<td align="center">Microsoft Windows<br/>macOS<br/>Linux</td>
+</tr>
+<tr>
+<td align="center">分级</td>
+<td align="center">ESRB：青少年<br/>PEGI：12岁以上</td>
+</tr>
+<tr>
+<td align="center">开发</td>
+<td align="center">Team Fractal Alligator</td>
+</tr>
+<tr>
+<td align="center">发行</td>
+<td align="center">Fellow Traveller</td>
+</tr>
+<tr>
+<td align="center">引擎</td>
+<td align="center">XNA、FNA</td>
+</tr>
+<tr>
+<td align="center">模式</td>
+<td align="center">单人</td>
+</tr>
+<tr>
+<td align="center">发行时间</td>
+<td align="center"><strong>Microsoft Windows</strong>：<br/>2015年8月13日<br/><strong>macOS、Linux</strong>：<br/>2015年12月18日</td>
+</tr>
+</tbody></table>
+<p>《<strong>Hacknet</strong>》是一款由Team Fractal Alligator开发、Fellow Traveller发行的独立模拟游戏，于2015年8月13日在Microsoft Windows平台上发售，于2015年12月18日在macOS和Linux平台发售。支持简体中文。</p>
+<h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p>《Hacknet》是一款基于终端的黑客模拟器。你将跟随一位最近刚过世的黑客，通过他遗留的线索，来探询混乱未知的网络世界。他的死可能并非像媒体所报道的仅仅是一场意外那么简单。只需进行简单的教学，你便能使用基础的指令来完成真实的黑入过程，探索这充满了谜团的黑客世界。</p>
+<p>Bit，一位负责开发世界上最具攻击性的黑入系统的黑客，去世了。当他的系统连续14天都没有检测到他的操作后，保险程序便开始运行，将他未完成的计划发给了一位陌生的用户。作为这名用户，你需要一步步揭开事实的真相，并且确保Hacknet操作系统不会落入到不法之徒手中。</p>
+<p>《Hacknet》为你提供一个全方位的真实黑客模拟器，可以让你探索人类窥探隐私的天性、制止企业贪婪盛行并对抗隐藏在网络世界中的强大黑客。同时它又能提供学习支持，可以让一个电脑小白通过游戏了解到现实世界的电脑指令和对应用程序的操控。<span id="文注_1.0"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></p>
+<h3 id="游戏特色"><a href="#游戏特色" class="headerlink" title="游戏特色"></a>游戏特色</h3><p><strong>真实的黑入</strong></p>
+<p>基于真实的UNIX指令，将重点放在真实的黑入过程，而不是追求炫酷的好莱坞式黑客。通过拟真化的黑入过程，让玩家们仿佛置身黑入现场，体验打破防火墙时几近真实的感受。</p>
+<p><strong>探寻Bit的死亡之谜</strong></p>
+<p>一位黑客莫名死亡，而媒体们的报道根本无法自圆其说。跟随着他的“灵魂”（一个自动邮件发送系统）带给你的指示，你将会慢慢深入并参与到一个黑暗而又庞大的黑客阴谋之中。</p>
+<p><strong>完全的沉浸式体验</strong></p>
+<p>你将会被带入一个无尽的虚拟黑客世界，在这里没有“等级”或者是明显的游戏元素来打破这一体验。你可以选择跟随Bit的邮件的指引，或是直接遨游在整个网络之中，探索并追寻信息的蛛丝马迹。</p>
+<p><strong>上手简单精通难</strong></p>
+<p>游戏不会限制你的游戏方式或让你按部就班。</p>
+<p>游戏内容和学习曲线的设计，能够让初学者或有终端操作经验的人都能找到属于自己的快乐。</p>
+<p><strong>杀手级音乐</strong></p>
+<p>原声带由地下风格音乐家创作，包括Carpenter Brut（Hotline Miami）和Remi Gallego（又名The Algorithm），由The Otherworld Agency协助创作。<span id="文注_1.1"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></p>
+<h3 id="开发历史"><a href="#开发历史" class="headerlink" title="开发历史"></a>开发历史</h3><ul>
+<li>2015年7月15日，开发者放出游戏宣传片。<span id="文参_1"></span><a href="#%E5%8F%82_1"><sup>[1]</sup></a></li>
+<li>2015年8月13日，游戏在Microsoft Windows平台上发售。</li>
+<li>2015年10月21日，游戏原声带发售。</li>
+<li>2015年12月18日，游戏在macOS和Linux平台发售。</li>
+<li>2016年8月30日，开发者宣布游戏扩展内容《Hacknet - Labyrinths》的制作。</li>
+<li>2016年10月12日，游戏推出简体中文支持。</li>
+<li>2017年3月21日，开发者宣布游戏扩展内容《Hacknet - Labyrinths》将于3月31日发售，并放出宣传片。</li>
+<li>2017年3月31日，游戏扩展内容《Hacknet - Labyrinths》发售。</li>
+<li>2017年5月23日，游戏mod《Hacknet Extensions》发布。</li>
+</ul>
+<h2 id="额外内容"><a href="#额外内容" class="headerlink" title="额外内容"></a>额外内容</h2><h3 id="Hacknet-Labyrinths"><a href="#Hacknet-Labyrinths" class="headerlink" title="Hacknet - Labyrinths"></a>Hacknet - Labyrinths</h3><p>游戏扩展内容《Hacknet - Labyrinths》于2017年3月31日发售。</p>
+<h4 id="基本介绍-1"><a href="#基本介绍-1" class="headerlink" title="基本介绍"></a>基本介绍</h4><p>加入黑客精英小队，破解复杂的数据。</p>
+<p>加入了一个3-4小时流程的全新章节。你将由神秘人Kaguya招募到一个黑客精英团队，发掘新的强大工具与程序。</p>
+<p>然而与最棒的团队一起工作并不会特别容易。随着愈演愈烈的危机与越来越复杂的任务接踵而至，你需要利用团队的一切资源去黑入并完成任务，最后完美脱身。</p>
+<p>加入了全新工具，比如内存分析器，可以在RAM中进行内存取证。探索新的程序、网络、UI主题，以及新的秘密和音乐。<span id="文注_1.2"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></p>
+<p><strong>主要特点</strong></p>
+<ul>
+<li><strong>一个全新的篇章。</strong> 在原有故事的基础上加入了惊心动魄的3-4小时流程的新章节。你可以把它看做原有故事的拓展，也可以当做一个继续研究Hacknet的全新机会。</li>
+<li><strong>新的工具与程序。</strong> 得到全新的、更加复杂的黑入工具和程序来破解系统与网络。比如，通过使用内存分析器在RAM上使用内存取证，发现隐藏在其中的秘密。</li>
+<li><strong>团队工作。</strong> 你不再是独行侠，需要与你的队友在IRC交流，共同合作完成目标。</li>
+<li><strong>危险而大胆的数据抢劫。</strong> 网络系统变得更加复杂，不是通过简简单单的“破门而入”就能解决问题。探索，适应，生存！</li>
+<li><strong>新的杀手级音乐。</strong> 包括重金属&#x2F;电音艺术家Remi Gallego的《The Algorithm》和《Orge》。<span id="文注_1.3"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></li>
+</ul>
+<h3 id="Hacknet-Extensions"><a href="#Hacknet-Extensions" class="headerlink" title="Hacknet Extensions"></a>Hacknet Extensions</h3><p>游戏mod《<strong>Hacknet Extensions</strong>》于2017年5月23日发布。允许玩家创建自定义故事、任务、网络、主题以及音乐等，并可通过上传至Steam创意工坊与其他玩家分享。</p>
+<h2 id="游戏评价"><a href="#游戏评价" class="headerlink" title="游戏评价"></a>游戏评价</h2><table>
+<thead>
+<tr>
+<th align="center">汇总媒体</th>
+<th align="center">得分</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Metacritic</td>
+<td align="center">82 &#x2F; 100<span id="文参_2"></span><a href="#%E5%8F%82_2"><sup>[2]</sup></a></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">媒体</th>
+<th align="center">评分</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">GameSpot</td>
+<td align="center">8 &#x2F; 10<span id="文参_3"></span><a href="#%E5%8F%82_3"><sup>[3]</sup></a></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>《Hacknet》是我见过的最接近现实的黑客模拟游戏。——Kotaku<span id="文参_4"></span><a href="#%E5%8F%82_4"><sup>[4]</sup></a></p>
+<p>作为迄今为止最好的黑客模拟游戏，《Hacknet》让我们想去了解更多有关黑客世界的真实和详细描述。毫无疑问，这是最棒的合法黑客经验。——LevelUp<span id="文参_5"></span><a href="#%E5%8F%82_5"><sup>[5]</sup></a></p>
+</blockquote>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><ol>
+<li>^ <a href="#%E6%96%87%E6%B3%A8_1.0"><sup>1.0</sup></a> <a href="#%E6%96%87%E6%B3%A8_1.1"><sup>1.1</sup></a> <a href="#%E6%96%87%E6%B3%A8_1.2"><sup>1.2</sup></a> <a href="#%E6%96%87%E6%B3%A8_1.3"><sup>1.3</sup></a> <span id="注_1"></span>Steam商店页面介绍，有改动。</li>
+</ol>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
+<li><a id="参_1" href="#文参_1">^</a> Fellow Traveller. <a class="link"   href="https://www.youtube.com/watch?v=FgDmU7Pb96Y" >Hacknet宣传片<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. YouTube. 2015-07-15 [引用时间: 2023-02-03].</li>
+<li><a id="参_2" href="#文参_2">^</a> <a class="link"   href="https://www.metacritic.com/game/pc/hacknet" >Hacknet for PC Reviews<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. Metacritic. [引用时间: 2023-02-03].</li>
+<li><a id="参_3" href="#文参_3">^</a> <a class="link"   href="https://www.gamespot.com/games/hacknet/" >Hacknet<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. GameSpot. [引用时间: 2023-02-03].</li>
+<li><a id="参_4" href="#文参_4">^</a> Mark Serrels. <a class="link"   href="https://www.kotaku.com.au/2015/07/this-australian-game-will-turn-us-all-into-hackers/" >This Australian Game Will Turn Us All Into Hackers<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. 2015-07-16 [引用时间: 2023-02-03].</li>
+<li><a id="参_5" href="#文参_5">^</a> Alonso Zamora. <a class="link"   href="https://www.levelup.com/PC/juegos/335304/Hacknet/review" >Reseña del Juego Hacknet<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. LevelUp. 2015-08-14 [引用时间: 2023-02-03].</li>
+</ol>
+<h2 id="外部链接"><a href="#外部链接" class="headerlink" title="外部链接"></a>外部链接</h2><ul>
+<li><a class="link"   href="https://www.hacknet-os.com/" >Hacknet官方网站<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li><a class="link"   href="https://www.hacknet-os.com/index_dlc.php" >Hacknet - Labyrinths官方网站<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li><a class="link"   href="https://twitter.com/hacknetOS" >Hacknet官方Twitter<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li><a class="link"   href="https://store.steampowered.com/app/365450/Hacknet/" >Hacknet的Steam商店页面<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li><a class="link"   href="https://store.steampowered.com/app/521840/Hacknet__Labyrinths/" >Hacknet - Labyrinths的Steam商店页面<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>游戏</category>
+      </categories>
+      <tags>
+        <tag>澳大利亚游戏作品</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>用于MoeSkin的MoeLatte主题包现已发布！</title>
     <url>/2023/02/12/moelatte/</url>
     <content><![CDATA[<p><figure class="image-caption"><img  
@@ -453,6 +453,77 @@
                 ><figcaption>MoeLatte</figcaption></figure></p>
 <p><a class="link"   href="https://zh.moegirl.org.cn/User:GuoPC/MoeLatte" >MoeLatte<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>是基于<a class="link"   href="https://catppuccin.com/" >Catppuccin Theme<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>中的Latte调色风格制作的一款用于MoeSkin皮肤的主题包。采用了Latte中的绿—蓝系列色作为主要配色，并进行了一定调整。</p>
 <p>主题包制作：<a class="link"   href="https://zh.moegirl.org.cn/User:GuoPC" >GuoPC<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+]]></content>
+      <categories>
+        <category>随记</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>内裁圆角+双线边框的gradient实现</title>
+    <url>/2023/06/16/gradient_based_inner_crop_radius_and_double_border/</url>
+    <content><![CDATA[<p>使用CSS <code>background</code>里的gradient系列函数实现内裁圆角+双线边框。</p>
+<div style="background: 
+radial-gradient(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) 4px 4px/26px 26px no-repeat, 
+skyblue; width: 120px; height: 80px; margin: 5px;">
+</div>
+①<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) <i>4px 4px/26px 26px no-repeat</i></code>
+
+<p>⓪<code style="color: #445B70;"><span style="font-weight: bold;">skyblue</span></code></p>
+<div style="background: 
+conic-gradient(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) 4px 4px/26px 26px no-repeat, 
+radial-gradient(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) 4px 4px/26px 26px no-repeat, 
+skyblue; width: 120px; height: 80px; margin: 5px;">
+</div>
+②<code style="color: #445B70;"><span style="color: #F8961E; font-weight: bold;">conic-gradient</span>(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) <i>4px 4px/26px 26px no-repeat</i></code>
+
+<p>①<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) <i>4px 4px/26px 26px no-repeat</i></code></p>
+<p>⓪<code style="color: #445B70;"><span style="font-weight: bold;">skyblue</span></code></p>
+<div style="background: 
+linear-gradient(white 0 4px, transparent 4px) 5px 5px/115px 26px no-repeat, 
+linear-gradient(to right, white 0 4px, transparent 4px) 5px 5px/26px 75px no-repeat, 
+conic-gradient(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) 4px 4px/26px 26px no-repeat, 
+radial-gradient(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) 4px 4px/26px 26px no-repeat, 
+skyblue; width: 120px; height: 80px; margin: 5px;">
+</div>
+③<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(white 0 4px, transparent 4px) <i>5px 5px/115px 26px no-repeat</i>, <span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(to right, white 0 4px, transparent 4px) <i>5px 5px/26px 75px no-repeat</i></code>
+
+<p>②<code style="color: #445B70;"><span style="color: #F8961E; font-weight: bold;">conic-gradient</span>(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) <i>4px 4px/26px 26px no-repeat</i></code></p>
+<p>①<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) <i>4px 4px/26px 26px no-repeat</i></code></p>
+<p>⓪<code style="color: #445B70;"><span style="font-weight: bold;">skyblue</span></code></p>
+<div style="background: 
+radial-gradient(circle at top left, skyblue 14px, white 14px 19px, transparent 19px) 5px 5px/26px 26px no-repeat, 
+linear-gradient(white 0 4px, transparent 4px) 5px 5px/115px 26px no-repeat, 
+linear-gradient(to right, white 0 4px, transparent 4px) 5px 5px/26px 75px no-repeat, 
+conic-gradient(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) 4px 4px/26px 26px no-repeat, 
+radial-gradient(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) 4px 4px/26px 26px no-repeat, 
+skyblue; width: 120px; height: 80px; margin: 5px;">
+</div>
+④<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 14px, white 14px 19px, transparent 19px) <i>5px 5px/26px 26px no-repeat</i></code>
+
+<p>③<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(white 0 4px, transparent 4px) <i>5px 5px/115px 26px no-repeat</i>, <span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(to right, white 0 4px, transparent 4px) <i>5px 5px/26px 75px no-repeat</i></code></p>
+<p>②<code style="color: #445B70;"><span style="color: #F8961E; font-weight: bold;">conic-gradient</span>(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) <i>4px 4px/26px 26px no-repeat</i></code></p>
+<p>①<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) <i>4px 4px/26px 26px no-repeat</i></code></p>
+<p>⓪<code style="color: #445B70;"><span style="font-weight: bold;">skyblue</span></code></p>
+<div style="background: 
+linear-gradient(white 0 2px, transparent 2px) 27px 12px/93px 5px no-repeat, 
+linear-gradient(to right, white 0 2px, transparent 2px) 12px 27px/5px 53px no-repeat, 
+radial-gradient(circle at top left, skyblue 14px, white 14px 19px, transparent 19px) 5px 5px/26px 26px no-repeat, 
+linear-gradient(white 0 4px, transparent 4px) 5px 5px/115px 26px no-repeat, 
+linear-gradient(to right, white 0 4px, transparent 4px) 5px 5px/26px 75px no-repeat, 
+conic-gradient(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) 4px 4px/26px 26px no-repeat, 
+radial-gradient(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) 4px 4px/26px 26px no-repeat, 
+skyblue; width: 120px; height: 80px; margin: 5px;">
+</div>
+⑤<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(white 0 2px, transparent 2px) <i>27px 12px/93px 5px no-repeat</i>, <span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(to right, white 0 2px, transparent 2px) <i>12px 27px/5px 53px no-repeat</i></code>
+
+<p>④<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 14px, white 14px 19px, transparent 19px) <i>5px 5px/26px 26px no-repeat</i></code></p>
+<p>③<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(white 0 4px, transparent 4px) <i>5px 5px/115px 26px no-repeat</i>, <span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(to right, white 0 4px, transparent 4px) <i>5px 5px/26px 75px no-repeat</i></code></p>
+<p>②<code style="color: #445B70;"><span style="color: #F8961E; font-weight: bold;">conic-gradient</span>(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) <i>4px 4px/26px 26px no-repeat</i></code></p>
+<p>①<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) <i>4px 4px/26px 26px no-repeat</i></code></p>
+<p>⓪<code style="color: #445B70;"><span style="font-weight: bold;">skyblue</span></code></p>
 ]]></content>
       <categories>
         <category>随记</category>
@@ -598,74 +669,154 @@
       </tags>
   </entry>
   <entry>
-    <title>内裁圆角+双线边框的gradient实现</title>
-    <url>/2023/06/16/gradient_based_inner_crop_radius_and_double_border/</url>
-    <content><![CDATA[<p>使用CSS <code>background</code>里的gradient系列函数实现内裁圆角+双线边框。</p>
-<div style="background: 
-radial-gradient(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) 4px 4px/26px 26px no-repeat, 
-skyblue; width: 120px; height: 80px; margin: 5px;">
-</div>
-①<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) <i>4px 4px/26px 26px no-repeat</i></code>
+    <title>拜田希实花</title>
+    <url>/2024/01/11/haida_kimika/</url>
+    <content><![CDATA[<p><strong>拜田希实花</strong> 是fairys发行游戏 <strong>《现在就想告诉哥哥，我是妹妹！》</strong> 及其衍生作品的登场角色，女主角之一。</p>
 
-<p>⓪<code style="color: #445B70;"><span style="font-weight: bold;">skyblue</span></code></p>
-<div style="background: 
-conic-gradient(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) 4px 4px/26px 26px no-repeat, 
-radial-gradient(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) 4px 4px/26px 26px no-repeat, 
-skyblue; width: 120px; height: 80px; margin: 5px;">
-</div>
-②<code style="color: #445B70;"><span style="color: #F8961E; font-weight: bold;">conic-gradient</span>(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) <i>4px 4px/26px 26px no-repeat</i></code>
+  <div class="note-large blue">
+    <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
+      <p>基本资料</p>
 
-<p>①<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) <i>4px 4px/26px 26px no-repeat</i></code></p>
-<p>⓪<code style="color: #445B70;"><span style="font-weight: bold;">skyblue</span></code></p>
-<div style="background: 
-linear-gradient(white 0 4px, transparent 4px) 5px 5px/115px 26px no-repeat, 
-linear-gradient(to right, white 0 4px, transparent 4px) 5px 5px/26px 75px no-repeat, 
-conic-gradient(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) 4px 4px/26px 26px no-repeat, 
-radial-gradient(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) 4px 4px/26px 26px no-repeat, 
-skyblue; width: 120px; height: 80px; margin: 5px;">
-</div>
-③<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(white 0 4px, transparent 4px) <i>5px 5px/115px 26px no-repeat</i>, <span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(to right, white 0 4px, transparent 4px) <i>5px 5px/26px 75px no-repeat</i></code>
+    </div>
+    <div class="notel-content markdown-body">
+      <p>身高：161cm<br>体重：46kg<br>三围：B:80 W:59 H:81<br>年龄：16岁</p>
 
-<p>②<code style="color: #445B70;"><span style="color: #F8961E; font-weight: bold;">conic-gradient</span>(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) <i>4px 4px/26px 26px no-repeat</i></code></p>
-<p>①<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) <i>4px 4px/26px 26px no-repeat</i></code></p>
-<p>⓪<code style="color: #445B70;"><span style="font-weight: bold;">skyblue</span></code></p>
-<div style="background: 
-radial-gradient(circle at top left, skyblue 14px, white 14px 19px, transparent 19px) 5px 5px/26px 26px no-repeat, 
-linear-gradient(white 0 4px, transparent 4px) 5px 5px/115px 26px no-repeat, 
-linear-gradient(to right, white 0 4px, transparent 4px) 5px 5px/26px 75px no-repeat, 
-conic-gradient(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) 4px 4px/26px 26px no-repeat, 
-radial-gradient(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) 4px 4px/26px 26px no-repeat, 
-skyblue; width: 120px; height: 80px; margin: 5px;">
-</div>
-④<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 14px, white 14px 19px, transparent 19px) <i>5px 5px/26px 26px no-repeat</i></code>
+    </div>
+  </div>
 
-<p>③<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(white 0 4px, transparent 4px) <i>5px 5px/115px 26px no-repeat</i>, <span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(to right, white 0 4px, transparent 4px) <i>5px 5px/26px 75px no-repeat</i></code></p>
-<p>②<code style="color: #445B70;"><span style="color: #F8961E; font-weight: bold;">conic-gradient</span>(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) <i>4px 4px/26px 26px no-repeat</i></code></p>
-<p>①<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) <i>4px 4px/26px 26px no-repeat</i></code></p>
-<p>⓪<code style="color: #445B70;"><span style="font-weight: bold;">skyblue</span></code></p>
-<div style="background: 
-linear-gradient(white 0 2px, transparent 2px) 27px 12px/93px 5px no-repeat, 
-linear-gradient(to right, white 0 2px, transparent 2px) 12px 27px/5px 53px no-repeat, 
-radial-gradient(circle at top left, skyblue 14px, white 14px 19px, transparent 19px) 5px 5px/26px 26px no-repeat, 
-linear-gradient(white 0 4px, transparent 4px) 5px 5px/115px 26px no-repeat, 
-linear-gradient(to right, white 0 4px, transparent 4px) 5px 5px/26px 75px no-repeat, 
-conic-gradient(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) 4px 4px/26px 26px no-repeat, 
-radial-gradient(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) 4px 4px/26px 26px no-repeat, 
-skyblue; width: 120px; height: 80px; margin: 5px;">
-</div>
-⑤<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(white 0 2px, transparent 2px) <i>27px 12px/93px 5px no-repeat</i>, <span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(to right, white 0 2px, transparent 2px) <i>12px 27px/5px 53px no-repeat</i></code>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/img/kimika.png"
+                      alt="拜田希实花"
+                ><figcaption>拜田希实花</figcaption></figure></p>
+<p><span style="font-size:small;color:gray;">▲ 游戏CG。原作者保留权利，仅以介绍为目的引用。</span></p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><span style="font-size:larger;">为摆脱土气形象而努力着的，<br>腼腆的班长</span></p>
+<p>进入朝冈学园，成为新一届的高一学生，希实花在陆斗等人的班级里担任班长一职。她成绩十分优秀，在入学仪式上也被选为新生代表。性格畏畏缩缩并且很难有自己的主见，在小学和中学时期有被他人在背地里称作“土气花”的事情。随着升学，希实花下定决心改变自己，做的第一件事就是将带框眼镜换成了隐形眼镜。可是她腼腆的性格却几乎没有变化，付出的努力似乎也还是白忙一场。她与陆斗在小学时做过1年的同班同学。希实花还很清楚地记得陆斗，对方却不记得她了。希实花一方面对这种情况感到寂寞，另一方面也不太希望陆斗回忆起过去，她因此而苦恼着。</p>
+<details class="green" data-header-exclude>
+    <summary><i class="fa-solid fa-chevron-right"></i>日文原文，点击展开 </summary>
+    <div class='content markdown-body'>
+      <div lang="ja">
+<span style="font-size:larger;">地味キャラを捨て去ろうとがんばる、<br>内気な委員長</span>
 
-<p>④<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 14px, white 14px 19px, transparent 19px) <i>5px 5px/26px 26px no-repeat</i></code></p>
-<p>③<code style="color: #445B70;"><span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(white 0 4px, transparent 4px) <i>5px 5px/115px 26px no-repeat</i>, <span style="color: #43AA8B; font-weight: bold;">linear-gradient</span>(to right, white 0 4px, transparent 4px) <i>5px 5px/26px 75px no-repeat</i></code></p>
-<p>②<code style="color: #445B70;"><span style="color: #F8961E; font-weight: bold;">conic-gradient</span>(at top left, skyblue 110deg, transparent 110deg 160deg, skyblue 160deg) <i>4px 4px/26px 26px no-repeat</i></code></p>
-<p>①<code style="color: #445B70;"><span style="color: #F94144; font-weight: bold;">radial-gradient</span>(circle at top left, skyblue 24px, white 24px 26px, transparent 26px) <i>4px 4px/26px 26px no-repeat</i></code></p>
-<p>⓪<code style="color: #445B70;"><span style="font-weight: bold;">skyblue</span></code></p>
+<p>朝岡学園の新一年生で、陸斗たちのクラスの委員長を務めることになります。とても成績優秀で、入学式でも新入生総代に選ばれました。引っ込み思案でなかなか自己主張ができず、小中学生の頃は陰で「地味花」と呼ばれていた過去があります。進学にともなって自分を変えようと決意し、まずメガネをコンタクトにしました。でも内気なところは少しも変わっておらず、努力もいまいち空回りぎみです。陸斗とは小学生の頃に１年だけ同じクラスだったことがあります。希実花のほうは陸斗をはっきり覚えていましたが、陸斗は希実花のことを覚えていませんでした。そのことを寂しく感じる一方、陸斗に昔のことを思い出されるのもあまり歓迎できず、悩んでいるようです。</p>
+</div>
+
+    </div>
+  </details>
+
+<h2 id="短篇故事：希实花的心绪"><a href="#短篇故事：希实花的心绪" class="headerlink" title="短篇故事：希实花的心绪"></a>短篇故事：希实花的心绪</h2><p><span style="font-size:larger;">重逢，<br>但只是自说自话</span></p>
+<p>疼痛。<br>十分疼痛。<br>第一次戴上隐形眼镜真的很痛。<br>今天是新生活的开始……试着鼓起干劲，但……<br>“呜……”<br>果然还是很痛。<br>电车开起来之后变得更加疼痛。<br>好不容易被朝冈学园录取了，我却完全笑不出来。<br>已经把隐形眼镜摘下来了，带框眼镜在……<br>“唔！？”<br>对面的空座位有人来了，和对方撞上了膝盖。<br>一时间，我与他四目相对。<br>是差不多年龄的，男孩子……<br>旁边，也是年龄一般大的女孩。<br>大概，是和我一样来看朝冈的录取结果公示的吧。<br>能看出两个人明朗的表情。一定是顺利通过了吧。<br>也就是说，开春之后也可能会成为同班同学……<br>“…………”<br>果然，还是不戴带框眼镜比较好。<br>但是，那样的话，眼睛就会这样疼痛。<br>疼痛，比刚才更加剧烈了。<br>“啊……”<br>眼泪……可能流出来了。<br>不对，不是“可能”，我已经泪如雨下了。</p>
+<details class="green" data-header-exclude>
+    <summary><i class="fa-solid fa-chevron-right"></i>日文原文，点击展开 </summary>
+    <div class='content markdown-body'>
+      <div lang="ja">
+<span style="font-size:larger;">再会、<br>でも一方通行</span>
+
+<p>痛い。<br>とても痛い。<br>はじめて付けたコンタクトがとっても痛い。<br>今日から新しい人生のはじまり……なんて気合いを入れてみたけど……<br>「ぅっ……」<br>痛いものは痛い。<br>電車が走り出してからはさらに痛い。<br>せっかく朝岡学園に合格したのに、笑顔のひとつも作れない。<br>もうコンタクトははずして、メガネに……<br>「っ！？」<br>向かいの空席に人が来て、コツンと膝があたった。<br>瞬間、ちらっと視線が合う。<br>同い年くらいの、男の人……<br>隣は、やっぱり同い年くらいの女の子。<br>たぶん、私と同じく朝岡の合格発表を見に来た人たち。<br>ふたりの表情は明るい感じ。きっと合格したんだろう。<br>ということは、春からクラスメイトになる可能性も……<br>「…………」<br>やっぱり、メガネはやめておいた方がいいかも。<br>でも、そうなると、目は痛いまま。<br>さっきより、痛みが増してきている感じ。<br>「ぁ……」<br>涙……出てきたかも。<br>ううん、『かも』じゃなくて、出てる。</p>
+</div>
+
+    </div>
+  </details>
+
+<h2 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h2><h3 id="共通线"><a href="#共通线" class="headerlink" title="共通线"></a>共通线</h3><details class="yellow" data-header-exclude>
+    <summary><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开 </summary>
+    <div class='content markdown-body'>
+      <p><strong>升学考试结果公示</strong></p>
+<p>陆斗与青梅竹马奉莉一同在朝冈学园确认考试通过顺利升学后乘电车返程。</p>
+<p>电车座位采用的是四人两两对坐的形式，空间略显狭小。陆斗和奉莉并排坐下，二人聊天时陆斗膝盖不小心碰到了对坐的女生，此时二人注意到女生在轻声哭泣，陆斗以为是自己碰到了她把她弄哭了，又推测应该是因为她也报考了朝冈但是不幸落榜了。陆斗尝试搭话安慰，被奉莉偷偷劝阻。女生注意到陆斗，不由得发出吃惊的声音，随即向陆斗道歉。陆斗迟疑之时电车到站，将随身的手帕递给了女生后急忙下车。</p>
+<p>电车即将到达终点站。女生独自懊恼着自己依旧毫无改变，什么也没能说出口，同时注意到手帕上绣着“三谷”字样，确定了给她手帕的人是以前就认识的三谷同学，对方却没能认出她来。女生认为忘记了也好，但心里也感到痛苦。</p>
+<p><strong>新生入学准备说明会</strong></p>
+<p>新生入学准备说明会分为新生入学仪式和新生分组参观环节。入学仪式结束后，陆斗再次遇见了在电车上碰到的女生，并了解了女生在电车上哭泣的原因。参观时女生说自己名叫拜田希实花，陆斗感觉到她在偷偷打量着自己。</p>
+<p>回家途中，希实花又想到陆斗不记得自己，这正是自己所期望的，自己正是出于这个目的才选择了不会有人认识自己的朝冈。但是自己又似乎因为陆斗没能认出自己而寂寞，不知道如何是好。</p>
+<p><strong>开学典礼</strong></p>
+<p>开学典礼上，主持人请新生代表致辞时，希实花不自然地走上台开始致辞。但因为过于紧张，致辞在途中卡住了，陆斗朝希实花挥了挥手，希实花勉强完成了致辞。</p>
+<p>开学典礼结束后，班主任夏奏老师指名希实花担任班长一职。希实花虽然惊讶，但没有拒绝。夏奏老师继续进行副班长的竞选，陆斗举手提出要成为副班长。之后奉莉、步梦和章介主动担任活动实行委员，以辅助两位班长筹划包括樱花祭在内的各种校园活动。之后当天没有到场的茂森同学也暂被举荐为活动实行委员。</p>
+<p>回家途中，众人安慰鼓励了希实花，希实花认为自己给大家添了麻烦，陆斗则解释道大家都是自愿成为班委的，劝她不要在意。到了陆斗等人需要换乘的车站，希实花表示自己想换条路线回家，也同众人一起换乘。陆斗直言能增加在一起的时间很高兴，希实花听完脸红起来。</p>
+<p><strong>正式开学后</strong></p>
+<p>第二天放学后，众人前往陆斗的父亲直真的甜品店举办茶会。到了甜品店门前，章介好奇店名“een×vijf”怎么读，希实花在谈论中说出店名是荷兰语数字1和5的意思，陆斗等人称赞希实花，希实花却流下眼泪，然后连忙顺着陆斗的话解释是隐形眼镜的原因。餐品上好后，众人谈到彼此称呼的问题。聊到希实花时，希实花稍显强硬地希望大家称呼她为“拜田同学”。归家途中，希实花独自回想起今天发生的事情，为能够到een×vijf聚会而高兴，但想到陆斗不记得以前的事情，眼泪又不禁流了出来。</p>
+<p>到了一天中的最后一节课班会，夏奏老师与班上的同学们商议这周末要进行的合宿集训的相关事项。之后谈到下周末要进行的慈善义卖节，夏奏老师请希实花和陆斗两位班长上台主持，让大家讨论打算经营什么模拟店。希实花一开场就因为紧张咬到了舌头，陆斗便提出代替她主持，希实花则负责记录工作。放学后，班委们和夏奏老师留在班里继续开会。陆斗表示继续让自己主持，其他人则希望希实花在这种场合适应主持工作，希实花便开始主持。最后众人决定以女仆为主题经营模拟店。</p>
+
+    </div>
+  </details>
+
+<h3 id="个人线"><a href="#个人线" class="headerlink" title="个人线"></a>个人线</h3><details class="yellow" data-header-exclude>
+    <summary><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开 </summary>
+    <div class='content markdown-body'>
+      <p><strong>球技大会</strong></p>
+<p>合宿第一天是樱花祭的球技大会，大家前往各自的会场参加比赛。在与真央配合拿下沙滩排球半决赛后，休息时陆斗前往希实花和步梦所在的乒乓球比赛。发现陆斗前来观看比赛后，希实花乱了阵脚，输掉了比赛。之后三人一同回到沙滩排球赛场，在陆斗与真央获得沙滩排球冠军后，希实花与陆斗交谈时表现出对真央的钦佩和憧憬。</p>
+<p>一天的比赛结束后，大家回到教室等待班级排名结果。章介分析后认为会与第三名有微弱差距，居于第四。希实花自责地表示如果自己拿下了比赛，排名就会升到第三名了，众人给以安慰。夏奏老师前来宣布班级位居第四，希实花感到很失落。傍晚，大家在天台吃自助餐，希实花独自一人默默坐在一旁，陆斗上前关心，同时下定决心要在明天的洗场任务中努力。</p>
+<p>晚上，陆斗从男生宿舍的枕头大战中离开，在走廊上散步，遇见了因为其他女生在聊恋爱话题而逃出来的希实花。因为没有戴隐形眼镜，希实花有些踉跄。考虑到一时半会回不了宿舍，二人登上天台。陆斗感叹夜景美丽的同时感觉有些冷，希实花将身上的毛毯递给陆斗，自己却打起喷嚏，二人决定共用毛毯。陆斗聊到天上的星星，希实花便滔滔不绝地说了很多星星相关的知识，陆斗大吃一惊。希实花解释自己是通过看书学到的这些知识，自己很喜欢看书，之后向陆斗推荐了矶野绫子写的畅销小说《天使之泪》，并提出将书借给陆斗看，陆斗因为与希实花立下约定而暗自开心。回到房间后，希实花想着刚才的事情，心里既害羞又高兴。</p>
+<p><strong>洗场任务</strong></p>
+<p>第二天，洗场任务顺利进行一段时间后，众人在一项任务上就人员安排方案产生分歧，做出决定的压力来到希实花身上。但最终希实花没能给出判断，章介表达歉意后以负责人身份结束了决议。傍晚所有任务结束后，希实花因自责而处在消沉之中。夏奏老师进班宣布排名，同学们大多接受了结果，但希实花仍难以释怀。</p>
+<p>晚上，同学们在沙滩上烧烤。夏奏老师赶来通知需要两位同学守着一旁的篝火，陆斗便邀请希实花一起。其间，希实花向陆斗坦言自己曾下定决心要做出改变，但只是改变了外表，自己还是同以前一样笨拙，给周围的人带来麻烦。陆斗说正因为大家是朋友，所以不会过于在意这些，也希望希实花不要一直把这些事挂在心上，继续试着改变就好。希实花哭了一场后冷静下来，说自己虽然决定做出改变却还没有明确的目标，陆斗提议希实花作为班长，可以为带领班级获得樱花祭综合冠军努力。之后，希实花将班委们召集到班里，做出拿下综合冠军的宣言，众人也切实感受到了希实花的决心。</p>
+<p>合宿结束后，班委们一同前往陆斗的父亲直真的甜品店。希实花想自己来同陆斗的父亲商量模拟店事宜，经过简单介绍后，希实花提出在慈善义卖节再现直真店里甜品的味道。直真思索后提议制作泡芙，希实花似乎有些慌乱，看到陆斗反应平淡后又有些失望。商讨过后确定增加的甜品为草莓奶油泡芙，希实花表示想自己一个人也能制作出来，众人决定第二天到陆斗家中练习。回家途中，希实花回忆起小时候陆斗安慰她的场景和当时吃的泡芙，明白了自己还是希望陆斗回想起过去的经历。</p>
+<p><strong>慈善义卖节前的准备与当天</strong></p>
+<p>周二是合宿集训调休，下午众人在陆斗家集合。希实花开始练习制作泡芙，众人品尝后赞不绝口，希实花有些感动。傍晚众人同陆斗分别，希实花趁机将之前提到的小说《天使之泪》借给了陆斗。之后两天希实花在陆斗家练习制作果酱。</p>
+<p>慈善义卖节前一天，陆斗回到家后听闻由于房地产商的问题，搬家不能如期进行。来到甜品店后，陆斗还在烦恼着刚才的事情，希实花到达后二人如期开始制作泡芙。但因为陆斗和面时的失误，烤出的酥皮没能鼓起来。希实花先前就察觉到陆斗的异样，便希望陆斗能将发生的事情说给她听。陆斗倾诉后二人回到制作中，希实花提议减少一次制作的数量以避免进一步损失，只是会花些时间。二人最后决定在甜品店留宿，专心制作泡芙。</p>
+<p>深夜，希实花的眼睛因为戴久了隐形眼镜有些不舒服，陆斗建议换成带框眼镜。希实花犹豫后戴上了带框眼镜，陆斗看着希实花，终于想起小学三年级时与希实花是同班同学，希实花也因此高兴得流下眼泪。</p>
+<p>慈善义卖节当天早上，希实花因为制作的泡芙得到了同学们的称赞而十分开心。之后希实花提出成为服务员接客，一开始还有些紧张和拘谨，之后便习惯起来。慈善义卖节结束后，夏奏老师宣布班级排名上升到第二，希实花由衷感到高兴。回家路上，众人打算明天一起出去玩，希实花提议去看电影《天使之泪》，是由小说改编的。</p>
+<p><strong>话剧编剧风波</strong></p>
+<p>第二天，众人在车站汇合后前往电影院。途中，陆斗因为自己还没来得及看原著而抱歉，希实花表示并不在意，反而认为如果没看过原著先来观看电影，或许会有不同的感受。之后二人聊到原著与改编电影的话题，陆斗发现希实花一旦涉及到感兴趣的话题，也会变得很健谈，心里有些喜悦。预订的座位并不全连在一起，陆斗与希实花恰巧拿到了相邻座位的电影票。</p>
+<p>看完电影后，众人前往陆斗家的甜品店。谈到之后的表演派对，希实花希望班级能以《天使之泪》为原型表演话剧。晚上，陆斗阅读借来的小说，希实花重读一遍小说后与陆斗通过手机邮件聊天。</p>
+<p>早上陆斗想同希实花交流读书心得，希实花想先关注表演派对的安排于是谢绝了，但同时表示这本书是自己在身陷挫折时发现的宝贵希望，陆斗不是很理解她的意思。到了班会课，希实花将计划告诉同学们，大家欣然接受，并打算让希实花同时担任编剧和导演，希实花听到后既惊讶又感动。班委们商量服装相关事宜时，同班的麻耶等三位女生提出来帮忙编剧。</p>
+<p>但效果并不理想，三位女生完全没能帮上希实花的忙，还耽误了不少时间。希实花也深知这样下去不行，但似乎有些被孤立了，剧本基本上是由那三位女生自行编写的。经过众人的考虑和开导后，希实花鼓起勇气前去拒绝了三位女生的继续编写，班会时众人也向班上的同学们表达了歉意。</p>
+<p>剧本顺利完成，也获得了同学们的认可，希实花安排了陆斗和奉莉分别扮演男女主人公。周六正式排练时，众人注意到剧本中的女主人公与希实花十分相像，陆斗也才体会到希实花对这本小说所怀有的深刻情感。周日排练中途休息时，希实花端出做好的泡芙犒劳大家，奉莉则感觉希实花有些逞强，催促陆斗带希实花去天台休息。二人在天台回想甜品店成立时的事情，陆斗为希实花还牢记着这些而感谢。</p>
+<p><strong>希实花与过去</strong></p>
+<p>之后排练休息时，希实花的眼睛又因为隐形眼镜而疼痛，班上其他同学这才知道希实花原来戴着隐形眼镜。陆斗让她暂时取下隐形眼镜，但希实花不小心踩碎了一片。在内心挣扎一番后，希实花戴上了带框眼镜与大伙汇合。之前的三位女生看到希实花这个样子，无心喊出了“土气花”的称呼，不料希实花突然呼吸急促晕了过去。在经过校医检查和简单处理后，希实花恢复了意识。陆斗也完全记起了小学时，希实花就被别人起了这个外号来捉弄她，这也导致她变得自卑，同时不愿别人用名字称呼她。</p>
+<p>第二天，希实花因为去医院检查而延迟到校，众人前来关心。三位女生意识到自己做了错事，主动向希实花道歉。之后的排练中，希实花依然不在状态，陆斗见状要求暂停排练，同希实花两个人来到天台谈心。陆斗希望希实花不要再继续逃避过去，而应该勇敢地面对。在经过同意后，陆斗试着称呼她为希实花同学。希实花感到有些害羞，又进一步让陆斗直接喊她的名字，心中的畏惧也已烟消云散。回到班上，希实花希望班委们直接以名字称呼她，众人继续排练。休息时间，希实花稍感不安，陆斗上前握住她的手，为她加油鼓劲，希实花感觉自己已经喜欢上陆斗了。</p>
+<p><strong>表演派对前的约会和当天</strong></p>
+<p>离表演派对还有两天，虽然排练效果在不断变好，但希实花因为自己是倡议者和主要负责人，所以比起期待，更多的是紧张和不安。希实花被其他人叫走时，其他班委聚在一起检查剧本。其间大家都看出来希实花现在压力很大，奉莉指出陆斗和希实花约会时最好的解决办法，其他人表示赞成。此时希实花回到教室，陆斗被推到希实花面前。陆斗整理好语言后邀请希实花一起去商场。</p>
+<p>在经过聊天、占卜和卡拉OK之后，希实花的心情逐渐平复，二人的关系也逐渐升温。来到车站，希实花直言想用名字称呼陆斗，陆斗同意后二人又聊到看完小说的感想。在说出那本小说对自己的特殊意义后，希实花想顺势向陆斗告白，但陆斗心中认为自己还需要确认自己的心意，岔开了话题。</p>
+<p>表演派对当天，奉莉因受伤无法正常出演，同学们感到十分焦急。此时希实花鼓起勇气，提出代替奉莉扮演女主人公。演出时，虽然开头和临近结尾时发生了一些状况，但依靠陆斗和希实花以及众人的配合，危机成功化解，演出也获得了观众们的热烈掌声。班级得到了第一名的成绩，成功实现逆袭。</p>
+<p>结束后众人回到班上。陆斗来到希实花面前，给予真心的祝贺，希实花却脸红着跑出了教室。在其他班委的催促和指引下，陆斗朝天台跑去。登上天台后，陆斗看见了希实花的背影。二人互相表明自己的心意后双唇相接。</p>
+
+    </div>
+  </details>
+
+<h2 id="攻略路线"><a href="#攻略路线" class="headerlink" title="攻略路线"></a>攻略路线</h2><p>注：表中个人线之前与希实花相关（带有※）的选项建议选择，其他选项可根据个人喜好选择。</p>
+<details class="green" data-header-exclude>
+    <summary><i class="fa-solid fa-chevron-right"></i>攻略路线，点击展开 </summary>
+    <div class='content markdown-body'>
+      <p><span lang="ja">あの子が逃げるなんてありえない</span> &#x2F; 那个女生不可能躲着我<br>※<span lang="ja">なんとか助けてあげたくなった</span> &#x2F; ※想设法去帮她一下<br>※<span lang="ja">すぐさま副委員長に立候補する</span> &#x2F; ※立刻竞选副班长<br><span lang="ja">ドキっとしてしまう</span> &#x2F; 不由得心动了<br><span lang="ja">すごく嬉しくなった</span> &#x2F; 感到十分高兴<br><span lang="ja">とても、イヤな気分になった</span> &#x2F; 有一种，很不舒服的气氛<br><span lang="ja">代わりを申し出る</span> &#x2F; 代替那个人去组队<br><span lang="ja">本当にかわいい</span> &#x2F; 真的很可爱<br>※<span lang="ja">議長を代わる</span> &#x2F; ※代替她主持</p>
+<p><strong>拜田希实花线</strong></p>
+<p><span lang="ja">拝田さんだった</span> &#x2F; 拜田同学<br><span lang="ja">若干引いてしまった</span> &#x2F; 稍微有些不适<br><span lang="ja">やめておく</span> &#x2F; 还是算了<br><span lang="ja">拝田さんだった</span> &#x2F; 拜田同学</p>
+<p><strong>希实花 END</strong></p>
+
+    </div>
+  </details>
+
+<h2 id="相关歌曲"><a href="#相关歌曲" class="headerlink" title="相关歌曲"></a>相关歌曲</h2><p><span style="color:orchid;">片尾曲</span></p>
+<ul>
+<li><a href="/TranslationPlot/posts/2023-01-09-kimi_to_zutto/"><span lang="ja">君とずっと</span></a>（永远与你在一起）<ul>
+<li>演唱：拜田希实花（CV：日笠阳子）</li>
+<li>作词：lotta，作曲：rino，编曲：户田章世</li>
+</ul>
+</li>
+</ul>
+<p><span style="color:olivedrab;">角色歌</span></p>
+<ul>
+<li><a href="/TranslationPlot/posts/2022-11-24-my_mind/">my mind</a><ul>
+<li>演唱：拜田希实花（CV：日笠阳子）</li>
+<li>作词：lotta，作曲、编曲：户田章世</li>
+</ul>
+</li>
+<li><a href="/TranslationPlot/posts/2024-10-28-sakurairo_no_wadachi"><span lang="ja">桜色の轍</span></a>（樱色车辙）<ul>
+<li>演唱：茂田真央（CV：茅野爱衣）、拜田希实花（CV：日笠阳子）</li>
+<li>作词：RUCCA，作曲、编曲：菊田大介（Elements Garden）</li>
+</ul>
+</li>
+</ul>
+<h2 id="外部链接"><a href="#外部链接" class="headerlink" title="外部链接"></a>外部链接</h2><ul>
+<li><a class="link"   href="https://web.archive.org/web/20180312115330/https://fairys.tv/" >fairys官方网站<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>（<a class="link"   href="https://fairys.tv/" >原始网页<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>）</li>
+<li><a class="link"   href="https://imaimo.com/" >《现在就想告诉哥哥，我是妹妹！》特设网站<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
 ]]></content>
       <categories>
-        <category>随记</category>
+        <category>角色介绍</category>
       </categories>
       <tags>
-        <tag>CSS</tag>
+        <tag>现在就想告诉哥哥，我是妹妹！登场角色</tag>
       </tags>
   </entry>
   <entry>
@@ -789,7 +940,7 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
 
 <h2 id="相关歌曲"><a href="#相关歌曲" class="headerlink" title="相关歌曲"></a>相关歌曲</h2><p><span style="color:orchid;">片尾曲</span></p>
 <ul>
-<li><a href="/2022/12/27/kokuhaku/"><span lang="ja">告白</span></a>（告白）<ul>
+<li><a href="/TranslationPlot/posts/2022-12-27-kokuhaku/"><span lang="ja">告白</span></a>（告白）<ul>
 <li>演唱：奈奈濑奉莉（CV：伊藤加奈惠）</li>
 <li>作词：RUCCA，作曲、编曲：rino</li>
 </ul>
@@ -797,12 +948,12 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
 </ul>
 <p><span style="color:olivedrab;">角色歌</span></p>
 <ul>
-<li><a href="/2022/09/15/ima_wa_kono_mama/"><span lang="ja">今は このまま…</span></a>（现在 就这样…）<ul>
+<li><a href="/TranslationPlot/posts/2022-09-15-ima_wa_kono_mama/"><span lang="ja">今は このまま…</span></a>（现在 就这样…）<ul>
 <li>演唱：奈奈濑奉莉（CV：伊藤加奈惠）</li>
 <li>作词、作曲、编曲：lotta</li>
 </ul>
 </li>
-<li><a href="/2024/10/28/heartbeat2">HeartBeat2!</a><ul>
+<li><a href="/TranslationPlot/posts/2024-10-28-heartbeat2">HeartBeat2!</a><ul>
 <li>演唱：三谷步梦（CV：茅原实里）、奈奈濑奉莉（CV：伊藤加奈惠）</li>
 <li>作词：RUCCA，作曲、编曲：菊田大介（Elements Garden）</li>
 </ul>
@@ -897,157 +1048,6 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </categories>
       <tags>
         <tag>魔卡魅恋！登场角色</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>拜田希实花</title>
-    <url>/2024/01/11/haida_kimika/</url>
-    <content><![CDATA[<p><strong>拜田希实花</strong> 是fairys发行游戏 <strong>《现在就想告诉哥哥，我是妹妹！》</strong> 及其衍生作品的登场角色，女主角之一。</p>
-
-  <div class="note-large blue">
-    <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
-      <p>基本资料</p>
-
-    </div>
-    <div class="notel-content markdown-body">
-      <p>身高：161cm<br>体重：46kg<br>三围：B:80 W:59 H:81<br>年龄：16岁</p>
-
-    </div>
-  </div>
-
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/img/kimika.png"
-                      alt="拜田希实花"
-                ><figcaption>拜田希实花</figcaption></figure></p>
-<p><span style="font-size:small;color:gray;">▲ 游戏CG。原作者保留权利，仅以介绍为目的引用。</span></p>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><span style="font-size:larger;">为摆脱土气形象而努力着的，<br>腼腆的班长</span></p>
-<p>进入朝冈学园，成为新一届的高一学生，希实花在陆斗等人的班级里担任班长一职。她成绩十分优秀，在入学仪式上也被选为新生代表。性格畏畏缩缩并且很难有自己的主见，在小学和中学时期有被他人在背地里称作“土气花”的事情。随着升学，希实花下定决心改变自己，做的第一件事就是将带框眼镜换成了隐形眼镜。可是她腼腆的性格却几乎没有变化，付出的努力似乎也还是白忙一场。她与陆斗在小学时做过1年的同班同学。希实花还很清楚地记得陆斗，对方却不记得她了。希实花一方面对这种情况感到寂寞，另一方面也不太希望陆斗回忆起过去，她因此而苦恼着。</p>
-<details class="green" data-header-exclude>
-    <summary><i class="fa-solid fa-chevron-right"></i>日文原文，点击展开 </summary>
-    <div class='content markdown-body'>
-      <div lang="ja">
-<span style="font-size:larger;">地味キャラを捨て去ろうとがんばる、<br>内気な委員長</span>
-
-<p>朝岡学園の新一年生で、陸斗たちのクラスの委員長を務めることになります。とても成績優秀で、入学式でも新入生総代に選ばれました。引っ込み思案でなかなか自己主張ができず、小中学生の頃は陰で「地味花」と呼ばれていた過去があります。進学にともなって自分を変えようと決意し、まずメガネをコンタクトにしました。でも内気なところは少しも変わっておらず、努力もいまいち空回りぎみです。陸斗とは小学生の頃に１年だけ同じクラスだったことがあります。希実花のほうは陸斗をはっきり覚えていましたが、陸斗は希実花のことを覚えていませんでした。そのことを寂しく感じる一方、陸斗に昔のことを思い出されるのもあまり歓迎できず、悩んでいるようです。</p>
-</div>
-
-    </div>
-  </details>
-
-<h2 id="短篇故事：希实花的心绪"><a href="#短篇故事：希实花的心绪" class="headerlink" title="短篇故事：希实花的心绪"></a>短篇故事：希实花的心绪</h2><p><span style="font-size:larger;">重逢，<br>但只是自说自话</span></p>
-<p>疼痛。<br>十分疼痛。<br>第一次戴上隐形眼镜真的很痛。<br>今天是新生活的开始……试着鼓起干劲，但……<br>“呜……”<br>果然还是很痛。<br>电车开起来之后变得更加疼痛。<br>好不容易被朝冈学园录取了，我却完全笑不出来。<br>已经把隐形眼镜摘下来了，带框眼镜在……<br>“唔！？”<br>对面的空座位有人来了，和对方撞上了膝盖。<br>一时间，我与他四目相对。<br>是差不多年龄的，男孩子……<br>旁边，也是年龄一般大的女孩。<br>大概，是和我一样来看朝冈的录取结果公示的吧。<br>能看出两个人明朗的表情。一定是顺利通过了吧。<br>也就是说，开春之后也可能会成为同班同学……<br>“…………”<br>果然，还是不戴带框眼镜比较好。<br>但是，那样的话，眼睛就会这样疼痛。<br>疼痛，比刚才更加剧烈了。<br>“啊……”<br>眼泪……可能流出来了。<br>不对，不是“可能”，我已经泪如雨下了。</p>
-<details class="green" data-header-exclude>
-    <summary><i class="fa-solid fa-chevron-right"></i>日文原文，点击展开 </summary>
-    <div class='content markdown-body'>
-      <div lang="ja">
-<span style="font-size:larger;">再会、<br>でも一方通行</span>
-
-<p>痛い。<br>とても痛い。<br>はじめて付けたコンタクトがとっても痛い。<br>今日から新しい人生のはじまり……なんて気合いを入れてみたけど……<br>「ぅっ……」<br>痛いものは痛い。<br>電車が走り出してからはさらに痛い。<br>せっかく朝岡学園に合格したのに、笑顔のひとつも作れない。<br>もうコンタクトははずして、メガネに……<br>「っ！？」<br>向かいの空席に人が来て、コツンと膝があたった。<br>瞬間、ちらっと視線が合う。<br>同い年くらいの、男の人……<br>隣は、やっぱり同い年くらいの女の子。<br>たぶん、私と同じく朝岡の合格発表を見に来た人たち。<br>ふたりの表情は明るい感じ。きっと合格したんだろう。<br>ということは、春からクラスメイトになる可能性も……<br>「…………」<br>やっぱり、メガネはやめておいた方がいいかも。<br>でも、そうなると、目は痛いまま。<br>さっきより、痛みが増してきている感じ。<br>「ぁ……」<br>涙……出てきたかも。<br>ううん、『かも』じゃなくて、出てる。</p>
-</div>
-
-    </div>
-  </details>
-
-<h2 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h2><h3 id="共通线"><a href="#共通线" class="headerlink" title="共通线"></a>共通线</h3><details class="yellow" data-header-exclude>
-    <summary><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开 </summary>
-    <div class='content markdown-body'>
-      <p><strong>升学考试结果公示</strong></p>
-<p>陆斗与青梅竹马奉莉一同在朝冈学园确认考试通过顺利升学后乘电车返程。</p>
-<p>电车座位采用的是四人两两对坐的形式，空间略显狭小。陆斗和奉莉并排坐下，二人聊天时陆斗膝盖不小心碰到了对坐的女生，此时二人注意到女生在轻声哭泣，陆斗以为是自己碰到了她把她弄哭了，又推测应该是因为她也报考了朝冈但是不幸落榜了。陆斗尝试搭话安慰，被奉莉偷偷劝阻。女生注意到陆斗，不由得发出吃惊的声音，随即向陆斗道歉。陆斗迟疑之时电车到站，将随身的手帕递给了女生后急忙下车。</p>
-<p>电车即将到达终点站。女生独自懊恼着自己依旧毫无改变，什么也没能说出口，同时注意到手帕上绣着“三谷”字样，确定了给她手帕的人是以前就认识的三谷同学，对方却没能认出她来。女生认为忘记了也好，但心里也感到痛苦。</p>
-<p><strong>新生入学准备说明会</strong></p>
-<p>新生入学准备说明会分为新生入学仪式和新生分组参观环节。入学仪式结束后，陆斗再次遇见了在电车上碰到的女生，并了解了女生在电车上哭泣的原因。参观时女生说自己名叫拜田希实花，陆斗感觉到她在偷偷打量着自己。</p>
-<p>回家途中，希实花又想到陆斗不记得自己，这正是自己所期望的，自己正是出于这个目的才选择了不会有人认识自己的朝冈。但是自己又似乎因为陆斗没能认出自己而寂寞，不知道如何是好。</p>
-<p><strong>开学典礼</strong></p>
-<p>开学典礼上，主持人请新生代表致辞时，希实花不自然地走上台开始致辞。但因为过于紧张，致辞在途中卡住了，陆斗朝希实花挥了挥手，希实花勉强完成了致辞。</p>
-<p>开学典礼结束后，班主任夏奏老师指名希实花担任班长一职。希实花虽然惊讶，但没有拒绝。夏奏老师继续进行副班长的竞选，陆斗举手提出要成为副班长。之后奉莉、步梦和章介主动担任活动实行委员，以辅助两位班长筹划包括樱花祭在内的各种校园活动。之后当天没有到场的茂森同学也暂被举荐为活动实行委员。</p>
-<p>回家途中，众人安慰鼓励了希实花，希实花认为自己给大家添了麻烦，陆斗则解释道大家都是自愿成为班委的，劝她不要在意。到了陆斗等人需要换乘的车站，希实花表示自己想换条路线回家，也同众人一起换乘。陆斗直言能增加在一起的时间很高兴，希实花听完脸红起来。</p>
-<p><strong>正式开学后</strong></p>
-<p>第二天放学后，众人前往陆斗的父亲直真的甜品店举办茶会。到了甜品店门前，章介好奇店名“een×vijf”怎么读，希实花在谈论中说出店名是荷兰语数字1和5的意思，陆斗等人称赞希实花，希实花却流下眼泪，然后连忙顺着陆斗的话解释是隐形眼镜的原因。餐品上好后，众人谈到彼此称呼的问题。聊到希实花时，希实花稍显强硬地希望大家称呼她为“拜田同学”。归家途中，希实花独自回想起今天发生的事情，为能够到een×vijf聚会而高兴，但想到陆斗不记得以前的事情，眼泪又不禁流了出来。</p>
-<p>到了一天中的最后一节课班会，夏奏老师与班上的同学们商议这周末要进行的合宿集训的相关事项。之后谈到下周末要进行的慈善义卖节，夏奏老师请希实花和陆斗两位班长上台主持，让大家讨论打算经营什么模拟店。希实花一开场就因为紧张咬到了舌头，陆斗便提出代替她主持，希实花则负责记录工作。放学后，班委们和夏奏老师留在班里继续开会。陆斗表示继续让自己主持，其他人则希望希实花在这种场合适应主持工作，希实花便开始主持。最后众人决定以女仆为主题经营模拟店。</p>
-
-    </div>
-  </details>
-
-<h3 id="个人线"><a href="#个人线" class="headerlink" title="个人线"></a>个人线</h3><details class="yellow" data-header-exclude>
-    <summary><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开 </summary>
-    <div class='content markdown-body'>
-      <p><strong>球技大会</strong></p>
-<p>合宿第一天是樱花祭的球技大会，大家前往各自的会场参加比赛。在与真央配合拿下沙滩排球半决赛后，休息时陆斗前往希实花和步梦所在的乒乓球比赛。发现陆斗前来观看比赛后，希实花乱了阵脚，输掉了比赛。之后三人一同回到沙滩排球赛场，在陆斗与真央获得沙滩排球冠军后，希实花与陆斗交谈时表现出对真央的钦佩和憧憬。</p>
-<p>一天的比赛结束后，大家回到教室等待班级排名结果。章介分析后认为会与第三名有微弱差距，居于第四。希实花自责地表示如果自己拿下了比赛，排名就会升到第三名了，众人给以安慰。夏奏老师前来宣布班级位居第四，希实花感到很失落。傍晚，大家在天台吃自助餐，希实花独自一人默默坐在一旁，陆斗上前关心，同时下定决心要在明天的洗场任务中努力。</p>
-<p>晚上，陆斗从男生宿舍的枕头大战中离开，在走廊上散步，遇见了因为其他女生在聊恋爱话题而逃出来的希实花。因为没有戴隐形眼镜，希实花有些踉跄。考虑到一时半会回不了宿舍，二人登上天台。陆斗感叹夜景美丽的同时感觉有些冷，希实花将身上的毛毯递给陆斗，自己却打起喷嚏，二人决定共用毛毯。陆斗聊到天上的星星，希实花便滔滔不绝地说了很多星星相关的知识，陆斗大吃一惊。希实花解释自己是通过看书学到的这些知识，自己很喜欢看书，之后向陆斗推荐了矶野绫子写的畅销小说《天使之泪》，并提出将书借给陆斗看，陆斗因为与希实花立下约定而暗自开心。回到房间后，希实花想着刚才的事情，心里既害羞又高兴。</p>
-<p><strong>洗场任务</strong></p>
-<p>第二天，洗场任务顺利进行一段时间后，众人在一项任务上就人员安排方案产生分歧，做出决定的压力来到希实花身上。但最终希实花没能给出判断，章介表达歉意后以负责人身份结束了决议。傍晚所有任务结束后，希实花因自责而处在消沉之中。夏奏老师进班宣布排名，同学们大多接受了结果，但希实花仍难以释怀。</p>
-<p>晚上，同学们在沙滩上烧烤。夏奏老师赶来通知需要两位同学守着一旁的篝火，陆斗便邀请希实花一起。其间，希实花向陆斗坦言自己曾下定决心要做出改变，但只是改变了外表，自己还是同以前一样笨拙，给周围的人带来麻烦。陆斗说正因为大家是朋友，所以不会过于在意这些，也希望希实花不要一直把这些事挂在心上，继续试着改变就好。希实花哭了一场后冷静下来，说自己虽然决定做出改变却还没有明确的目标，陆斗提议希实花作为班长，可以为带领班级获得樱花祭综合冠军努力。之后，希实花将班委们召集到班里，做出拿下综合冠军的宣言，众人也切实感受到了希实花的决心。</p>
-<p>合宿结束后，班委们一同前往陆斗的父亲直真的甜品店。希实花想自己来同陆斗的父亲商量模拟店事宜，经过简单介绍后，希实花提出在慈善义卖节再现直真店里甜品的味道。直真思索后提议制作泡芙，希实花似乎有些慌乱，看到陆斗反应平淡后又有些失望。商讨过后确定增加的甜品为草莓奶油泡芙，希实花表示想自己一个人也能制作出来，众人决定第二天到陆斗家中练习。回家途中，希实花回忆起小时候陆斗安慰她的场景和当时吃的泡芙，明白了自己还是希望陆斗回想起过去的经历。</p>
-<p><strong>慈善义卖节前的准备与当天</strong></p>
-<p>周二是合宿集训调休，下午众人在陆斗家集合。希实花开始练习制作泡芙，众人品尝后赞不绝口，希实花有些感动。傍晚众人同陆斗分别，希实花趁机将之前提到的小说《天使之泪》借给了陆斗。之后两天希实花在陆斗家练习制作果酱。</p>
-<p>慈善义卖节前一天，陆斗回到家后听闻由于房地产商的问题，搬家不能如期进行。来到甜品店后，陆斗还在烦恼着刚才的事情，希实花到达后二人如期开始制作泡芙。但因为陆斗和面时的失误，烤出的酥皮没能鼓起来。希实花先前就察觉到陆斗的异样，便希望陆斗能将发生的事情说给她听。陆斗倾诉后二人回到制作中，希实花提议减少一次制作的数量以避免进一步损失，只是会花些时间。二人最后决定在甜品店留宿，专心制作泡芙。</p>
-<p>深夜，希实花的眼睛因为戴久了隐形眼镜有些不舒服，陆斗建议换成带框眼镜。希实花犹豫后戴上了带框眼镜，陆斗看着希实花，终于想起小学三年级时与希实花是同班同学，希实花也因此高兴得流下眼泪。</p>
-<p>慈善义卖节当天早上，希实花因为制作的泡芙得到了同学们的称赞而十分开心。之后希实花提出成为服务员接客，一开始还有些紧张和拘谨，之后便习惯起来。慈善义卖节结束后，夏奏老师宣布班级排名上升到第二，希实花由衷感到高兴。回家路上，众人打算明天一起出去玩，希实花提议去看电影《天使之泪》，是由小说改编的。</p>
-<p><strong>话剧编剧风波</strong></p>
-<p>第二天，众人在车站汇合后前往电影院。途中，陆斗因为自己还没来得及看原著而抱歉，希实花表示并不在意，反而认为如果没看过原著先来观看电影，或许会有不同的感受。之后二人聊到原著与改编电影的话题，陆斗发现希实花一旦涉及到感兴趣的话题，也会变得很健谈，心里有些喜悦。预订的座位并不全连在一起，陆斗与希实花恰巧拿到了相邻座位的电影票。</p>
-<p>看完电影后，众人前往陆斗家的甜品店。谈到之后的表演派对，希实花希望班级能以《天使之泪》为原型表演话剧。晚上，陆斗阅读借来的小说，希实花重读一遍小说后与陆斗通过手机邮件聊天。</p>
-<p>早上陆斗想同希实花交流读书心得，希实花想先关注表演派对的安排于是谢绝了，但同时表示这本书是自己在身陷挫折时发现的宝贵希望，陆斗不是很理解她的意思。到了班会课，希实花将计划告诉同学们，大家欣然接受，并打算让希实花同时担任编剧和导演，希实花听到后既惊讶又感动。班委们商量服装相关事宜时，同班的麻耶等三位女生提出来帮忙编剧。</p>
-<p>但效果并不理想，三位女生完全没能帮上希实花的忙，还耽误了不少时间。希实花也深知这样下去不行，但似乎有些被孤立了，剧本基本上是由那三位女生自行编写的。经过众人的考虑和开导后，希实花鼓起勇气前去拒绝了三位女生的继续编写，班会时众人也向班上的同学们表达了歉意。</p>
-<p>剧本顺利完成，也获得了同学们的认可，希实花安排了陆斗和奉莉分别扮演男女主人公。周六正式排练时，众人注意到剧本中的女主人公与希实花十分相像，陆斗也才体会到希实花对这本小说所怀有的深刻情感。周日排练中途休息时，希实花端出做好的泡芙犒劳大家，奉莉则感觉希实花有些逞强，催促陆斗带希实花去天台休息。二人在天台回想甜品店成立时的事情，陆斗为希实花还牢记着这些而感谢。</p>
-<p><strong>希实花与过去</strong></p>
-<p>之后排练休息时，希实花的眼睛又因为隐形眼镜而疼痛，班上其他同学这才知道希实花原来戴着隐形眼镜。陆斗让她暂时取下隐形眼镜，但希实花不小心踩碎了一片。在内心挣扎一番后，希实花戴上了带框眼镜与大伙汇合。之前的三位女生看到希实花这个样子，无心喊出了“土气花”的称呼，不料希实花突然呼吸急促晕了过去。在经过校医检查和简单处理后，希实花恢复了意识。陆斗也完全记起了小学时，希实花就被别人起了这个外号来捉弄她，这也导致她变得自卑，同时不愿别人用名字称呼她。</p>
-<p>第二天，希实花因为去医院检查而延迟到校，众人前来关心。三位女生意识到自己做了错事，主动向希实花道歉。之后的排练中，希实花依然不在状态，陆斗见状要求暂停排练，同希实花两个人来到天台谈心。陆斗希望希实花不要再继续逃避过去，而应该勇敢地面对。在经过同意后，陆斗试着称呼她为希实花同学。希实花感到有些害羞，又进一步让陆斗直接喊她的名字，心中的畏惧也已烟消云散。回到班上，希实花希望班委们直接以名字称呼她，众人继续排练。休息时间，希实花稍感不安，陆斗上前握住她的手，为她加油鼓劲，希实花感觉自己已经喜欢上陆斗了。</p>
-<p><strong>表演派对前的约会和当天</strong></p>
-<p>离表演派对还有两天，虽然排练效果在不断变好，但希实花因为自己是倡议者和主要负责人，所以比起期待，更多的是紧张和不安。希实花被其他人叫走时，其他班委聚在一起检查剧本。其间大家都看出来希实花现在压力很大，奉莉指出陆斗和希实花约会时最好的解决办法，其他人表示赞成。此时希实花回到教室，陆斗被推到希实花面前。陆斗整理好语言后邀请希实花一起去商场。</p>
-<p>在经过聊天、占卜和卡拉OK之后，希实花的心情逐渐平复，二人的关系也逐渐升温。来到车站，希实花直言想用名字称呼陆斗，陆斗同意后二人又聊到看完小说的感想。在说出那本小说对自己的特殊意义后，希实花想顺势向陆斗告白，但陆斗心中认为自己还需要确认自己的心意，岔开了话题。</p>
-<p>表演派对当天，奉莉因受伤无法正常出演，同学们感到十分焦急。此时希实花鼓起勇气，提出代替奉莉扮演女主人公。演出时，虽然开头和临近结尾时发生了一些状况，但依靠陆斗和希实花以及众人的配合，危机成功化解，演出也获得了观众们的热烈掌声。班级得到了第一名的成绩，成功实现逆袭。</p>
-<p>结束后众人回到班上。陆斗来到希实花面前，给予真心的祝贺，希实花却脸红着跑出了教室。在其他班委的催促和指引下，陆斗朝天台跑去。登上天台后，陆斗看见了希实花的背影。二人互相表明自己的心意后双唇相接。</p>
-
-    </div>
-  </details>
-
-<h2 id="攻略路线"><a href="#攻略路线" class="headerlink" title="攻略路线"></a>攻略路线</h2><p>注：表中个人线之前与希实花相关（带有※）的选项建议选择，其他选项可根据个人喜好选择。</p>
-<details class="green" data-header-exclude>
-    <summary><i class="fa-solid fa-chevron-right"></i>攻略路线，点击展开 </summary>
-    <div class='content markdown-body'>
-      <p><span lang="ja">あの子が逃げるなんてありえない</span> &#x2F; 那个女生不可能躲着我<br>※<span lang="ja">なんとか助けてあげたくなった</span> &#x2F; ※想设法去帮她一下<br>※<span lang="ja">すぐさま副委員長に立候補する</span> &#x2F; ※立刻竞选副班长<br><span lang="ja">ドキっとしてしまう</span> &#x2F; 不由得心动了<br><span lang="ja">すごく嬉しくなった</span> &#x2F; 感到十分高兴<br><span lang="ja">とても、イヤな気分になった</span> &#x2F; 有一种，很不舒服的气氛<br><span lang="ja">代わりを申し出る</span> &#x2F; 代替那个人去组队<br><span lang="ja">本当にかわいい</span> &#x2F; 真的很可爱<br>※<span lang="ja">議長を代わる</span> &#x2F; ※代替她主持</p>
-<p><strong>拜田希实花线</strong></p>
-<p><span lang="ja">拝田さんだった</span> &#x2F; 拜田同学<br><span lang="ja">若干引いてしまった</span> &#x2F; 稍微有些不适<br><span lang="ja">やめておく</span> &#x2F; 还是算了<br><span lang="ja">拝田さんだった</span> &#x2F; 拜田同学</p>
-<p><strong>希实花 END</strong></p>
-
-    </div>
-  </details>
-
-<h2 id="相关歌曲"><a href="#相关歌曲" class="headerlink" title="相关歌曲"></a>相关歌曲</h2><p><span style="color:orchid;">片尾曲</span></p>
-<ul>
-<li><a href="/2023/01/09/kimi_to_zutto/"><span lang="ja">君とずっと</span></a>（永远与你在一起）<ul>
-<li>演唱：拜田希实花（CV：日笠阳子）</li>
-<li>作词：lotta，作曲：rino，编曲：户田章世</li>
-</ul>
-</li>
-</ul>
-<p><span style="color:olivedrab;">角色歌</span></p>
-<ul>
-<li><a href="/2022/11/24/my_mind/">my mind</a><ul>
-<li>演唱：拜田希实花（CV：日笠阳子）</li>
-<li>作词：lotta，作曲、编曲：户田章世</li>
-</ul>
-</li>
-<li><a href="/2024/10/28/sakurairo_no_wadachi"><span lang="ja">桜色の轍</span></a>（樱色车辙）<ul>
-<li>演唱：茂田真央（CV：茅野爱衣）、拜田希实花（CV：日笠阳子）</li>
-<li>作词：RUCCA，作曲、编曲：菊田大介（Elements Garden）</li>
-</ul>
-</li>
-</ul>
-<h2 id="外部链接"><a href="#外部链接" class="headerlink" title="外部链接"></a>外部链接</h2><ul>
-<li><a class="link"   href="https://web.archive.org/web/20180312115330/https://fairys.tv/" >fairys官方网站<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>（<a class="link"   href="https://fairys.tv/" >原始网页<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>）</li>
-<li><a class="link"   href="https://imaimo.com/" >《现在就想告诉哥哥，我是妹妹！》特设网站<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>角色介绍</category>
-      </categories>
-      <tags>
-        <tag>现在就想告诉哥哥，我是妹妹！登场角色</tag>
       </tags>
   </entry>
   <entry>
@@ -1162,29 +1162,6 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
-    <title>Edge PDF图标的消失</title>
-    <url>/2024/10/05/disappearance_of_edge_pdf_icon/</url>
-    <content><![CDATA[<p>前些天下载了所谓“处理文书”需要安装的插件，当时没太在意就下下来让它自己安装了，不过有瞥到里面有涉及PDF处理和签名之类的插件。后来发现直接把PDF文件的图标干没了（关联的默认应用是Microsoft Edge）。<del>最后那堆插件完全没用到更是无语。</del>后来受网上一个自定义图标的帖子的启发，成功恢复了图标，顺手记在这里。反正也就是改改注册表的事情。</p>
-<p>在注册表中找到以下路径：<code>\HKEY_CLASSES_ROOT\MSEdgePDF\DefaultIcon</code>，其中<code>(默认)</code>字符串的值应类似于<code>&lt;路径&gt;,&lt;数字&gt;</code>的形式。比如<code>C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,11</code>。<code>&lt;路径&gt;</code>指明图标所在的文件，<code>&lt;数字&gt;</code>则是图标在文件图标列表中的位置。对于本例则是msedge.exe中所包含的图标列表的第11个图标，在右键Edge后点“属性”再点“更改图标…”便能看到第11个图标（从0开始从上向下、从左向右计数）是一个PDF图标，如下图。</p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/img/edge-icons.png"
-                      alt="Edge图标列表"
-                ><figcaption>Edge图标列表</figcaption></figure></p>
-<p>我这边遇到的情况是，前面的<code>&lt;路径&gt;</code>部分不见了，只有<code>,11</code>的部分。除了可以直接补上Edge的路径之外，也可以在注册表同级的<code>\Application</code>下的<code>ApplicationIcon</code>处确认路径。比如我这边是<code>C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,0</code>。</p>
-<p>改完之后顺手把那堆插件卸了，相关注册表内容也手动清理了一遍。</p>
-]]></content>
-      <categories>
-        <category>随记</category>
-      </categories>
-      <tags>
-        <tag>Microsoft Edge</tag>
-        <tag>图标</tag>
-        <tag>注册表</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>某信息栏的边框设计</title>
     <url>/2024/09/14/a_certain_infobox_border_design/</url>
     <content><![CDATA[<p>是的，我又来拿CSS <code>background</code>里的gradient系列函数折腾了。上一期见<a href="/2023/06/16/gradient_based_inner_crop_radius_and_double_border/">这里</a>。</p>
@@ -1235,6 +1212,29 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </categories>
       <tags>
         <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Edge PDF图标的消失</title>
+    <url>/2024/10/05/disappearance_of_edge_pdf_icon/</url>
+    <content><![CDATA[<p>前些天下载了所谓“处理文书”需要安装的插件，当时没太在意就下下来让它自己安装了，不过有瞥到里面有涉及PDF处理和签名之类的插件。后来发现直接把PDF文件的图标干没了（关联的默认应用是Microsoft Edge）。<del>最后那堆插件完全没用到更是无语。</del>后来受网上一个自定义图标的帖子的启发，成功恢复了图标，顺手记在这里。反正也就是改改注册表的事情。</p>
+<p>在注册表中找到以下路径：<code>\HKEY_CLASSES_ROOT\MSEdgePDF\DefaultIcon</code>，其中<code>(默认)</code>字符串的值应类似于<code>&lt;路径&gt;,&lt;数字&gt;</code>的形式。比如<code>C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,11</code>。<code>&lt;路径&gt;</code>指明图标所在的文件，<code>&lt;数字&gt;</code>则是图标在文件图标列表中的位置。对于本例则是msedge.exe中所包含的图标列表的第11个图标，在右键Edge后点“属性”再点“更改图标…”便能看到第11个图标（从0开始从上向下、从左向右计数）是一个PDF图标，如下图。</p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/img/edge-icons.png"
+                      alt="Edge图标列表"
+                ><figcaption>Edge图标列表</figcaption></figure></p>
+<p>我这边遇到的情况是，前面的<code>&lt;路径&gt;</code>部分不见了，只有<code>,11</code>的部分。除了可以直接补上Edge的路径之外，也可以在注册表同级的<code>\Application</code>下的<code>ApplicationIcon</code>处确认路径。比如我这边是<code>C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,0</code>。</p>
+<p>改完之后顺手把那堆插件卸了，相关注册表内容也手动清理了一遍。</p>
+]]></content>
+      <categories>
+        <category>随记</category>
+      </categories>
+      <tags>
+        <tag>Microsoft Edge</tag>
+        <tag>图标</tag>
+        <tag>注册表</tag>
       </tags>
   </entry>
 </search>
