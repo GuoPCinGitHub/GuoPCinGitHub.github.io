@@ -21,165 +21,22 @@
       </tags>
   </entry>
   <entry>
-    <title>SVG Learning - 2</title>
-    <url>/2022/04/22/svg_learning_2/</url>
-    <content><![CDATA[<p>SVG 学习第二部分，包括<code>&lt;path&gt;</code>图形元素。简单罗列，英文为主。</p>
-<blockquote>
-<p>References</p>
-<ul>
-<li><a class="link"   href="https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html" >An SVG Primer for Today’s Browsers<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><ul>
-<li><a class="link"   href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright" >Copyright<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> © 2010 <a class="link"   href="http://www.w3.org/" >W3C<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>® (<a class="link"   href="http://www.csail.mit.edu/" >MIT<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, <a class="link"   href="http://www.ercim.org/" >ERCIM<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, <a class="link"   href="http://www.keio.ac.jp/" >Keio<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>), All Rights Reserved.</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<h2 id="SVG-graphics-elements"><a href="#SVG-graphics-elements" class="headerlink" title="SVG graphics elements"></a>SVG graphics elements</h2><ul>
-<li><code>&lt;path&gt;</code></li>
-<li><code>&lt;line&gt;</code></li>
-<li><code>&lt;rect&gt;</code></li>
-<li><code>&lt;circle&gt;</code></li>
-<li><code>&lt;line&gt;</code></li>
-<li><code>&lt;polyline&gt;</code></li>
-<li><code>&lt;polygon&gt;</code></li>
-<li><code>&lt;image&gt;</code></li>
-<li><code>&lt;use&gt;</code></li>
-</ul>
-<h3 id=""><a href="#" class="headerlink" title="&lt;path&gt;"></a><code>&lt;path&gt;</code></h3><h4 id="M-L"><a href="#M-L" class="headerlink" title="M &amp; L"></a><code>M</code> &amp; <code>L</code></h4><ul>
-<li><code>M x y</code>: Move pen to (<code>x</code>, <code>y</code>)</li>
-<li><code>M x1,y1[ x2,y2[…]]</code>: Move pen to (<code>x1</code>, <code>y1</code>), then (<code>x2</code>, <code>y2</code>), …</li>
-<li><code>M x1 y1 L x2 y2[ x3 y3[…]]</code>, <code>M x1 y1 L x2,y2[ x3,y3[…]]</code>: Draw linearly from (<code>x1</code>, <code>y1</code>) to (<code>x2</code>, <code>y2</code>), then (<code>x3</code>, <code>y3</code>), …</li>
-</ul>
-<p><strong>SVG Code</strong></p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">d</span>=<span class="string">&quot;M 100 100 L 200 200&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p><strong>Illustration</strong></p>
-<p><figure class="image-caption"><img  
+    <title>用于MoeSkin的MoeLatte主题包现已发布！</title>
+    <url>/2023/02/12/moelatte/</url>
+    <content><![CDATA[<p><figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m40b9361c.png"
-                      alt="A diagonal line from (100,100) to (200,200)" title="A diagonal line from (100,100) to (200,200)"
-                ><figcaption>A diagonal line from (100,100) to (200,200)</figcaption></figure></p>
-<p><strong>SVG Code</strong></p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 100 100 L 200 200 100 150&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p><strong>Illustration</strong></p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m6b9cad89.png"
-                      alt="Concatenated pairs of coordinates" title="Concatenated pairs of coordinates"
-                ><figcaption>Concatenated pairs of coordinates</figcaption></figure></p>
-<p><strong>SVG Code</strong></p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 50,100 150,200 50,150&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 100 50 L 200 150 100 100&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m6daeff2a.png"
-                      alt="The effect of adding fill=&quot;none&quot; (but note that the stroke attribute is defined) " title="The effect of adding fill=&quot;none&quot; (but note that the stroke attribute is defined) "
-                ><figcaption>The effect of adding fill=&quot;none&quot; (but note that the stroke attribute is defined) </figcaption></figure></p>
-<ul>
-<li><code>z</code>: Close path</li>
-</ul>
-<p><strong>SVG Code</strong></p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 100,50 200,150 100,100&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 100,50 200,150 100,100 z&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<h4 id="fill-rule-even-odd"><a href="#fill-rule-even-odd" class="headerlink" title="fill-rule=&quot;even-odd&quot;"></a><code>fill-rule=&quot;even-odd&quot;</code></h4><p><strong>SVG Code</strong></p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 70,290 L 150,150 200,250 40,250 100,150 170,290&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 70,290 L 150,150 200,250 40,250 100,150 170,290&quot;</span> <span class="attr">fill-rule</span>=<span class="string">&quot;evenodd&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/798df064.png"
-                      alt="An example to show the difference between the default and &quot;even-odd&quot; fill rules" title="An example to show the difference between the default and &quot;even-odd&quot; fill rules"
-                ><figcaption>An example to show the difference between the default and &quot;even-odd&quot; fill rules</figcaption></figure></p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/2329cb12.png"
-                      alt="An example to show the difference between the default and &quot;even-odd&quot; fill rules" title="An example to show the difference between the default and &quot;even-odd&quot; fill rules"
-                ><figcaption>An example to show the difference between the default and &quot;even-odd&quot; fill rules</figcaption></figure></p>
-<h4 id="Combine-multiple-path-segments"><a href="#Combine-multiple-path-segments" class="headerlink" title="Combine multiple path segments"></a>Combine multiple path segments</h4><p><strong>SVG Code</strong></p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">fill</span>=<span class="string">&quot;orange&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">d</span>=<span class="string">&quot;M 10,215 210,215 110,42 z</span></span></span><br><span class="line"><span class="string"><span class="tag">    M 10,100 210,100 110,273 z&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">stroke</span>=<span class="string">&quot;purple&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;3&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m36f8c292.png"
-                      alt="A \&lt;path\&gt; with fill=&quot;green&quot; et cetera... is also included in the drawing." title="A &lt;path&gt; with fill=&quot;green&quot; et cetera... is also included in the drawing."
-                ><figcaption>A \&lt;path\&gt; with fill=&quot;green&quot; et cetera... is also included in the drawing.</figcaption></figure></p>
-<h4 id="Q-Quadratic-Bezier-curves"><a href="#Q-Quadratic-Bezier-curves" class="headerlink" title="Q: Quadratic Bézier curves"></a><code>Q</code>: Quadratic Bézier curves</h4><ul>
-<li><code>M x1 y1 Q x2,y2 x3,y3</code>: Draw quadratically from (<code>x1</code>, <code>y1</code>), then (<code>x2</code>, <code>y2</code>), towards (<code>x3</code>, <code>y3</code>)</li>
-</ul>
-<p><strong>SVG Code</strong></p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 100 200 Q 200,400 300,200&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;blue&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 100 200 L 200,400 300,200&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;red&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p><strong>Illustration</strong></p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m69cd8b78.png"
-                      alt="Bézier curve example" title="Bézier curve example"
-                ><figcaption>Bézier curve example</figcaption></figure></p>
-<p><strong>SVG Code</strong></p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">fill-rule</span>=<span class="string">&quot;evenodd&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">d</span>=<span class="string">&quot;M 70 140 L 150,0 200,100 L 40,100 100,0 L 170,140 70 140&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">fill</span>=<span class="string">&quot;red&quot;</span> <span class="attr">fill-rule</span>=<span class="string">&quot;evenodd&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">d</span>=<span class="string">&quot;M 70 140 Q 150,0 200,100 Q 40,100 100,0 Q 170,140 70 140&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p><strong>Illustration</strong></p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/me702c4.png"
-                      alt="An example of a graphic using a quadratic spline" title="An example of a graphic using a quadratic spline"
-                ><figcaption>An example of a graphic using a quadratic spline</figcaption></figure></p>
-<h3 id="C-Cubic-Bezier-curves"><a href="#C-Cubic-Bezier-curves" class="headerlink" title="C: Cubic Bézier curves"></a><code>C</code>: Cubic Bézier curves</h3><ul>
-<li><code>M x1 y1 C xt1,yt1[ xt2,yt2[…]] x2,y2</code>: Draw cubically from (<code>x1</code>, <code>y1</code>) to (<code>x2</code>, <code>y2</code>), with control points (<code>xt1</code>, <code>yt1</code>), (<code>xt2</code>, <code>yt2</code>), …</li>
-</ul>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m499a2128.png"
-                      alt="A family of cubic curves sharing endpoints and tangents" title="A family of cubic curves sharing endpoints and tangents"
-                ><figcaption>A family of cubic curves sharing endpoints and tangents</figcaption></figure></p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/mcbf3920.png"
-                      alt="Limiting case for a family of curves" title="Limiting case for a family of curves"
-                ><figcaption>Limiting case for a family of curves</figcaption></figure></p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m31556306.png"
-                      alt="Cubic beziers sharing tangents and endpoints" title="Cubic beziers sharing tangents and endpoints"
-                ><figcaption>Cubic beziers sharing tangents and endpoints</figcaption></figure></p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m5fbfc0c1.png"
-                      alt="Adjoining two cubic curves smoothly" title="Adjoining two cubic curves smoothly"
-                ><figcaption>Adjoining two cubic curves smoothly</figcaption></figure></p>
-<p><strong>SVG Code</strong></p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;3&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#eec1c2&quot;</span></span></span><br><span class="line"><span class="tag"><span class="attr">d</span>=<span class="string">&quot;M 99 192</span></span></span><br><span class="line"><span class="string"><span class="tag">C 137 160 204 133 141 124</span></span></span><br><span class="line"><span class="string"><span class="tag">C 78 115 34 167 47 129</span></span></span><br><span class="line"><span class="string"><span class="tag">C 60 91 20 65 77 71</span></span></span><br><span class="line"><span class="string"><span class="tag">C 134 77 206 43 196 101</span></span></span><br><span class="line"><span class="string"><span class="tag">C 186 159 118 368 119 299</span></span></span><br><span class="line"><span class="string"><span class="tag">C 120 230 201 169 138 206</span></span></span><br><span class="line"><span class="string"><span class="tag">C 75 243 53 231 99 192&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p><strong>Illustration</strong></p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/4418afb.png"
-                      alt="Several smoothly stitched Bézier segments" title="Several smoothly stitched Bézier segments"
-                ><figcaption>Several smoothly stitched Bézier segments</figcaption></figure></p>
-<h3 id="A-Elliptical-arc"><a href="#A-Elliptical-arc" class="headerlink" title="A: Elliptical arc"></a><code>A</code>: Elliptical arc</h3><p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m38b4a957.png"
-                      alt="Four elliptical arcs sharing endpoints" title="Four elliptical arcs sharing endpoints"
-                ><figcaption>Four elliptical arcs sharing endpoints</figcaption></figure></p>
+                     data-src="/img/MoeLatte-zh-cn.png"
+                      alt="MoeLatte" title="封面"
+                ><figcaption>MoeLatte</figcaption></figure></p>
+<p><a class="link"   href="https://zh.moegirl.org.cn/User:GuoPC/MoeLatte" >MoeLatte<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>是基于<a class="link"   href="https://catppuccin.com/" >Catppuccin Theme<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>中的Latte调色风格制作的一款用于MoeSkin皮肤的主题包。采用了Latte中的绿—蓝系列色作为主要配色，并进行了一定调整。</p>
+<p>主题包制作：<a class="link"   href="https://zh.moegirl.org.cn/User:GuoPC" >GuoPC<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
 ]]></content>
       <categories>
-        <category>学习</category>
+        <category>随记</category>
       </categories>
       <tags>
-        <tag>SVG</tag>
+        <tag>CSS</tag>
       </tags>
   </entry>
   <entry>
@@ -298,151 +155,6 @@
       </tags>
   </entry>
   <entry>
-    <title>《Hacknet》介绍</title>
-    <url>/2023/02/03/hacknet/</url>
-    <content><![CDATA[<p>最近玩完了《Hacknet》。虽然是2015年的游戏，但是我觉得是一款不错的黑客模拟游戏。写篇文章简单介绍一下。</p>
-<table>
-<thead>
-<tr>
-<th align="center">项目</th>
-<th align="center">内容</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">原名</td>
-<td align="center">Hacknet</td>
-</tr>
-<tr>
-<td align="center">常用译名</td>
-<td align="center">黑客网络</td>
-</tr>
-<tr>
-<td align="center">类型</td>
-<td align="center">模拟</td>
-</tr>
-<tr>
-<td align="center">平台</td>
-<td align="center">Microsoft Windows<br/>macOS<br/>Linux</td>
-</tr>
-<tr>
-<td align="center">分级</td>
-<td align="center">ESRB：青少年<br/>PEGI：12岁以上</td>
-</tr>
-<tr>
-<td align="center">开发</td>
-<td align="center">Team Fractal Alligator</td>
-</tr>
-<tr>
-<td align="center">发行</td>
-<td align="center">Fellow Traveller</td>
-</tr>
-<tr>
-<td align="center">引擎</td>
-<td align="center">XNA、FNA</td>
-</tr>
-<tr>
-<td align="center">模式</td>
-<td align="center">单人</td>
-</tr>
-<tr>
-<td align="center">发行时间</td>
-<td align="center"><strong>Microsoft Windows</strong>：<br/>2015年8月13日<br/><strong>macOS、Linux</strong>：<br/>2015年12月18日</td>
-</tr>
-</tbody></table>
-<p>《<strong>Hacknet</strong>》是一款由Team Fractal Alligator开发、Fellow Traveller发行的独立模拟游戏，于2015年8月13日在Microsoft Windows平台上发售，于2015年12月18日在macOS和Linux平台发售。支持简体中文。</p>
-<h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p>《Hacknet》是一款基于终端的黑客模拟器。你将跟随一位最近刚过世的黑客，通过他遗留的线索，来探询混乱未知的网络世界。他的死可能并非像媒体所报道的仅仅是一场意外那么简单。只需进行简单的教学，你便能使用基础的指令来完成真实的黑入过程，探索这充满了谜团的黑客世界。</p>
-<p>Bit，一位负责开发世界上最具攻击性的黑入系统的黑客，去世了。当他的系统连续14天都没有检测到他的操作后，保险程序便开始运行，将他未完成的计划发给了一位陌生的用户。作为这名用户，你需要一步步揭开事实的真相，并且确保Hacknet操作系统不会落入到不法之徒手中。</p>
-<p>《Hacknet》为你提供一个全方位的真实黑客模拟器，可以让你探索人类窥探隐私的天性、制止企业贪婪盛行并对抗隐藏在网络世界中的强大黑客。同时它又能提供学习支持，可以让一个电脑小白通过游戏了解到现实世界的电脑指令和对应用程序的操控。<span id="文注_1.0"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></p>
-<h3 id="游戏特色"><a href="#游戏特色" class="headerlink" title="游戏特色"></a>游戏特色</h3><p><strong>真实的黑入</strong></p>
-<p>基于真实的UNIX指令，将重点放在真实的黑入过程，而不是追求炫酷的好莱坞式黑客。通过拟真化的黑入过程，让玩家们仿佛置身黑入现场，体验打破防火墙时几近真实的感受。</p>
-<p><strong>探寻Bit的死亡之谜</strong></p>
-<p>一位黑客莫名死亡，而媒体们的报道根本无法自圆其说。跟随着他的“灵魂”（一个自动邮件发送系统）带给你的指示，你将会慢慢深入并参与到一个黑暗而又庞大的黑客阴谋之中。</p>
-<p><strong>完全的沉浸式体验</strong></p>
-<p>你将会被带入一个无尽的虚拟黑客世界，在这里没有“等级”或者是明显的游戏元素来打破这一体验。你可以选择跟随Bit的邮件的指引，或是直接遨游在整个网络之中，探索并追寻信息的蛛丝马迹。</p>
-<p><strong>上手简单精通难</strong></p>
-<p>游戏不会限制你的游戏方式或让你按部就班。</p>
-<p>游戏内容和学习曲线的设计，能够让初学者或有终端操作经验的人都能找到属于自己的快乐。</p>
-<p><strong>杀手级音乐</strong></p>
-<p>原声带由地下风格音乐家创作，包括Carpenter Brut（Hotline Miami）和Remi Gallego（又名The Algorithm），由The Otherworld Agency协助创作。<span id="文注_1.1"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></p>
-<h3 id="开发历史"><a href="#开发历史" class="headerlink" title="开发历史"></a>开发历史</h3><ul>
-<li>2015年7月15日，开发者放出游戏宣传片。<span id="文参_1"></span><a href="#%E5%8F%82_1"><sup>[1]</sup></a></li>
-<li>2015年8月13日，游戏在Microsoft Windows平台上发售。</li>
-<li>2015年10月21日，游戏原声带发售。</li>
-<li>2015年12月18日，游戏在macOS和Linux平台发售。</li>
-<li>2016年8月30日，开发者宣布游戏扩展内容《Hacknet - Labyrinths》的制作。</li>
-<li>2016年10月12日，游戏推出简体中文支持。</li>
-<li>2017年3月21日，开发者宣布游戏扩展内容《Hacknet - Labyrinths》将于3月31日发售，并放出宣传片。</li>
-<li>2017年3月31日，游戏扩展内容《Hacknet - Labyrinths》发售。</li>
-<li>2017年5月23日，游戏mod《Hacknet Extensions》发布。</li>
-</ul>
-<h2 id="额外内容"><a href="#额外内容" class="headerlink" title="额外内容"></a>额外内容</h2><h3 id="Hacknet-Labyrinths"><a href="#Hacknet-Labyrinths" class="headerlink" title="Hacknet - Labyrinths"></a>Hacknet - Labyrinths</h3><p>游戏扩展内容《Hacknet - Labyrinths》于2017年3月31日发售。</p>
-<h4 id="基本介绍-1"><a href="#基本介绍-1" class="headerlink" title="基本介绍"></a>基本介绍</h4><p>加入黑客精英小队，破解复杂的数据。</p>
-<p>加入了一个3-4小时流程的全新章节。你将由神秘人Kaguya招募到一个黑客精英团队，发掘新的强大工具与程序。</p>
-<p>然而与最棒的团队一起工作并不会特别容易。随着愈演愈烈的危机与越来越复杂的任务接踵而至，你需要利用团队的一切资源去黑入并完成任务，最后完美脱身。</p>
-<p>加入了全新工具，比如内存分析器，可以在RAM中进行内存取证。探索新的程序、网络、UI主题，以及新的秘密和音乐。<span id="文注_1.2"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></p>
-<p><strong>主要特点</strong></p>
-<ul>
-<li><strong>一个全新的篇章。</strong> 在原有故事的基础上加入了惊心动魄的3-4小时流程的新章节。你可以把它看做原有故事的拓展，也可以当做一个继续研究Hacknet的全新机会。</li>
-<li><strong>新的工具与程序。</strong> 得到全新的、更加复杂的黑入工具和程序来破解系统与网络。比如，通过使用内存分析器在RAM上使用内存取证，发现隐藏在其中的秘密。</li>
-<li><strong>团队工作。</strong> 你不再是独行侠，需要与你的队友在IRC交流，共同合作完成目标。</li>
-<li><strong>危险而大胆的数据抢劫。</strong> 网络系统变得更加复杂，不是通过简简单单的“破门而入”就能解决问题。探索，适应，生存！</li>
-<li><strong>新的杀手级音乐。</strong> 包括重金属&#x2F;电音艺术家Remi Gallego的《The Algorithm》和《Orge》。<span id="文注_1.3"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></li>
-</ul>
-<h3 id="Hacknet-Extensions"><a href="#Hacknet-Extensions" class="headerlink" title="Hacknet Extensions"></a>Hacknet Extensions</h3><p>游戏mod《<strong>Hacknet Extensions</strong>》于2017年5月23日发布。允许玩家创建自定义故事、任务、网络、主题以及音乐等，并可通过上传至Steam创意工坊与其他玩家分享。</p>
-<h2 id="游戏评价"><a href="#游戏评价" class="headerlink" title="游戏评价"></a>游戏评价</h2><table>
-<thead>
-<tr>
-<th align="center">汇总媒体</th>
-<th align="center">得分</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Metacritic</td>
-<td align="center">82 &#x2F; 100<span id="文参_2"></span><a href="#%E5%8F%82_2"><sup>[2]</sup></a></td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th align="center">媒体</th>
-<th align="center">评分</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">GameSpot</td>
-<td align="center">8 &#x2F; 10<span id="文参_3"></span><a href="#%E5%8F%82_3"><sup>[3]</sup></a></td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>《Hacknet》是我见过的最接近现实的黑客模拟游戏。——Kotaku<span id="文参_4"></span><a href="#%E5%8F%82_4"><sup>[4]</sup></a></p>
-<p>作为迄今为止最好的黑客模拟游戏，《Hacknet》让我们想去了解更多有关黑客世界的真实和详细描述。毫无疑问，这是最棒的合法黑客经验。——LevelUp<span id="文参_5"></span><a href="#%E5%8F%82_5"><sup>[5]</sup></a></p>
-</blockquote>
-<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><ol>
-<li>^ <a href="#%E6%96%87%E6%B3%A8_1.0"><sup>1.0</sup></a> <a href="#%E6%96%87%E6%B3%A8_1.1"><sup>1.1</sup></a> <a href="#%E6%96%87%E6%B3%A8_1.2"><sup>1.2</sup></a> <a href="#%E6%96%87%E6%B3%A8_1.3"><sup>1.3</sup></a> <span id="注_1"></span>Steam商店页面介绍，有改动。</li>
-</ol>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
-<li><a id="参_1" href="#文参_1">^</a> Fellow Traveller. <a class="link"   href="https://www.youtube.com/watch?v=FgDmU7Pb96Y" >Hacknet宣传片<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. YouTube. 2015-07-15 [引用时间: 2023-02-03].</li>
-<li><a id="参_2" href="#文参_2">^</a> <a class="link"   href="https://www.metacritic.com/game/pc/hacknet" >Hacknet for PC Reviews<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. Metacritic. [引用时间: 2023-02-03].</li>
-<li><a id="参_3" href="#文参_3">^</a> <a class="link"   href="https://www.gamespot.com/games/hacknet/" >Hacknet<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. GameSpot. [引用时间: 2023-02-03].</li>
-<li><a id="参_4" href="#文参_4">^</a> Mark Serrels. <a class="link"   href="https://www.kotaku.com.au/2015/07/this-australian-game-will-turn-us-all-into-hackers/" >This Australian Game Will Turn Us All Into Hackers<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. 2015-07-16 [引用时间: 2023-02-03].</li>
-<li><a id="参_5" href="#文参_5">^</a> Alonso Zamora. <a class="link"   href="https://www.levelup.com/PC/juegos/335304/Hacknet/review" >Reseña del Juego Hacknet<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. LevelUp. 2015-08-14 [引用时间: 2023-02-03].</li>
-</ol>
-<h2 id="外部链接"><a href="#外部链接" class="headerlink" title="外部链接"></a>外部链接</h2><ul>
-<li><a class="link"   href="https://www.hacknet-os.com/" >Hacknet官方网站<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-<li><a class="link"   href="https://www.hacknet-os.com/index_dlc.php" >Hacknet - Labyrinths官方网站<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-<li><a class="link"   href="https://twitter.com/hacknetOS" >Hacknet官方Twitter<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-<li><a class="link"   href="https://store.steampowered.com/app/365450/Hacknet/" >Hacknet的Steam商店页面<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-<li><a class="link"   href="https://store.steampowered.com/app/521840/Hacknet__Labyrinths/" >Hacknet - Labyrinths的Steam商店页面<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>游戏</category>
-      </categories>
-      <tags>
-        <tag>澳大利亚游戏作品</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>内裁圆角+双线边框的gradient实现</title>
     <url>/2023/06/16/gradient_based_inner_crop_radius_and_double_border/</url>
     <content><![CDATA[<p>使用CSS <code>background</code>里的gradient系列函数实现内裁圆角+双线边框。</p>
@@ -511,127 +223,6 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </categories>
       <tags>
         <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>用于MoeSkin的MoeLatte主题包现已发布！</title>
-    <url>/2023/02/12/moelatte/</url>
-    <content><![CDATA[<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/img/MoeLatte-zh-cn.png"
-                      alt="MoeLatte" title="封面"
-                ><figcaption>MoeLatte</figcaption></figure></p>
-<p><a class="link"   href="https://zh.moegirl.org.cn/User:GuoPC/MoeLatte" >MoeLatte<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>是基于<a class="link"   href="https://catppuccin.com/" >Catppuccin Theme<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>中的Latte调色风格制作的一款用于MoeSkin皮肤的主题包。采用了Latte中的绿—蓝系列色作为主要配色，并进行了一定调整。</p>
-<p>主题包制作：<a class="link"   href="https://zh.moegirl.org.cn/User:GuoPC" >GuoPC<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-]]></content>
-      <categories>
-        <category>随记</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>QQNT超级调色盘传统色列表</title>
-    <url>/2023/10/08/qqnt_palette/</url>
-    <content><![CDATA[<p>记录QQNT目前版本（9.9.3-17153）下超级调色盘中“故宫美学”和“敦煌美学”配色列表。</p>
-<h2 id="故宫美学"><a href="#故宫美学" class="headerlink" title="故宫美学"></a>故宫美学</h2><h3 id="缥碧沧浪"><a href="#缥碧沧浪" class="headerlink" title="缥碧沧浪"></a>缥碧沧浪</h3><blockquote>
-<p>#439696 #B1D5C8 #D5EBE1</p>
-<p>#99BCAC #80A492 #E9F3F4 #86C6B1 #E8EAD0</p>
-</blockquote>
-<div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;">
-<span style="display:inline-block;width:4em;height:1em;background:#439696;"></span><span style="display:inline-block;width:2em;height:1em;background:#B1D5C8;"></span><span style="display:inline-block;width:1em;height:1em;background:#D5EBE1;"></span><br/>
-<span style="display:inline-block;width:2em;height:1em;background:#99BCAC;"></span><span style="display:inline-block;width:2em;height:1em;background:#80A492;"></span><span style="display:inline-block;width:1em;height:1em;background:#E9F3F4;"></span><span style="display:inline-block;width:1em;height:1em;background:#86C6B1;"></span><span style="display:inline-block;width:1em;height:1em;background:#E8EAD0;"></span>
-</div>
-
-<h3 id="生如夏花"><a href="#生如夏花" class="headerlink" title="生如夏花"></a>生如夏花</h3><blockquote>
-<p>#4B394E #9B8EA9 #D3CCD6</p>
-<p>#8A618B #A77DAB #FBCA43 #464599 #B2D9C8</p>
-</blockquote>
-<div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;">
-<span style="display:inline-block;width:4em;height:1em;background:#4B394E;"></span><span style="display:inline-block;width:2em;height:1em;background:#9B8EA9;"></span><span style="display:inline-block;width:1em;height:1em;background:#D3CCD6;"></span><br/>
-<span style="display:inline-block;width:2em;height:1em;background:#8A618B;"></span><span style="display:inline-block;width:2em;height:1em;background:#A77DAB;"></span><span style="display:inline-block;width:1em;height:1em;background:#FBCA43;"></span><span style="display:inline-block;width:1em;height:1em;background:#464599;"></span><span style="display:inline-block;width:1em;height:1em;background:#B2D9C8;"></span>
-</div>
-
-<h3 id="象物新生"><a href="#象物新生" class="headerlink" title="象物新生"></a>象物新生</h3><blockquote>
-<p>#565535 #BFC096 #D5D1AE</p>
-<p>#A9A886 #9F9D6A #84A8A6 #C7B9AF #79716E</p>
-</blockquote>
-<div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;">
-<span style="display:inline-block;width:4em;height:1em;background:#565535;"></span><span style="display:inline-block;width:2em;height:1em;background:#BFC096;"></span><span style="display:inline-block;width:1em;height:1em;background:#D5D1AE;"></span><br/>
-<span style="display:inline-block;width:2em;height:1em;background:#A9A886;"></span><span style="display:inline-block;width:2em;height:1em;background:#9F9D6A;"></span><span style="display:inline-block;width:1em;height:1em;background:#84A8A6;"></span><span style="display:inline-block;width:1em;height:1em;background:#C7B9AF;"></span><span style="display:inline-block;width:1em;height:1em;background:#79716E;"></span>
-</div>
-
-<h3 id="流光溢彩"><a href="#流光溢彩" class="headerlink" title="流光溢彩"></a>流光溢彩</h3><blockquote>
-<p>#894E57 #CF929E #E3ADB9</p>
-<p>#B27777 #D0828A #D4C64C #B0D1E4 #B1362E</p>
-</blockquote>
-<div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;">
-<span style="display:inline-block;width:4em;height:1em;background:#894E57;"></span><span style="display:inline-block;width:2em;height:1em;background:#CF929E;"></span><span style="display:inline-block;width:1em;height:1em;background:#E3ADB9;"></span><br/>
-<span style="display:inline-block;width:2em;height:1em;background:#B27777;"></span><span style="display:inline-block;width:2em;height:1em;background:#D0828A;"></span><span style="display:inline-block;width:1em;height:1em;background:#D4C64C;"></span><span style="display:inline-block;width:1em;height:1em;background:#B0D1E4;"></span><span style="display:inline-block;width:1em;height:1em;background:#B1362E;"></span>
-</div>
-
-<h3 id="尘心不皂"><a href="#尘心不皂" class="headerlink" title="尘心不皂"></a>尘心不皂</h3><blockquote>
-<p>#787267 #DAD8D7 #C3C3C3</p>
-<p>#DFE0D9 #97968A #E3E5E1 #F6F5F4 #5B5858</p>
-</blockquote>
-<div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;">
-<span style="display:inline-block;width:4em;height:1em;background:#787267;"></span><span style="display:inline-block;width:2em;height:1em;background:#DAD8D7;"></span><span style="display:inline-block;width:1em;height:1em;background:#C3C3C3;"></span><br/>
-<span style="display:inline-block;width:2em;height:1em;background:#DFE0D9;"></span><span style="display:inline-block;width:2em;height:1em;background:#97968A;"></span><span style="display:inline-block;width:1em;height:1em;background:#E3E5E1;"></span><span style="display:inline-block;width:1em;height:1em;background:#F6F5F4;"></span><span style="display:inline-block;width:1em;height:1em;background:#5B5858;"></span>
-</div>
-
-<h2 id="敦煌美学"><a href="#敦煌美学" class="headerlink" title="敦煌美学"></a>敦煌美学</h2><h3 id="红消绿冷"><a href="#红消绿冷" class="headerlink" title="红消绿冷"></a>红消绿冷</h3><blockquote>
-<p>#4C4E16 #A4865B #A07B55</p>
-<p>#D8DFBD #A89D8A #8E6F54 #78726A #33211B</p>
-</blockquote>
-<div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;">
-<span style="display:inline-block;width:4em;height:1em;background:#4C4E16;"></span><span style="display:inline-block;width:2em;height:1em;background:#A4865B;"></span><span style="display:inline-block;width:1em;height:1em;background:#A07B55;"></span><br/>
-<span style="display:inline-block;width:2em;height:1em;background:#D8DFBD;"></span><span style="display:inline-block;width:2em;height:1em;background:#A89D8A;"></span><span style="display:inline-block;width:1em;height:1em;background:#8E6F54;"></span><span style="display:inline-block;width:1em;height:1em;background:#78726A;"></span><span style="display:inline-block;width:1em;height:1em;background:#33211B;"></span>
-</div>
-
-<h3 id="碧落空歌"><a href="#碧落空歌" class="headerlink" title="碧落空歌"></a>碧落空歌</h3><blockquote>
-<p>#51476C #73687D #706F91</p>
-<p>#E0C2B3 #889286 #B5B6B2 #5F5C54 #3B3839</p>
-</blockquote>
-<div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;">
-<span style="display:inline-block;width:4em;height:1em;background:#51476C;"></span><span style="display:inline-block;width:2em;height:1em;background:#73687D;"></span><span style="display:inline-block;width:1em;height:1em;background:#706F91;"></span><br/>
-<span style="display:inline-block;width:2em;height:1em;background:#E0C2B3;"></span><span style="display:inline-block;width:2em;height:1em;background:#889286;"></span><span style="display:inline-block;width:1em;height:1em;background:#B5B6B2;"></span><span style="display:inline-block;width:1em;height:1em;background:#5F5C54;"></span><span style="display:inline-block;width:1em;height:1em;background:#3B3839;"></span>
-</div>
-
-<h3 id="白贲无咎"><a href="#白贲无咎" class="headerlink" title="白贲无咎"></a>白贲无咎</h3><blockquote>
-<p>#531C0B #B25F47 #B16F4A</p>
-<p>#D9BC9D #B69584 #A69A88 #915030 #463838</p>
-</blockquote>
-<div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;">
-<span style="display:inline-block;width:4em;height:1em;background:#531C0B;"></span><span style="display:inline-block;width:2em;height:1em;background:#B25F47;"></span><span style="display:inline-block;width:1em;height:1em;background:#B16F4A;"></span><br/>
-<span style="display:inline-block;width:2em;height:1em;background:#D9BC9D;"></span><span style="display:inline-block;width:2em;height:1em;background:#B69584;"></span><span style="display:inline-block;width:1em;height:1em;background:#A69A88;"></span><span style="display:inline-block;width:1em;height:1em;background:#915030;"></span><span style="display:inline-block;width:1em;height:1em;background:#463838;"></span>
-</div>
-
-<h3 id="绿碧乌龙"><a href="#绿碧乌龙" class="headerlink" title="绿碧乌龙"></a>绿碧乌龙</h3><blockquote>
-<p>#537050 #B3B4A2 #828E74</p>
-<p>#C6A69B #768166 #A69A88 #DCC3A4 #3E4344</p>
-</blockquote>
-<div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;">
-<span style="display:inline-block;width:4em;height:1em;background:#537050;"></span><span style="display:inline-block;width:2em;height:1em;background:#B3B4A2;"></span><span style="display:inline-block;width:1em;height:1em;background:#828E74;"></span><br/>
-<span style="display:inline-block;width:2em;height:1em;background:#C6A69B;"></span><span style="display:inline-block;width:2em;height:1em;background:#768166;"></span><span style="display:inline-block;width:1em;height:1em;background:#A69A88;"></span><span style="display:inline-block;width:1em;height:1em;background:#DCC3A4;"></span><span style="display:inline-block;width:1em;height:1em;background:#3E4344;"></span>
-</div>
-
-<h3 id="空即是色"><a href="#空即是色" class="headerlink" title="空即是色"></a>空即是色</h3><blockquote>
-<p>#32456E #52678A #5F76A2</p>
-<p>#D8C6A0 #896347 #E8D263 #829C95 #323C3C</p>
-</blockquote>
-<div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;">
-<span style="display:inline-block;width:4em;height:1em;background:#32456E;"></span><span style="display:inline-block;width:2em;height:1em;background:#52678A;"></span><span style="display:inline-block;width:1em;height:1em;background:#5F76A2;"></span><br/>
-<span style="display:inline-block;width:2em;height:1em;background:#D8C6A0;"></span><span style="display:inline-block;width:2em;height:1em;background:#896347;"></span><span style="display:inline-block;width:1em;height:1em;background:#E8D263;"></span><span style="display:inline-block;width:1em;height:1em;background:#829C95;"></span><span style="display:inline-block;width:1em;height:1em;background:#323C3C;"></span>
-</div>
-]]></content>
-      <categories>
-        <category>随记</category>
-      </categories>
-      <tags>
-        <tag>QQNT</tag>
-        <tag>配色</tag>
       </tags>
   </entry>
   <entry>
@@ -820,6 +411,143 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
+    <title>QQNT超级调色盘传统色列表</title>
+    <url>/2023/10/08/qqnt_palette/</url>
+    <content><![CDATA[<p>记录QQNT目前版本（9.9.3-17153）下超级调色盘中“故宫美学”和“敦煌美学”配色列表。</p>
+<h2 id="故宫美学"><a href="#故宫美学" class="headerlink" title="故宫美学"></a>故宫美学</h2><h3 id="缥碧沧浪"><a href="#缥碧沧浪" class="headerlink" title="缥碧沧浪"></a>缥碧沧浪</h3><blockquote>
+<p>#439696 #B1D5C8 #D5EBE1</p>
+<p>#99BCAC #80A492 #E9F3F4 #86C6B1 #E8EAD0</p>
+</blockquote>
+<div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;">
+<span style="display:inline-block;width:4em;height:1em;background:#439696;"></span><span style="display:inline-block;width:2em;height:1em;background:#B1D5C8;"></span><span style="display:inline-block;width:1em;height:1em;background:#D5EBE1;"></span><br/>
+<span style="display:inline-block;width:2em;height:1em;background:#99BCAC;"></span><span style="display:inline-block;width:2em;height:1em;background:#80A492;"></span><span style="display:inline-block;width:1em;height:1em;background:#E9F3F4;"></span><span style="display:inline-block;width:1em;height:1em;background:#86C6B1;"></span><span style="display:inline-block;width:1em;height:1em;background:#E8EAD0;"></span>
+</div>
+
+<h3 id="生如夏花"><a href="#生如夏花" class="headerlink" title="生如夏花"></a>生如夏花</h3><blockquote>
+<p>#4B394E #9B8EA9 #D3CCD6</p>
+<p>#8A618B #A77DAB #FBCA43 #464599 #B2D9C8</p>
+</blockquote>
+<div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;">
+<span style="display:inline-block;width:4em;height:1em;background:#4B394E;"></span><span style="display:inline-block;width:2em;height:1em;background:#9B8EA9;"></span><span style="display:inline-block;width:1em;height:1em;background:#D3CCD6;"></span><br/>
+<span style="display:inline-block;width:2em;height:1em;background:#8A618B;"></span><span style="display:inline-block;width:2em;height:1em;background:#A77DAB;"></span><span style="display:inline-block;width:1em;height:1em;background:#FBCA43;"></span><span style="display:inline-block;width:1em;height:1em;background:#464599;"></span><span style="display:inline-block;width:1em;height:1em;background:#B2D9C8;"></span>
+</div>
+
+<h3 id="象物新生"><a href="#象物新生" class="headerlink" title="象物新生"></a>象物新生</h3><blockquote>
+<p>#565535 #BFC096 #D5D1AE</p>
+<p>#A9A886 #9F9D6A #84A8A6 #C7B9AF #79716E</p>
+</blockquote>
+<div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;">
+<span style="display:inline-block;width:4em;height:1em;background:#565535;"></span><span style="display:inline-block;width:2em;height:1em;background:#BFC096;"></span><span style="display:inline-block;width:1em;height:1em;background:#D5D1AE;"></span><br/>
+<span style="display:inline-block;width:2em;height:1em;background:#A9A886;"></span><span style="display:inline-block;width:2em;height:1em;background:#9F9D6A;"></span><span style="display:inline-block;width:1em;height:1em;background:#84A8A6;"></span><span style="display:inline-block;width:1em;height:1em;background:#C7B9AF;"></span><span style="display:inline-block;width:1em;height:1em;background:#79716E;"></span>
+</div>
+
+<h3 id="流光溢彩"><a href="#流光溢彩" class="headerlink" title="流光溢彩"></a>流光溢彩</h3><blockquote>
+<p>#894E57 #CF929E #E3ADB9</p>
+<p>#B27777 #D0828A #D4C64C #B0D1E4 #B1362E</p>
+</blockquote>
+<div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;">
+<span style="display:inline-block;width:4em;height:1em;background:#894E57;"></span><span style="display:inline-block;width:2em;height:1em;background:#CF929E;"></span><span style="display:inline-block;width:1em;height:1em;background:#E3ADB9;"></span><br/>
+<span style="display:inline-block;width:2em;height:1em;background:#B27777;"></span><span style="display:inline-block;width:2em;height:1em;background:#D0828A;"></span><span style="display:inline-block;width:1em;height:1em;background:#D4C64C;"></span><span style="display:inline-block;width:1em;height:1em;background:#B0D1E4;"></span><span style="display:inline-block;width:1em;height:1em;background:#B1362E;"></span>
+</div>
+
+<h3 id="尘心不皂"><a href="#尘心不皂" class="headerlink" title="尘心不皂"></a>尘心不皂</h3><blockquote>
+<p>#787267 #DAD8D7 #C3C3C3</p>
+<p>#DFE0D9 #97968A #E3E5E1 #F6F5F4 #5B5858</p>
+</blockquote>
+<div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;">
+<span style="display:inline-block;width:4em;height:1em;background:#787267;"></span><span style="display:inline-block;width:2em;height:1em;background:#DAD8D7;"></span><span style="display:inline-block;width:1em;height:1em;background:#C3C3C3;"></span><br/>
+<span style="display:inline-block;width:2em;height:1em;background:#DFE0D9;"></span><span style="display:inline-block;width:2em;height:1em;background:#97968A;"></span><span style="display:inline-block;width:1em;height:1em;background:#E3E5E1;"></span><span style="display:inline-block;width:1em;height:1em;background:#F6F5F4;"></span><span style="display:inline-block;width:1em;height:1em;background:#5B5858;"></span>
+</div>
+
+<h2 id="敦煌美学"><a href="#敦煌美学" class="headerlink" title="敦煌美学"></a>敦煌美学</h2><h3 id="红消绿冷"><a href="#红消绿冷" class="headerlink" title="红消绿冷"></a>红消绿冷</h3><blockquote>
+<p>#4C4E16 #A4865B #A07B55</p>
+<p>#D8DFBD #A89D8A #8E6F54 #78726A #33211B</p>
+</blockquote>
+<div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;">
+<span style="display:inline-block;width:4em;height:1em;background:#4C4E16;"></span><span style="display:inline-block;width:2em;height:1em;background:#A4865B;"></span><span style="display:inline-block;width:1em;height:1em;background:#A07B55;"></span><br/>
+<span style="display:inline-block;width:2em;height:1em;background:#D8DFBD;"></span><span style="display:inline-block;width:2em;height:1em;background:#A89D8A;"></span><span style="display:inline-block;width:1em;height:1em;background:#8E6F54;"></span><span style="display:inline-block;width:1em;height:1em;background:#78726A;"></span><span style="display:inline-block;width:1em;height:1em;background:#33211B;"></span>
+</div>
+
+<h3 id="碧落空歌"><a href="#碧落空歌" class="headerlink" title="碧落空歌"></a>碧落空歌</h3><blockquote>
+<p>#51476C #73687D #706F91</p>
+<p>#E0C2B3 #889286 #B5B6B2 #5F5C54 #3B3839</p>
+</blockquote>
+<div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;">
+<span style="display:inline-block;width:4em;height:1em;background:#51476C;"></span><span style="display:inline-block;width:2em;height:1em;background:#73687D;"></span><span style="display:inline-block;width:1em;height:1em;background:#706F91;"></span><br/>
+<span style="display:inline-block;width:2em;height:1em;background:#E0C2B3;"></span><span style="display:inline-block;width:2em;height:1em;background:#889286;"></span><span style="display:inline-block;width:1em;height:1em;background:#B5B6B2;"></span><span style="display:inline-block;width:1em;height:1em;background:#5F5C54;"></span><span style="display:inline-block;width:1em;height:1em;background:#3B3839;"></span>
+</div>
+
+<h3 id="白贲无咎"><a href="#白贲无咎" class="headerlink" title="白贲无咎"></a>白贲无咎</h3><blockquote>
+<p>#531C0B #B25F47 #B16F4A</p>
+<p>#D9BC9D #B69584 #A69A88 #915030 #463838</p>
+</blockquote>
+<div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;">
+<span style="display:inline-block;width:4em;height:1em;background:#531C0B;"></span><span style="display:inline-block;width:2em;height:1em;background:#B25F47;"></span><span style="display:inline-block;width:1em;height:1em;background:#B16F4A;"></span><br/>
+<span style="display:inline-block;width:2em;height:1em;background:#D9BC9D;"></span><span style="display:inline-block;width:2em;height:1em;background:#B69584;"></span><span style="display:inline-block;width:1em;height:1em;background:#A69A88;"></span><span style="display:inline-block;width:1em;height:1em;background:#915030;"></span><span style="display:inline-block;width:1em;height:1em;background:#463838;"></span>
+</div>
+
+<h3 id="绿碧乌龙"><a href="#绿碧乌龙" class="headerlink" title="绿碧乌龙"></a>绿碧乌龙</h3><blockquote>
+<p>#537050 #B3B4A2 #828E74</p>
+<p>#C6A69B #768166 #A69A88 #DCC3A4 #3E4344</p>
+</blockquote>
+<div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;">
+<span style="display:inline-block;width:4em;height:1em;background:#537050;"></span><span style="display:inline-block;width:2em;height:1em;background:#B3B4A2;"></span><span style="display:inline-block;width:1em;height:1em;background:#828E74;"></span><br/>
+<span style="display:inline-block;width:2em;height:1em;background:#C6A69B;"></span><span style="display:inline-block;width:2em;height:1em;background:#768166;"></span><span style="display:inline-block;width:1em;height:1em;background:#A69A88;"></span><span style="display:inline-block;width:1em;height:1em;background:#DCC3A4;"></span><span style="display:inline-block;width:1em;height:1em;background:#3E4344;"></span>
+</div>
+
+<h3 id="空即是色"><a href="#空即是色" class="headerlink" title="空即是色"></a>空即是色</h3><blockquote>
+<p>#32456E #52678A #5F76A2</p>
+<p>#D8C6A0 #896347 #E8D263 #829C95 #323C3C</p>
+</blockquote>
+<div style="border-radius:.2em;line-height:0;overflow:hidden;white-space:nowrap;width:max-content;">
+<span style="display:inline-block;width:4em;height:1em;background:#32456E;"></span><span style="display:inline-block;width:2em;height:1em;background:#52678A;"></span><span style="display:inline-block;width:1em;height:1em;background:#5F76A2;"></span><br/>
+<span style="display:inline-block;width:2em;height:1em;background:#D8C6A0;"></span><span style="display:inline-block;width:2em;height:1em;background:#896347;"></span><span style="display:inline-block;width:1em;height:1em;background:#E8D263;"></span><span style="display:inline-block;width:1em;height:1em;background:#829C95;"></span><span style="display:inline-block;width:1em;height:1em;background:#323C3C;"></span>
+</div>
+]]></content>
+      <categories>
+        <category>随记</category>
+      </categories>
+      <tags>
+        <tag>QQNT</tag>
+        <tag>配色</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>QQNT自定义字体记录</title>
+    <url>/2024/04/09/qqnt-custom-fonts/</url>
+    <content><![CDATA[<p>想了想还是记录一下自己QQNT电脑版设置的自定义字体。</p>
+<p>需要使用到的加载器以及插件：</p>
+<ul>
+<li><a class="link"   href="https://liteloaderqqnt.github.io/" >LiteLoaderQQNT<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li><a class="link"   href="https://github.com/xiyuesaves/LiteLoaderQQNT-lite_tools" >轻量工具箱<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+<p><del>某一天无意间发现自定义字体可以不从下拉列表选择字体，而是自己敲字体家族。</del></p>
+<p>目前使用的自定义字体声明：<code>IBM Plex Sans, Nu Wakkaoi M1, MiSans VF, MiSans L3, LINE Seed Sans KR, Plangothic P1, Plangothic P2, Sukima Gothic, Jigmo, Jigmo2, Jigmo3</code></p>
+<p>顺便附上各字体相关网址：</p>
+<ul>
+<li><a class="link"   href="https://www.ibm.com/plex/" >IBM Plex<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>（<code>IBM Plex Sans</code>）</li>
+<li><span lang="ja"><a class="link"   href="https://kokagem.sakura.ne.jp/font/wakkaoi/" >Nu ワッカオイ<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></span>（<code>Nu Wakkaoi M1</code>）</li>
+<li><a class="link"   href="https://hyperos.mi.com/font/zh/" >MiSans<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>（<code>MiSans VF, MiSans L3</code>）</li>
+<li><a class="link"   href="https://seed.line.me/" >LINE Seed<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>（<code>LINE Seed Sans KR</code>）</li>
+<li><a class="link"   href="https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic-Project" >遍黑体项目<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>（<code>Plangothic P1, Plangothic P2</code>）</li>
+<li><span lang="ja"><a class="link"   href="https://booth.pm/ja/items/2117070" >すきまゴシック<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></span>（<code>Sukima Gothic</code>）</li>
+<li><span lang="ja"><a class="link"   href="https://kamichikoichi.github.io/jigmo/" >Jigmo（字雲）<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></span>（<code>Jigmo, Jigmo2, Jigmo3</code>）</li>
+</ul>
+<hr>
+<p>5.7补充：若希望保留QQNT默认情况下的emoji样式（苹果的Apple Color Emoji），在上面的声明最前面加上<code>Color Emoji,</code>即可。</p>
+<hr>
+<p>7.7补充：2.30.10版本的轻量工具箱已对emoji进行处理，将“覆盖默认emoji字体”选项置于关闭即可。</p>
+]]></content>
+      <categories>
+        <category>随记</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>字体</tag>
+        <tag>QQNT</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>奈奈濑奉莉</title>
     <url>/2024/01/22/nanase_matsuri/</url>
     <content><![CDATA[<p><strong>奈奈濑奉莉</strong> 是fairys发行游戏 <strong>《现在就想告诉哥哥，我是妹妹！》</strong> 及其衍生作品的登场角色，女主角之一。</p>
@@ -972,120 +700,6 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
-    <title>QQNT自定义字体记录</title>
-    <url>/2024/04/09/qqnt-custom-fonts/</url>
-    <content><![CDATA[<p>想了想还是记录一下自己QQNT电脑版设置的自定义字体。</p>
-<p>需要使用到的加载器以及插件：</p>
-<ul>
-<li><a class="link"   href="https://liteloaderqqnt.github.io/" >LiteLoaderQQNT<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-<li><a class="link"   href="https://github.com/xiyuesaves/LiteLoaderQQNT-lite_tools" >轻量工具箱<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-</ul>
-<p><del>某一天无意间发现自定义字体可以不从下拉列表选择字体，而是自己敲字体家族。</del></p>
-<p>目前使用的自定义字体声明：<code>IBM Plex Sans, Nu Wakkaoi M1, MiSans VF, MiSans L3, LINE Seed Sans KR, Plangothic P1, Plangothic P2, Sukima Gothic, Jigmo, Jigmo2, Jigmo3</code></p>
-<p>顺便附上各字体相关网址：</p>
-<ul>
-<li><a class="link"   href="https://www.ibm.com/plex/" >IBM Plex<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>（<code>IBM Plex Sans</code>）</li>
-<li><span lang="ja"><a class="link"   href="https://kokagem.sakura.ne.jp/font/wakkaoi/" >Nu ワッカオイ<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></span>（<code>Nu Wakkaoi M1</code>）</li>
-<li><a class="link"   href="https://hyperos.mi.com/font/zh/" >MiSans<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>（<code>MiSans VF, MiSans L3</code>）</li>
-<li><a class="link"   href="https://seed.line.me/" >LINE Seed<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>（<code>LINE Seed Sans KR</code>）</li>
-<li><a class="link"   href="https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic-Project" >遍黑体项目<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>（<code>Plangothic P1, Plangothic P2</code>）</li>
-<li><span lang="ja"><a class="link"   href="https://booth.pm/ja/items/2117070" >すきまゴシック<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></span>（<code>Sukima Gothic</code>）</li>
-<li><span lang="ja"><a class="link"   href="https://kamichikoichi.github.io/jigmo/" >Jigmo（字雲）<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></span>（<code>Jigmo, Jigmo2, Jigmo3</code>）</li>
-</ul>
-<hr>
-<p>5.7补充：若希望保留QQNT默认情况下的emoji样式（苹果的Apple Color Emoji），在上面的声明最前面加上<code>Color Emoji,</code>即可。</p>
-<hr>
-<p>7.7补充：2.30.10版本的轻量工具箱已对emoji进行处理，将“覆盖默认emoji字体”选项置于关闭即可。</p>
-]]></content>
-      <categories>
-        <category>随记</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-        <tag>QQNT</tag>
-        <tag>字体</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>叶山秋音</title>
-    <url>/2024/03/14/hayama_tokine/</url>
-    <content><![CDATA[<p><strong>叶山秋音</strong> 是Lump of Sugar制作发行游戏 <strong>《魔卡魅恋！》</strong> 的登场角色，女主角之一。</p>
-
-  <div class="note-large blue">
-    <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
-      <p>基本资料</p>
-
-    </div>
-    <div class="notel-content markdown-body">
-      <p>身高：161cm<br>体重：44kg<br>三围：B:83 W:58 H:85<br>生日：9月19日</p>
-
-    </div>
-  </div>
-
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/img/tokine.png"
-                      alt="叶山秋音"
-                ><figcaption>叶山秋音</figcaption></figure></p>
-<p><span style="font-size:small;color:gray;">▲ 游戏CG。原作者保留权利，仅以介绍为目的引用。</span></p>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>她和男主角一样以能使用魔法的男生的身份转入学园，<br/>实际上是个女孩子。男主角的青梅竹马。</p>
-<p>由于她和男主角关系近似于同性朋友，因此也被周围当成是个男生。<br/>虽说她没失去身为女孩子应有的性格特性，<br/>不过经常忘记男主角是异性这件事。<br/>性格温厚老实，为人处世也非常懂得顾及人际关系和周遭氛围。<br/>但反过来说，她的性格过于内向和客气。<br/>看上去很老实，不过她也有充满激情的一面，<br/>会静静地表达自己的感情。很爱吃醋，不过不会迁怒于男主角。<br/>只是，要让她醋意超过了界限的话，不知道会干出什么事，<br/>这点非常可怕。</p>
-<p>因为进学院的身份是男生，所以和男主角住在宿舍的同一间寝室。</p>
-<ul>
-<li>兴趣：美食之旅<span style="font-size:smaller;">（主要是拉面店）</span>、读书</li>
-<li>特技：电子游戏、投接球<span style="font-size:smaller;">（全都是受律的影响）</span></li>
-<li>喜欢的食物：拉面、鱼贝鸡米饭</li>
-<li>讨厌的食物：香菇</li>
-</ul>
-<h2 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h2><h3 id="共通线"><a href="#共通线" class="headerlink" title="共通线"></a>共通线</h3><details class="yellow" data-header-exclude>
-    <summary><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开 </summary>
-    <div class='content markdown-body'>
-      <p><strong>序章</strong></p>
-<p>秋音以男生身份进入维斯利魔法学院学习，被安排与前几天转入学院的律住在同一间寝室。此前秋音在人间界帮助律四下物色对象，得知律转学的事情后，十分担心律在学校的情况，但因为自己的魔法能力不足以达到入学的最低标准，最终选择伪装成男生才得以进入学院。律入学时和奥莉谈话后，确定自己需要通过谈恋爱慢慢消除身上的魔法能力，并最终实现离开学院回归正常生活的愿望。秋音了解后决定协助律寻找女友，希望两个人可以一起离开。</p>
-<p>秋音和律作为学院唯二的男学生，被安排至单独的时间集中洗浴。晚上，经过一番心理斗争后，二人决定一同入浴。泡澡时，两个人回忆起小时候一起玩耍的时光。</p>
-<p><strong>开学后</strong></p>
-<p>在差点被同班同学引去女洗手间后，秋音决定平时跟着律一起行动。秋音很喜欢看书，自己常常沉浸其中。这天律提交过暑假回家申请后，前去学院图书馆和秋音汇合。看到秋音专注看书的样子，律隐隐感觉到秋音的女生气质。之后秋音各种无意识的举动让律有些担心秋音女生的事实可能会暴露，二人尝试了一系列方法，打算尽可能消除秋音身上的女人味，但由于种种原因似乎收效不佳。</p>
-<p>秋音因为突然以男生身份转来学院还不是很适应，逐渐积攒了些压力，律了解情况后邀请秋音到学院外面玩。在得到许可后，两个人一起去电影院看了电影，又到街机厅玩了游戏，最后去路边拉面摊品尝了秋音最喜欢的拉面。</p>
-<p><strong>秋音对身份的坦白</strong></p>
-<p>学院走廊上，秋音发现律在和其他女生谈话，不由得有些在意。躲在一旁的自己被发现后，周围的同学和之后到场的老师都希望秋音能试试穿上女生校服。晚上律回到寝室后，秋音慌忙藏起同学给的女生校服。在律真诚地说出自己作为秋音的朋友，不希望秋音这样勉强自己之后，秋音表示会再考虑自己身份的事情。</p>
-<p>之后秋音下定决心不再假扮男生，并向奥莉和姬百合说出了事实。众人意识到秋音是女生这件事难以被他人主动察觉，经过和兰铎尔夫老师的讨论后众人得出结论，原来秋音一直在施放着连自己都未能察觉到的强力魔法，影响了周围人的认知。同时也因为掌握着强力魔法，秋音可以放心向所有人坦白自己是女生，而不必担心魔法能力不足而被退学了。</p>
-<p>回到寝室后，秋音仍对说出秘密后同学们可能的反应心存顾虑。经过律的开导后，第二天秋音鼓起勇气穿上女生校服，以女生的打扮和同学见面。大家了解到秋音的情况后坦然接受，也纷纷愿意继续和秋音做朋友。</p>
-<p><strong>二人逐渐靠近</strong></p>
-<p>在挑明自己的女生身份后，秋音似乎比之前更受同学欢迎了。律考虑着通过恋爱消除自身魔法的目标，于是向秋音请教如何才能更受女生欢迎。思考时两人自然而然回忆起，秋音此前提到过可以通过身体接触增进感情。作为练习，律提出想接触秋音。回到寝室后，律用手抚摸秋音的一头长发，两个人心里都感到害羞不已。</p>
-<p>律想在秋音换寝室之前再和秋音多聊聊天，于是邀请秋音在夜里的学校探险。晚上，二人来到温室后聊起了以前的事：起初因为秋音的服装打扮，律误认为秋音是男生，之后秋音害怕自己因为欺骗律而被讨厌，于是向律坦白了自己是女生的事实，从那时起，两人作为好朋友共处至今。</p>
-<p>换寝室当天，奥莉了解到秋音当初为了假扮男生入学，带来的行李很少，便批准秋音从家里带些私人物品到学院，律则抓住时机打算同秋音外出游玩。两人来到动物园，秋音带上了早晨准备好的便当，中午时邀请律和自己一起品尝。</p>
-<p>早晨，律在独自一人的寝室醒来，注意到自己对秋音的心意，觉得是时候向秋音表达出来了。放学后，秋音如约和律在温室见面。看见律的样子，秋音认为律应该是有恋爱的烦恼想和自己商量，便鼓励律按自己的想法放手去做就一定没问题。律深受鼓舞，于是向秋音表白，希望可以把秋音既当做亲密的朋友更当做自己的恋人来喜欢。秋音也坦言自己早就喜欢上了律，二人就此交换了初吻。</p>
-
-    </div>
-  </details>
-
-<h3 id="个人线"><a href="#个人线" class="headerlink" title="个人线"></a>个人线</h3><details class="yellow" data-header-exclude>
-    <summary><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开 </summary>
-    <div class='content markdown-body'>
-      <p>成为恋人后，暑假期间二人作为转校生需要在学校接受补习，秋音还需要接受魔法方面的单独指导。这天律看到秋音接受指导后十分劳累的样子，提议和秋音外出约会。</p>
-<p>第二天来到游乐园后，两人看到周围许多情侣亲热的样子，也想试着做出情侣一般的举动，但双方都太过害羞而迟迟没有行动。最后律希望今天彼此可以作为朋友来享受游玩的乐趣，秋音也随即同意。夜幕降临，二人在摩天轮上回忆一天的欢乐时光，明白了不应过分拘泥于彼此的恋人关系而畏手畏脚，两人由衷分享着陪伴彼此的喜悦。</p>
-<p>秋音因为接受单独指导十分忙碌，律想与秋音相会的期盼也愈发强烈，便找到女仆夏珑请求帮忙。夏珑便分别安排二人同一时间清扫浴场，两人得知情况后为能有二人独处的时光而十分开心。</p>
-<p>之后律和秋音一起在烹饪室做饭，途中律不小心将沙拉酱撒到了秋音身上，于是陪着秋音回到寝室换成之前的男生校服，两人不由得回忆起秋音刚入学时的情形。吃完饭后秋音打算去图书馆，律借此提议去图书馆约会。</p>
-<p>这天二人在寝室闲来无事，律想去海边玩耍，秋音却表示自己没有泳衣，二人于是前往购物中心约会。秋音在泳衣店挑选泳衣时，律因为店里全是女生而不好意思地在店外等待。恰巧看见了同来购物中心逛街的讽歌和姬百合，律担心自己和秋音的恋人关系暴露，于是急忙回到店里通知秋音。在更衣室里的秋音了解情况后便把律也拉进更衣室，但两人的行踪最终还是暴露了，讽歌和姬百合则表示众人早已知道二人交往的事情。</p>
-<p>两人终于得以来到海边，律提出教秋音游泳，秋音凭借以前课上学过的游泳知识很快就掌握了，两个人在海边度过了愉快的时光。</p>
-<p>夏去秋来，奥莉经过检查后认定秋音和律身上的魔法已经几乎消退，不久后就能从学院毕业，重回人间界生活。二人稍感不舍，秋音便邀请律一起到山里欣赏秋叶。其间，秋音向律说明自己身上的魔法之所以最终得以消失，是因为自己终于能坦诚地向律表达出心意，而不再需要通过魔法来影响周围。律借机向秋音递出结婚申请书表明心意，秋音惊喜万分，二人在这漫天红叶之下发誓永远都要在一起。</p>
-
-    </div>
-  </details>
-
-<h2 id="外部链接"><a href="#外部链接" class="headerlink" title="外部链接"></a>外部链接</h2><ul>
-<li><a class="link"   href="https://hikarifield.co.jp/magicha/character/chara02.html" >中文版官网角色介绍<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>角色介绍</category>
-      </categories>
-      <tags>
-        <tag>魔卡魅恋！登场角色</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>奥莉艾塔·库洛诺·伊斯塔丽嘉·吉娜斯缇尔</title>
     <url>/2024/05/27/orietta_chrono_istarica_ginasteele/</url>
     <content><![CDATA[<p><strong>奥莉艾塔·库洛诺·伊斯塔丽嘉·吉娜斯缇尔</strong> 是Lump of Sugar制作发行游戏 <strong>《魔卡魅恋！》</strong> 的登场角色，女主角之一。</p>
@@ -1212,6 +826,29 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </categories>
       <tags>
         <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Edge PDF图标的消失</title>
+    <url>/2024/10/05/disappearance_of_edge_pdf_icon/</url>
+    <content><![CDATA[<p>前些天下载了所谓“处理文书”需要安装的插件，当时没太在意就下下来让它自己安装了，不过有瞥到里面有涉及PDF处理和签名之类的插件。后来发现直接把PDF文件的图标干没了（关联的默认应用是Microsoft Edge）。<del>最后那堆插件完全没用到更是无语。</del>后来受网上一个自定义图标的帖子的启发，成功恢复了图标，顺手记在这里。反正也就是改改注册表的事情。</p>
+<p>在注册表中找到以下路径：<code>\HKEY_CLASSES_ROOT\MSEdgePDF\DefaultIcon</code>，其中<code>(默认)</code>字符串的值应类似于<code>&lt;路径&gt;,&lt;数字&gt;</code>的形式。比如<code>C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,11</code>。<code>&lt;路径&gt;</code>指明图标所在的文件，<code>&lt;数字&gt;</code>则是图标在文件图标列表中的位置。对于本例则是msedge.exe中所包含的图标列表的第11个图标，在右键Edge后点“属性”再点“更改图标…”便能看到第11个图标（从0开始从上向下、从左向右计数）是一个PDF图标，如下图。</p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/img/edge-icons.png"
+                      alt="Edge图标列表"
+                ><figcaption>Edge图标列表</figcaption></figure></p>
+<p>我这边遇到的情况是，前面的<code>&lt;路径&gt;</code>部分不见了，只有<code>,11</code>的部分。除了可以直接补上Edge的路径之外，也可以在注册表同级的<code>\Application</code>下的<code>ApplicationIcon</code>处确认路径。比如我这边是<code>C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,0</code>。</p>
+<p>改完之后顺手把那堆插件卸了，相关注册表内容也手动清理了一遍。</p>
+]]></content>
+      <categories>
+        <category>随记</category>
+      </categories>
+      <tags>
+        <tag>Microsoft Edge</tag>
+        <tag>图标</tag>
+        <tag>注册表</tag>
       </tags>
   </entry>
   <entry>
@@ -1382,29 +1019,6 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
-    <title>Edge PDF图标的消失</title>
-    <url>/2024/10/05/disappearance_of_edge_pdf_icon/</url>
-    <content><![CDATA[<p>前些天下载了所谓“处理文书”需要安装的插件，当时没太在意就下下来让它自己安装了，不过有瞥到里面有涉及PDF处理和签名之类的插件。后来发现直接把PDF文件的图标干没了（关联的默认应用是Microsoft Edge）。<del>最后那堆插件完全没用到更是无语。</del>后来受网上一个自定义图标的帖子的启发，成功恢复了图标，顺手记在这里。反正也就是改改注册表的事情。</p>
-<p>在注册表中找到以下路径：<code>\HKEY_CLASSES_ROOT\MSEdgePDF\DefaultIcon</code>，其中<code>(默认)</code>字符串的值应类似于<code>&lt;路径&gt;,&lt;数字&gt;</code>的形式。比如<code>C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,11</code>。<code>&lt;路径&gt;</code>指明图标所在的文件，<code>&lt;数字&gt;</code>则是图标在文件图标列表中的位置。对于本例则是msedge.exe中所包含的图标列表的第11个图标，在右键Edge后点“属性”再点“更改图标…”便能看到第11个图标（从0开始从上向下、从左向右计数）是一个PDF图标，如下图。</p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/img/edge-icons.png"
-                      alt="Edge图标列表"
-                ><figcaption>Edge图标列表</figcaption></figure></p>
-<p>我这边遇到的情况是，前面的<code>&lt;路径&gt;</code>部分不见了，只有<code>,11</code>的部分。除了可以直接补上Edge的路径之外，也可以在注册表同级的<code>\Application</code>下的<code>ApplicationIcon</code>处确认路径。比如我这边是<code>C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,0</code>。</p>
-<p>改完之后顺手把那堆插件卸了，相关注册表内容也手动清理了一遍。</p>
-]]></content>
-      <categories>
-        <category>随记</category>
-      </categories>
-      <tags>
-        <tag>Microsoft Edge</tag>
-        <tag>图标</tag>
-        <tag>注册表</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【通知】所有歌词翻译已迁移至单独的博客TranslationPlot</title>
     <url>/2026/01/13/translation_plot/</url>
     <content><![CDATA[<p>考虑到存放于本站的歌词翻译文章的数量已较多，为了方便管理，我决定将所有歌词翻译迁移至单独的博客，链接为：<a href="https://guopcingithub.github.io/TranslationPlot/">TranslationPlot</a>，该链接也可在页顶导航的下拉栏中找到。</p>
@@ -1416,6 +1030,392 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </categories>
       <tags>
         <tag>歌词翻译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>叶山秋音</title>
+    <url>/2024/03/14/hayama_tokine/</url>
+    <content><![CDATA[<p><strong>叶山秋音</strong> 是Lump of Sugar制作发行游戏 <strong>《魔卡魅恋！》</strong> 的登场角色，女主角之一。</p>
+
+  <div class="note-large blue">
+    <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
+      <p>基本资料</p>
+
+    </div>
+    <div class="notel-content markdown-body">
+      <p>身高：161cm<br>体重：44kg<br>三围：B:83 W:58 H:85<br>生日：9月19日</p>
+
+    </div>
+  </div>
+
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/img/tokine.png"
+                      alt="叶山秋音"
+                ><figcaption>叶山秋音</figcaption></figure></p>
+<p><span style="font-size:small;color:gray;">▲ 游戏CG。原作者保留权利，仅以介绍为目的引用。</span></p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>她和男主角一样以能使用魔法的男生的身份转入学园，<br/>实际上是个女孩子。男主角的青梅竹马。</p>
+<p>由于她和男主角关系近似于同性朋友，因此也被周围当成是个男生。<br/>虽说她没失去身为女孩子应有的性格特性，<br/>不过经常忘记男主角是异性这件事。<br/>性格温厚老实，为人处世也非常懂得顾及人际关系和周遭氛围。<br/>但反过来说，她的性格过于内向和客气。<br/>看上去很老实，不过她也有充满激情的一面，<br/>会静静地表达自己的感情。很爱吃醋，不过不会迁怒于男主角。<br/>只是，要让她醋意超过了界限的话，不知道会干出什么事，<br/>这点非常可怕。</p>
+<p>因为进学院的身份是男生，所以和男主角住在宿舍的同一间寝室。</p>
+<ul>
+<li>兴趣：美食之旅<span style="font-size:smaller;">（主要是拉面店）</span>、读书</li>
+<li>特技：电子游戏、投接球<span style="font-size:smaller;">（全都是受律的影响）</span></li>
+<li>喜欢的食物：拉面、鱼贝鸡米饭</li>
+<li>讨厌的食物：香菇</li>
+</ul>
+<h2 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h2><h3 id="共通线"><a href="#共通线" class="headerlink" title="共通线"></a>共通线</h3><details class="yellow" data-header-exclude>
+    <summary><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开 </summary>
+    <div class='content markdown-body'>
+      <p><strong>序章</strong></p>
+<p>秋音以男生身份进入维斯利魔法学院学习，被安排与前几天转入学院的律住在同一间寝室。此前秋音在人间界帮助律四下物色对象，得知律转学的事情后，十分担心律在学校的情况，但因为自己的魔法能力不足以达到入学的最低标准，最终选择伪装成男生才得以进入学院。律入学时和奥莉谈话后，确定自己需要通过谈恋爱慢慢消除身上的魔法能力，并最终实现离开学院回归正常生活的愿望。秋音了解后决定协助律寻找女友，希望两个人可以一起离开。</p>
+<p>秋音和律作为学院唯二的男学生，被安排至单独的时间集中洗浴。晚上，经过一番心理斗争后，二人决定一同入浴。泡澡时，两个人回忆起小时候一起玩耍的时光。</p>
+<p><strong>开学后</strong></p>
+<p>在差点被同班同学引去女洗手间后，秋音决定平时跟着律一起行动。秋音很喜欢看书，自己常常沉浸其中。这天律提交过暑假回家申请后，前去学院图书馆和秋音汇合。看到秋音专注看书的样子，律隐隐感觉到秋音的女生气质。之后秋音各种无意识的举动让律有些担心秋音女生的事实可能会暴露，二人尝试了一系列方法，打算尽可能消除秋音身上的女人味，但由于种种原因似乎收效不佳。</p>
+<p>秋音因为突然以男生身份转来学院还不是很适应，逐渐积攒了些压力，律了解情况后邀请秋音到学院外面玩。在得到许可后，两个人一起去电影院看了电影，又到街机厅玩了游戏，最后去路边拉面摊品尝了秋音最喜欢的拉面。</p>
+<p><strong>秋音对身份的坦白</strong></p>
+<p>学院走廊上，秋音发现律在和其他女生谈话，不由得有些在意。躲在一旁的自己被发现后，周围的同学和之后到场的老师都希望秋音能试试穿上女生校服。晚上律回到寝室后，秋音慌忙藏起同学给的女生校服。在律真诚地说出自己作为秋音的朋友，不希望秋音这样勉强自己之后，秋音表示会再考虑自己身份的事情。</p>
+<p>之后秋音下定决心不再假扮男生，并向奥莉和姬百合说出了事实。众人意识到秋音是女生这件事难以被他人主动察觉，经过和兰铎尔夫老师的讨论后众人得出结论，原来秋音一直在施放着连自己都未能察觉到的强力魔法，影响了周围人的认知。同时也因为掌握着强力魔法，秋音可以放心向所有人坦白自己是女生，而不必担心魔法能力不足而被退学了。</p>
+<p>回到寝室后，秋音仍对说出秘密后同学们可能的反应心存顾虑。经过律的开导后，第二天秋音鼓起勇气穿上女生校服，以女生的打扮和同学见面。大家了解到秋音的情况后坦然接受，也纷纷愿意继续和秋音做朋友。</p>
+<p><strong>二人逐渐靠近</strong></p>
+<p>在挑明自己的女生身份后，秋音似乎比之前更受同学欢迎了。律考虑着通过恋爱消除自身魔法的目标，于是向秋音请教如何才能更受女生欢迎。思考时两人自然而然回忆起，秋音此前提到过可以通过身体接触增进感情。作为练习，律提出想接触秋音。回到寝室后，律用手抚摸秋音的一头长发，两个人心里都感到害羞不已。</p>
+<p>律想在秋音换寝室之前再和秋音多聊聊天，于是邀请秋音在夜里的学校探险。晚上，二人来到温室后聊起了以前的事：起初因为秋音的服装打扮，律误认为秋音是男生，之后秋音害怕自己因为欺骗律而被讨厌，于是向律坦白了自己是女生的事实，从那时起，两人作为好朋友共处至今。</p>
+<p>换寝室当天，奥莉了解到秋音当初为了假扮男生入学，带来的行李很少，便批准秋音从家里带些私人物品到学院，律则抓住时机打算同秋音外出游玩。两人来到动物园，秋音带上了早晨准备好的便当，中午时邀请律和自己一起品尝。</p>
+<p>早晨，律在独自一人的寝室醒来，注意到自己对秋音的心意，觉得是时候向秋音表达出来了。放学后，秋音如约和律在温室见面。看见律的样子，秋音认为律应该是有恋爱的烦恼想和自己商量，便鼓励律按自己的想法放手去做就一定没问题。律深受鼓舞，于是向秋音表白，希望可以把秋音既当做亲密的朋友更当做自己的恋人来喜欢。秋音也坦言自己早就喜欢上了律，二人就此交换了初吻。</p>
+
+    </div>
+  </details>
+
+<h3 id="个人线"><a href="#个人线" class="headerlink" title="个人线"></a>个人线</h3><details class="yellow" data-header-exclude>
+    <summary><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开 </summary>
+    <div class='content markdown-body'>
+      <p>成为恋人后，暑假期间二人作为转校生需要在学校接受补习，秋音还需要接受魔法方面的单独指导。这天律看到秋音接受指导后十分劳累的样子，提议和秋音外出约会。</p>
+<p>第二天来到游乐园后，两人看到周围许多情侣亲热的样子，也想试着做出情侣一般的举动，但双方都太过害羞而迟迟没有行动。最后律希望今天彼此可以作为朋友来享受游玩的乐趣，秋音也随即同意。夜幕降临，二人在摩天轮上回忆一天的欢乐时光，明白了不应过分拘泥于彼此的恋人关系而畏手畏脚，两人由衷分享着陪伴彼此的喜悦。</p>
+<p>秋音因为接受单独指导十分忙碌，律想与秋音相会的期盼也愈发强烈，便找到女仆夏珑请求帮忙。夏珑便分别安排二人同一时间清扫浴场，两人得知情况后为能有二人独处的时光而十分开心。</p>
+<p>之后律和秋音一起在烹饪室做饭，途中律不小心将沙拉酱撒到了秋音身上，于是陪着秋音回到寝室换成之前的男生校服，两人不由得回忆起秋音刚入学时的情形。吃完饭后秋音打算去图书馆，律借此提议去图书馆约会。</p>
+<p>这天二人在寝室闲来无事，律想去海边玩耍，秋音却表示自己没有泳衣，二人于是前往购物中心约会。秋音在泳衣店挑选泳衣时，律因为店里全是女生而不好意思地在店外等待。恰巧看见了同来购物中心逛街的讽歌和姬百合，律担心自己和秋音的恋人关系暴露，于是急忙回到店里通知秋音。在更衣室里的秋音了解情况后便把律也拉进更衣室，但两人的行踪最终还是暴露了，讽歌和姬百合则表示众人早已知道二人交往的事情。</p>
+<p>两人终于得以来到海边，律提出教秋音游泳，秋音凭借以前课上学过的游泳知识很快就掌握了，两个人在海边度过了愉快的时光。</p>
+<p>夏去秋来，奥莉经过检查后认定秋音和律身上的魔法已经几乎消退，不久后就能从学院毕业，重回人间界生活。二人稍感不舍，秋音便邀请律一起到山里欣赏秋叶。其间，秋音向律说明自己身上的魔法之所以最终得以消失，是因为自己终于能坦诚地向律表达出心意，而不再需要通过魔法来影响周围。律借机向秋音递出结婚申请书表明心意，秋音惊喜万分，二人在这漫天红叶之下发誓永远都要在一起。</p>
+
+    </div>
+  </details>
+
+<h2 id="外部链接"><a href="#外部链接" class="headerlink" title="外部链接"></a>外部链接</h2><ul>
+<li><a class="link"   href="https://hikarifield.co.jp/magicha/character/chara02.html" >中文版官网角色介绍<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>角色介绍</category>
+      </categories>
+      <tags>
+        <tag>魔卡魅恋！登场角色</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《Hacknet》介绍</title>
+    <url>/2023/02/03/hacknet/</url>
+    <content><![CDATA[<p>最近玩完了《Hacknet》。虽然是2015年的游戏，但是我觉得是一款不错的黑客模拟游戏。写篇文章简单介绍一下。</p>
+<table>
+<thead>
+<tr>
+<th align="center">项目</th>
+<th align="center">内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">原名</td>
+<td align="center">Hacknet</td>
+</tr>
+<tr>
+<td align="center">常用译名</td>
+<td align="center">黑客网络</td>
+</tr>
+<tr>
+<td align="center">类型</td>
+<td align="center">模拟</td>
+</tr>
+<tr>
+<td align="center">平台</td>
+<td align="center">Microsoft Windows<br/>macOS<br/>Linux</td>
+</tr>
+<tr>
+<td align="center">分级</td>
+<td align="center">ESRB：青少年<br/>PEGI：12岁以上</td>
+</tr>
+<tr>
+<td align="center">开发</td>
+<td align="center">Team Fractal Alligator</td>
+</tr>
+<tr>
+<td align="center">发行</td>
+<td align="center">Fellow Traveller</td>
+</tr>
+<tr>
+<td align="center">引擎</td>
+<td align="center">XNA、FNA</td>
+</tr>
+<tr>
+<td align="center">模式</td>
+<td align="center">单人</td>
+</tr>
+<tr>
+<td align="center">发行时间</td>
+<td align="center"><strong>Microsoft Windows</strong>：<br/>2015年8月13日<br/><strong>macOS、Linux</strong>：<br/>2015年12月18日</td>
+</tr>
+</tbody></table>
+<p>《<strong>Hacknet</strong>》是一款由Team Fractal Alligator开发、Fellow Traveller发行的独立模拟游戏，于2015年8月13日在Microsoft Windows平台上发售，于2015年12月18日在macOS和Linux平台发售。支持简体中文。</p>
+<h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p>《Hacknet》是一款基于终端的黑客模拟器。你将跟随一位最近刚过世的黑客，通过他遗留的线索，来探询混乱未知的网络世界。他的死可能并非像媒体所报道的仅仅是一场意外那么简单。只需进行简单的教学，你便能使用基础的指令来完成真实的黑入过程，探索这充满了谜团的黑客世界。</p>
+<p>Bit，一位负责开发世界上最具攻击性的黑入系统的黑客，去世了。当他的系统连续14天都没有检测到他的操作后，保险程序便开始运行，将他未完成的计划发给了一位陌生的用户。作为这名用户，你需要一步步揭开事实的真相，并且确保Hacknet操作系统不会落入到不法之徒手中。</p>
+<p>《Hacknet》为你提供一个全方位的真实黑客模拟器，可以让你探索人类窥探隐私的天性、制止企业贪婪盛行并对抗隐藏在网络世界中的强大黑客。同时它又能提供学习支持，可以让一个电脑小白通过游戏了解到现实世界的电脑指令和对应用程序的操控。<span id="文注_1.0"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></p>
+<h3 id="游戏特色"><a href="#游戏特色" class="headerlink" title="游戏特色"></a>游戏特色</h3><p><strong>真实的黑入</strong></p>
+<p>基于真实的UNIX指令，将重点放在真实的黑入过程，而不是追求炫酷的好莱坞式黑客。通过拟真化的黑入过程，让玩家们仿佛置身黑入现场，体验打破防火墙时几近真实的感受。</p>
+<p><strong>探寻Bit的死亡之谜</strong></p>
+<p>一位黑客莫名死亡，而媒体们的报道根本无法自圆其说。跟随着他的“灵魂”（一个自动邮件发送系统）带给你的指示，你将会慢慢深入并参与到一个黑暗而又庞大的黑客阴谋之中。</p>
+<p><strong>完全的沉浸式体验</strong></p>
+<p>你将会被带入一个无尽的虚拟黑客世界，在这里没有“等级”或者是明显的游戏元素来打破这一体验。你可以选择跟随Bit的邮件的指引，或是直接遨游在整个网络之中，探索并追寻信息的蛛丝马迹。</p>
+<p><strong>上手简单精通难</strong></p>
+<p>游戏不会限制你的游戏方式或让你按部就班。</p>
+<p>游戏内容和学习曲线的设计，能够让初学者或有终端操作经验的人都能找到属于自己的快乐。</p>
+<p><strong>杀手级音乐</strong></p>
+<p>原声带由地下风格音乐家创作，包括Carpenter Brut（Hotline Miami）和Remi Gallego（又名The Algorithm），由The Otherworld Agency协助创作。<span id="文注_1.1"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></p>
+<h3 id="开发历史"><a href="#开发历史" class="headerlink" title="开发历史"></a>开发历史</h3><ul>
+<li>2015年7月15日，开发者放出游戏宣传片。<span id="文参_1"></span><a href="#%E5%8F%82_1"><sup>[1]</sup></a></li>
+<li>2015年8月13日，游戏在Microsoft Windows平台上发售。</li>
+<li>2015年10月21日，游戏原声带发售。</li>
+<li>2015年12月18日，游戏在macOS和Linux平台发售。</li>
+<li>2016年8月30日，开发者宣布游戏扩展内容《Hacknet - Labyrinths》的制作。</li>
+<li>2016年10月12日，游戏推出简体中文支持。</li>
+<li>2017年3月21日，开发者宣布游戏扩展内容《Hacknet - Labyrinths》将于3月31日发售，并放出宣传片。</li>
+<li>2017年3月31日，游戏扩展内容《Hacknet - Labyrinths》发售。</li>
+<li>2017年5月23日，游戏mod《Hacknet Extensions》发布。</li>
+</ul>
+<h2 id="额外内容"><a href="#额外内容" class="headerlink" title="额外内容"></a>额外内容</h2><h3 id="Hacknet-Labyrinths"><a href="#Hacknet-Labyrinths" class="headerlink" title="Hacknet - Labyrinths"></a>Hacknet - Labyrinths</h3><p>游戏扩展内容《Hacknet - Labyrinths》于2017年3月31日发售。</p>
+<h4 id="基本介绍-1"><a href="#基本介绍-1" class="headerlink" title="基本介绍"></a>基本介绍</h4><p>加入黑客精英小队，破解复杂的数据。</p>
+<p>加入了一个3-4小时流程的全新章节。你将由神秘人Kaguya招募到一个黑客精英团队，发掘新的强大工具与程序。</p>
+<p>然而与最棒的团队一起工作并不会特别容易。随着愈演愈烈的危机与越来越复杂的任务接踵而至，你需要利用团队的一切资源去黑入并完成任务，最后完美脱身。</p>
+<p>加入了全新工具，比如内存分析器，可以在RAM中进行内存取证。探索新的程序、网络、UI主题，以及新的秘密和音乐。<span id="文注_1.2"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></p>
+<p><strong>主要特点</strong></p>
+<ul>
+<li><strong>一个全新的篇章。</strong> 在原有故事的基础上加入了惊心动魄的3-4小时流程的新章节。你可以把它看做原有故事的拓展，也可以当做一个继续研究Hacknet的全新机会。</li>
+<li><strong>新的工具与程序。</strong> 得到全新的、更加复杂的黑入工具和程序来破解系统与网络。比如，通过使用内存分析器在RAM上使用内存取证，发现隐藏在其中的秘密。</li>
+<li><strong>团队工作。</strong> 你不再是独行侠，需要与你的队友在IRC交流，共同合作完成目标。</li>
+<li><strong>危险而大胆的数据抢劫。</strong> 网络系统变得更加复杂，不是通过简简单单的“破门而入”就能解决问题。探索，适应，生存！</li>
+<li><strong>新的杀手级音乐。</strong> 包括重金属&#x2F;电音艺术家Remi Gallego的《The Algorithm》和《Orge》。<span id="文注_1.3"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></li>
+</ul>
+<h3 id="Hacknet-Extensions"><a href="#Hacknet-Extensions" class="headerlink" title="Hacknet Extensions"></a>Hacknet Extensions</h3><p>游戏mod《<strong>Hacknet Extensions</strong>》于2017年5月23日发布。允许玩家创建自定义故事、任务、网络、主题以及音乐等，并可通过上传至Steam创意工坊与其他玩家分享。</p>
+<h2 id="游戏评价"><a href="#游戏评价" class="headerlink" title="游戏评价"></a>游戏评价</h2><table>
+<thead>
+<tr>
+<th align="center">汇总媒体</th>
+<th align="center">得分</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Metacritic</td>
+<td align="center">82 &#x2F; 100<span id="文参_2"></span><a href="#%E5%8F%82_2"><sup>[2]</sup></a></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">媒体</th>
+<th align="center">评分</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">GameSpot</td>
+<td align="center">8 &#x2F; 10<span id="文参_3"></span><a href="#%E5%8F%82_3"><sup>[3]</sup></a></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>《Hacknet》是我见过的最接近现实的黑客模拟游戏。——Kotaku<span id="文参_4"></span><a href="#%E5%8F%82_4"><sup>[4]</sup></a></p>
+<p>作为迄今为止最好的黑客模拟游戏，《Hacknet》让我们想去了解更多有关黑客世界的真实和详细描述。毫无疑问，这是最棒的合法黑客经验。——LevelUp<span id="文参_5"></span><a href="#%E5%8F%82_5"><sup>[5]</sup></a></p>
+</blockquote>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><ol>
+<li>^ <a href="#%E6%96%87%E6%B3%A8_1.0"><sup>1.0</sup></a> <a href="#%E6%96%87%E6%B3%A8_1.1"><sup>1.1</sup></a> <a href="#%E6%96%87%E6%B3%A8_1.2"><sup>1.2</sup></a> <a href="#%E6%96%87%E6%B3%A8_1.3"><sup>1.3</sup></a> <span id="注_1"></span>Steam商店页面介绍，有改动。</li>
+</ol>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
+<li><a id="参_1" href="#文参_1">^</a> Fellow Traveller. <a class="link"   href="https://www.youtube.com/watch?v=FgDmU7Pb96Y" >Hacknet宣传片<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. YouTube. 2015-07-15 [引用时间: 2023-02-03].</li>
+<li><a id="参_2" href="#文参_2">^</a> <a class="link"   href="https://www.metacritic.com/game/pc/hacknet" >Hacknet for PC Reviews<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. Metacritic. [引用时间: 2023-02-03].</li>
+<li><a id="参_3" href="#文参_3">^</a> <a class="link"   href="https://www.gamespot.com/games/hacknet/" >Hacknet<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. GameSpot. [引用时间: 2023-02-03].</li>
+<li><a id="参_4" href="#文参_4">^</a> Mark Serrels. <a class="link"   href="https://www.kotaku.com.au/2015/07/this-australian-game-will-turn-us-all-into-hackers/" >This Australian Game Will Turn Us All Into Hackers<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. 2015-07-16 [引用时间: 2023-02-03].</li>
+<li><a id="参_5" href="#文参_5">^</a> Alonso Zamora. <a class="link"   href="https://www.levelup.com/PC/juegos/335304/Hacknet/review" >Reseña del Juego Hacknet<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. LevelUp. 2015-08-14 [引用时间: 2023-02-03].</li>
+</ol>
+<h2 id="外部链接"><a href="#外部链接" class="headerlink" title="外部链接"></a>外部链接</h2><ul>
+<li><a class="link"   href="https://www.hacknet-os.com/" >Hacknet官方网站<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li><a class="link"   href="https://www.hacknet-os.com/index_dlc.php" >Hacknet - Labyrinths官方网站<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li><a class="link"   href="https://twitter.com/hacknetOS" >Hacknet官方Twitter<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li><a class="link"   href="https://store.steampowered.com/app/365450/Hacknet/" >Hacknet的Steam商店页面<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li><a class="link"   href="https://store.steampowered.com/app/521840/Hacknet__Labyrinths/" >Hacknet - Labyrinths的Steam商店页面<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>游戏</category>
+      </categories>
+      <tags>
+        <tag>澳大利亚游戏作品</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SVG Learning - 2</title>
+    <url>/2022/04/22/svg_learning_2/</url>
+    <content><![CDATA[<p>SVG 学习第二部分，包括<code>&lt;path&gt;</code>图形元素。简单罗列，英文为主。</p>
+<blockquote>
+<p>References</p>
+<ul>
+<li><a class="link"   href="https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html" >An SVG Primer for Today’s Browsers<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><ul>
+<li><a class="link"   href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright" >Copyright<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> © 2010 <a class="link"   href="http://www.w3.org/" >W3C<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>® (<a class="link"   href="http://www.csail.mit.edu/" >MIT<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, <a class="link"   href="http://www.ercim.org/" >ERCIM<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, <a class="link"   href="http://www.keio.ac.jp/" >Keio<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>), All Rights Reserved.</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 id="SVG-graphics-elements"><a href="#SVG-graphics-elements" class="headerlink" title="SVG graphics elements"></a>SVG graphics elements</h2><ul>
+<li><code>&lt;path&gt;</code></li>
+<li><code>&lt;line&gt;</code></li>
+<li><code>&lt;rect&gt;</code></li>
+<li><code>&lt;circle&gt;</code></li>
+<li><code>&lt;line&gt;</code></li>
+<li><code>&lt;polyline&gt;</code></li>
+<li><code>&lt;polygon&gt;</code></li>
+<li><code>&lt;image&gt;</code></li>
+<li><code>&lt;use&gt;</code></li>
+</ul>
+<h3 id=""><a href="#" class="headerlink" title="&lt;path&gt;"></a><code>&lt;path&gt;</code></h3><h4 id="M-L"><a href="#M-L" class="headerlink" title="M &amp; L"></a><code>M</code> &amp; <code>L</code></h4><ul>
+<li><code>M x y</code>: Move pen to (<code>x</code>, <code>y</code>)</li>
+<li><code>M x1,y1[ x2,y2[…]]</code>: Move pen to (<code>x1</code>, <code>y1</code>), then (<code>x2</code>, <code>y2</code>), …</li>
+<li><code>M x1 y1 L x2 y2[ x3 y3[…]]</code>, <code>M x1 y1 L x2,y2[ x3,y3[…]]</code>: Draw linearly from (<code>x1</code>, <code>y1</code>) to (<code>x2</code>, <code>y2</code>), then (<code>x3</code>, <code>y3</code>), …</li>
+</ul>
+<p><strong>SVG Code</strong></p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">d</span>=<span class="string">&quot;M 100 100 L 200 200&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Illustration</strong></p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m40b9361c.png"
+                      alt="A diagonal line from (100,100) to (200,200)" title="A diagonal line from (100,100) to (200,200)"
+                ><figcaption>A diagonal line from (100,100) to (200,200)</figcaption></figure></p>
+<p><strong>SVG Code</strong></p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 100 100 L 200 200 100 150&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Illustration</strong></p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m6b9cad89.png"
+                      alt="Concatenated pairs of coordinates" title="Concatenated pairs of coordinates"
+                ><figcaption>Concatenated pairs of coordinates</figcaption></figure></p>
+<p><strong>SVG Code</strong></p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 50,100 150,200 50,150&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 100 50 L 200 150 100 100&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m6daeff2a.png"
+                      alt="The effect of adding fill=&quot;none&quot; (but note that the stroke attribute is defined) " title="The effect of adding fill=&quot;none&quot; (but note that the stroke attribute is defined) "
+                ><figcaption>The effect of adding fill=&quot;none&quot; (but note that the stroke attribute is defined) </figcaption></figure></p>
+<ul>
+<li><code>z</code>: Close path</li>
+</ul>
+<p><strong>SVG Code</strong></p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 100,50 200,150 100,100&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 100,50 200,150 100,100 z&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="fill-rule-even-odd"><a href="#fill-rule-even-odd" class="headerlink" title="fill-rule=&quot;even-odd&quot;"></a><code>fill-rule=&quot;even-odd&quot;</code></h4><p><strong>SVG Code</strong></p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 70,290 L 150,150 200,250 40,250 100,150 170,290&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 70,290 L 150,150 200,250 40,250 100,150 170,290&quot;</span> <span class="attr">fill-rule</span>=<span class="string">&quot;evenodd&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/798df064.png"
+                      alt="An example to show the difference between the default and &quot;even-odd&quot; fill rules" title="An example to show the difference between the default and &quot;even-odd&quot; fill rules"
+                ><figcaption>An example to show the difference between the default and &quot;even-odd&quot; fill rules</figcaption></figure></p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/2329cb12.png"
+                      alt="An example to show the difference between the default and &quot;even-odd&quot; fill rules" title="An example to show the difference between the default and &quot;even-odd&quot; fill rules"
+                ><figcaption>An example to show the difference between the default and &quot;even-odd&quot; fill rules</figcaption></figure></p>
+<h4 id="Combine-multiple-path-segments"><a href="#Combine-multiple-path-segments" class="headerlink" title="Combine multiple path segments"></a>Combine multiple path segments</h4><p><strong>SVG Code</strong></p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">fill</span>=<span class="string">&quot;orange&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">d</span>=<span class="string">&quot;M 10,215 210,215 110,42 z</span></span></span><br><span class="line"><span class="string"><span class="tag">    M 10,100 210,100 110,273 z&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">stroke</span>=<span class="string">&quot;purple&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;3&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m36f8c292.png"
+                      alt="A \&lt;path\&gt; with fill=&quot;green&quot; et cetera... is also included in the drawing." title="A &lt;path&gt; with fill=&quot;green&quot; et cetera... is also included in the drawing."
+                ><figcaption>A \&lt;path\&gt; with fill=&quot;green&quot; et cetera... is also included in the drawing.</figcaption></figure></p>
+<h4 id="Q-Quadratic-Bezier-curves"><a href="#Q-Quadratic-Bezier-curves" class="headerlink" title="Q: Quadratic Bézier curves"></a><code>Q</code>: Quadratic Bézier curves</h4><ul>
+<li><code>M x1 y1 Q x2,y2 x3,y3</code>: Draw quadratically from (<code>x1</code>, <code>y1</code>), then (<code>x2</code>, <code>y2</code>), towards (<code>x3</code>, <code>y3</code>)</li>
+</ul>
+<p><strong>SVG Code</strong></p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 100 200 Q 200,400 300,200&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;blue&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 100 200 L 200,400 300,200&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;red&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Illustration</strong></p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m69cd8b78.png"
+                      alt="Bézier curve example" title="Bézier curve example"
+                ><figcaption>Bézier curve example</figcaption></figure></p>
+<p><strong>SVG Code</strong></p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">fill-rule</span>=<span class="string">&quot;evenodd&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">d</span>=<span class="string">&quot;M 70 140 L 150,0 200,100 L 40,100 100,0 L 170,140 70 140&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">fill</span>=<span class="string">&quot;red&quot;</span> <span class="attr">fill-rule</span>=<span class="string">&quot;evenodd&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">d</span>=<span class="string">&quot;M 70 140 Q 150,0 200,100 Q 40,100 100,0 Q 170,140 70 140&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Illustration</strong></p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/me702c4.png"
+                      alt="An example of a graphic using a quadratic spline" title="An example of a graphic using a quadratic spline"
+                ><figcaption>An example of a graphic using a quadratic spline</figcaption></figure></p>
+<h3 id="C-Cubic-Bezier-curves"><a href="#C-Cubic-Bezier-curves" class="headerlink" title="C: Cubic Bézier curves"></a><code>C</code>: Cubic Bézier curves</h3><ul>
+<li><code>M x1 y1 C xt1,yt1[ xt2,yt2[…]] x2,y2</code>: Draw cubically from (<code>x1</code>, <code>y1</code>) to (<code>x2</code>, <code>y2</code>), with control points (<code>xt1</code>, <code>yt1</code>), (<code>xt2</code>, <code>yt2</code>), …</li>
+</ul>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m499a2128.png"
+                      alt="A family of cubic curves sharing endpoints and tangents" title="A family of cubic curves sharing endpoints and tangents"
+                ><figcaption>A family of cubic curves sharing endpoints and tangents</figcaption></figure></p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/mcbf3920.png"
+                      alt="Limiting case for a family of curves" title="Limiting case for a family of curves"
+                ><figcaption>Limiting case for a family of curves</figcaption></figure></p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m31556306.png"
+                      alt="Cubic beziers sharing tangents and endpoints" title="Cubic beziers sharing tangents and endpoints"
+                ><figcaption>Cubic beziers sharing tangents and endpoints</figcaption></figure></p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m5fbfc0c1.png"
+                      alt="Adjoining two cubic curves smoothly" title="Adjoining two cubic curves smoothly"
+                ><figcaption>Adjoining two cubic curves smoothly</figcaption></figure></p>
+<p><strong>SVG Code</strong></p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;3&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#eec1c2&quot;</span></span></span><br><span class="line"><span class="tag"><span class="attr">d</span>=<span class="string">&quot;M 99 192</span></span></span><br><span class="line"><span class="string"><span class="tag">C 137 160 204 133 141 124</span></span></span><br><span class="line"><span class="string"><span class="tag">C 78 115 34 167 47 129</span></span></span><br><span class="line"><span class="string"><span class="tag">C 60 91 20 65 77 71</span></span></span><br><span class="line"><span class="string"><span class="tag">C 134 77 206 43 196 101</span></span></span><br><span class="line"><span class="string"><span class="tag">C 186 159 118 368 119 299</span></span></span><br><span class="line"><span class="string"><span class="tag">C 120 230 201 169 138 206</span></span></span><br><span class="line"><span class="string"><span class="tag">C 75 243 53 231 99 192&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Illustration</strong></p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/4418afb.png"
+                      alt="Several smoothly stitched Bézier segments" title="Several smoothly stitched Bézier segments"
+                ><figcaption>Several smoothly stitched Bézier segments</figcaption></figure></p>
+<h3 id="A-Elliptical-arc"><a href="#A-Elliptical-arc" class="headerlink" title="A: Elliptical arc"></a><code>A</code>: Elliptical arc</h3><p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m38b4a957.png"
+                      alt="Four elliptical arcs sharing endpoints" title="Four elliptical arcs sharing endpoints"
+                ><figcaption>Four elliptical arcs sharing endpoints</figcaption></figure></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>SVG</tag>
       </tags>
   </entry>
 </search>
