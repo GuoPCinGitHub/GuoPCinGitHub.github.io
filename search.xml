@@ -21,25 +21,6 @@
       </tags>
   </entry>
   <entry>
-    <title>用于MoeSkin的MoeLatte主题包现已发布！</title>
-    <url>/2023/02/12/moelatte/</url>
-    <content><![CDATA[<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/img/MoeLatte-zh-cn.png"
-                      alt="MoeLatte" title="封面"
-                ><figcaption>MoeLatte</figcaption></figure></p>
-<p><a class="link"   href="https://zh.moegirl.org.cn/User:GuoPC/MoeLatte" >MoeLatte<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>是基于<a class="link"   href="https://catppuccin.com/" >Catppuccin Theme<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>中的Latte调色风格制作的一款用于MoeSkin皮肤的主题包。采用了Latte中的绿—蓝系列色作为主要配色，并进行了一定调整。</p>
-<p>主题包制作：<a class="link"   href="https://zh.moegirl.org.cn/User:GuoPC" >GuoPC<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-]]></content>
-      <categories>
-        <category>随记</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>SVG Learning - 1</title>
     <url>/2022/04/22/svg_learning/</url>
     <content><![CDATA[<p>SVG 学习第一部分，包括基本结构、<code>&lt;line&gt;</code>、<code>&lt;rect&gt;</code>、<code>&lt;circle&gt;</code>和<code>&lt;ellipse&gt;</code>图形元素。简单罗列，英文为主。</p>
@@ -155,6 +136,332 @@
       </tags>
   </entry>
   <entry>
+    <title>SVG Learning - 2</title>
+    <url>/2022/04/22/svg_learning_2/</url>
+    <content><![CDATA[<p>SVG 学习第二部分，包括<code>&lt;path&gt;</code>图形元素。简单罗列，英文为主。</p>
+<blockquote>
+<p>References</p>
+<ul>
+<li><a class="link"   href="https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html" >An SVG Primer for Today’s Browsers<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><ul>
+<li><a class="link"   href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright" >Copyright<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> © 2010 <a class="link"   href="http://www.w3.org/" >W3C<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>® (<a class="link"   href="http://www.csail.mit.edu/" >MIT<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, <a class="link"   href="http://www.ercim.org/" >ERCIM<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, <a class="link"   href="http://www.keio.ac.jp/" >Keio<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>), All Rights Reserved.</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 id="SVG-graphics-elements"><a href="#SVG-graphics-elements" class="headerlink" title="SVG graphics elements"></a>SVG graphics elements</h2><ul>
+<li><code>&lt;path&gt;</code></li>
+<li><code>&lt;line&gt;</code></li>
+<li><code>&lt;rect&gt;</code></li>
+<li><code>&lt;circle&gt;</code></li>
+<li><code>&lt;line&gt;</code></li>
+<li><code>&lt;polyline&gt;</code></li>
+<li><code>&lt;polygon&gt;</code></li>
+<li><code>&lt;image&gt;</code></li>
+<li><code>&lt;use&gt;</code></li>
+</ul>
+<h3 id=""><a href="#" class="headerlink" title="&lt;path&gt;"></a><code>&lt;path&gt;</code></h3><h4 id="M-L"><a href="#M-L" class="headerlink" title="M &amp; L"></a><code>M</code> &amp; <code>L</code></h4><ul>
+<li><code>M x y</code>: Move pen to (<code>x</code>, <code>y</code>)</li>
+<li><code>M x1,y1[ x2,y2[…]]</code>: Move pen to (<code>x1</code>, <code>y1</code>), then (<code>x2</code>, <code>y2</code>), …</li>
+<li><code>M x1 y1 L x2 y2[ x3 y3[…]]</code>, <code>M x1 y1 L x2,y2[ x3,y3[…]]</code>: Draw linearly from (<code>x1</code>, <code>y1</code>) to (<code>x2</code>, <code>y2</code>), then (<code>x3</code>, <code>y3</code>), …</li>
+</ul>
+<p><strong>SVG Code</strong></p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">d</span>=<span class="string">&quot;M 100 100 L 200 200&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Illustration</strong></p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m40b9361c.png"
+                      alt="A diagonal line from (100,100) to (200,200)" title="A diagonal line from (100,100) to (200,200)"
+                ><figcaption>A diagonal line from (100,100) to (200,200)</figcaption></figure></p>
+<p><strong>SVG Code</strong></p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 100 100 L 200 200 100 150&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Illustration</strong></p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m6b9cad89.png"
+                      alt="Concatenated pairs of coordinates" title="Concatenated pairs of coordinates"
+                ><figcaption>Concatenated pairs of coordinates</figcaption></figure></p>
+<p><strong>SVG Code</strong></p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 50,100 150,200 50,150&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 100 50 L 200 150 100 100&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m6daeff2a.png"
+                      alt="The effect of adding fill=&quot;none&quot; (but note that the stroke attribute is defined) " title="The effect of adding fill=&quot;none&quot; (but note that the stroke attribute is defined) "
+                ><figcaption>The effect of adding fill=&quot;none&quot; (but note that the stroke attribute is defined) </figcaption></figure></p>
+<ul>
+<li><code>z</code>: Close path</li>
+</ul>
+<p><strong>SVG Code</strong></p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 100,50 200,150 100,100&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 100,50 200,150 100,100 z&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="fill-rule-even-odd"><a href="#fill-rule-even-odd" class="headerlink" title="fill-rule=&quot;even-odd&quot;"></a><code>fill-rule=&quot;even-odd&quot;</code></h4><p><strong>SVG Code</strong></p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 70,290 L 150,150 200,250 40,250 100,150 170,290&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 70,290 L 150,150 200,250 40,250 100,150 170,290&quot;</span> <span class="attr">fill-rule</span>=<span class="string">&quot;evenodd&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/798df064.png"
+                      alt="An example to show the difference between the default and &quot;even-odd&quot; fill rules" title="An example to show the difference between the default and &quot;even-odd&quot; fill rules"
+                ><figcaption>An example to show the difference between the default and &quot;even-odd&quot; fill rules</figcaption></figure></p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/2329cb12.png"
+                      alt="An example to show the difference between the default and &quot;even-odd&quot; fill rules" title="An example to show the difference between the default and &quot;even-odd&quot; fill rules"
+                ><figcaption>An example to show the difference between the default and &quot;even-odd&quot; fill rules</figcaption></figure></p>
+<h4 id="Combine-multiple-path-segments"><a href="#Combine-multiple-path-segments" class="headerlink" title="Combine multiple path segments"></a>Combine multiple path segments</h4><p><strong>SVG Code</strong></p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">fill</span>=<span class="string">&quot;orange&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">d</span>=<span class="string">&quot;M 10,215 210,215 110,42 z</span></span></span><br><span class="line"><span class="string"><span class="tag">    M 10,100 210,100 110,273 z&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">stroke</span>=<span class="string">&quot;purple&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;3&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m36f8c292.png"
+                      alt="A \&lt;path\&gt; with fill=&quot;green&quot; et cetera... is also included in the drawing." title="A &lt;path&gt; with fill=&quot;green&quot; et cetera... is also included in the drawing."
+                ><figcaption>A \&lt;path\&gt; with fill=&quot;green&quot; et cetera... is also included in the drawing.</figcaption></figure></p>
+<h4 id="Q-Quadratic-Bezier-curves"><a href="#Q-Quadratic-Bezier-curves" class="headerlink" title="Q: Quadratic Bézier curves"></a><code>Q</code>: Quadratic Bézier curves</h4><ul>
+<li><code>M x1 y1 Q x2,y2 x3,y3</code>: Draw quadratically from (<code>x1</code>, <code>y1</code>), then (<code>x2</code>, <code>y2</code>), towards (<code>x3</code>, <code>y3</code>)</li>
+</ul>
+<p><strong>SVG Code</strong></p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 100 200 Q 200,400 300,200&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;blue&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 100 200 L 200,400 300,200&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;red&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Illustration</strong></p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m69cd8b78.png"
+                      alt="Bézier curve example" title="Bézier curve example"
+                ><figcaption>Bézier curve example</figcaption></figure></p>
+<p><strong>SVG Code</strong></p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">fill-rule</span>=<span class="string">&quot;evenodd&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">d</span>=<span class="string">&quot;M 70 140 L 150,0 200,100 L 40,100 100,0 L 170,140 70 140&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">fill</span>=<span class="string">&quot;red&quot;</span> <span class="attr">fill-rule</span>=<span class="string">&quot;evenodd&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">d</span>=<span class="string">&quot;M 70 140 Q 150,0 200,100 Q 40,100 100,0 Q 170,140 70 140&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Illustration</strong></p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/me702c4.png"
+                      alt="An example of a graphic using a quadratic spline" title="An example of a graphic using a quadratic spline"
+                ><figcaption>An example of a graphic using a quadratic spline</figcaption></figure></p>
+<h3 id="C-Cubic-Bezier-curves"><a href="#C-Cubic-Bezier-curves" class="headerlink" title="C: Cubic Bézier curves"></a><code>C</code>: Cubic Bézier curves</h3><ul>
+<li><code>M x1 y1 C xt1,yt1[ xt2,yt2[…]] x2,y2</code>: Draw cubically from (<code>x1</code>, <code>y1</code>) to (<code>x2</code>, <code>y2</code>), with control points (<code>xt1</code>, <code>yt1</code>), (<code>xt2</code>, <code>yt2</code>), …</li>
+</ul>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m499a2128.png"
+                      alt="A family of cubic curves sharing endpoints and tangents" title="A family of cubic curves sharing endpoints and tangents"
+                ><figcaption>A family of cubic curves sharing endpoints and tangents</figcaption></figure></p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/mcbf3920.png"
+                      alt="Limiting case for a family of curves" title="Limiting case for a family of curves"
+                ><figcaption>Limiting case for a family of curves</figcaption></figure></p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m31556306.png"
+                      alt="Cubic beziers sharing tangents and endpoints" title="Cubic beziers sharing tangents and endpoints"
+                ><figcaption>Cubic beziers sharing tangents and endpoints</figcaption></figure></p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m5fbfc0c1.png"
+                      alt="Adjoining two cubic curves smoothly" title="Adjoining two cubic curves smoothly"
+                ><figcaption>Adjoining two cubic curves smoothly</figcaption></figure></p>
+<p><strong>SVG Code</strong></p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;3&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#eec1c2&quot;</span></span></span><br><span class="line"><span class="tag"><span class="attr">d</span>=<span class="string">&quot;M 99 192</span></span></span><br><span class="line"><span class="string"><span class="tag">C 137 160 204 133 141 124</span></span></span><br><span class="line"><span class="string"><span class="tag">C 78 115 34 167 47 129</span></span></span><br><span class="line"><span class="string"><span class="tag">C 60 91 20 65 77 71</span></span></span><br><span class="line"><span class="string"><span class="tag">C 134 77 206 43 196 101</span></span></span><br><span class="line"><span class="string"><span class="tag">C 186 159 118 368 119 299</span></span></span><br><span class="line"><span class="string"><span class="tag">C 120 230 201 169 138 206</span></span></span><br><span class="line"><span class="string"><span class="tag">C 75 243 53 231 99 192&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>Illustration</strong></p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/4418afb.png"
+                      alt="Several smoothly stitched Bézier segments" title="Several smoothly stitched Bézier segments"
+                ><figcaption>Several smoothly stitched Bézier segments</figcaption></figure></p>
+<h3 id="A-Elliptical-arc"><a href="#A-Elliptical-arc" class="headerlink" title="A: Elliptical arc"></a><code>A</code>: Elliptical arc</h3><p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m38b4a957.png"
+                      alt="Four elliptical arcs sharing endpoints" title="Four elliptical arcs sharing endpoints"
+                ><figcaption>Four elliptical arcs sharing endpoints</figcaption></figure></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>SVG</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用于MoeSkin的MoeLatte主题包现已发布！</title>
+    <url>/2023/02/12/moelatte/</url>
+    <content><![CDATA[<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/img/MoeLatte-zh-cn.png"
+                      alt="MoeLatte" title="封面"
+                ><figcaption>MoeLatte</figcaption></figure></p>
+<p><a class="link"   href="https://zh.moegirl.org.cn/User:GuoPC/MoeLatte" >MoeLatte<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>是基于<a class="link"   href="https://catppuccin.com/" >Catppuccin Theme<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>中的Latte调色风格制作的一款用于MoeSkin皮肤的主题包。采用了Latte中的绿—蓝系列色作为主要配色，并进行了一定调整。</p>
+<p>主题包制作：<a class="link"   href="https://zh.moegirl.org.cn/User:GuoPC" >GuoPC<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+]]></content>
+      <categories>
+        <category>随记</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《Hacknet》介绍</title>
+    <url>/2023/02/03/hacknet/</url>
+    <content><![CDATA[<p>最近玩完了《Hacknet》。虽然是2015年的游戏，但是我觉得是一款不错的黑客模拟游戏。写篇文章简单介绍一下。</p>
+<table>
+<thead>
+<tr>
+<th align="center">项目</th>
+<th align="center">内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">原名</td>
+<td align="center">Hacknet</td>
+</tr>
+<tr>
+<td align="center">常用译名</td>
+<td align="center">黑客网络</td>
+</tr>
+<tr>
+<td align="center">类型</td>
+<td align="center">模拟</td>
+</tr>
+<tr>
+<td align="center">平台</td>
+<td align="center">Microsoft Windows<br/>macOS<br/>Linux</td>
+</tr>
+<tr>
+<td align="center">分级</td>
+<td align="center">ESRB：青少年<br/>PEGI：12岁以上</td>
+</tr>
+<tr>
+<td align="center">开发</td>
+<td align="center">Team Fractal Alligator</td>
+</tr>
+<tr>
+<td align="center">发行</td>
+<td align="center">Fellow Traveller</td>
+</tr>
+<tr>
+<td align="center">引擎</td>
+<td align="center">XNA、FNA</td>
+</tr>
+<tr>
+<td align="center">模式</td>
+<td align="center">单人</td>
+</tr>
+<tr>
+<td align="center">发行时间</td>
+<td align="center"><strong>Microsoft Windows</strong>：<br/>2015年8月13日<br/><strong>macOS、Linux</strong>：<br/>2015年12月18日</td>
+</tr>
+</tbody></table>
+<p>《<strong>Hacknet</strong>》是一款由Team Fractal Alligator开发、Fellow Traveller发行的独立模拟游戏，于2015年8月13日在Microsoft Windows平台上发售，于2015年12月18日在macOS和Linux平台发售。支持简体中文。</p>
+<h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p>《Hacknet》是一款基于终端的黑客模拟器。你将跟随一位最近刚过世的黑客，通过他遗留的线索，来探询混乱未知的网络世界。他的死可能并非像媒体所报道的仅仅是一场意外那么简单。只需进行简单的教学，你便能使用基础的指令来完成真实的黑入过程，探索这充满了谜团的黑客世界。</p>
+<p>Bit，一位负责开发世界上最具攻击性的黑入系统的黑客，去世了。当他的系统连续14天都没有检测到他的操作后，保险程序便开始运行，将他未完成的计划发给了一位陌生的用户。作为这名用户，你需要一步步揭开事实的真相，并且确保Hacknet操作系统不会落入到不法之徒手中。</p>
+<p>《Hacknet》为你提供一个全方位的真实黑客模拟器，可以让你探索人类窥探隐私的天性、制止企业贪婪盛行并对抗隐藏在网络世界中的强大黑客。同时它又能提供学习支持，可以让一个电脑小白通过游戏了解到现实世界的电脑指令和对应用程序的操控。<span id="文注_1.0"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></p>
+<h3 id="游戏特色"><a href="#游戏特色" class="headerlink" title="游戏特色"></a>游戏特色</h3><p><strong>真实的黑入</strong></p>
+<p>基于真实的UNIX指令，将重点放在真实的黑入过程，而不是追求炫酷的好莱坞式黑客。通过拟真化的黑入过程，让玩家们仿佛置身黑入现场，体验打破防火墙时几近真实的感受。</p>
+<p><strong>探寻Bit的死亡之谜</strong></p>
+<p>一位黑客莫名死亡，而媒体们的报道根本无法自圆其说。跟随着他的“灵魂”（一个自动邮件发送系统）带给你的指示，你将会慢慢深入并参与到一个黑暗而又庞大的黑客阴谋之中。</p>
+<p><strong>完全的沉浸式体验</strong></p>
+<p>你将会被带入一个无尽的虚拟黑客世界，在这里没有“等级”或者是明显的游戏元素来打破这一体验。你可以选择跟随Bit的邮件的指引，或是直接遨游在整个网络之中，探索并追寻信息的蛛丝马迹。</p>
+<p><strong>上手简单精通难</strong></p>
+<p>游戏不会限制你的游戏方式或让你按部就班。</p>
+<p>游戏内容和学习曲线的设计，能够让初学者或有终端操作经验的人都能找到属于自己的快乐。</p>
+<p><strong>杀手级音乐</strong></p>
+<p>原声带由地下风格音乐家创作，包括Carpenter Brut（Hotline Miami）和Remi Gallego（又名The Algorithm），由The Otherworld Agency协助创作。<span id="文注_1.1"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></p>
+<h3 id="开发历史"><a href="#开发历史" class="headerlink" title="开发历史"></a>开发历史</h3><ul>
+<li>2015年7月15日，开发者放出游戏宣传片。<span id="文参_1"></span><a href="#%E5%8F%82_1"><sup>[1]</sup></a></li>
+<li>2015年8月13日，游戏在Microsoft Windows平台上发售。</li>
+<li>2015年10月21日，游戏原声带发售。</li>
+<li>2015年12月18日，游戏在macOS和Linux平台发售。</li>
+<li>2016年8月30日，开发者宣布游戏扩展内容《Hacknet - Labyrinths》的制作。</li>
+<li>2016年10月12日，游戏推出简体中文支持。</li>
+<li>2017年3月21日，开发者宣布游戏扩展内容《Hacknet - Labyrinths》将于3月31日发售，并放出宣传片。</li>
+<li>2017年3月31日，游戏扩展内容《Hacknet - Labyrinths》发售。</li>
+<li>2017年5月23日，游戏mod《Hacknet Extensions》发布。</li>
+</ul>
+<h2 id="额外内容"><a href="#额外内容" class="headerlink" title="额外内容"></a>额外内容</h2><h3 id="Hacknet-Labyrinths"><a href="#Hacknet-Labyrinths" class="headerlink" title="Hacknet - Labyrinths"></a>Hacknet - Labyrinths</h3><p>游戏扩展内容《Hacknet - Labyrinths》于2017年3月31日发售。</p>
+<h4 id="基本介绍-1"><a href="#基本介绍-1" class="headerlink" title="基本介绍"></a>基本介绍</h4><p>加入黑客精英小队，破解复杂的数据。</p>
+<p>加入了一个3-4小时流程的全新章节。你将由神秘人Kaguya招募到一个黑客精英团队，发掘新的强大工具与程序。</p>
+<p>然而与最棒的团队一起工作并不会特别容易。随着愈演愈烈的危机与越来越复杂的任务接踵而至，你需要利用团队的一切资源去黑入并完成任务，最后完美脱身。</p>
+<p>加入了全新工具，比如内存分析器，可以在RAM中进行内存取证。探索新的程序、网络、UI主题，以及新的秘密和音乐。<span id="文注_1.2"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></p>
+<p><strong>主要特点</strong></p>
+<ul>
+<li><strong>一个全新的篇章。</strong> 在原有故事的基础上加入了惊心动魄的3-4小时流程的新章节。你可以把它看做原有故事的拓展，也可以当做一个继续研究Hacknet的全新机会。</li>
+<li><strong>新的工具与程序。</strong> 得到全新的、更加复杂的黑入工具和程序来破解系统与网络。比如，通过使用内存分析器在RAM上使用内存取证，发现隐藏在其中的秘密。</li>
+<li><strong>团队工作。</strong> 你不再是独行侠，需要与你的队友在IRC交流，共同合作完成目标。</li>
+<li><strong>危险而大胆的数据抢劫。</strong> 网络系统变得更加复杂，不是通过简简单单的“破门而入”就能解决问题。探索，适应，生存！</li>
+<li><strong>新的杀手级音乐。</strong> 包括重金属&#x2F;电音艺术家Remi Gallego的《The Algorithm》和《Orge》。<span id="文注_1.3"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></li>
+</ul>
+<h3 id="Hacknet-Extensions"><a href="#Hacknet-Extensions" class="headerlink" title="Hacknet Extensions"></a>Hacknet Extensions</h3><p>游戏mod《<strong>Hacknet Extensions</strong>》于2017年5月23日发布。允许玩家创建自定义故事、任务、网络、主题以及音乐等，并可通过上传至Steam创意工坊与其他玩家分享。</p>
+<h2 id="游戏评价"><a href="#游戏评价" class="headerlink" title="游戏评价"></a>游戏评价</h2><table>
+<thead>
+<tr>
+<th align="center">汇总媒体</th>
+<th align="center">得分</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Metacritic</td>
+<td align="center">82 &#x2F; 100<span id="文参_2"></span><a href="#%E5%8F%82_2"><sup>[2]</sup></a></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">媒体</th>
+<th align="center">评分</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">GameSpot</td>
+<td align="center">8 &#x2F; 10<span id="文参_3"></span><a href="#%E5%8F%82_3"><sup>[3]</sup></a></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>《Hacknet》是我见过的最接近现实的黑客模拟游戏。——Kotaku<span id="文参_4"></span><a href="#%E5%8F%82_4"><sup>[4]</sup></a></p>
+<p>作为迄今为止最好的黑客模拟游戏，《Hacknet》让我们想去了解更多有关黑客世界的真实和详细描述。毫无疑问，这是最棒的合法黑客经验。——LevelUp<span id="文参_5"></span><a href="#%E5%8F%82_5"><sup>[5]</sup></a></p>
+</blockquote>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><ol>
+<li>^ <a href="#%E6%96%87%E6%B3%A8_1.0"><sup>1.0</sup></a> <a href="#%E6%96%87%E6%B3%A8_1.1"><sup>1.1</sup></a> <a href="#%E6%96%87%E6%B3%A8_1.2"><sup>1.2</sup></a> <a href="#%E6%96%87%E6%B3%A8_1.3"><sup>1.3</sup></a> <span id="注_1"></span>Steam商店页面介绍，有改动。</li>
+</ol>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
+<li><a id="参_1" href="#文参_1">^</a> Fellow Traveller. <a class="link"   href="https://www.youtube.com/watch?v=FgDmU7Pb96Y" >Hacknet宣传片<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. YouTube. 2015-07-15 [引用时间: 2023-02-03].</li>
+<li><a id="参_2" href="#文参_2">^</a> <a class="link"   href="https://www.metacritic.com/game/pc/hacknet" >Hacknet for PC Reviews<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. Metacritic. [引用时间: 2023-02-03].</li>
+<li><a id="参_3" href="#文参_3">^</a> <a class="link"   href="https://www.gamespot.com/games/hacknet/" >Hacknet<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. GameSpot. [引用时间: 2023-02-03].</li>
+<li><a id="参_4" href="#文参_4">^</a> Mark Serrels. <a class="link"   href="https://www.kotaku.com.au/2015/07/this-australian-game-will-turn-us-all-into-hackers/" >This Australian Game Will Turn Us All Into Hackers<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. 2015-07-16 [引用时间: 2023-02-03].</li>
+<li><a id="参_5" href="#文参_5">^</a> Alonso Zamora. <a class="link"   href="https://www.levelup.com/PC/juegos/335304/Hacknet/review" >Reseña del Juego Hacknet<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. LevelUp. 2015-08-14 [引用时间: 2023-02-03].</li>
+</ol>
+<h2 id="外部链接"><a href="#外部链接" class="headerlink" title="外部链接"></a>外部链接</h2><ul>
+<li><a class="link"   href="https://www.hacknet-os.com/" >Hacknet官方网站<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li><a class="link"   href="https://www.hacknet-os.com/index_dlc.php" >Hacknet - Labyrinths官方网站<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li><a class="link"   href="https://twitter.com/hacknetOS" >Hacknet官方Twitter<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li><a class="link"   href="https://store.steampowered.com/app/365450/Hacknet/" >Hacknet的Steam商店页面<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li><a class="link"   href="https://store.steampowered.com/app/521840/Hacknet__Labyrinths/" >Hacknet - Labyrinths的Steam商店页面<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>游戏</category>
+      </categories>
+      <tags>
+        <tag>澳大利亚游戏作品</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>内裁圆角+双线边框的gradient实现</title>
     <url>/2023/06/16/gradient_based_inner_crop_radius_and_double_border/</url>
     <content><![CDATA[<p>使用CSS <code>background</code>里的gradient系列函数实现内裁圆角+双线边框。</p>
@@ -223,191 +530,6 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </categories>
       <tags>
         <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Stelpolvo Sans字体现已发布！</title>
-    <url>/2023/12/29/stelpolvo_sans/</url>
-    <content><![CDATA[<p>项目地址：<a class="link"   href="https://github.com/GuoPCinGitHub/StelpolvoSans" >GuoPCinGitHub&#x2F;StelpolvoSans<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p>在线试用地址：<a href="https://guopcingithub.github.io/StelpolvoSans">Stelpolvo Sans</a></p>
-<p>欢迎为项目star或提issue！</p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/img/StelpolvoSans-1.PNG"
-                      alt="StelpolvoSans-1" title="封面"
-                ><figcaption>StelpolvoSans-1</figcaption></figure></p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/img/StelpolvoSans-2.PNG"
-                      alt="StelpolvoSans-2" title="简介：Stelpolvo Sans 字体基于动画《星灵感应》中以世界语为原型的宇宙语字母制作而成。Stelpolvo 在世界语中意为星尘。"
-                ><figcaption>StelpolvoSans-2</figcaption></figure></p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/img/StelpolvoSans-3.PNG"
-                      alt="StelpolvoSans-3" title="安装：可直接下载 TTF 文件后安装。WOFF 文件亦有提供，可根据需求取用。"
-                ><figcaption>StelpolvoSans-3</figcaption></figure></p>
-<p><figure class="image-caption"><img src="/img/StelpolvoSans-4.PNG" alt="StelpolvoSans-4" title="使用：A ~ P (a ~ p) / R ~ V (r ~ v) / Z (z) 可直接通过键盘输入。Ĉ (ĉ) / Ĝ (ĝ) / Ĥ (ĥ) / Ĵ (ĵ) / Ŝ (ŝ) / Ŭ (ŭ) 亦可直接输入，或通过输入对应无修饰符字母，后加 X (x) 得到，如输入“cx”得到“ĉ”。"><figcaption>StelpolvoSans-4</figcaption></figure></p>
-<p><figure class="image-caption"><img src="/img/StelpolvoSans-5.PNG" alt="StelpolvoSans-5" title="许可：本字体依照 SIL Open Font License 1.1 进行许可。您可以：自由下载传播、个人或商业使用、安装和嵌入字体、修改和重新分发；您不得：单独售卖此字体、将修改后字体以其他许可发布。协议原文见 http://scripts.sil.org/OFL。"><figcaption>StelpolvoSans-5</figcaption></figure></p>
-]]></content>
-      <categories>
-        <category>字体</category>
-      </categories>
-      <tags>
-        <tag>字体</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>拜田希实花</title>
-    <url>/2024/01/11/haida_kimika/</url>
-    <content><![CDATA[<p><strong>拜田希实花</strong> 是fairys发行游戏 <strong>《现在就想告诉哥哥，我是妹妹！》</strong> 及其衍生作品的登场角色，女主角之一。</p>
-
-  <div class="note-large blue">
-    <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
-      <p>基本资料</p>
-
-    </div>
-    <div class="notel-content markdown-body">
-      <p>身高：161cm<br>体重：46kg<br>三围：B:80 W:59 H:81<br>年龄：16岁</p>
-
-    </div>
-  </div>
-
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/img/kimika.png"
-                      alt="拜田希实花"
-                ><figcaption>拜田希实花</figcaption></figure></p>
-<p><span style="font-size:small;color:gray;">▲ 游戏CG。原作者保留权利，仅以介绍为目的引用。</span></p>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><span style="font-size:larger;">为摆脱土气形象而努力着的，<br>腼腆的班长</span></p>
-<p>进入朝冈学园，成为新一届的高一学生，希实花在陆斗等人的班级里担任班长一职。她成绩十分优秀，在入学仪式上也被选为新生代表。性格畏畏缩缩并且很难有自己的主见，在小学和中学时期有被他人在背地里称作“土气花”的事情。随着升学，希实花下定决心改变自己，做的第一件事就是将带框眼镜换成了隐形眼镜。可是她腼腆的性格却几乎没有变化，付出的努力似乎也还是白忙一场。她与陆斗在小学时做过1年的同班同学。希实花还很清楚地记得陆斗，对方却不记得她了。希实花一方面对这种情况感到寂寞，另一方面也不太希望陆斗回忆起过去，她因此而苦恼着。</p>
-<details class="green" data-header-exclude>
-    <summary><i class="fa-solid fa-chevron-right"></i>日文原文，点击展开 </summary>
-    <div class='content markdown-body'>
-      <div lang="ja">
-<span style="font-size:larger;">地味キャラを捨て去ろうとがんばる、<br>内気な委員長</span>
-
-<p>朝岡学園の新一年生で、陸斗たちのクラスの委員長を務めることになります。とても成績優秀で、入学式でも新入生総代に選ばれました。引っ込み思案でなかなか自己主張ができず、小中学生の頃は陰で「地味花」と呼ばれていた過去があります。進学にともなって自分を変えようと決意し、まずメガネをコンタクトにしました。でも内気なところは少しも変わっておらず、努力もいまいち空回りぎみです。陸斗とは小学生の頃に１年だけ同じクラスだったことがあります。希実花のほうは陸斗をはっきり覚えていましたが、陸斗は希実花のことを覚えていませんでした。そのことを寂しく感じる一方、陸斗に昔のことを思い出されるのもあまり歓迎できず、悩んでいるようです。</p>
-</div>
-
-    </div>
-  </details>
-
-<h2 id="短篇故事：希实花的心绪"><a href="#短篇故事：希实花的心绪" class="headerlink" title="短篇故事：希实花的心绪"></a>短篇故事：希实花的心绪</h2><p><span style="font-size:larger;">重逢，<br>但只是自说自话</span></p>
-<p>疼痛。<br>十分疼痛。<br>第一次戴上隐形眼镜真的很痛。<br>今天是新生活的开始……试着鼓起干劲，但……<br>“呜……”<br>果然还是很痛。<br>电车开起来之后变得更加疼痛。<br>好不容易被朝冈学园录取了，我却完全笑不出来。<br>已经把隐形眼镜摘下来了，带框眼镜在……<br>“唔！？”<br>对面的空座位有人来了，和对方撞上了膝盖。<br>一时间，我与他四目相对。<br>是差不多年龄的，男孩子……<br>旁边，也是年龄一般大的女孩。<br>大概，是和我一样来看朝冈的录取结果公示的吧。<br>能看出两个人明朗的表情。一定是顺利通过了吧。<br>也就是说，开春之后也可能会成为同班同学……<br>“…………”<br>果然，还是不戴带框眼镜比较好。<br>但是，那样的话，眼睛就会这样疼痛。<br>疼痛，比刚才更加剧烈了。<br>“啊……”<br>眼泪……可能流出来了。<br>不对，不是“可能”，我已经泪如雨下了。</p>
-<details class="green" data-header-exclude>
-    <summary><i class="fa-solid fa-chevron-right"></i>日文原文，点击展开 </summary>
-    <div class='content markdown-body'>
-      <div lang="ja">
-<span style="font-size:larger;">再会、<br>でも一方通行</span>
-
-<p>痛い。<br>とても痛い。<br>はじめて付けたコンタクトがとっても痛い。<br>今日から新しい人生のはじまり……なんて気合いを入れてみたけど……<br>「ぅっ……」<br>痛いものは痛い。<br>電車が走り出してからはさらに痛い。<br>せっかく朝岡学園に合格したのに、笑顔のひとつも作れない。<br>もうコンタクトははずして、メガネに……<br>「っ！？」<br>向かいの空席に人が来て、コツンと膝があたった。<br>瞬間、ちらっと視線が合う。<br>同い年くらいの、男の人……<br>隣は、やっぱり同い年くらいの女の子。<br>たぶん、私と同じく朝岡の合格発表を見に来た人たち。<br>ふたりの表情は明るい感じ。きっと合格したんだろう。<br>ということは、春からクラスメイトになる可能性も……<br>「…………」<br>やっぱり、メガネはやめておいた方がいいかも。<br>でも、そうなると、目は痛いまま。<br>さっきより、痛みが増してきている感じ。<br>「ぁ……」<br>涙……出てきたかも。<br>ううん、『かも』じゃなくて、出てる。</p>
-</div>
-
-    </div>
-  </details>
-
-<h2 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h2><h3 id="共通线"><a href="#共通线" class="headerlink" title="共通线"></a>共通线</h3><details class="yellow" data-header-exclude>
-    <summary><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开 </summary>
-    <div class='content markdown-body'>
-      <p><strong>升学考试结果公示</strong></p>
-<p>陆斗与青梅竹马奉莉一同在朝冈学园确认考试通过顺利升学后乘电车返程。</p>
-<p>电车座位采用的是四人两两对坐的形式，空间略显狭小。陆斗和奉莉并排坐下，二人聊天时陆斗膝盖不小心碰到了对坐的女生，此时二人注意到女生在轻声哭泣，陆斗以为是自己碰到了她把她弄哭了，又推测应该是因为她也报考了朝冈但是不幸落榜了。陆斗尝试搭话安慰，被奉莉偷偷劝阻。女生注意到陆斗，不由得发出吃惊的声音，随即向陆斗道歉。陆斗迟疑之时电车到站，将随身的手帕递给了女生后急忙下车。</p>
-<p>电车即将到达终点站。女生独自懊恼着自己依旧毫无改变，什么也没能说出口，同时注意到手帕上绣着“三谷”字样，确定了给她手帕的人是以前就认识的三谷同学，对方却没能认出她来。女生认为忘记了也好，但心里也感到痛苦。</p>
-<p><strong>新生入学准备说明会</strong></p>
-<p>新生入学准备说明会分为新生入学仪式和新生分组参观环节。入学仪式结束后，陆斗再次遇见了在电车上碰到的女生，并了解了女生在电车上哭泣的原因。参观时女生说自己名叫拜田希实花，陆斗感觉到她在偷偷打量着自己。</p>
-<p>回家途中，希实花又想到陆斗不记得自己，这正是自己所期望的，自己正是出于这个目的才选择了不会有人认识自己的朝冈。但是自己又似乎因为陆斗没能认出自己而寂寞，不知道如何是好。</p>
-<p><strong>开学典礼</strong></p>
-<p>开学典礼上，主持人请新生代表致辞时，希实花不自然地走上台开始致辞。但因为过于紧张，致辞在途中卡住了，陆斗朝希实花挥了挥手，希实花勉强完成了致辞。</p>
-<p>开学典礼结束后，班主任夏奏老师指名希实花担任班长一职。希实花虽然惊讶，但没有拒绝。夏奏老师继续进行副班长的竞选，陆斗举手提出要成为副班长。之后奉莉、步梦和章介主动担任活动实行委员，以辅助两位班长筹划包括樱花祭在内的各种校园活动。之后当天没有到场的茂森同学也暂被举荐为活动实行委员。</p>
-<p>回家途中，众人安慰鼓励了希实花，希实花认为自己给大家添了麻烦，陆斗则解释道大家都是自愿成为班委的，劝她不要在意。到了陆斗等人需要换乘的车站，希实花表示自己想换条路线回家，也同众人一起换乘。陆斗直言能增加在一起的时间很高兴，希实花听完脸红起来。</p>
-<p><strong>正式开学后</strong></p>
-<p>第二天放学后，众人前往陆斗的父亲直真的甜品店举办茶会。到了甜品店门前，章介好奇店名“een×vijf”怎么读，希实花在谈论中说出店名是荷兰语数字1和5的意思，陆斗等人称赞希实花，希实花却流下眼泪，然后连忙顺着陆斗的话解释是隐形眼镜的原因。餐品上好后，众人谈到彼此称呼的问题。聊到希实花时，希实花稍显强硬地希望大家称呼她为“拜田同学”。归家途中，希实花独自回想起今天发生的事情，为能够到een×vijf聚会而高兴，但想到陆斗不记得以前的事情，眼泪又不禁流了出来。</p>
-<p>到了一天中的最后一节课班会，夏奏老师与班上的同学们商议这周末要进行的合宿集训的相关事项。之后谈到下周末要进行的慈善义卖节，夏奏老师请希实花和陆斗两位班长上台主持，让大家讨论打算经营什么模拟店。希实花一开场就因为紧张咬到了舌头，陆斗便提出代替她主持，希实花则负责记录工作。放学后，班委们和夏奏老师留在班里继续开会。陆斗表示继续让自己主持，其他人则希望希实花在这种场合适应主持工作，希实花便开始主持。最后众人决定以女仆为主题经营模拟店。</p>
-
-    </div>
-  </details>
-
-<h3 id="个人线"><a href="#个人线" class="headerlink" title="个人线"></a>个人线</h3><details class="yellow" data-header-exclude>
-    <summary><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开 </summary>
-    <div class='content markdown-body'>
-      <p><strong>球技大会</strong></p>
-<p>合宿第一天是樱花祭的球技大会，大家前往各自的会场参加比赛。在与真央配合拿下沙滩排球半决赛后，休息时陆斗前往希实花和步梦所在的乒乓球比赛。发现陆斗前来观看比赛后，希实花乱了阵脚，输掉了比赛。之后三人一同回到沙滩排球赛场，在陆斗与真央获得沙滩排球冠军后，希实花与陆斗交谈时表现出对真央的钦佩和憧憬。</p>
-<p>一天的比赛结束后，大家回到教室等待班级排名结果。章介分析后认为会与第三名有微弱差距，居于第四。希实花自责地表示如果自己拿下了比赛，排名就会升到第三名了，众人给以安慰。夏奏老师前来宣布班级位居第四，希实花感到很失落。傍晚，大家在天台吃自助餐，希实花独自一人默默坐在一旁，陆斗上前关心，同时下定决心要在明天的洗场任务中努力。</p>
-<p>晚上，陆斗从男生宿舍的枕头大战中离开，在走廊上散步，遇见了因为其他女生在聊恋爱话题而逃出来的希实花。因为没有戴隐形眼镜，希实花有些踉跄。考虑到一时半会回不了宿舍，二人登上天台。陆斗感叹夜景美丽的同时感觉有些冷，希实花将身上的毛毯递给陆斗，自己却打起喷嚏，二人决定共用毛毯。陆斗聊到天上的星星，希实花便滔滔不绝地说了很多星星相关的知识，陆斗大吃一惊。希实花解释自己是通过看书学到的这些知识，自己很喜欢看书，之后向陆斗推荐了矶野绫子写的畅销小说《天使之泪》，并提出将书借给陆斗看，陆斗因为与希实花立下约定而暗自开心。回到房间后，希实花想着刚才的事情，心里既害羞又高兴。</p>
-<p><strong>洗场任务</strong></p>
-<p>第二天，洗场任务顺利进行一段时间后，众人在一项任务上就人员安排方案产生分歧，做出决定的压力来到希实花身上。但最终希实花没能给出判断，章介表达歉意后以负责人身份结束了决议。傍晚所有任务结束后，希实花因自责而处在消沉之中。夏奏老师进班宣布排名，同学们大多接受了结果，但希实花仍难以释怀。</p>
-<p>晚上，同学们在沙滩上烧烤。夏奏老师赶来通知需要两位同学守着一旁的篝火，陆斗便邀请希实花一起。其间，希实花向陆斗坦言自己曾下定决心要做出改变，但只是改变了外表，自己还是同以前一样笨拙，给周围的人带来麻烦。陆斗说正因为大家是朋友，所以不会过于在意这些，也希望希实花不要一直把这些事挂在心上，继续试着改变就好。希实花哭了一场后冷静下来，说自己虽然决定做出改变却还没有明确的目标，陆斗提议希实花作为班长，可以为带领班级获得樱花祭综合冠军努力。之后，希实花将班委们召集到班里，做出拿下综合冠军的宣言，众人也切实感受到了希实花的决心。</p>
-<p>合宿结束后，班委们一同前往陆斗的父亲直真的甜品店。希实花想自己来同陆斗的父亲商量模拟店事宜，经过简单介绍后，希实花提出在慈善义卖节再现直真店里甜品的味道。直真思索后提议制作泡芙，希实花似乎有些慌乱，看到陆斗反应平淡后又有些失望。商讨过后确定增加的甜品为草莓奶油泡芙，希实花表示想自己一个人也能制作出来，众人决定第二天到陆斗家中练习。回家途中，希实花回忆起小时候陆斗安慰她的场景和当时吃的泡芙，明白了自己还是希望陆斗回想起过去的经历。</p>
-<p><strong>慈善义卖节前的准备与当天</strong></p>
-<p>周二是合宿集训调休，下午众人在陆斗家集合。希实花开始练习制作泡芙，众人品尝后赞不绝口，希实花有些感动。傍晚众人同陆斗分别，希实花趁机将之前提到的小说《天使之泪》借给了陆斗。之后两天希实花在陆斗家练习制作果酱。</p>
-<p>慈善义卖节前一天，陆斗回到家后听闻由于房地产商的问题，搬家不能如期进行。来到甜品店后，陆斗还在烦恼着刚才的事情，希实花到达后二人如期开始制作泡芙。但因为陆斗和面时的失误，烤出的酥皮没能鼓起来。希实花先前就察觉到陆斗的异样，便希望陆斗能将发生的事情说给她听。陆斗倾诉后二人回到制作中，希实花提议减少一次制作的数量以避免进一步损失，只是会花些时间。二人最后决定在甜品店留宿，专心制作泡芙。</p>
-<p>深夜，希实花的眼睛因为戴久了隐形眼镜有些不舒服，陆斗建议换成带框眼镜。希实花犹豫后戴上了带框眼镜，陆斗看着希实花，终于想起小学三年级时与希实花是同班同学，希实花也因此高兴得流下眼泪。</p>
-<p>慈善义卖节当天早上，希实花因为制作的泡芙得到了同学们的称赞而十分开心。之后希实花提出成为服务员接客，一开始还有些紧张和拘谨，之后便习惯起来。慈善义卖节结束后，夏奏老师宣布班级排名上升到第二，希实花由衷感到高兴。回家路上，众人打算明天一起出去玩，希实花提议去看电影《天使之泪》，是由小说改编的。</p>
-<p><strong>话剧编剧风波</strong></p>
-<p>第二天，众人在车站汇合后前往电影院。途中，陆斗因为自己还没来得及看原著而抱歉，希实花表示并不在意，反而认为如果没看过原著先来观看电影，或许会有不同的感受。之后二人聊到原著与改编电影的话题，陆斗发现希实花一旦涉及到感兴趣的话题，也会变得很健谈，心里有些喜悦。预订的座位并不全连在一起，陆斗与希实花恰巧拿到了相邻座位的电影票。</p>
-<p>看完电影后，众人前往陆斗家的甜品店。谈到之后的表演派对，希实花希望班级能以《天使之泪》为原型表演话剧。晚上，陆斗阅读借来的小说，希实花重读一遍小说后与陆斗通过手机邮件聊天。</p>
-<p>早上陆斗想同希实花交流读书心得，希实花想先关注表演派对的安排于是谢绝了，但同时表示这本书是自己在身陷挫折时发现的宝贵希望，陆斗不是很理解她的意思。到了班会课，希实花将计划告诉同学们，大家欣然接受，并打算让希实花同时担任编剧和导演，希实花听到后既惊讶又感动。班委们商量服装相关事宜时，同班的麻耶等三位女生提出来帮忙编剧。</p>
-<p>但效果并不理想，三位女生完全没能帮上希实花的忙，还耽误了不少时间。希实花也深知这样下去不行，但似乎有些被孤立了，剧本基本上是由那三位女生自行编写的。经过众人的考虑和开导后，希实花鼓起勇气前去拒绝了三位女生的继续编写，班会时众人也向班上的同学们表达了歉意。</p>
-<p>剧本顺利完成，也获得了同学们的认可，希实花安排了陆斗和奉莉分别扮演男女主人公。周六正式排练时，众人注意到剧本中的女主人公与希实花十分相像，陆斗也才体会到希实花对这本小说所怀有的深刻情感。周日排练中途休息时，希实花端出做好的泡芙犒劳大家，奉莉则感觉希实花有些逞强，催促陆斗带希实花去天台休息。二人在天台回想甜品店成立时的事情，陆斗为希实花还牢记着这些而感谢。</p>
-<p><strong>希实花与过去</strong></p>
-<p>之后排练休息时，希实花的眼睛又因为隐形眼镜而疼痛，班上其他同学这才知道希实花原来戴着隐形眼镜。陆斗让她暂时取下隐形眼镜，但希实花不小心踩碎了一片。在内心挣扎一番后，希实花戴上了带框眼镜与大伙汇合。之前的三位女生看到希实花这个样子，无心喊出了“土气花”的称呼，不料希实花突然呼吸急促晕了过去。在经过校医检查和简单处理后，希实花恢复了意识。陆斗也完全记起了小学时，希实花就被别人起了这个外号来捉弄她，这也导致她变得自卑，同时不愿别人用名字称呼她。</p>
-<p>第二天，希实花因为去医院检查而延迟到校，众人前来关心。三位女生意识到自己做了错事，主动向希实花道歉。之后的排练中，希实花依然不在状态，陆斗见状要求暂停排练，同希实花两个人来到天台谈心。陆斗希望希实花不要再继续逃避过去，而应该勇敢地面对。在经过同意后，陆斗试着称呼她为希实花同学。希实花感到有些害羞，又进一步让陆斗直接喊她的名字，心中的畏惧也已烟消云散。回到班上，希实花希望班委们直接以名字称呼她，众人继续排练。休息时间，希实花稍感不安，陆斗上前握住她的手，为她加油鼓劲，希实花感觉自己已经喜欢上陆斗了。</p>
-<p><strong>表演派对前的约会和当天</strong></p>
-<p>离表演派对还有两天，虽然排练效果在不断变好，但希实花因为自己是倡议者和主要负责人，所以比起期待，更多的是紧张和不安。希实花被其他人叫走时，其他班委聚在一起检查剧本。其间大家都看出来希实花现在压力很大，奉莉指出陆斗和希实花约会时最好的解决办法，其他人表示赞成。此时希实花回到教室，陆斗被推到希实花面前。陆斗整理好语言后邀请希实花一起去商场。</p>
-<p>在经过聊天、占卜和卡拉OK之后，希实花的心情逐渐平复，二人的关系也逐渐升温。来到车站，希实花直言想用名字称呼陆斗，陆斗同意后二人又聊到看完小说的感想。在说出那本小说对自己的特殊意义后，希实花想顺势向陆斗告白，但陆斗心中认为自己还需要确认自己的心意，岔开了话题。</p>
-<p>表演派对当天，奉莉因受伤无法正常出演，同学们感到十分焦急。此时希实花鼓起勇气，提出代替奉莉扮演女主人公。演出时，虽然开头和临近结尾时发生了一些状况，但依靠陆斗和希实花以及众人的配合，危机成功化解，演出也获得了观众们的热烈掌声。班级得到了第一名的成绩，成功实现逆袭。</p>
-<p>结束后众人回到班上。陆斗来到希实花面前，给予真心的祝贺，希实花却脸红着跑出了教室。在其他班委的催促和指引下，陆斗朝天台跑去。登上天台后，陆斗看见了希实花的背影。二人互相表明自己的心意后双唇相接。</p>
-
-    </div>
-  </details>
-
-<h2 id="攻略路线"><a href="#攻略路线" class="headerlink" title="攻略路线"></a>攻略路线</h2><p>注：表中个人线之前与希实花相关（带有※）的选项建议选择，其他选项可根据个人喜好选择。</p>
-<details class="green" data-header-exclude>
-    <summary><i class="fa-solid fa-chevron-right"></i>攻略路线，点击展开 </summary>
-    <div class='content markdown-body'>
-      <p><span lang="ja">あの子が逃げるなんてありえない</span> &#x2F; 那个女生不可能躲着我<br>※<span lang="ja">なんとか助けてあげたくなった</span> &#x2F; ※想设法去帮她一下<br>※<span lang="ja">すぐさま副委員長に立候補する</span> &#x2F; ※立刻竞选副班长<br><span lang="ja">ドキっとしてしまう</span> &#x2F; 不由得心动了<br><span lang="ja">すごく嬉しくなった</span> &#x2F; 感到十分高兴<br><span lang="ja">とても、イヤな気分になった</span> &#x2F; 有一种，很不舒服的气氛<br><span lang="ja">代わりを申し出る</span> &#x2F; 代替那个人去组队<br><span lang="ja">本当にかわいい</span> &#x2F; 真的很可爱<br>※<span lang="ja">議長を代わる</span> &#x2F; ※代替她主持</p>
-<p><strong>拜田希实花线</strong></p>
-<p><span lang="ja">拝田さんだった</span> &#x2F; 拜田同学<br><span lang="ja">若干引いてしまった</span> &#x2F; 稍微有些不适<br><span lang="ja">やめておく</span> &#x2F; 还是算了<br><span lang="ja">拝田さんだった</span> &#x2F; 拜田同学</p>
-<p><strong>希实花 END</strong></p>
-
-    </div>
-  </details>
-
-<h2 id="相关歌曲"><a href="#相关歌曲" class="headerlink" title="相关歌曲"></a>相关歌曲</h2><p><span style="color:orchid;">片尾曲</span></p>
-<ul>
-<li><a href="/TranslationPlot/posts/2023-01-09-kimi_to_zutto/"><span lang="ja">君とずっと</span></a>（永远与你在一起）<ul>
-<li>演唱：拜田希实花（CV：日笠阳子）</li>
-<li>作词：lotta，作曲：rino，编曲：户田章世</li>
-</ul>
-</li>
-</ul>
-<p><span style="color:olivedrab;">角色歌</span></p>
-<ul>
-<li><a href="/TranslationPlot/posts/2022-11-24-my_mind/">my mind</a><ul>
-<li>演唱：拜田希实花（CV：日笠阳子）</li>
-<li>作词：lotta，作曲、编曲：户田章世</li>
-</ul>
-</li>
-<li><a href="/TranslationPlot/posts/2024-10-28-sakurairo_no_wadachi"><span lang="ja">桜色の轍</span></a>（樱色车辙）<ul>
-<li>演唱：茂田真央（CV：茅野爱衣）、拜田希实花（CV：日笠阳子）</li>
-<li>作词：RUCCA，作曲、编曲：菊田大介（Elements Garden）</li>
-</ul>
-</li>
-</ul>
-<h2 id="外部链接"><a href="#外部链接" class="headerlink" title="外部链接"></a>外部链接</h2><ul>
-<li><a class="link"   href="https://web.archive.org/web/20180312115330/https://fairys.tv/" >fairys官方网站<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>（<a class="link"   href="https://fairys.tv/" >原始网页<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>）</li>
-<li><a class="link"   href="https://imaimo.com/" >《现在就想告诉哥哥，我是妹妹！》特设网站<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>角色介绍</category>
-      </categories>
-      <tags>
-        <tag>现在就想告诉哥哥，我是妹妹！登场角色</tag>
       </tags>
   </entry>
   <entry>
@@ -513,55 +635,160 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
-    <title>QQNT自定义字体记录</title>
-    <url>/2024/04/09/qqnt-custom-fonts/</url>
-    <content><![CDATA[<p>想了想还是记录一下自己QQNT电脑版设置的自定义字体。</p>
-<p>需要使用到的加载器以及插件：</p>
-<ul>
-<li><a class="link"   href="https://liteloaderqqnt.github.io/" >LiteLoaderQQNT<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-<li><a class="link"   href="https://github.com/xiyuesaves/LiteLoaderQQNT-lite_tools" >轻量工具箱<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-</ul>
-<p><del>某一天无意间发现自定义字体可以不从下拉列表选择字体，而是自己敲字体家族。</del></p>
-<p>目前使用的自定义字体声明：<code>IBM Plex Sans, Nu Wakkaoi M1, MiSans VF, MiSans L3, LINE Seed Sans KR, Plangothic P1, Plangothic P2, Sukima Gothic, Jigmo, Jigmo2, Jigmo3</code></p>
-<p>顺便附上各字体相关网址：</p>
-<ul>
-<li><a class="link"   href="https://www.ibm.com/plex/" >IBM Plex<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>（<code>IBM Plex Sans</code>）</li>
-<li><span lang="ja"><a class="link"   href="https://kokagem.sakura.ne.jp/font/wakkaoi/" >Nu ワッカオイ<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></span>（<code>Nu Wakkaoi M1</code>）</li>
-<li><a class="link"   href="https://hyperos.mi.com/font/zh/" >MiSans<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>（<code>MiSans VF, MiSans L3</code>）</li>
-<li><a class="link"   href="https://seed.line.me/" >LINE Seed<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>（<code>LINE Seed Sans KR</code>）</li>
-<li><a class="link"   href="https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic-Project" >遍黑体项目<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>（<code>Plangothic P1, Plangothic P2</code>）</li>
-<li><span lang="ja"><a class="link"   href="https://booth.pm/ja/items/2117070" >すきまゴシック<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></span>（<code>Sukima Gothic</code>）</li>
-<li><span lang="ja"><a class="link"   href="https://kamichikoichi.github.io/jigmo/" >Jigmo（字雲）<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></span>（<code>Jigmo, Jigmo2, Jigmo3</code>）</li>
-</ul>
-<hr>
-<p>5.7补充：若希望保留QQNT默认情况下的emoji样式（苹果的Apple Color Emoji），在上面的声明最前面加上<code>Color Emoji,</code>即可。</p>
-<hr>
-<p>7.7补充：2.30.10版本的轻量工具箱已对emoji进行处理，将“覆盖默认emoji字体”选项置于关闭即可。</p>
+    <title>Stelpolvo Sans字体现已发布！</title>
+    <url>/2023/12/29/stelpolvo_sans/</url>
+    <content><![CDATA[<p>项目地址：<a class="link"   href="https://github.com/GuoPCinGitHub/StelpolvoSans" >GuoPCinGitHub&#x2F;StelpolvoSans<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>在线试用地址：<a href="https://guopcingithub.github.io/StelpolvoSans">Stelpolvo Sans</a></p>
+<p>欢迎为项目star或提issue！</p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/img/StelpolvoSans-1.PNG"
+                      alt="StelpolvoSans-1" title="封面"
+                ><figcaption>StelpolvoSans-1</figcaption></figure></p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/img/StelpolvoSans-2.PNG"
+                      alt="StelpolvoSans-2" title="简介：Stelpolvo Sans 字体基于动画《星灵感应》中以世界语为原型的宇宙语字母制作而成。Stelpolvo 在世界语中意为星尘。"
+                ><figcaption>StelpolvoSans-2</figcaption></figure></p>
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/img/StelpolvoSans-3.PNG"
+                      alt="StelpolvoSans-3" title="安装：可直接下载 TTF 文件后安装。WOFF 文件亦有提供，可根据需求取用。"
+                ><figcaption>StelpolvoSans-3</figcaption></figure></p>
+<p><figure class="image-caption"><img src="/img/StelpolvoSans-4.PNG" alt="StelpolvoSans-4" title="使用：A ~ P (a ~ p) / R ~ V (r ~ v) / Z (z) 可直接通过键盘输入。Ĉ (ĉ) / Ĝ (ĝ) / Ĥ (ĥ) / Ĵ (ĵ) / Ŝ (ŝ) / Ŭ (ŭ) 亦可直接输入，或通过输入对应无修饰符字母，后加 X (x) 得到，如输入“cx”得到“ĉ”。"><figcaption>StelpolvoSans-4</figcaption></figure></p>
+<p><figure class="image-caption"><img src="/img/StelpolvoSans-5.PNG" alt="StelpolvoSans-5" title="许可：本字体依照 SIL Open Font License 1.1 进行许可。您可以：自由下载传播、个人或商业使用、安装和嵌入字体、修改和重新分发；您不得：单独售卖此字体、将修改后字体以其他许可发布。协议原文见 http://scripts.sil.org/OFL。"><figcaption>StelpolvoSans-5</figcaption></figure></p>
 ]]></content>
       <categories>
-        <category>随记</category>
+        <category>字体</category>
       </categories>
       <tags>
-        <tag>CSS</tag>
         <tag>字体</tag>
-        <tag>QQNT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>拜田希实花</title>
+    <url>/2024/01/11/haida_kimika/</url>
+    <content><![CDATA[<p><strong>拜田希实花</strong> 是fairys发行游戏 <strong>《现在就想告诉哥哥，我是妹妹！》</strong> 及其衍生作品的登场角色，女主角之一。</p>
+<div class="callout callout--titled blue mb-4 rounded-small shadow-redefine-flat bg-(--callout-bg-color) p-3 pl-1 relative flex flex-row gap-2"><div role="none" class="rounded-full self-stretch w-0.5 bg-(--callout-primary-color) shrink-0 opacity-60"></div><div class="flex flex-col gap-2"><div class="callout__title flex items-center gap-2 font-semibold tracking-tight">基本资料</div><div class="callout__content markdown-body flex-1 min-w-0"><p>身高：161cm<br>体重：46kg<br>三围：B:80 W:59 H:81<br>年龄：16岁</p></div></div></div>
+
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/img/kimika.png"
+                      alt="拜田希实花"
+                ><figcaption>拜田希实花</figcaption></figure></p>
+<p><span style="font-size:small;color:gray;">▲ 游戏CG。原作者保留权利，仅以介绍为目的引用。</span></p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><span style="font-size:larger;">为摆脱土气形象而努力着的，<br>腼腆的班长</span></p>
+<p>进入朝冈学园，成为新一届的高一学生，希实花在陆斗等人的班级里担任班长一职。她成绩十分优秀，在入学仪式上也被选为新生代表。性格畏畏缩缩并且很难有自己的主见，在小学和中学时期有被他人在背地里称作“土气花”的事情。随着升学，希实花下定决心改变自己，做的第一件事就是将带框眼镜换成了隐形眼镜。可是她腼腆的性格却几乎没有变化，付出的努力似乎也还是白忙一场。她与陆斗在小学时做过1年的同班同学。希实花还很清楚地记得陆斗，对方却不记得她了。希实花一方面对这种情况感到寂寞，另一方面也不太希望陆斗回忆起过去，她因此而苦恼着。</p>
+<details class="relative my-4 border border-border-color bg-second-background-color rounded-md  green" data-header-exclude><summary class="px-4 py-2 rounded-md shadow-[0_0_2px_0_var(--shadow-color-1)] cursor-pointer not-markdown"><i class="fa-solid fa-chevron-right"></i>日文原文，点击展开</summary><div class="content p-4 "><div lang="ja">
+<span style="font-size:larger;">地味キャラを捨て去ろうとがんばる、<br>内気な委員長</span>
+
+<p>朝岡学園の新一年生で、陸斗たちのクラスの委員長を務めることになります。とても成績優秀で、入学式でも新入生総代に選ばれました。引っ込み思案でなかなか自己主張ができず、小中学生の頃は陰で「地味花」と呼ばれていた過去があります。進学にともなって自分を変えようと決意し、まずメガネをコンタクトにしました。でも内気なところは少しも変わっておらず、努力もいまいち空回りぎみです。陸斗とは小学生の頃に１年だけ同じクラスだったことがあります。希実花のほうは陸斗をはっきり覚えていましたが、陸斗は希実花のことを覚えていませんでした。そのことを寂しく感じる一方、陸斗に昔のことを思い出されるのもあまり歓迎できず、悩んでいるようです。</p>
+</div>
+</div></details>
+
+<h2 id="短篇故事：希实花的心绪"><a href="#短篇故事：希实花的心绪" class="headerlink" title="短篇故事：希实花的心绪"></a>短篇故事：希实花的心绪</h2><p><span style="font-size:larger;">重逢，<br>但只是自说自话</span></p>
+<p>疼痛。<br>十分疼痛。<br>第一次戴上隐形眼镜真的很痛。<br>今天是新生活的开始……试着鼓起干劲，但……<br>“呜……”<br>果然还是很痛。<br>电车开起来之后变得更加疼痛。<br>好不容易被朝冈学园录取了，我却完全笑不出来。<br>已经把隐形眼镜摘下来了，带框眼镜在……<br>“唔！？”<br>对面的空座位有人来了，和对方撞上了膝盖。<br>一时间，我与他四目相对。<br>是差不多年龄的，男孩子……<br>旁边，也是年龄一般大的女孩。<br>大概，是和我一样来看朝冈的录取结果公示的吧。<br>能看出两个人明朗的表情。一定是顺利通过了吧。<br>也就是说，开春之后也可能会成为同班同学……<br>“…………”<br>果然，还是不戴带框眼镜比较好。<br>但是，那样的话，眼睛就会这样疼痛。<br>疼痛，比刚才更加剧烈了。<br>“啊……”<br>眼泪……可能流出来了。<br>不对，不是“可能”，我已经泪如雨下了。</p>
+<details class="relative my-4 border border-border-color bg-second-background-color rounded-md  green" data-header-exclude><summary class="px-4 py-2 rounded-md shadow-[0_0_2px_0_var(--shadow-color-1)] cursor-pointer not-markdown"><i class="fa-solid fa-chevron-right"></i>日文原文，点击展开</summary><div class="content p-4 "><div lang="ja">
+<span style="font-size:larger;">再会、<br>でも一方通行</span>
+
+<p>痛い。<br>とても痛い。<br>はじめて付けたコンタクトがとっても痛い。<br>今日から新しい人生のはじまり……なんて気合いを入れてみたけど……<br>「ぅっ……」<br>痛いものは痛い。<br>電車が走り出してからはさらに痛い。<br>せっかく朝岡学園に合格したのに、笑顔のひとつも作れない。<br>もうコンタクトははずして、メガネに……<br>「っ！？」<br>向かいの空席に人が来て、コツンと膝があたった。<br>瞬間、ちらっと視線が合う。<br>同い年くらいの、男の人……<br>隣は、やっぱり同い年くらいの女の子。<br>たぶん、私と同じく朝岡の合格発表を見に来た人たち。<br>ふたりの表情は明るい感じ。きっと合格したんだろう。<br>ということは、春からクラスメイトになる可能性も……<br>「…………」<br>やっぱり、メガネはやめておいた方がいいかも。<br>でも、そうなると、目は痛いまま。<br>さっきより、痛みが増してきている感じ。<br>「ぁ……」<br>涙……出てきたかも。<br>ううん、『かも』じゃなくて、出てる。</p>
+</div>
+</div></details>
+
+<h2 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h2><h3 id="共通线"><a href="#共通线" class="headerlink" title="共通线"></a>共通线</h3><details class="relative my-4 border border-border-color bg-second-background-color rounded-md  yellow" data-header-exclude><summary class="px-4 py-2 rounded-md shadow-[0_0_2px_0_var(--shadow-color-1)] cursor-pointer not-markdown"><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开</summary><div class="content p-4 "><p><strong>升学考试结果公示</strong></p>
+<p>陆斗与青梅竹马奉莉一同在朝冈学园确认考试通过顺利升学后乘电车返程。</p>
+<p>电车座位采用的是四人两两对坐的形式，空间略显狭小。陆斗和奉莉并排坐下，二人聊天时陆斗膝盖不小心碰到了对坐的女生，此时二人注意到女生在轻声哭泣，陆斗以为是自己碰到了她把她弄哭了，又推测应该是因为她也报考了朝冈但是不幸落榜了。陆斗尝试搭话安慰，被奉莉偷偷劝阻。女生注意到陆斗，不由得发出吃惊的声音，随即向陆斗道歉。陆斗迟疑之时电车到站，将随身的手帕递给了女生后急忙下车。</p>
+<p>电车即将到达终点站。女生独自懊恼着自己依旧毫无改变，什么也没能说出口，同时注意到手帕上绣着“三谷”字样，确定了给她手帕的人是以前就认识的三谷同学，对方却没能认出她来。女生认为忘记了也好，但心里也感到痛苦。</p>
+<p><strong>新生入学准备说明会</strong></p>
+<p>新生入学准备说明会分为新生入学仪式和新生分组参观环节。入学仪式结束后，陆斗再次遇见了在电车上碰到的女生，并了解了女生在电车上哭泣的原因。参观时女生说自己名叫拜田希实花，陆斗感觉到她在偷偷打量着自己。</p>
+<p>回家途中，希实花又想到陆斗不记得自己，这正是自己所期望的，自己正是出于这个目的才选择了不会有人认识自己的朝冈。但是自己又似乎因为陆斗没能认出自己而寂寞，不知道如何是好。</p>
+<p><strong>开学典礼</strong></p>
+<p>开学典礼上，主持人请新生代表致辞时，希实花不自然地走上台开始致辞。但因为过于紧张，致辞在途中卡住了，陆斗朝希实花挥了挥手，希实花勉强完成了致辞。</p>
+<p>开学典礼结束后，班主任夏奏老师指名希实花担任班长一职。希实花虽然惊讶，但没有拒绝。夏奏老师继续进行副班长的竞选，陆斗举手提出要成为副班长。之后奉莉、步梦和章介主动担任活动实行委员，以辅助两位班长筹划包括樱花祭在内的各种校园活动。之后当天没有到场的茂森同学也暂被举荐为活动实行委员。</p>
+<p>回家途中，众人安慰鼓励了希实花，希实花认为自己给大家添了麻烦，陆斗则解释道大家都是自愿成为班委的，劝她不要在意。到了陆斗等人需要换乘的车站，希实花表示自己想换条路线回家，也同众人一起换乘。陆斗直言能增加在一起的时间很高兴，希实花听完脸红起来。</p>
+<p><strong>正式开学后</strong></p>
+<p>第二天放学后，众人前往陆斗的父亲直真的甜品店举办茶会。到了甜品店门前，章介好奇店名“een×vijf”怎么读，希实花在谈论中说出店名是荷兰语数字1和5的意思，陆斗等人称赞希实花，希实花却流下眼泪，然后连忙顺着陆斗的话解释是隐形眼镜的原因。餐品上好后，众人谈到彼此称呼的问题。聊到希实花时，希实花稍显强硬地希望大家称呼她为“拜田同学”。归家途中，希实花独自回想起今天发生的事情，为能够到een×vijf聚会而高兴，但想到陆斗不记得以前的事情，眼泪又不禁流了出来。</p>
+<p>到了一天中的最后一节课班会，夏奏老师与班上的同学们商议这周末要进行的合宿集训的相关事项。之后谈到下周末要进行的慈善义卖节，夏奏老师请希实花和陆斗两位班长上台主持，让大家讨论打算经营什么模拟店。希实花一开场就因为紧张咬到了舌头，陆斗便提出代替她主持，希实花则负责记录工作。放学后，班委们和夏奏老师留在班里继续开会。陆斗表示继续让自己主持，其他人则希望希实花在这种场合适应主持工作，希实花便开始主持。最后众人决定以女仆为主题经营模拟店。</p>
+</div></details>
+
+<h3 id="个人线"><a href="#个人线" class="headerlink" title="个人线"></a>个人线</h3><details class="relative my-4 border border-border-color bg-second-background-color rounded-md  yellow" data-header-exclude><summary class="px-4 py-2 rounded-md shadow-[0_0_2px_0_var(--shadow-color-1)] cursor-pointer not-markdown"><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开</summary><div class="content p-4 "><p><strong>球技大会</strong></p>
+<p>合宿第一天是樱花祭的球技大会，大家前往各自的会场参加比赛。在与真央配合拿下沙滩排球半决赛后，休息时陆斗前往希实花和步梦所在的乒乓球比赛。发现陆斗前来观看比赛后，希实花乱了阵脚，输掉了比赛。之后三人一同回到沙滩排球赛场，在陆斗与真央获得沙滩排球冠军后，希实花与陆斗交谈时表现出对真央的钦佩和憧憬。</p>
+<p>一天的比赛结束后，大家回到教室等待班级排名结果。章介分析后认为会与第三名有微弱差距，居于第四。希实花自责地表示如果自己拿下了比赛，排名就会升到第三名了，众人给以安慰。夏奏老师前来宣布班级位居第四，希实花感到很失落。傍晚，大家在天台吃自助餐，希实花独自一人默默坐在一旁，陆斗上前关心，同时下定决心要在明天的洗场任务中努力。</p>
+<p>晚上，陆斗从男生宿舍的枕头大战中离开，在走廊上散步，遇见了因为其他女生在聊恋爱话题而逃出来的希实花。因为没有戴隐形眼镜，希实花有些踉跄。考虑到一时半会回不了宿舍，二人登上天台。陆斗感叹夜景美丽的同时感觉有些冷，希实花将身上的毛毯递给陆斗，自己却打起喷嚏，二人决定共用毛毯。陆斗聊到天上的星星，希实花便滔滔不绝地说了很多星星相关的知识，陆斗大吃一惊。希实花解释自己是通过看书学到的这些知识，自己很喜欢看书，之后向陆斗推荐了矶野绫子写的畅销小说《天使之泪》，并提出将书借给陆斗看，陆斗因为与希实花立下约定而暗自开心。回到房间后，希实花想着刚才的事情，心里既害羞又高兴。</p>
+<p><strong>洗场任务</strong></p>
+<p>第二天，洗场任务顺利进行一段时间后，众人在一项任务上就人员安排方案产生分歧，做出决定的压力来到希实花身上。但最终希实花没能给出判断，章介表达歉意后以负责人身份结束了决议。傍晚所有任务结束后，希实花因自责而处在消沉之中。夏奏老师进班宣布排名，同学们大多接受了结果，但希实花仍难以释怀。</p>
+<p>晚上，同学们在沙滩上烧烤。夏奏老师赶来通知需要两位同学守着一旁的篝火，陆斗便邀请希实花一起。其间，希实花向陆斗坦言自己曾下定决心要做出改变，但只是改变了外表，自己还是同以前一样笨拙，给周围的人带来麻烦。陆斗说正因为大家是朋友，所以不会过于在意这些，也希望希实花不要一直把这些事挂在心上，继续试着改变就好。希实花哭了一场后冷静下来，说自己虽然决定做出改变却还没有明确的目标，陆斗提议希实花作为班长，可以为带领班级获得樱花祭综合冠军努力。之后，希实花将班委们召集到班里，做出拿下综合冠军的宣言，众人也切实感受到了希实花的决心。</p>
+<p>合宿结束后，班委们一同前往陆斗的父亲直真的甜品店。希实花想自己来同陆斗的父亲商量模拟店事宜，经过简单介绍后，希实花提出在慈善义卖节再现直真店里甜品的味道。直真思索后提议制作泡芙，希实花似乎有些慌乱，看到陆斗反应平淡后又有些失望。商讨过后确定增加的甜品为草莓奶油泡芙，希实花表示想自己一个人也能制作出来，众人决定第二天到陆斗家中练习。回家途中，希实花回忆起小时候陆斗安慰她的场景和当时吃的泡芙，明白了自己还是希望陆斗回想起过去的经历。</p>
+<p><strong>慈善义卖节前的准备与当天</strong></p>
+<p>周二是合宿集训调休，下午众人在陆斗家集合。希实花开始练习制作泡芙，众人品尝后赞不绝口，希实花有些感动。傍晚众人同陆斗分别，希实花趁机将之前提到的小说《天使之泪》借给了陆斗。之后两天希实花在陆斗家练习制作果酱。</p>
+<p>慈善义卖节前一天，陆斗回到家后听闻由于房地产商的问题，搬家不能如期进行。来到甜品店后，陆斗还在烦恼着刚才的事情，希实花到达后二人如期开始制作泡芙。但因为陆斗和面时的失误，烤出的酥皮没能鼓起来。希实花先前就察觉到陆斗的异样，便希望陆斗能将发生的事情说给她听。陆斗倾诉后二人回到制作中，希实花提议减少一次制作的数量以避免进一步损失，只是会花些时间。二人最后决定在甜品店留宿，专心制作泡芙。</p>
+<p>深夜，希实花的眼睛因为戴久了隐形眼镜有些不舒服，陆斗建议换成带框眼镜。希实花犹豫后戴上了带框眼镜，陆斗看着希实花，终于想起小学三年级时与希实花是同班同学，希实花也因此高兴得流下眼泪。</p>
+<p>慈善义卖节当天早上，希实花因为制作的泡芙得到了同学们的称赞而十分开心。之后希实花提出成为服务员接客，一开始还有些紧张和拘谨，之后便习惯起来。慈善义卖节结束后，夏奏老师宣布班级排名上升到第二，希实花由衷感到高兴。回家路上，众人打算明天一起出去玩，希实花提议去看电影《天使之泪》，是由小说改编的。</p>
+<p><strong>话剧编剧风波</strong></p>
+<p>第二天，众人在车站汇合后前往电影院。途中，陆斗因为自己还没来得及看原著而抱歉，希实花表示并不在意，反而认为如果没看过原著先来观看电影，或许会有不同的感受。之后二人聊到原著与改编电影的话题，陆斗发现希实花一旦涉及到感兴趣的话题，也会变得很健谈，心里有些喜悦。预订的座位并不全连在一起，陆斗与希实花恰巧拿到了相邻座位的电影票。</p>
+<p>看完电影后，众人前往陆斗家的甜品店。谈到之后的表演派对，希实花希望班级能以《天使之泪》为原型表演话剧。晚上，陆斗阅读借来的小说，希实花重读一遍小说后与陆斗通过手机邮件聊天。</p>
+<p>早上陆斗想同希实花交流读书心得，希实花想先关注表演派对的安排于是谢绝了，但同时表示这本书是自己在身陷挫折时发现的宝贵希望，陆斗不是很理解她的意思。到了班会课，希实花将计划告诉同学们，大家欣然接受，并打算让希实花同时担任编剧和导演，希实花听到后既惊讶又感动。班委们商量服装相关事宜时，同班的麻耶等三位女生提出来帮忙编剧。</p>
+<p>但效果并不理想，三位女生完全没能帮上希实花的忙，还耽误了不少时间。希实花也深知这样下去不行，但似乎有些被孤立了，剧本基本上是由那三位女生自行编写的。经过众人的考虑和开导后，希实花鼓起勇气前去拒绝了三位女生的继续编写，班会时众人也向班上的同学们表达了歉意。</p>
+<p>剧本顺利完成，也获得了同学们的认可，希实花安排了陆斗和奉莉分别扮演男女主人公。周六正式排练时，众人注意到剧本中的女主人公与希实花十分相像，陆斗也才体会到希实花对这本小说所怀有的深刻情感。周日排练中途休息时，希实花端出做好的泡芙犒劳大家，奉莉则感觉希实花有些逞强，催促陆斗带希实花去天台休息。二人在天台回想甜品店成立时的事情，陆斗为希实花还牢记着这些而感谢。</p>
+<p><strong>希实花与过去</strong></p>
+<p>之后排练休息时，希实花的眼睛又因为隐形眼镜而疼痛，班上其他同学这才知道希实花原来戴着隐形眼镜。陆斗让她暂时取下隐形眼镜，但希实花不小心踩碎了一片。在内心挣扎一番后，希实花戴上了带框眼镜与大伙汇合。之前的三位女生看到希实花这个样子，无心喊出了“土气花”的称呼，不料希实花突然呼吸急促晕了过去。在经过校医检查和简单处理后，希实花恢复了意识。陆斗也完全记起了小学时，希实花就被别人起了这个外号来捉弄她，这也导致她变得自卑，同时不愿别人用名字称呼她。</p>
+<p>第二天，希实花因为去医院检查而延迟到校，众人前来关心。三位女生意识到自己做了错事，主动向希实花道歉。之后的排练中，希实花依然不在状态，陆斗见状要求暂停排练，同希实花两个人来到天台谈心。陆斗希望希实花不要再继续逃避过去，而应该勇敢地面对。在经过同意后，陆斗试着称呼她为希实花同学。希实花感到有些害羞，又进一步让陆斗直接喊她的名字，心中的畏惧也已烟消云散。回到班上，希实花希望班委们直接以名字称呼她，众人继续排练。休息时间，希实花稍感不安，陆斗上前握住她的手，为她加油鼓劲，希实花感觉自己已经喜欢上陆斗了。</p>
+<p><strong>表演派对前的约会和当天</strong></p>
+<p>离表演派对还有两天，虽然排练效果在不断变好，但希实花因为自己是倡议者和主要负责人，所以比起期待，更多的是紧张和不安。希实花被其他人叫走时，其他班委聚在一起检查剧本。其间大家都看出来希实花现在压力很大，奉莉指出陆斗和希实花约会时最好的解决办法，其他人表示赞成。此时希实花回到教室，陆斗被推到希实花面前。陆斗整理好语言后邀请希实花一起去商场。</p>
+<p>在经过聊天、占卜和卡拉OK之后，希实花的心情逐渐平复，二人的关系也逐渐升温。来到车站，希实花直言想用名字称呼陆斗，陆斗同意后二人又聊到看完小说的感想。在说出那本小说对自己的特殊意义后，希实花想顺势向陆斗告白，但陆斗心中认为自己还需要确认自己的心意，岔开了话题。</p>
+<p>表演派对当天，奉莉因受伤无法正常出演，同学们感到十分焦急。此时希实花鼓起勇气，提出代替奉莉扮演女主人公。演出时，虽然开头和临近结尾时发生了一些状况，但依靠陆斗和希实花以及众人的配合，危机成功化解，演出也获得了观众们的热烈掌声。班级得到了第一名的成绩，成功实现逆袭。</p>
+<p>结束后众人回到班上。陆斗来到希实花面前，给予真心的祝贺，希实花却脸红着跑出了教室。在其他班委的催促和指引下，陆斗朝天台跑去。登上天台后，陆斗看见了希实花的背影。二人互相表明自己的心意后双唇相接。</p>
+</div></details>
+
+<h2 id="攻略路线"><a href="#攻略路线" class="headerlink" title="攻略路线"></a>攻略路线</h2><p>注：表中个人线之前与希实花相关（带有※）的选项建议选择，其他选项可根据个人喜好选择。</p>
+<details class="relative my-4 border border-border-color bg-second-background-color rounded-md  green" data-header-exclude><summary class="px-4 py-2 rounded-md shadow-[0_0_2px_0_var(--shadow-color-1)] cursor-pointer not-markdown"><i class="fa-solid fa-chevron-right"></i>攻略路线，点击展开</summary><div class="content p-4 "><p><span lang="ja">あの子が逃げるなんてありえない</span> &#x2F; 那个女生不可能躲着我<br>※<span lang="ja">なんとか助けてあげたくなった</span> &#x2F; ※想设法去帮她一下<br>※<span lang="ja">すぐさま副委員長に立候補する</span> &#x2F; ※立刻竞选副班长<br><span lang="ja">ドキっとしてしまう</span> &#x2F; 不由得心动了<br><span lang="ja">すごく嬉しくなった</span> &#x2F; 感到十分高兴<br><span lang="ja">とても、イヤな気分になった</span> &#x2F; 有一种，很不舒服的气氛<br><span lang="ja">代わりを申し出る</span> &#x2F; 代替那个人去组队<br><span lang="ja">本当にかわいい</span> &#x2F; 真的很可爱<br>※<span lang="ja">議長を代わる</span> &#x2F; ※代替她主持</p>
+<p><strong>拜田希实花线</strong></p>
+<p><span lang="ja">拝田さんだった</span> &#x2F; 拜田同学<br><span lang="ja">若干引いてしまった</span> &#x2F; 稍微有些不适<br><span lang="ja">やめておく</span> &#x2F; 还是算了<br><span lang="ja">拝田さんだった</span> &#x2F; 拜田同学</p>
+<p><strong>希实花 END</strong></p>
+</div></details>
+
+<h2 id="相关歌曲"><a href="#相关歌曲" class="headerlink" title="相关歌曲"></a>相关歌曲</h2><p><span style="color:orchid;">片尾曲</span></p>
+<ul>
+<li><a href="/TranslationPlot/posts/2023-01-09-kimi_to_zutto/"><span lang="ja">君とずっと</span></a>（永远与你在一起）<ul>
+<li>演唱：拜田希实花（CV：日笠阳子）</li>
+<li>作词：lotta，作曲：rino，编曲：户田章世</li>
+</ul>
+</li>
+</ul>
+<p><span style="color:olivedrab;">角色歌</span></p>
+<ul>
+<li><a href="/TranslationPlot/posts/2022-11-24-my_mind/">my mind</a><ul>
+<li>演唱：拜田希实花（CV：日笠阳子）</li>
+<li>作词：lotta，作曲、编曲：户田章世</li>
+</ul>
+</li>
+<li><a href="/TranslationPlot/posts/2024-10-28-sakurairo_no_wadachi"><span lang="ja">桜色の轍</span></a>（樱色车辙）<ul>
+<li>演唱：茂田真央（CV：茅野爱衣）、拜田希实花（CV：日笠阳子）</li>
+<li>作词：RUCCA，作曲、编曲：菊田大介（Elements Garden）</li>
+</ul>
+</li>
+</ul>
+<h2 id="外部链接"><a href="#外部链接" class="headerlink" title="外部链接"></a>外部链接</h2><ul>
+<li><a class="link"   href="https://web.archive.org/web/20180312115330/https://fairys.tv/" >fairys官方网站<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>（<a class="link"   href="https://fairys.tv/" >原始网页<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>）</li>
+<li><a class="link"   href="https://imaimo.com/" >《现在就想告诉哥哥，我是妹妹！》特设网站<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>角色介绍</category>
+      </categories>
+      <tags>
+        <tag>现在就想告诉哥哥，我是妹妹！登场角色</tag>
       </tags>
   </entry>
   <entry>
     <title>奈奈濑奉莉</title>
     <url>/2024/01/22/nanase_matsuri/</url>
     <content><![CDATA[<p><strong>奈奈濑奉莉</strong> 是fairys发行游戏 <strong>《现在就想告诉哥哥，我是妹妹！》</strong> 及其衍生作品的登场角色，女主角之一。</p>
-
-  <div class="note-large blue">
-    <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
-      <p>基本资料</p>
-
-    </div>
-    <div class="notel-content markdown-body">
-      <p>身高：158cm<br>体重：46kg<br>三围：B:83 W:58 H:84<br>年龄：15岁</p>
-
-    </div>
-  </div>
+<div class="callout callout--titled blue mb-4 rounded-small shadow-redefine-flat bg-(--callout-bg-color) p-3 pl-1 relative flex flex-row gap-2"><div role="none" class="rounded-full self-stretch w-0.5 bg-(--callout-primary-color) shrink-0 opacity-60"></div><div class="flex flex-col gap-2"><div class="callout__title flex items-center gap-2 font-semibold tracking-tight">基本资料</div><div class="callout__content markdown-body flex-1 min-w-0"><p>身高：158cm<br>体重：46kg<br>三围：B:83 W:58 H:84<br>年龄：15岁</p></div></div></div>
 
 <p><figure class="image-caption"><img  
                      lazyload
@@ -572,36 +799,23 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
 <p><span style="font-size:small;color:gray;">▲ 游戏CG。原作者保留权利，仅以介绍为目的引用。</span></p>
 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><span style="font-size:larger;">特别喜欢节日，<br>推心置腹的异性『盟友』</span></p>
 <p>奉莉是朝冈学园的一年级新生。她在下町的稻濑出生长大，学习、运动和仪表面面俱到，是一名开朗活泼的女孩子。虽然被很多男生告白过，但都没有同意交往。关系最好的异性是从初中一年级开始就在同一个班的陆斗，但是不知为何，似乎并没有发展成朋友以上关系的迹象。如同名字的字面所表示的，奉莉喜欢节日，总之最喜欢大家一起开心地热闹的场面。同父母和弟弟组成4人家庭，家里经营着名为『七势寿司』的寿司店，不过家庭关系好像不太好。奉莉是除三谷家之外唯一知道步梦在陆斗面前假扮“男生”的人。尽管公开表示过自己讨厌小孩，又似乎另有隐情。</p>
-<details class="green" data-header-exclude>
-    <summary><i class="fa-solid fa-chevron-right"></i>日文原文，点击展开 </summary>
-    <div class='content markdown-body'>
-      <div lang="ja">
+<details class="relative my-4 border border-border-color bg-second-background-color rounded-md  green" data-header-exclude><summary class="px-4 py-2 rounded-md shadow-[0_0_2px_0_var(--shadow-color-1)] cursor-pointer not-markdown"><i class="fa-solid fa-chevron-right"></i>日文原文，点击展开</summary><div class="content p-4 "><div lang="ja">
 <span style="font-size:larger;">お祭り大好き、<br>気の置けない異性の『盟友』</span>
 
 <p>朝岡学園の新一年生です。下町のいなせで生まれ育ち、勉強、スポーツ、ルックスと三拍子揃った、明るくて元気な女の子です。数多くの男子から告白されてきましたが、誰にもＯＫを出したことはありません。一番仲のいい異性は中学１年生からずっと同じクラスだった陸斗ですが、なぜか友人以上の関係に発展する気配はないようです。名が体を表していて、お祭り、とにかくみんなで楽しく盛りあがるのが大好きです。両親と弟の４人家族で、実家は『七勢寿司』という寿司屋ですが、家族関係があまりうまくいっていないようです。歩夢が陸斗の前で”男の子”のフリをしていることを、三谷家以外の人間で唯一知っています。子供嫌いを公言していますが、どうやら何か事情があるようです。</p>
 </div>
-
-    </div>
-  </details>
+</div></details>
 
 <h2 id="短篇故事：奉莉的心绪"><a href="#短篇故事：奉莉的心绪" class="headerlink" title="短篇故事：奉莉的心绪"></a>短篇故事：奉莉的心绪</h2><p><span style="font-size:larger;">迄今为止的3年<br>从今往后的3年——</span></p>
 <p>“……有了”<br>在合格结果的公告栏上，找到了自己的考试号码。<br>太开心了……不过，自己还不至于欣喜得忘乎所以。<br>为什么呢？　是自己估分时就已经确信不会落榜的缘故吗？<br>……不对，不是那回事。<br>只不过，独自一人还是缺少点活跃的气氛。<br>没错，活跃起来的话，不会只有一人而是两人一起！<br>“陆斗！　你这边怎么样！？”<br>拍了拍一起来看合格结果的，陆斗的肩膀……本来是打算这样……<br>“咦？”<br>……是不认识的人。而且，还在哭着。<br>落榜了啊……素未谋面的人哟。<br>“呜……呜……”<br>“……没事没事，不要哭啦。在这流眼泪什么也改变不了不是吗！”<br>“可是……可是……”<br>“转换一下心情！　后面还要去考其他学校对吧？”<br>“……是，的……还有，其他学校……”<br>“是这样的话，朝前看下次继续努力！　我也会为你加油的”<br>“诶？”<br>“……加油！！　之后一定要顺利考上哦！！”<br>“……好，好的……我会努力的……”<br>“嗯，那再见喽”</p>
-<details class="green" data-header-exclude>
-    <summary><i class="fa-solid fa-chevron-right"></i>日文原文，点击展开 </summary>
-    <div class='content markdown-body'>
-      <div lang="ja">
+<details class="relative my-4 border border-border-color bg-second-background-color rounded-md  green" data-header-exclude><summary class="px-4 py-2 rounded-md shadow-[0_0_2px_0_var(--shadow-color-1)] cursor-pointer not-markdown"><i class="fa-solid fa-chevron-right"></i>日文原文，点击展开</summary><div class="content p-4 "><div lang="ja">
 <span style="font-size:larger;">あれから３年<br>これから３年——</span>
 
 <p>「……あった」<br>自分の受験番号を、合格発表の掲示板の中から見つけた。<br>うれしい……けど、我を忘れてキャーキャーやるほどでもない。<br>なんでだろ？　自己採点で落ちようがないっていう結論に達していたから？<br>……ううん、そうじゃない。<br>単純に、ひとりじゃ盛り上がりに欠けるから。<br>そうっ、盛り上がるなら、ひとりよりふたりに決まってるっ！<br>「陸斗っ！　あんたはどうっ！？」<br>一緒に合格発表を見にきた、陸斗の肩を叩いた……つもりだったんだけど……<br>「あれっ？」<br>……知らない顔。しかも、泣いてる。<br>落ちたのか……見知らぬ人よ。<br>「うっ……うぅ……」<br>「……ほらほら、メソメソしない。泣いてなにかが変わるわけじゃないでしょ！」<br>「でもっ……でも……」<br>「気持ち切り替えて！　まだ受験する学校あるんでしょ？」<br>「……は、い……あり、ます……」<br>「だったらほら、前向いて次ガンバレ！　あたしも応援してあげっからさ」<br>「えっ？」<br>「……ガンバレ！！　次は絶対うまくいくよ！！」<br>「……は、はい……頑張ります……」<br>「うん、それじゃね」</p>
 </div>
+</div></details>
 
-    </div>
-  </details>
-
-<h2 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h2><h3 id="共通线"><a href="#共通线" class="headerlink" title="共通线"></a>共通线</h3><details class="yellow" data-header-exclude>
-    <summary><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开 </summary>
-    <div class='content markdown-body'>
-      <p><strong>升学考试结果公示</strong></p>
+<h2 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h2><h3 id="共通线"><a href="#共通线" class="headerlink" title="共通线"></a>共通线</h3><details class="relative my-4 border border-border-color bg-second-background-color rounded-md  yellow" data-header-exclude><summary class="px-4 py-2 rounded-md shadow-[0_0_2px_0_var(--shadow-color-1)] cursor-pointer not-markdown"><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开</summary><div class="content p-4 "><p><strong>升学考试结果公示</strong></p>
 <p>奉莉同陆斗一起在朝冈学园确认升学考试合格结果。知道对方都顺利通过后，陆斗提起刚刚帮他捡到考试号码的女生，似乎有些在意，奉莉便借此打趣，二人谈笑间来到车站。</p>
 <p>在检票口，二人注意到人群中间，一名手持木刀的女生被三个找茬男人围住。站务员赶来后发现找茬的人逃走，便喊住那名女生打算讯问。陆斗和奉莉见状前去解围，也因此与那名女生相识。</p>
 <p>二人匆匆赶上电车。陆斗找座位坐下时，膝盖碰到了相对而坐的女生。二人注意到女生在哭，陆斗尝试搭话安慰，奉莉借商量手机邮件的回复内容拦住了陆斗。</p>
@@ -620,14 +834,9 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
 <p><strong>正式开学后</strong></p>
 <p>正式开学的第三天早晨，陆斗、步梦和奉莉一同上学。路上，一个小男孩不小心撞上了陆斗快要哭出来，步梦和陆斗连忙安慰。事件解决后，步梦同在一旁等待的奉莉谈到小孩子，奉莉表示自己不喜欢小孩，陆斗暗自思索原因但还是没有头绪。</p>
 <p>体育课前，陆斗突然想到步梦的情况，前去同步梦商量。和步梦同行的奉莉则表示自己会帮步梦搞定。放学后，班委们讨论到樱花祭中的慈善义卖节要做哪些菜品，奉莉提醒应该先确定店铺的主题，再决定相关的菜品，最后众人决定以女仆为主题经营模拟店。</p>
+</div></details>
 
-    </div>
-  </details>
-
-<h3 id="个人线"><a href="#个人线" class="headerlink" title="个人线"></a>个人线</h3><details class="yellow" data-header-exclude>
-    <summary><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开 </summary>
-    <div class='content markdown-body'>
-      <p><strong>球技大会</strong></p>
+<h3 id="个人线"><a href="#个人线" class="headerlink" title="个人线"></a>个人线</h3><details class="relative my-4 border border-border-color bg-second-background-color rounded-md  yellow" data-header-exclude><summary class="px-4 py-2 rounded-md shadow-[0_0_2px_0_var(--shadow-color-1)] cursor-pointer not-markdown"><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开</summary><div class="content p-4 "><p><strong>球技大会</strong></p>
 <p>合宿第一天是樱花祭的球技大会，大家前往各自的会场参加比赛。在与真央配合拿下沙滩排球半决赛后，休息时陆斗前往体育馆观看了奉莉参加的女子篮球比赛，最终沙滩排球和篮球都获得了冠军。</p>
 <p>一天的比赛结束后，班级最终排名第三。傍晚，大家在天台吃自助餐，奉莉和陆斗一同去取寿司，排队时奉莉因为班级没能获得第一而感到有些遗憾，陆斗则为明天的洗场任务打气。晚餐结束后，陆斗单独同奉莉商量步梦洗浴的事情，奉莉让陆斗放心。晚上，陆斗仍然惦记着这件事，久久不能入睡。</p>
 <p><strong>洗场任务与合宿结束后</strong></p>
@@ -650,21 +859,14 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
 <p><strong>表演派对前的约会和当天</strong></p>
 <p>表演派对前一天，班上的同学们都知道了陆斗和奉莉开始交往的事情。傍晚训练时，陆斗向教练提出自己也想挑战高难度动作，教练便安排陆斗和奉莉一起试试双人动作，二人于是一起练习。训练结束后，众人鼓励两人前去约会，陆斗便邀请奉莉去洗场游玩。在吃过鲷鱼烧和打完保龄球之后，二人的初次约会以摩天轮上的接吻结束。</p>
 <p>表演派对当天，奉莉身体稍有不适。在上台表演时，虽然有一些小状况，但陆斗和奉莉凭借二人默契的配合顺利完成了演出。在坚持听到班级获得冠军的消息后，奉莉被送往了保健室。颁奖仪式结束后，陆斗匆匆赶往保健室，得知奉莉重新出现了生理期后二人拥抱在一起。</p>
-
-    </div>
-  </details>
+</div></details>
 
 <h2 id="攻略路线"><a href="#攻略路线" class="headerlink" title="攻略路线"></a>攻略路线</h2><p>注：表中个人线之前选项可根据个人喜好选择。若均选择表中给出选项之外的另一选项，会在众人沙滩戏水情节处自动进入奉莉线。</p>
-<details class="green" data-header-exclude>
-    <summary><i class="fa-solid fa-chevron-right"></i>攻略路线，点击展开 </summary>
-    <div class='content markdown-body'>
-      <p><span lang="ja">あの子が逃げるなんてありえない</span> &#x2F; 那个女生不可能躲着我<br><span lang="ja">なんとか助けてあげたくなった</span> &#x2F; 想设法去帮她一下<br><span lang="ja">すぐさま副委員長に立候補する</span> &#x2F; 立刻竞选副班长<br><span lang="ja">ドキっとしてしまう</span> &#x2F; 不由得心动了<br><span lang="ja">すごく嬉しくなった</span> &#x2F; 感到十分高兴<br><span lang="ja">とても、イヤな気分になった</span> &#x2F; 有一种，很不舒服的气氛<br><span lang="ja">代わりを申し出る</span> &#x2F; 代替那个人去组队<br><span lang="ja">本当にかわいい</span> &#x2F; 真的很可爱<br><span lang="ja">議長を代わる</span> &#x2F; 代替她主持</p>
+<details class="relative my-4 border border-border-color bg-second-background-color rounded-md  green" data-header-exclude><summary class="px-4 py-2 rounded-md shadow-[0_0_2px_0_var(--shadow-color-1)] cursor-pointer not-markdown"><i class="fa-solid fa-chevron-right"></i>攻略路线，点击展开</summary><div class="content p-4 "><p><span lang="ja">あの子が逃げるなんてありえない</span> &#x2F; 那个女生不可能躲着我<br><span lang="ja">なんとか助けてあげたくなった</span> &#x2F; 想设法去帮她一下<br><span lang="ja">すぐさま副委員長に立候補する</span> &#x2F; 立刻竞选副班长<br><span lang="ja">ドキっとしてしまう</span> &#x2F; 不由得心动了<br><span lang="ja">すごく嬉しくなった</span> &#x2F; 感到十分高兴<br><span lang="ja">とても、イヤな気分になった</span> &#x2F; 有一种，很不舒服的气氛<br><span lang="ja">代わりを申し出る</span> &#x2F; 代替那个人去组队<br><span lang="ja">本当にかわいい</span> &#x2F; 真的很可爱<br><span lang="ja">議長を代わる</span> &#x2F; 代替她主持</p>
 <p><strong>奈奈濑奉莉线</strong></p>
 <p><span lang="ja">拝田さんだった</span> &#x2F; 拜田同学<br><span lang="ja">若干引いてしまった</span> &#x2F; 稍微有些不适<br><span lang="ja">やめておく</span> &#x2F; 还是算了<br><span lang="ja">拝田さんだった</span> &#x2F; 拜田同学</p>
 <p><strong>奉莉 END</strong></p>
-
-    </div>
-  </details>
+</div></details>
 
 <h2 id="相关歌曲"><a href="#相关歌曲" class="headerlink" title="相关歌曲"></a>相关歌曲</h2><p><span style="color:orchid;">片尾曲</span></p>
 <ul>
@@ -700,20 +902,45 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </tags>
   </entry>
   <entry>
+    <title>QQNT自定义字体记录</title>
+    <url>/2024/04/09/qqnt-custom-fonts/</url>
+    <content><![CDATA[<p>想了想还是记录一下自己QQNT电脑版设置的自定义字体。</p>
+<p>需要使用到的加载器以及插件：</p>
+<ul>
+<li><a class="link"   href="https://liteloaderqqnt.github.io/" >LiteLoaderQQNT<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li><a class="link"   href="https://github.com/xiyuesaves/LiteLoaderQQNT-lite_tools" >轻量工具箱<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+<p><del>某一天无意间发现自定义字体可以不从下拉列表选择字体，而是自己敲字体家族。</del></p>
+<p>目前使用的自定义字体声明：<code>IBM Plex Sans, Nu Wakkaoi M1, MiSans VF, MiSans L3, LINE Seed Sans KR, Plangothic P1, Plangothic P2, Sukima Gothic, Jigmo, Jigmo2, Jigmo3</code></p>
+<p>顺便附上各字体相关网址：</p>
+<ul>
+<li><a class="link"   href="https://www.ibm.com/plex/" >IBM Plex<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>（<code>IBM Plex Sans</code>）</li>
+<li><span lang="ja"><a class="link"   href="https://kokagem.sakura.ne.jp/font/wakkaoi/" >Nu ワッカオイ<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></span>（<code>Nu Wakkaoi M1</code>）</li>
+<li><a class="link"   href="https://hyperos.mi.com/font/zh/" >MiSans<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>（<code>MiSans VF, MiSans L3</code>）</li>
+<li><a class="link"   href="https://seed.line.me/" >LINE Seed<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>（<code>LINE Seed Sans KR</code>）</li>
+<li><a class="link"   href="https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic-Project" >遍黑体项目<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>（<code>Plangothic P1, Plangothic P2</code>）</li>
+<li><span lang="ja"><a class="link"   href="https://booth.pm/ja/items/2117070" >すきまゴシック<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></span>（<code>Sukima Gothic</code>）</li>
+<li><span lang="ja"><a class="link"   href="https://kamichikoichi.github.io/jigmo/" >Jigmo（字雲）<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></span>（<code>Jigmo, Jigmo2, Jigmo3</code>）</li>
+</ul>
+<hr>
+<p>5.7补充：若希望保留QQNT默认情况下的emoji样式（苹果的Apple Color Emoji），在上面的声明最前面加上<code>Color Emoji,</code>即可。</p>
+<hr>
+<p>7.7补充：2.30.10版本的轻量工具箱已对emoji进行处理，将“覆盖默认emoji字体”选项置于关闭即可。</p>
+]]></content>
+      <categories>
+        <category>随记</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+        <tag>QQNT</tag>
+        <tag>字体</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>奥莉艾塔·库洛诺·伊斯塔丽嘉·吉娜斯缇尔</title>
     <url>/2024/05/27/orietta_chrono_istarica_ginasteele/</url>
     <content><![CDATA[<p><strong>奥莉艾塔·库洛诺·伊斯塔丽嘉·吉娜斯缇尔</strong> 是Lump of Sugar制作发行游戏 <strong>《魔卡魅恋！》</strong> 的登场角色，女主角之一。</p>
-
-  <div class="note-large blue">
-    <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
-      <p>基本资料</p>
-
-    </div>
-    <div class="notel-content markdown-body">
-      <p>身高：149cm<br>体重：39kg<br>三围：B:71 W:53 H:72<br>生日：12月13日</p>
-
-    </div>
-  </div>
+<div class="callout callout--titled blue mb-4 rounded-small shadow-redefine-flat bg-(--callout-bg-color) p-3 pl-1 relative flex flex-row gap-2"><div role="none" class="rounded-full self-stretch w-0.5 bg-(--callout-primary-color) shrink-0 opacity-60"></div><div class="flex flex-col gap-2"><div class="callout__title flex items-center gap-2 font-semibold tracking-tight">基本资料</div><div class="callout__content markdown-body flex-1 min-w-0"><p>身高：149cm<br>体重：39kg<br>三围：B:71 W:53 H:72<br>生日：12月13日</p></div></div></div>
 
 <p><figure class="image-caption"><img  
                      lazyload
@@ -731,10 +958,7 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
 <li>喜欢的食物：豆奶、油炸食品、鸡胸肉<span style="font-size:smaller;">（与其说是喜欢吃，不如说是主动摄取的机会较多）</span></li>
 <li>讨厌的食物：卷心菜<span style="font-size:smaller;">（虽然不喜欢吃，但还是会强忍着吃下去）</span>、包子<span style="font-size:smaller;">（仅凭从书上看来的知识就不想吃）</span></li>
 </ul>
-<h2 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h2><h3 id="共通线"><a href="#共通线" class="headerlink" title="共通线"></a>共通线</h3><details class="yellow" data-header-exclude>
-    <summary><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开 </summary>
-    <div class='content markdown-body'>
-      <p><strong>序章</strong></p>
+<h2 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h2><h3 id="共通线"><a href="#共通线" class="headerlink" title="共通线"></a>共通线</h3><details class="relative my-4 border border-border-color bg-second-background-color rounded-md  yellow" data-header-exclude><summary class="px-4 py-2 rounded-md shadow-[0_0_2px_0_var(--shadow-color-1)] cursor-pointer not-markdown"><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开</summary><div class="content p-4 "><p><strong>序章</strong></p>
 <p>律转入维斯利魔法学院之后，奥莉艾塔将包括卡牌在内的各种魔法相关的基础知识教给了律。两人经过一番讨论后得出，律需要实现找到女朋友的愿望来消除身上的魔法，从而重回人间界正常生活。</p>
 <p><strong>开学后</strong></p>
 <p>因为将律尽快送回人间界关系到自己能否度过一个愉快的暑假，奥莉一直催促着律寻找女朋友，自己也在从别处入手调查好办法。这天律来到奥莉的房间商量，二人自然而然谈到恋爱的话题，奥莉表示自己完全不了解什么是恋爱，律便说出了自己的恋爱观念，并进一步解释了自己对于恋爱所秉持的循序渐进主义，奥莉听后若有所思。</p>
@@ -749,23 +973,75 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
 <p>律在正式表白之前想得到室友秋音的帮忙，秋音看出律内心十分焦躁不安，便借机开导律。另一边，奥莉在寝室请求夏珑陪她练习表白，夏珑抓住时机指出如果奥莉成为了律的女友，律就会因为实现愿望而需要离开学院，奥莉自己则无法抛弃学院和国家随律而去；如果表白不成功，二人的关系能否恢复如初也不得而知。奥莉这才意识到问题，陷入了深深的迷茫之中。</p>
 <p>这天，律决定晚上向奥莉表白。放学后看见奥莉无精打采的样子，律邀请奥莉在学校里散步。途中，奥莉的好心情渐渐恢复，但来到起落港后又莫名消沉起来。奥莉打算就此分别，律则坚持想让奥莉再一起转转。夜幕降临，二人来到学院外围，奥莉询问律今天邀请散步的原由，律直言这就是约会，奥莉听后沉默不语。律抓住准备离开的奥莉的手想要挽留，回忆完与奥莉度过的这段时光后，律最终向奥莉说出了喜欢。但奥莉没能接受律的表白，反而自己伤心起来。律则认为自己被奥莉拒绝，痛心地逃回了寝室。</p>
 <p>恍惚间，律坐在白天的教室里，正准备邀请奥莉出去约会。自己向奥莉表白却被回绝的记忆涌现出来，律不由得有些混乱，准备离开教室。奥莉则喊住律并提出一起在校内约会，律没有多想便答应了。仿佛再次走过学院内的各处之后，二人来到学院外围。律仍心存疑惑，尝试着询问奥莉邀请约会的原因，奥莉便向律表明了自己的心意。律虽然对之前所发生的事还有些在意，但面对奥莉真心的表白，表示愿意和奥莉交往，两人就此交换了初吻。之后奥莉发觉当时没能回应律的表白让律受伤，自己强烈的悔恨无意间发动了强力的魔法，才导致这一天重新开始。最终二人决定将这份秘密藏在心里，作为恋人一直陪伴彼此就好。</p>
+</div></details>
 
-    </div>
-  </details>
-
-<h3 id="个人线"><a href="#个人线" class="headerlink" title="个人线"></a>个人线</h3><details class="yellow" data-header-exclude>
-    <summary><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开 </summary>
-    <div class='content markdown-body'>
-      <p>暑假来临，律和奥莉约好来海边玩耍。回到学院后，众人纷纷向二人表达了开始交往的祝福，在律的询问下，奥莉坦言自己毫无保留地向大家公开了恋情。</p>
+<h3 id="个人线"><a href="#个人线" class="headerlink" title="个人线"></a>个人线</h3><details class="relative my-4 border border-border-color bg-second-background-color rounded-md  yellow" data-header-exclude><summary class="px-4 py-2 rounded-md shadow-[0_0_2px_0_var(--shadow-color-1)] cursor-pointer not-markdown"><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开</summary><div class="content p-4 "><p>暑假来临，律和奥莉约好来海边玩耍。回到学院后，众人纷纷向二人表达了开始交往的祝福，在律的询问下，奥莉坦言自己毫无保留地向大家公开了恋情。</p>
 <p>律和奥莉决定在学院举办试胆大会，于是这天安排去人间界的商场采购。在买了一堆东西回到学院后，奥莉和律交换了之前偷偷为对方买的纪念品，两人为彼此的合拍而惊喜。试胆大会顺利结束后，奥莉作为最后的胜者得到了公主券的9次使用机会，持有者可以用它来命令任何人做任何事情。然而后来因为奥莉的任性和各种不小心，使用机会很快就花完了。</p>
 <p>一天，律和奥莉一起在奥莉的房间里消遣时光，但奥莉似乎有事情瞒着律。在不经意间承认之后，奥莉拿出了自己为律手织的围巾送给律，律亲身体会到了与之前夏珑收到礼物时同样的、既困扰又高兴的心情。</p>
 <p>暑假即将结束，奥莉与讽歌打闹时，意外地发现自己的魔力似乎正在衰退，不由得感到些许恐惧。但在和律成为恋人后，奥莉明白了自己有比公主身份更加需要去守护的事物，所以即便未来自己的魔力完全消失也不会后悔，只要永远能和律在一起便足够了。</p>
-
-    </div>
-  </details>
+</div></details>
 
 <h2 id="外部链接"><a href="#外部链接" class="headerlink" title="外部链接"></a>外部链接</h2><ul>
 <li><a class="link"   href="https://hikarifield.co.jp/magicha/character/chara01.html" >中文版官网角色介绍<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>角色介绍</category>
+      </categories>
+      <tags>
+        <tag>魔卡魅恋！登场角色</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>叶山秋音</title>
+    <url>/2024/03/14/hayama_tokine/</url>
+    <content><![CDATA[<p><strong>叶山秋音</strong> 是Lump of Sugar制作发行游戏 <strong>《魔卡魅恋！》</strong> 的登场角色，女主角之一。</p>
+<div class="callout callout--titled blue mb-4 rounded-small shadow-redefine-flat bg-(--callout-bg-color) p-3 pl-1 relative flex flex-row gap-2"><div role="none" class="rounded-full self-stretch w-0.5 bg-(--callout-primary-color) shrink-0 opacity-60"></div><div class="flex flex-col gap-2"><div class="callout__title flex items-center gap-2 font-semibold tracking-tight">基本资料</div><div class="callout__content markdown-body flex-1 min-w-0"><p>身高：161cm<br>体重：44kg<br>三围：B:83 W:58 H:85<br>生日：9月19日</p></div></div></div>
+
+<p><figure class="image-caption"><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/img/tokine.png"
+                      alt="叶山秋音"
+                ><figcaption>叶山秋音</figcaption></figure></p>
+<p><span style="font-size:small;color:gray;">▲ 游戏CG。原作者保留权利，仅以介绍为目的引用。</span></p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>她和男主角一样以能使用魔法的男生的身份转入学园，<br/>实际上是个女孩子。男主角的青梅竹马。</p>
+<p>由于她和男主角关系近似于同性朋友，因此也被周围当成是个男生。<br/>虽说她没失去身为女孩子应有的性格特性，<br/>不过经常忘记男主角是异性这件事。<br/>性格温厚老实，为人处世也非常懂得顾及人际关系和周遭氛围。<br/>但反过来说，她的性格过于内向和客气。<br/>看上去很老实，不过她也有充满激情的一面，<br/>会静静地表达自己的感情。很爱吃醋，不过不会迁怒于男主角。<br/>只是，要让她醋意超过了界限的话，不知道会干出什么事，<br/>这点非常可怕。</p>
+<p>因为进学院的身份是男生，所以和男主角住在宿舍的同一间寝室。</p>
+<ul>
+<li>兴趣：美食之旅<span style="font-size:smaller;">（主要是拉面店）</span>、读书</li>
+<li>特技：电子游戏、投接球<span style="font-size:smaller;">（全都是受律的影响）</span></li>
+<li>喜欢的食物：拉面、鱼贝鸡米饭</li>
+<li>讨厌的食物：香菇</li>
+</ul>
+<h2 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h2><h3 id="共通线"><a href="#共通线" class="headerlink" title="共通线"></a>共通线</h3><details class="relative my-4 border border-border-color bg-second-background-color rounded-md  yellow" data-header-exclude><summary class="px-4 py-2 rounded-md shadow-[0_0_2px_0_var(--shadow-color-1)] cursor-pointer not-markdown"><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开</summary><div class="content p-4 "><p><strong>序章</strong></p>
+<p>秋音以男生身份进入维斯利魔法学院学习，被安排与前几天转入学院的律住在同一间寝室。此前秋音在人间界帮助律四下物色对象，得知律转学的事情后，十分担心律在学校的情况，但因为自己的魔法能力不足以达到入学的最低标准，最终选择伪装成男生才得以进入学院。律入学时和奥莉谈话后，确定自己需要通过谈恋爱慢慢消除身上的魔法能力，并最终实现离开学院回归正常生活的愿望。秋音了解后决定协助律寻找女友，希望两个人可以一起离开。</p>
+<p>秋音和律作为学院唯二的男学生，被安排至单独的时间集中洗浴。晚上，经过一番心理斗争后，二人决定一同入浴。泡澡时，两个人回忆起小时候一起玩耍的时光。</p>
+<p><strong>开学后</strong></p>
+<p>在差点被同班同学引去女洗手间后，秋音决定平时跟着律一起行动。秋音很喜欢看书，自己常常沉浸其中。这天律提交过暑假回家申请后，前去学院图书馆和秋音汇合。看到秋音专注看书的样子，律隐隐感觉到秋音的女生气质。之后秋音各种无意识的举动让律有些担心秋音女生的事实可能会暴露，二人尝试了一系列方法，打算尽可能消除秋音身上的女人味，但由于种种原因似乎收效不佳。</p>
+<p>秋音因为突然以男生身份转来学院还不是很适应，逐渐积攒了些压力，律了解情况后邀请秋音到学院外面玩。在得到许可后，两个人一起去电影院看了电影，又到街机厅玩了游戏，最后去路边拉面摊品尝了秋音最喜欢的拉面。</p>
+<p><strong>秋音对身份的坦白</strong></p>
+<p>学院走廊上，秋音发现律在和其他女生谈话，不由得有些在意。躲在一旁的自己被发现后，周围的同学和之后到场的老师都希望秋音能试试穿上女生校服。晚上律回到寝室后，秋音慌忙藏起同学给的女生校服。在律真诚地说出自己作为秋音的朋友，不希望秋音这样勉强自己之后，秋音表示会再考虑自己身份的事情。</p>
+<p>之后秋音下定决心不再假扮男生，并向奥莉和姬百合说出了事实。众人意识到秋音是女生这件事难以被他人主动察觉，经过和兰铎尔夫老师的讨论后众人得出结论，原来秋音一直在施放着连自己都未能察觉到的强力魔法，影响了周围人的认知。同时也因为掌握着强力魔法，秋音可以放心向所有人坦白自己是女生，而不必担心魔法能力不足而被退学了。</p>
+<p>回到寝室后，秋音仍对说出秘密后同学们可能的反应心存顾虑。经过律的开导后，第二天秋音鼓起勇气穿上女生校服，以女生的打扮和同学见面。大家了解到秋音的情况后坦然接受，也纷纷愿意继续和秋音做朋友。</p>
+<p><strong>二人逐渐靠近</strong></p>
+<p>在挑明自己的女生身份后，秋音似乎比之前更受同学欢迎了。律考虑着通过恋爱消除自身魔法的目标，于是向秋音请教如何才能更受女生欢迎。思考时两人自然而然回忆起，秋音此前提到过可以通过身体接触增进感情。作为练习，律提出想接触秋音。回到寝室后，律用手抚摸秋音的一头长发，两个人心里都感到害羞不已。</p>
+<p>律想在秋音换寝室之前再和秋音多聊聊天，于是邀请秋音在夜里的学校探险。晚上，二人来到温室后聊起了以前的事：起初因为秋音的服装打扮，律误认为秋音是男生，之后秋音害怕自己因为欺骗律而被讨厌，于是向律坦白了自己是女生的事实，从那时起，两人作为好朋友共处至今。</p>
+<p>换寝室当天，奥莉了解到秋音当初为了假扮男生入学，带来的行李很少，便批准秋音从家里带些私人物品到学院，律则抓住时机打算同秋音外出游玩。两人来到动物园，秋音带上了早晨准备好的便当，中午时邀请律和自己一起品尝。</p>
+<p>早晨，律在独自一人的寝室醒来，注意到自己对秋音的心意，觉得是时候向秋音表达出来了。放学后，秋音如约和律在温室见面。看见律的样子，秋音认为律应该是有恋爱的烦恼想和自己商量，便鼓励律按自己的想法放手去做就一定没问题。律深受鼓舞，于是向秋音表白，希望可以把秋音既当做亲密的朋友更当做自己的恋人来喜欢。秋音也坦言自己早就喜欢上了律，二人就此交换了初吻。</p>
+</div></details>
+
+<h3 id="个人线"><a href="#个人线" class="headerlink" title="个人线"></a>个人线</h3><details class="relative my-4 border border-border-color bg-second-background-color rounded-md  yellow" data-header-exclude><summary class="px-4 py-2 rounded-md shadow-[0_0_2px_0_var(--shadow-color-1)] cursor-pointer not-markdown"><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开</summary><div class="content p-4 "><p>成为恋人后，暑假期间二人作为转校生需要在学校接受补习，秋音还需要接受魔法方面的单独指导。这天律看到秋音接受指导后十分劳累的样子，提议和秋音外出约会。</p>
+<p>第二天来到游乐园后，两人看到周围许多情侣亲热的样子，也想试着做出情侣一般的举动，但双方都太过害羞而迟迟没有行动。最后律希望今天彼此可以作为朋友来享受游玩的乐趣，秋音也随即同意。夜幕降临，二人在摩天轮上回忆一天的欢乐时光，明白了不应过分拘泥于彼此的恋人关系而畏手畏脚，两人由衷分享着陪伴彼此的喜悦。</p>
+<p>秋音因为接受单独指导十分忙碌，律想与秋音相会的期盼也愈发强烈，便找到女仆夏珑请求帮忙。夏珑便分别安排二人同一时间清扫浴场，两人得知情况后为能有二人独处的时光而十分开心。</p>
+<p>之后律和秋音一起在烹饪室做饭，途中律不小心将沙拉酱撒到了秋音身上，于是陪着秋音回到寝室换成之前的男生校服，两人不由得回忆起秋音刚入学时的情形。吃完饭后秋音打算去图书馆，律借此提议去图书馆约会。</p>
+<p>这天二人在寝室闲来无事，律想去海边玩耍，秋音却表示自己没有泳衣，二人于是前往购物中心约会。秋音在泳衣店挑选泳衣时，律因为店里全是女生而不好意思地在店外等待。恰巧看见了同来购物中心逛街的讽歌和姬百合，律担心自己和秋音的恋人关系暴露，于是急忙回到店里通知秋音。在更衣室里的秋音了解情况后便把律也拉进更衣室，但两人的行踪最终还是暴露了，讽歌和姬百合则表示众人早已知道二人交往的事情。</p>
+<p>两人终于得以来到海边，律提出教秋音游泳，秋音凭借以前课上学过的游泳知识很快就掌握了，两个人在海边度过了愉快的时光。</p>
+<p>夏去秋来，奥莉经过检查后认定秋音和律身上的魔法已经几乎消退，不久后就能从学院毕业，重回人间界生活。二人稍感不舍，秋音便邀请律一起到山里欣赏秋叶。其间，秋音向律说明自己身上的魔法之所以最终得以消失，是因为自己终于能坦诚地向律表达出心意，而不再需要通过魔法来影响周围。律借机向秋音递出结婚申请书表明心意，秋音惊喜万分，二人在这漫天红叶之下发誓永远都要在一起。</p>
+</div></details>
+
+<h2 id="外部链接"><a href="#外部链接" class="headerlink" title="外部链接"></a>外部链接</h2><ul>
+<li><a class="link"   href="https://hikarifield.co.jp/magicha/character/chara02.html" >中文版官网角色介绍<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
 </ul>
 ]]></content>
       <categories>
@@ -1030,392 +1306,6 @@ skyblue; width: 120px; height: 80px; margin: 5px;">
       </categories>
       <tags>
         <tag>歌词翻译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>叶山秋音</title>
-    <url>/2024/03/14/hayama_tokine/</url>
-    <content><![CDATA[<p><strong>叶山秋音</strong> 是Lump of Sugar制作发行游戏 <strong>《魔卡魅恋！》</strong> 的登场角色，女主角之一。</p>
-
-  <div class="note-large blue">
-    <div class="notel-title rounded-t-lg p-3 font-bold text-lg flex flex-row gap-2 items-center">
-      <p>基本资料</p>
-
-    </div>
-    <div class="notel-content markdown-body">
-      <p>身高：161cm<br>体重：44kg<br>三围：B:83 W:58 H:85<br>生日：9月19日</p>
-
-    </div>
-  </div>
-
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="/img/tokine.png"
-                      alt="叶山秋音"
-                ><figcaption>叶山秋音</figcaption></figure></p>
-<p><span style="font-size:small;color:gray;">▲ 游戏CG。原作者保留权利，仅以介绍为目的引用。</span></p>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>她和男主角一样以能使用魔法的男生的身份转入学园，<br/>实际上是个女孩子。男主角的青梅竹马。</p>
-<p>由于她和男主角关系近似于同性朋友，因此也被周围当成是个男生。<br/>虽说她没失去身为女孩子应有的性格特性，<br/>不过经常忘记男主角是异性这件事。<br/>性格温厚老实，为人处世也非常懂得顾及人际关系和周遭氛围。<br/>但反过来说，她的性格过于内向和客气。<br/>看上去很老实，不过她也有充满激情的一面，<br/>会静静地表达自己的感情。很爱吃醋，不过不会迁怒于男主角。<br/>只是，要让她醋意超过了界限的话，不知道会干出什么事，<br/>这点非常可怕。</p>
-<p>因为进学院的身份是男生，所以和男主角住在宿舍的同一间寝室。</p>
-<ul>
-<li>兴趣：美食之旅<span style="font-size:smaller;">（主要是拉面店）</span>、读书</li>
-<li>特技：电子游戏、投接球<span style="font-size:smaller;">（全都是受律的影响）</span></li>
-<li>喜欢的食物：拉面、鱼贝鸡米饭</li>
-<li>讨厌的食物：香菇</li>
-</ul>
-<h2 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h2><h3 id="共通线"><a href="#共通线" class="headerlink" title="共通线"></a>共通线</h3><details class="yellow" data-header-exclude>
-    <summary><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开 </summary>
-    <div class='content markdown-body'>
-      <p><strong>序章</strong></p>
-<p>秋音以男生身份进入维斯利魔法学院学习，被安排与前几天转入学院的律住在同一间寝室。此前秋音在人间界帮助律四下物色对象，得知律转学的事情后，十分担心律在学校的情况，但因为自己的魔法能力不足以达到入学的最低标准，最终选择伪装成男生才得以进入学院。律入学时和奥莉谈话后，确定自己需要通过谈恋爱慢慢消除身上的魔法能力，并最终实现离开学院回归正常生活的愿望。秋音了解后决定协助律寻找女友，希望两个人可以一起离开。</p>
-<p>秋音和律作为学院唯二的男学生，被安排至单独的时间集中洗浴。晚上，经过一番心理斗争后，二人决定一同入浴。泡澡时，两个人回忆起小时候一起玩耍的时光。</p>
-<p><strong>开学后</strong></p>
-<p>在差点被同班同学引去女洗手间后，秋音决定平时跟着律一起行动。秋音很喜欢看书，自己常常沉浸其中。这天律提交过暑假回家申请后，前去学院图书馆和秋音汇合。看到秋音专注看书的样子，律隐隐感觉到秋音的女生气质。之后秋音各种无意识的举动让律有些担心秋音女生的事实可能会暴露，二人尝试了一系列方法，打算尽可能消除秋音身上的女人味，但由于种种原因似乎收效不佳。</p>
-<p>秋音因为突然以男生身份转来学院还不是很适应，逐渐积攒了些压力，律了解情况后邀请秋音到学院外面玩。在得到许可后，两个人一起去电影院看了电影，又到街机厅玩了游戏，最后去路边拉面摊品尝了秋音最喜欢的拉面。</p>
-<p><strong>秋音对身份的坦白</strong></p>
-<p>学院走廊上，秋音发现律在和其他女生谈话，不由得有些在意。躲在一旁的自己被发现后，周围的同学和之后到场的老师都希望秋音能试试穿上女生校服。晚上律回到寝室后，秋音慌忙藏起同学给的女生校服。在律真诚地说出自己作为秋音的朋友，不希望秋音这样勉强自己之后，秋音表示会再考虑自己身份的事情。</p>
-<p>之后秋音下定决心不再假扮男生，并向奥莉和姬百合说出了事实。众人意识到秋音是女生这件事难以被他人主动察觉，经过和兰铎尔夫老师的讨论后众人得出结论，原来秋音一直在施放着连自己都未能察觉到的强力魔法，影响了周围人的认知。同时也因为掌握着强力魔法，秋音可以放心向所有人坦白自己是女生，而不必担心魔法能力不足而被退学了。</p>
-<p>回到寝室后，秋音仍对说出秘密后同学们可能的反应心存顾虑。经过律的开导后，第二天秋音鼓起勇气穿上女生校服，以女生的打扮和同学见面。大家了解到秋音的情况后坦然接受，也纷纷愿意继续和秋音做朋友。</p>
-<p><strong>二人逐渐靠近</strong></p>
-<p>在挑明自己的女生身份后，秋音似乎比之前更受同学欢迎了。律考虑着通过恋爱消除自身魔法的目标，于是向秋音请教如何才能更受女生欢迎。思考时两人自然而然回忆起，秋音此前提到过可以通过身体接触增进感情。作为练习，律提出想接触秋音。回到寝室后，律用手抚摸秋音的一头长发，两个人心里都感到害羞不已。</p>
-<p>律想在秋音换寝室之前再和秋音多聊聊天，于是邀请秋音在夜里的学校探险。晚上，二人来到温室后聊起了以前的事：起初因为秋音的服装打扮，律误认为秋音是男生，之后秋音害怕自己因为欺骗律而被讨厌，于是向律坦白了自己是女生的事实，从那时起，两人作为好朋友共处至今。</p>
-<p>换寝室当天，奥莉了解到秋音当初为了假扮男生入学，带来的行李很少，便批准秋音从家里带些私人物品到学院，律则抓住时机打算同秋音外出游玩。两人来到动物园，秋音带上了早晨准备好的便当，中午时邀请律和自己一起品尝。</p>
-<p>早晨，律在独自一人的寝室醒来，注意到自己对秋音的心意，觉得是时候向秋音表达出来了。放学后，秋音如约和律在温室见面。看见律的样子，秋音认为律应该是有恋爱的烦恼想和自己商量，便鼓励律按自己的想法放手去做就一定没问题。律深受鼓舞，于是向秋音表白，希望可以把秋音既当做亲密的朋友更当做自己的恋人来喜欢。秋音也坦言自己早就喜欢上了律，二人就此交换了初吻。</p>
-
-    </div>
-  </details>
-
-<h3 id="个人线"><a href="#个人线" class="headerlink" title="个人线"></a>个人线</h3><details class="yellow" data-header-exclude>
-    <summary><i class="fa-solid fa-chevron-right"></i>剧透警告，点击展开 </summary>
-    <div class='content markdown-body'>
-      <p>成为恋人后，暑假期间二人作为转校生需要在学校接受补习，秋音还需要接受魔法方面的单独指导。这天律看到秋音接受指导后十分劳累的样子，提议和秋音外出约会。</p>
-<p>第二天来到游乐园后，两人看到周围许多情侣亲热的样子，也想试着做出情侣一般的举动，但双方都太过害羞而迟迟没有行动。最后律希望今天彼此可以作为朋友来享受游玩的乐趣，秋音也随即同意。夜幕降临，二人在摩天轮上回忆一天的欢乐时光，明白了不应过分拘泥于彼此的恋人关系而畏手畏脚，两人由衷分享着陪伴彼此的喜悦。</p>
-<p>秋音因为接受单独指导十分忙碌，律想与秋音相会的期盼也愈发强烈，便找到女仆夏珑请求帮忙。夏珑便分别安排二人同一时间清扫浴场，两人得知情况后为能有二人独处的时光而十分开心。</p>
-<p>之后律和秋音一起在烹饪室做饭，途中律不小心将沙拉酱撒到了秋音身上，于是陪着秋音回到寝室换成之前的男生校服，两人不由得回忆起秋音刚入学时的情形。吃完饭后秋音打算去图书馆，律借此提议去图书馆约会。</p>
-<p>这天二人在寝室闲来无事，律想去海边玩耍，秋音却表示自己没有泳衣，二人于是前往购物中心约会。秋音在泳衣店挑选泳衣时，律因为店里全是女生而不好意思地在店外等待。恰巧看见了同来购物中心逛街的讽歌和姬百合，律担心自己和秋音的恋人关系暴露，于是急忙回到店里通知秋音。在更衣室里的秋音了解情况后便把律也拉进更衣室，但两人的行踪最终还是暴露了，讽歌和姬百合则表示众人早已知道二人交往的事情。</p>
-<p>两人终于得以来到海边，律提出教秋音游泳，秋音凭借以前课上学过的游泳知识很快就掌握了，两个人在海边度过了愉快的时光。</p>
-<p>夏去秋来，奥莉经过检查后认定秋音和律身上的魔法已经几乎消退，不久后就能从学院毕业，重回人间界生活。二人稍感不舍，秋音便邀请律一起到山里欣赏秋叶。其间，秋音向律说明自己身上的魔法之所以最终得以消失，是因为自己终于能坦诚地向律表达出心意，而不再需要通过魔法来影响周围。律借机向秋音递出结婚申请书表明心意，秋音惊喜万分，二人在这漫天红叶之下发誓永远都要在一起。</p>
-
-    </div>
-  </details>
-
-<h2 id="外部链接"><a href="#外部链接" class="headerlink" title="外部链接"></a>外部链接</h2><ul>
-<li><a class="link"   href="https://hikarifield.co.jp/magicha/character/chara02.html" >中文版官网角色介绍<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>角色介绍</category>
-      </categories>
-      <tags>
-        <tag>魔卡魅恋！登场角色</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《Hacknet》介绍</title>
-    <url>/2023/02/03/hacknet/</url>
-    <content><![CDATA[<p>最近玩完了《Hacknet》。虽然是2015年的游戏，但是我觉得是一款不错的黑客模拟游戏。写篇文章简单介绍一下。</p>
-<table>
-<thead>
-<tr>
-<th align="center">项目</th>
-<th align="center">内容</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">原名</td>
-<td align="center">Hacknet</td>
-</tr>
-<tr>
-<td align="center">常用译名</td>
-<td align="center">黑客网络</td>
-</tr>
-<tr>
-<td align="center">类型</td>
-<td align="center">模拟</td>
-</tr>
-<tr>
-<td align="center">平台</td>
-<td align="center">Microsoft Windows<br/>macOS<br/>Linux</td>
-</tr>
-<tr>
-<td align="center">分级</td>
-<td align="center">ESRB：青少年<br/>PEGI：12岁以上</td>
-</tr>
-<tr>
-<td align="center">开发</td>
-<td align="center">Team Fractal Alligator</td>
-</tr>
-<tr>
-<td align="center">发行</td>
-<td align="center">Fellow Traveller</td>
-</tr>
-<tr>
-<td align="center">引擎</td>
-<td align="center">XNA、FNA</td>
-</tr>
-<tr>
-<td align="center">模式</td>
-<td align="center">单人</td>
-</tr>
-<tr>
-<td align="center">发行时间</td>
-<td align="center"><strong>Microsoft Windows</strong>：<br/>2015年8月13日<br/><strong>macOS、Linux</strong>：<br/>2015年12月18日</td>
-</tr>
-</tbody></table>
-<p>《<strong>Hacknet</strong>》是一款由Team Fractal Alligator开发、Fellow Traveller发行的独立模拟游戏，于2015年8月13日在Microsoft Windows平台上发售，于2015年12月18日在macOS和Linux平台发售。支持简体中文。</p>
-<h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p>《Hacknet》是一款基于终端的黑客模拟器。你将跟随一位最近刚过世的黑客，通过他遗留的线索，来探询混乱未知的网络世界。他的死可能并非像媒体所报道的仅仅是一场意外那么简单。只需进行简单的教学，你便能使用基础的指令来完成真实的黑入过程，探索这充满了谜团的黑客世界。</p>
-<p>Bit，一位负责开发世界上最具攻击性的黑入系统的黑客，去世了。当他的系统连续14天都没有检测到他的操作后，保险程序便开始运行，将他未完成的计划发给了一位陌生的用户。作为这名用户，你需要一步步揭开事实的真相，并且确保Hacknet操作系统不会落入到不法之徒手中。</p>
-<p>《Hacknet》为你提供一个全方位的真实黑客模拟器，可以让你探索人类窥探隐私的天性、制止企业贪婪盛行并对抗隐藏在网络世界中的强大黑客。同时它又能提供学习支持，可以让一个电脑小白通过游戏了解到现实世界的电脑指令和对应用程序的操控。<span id="文注_1.0"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></p>
-<h3 id="游戏特色"><a href="#游戏特色" class="headerlink" title="游戏特色"></a>游戏特色</h3><p><strong>真实的黑入</strong></p>
-<p>基于真实的UNIX指令，将重点放在真实的黑入过程，而不是追求炫酷的好莱坞式黑客。通过拟真化的黑入过程，让玩家们仿佛置身黑入现场，体验打破防火墙时几近真实的感受。</p>
-<p><strong>探寻Bit的死亡之谜</strong></p>
-<p>一位黑客莫名死亡，而媒体们的报道根本无法自圆其说。跟随着他的“灵魂”（一个自动邮件发送系统）带给你的指示，你将会慢慢深入并参与到一个黑暗而又庞大的黑客阴谋之中。</p>
-<p><strong>完全的沉浸式体验</strong></p>
-<p>你将会被带入一个无尽的虚拟黑客世界，在这里没有“等级”或者是明显的游戏元素来打破这一体验。你可以选择跟随Bit的邮件的指引，或是直接遨游在整个网络之中，探索并追寻信息的蛛丝马迹。</p>
-<p><strong>上手简单精通难</strong></p>
-<p>游戏不会限制你的游戏方式或让你按部就班。</p>
-<p>游戏内容和学习曲线的设计，能够让初学者或有终端操作经验的人都能找到属于自己的快乐。</p>
-<p><strong>杀手级音乐</strong></p>
-<p>原声带由地下风格音乐家创作，包括Carpenter Brut（Hotline Miami）和Remi Gallego（又名The Algorithm），由The Otherworld Agency协助创作。<span id="文注_1.1"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></p>
-<h3 id="开发历史"><a href="#开发历史" class="headerlink" title="开发历史"></a>开发历史</h3><ul>
-<li>2015年7月15日，开发者放出游戏宣传片。<span id="文参_1"></span><a href="#%E5%8F%82_1"><sup>[1]</sup></a></li>
-<li>2015年8月13日，游戏在Microsoft Windows平台上发售。</li>
-<li>2015年10月21日，游戏原声带发售。</li>
-<li>2015年12月18日，游戏在macOS和Linux平台发售。</li>
-<li>2016年8月30日，开发者宣布游戏扩展内容《Hacknet - Labyrinths》的制作。</li>
-<li>2016年10月12日，游戏推出简体中文支持。</li>
-<li>2017年3月21日，开发者宣布游戏扩展内容《Hacknet - Labyrinths》将于3月31日发售，并放出宣传片。</li>
-<li>2017年3月31日，游戏扩展内容《Hacknet - Labyrinths》发售。</li>
-<li>2017年5月23日，游戏mod《Hacknet Extensions》发布。</li>
-</ul>
-<h2 id="额外内容"><a href="#额外内容" class="headerlink" title="额外内容"></a>额外内容</h2><h3 id="Hacknet-Labyrinths"><a href="#Hacknet-Labyrinths" class="headerlink" title="Hacknet - Labyrinths"></a>Hacknet - Labyrinths</h3><p>游戏扩展内容《Hacknet - Labyrinths》于2017年3月31日发售。</p>
-<h4 id="基本介绍-1"><a href="#基本介绍-1" class="headerlink" title="基本介绍"></a>基本介绍</h4><p>加入黑客精英小队，破解复杂的数据。</p>
-<p>加入了一个3-4小时流程的全新章节。你将由神秘人Kaguya招募到一个黑客精英团队，发掘新的强大工具与程序。</p>
-<p>然而与最棒的团队一起工作并不会特别容易。随着愈演愈烈的危机与越来越复杂的任务接踵而至，你需要利用团队的一切资源去黑入并完成任务，最后完美脱身。</p>
-<p>加入了全新工具，比如内存分析器，可以在RAM中进行内存取证。探索新的程序、网络、UI主题，以及新的秘密和音乐。<span id="文注_1.2"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></p>
-<p><strong>主要特点</strong></p>
-<ul>
-<li><strong>一个全新的篇章。</strong> 在原有故事的基础上加入了惊心动魄的3-4小时流程的新章节。你可以把它看做原有故事的拓展，也可以当做一个继续研究Hacknet的全新机会。</li>
-<li><strong>新的工具与程序。</strong> 得到全新的、更加复杂的黑入工具和程序来破解系统与网络。比如，通过使用内存分析器在RAM上使用内存取证，发现隐藏在其中的秘密。</li>
-<li><strong>团队工作。</strong> 你不再是独行侠，需要与你的队友在IRC交流，共同合作完成目标。</li>
-<li><strong>危险而大胆的数据抢劫。</strong> 网络系统变得更加复杂，不是通过简简单单的“破门而入”就能解决问题。探索，适应，生存！</li>
-<li><strong>新的杀手级音乐。</strong> 包括重金属&#x2F;电音艺术家Remi Gallego的《The Algorithm》和《Orge》。<span id="文注_1.3"></span><a href="#%E6%B3%A8_1"><sup>[注 1]</sup></a></li>
-</ul>
-<h3 id="Hacknet-Extensions"><a href="#Hacknet-Extensions" class="headerlink" title="Hacknet Extensions"></a>Hacknet Extensions</h3><p>游戏mod《<strong>Hacknet Extensions</strong>》于2017年5月23日发布。允许玩家创建自定义故事、任务、网络、主题以及音乐等，并可通过上传至Steam创意工坊与其他玩家分享。</p>
-<h2 id="游戏评价"><a href="#游戏评价" class="headerlink" title="游戏评价"></a>游戏评价</h2><table>
-<thead>
-<tr>
-<th align="center">汇总媒体</th>
-<th align="center">得分</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Metacritic</td>
-<td align="center">82 &#x2F; 100<span id="文参_2"></span><a href="#%E5%8F%82_2"><sup>[2]</sup></a></td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th align="center">媒体</th>
-<th align="center">评分</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">GameSpot</td>
-<td align="center">8 &#x2F; 10<span id="文参_3"></span><a href="#%E5%8F%82_3"><sup>[3]</sup></a></td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>《Hacknet》是我见过的最接近现实的黑客模拟游戏。——Kotaku<span id="文参_4"></span><a href="#%E5%8F%82_4"><sup>[4]</sup></a></p>
-<p>作为迄今为止最好的黑客模拟游戏，《Hacknet》让我们想去了解更多有关黑客世界的真实和详细描述。毫无疑问，这是最棒的合法黑客经验。——LevelUp<span id="文参_5"></span><a href="#%E5%8F%82_5"><sup>[5]</sup></a></p>
-</blockquote>
-<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><ol>
-<li>^ <a href="#%E6%96%87%E6%B3%A8_1.0"><sup>1.0</sup></a> <a href="#%E6%96%87%E6%B3%A8_1.1"><sup>1.1</sup></a> <a href="#%E6%96%87%E6%B3%A8_1.2"><sup>1.2</sup></a> <a href="#%E6%96%87%E6%B3%A8_1.3"><sup>1.3</sup></a> <span id="注_1"></span>Steam商店页面介绍，有改动。</li>
-</ol>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
-<li><a id="参_1" href="#文参_1">^</a> Fellow Traveller. <a class="link"   href="https://www.youtube.com/watch?v=FgDmU7Pb96Y" >Hacknet宣传片<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. YouTube. 2015-07-15 [引用时间: 2023-02-03].</li>
-<li><a id="参_2" href="#文参_2">^</a> <a class="link"   href="https://www.metacritic.com/game/pc/hacknet" >Hacknet for PC Reviews<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. Metacritic. [引用时间: 2023-02-03].</li>
-<li><a id="参_3" href="#文参_3">^</a> <a class="link"   href="https://www.gamespot.com/games/hacknet/" >Hacknet<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. GameSpot. [引用时间: 2023-02-03].</li>
-<li><a id="参_4" href="#文参_4">^</a> Mark Serrels. <a class="link"   href="https://www.kotaku.com.au/2015/07/this-australian-game-will-turn-us-all-into-hackers/" >This Australian Game Will Turn Us All Into Hackers<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. 2015-07-16 [引用时间: 2023-02-03].</li>
-<li><a id="参_5" href="#文参_5">^</a> Alonso Zamora. <a class="link"   href="https://www.levelup.com/PC/juegos/335304/Hacknet/review" >Reseña del Juego Hacknet<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>. LevelUp. 2015-08-14 [引用时间: 2023-02-03].</li>
-</ol>
-<h2 id="外部链接"><a href="#外部链接" class="headerlink" title="外部链接"></a>外部链接</h2><ul>
-<li><a class="link"   href="https://www.hacknet-os.com/" >Hacknet官方网站<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-<li><a class="link"   href="https://www.hacknet-os.com/index_dlc.php" >Hacknet - Labyrinths官方网站<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-<li><a class="link"   href="https://twitter.com/hacknetOS" >Hacknet官方Twitter<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-<li><a class="link"   href="https://store.steampowered.com/app/365450/Hacknet/" >Hacknet的Steam商店页面<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-<li><a class="link"   href="https://store.steampowered.com/app/521840/Hacknet__Labyrinths/" >Hacknet - Labyrinths的Steam商店页面<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>游戏</category>
-      </categories>
-      <tags>
-        <tag>澳大利亚游戏作品</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SVG Learning - 2</title>
-    <url>/2022/04/22/svg_learning_2/</url>
-    <content><![CDATA[<p>SVG 学习第二部分，包括<code>&lt;path&gt;</code>图形元素。简单罗列，英文为主。</p>
-<blockquote>
-<p>References</p>
-<ul>
-<li><a class="link"   href="https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html" >An SVG Primer for Today’s Browsers<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><ul>
-<li><a class="link"   href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright" >Copyright<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> © 2010 <a class="link"   href="http://www.w3.org/" >W3C<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>® (<a class="link"   href="http://www.csail.mit.edu/" >MIT<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, <a class="link"   href="http://www.ercim.org/" >ERCIM<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>, <a class="link"   href="http://www.keio.ac.jp/" >Keio<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>), All Rights Reserved.</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<h2 id="SVG-graphics-elements"><a href="#SVG-graphics-elements" class="headerlink" title="SVG graphics elements"></a>SVG graphics elements</h2><ul>
-<li><code>&lt;path&gt;</code></li>
-<li><code>&lt;line&gt;</code></li>
-<li><code>&lt;rect&gt;</code></li>
-<li><code>&lt;circle&gt;</code></li>
-<li><code>&lt;line&gt;</code></li>
-<li><code>&lt;polyline&gt;</code></li>
-<li><code>&lt;polygon&gt;</code></li>
-<li><code>&lt;image&gt;</code></li>
-<li><code>&lt;use&gt;</code></li>
-</ul>
-<h3 id=""><a href="#" class="headerlink" title="&lt;path&gt;"></a><code>&lt;path&gt;</code></h3><h4 id="M-L"><a href="#M-L" class="headerlink" title="M &amp; L"></a><code>M</code> &amp; <code>L</code></h4><ul>
-<li><code>M x y</code>: Move pen to (<code>x</code>, <code>y</code>)</li>
-<li><code>M x1,y1[ x2,y2[…]]</code>: Move pen to (<code>x1</code>, <code>y1</code>), then (<code>x2</code>, <code>y2</code>), …</li>
-<li><code>M x1 y1 L x2 y2[ x3 y3[…]]</code>, <code>M x1 y1 L x2,y2[ x3,y3[…]]</code>: Draw linearly from (<code>x1</code>, <code>y1</code>) to (<code>x2</code>, <code>y2</code>), then (<code>x3</code>, <code>y3</code>), …</li>
-</ul>
-<p><strong>SVG Code</strong></p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">d</span>=<span class="string">&quot;M 100 100 L 200 200&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p><strong>Illustration</strong></p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m40b9361c.png"
-                      alt="A diagonal line from (100,100) to (200,200)" title="A diagonal line from (100,100) to (200,200)"
-                ><figcaption>A diagonal line from (100,100) to (200,200)</figcaption></figure></p>
-<p><strong>SVG Code</strong></p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 100 100 L 200 200 100 150&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p><strong>Illustration</strong></p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m6b9cad89.png"
-                      alt="Concatenated pairs of coordinates" title="Concatenated pairs of coordinates"
-                ><figcaption>Concatenated pairs of coordinates</figcaption></figure></p>
-<p><strong>SVG Code</strong></p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 50,100 150,200 50,150&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 100 50 L 200 150 100 100&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m6daeff2a.png"
-                      alt="The effect of adding fill=&quot;none&quot; (but note that the stroke attribute is defined) " title="The effect of adding fill=&quot;none&quot; (but note that the stroke attribute is defined) "
-                ><figcaption>The effect of adding fill=&quot;none&quot; (but note that the stroke attribute is defined) </figcaption></figure></p>
-<ul>
-<li><code>z</code>: Close path</li>
-</ul>
-<p><strong>SVG Code</strong></p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 100,50 200,150 100,100&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 100,50 200,150 100,100 z&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<h4 id="fill-rule-even-odd"><a href="#fill-rule-even-odd" class="headerlink" title="fill-rule=&quot;even-odd&quot;"></a><code>fill-rule=&quot;even-odd&quot;</code></h4><p><strong>SVG Code</strong></p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 70,290 L 150,150 200,250 40,250 100,150 170,290&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 70,290 L 150,150 200,250 40,250 100,150 170,290&quot;</span> <span class="attr">fill-rule</span>=<span class="string">&quot;evenodd&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/798df064.png"
-                      alt="An example to show the difference between the default and &quot;even-odd&quot; fill rules" title="An example to show the difference between the default and &quot;even-odd&quot; fill rules"
-                ><figcaption>An example to show the difference between the default and &quot;even-odd&quot; fill rules</figcaption></figure></p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/2329cb12.png"
-                      alt="An example to show the difference between the default and &quot;even-odd&quot; fill rules" title="An example to show the difference between the default and &quot;even-odd&quot; fill rules"
-                ><figcaption>An example to show the difference between the default and &quot;even-odd&quot; fill rules</figcaption></figure></p>
-<h4 id="Combine-multiple-path-segments"><a href="#Combine-multiple-path-segments" class="headerlink" title="Combine multiple path segments"></a>Combine multiple path segments</h4><p><strong>SVG Code</strong></p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">fill</span>=<span class="string">&quot;orange&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">d</span>=<span class="string">&quot;M 10,215 210,215 110,42 z</span></span></span><br><span class="line"><span class="string"><span class="tag">    M 10,100 210,100 110,273 z&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">stroke</span>=<span class="string">&quot;purple&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;3&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m36f8c292.png"
-                      alt="A \&lt;path\&gt; with fill=&quot;green&quot; et cetera... is also included in the drawing." title="A &lt;path&gt; with fill=&quot;green&quot; et cetera... is also included in the drawing."
-                ><figcaption>A \&lt;path\&gt; with fill=&quot;green&quot; et cetera... is also included in the drawing.</figcaption></figure></p>
-<h4 id="Q-Quadratic-Bezier-curves"><a href="#Q-Quadratic-Bezier-curves" class="headerlink" title="Q: Quadratic Bézier curves"></a><code>Q</code>: Quadratic Bézier curves</h4><ul>
-<li><code>M x1 y1 Q x2,y2 x3,y3</code>: Draw quadratically from (<code>x1</code>, <code>y1</code>), then (<code>x2</code>, <code>y2</code>), towards (<code>x3</code>, <code>y3</code>)</li>
-</ul>
-<p><strong>SVG Code</strong></p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 100 200 Q 200,400 300,200&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;blue&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">&quot;M 100 200 L 200,400 300,200&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;none&quot;</span> <span class="attr">stroke</span>=<span class="string">&quot;red&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p><strong>Illustration</strong></p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m69cd8b78.png"
-                      alt="Bézier curve example" title="Bézier curve example"
-                ><figcaption>Bézier curve example</figcaption></figure></p>
-<p><strong>SVG Code</strong></p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">fill-rule</span>=<span class="string">&quot;evenodd&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">d</span>=<span class="string">&quot;M 70 140 L 150,0 200,100 L 40,100 100,0 L 170,140 70 140&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">fill</span>=<span class="string">&quot;red&quot;</span> <span class="attr">fill-rule</span>=<span class="string">&quot;evenodd&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">d</span>=<span class="string">&quot;M 70 140 Q 150,0 200,100 Q 40,100 100,0 Q 170,140 70 140&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p><strong>Illustration</strong></p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/me702c4.png"
-                      alt="An example of a graphic using a quadratic spline" title="An example of a graphic using a quadratic spline"
-                ><figcaption>An example of a graphic using a quadratic spline</figcaption></figure></p>
-<h3 id="C-Cubic-Bezier-curves"><a href="#C-Cubic-Bezier-curves" class="headerlink" title="C: Cubic Bézier curves"></a><code>C</code>: Cubic Bézier curves</h3><ul>
-<li><code>M x1 y1 C xt1,yt1[ xt2,yt2[…]] x2,y2</code>: Draw cubically from (<code>x1</code>, <code>y1</code>) to (<code>x2</code>, <code>y2</code>), with control points (<code>xt1</code>, <code>yt1</code>), (<code>xt2</code>, <code>yt2</code>), …</li>
-</ul>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m499a2128.png"
-                      alt="A family of cubic curves sharing endpoints and tangents" title="A family of cubic curves sharing endpoints and tangents"
-                ><figcaption>A family of cubic curves sharing endpoints and tangents</figcaption></figure></p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/mcbf3920.png"
-                      alt="Limiting case for a family of curves" title="Limiting case for a family of curves"
-                ><figcaption>Limiting case for a family of curves</figcaption></figure></p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m31556306.png"
-                      alt="Cubic beziers sharing tangents and endpoints" title="Cubic beziers sharing tangents and endpoints"
-                ><figcaption>Cubic beziers sharing tangents and endpoints</figcaption></figure></p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m5fbfc0c1.png"
-                      alt="Adjoining two cubic curves smoothly" title="Adjoining two cubic curves smoothly"
-                ><figcaption>Adjoining two cubic curves smoothly</figcaption></figure></p>
-<p><strong>SVG Code</strong></p>
-<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">path</span> <span class="attr">stroke</span>=<span class="string">&quot;black&quot;</span> <span class="attr">stroke-width</span>=<span class="string">&quot;3&quot;</span> <span class="attr">fill</span>=<span class="string">&quot;#eec1c2&quot;</span></span></span><br><span class="line"><span class="tag"><span class="attr">d</span>=<span class="string">&quot;M 99 192</span></span></span><br><span class="line"><span class="string"><span class="tag">C 137 160 204 133 141 124</span></span></span><br><span class="line"><span class="string"><span class="tag">C 78 115 34 167 47 129</span></span></span><br><span class="line"><span class="string"><span class="tag">C 60 91 20 65 77 71</span></span></span><br><span class="line"><span class="string"><span class="tag">C 134 77 206 43 196 101</span></span></span><br><span class="line"><span class="string"><span class="tag">C 186 159 118 368 119 299</span></span></span><br><span class="line"><span class="string"><span class="tag">C 120 230 201 169 138 206</span></span></span><br><span class="line"><span class="string"><span class="tag">C 75 243 53 231 99 192&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure></div>
-
-<p><strong>Illustration</strong></p>
-<p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/4418afb.png"
-                      alt="Several smoothly stitched Bézier segments" title="Several smoothly stitched Bézier segments"
-                ><figcaption>Several smoothly stitched Bézier segments</figcaption></figure></p>
-<h3 id="A-Elliptical-arc"><a href="#A-Elliptical-arc" class="headerlink" title="A: Elliptical arc"></a><code>A</code>: Elliptical arc</h3><p><figure class="image-caption"><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="http://www.w3.org/Graphics/SVG/IG/resources/StateOfArt/m38b4a957.png"
-                      alt="Four elliptical arcs sharing endpoints" title="Four elliptical arcs sharing endpoints"
-                ><figcaption>Four elliptical arcs sharing endpoints</figcaption></figure></p>
-]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>SVG</tag>
       </tags>
   </entry>
 </search>
